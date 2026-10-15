@@ -1,0 +1,40 @@
+{
+  "id": "prueba-escenas",
+  "header": "PRUEBA DE PLANTILLA · DATOS FICTICIOS",
+  "voice": "em_santa",
+  "scenes": [
+    {
+      "type": "headline", "bg": "!",
+      "say": "Esto es una prueba de la plantilla, con datos inventados.",
+      "captions": ["Esto es una <em>prueba</em>", "de la plantilla,", "con datos inventados."],
+      "tag": "BOMBAZO", "title": "EQUIPO LOCAL\nFICHA A SU\nNUEVO DELANTERO", "sub": "Llega por tres torneos"
+    },
+    {
+      "type": "compare", "bg": "VS",
+      "say": "Comparativa entre dos equipos de ejemplo.",
+      "captions": ["Comparativa", "entre dos equipos", "de ejemplo."],
+      "title": "CARA A CARA", "left": "LOCAL", "right": "VISITA",
+      "rows": [{"label": "PUNTOS", "l": 21, "r": 19}, {"label": "GOLES A FAVOR", "l": 24, "r": 17}, {"label": "GOLES EN CONTRA", "l": 9, "r": 12}]
+    },
+    {
+      "type": "ranking", "bg": "TOP",
+      "say": "Y un ranking de goleadores de prueba.",
+      "captions": ["Y un ranking", "de goleadores", "de prueba."],
+      "title": "GOLEO", "sub": "EJEMPLO",
+      "rows": [{"name": "JUGADOR A", "team": "EQUIPO 1", "val": 12, "hl": true}, {"name": "JUGADOR B", "team": "EQUIPO 2", "val": 9}, {"name": "JUGADOR C", "team": "EQUIPO 3", "val": 7}, {"name": "JUGADOR D", "team": "EQUIPO 4", "val": 6}]
+    },
+    {
+      "type": "play", "bg": "11", "play": "penalty",
+      "say": "Y un penal al minuto noventa.",
+      "captions": ["Y un <em>penal</em>", "al minuto <em>90</em>."],
+      "minute": "90'", "vs": "vs RIVAL", "sub": "EJEMPLO", "scorer": "JUGADOR A", "result": "2-1 · REMONTADA"
+    },
+    {
+      "type": "question", "bg": "¿?",
+      "say": "¿Funciona la plantilla? Te leo en los comentarios.",
+      "captions": ["¿Funciona la plantilla?", "Te leo en los <em>comentarios</em>."],
+      "pre": "PREGUNTA DE PRUEBA:", "q": "¿FUNCIONA?", "opts": ["SÍ", "NO"]
+    }
+  ],
+  "post": "Prueba", "hashtags": ["#Prueba"]
+}

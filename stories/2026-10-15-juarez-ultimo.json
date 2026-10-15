@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-15-juarez-ultimo",
+  "header": "LIGA MX · APERTURA 2026",
+  "voice": "em_santa",
+  "scenes": [
+    {
+      "type": "stats", "bg": "11", "speed": 1.05,
+      "say": "¡Once partidos! ¡Una victoria! ¡Y apenas cuatro puntos!",
+      "captions": ["¡<em>11</em> partidos!", "¡<em>1</em> victoria!", "¡Y apenas <em>4</em> puntos!"],
+      "items": [
+        {"n": "11", "label": "PARTIDOS"},
+        {"n": "1", "label": "VICTORIA", "color": "green"},
+        {"n": "4", "label": "PUNTOS", "color": "red"}
+      ]
+    },
+    {
+      "type": "table", "bg": "18",
+      "say": "Bravos de Juárez es el último lugar de toda la Liga MX.",
+      "captions": ["Bravos de Juárez", "es el <em>último lugar</em>", "de toda la Liga MX."],
+      "title": "TABLA GENERAL", "sub": "J11", "stamp": "ÚLTIMO",
+      "rows": [
+        {"pos": 14, "team": "SANTOS", "pts": 13},
+        {"pos": 15, "team": "SAN LUIS", "pts": 12},
+        {"pos": 16, "team": "ATLANTE", "pts": 11},
+        {"pos": 17, "team": "NECAXA", "pts": 9},
+        {"pos": 18, "team": "FC JUÁREZ", "pts": 4, "hl": true}
+      ]
+    },
+    {
+      "type": "results", "bg": "-18", "gap": 0.22,
+      "say": "Nueve derrotas… y menos dieciocho de diferencia de goles.",
+      "captions": ["<em>9</em> derrotas…", "y <em>-18</em> de diferencia", "de goles."],
+      "title": "SUS 11 PARTIDOS",
+      "seq": ["L","L","L","L","L","L","L","L","W","L","D"],
+      "counter": {"value": -18, "label": "DIFERENCIA\nDE GOLES", "color": "red"}
+    },
+    {
+      "type": "scoreboard", "bg": "2-0",
+      "say": "¿La única alegría? ¡El dos a cero a Tigres, con doblete de Estupiñán!",
+      "captions": ["¿La única alegría?", "¡El <em>2-0</em> a Tigres,", "con doblete", "de <em>Estupiñán</em>!"],
+      "tag": "LA ÚNICA ALEGRÍA · J9", "home": "JUÁREZ", "away": "TIGRES",
+      "goals": [{"side": "home", "at": 0.42}, {"side": "home", "at": 0.56}],
+      "note": "DOBLETE DE", "noteHL": "ESTUPIÑÁN"
+    },
+    {
+      "type": "play", "bg": "84'", "speed": 1.14, "gap": 0.35,
+      "say": "Y contra Xolos, rescató su primer empate hasta el minuto ochenta y cuatro, ¡con cabezazo de Dourado!",
+      "captions": ["Y contra Xolos,", "rescató su", "<em>primer empate</em>", "hasta el minuto <em>84</em>,", "¡con cabezazo", "de <em>Dourado</em>!"],
+      "minute": "84'", "vs": "vs XOLOS", "sub": "J11", "play": "corner_right",
+      "passer": "PIÑA", "scorer": "DOURADO", "result": "1-1 · PRIMER EMPATE"
+    },
+    {
+      "type": "count", "bg": "6", "speed": 1.1, "gap": 0.4,
+      "say": "Quedan seis partidos. ¡Dieciocho puntos en juego!",
+      "captions": ["Quedan <em>6</em> partidos.", "¡<em>18</em> puntos en juego!"],
+      "big": "QUEDAN 6", "dots": 6, "sub": "18 PUNTOS", "subLabel": "EN JUEGO"
+    },
+    {
+      "type": "question", "bg": "¿?",
+      "say": "A ver, juarense, sé honesto: ¿esto tiene arreglo… o ya hay que pensar en el próximo torneo? ¡Te leo en los comentarios!",
+      "captions": ["A ver, juarense,", "sé honesto:", "¿esto <em>tiene arreglo</em>…", "o ya hay que pensar", "en el próximo torneo?", "¡Te leo en los <em>comentarios</em>!"],
+      "pre": "JUARENSE, SÉ HONESTO:", "q": "¿TIENE\nARREGLO?",
+      "opts": ["SÍ, TODAVÍA SE PUEDE", "YA, AL OTRO TORNEO"]
+    }
+  ],
+  "post": "Once partidos, una victoria y cuatro puntos. Bravos es el último de la Liga MX. Juarense, sé honesto: ¿esto tiene arreglo o ya hay que pensar en el próximo torneo? 👇",
+  "hashtags": ["#FCJuárez", "#Bravos", "#LigaMX", "#Apertura2026", "#CiudadJuárez", "#FútbolMexicano"],
+  "sources": [
+    "https://www.informador.mx/deportes/liga-mx-asi-quedo-la-tabla-general-tras-la-jornada-11-del-apertura-2026-20261011-0095.html",
+    "https://www.clarosports.com/futbol/liga-mx/juarez-vs-tijuana-en-vivo-el-partido-de-la-jornada-11-de-la-liga-mx-resultado-y-goles-hoy-apertura-2026/"
+  ]
+}

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<!-- Plantilla de reels Señor Fútbol. La historia llega en window.STORY y los tiempos de voz en window.TIMING. -->
+<style>
+@font-face{font-family:Anton;src:url(fonts/anton-latin-400-normal.woff2) format('woff2');}
+@font-face{font-family:Anton;src:url(fonts/anton-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-024F;}
+@font-face{font-family:Barlow;font-weight:600;src:url(fonts/barlow-condensed-latin-600-normal.woff2) format('woff2');}
+@font-face{font-family:Barlow;font-weight:800;src:url(fonts/barlow-condensed-latin-800-normal.woff2) format('woff2');}
+@font-face{font-family:Barlow;font-weight:600;src:url(fonts/barlow-condensed-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-024F;}
+@font-face{font-family:Barlow;font-weight:800;src:url(fonts/barlow-condensed-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-024F;}
+:root{--paper:#F2EFE8;--ink:#151515;--lime:#B8E62E;--green:#4F7A06;--red:#E03A2D;--gray:#A7A196;--soft:#E4DFD4;--mute:#6f6a62}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper)}
+#stage{position:relative;width:1080px;height:1920px;background:var(--paper);overflow:hidden;font-family:Barlow,sans-serif;color:var(--ink)}
+#grain{position:absolute;inset:-40px;pointer-events:none;opacity:.55;mix-blend-mode:multiply}
+.abs{position:absolute}
+.scene{position:absolute;left:0;top:0;width:1080px;height:1920px;opacity:0}
+#brand{left:0;right:0;top:120px;text-align:center;font:800 40px Barlow}
+#brand b{display:inline-block;background:var(--ink);color:var(--lime);padding:6px 18px 4px;letter-spacing:8px}
+#header{left:0;right:0;top:186px;text-align:center;font:600 30px Barlow;letter-spacing:6px;color:#555}
+#bgw{left:-40px;top:1080px;font:400 560px/1 Anton;color:transparent;-webkit-text-stroke:5px #D9D3C6;white-space:nowrap;letter-spacing:-6px}
+.c-ink{color:var(--ink)} .c-green{color:var(--green)} .c-red{color:var(--red)} .c-gray{color:var(--mute)}
+.title{left:100px;right:100px;top:330px;font:800 70px/1.05 Barlow;letter-spacing:1px}
+.title span{color:#777}
+.big{font:400 150px/1 Anton;letter-spacing:1px}
+.mid{font:800 70px/1.05 Barlow;letter-spacing:1px}
+.tag{display:inline-block;font:800 44px Barlow;letter-spacing:6px;background:var(--lime);color:var(--ink);padding:8px 22px 6px}
+.tag.dark{background:var(--ink);color:var(--lime)}
+/* stats */
+.stat{left:90px;width:900px;display:flex;align-items:baseline;gap:28px;white-space:nowrap}
+.stat .n{font:400 300px/1 Anton;letter-spacing:-4px}
+.stat .l{font:800 92px/1 Barlow;letter-spacing:2px}
+/* table */
+.row{left:100px;width:880px;height:118px;display:flex;align-items:center;border-bottom:4px solid var(--ink);font:800 64px Barlow;white-space:nowrap}
+.row .p{width:110px;font:400 64px Anton}
+.row .t{flex:1;overflow:hidden}
+.row .pts{width:150px;text-align:right;font:400 72px Anton}
+.row.hl{background:var(--ink);color:var(--paper);border:none;height:150px;padding:0 24px;left:76px;width:928px}
+.row.hl .pts{color:var(--lime)} .row.hl .p{color:var(--red)}
+.stamp{font:400 120px/1 Anton;color:var(--red);border:10px solid var(--red);padding:10px 30px 4px;letter-spacing:6px;white-space:nowrap}
+/* results */
+.dot{width:150px;height:150px;border-radius:50%;border:7px solid var(--ink);display:flex;align-items:center;justify-content:center;font:400 72px Anton}
+.dot.L{background:var(--red);color:var(--paper);border-color:var(--red)}
+.dot.W{background:var(--lime);color:var(--ink)}
+.dot.D{background:var(--paper);color:var(--ink)}
+.dot.Q{border-style:dashed}
+.jlab{font:600 30px Barlow;text-align:center;width:150px;color:#555}
+/* scoreboard */
+.board{left:90px;width:900px;height:330px;background:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 44px;color:var(--paper)}
+.board .team{font:800 70px Barlow;letter-spacing:2px;width:250px;white-space:nowrap}
+.board .sc{white-space:nowrap;font:400 190px/1 Anton;color:var(--lime);letter-spacing:6px}
+/* compare & ranking */
+.cmpRow{left:90px;width:900px;height:150px}
+.cmpLab{position:absolute;left:0;right:0;top:0;text-align:center;font:800 40px Barlow;letter-spacing:4px;color:#555}
+.cmpL,.cmpR{position:absolute;top:48px;height:80px}
+.cmpL{right:470px;background:var(--ink)} .cmpR{left:470px;background:var(--lime);border:6px solid var(--ink)}
+.cmpV{position:absolute;top:48px;font:400 76px/80px Anton}
+.rk{left:90px;width:900px;height:132px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.rk .pos{width:70px;font:400 72px Anton}
+.rk .bar{height:96px;background:var(--ink);display:flex;align-items:center;padding:0 24px;color:var(--paper);font:800 54px Barlow;overflow:hidden}
+.rk .bar small{font:600 34px Barlow;color:#bbb;margin-left:16px}
+.rk .val{font:400 80px Anton}
+.rk.hl .bar{background:var(--lime);color:var(--ink);border:6px solid var(--ink)} .rk.hl .bar small{color:#333}
+/* question */
+.opt{left:110px;width:860px;height:150px;border:7px solid var(--ink);display:flex;align-items:center;gap:30px;padding:0 36px;font:800 70px Barlow;background:var(--paper);white-space:nowrap}
+.opt i{display:block;width:70px;height:70px;border-radius:50%;flex:none}
+/* captions */
+#cap{left:60px;right:60px;top:1390px;text-align:center}
+#cap span{display:inline-block;background:var(--ink);color:var(--paper);font:800 68px/1.15 Barlow;padding:10px 26px 8px;letter-spacing:1px;text-transform:uppercase;border-radius:6px}
+#cap span em{font-style:normal;color:var(--lime)}
+#handle{left:0;right:0;top:1560px;text-align:center;font:600 30px Barlow;letter-spacing:4px;color:#6a665e}
+</style></head>
+<body><div id="stage">
+<svg id="grain" width="1160" height="2000"><filter id="gn"><feTurbulence id="gt" type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="1"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .42  0 0 0 0 .38  0 0 0 .22 0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
+<svg width="0" height="0" style="position:absolute"><filter id="boil"><feTurbulence id="bt" type="turbulence" baseFrequency=".018" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+<defs><symbol id="ballSym" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#fff" stroke="#151515" stroke-width="7"/><path d="M50 30 L68 43 L61 64 L39 64 L32 43 Z" fill="#151515"/><path d="M50 30 L50 8 M68 43 L90 36 M61 64 L74 84 M39 64 L26 84 M32 43 L10 36" stroke="#151515" stroke-width="6"/></symbol></defs></svg>
+<div id="bgw" class="abs"></div>
+<div class="abs" style="left:0;top:0;width:1080px;height:22px;background:var(--lime)"></div>
+<div class="abs" style="left:0;top:22px;width:1080px;height:8px;background:var(--ink)"></div>
+<div id="bar" class="abs" style="left:0;top:1872px;height:14px;background:var(--ink);width:0"></div>
+<div id="brand" class="abs"><b>SEÑOR FÚTBOL</b></div>
+<div id="header" class="abs"></div>
+<div id="scenes"></div>
+<div id="cap" class="abs"></div>
+<div id="handle" class="abs">facebook.com/senorfutbol</div>
+</div>
+<script>
+const ST=window.STORY, TM=window.TIMING;
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const p=(t,t0,d)=>cl((t-t0)/d);
+const eo=x=>1-Math.pow(1-x,3);
+const eb=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const col=c=>'c-'+(c||'ink');
+function el(html){const d=document.createElement('div');d.innerHTML=html.trim();return d.firstChild;}
+function pop(e,t,t0,d=0.4,from=0.6,dy=0){if(!e)return;const x=p(t,t0,d);const s=from+(1-from)*eb(x);e.style.opacity=cl(x*3);e.style.transform=`translateY(${(1-eo(x))*dy}px) scale(${s})`;}
+function slide(e,t,t0,d=0.45,dx=-1200){if(!e)return;const x=eo(p(t,t0,d));e.style.transform=`translateX(${(1-x)*dx}px)`;e.style.opacity=cl(p(t,t0,d)*4);}
+// encoge el texto hasta que quepa en el ancho/alto dado
+function fit(e,maxW,maxH,minPx=30){let fs=parseFloat(getComputedStyle(e).fontSize);let g=0;while((e.scrollWidth>maxW+1||(maxH&&e.scrollHeight>maxH+1))&&fs>minPx&&g++<200){fs-=2;e.style.fontSize=fs+'px';}}
+$('header').textContent=ST.header||'LIGA MX';
+const root=$('scenes');
+const SC=[]; // {el, anim(t,s,e), hits(s,e)=>[], bg}
+const PLAYS={
+ corner_right:{passer:[905,80],from:[932,50],path:'M932 50 Q760 70 540 205',scorer:[560,225],shot:'M540 205 L452 30'},
+ corner_left:{passer:[55,80],from:[28,50],path:'M28 50 Q200 70 420 205',scorer:[400,225],shot:'M420 205 L508 30'},
+ cross_right:{passer:[880,300],from:[880,300],path:'M880 300 Q720 150 530 200',scorer:[545,215],shot:'M530 200 L460 30'},
+ cross_left:{passer:[80,300],from:[80,300],path:'M80 300 Q240 150 430 200',scorer:[415,215],shot:'M430 200 L500 30'},
+ shot:{passer:null,from:[620,340],path:'M620 340 L612 330',scorer:[640,355],shot:'M612 330 Q560 120 525 28'},
+ penalty:{passer:null,from:[480,220],path:'M480 220 L480 219',scorer:[480,262],shot:'M480 220 L425 30'},
+ counter:{passer:[300,420],from:[300,420],path:'M300 420 Q420 330 560 260',scorer:[575,275],shot:'M560 260 Q520 140 440 30'}
+};
+const B={
+stats(s,i){const e=el(`<div class="scene"></div>`);(s.items||[]).slice(0,3).forEach((it,k)=>{e.appendChild(el(`<div class="stat abs" style="top:${330+k*320}px"><span class="n ${col(it.color)}">${esc(it.n)}</span><span class="l">${esc(it.label)}</span></div>`));});
+  return {el:e,after(){e.querySelectorAll('.stat').forEach(x=>fit(x,900,0));},
+   anim(t,a,b){const d=b-a;e.querySelectorAll('.stat').forEach((x,k)=>pop(x,t,a+d*[0,0.33,0.64][k],0.45,0.4,40));},
+   hits(a,b){return (s.items||[]).slice(0,3).map((_,k)=>a+(b-a)*[0,0.33,0.64][k]);}};},
+table(s){const e=el(`<div class="scene"><div class="title abs">${esc(s.title||'TABLA GENERAL')} <span>${s.sub?'· '+esc(s.sub):''}</span></div></div>`);
+  let y=450;(s.rows||[]).slice(0,6).forEach((r,k)=>{if(r.hl)y+=28;e.appendChild(el(`<div class="row abs ${r.hl?'hl':''}" style="top:${y}px"><span class="p">${esc(r.pos)}</span><span class="t">${esc(r.team)}</span><span class="pts">${esc(r.pts)}</span></div>`));y+=r.hl?150+28:118;});
+  let st=null;if(s.stamp){st=el(`<div class="abs stamp" style="right:70px;top:${Math.min(y+20,1200)}px">${esc(s.stamp)}</div>`);e.appendChild(st);}
+  const rows=[...e.querySelectorAll('.row')];
+  return {el:e,after(){rows.forEach(r=>fit(r.querySelector('.t'),r.querySelector('.t').clientWidth,0))},
+   anim(t,a,b){let k2=0;rows.forEach((r,k)=>{if(r.classList.contains('hl'))slide(r,t,a+0.3+k*0.12,0.35,-1300);else slide(r,t,a+0.05+k*0.12,0.4,1200);});
+    if(st){const x=p(t,a+rows.length*0.12+0.7,0.3);st.style.opacity=x>0?1:0;st.style.transform=`rotate(-8deg) scale(${2.2-1.2*eo(x)})`;}},
+   hits(a,b){return st?[a+rows.length*0.12+0.7]:[a+rows.length*0.12+0.3];}};},
+results(s){const seq=(s.seq||[]).slice(0,16);const e=el(`<div class="scene"><div class="title abs">${esc(s.title||'')}</div></div>`);
+  const sz=seq.length>12?130:150, gapX=seq.length>12?205:225;
+  seq.forEach((r,k)=>{const c=k%4,rw=Math.floor(k/4);const lab=(s.labels&&s.labels[k])||('J'+(k+1));const txt=r=='W'?'G':r=='L'?'P':r=='D'?'E':'?';
+   e.appendChild(el(`<div class="abs rdot" style="left:${100+c*gapX}px;top:${450+rw*(sz+50)}px"><div class="dot ${r=='Q'?'D Q':r}" style="width:${sz}px;height:${sz}px">${txt}</div><div class="jlab" style="width:${sz}px">${esc(lab)}</div></div>`));});
+  const rows=Math.ceil(seq.length/4);let cn=null;
+  if(s.counter){cn=el(`<div class="abs" style="left:100px;top:${470+rows*(sz+50)}px;display:flex;align-items:baseline;gap:26px"><span class="big ${col(s.counter.color)}">0</span><span class="mid">${esc(s.counter.label).replace(/\n/g,'<br>')}</span></div>`);e.appendChild(cn);}
+  const dots=[...e.querySelectorAll('.rdot')];
+  return {el:e,anim(t,a,b){dots.forEach((d,k)=>pop(d,t,a+0.05+k*0.11,0.3,0.3,0));
+    if(cn){const t0=a+0.05+dots.length*0.11+0.2;const v=Number(s.counter.value);const x=eo(p(t,t0+0.1,0.9));const n=Math.round(Math.abs(v)*x);cn.firstChild.textContent=(v<0?'-':(s.counter.plus?'+':''))+n+(s.counter.suffix||'');pop(cn,t,t0,0.3,0.8,30);}},
+   hits(a,b){return cn?[a+0.05+dots.length*0.11+0.2]:[];}};},
+scoreboard(s){const e=el(`<div class="scene">${s.tag?`<div class="abs tag" style="left:90px;top:360px">${esc(s.tag)}</div>`:''}
+  <div class="board abs" style="top:500px"><span class="team">${esc(s.home)}</span><span class="sc">0-0</span><span class="team" style="text-align:right">${esc(s.away)}</span></div>
+  ${s.note?`<div class="abs gl" style="left:90px;top:900px;display:flex;gap:26px;align-items:center"><span class="balls" style="display:flex;gap:20px"></span><span class="mid" style="margin-left:6px">${esc(s.note)}${s.noteHL?`<br><span class="c-green">${esc(s.noteHL)}</span>`:''}</span></div>`:''}</div>`);
+  const goals=(s.goals||[]).slice(0,7);const balls=e.querySelector('.balls');
+  if(balls) goals.filter(g=>g.side==(s.ballsFor||'home')).forEach(()=>balls.appendChild(el(`<svg width="110" height="110" viewBox="0 0 100 100"><use href="#ballSym"/></svg>`)));
+  const sc=e.querySelector('.sc'), tag=e.querySelector('.tag'), board=e.querySelector('.board'), gl=e.querySelector('.gl');
+  return {el:e,after(){e.querySelectorAll('.team').forEach(x=>fit(x,250,0));},
+   anim(t,a,b){const d=b-a;pop(tag,t,a,0.35,0.7,20);pop(board,t,a+0.2,0.4,0.85,30);let h=0,w=0,bump=false;const bl=balls?[...balls.children]:[];let bi=0;
+    goals.forEach(g=>{const tg=a+d*g.at;if(t>=tg){g.side=='home'?h++:w++;if(t<tg+0.3)bump=true;}if(g.side==(s.ballsFor||'home')){pop(bl[bi],t,tg,0.35,0.2,0);bi++;}});
+    sc.textContent=h+'-'+w;sc.style.transform=bump?'scale(1.15)':'scale(1)';if(gl){const f=goals.length?a+d*goals[0].at-0.05:a+0.6;gl.style.opacity=t>f?1:0;}},
+   hits(a,b){return goals.map(g=>a+(b-a)*g.at);}};},
+play(s){const P=PLAYS[s.play]||PLAYS.corner_right;const e=el(`<div class="scene">
+  <div class="abs" style="left:90px;top:300px;display:flex;align-items:center;gap:22px"><span class="big" style="font-size:170px">${esc(s.minute||'')}</span><span class="mid">${esc(s.vs||'')}<br><span class="c-gray">${esc(s.sub||'')}</span></span></div>
+  <svg class="abs pitch" style="left:60px;top:520px;filter:url(#boil)" width="960" height="560" viewBox="170 -10 790 461">
+   <g fill="none" stroke="#151515" stroke-width="7" stroke-linecap="round"><rect x="20" y="40" width="920" height="700"/><rect x="230" y="40" width="500" height="250"/><rect x="360" y="40" width="240" height="95"/><path d="M380 290 A120 120 0 0 0 580 290"/><path d="M405 40 L405 8 L555 8 L555 40" stroke-width="9"/></g>
+   <circle cx="480" cy="220" r="7" fill="#151515"/>
+   <path class="pa" d="${P.path}" fill="none" stroke="#151515" stroke-width="6" stroke-linecap="round"/>
+   <path class="sh" d="${P.shot}" fill="none" stroke="#E03A2D" stroke-width="8" stroke-linecap="round"/>
+   <g fill="#A7A196" stroke="#151515" stroke-width="5"><circle cx="430" cy="170" r="26"/><circle cx="610" cy="160" r="26"/><circle cx="505" cy="110" r="26"/><circle cx="480" cy="62" r="26" fill="#E4DFD4"/><circle cx="350" cy="230" r="26"/></g>
+   ${P.passer?`<circle cx="${P.passer[0]}" cy="${P.passer[1]}" r="30" fill="#B8E62E" stroke="#151515" stroke-width="6"/>`:''}
+   <g class="sco"><circle cx="${P.scorer[0]}" cy="${P.scorer[1]}" r="34" fill="#B8E62E" stroke="#151515" stroke-width="6"/></g>
+   <g class="ball"><circle r="17" fill="#fff" stroke="#151515" stroke-width="5"/><circle r="6" fill="#151515"/></g>
+   ${P.passer&&s.passer?`<text x="${P.passer[0]+(P.passer[0]>480?-25:25)}" y="${P.passer[1]+72}" font-family="Barlow" font-weight="800" font-size="40" text-anchor="${P.passer[0]>480?'end':'start'}" fill="#151515">${esc(s.passer)}</text>`:''}
+   ${s.scorer?`<text x="${P.scorer[0]+(P.scorer[0]>=480?50:-50)}" y="${P.scorer[1]+70}" font-family="Barlow" font-weight="800" font-size="46" text-anchor="${P.scorer[0]>=480?'start':'end'}" fill="#151515">${esc(s.scorer)}</text>`:''}
+  </svg>
+  ${s.result?`<div class="abs res" style="left:90px;top:1120px"><span class="tag dark" style="font-size:54px">${esc(s.result)}</span></div>`:''}</div>`);
+  const pa=e.querySelector('.pa'),sh=e.querySelector('.sh'),ball=e.querySelector('.ball'),sco=e.querySelector('.sco'),res=e.querySelector('.res'),hd=e.querySelector('.abs');
+  const dash=(L,x)=>{const n=Math.floor(L*x/22);let r=[];for(let i=0;i<n;i++)r.push(4,18);r.push(0,L*2);return r.join(' ');};
+  const T=(a,b)=>{const d=b-a;return{t0:a+d*0.25,t1:a+d*0.74,t2:a+d*0.9};};
+  return {el:e,anim(t,a,b){const{t0,t1,t2}=T(a,b);pop(hd,t,a,0.4,0.7,20);const Lp=pa.getTotalLength(),Ls=sh.getTotalLength();
+    const xp=cl((t-t0)/(t1-t0)),xs=cl((t-t1)/(t2-t1));pa.setAttribute('stroke-dasharray',xp>0?dash(Lp,xp):'0 99999');sh.setAttribute('stroke-dasharray',xs>0?dash(Ls,xs):'0 99999');
+    let bp=t<t1?pa.getPointAtLength(Lp*eo(xp)):sh.getPointAtLength(Ls*xs);ball.setAttribute('transform',`translate(${bp.x},${bp.y})`);ball.style.opacity=t>a+0.4?1:0;
+    const j=t>t1-0.3&&t<t1+0.3?1-Math.abs(t-t1)/0.3:0;const [sx,sy]=P.scorer;sco.setAttribute('transform',`translate(${sx} ${sy}) scale(${1+0.25*j}) translate(${-sx} ${-sy})`);
+    pop(res,t,t2+0.15,0.4,0.6,20);},
+   hits(a,b){const{t1,t2}=T(a,b);return [t1,t2];}};},
+count(s){const n=Math.min(10,s.dots||0);const e=el(`<div class="scene"><div class="abs bg1" style="left:90px;top:340px"><span class="big" style="font-size:230px;white-space:nowrap">${esc(s.big)}</span></div>
+  <div class="abs dts" style="left:90px;top:620px;display:flex;gap:${n>6?18:30}px"></div>
+  ${s.sub?`<div class="abs sb" style="left:90px;top:860px"><span class="big ${col(s.subColor||'green')}">${esc(s.sub)}</span><div class="mid">${esc(s.subLabel||'')}</div></div>`:''}</div>`);
+  const dts=e.querySelector('.dts');const sz=n>6?(900-(n-1)*18)/n:125;for(let k=0;k<n;k++)dts.appendChild(el(`<div class="dot D Q" style="width:${sz}px;height:${sz}px;font-size:${sz*0.48}px">?</div>`));
+  const sb=e.querySelector('.sb');
+  return {el:e,after(){fit(e.querySelector('.bg1 .big'),900,0);if(sb)fit(sb.querySelector('.big'),900,0);},
+   anim(t,a,b){pop(e.querySelector('.bg1'),t,a,0.4,0.7,20);[...dts.children].forEach((d,k)=>pop(d,t,a+0.15+k*0.1,0.3,0.3,0));pop(sb,t,a+(b-a)*0.45,0.4,0.7,30);},
+   hits(a,b){return [a+(b-a)*0.45];}};},
+headline(s){const e=el(`<div class="scene">${s.tag?`<div class="abs tag" style="left:90px;top:350px">${esc(s.tag)}</div>`:''}
+  <div class="abs hl1" style="left:90px;width:900px;top:460px;font:400 190px/0.98 Anton">${esc(s.title).replace(/\n/g,'<br>')}</div>
+  ${s.sub?`<div class="abs hl2 mid" style="left:90px;width:900px;top:1060px">${esc(s.sub).replace(/\n/g,'<br>')}</div>`:''}</div>`);
+  const h1=e.querySelector('.hl1'),h2=e.querySelector('.hl2'),tg=e.querySelector('.tag');
+  return {el:e,after(){fit(h1,900,560,60);if(h2){h2.style.top=(460+h1.offsetHeight+60)+'px';fit(h2,900,230,36);}},
+   anim(t,a,b){pop(tg,t,a,0.35,0.7,20);pop(h1,t,a+0.15,0.45,0.75,40);pop(h2,t,a+(b-a)*0.4,0.4,0.85,25);},hits(a,b){return [a+0.15];}};},
+compare(s){const rows=(s.rows||[]).slice(0,4);const e=el(`<div class="scene"><div class="title abs">${esc(s.title||'')}</div>
+  <div class="abs" style="left:90px;width:900px;top:440px;display:flex;justify-content:space-between;font:400 96px Anton"><span class="cl">${esc(s.left)}</span><span class="cr c-green">${esc(s.right)}</span></div></div>`);
+  rows.forEach((r,k)=>{const mx=Math.max(Math.abs(r.l),Math.abs(r.r),1);e.appendChild(el(`<div class="cmpRow abs" style="top:${600+k*175}px" data-l="${Math.abs(r.l)/mx}" data-r="${Math.abs(r.r)/mx}"><div class="cmpLab">${esc(r.label)}</div><div class="cmpL"></div><div class="cmpR"></div><div class="cmpV" style="right:${470+10}px;transform:translateX(-100%)"></div><div class="cmpV vr"></div></div>`));});
+  const R=[...e.querySelectorAll('.cmpRow')];
+  return {el:e,after(){fit(e.querySelector('.cl'),430,0);fit(e.querySelector('.cr'),430,0);},
+   anim(t,a,b){R.forEach((row,k)=>{const x=eo(p(t,a+0.3+k*0.25,0.6));const r=rows[k];row.style.opacity=cl(p(t,a+0.3+k*0.25,0.2));
+    const wl=330*row.dataset.l*x, wr=330*row.dataset.r*x;row.querySelector('.cmpL').style.width=wl+'px';row.querySelector('.cmpR').style.width=wr+'px';
+    const v=row.querySelectorAll('.cmpV');v[0].textContent=fmt(r.l*x,r.l);v[0].style.right=(470+wl+16)+'px';v[0].style.transform='none';v[1].textContent=fmt(r.r*x,r.r);v[1].style.left=(470+wr+16)+'px';});},
+   hits(a,b){return [a+0.3];}};},
+ranking(s){const rows=(s.rows||[]).slice(0,5);const mx=Math.max(...rows.map(r=>Math.abs(r.val)),1);const e=el(`<div class="scene"><div class="title abs">${esc(s.title||'')} <span>${s.sub?'· '+esc(s.sub):''}</span></div></div>`);
+  rows.forEach((r,k)=>e.appendChild(el(`<div class="rk abs ${r.hl?'hl':''}" style="top:${450+k*150}px"><span class="pos">${k+1}</span><div class="bar">${esc(r.name)}${r.team?`<small>${esc(r.team)}</small>`:''}</div><span class="val">${esc(r.val)}</span></div>`)));
+  const R=[...e.querySelectorAll('.rk')];
+  return {el:e,anim(t,a,b){R.forEach((row,k)=>{const t0=a+0.1+(R.length-1-k)*0.18;const x=eo(p(t,t0,0.5));row.style.opacity=cl(p(t,t0,0.15));row.querySelector('.bar').style.width=(260+430*Math.abs(rows[k].val)/mx)*x+'px';});},hits(a,b){return [a+0.1];}};},
+question(s){const o=(s.opts||[]).slice(0,2);const e=el(`<div class="scene"><div class="abs q" style="left:80px;right:80px;top:330px;text-align:center"><div class="mid">${esc(s.pre||'')}</div><div class="big qq" style="font-size:200px;margin-top:16px">${esc(s.q).replace(/\n/g,'<br>')}</div></div>
+  ${o[0]?`<div class="opt abs o1" style="top:900px"><i style="background:var(--lime);border:6px solid var(--ink)"></i><span>${esc(o[0])}</span></div>`:''}
+  ${o[1]?`<div class="opt abs o2" style="top:1080px"><i style="background:var(--red)"></i><span>${esc(o[1])}</span></div>`:''}</div>`);
+  return {el:e,after(){fit(e.querySelector('.qq'),920,430,80);e.querySelectorAll('.opt span').forEach(x=>fit(x,700,0));},
+   anim(t,a,b){const d=b-a;pop(e.querySelector('.q'),t,a,0.45,0.7,30);slide(e.querySelector('.o1'),t,a+d*0.45,0.4,-1200);slide(e.querySelector('.o2'),t,a+d*0.6,0.4,1200);},hits(){return [];}};}
+};
+function fmt(v,final){const dec=String(final).includes('.')?1:0;return (final<0?'-':'')+Math.abs(v).toFixed(dec);}
+// Construcción
+const N=ST.scenes.length;
+ST.scenes.forEach((s,i)=>{const f=B[s.type];if(!f)throw new Error('Tipo de escena desconocido: '+s.type);const o=f(s,i);o.s=s;root.appendChild(o.el);SC.push(o);});
+
+// Ventanas de tiempo: cada escena dura lo que su línea de voz (la última escena puede abarcar varias líneas)
+const LN=TM.lines;
+const win=SC.map((o,i)=>[i==0?0:LN[i].start, i<N-1?LN[i+1].start:99]);
+const capList=[];ST.scenes.forEach((s,i)=>{const L=LN[i];const ch=(s.captions&&s.captions.length)?s.captions:[s.say];const lens=ch.map(c=>c.replace(/<[^>]+>/g,'').length+4);const tot=lens.reduce((x,y)=>x+y,0);let t=L.start;ch.forEach((c,k)=>{const d=(L.end-L.start)*lens[k]/tot;capList.push({s:t,e:t+d+0.08,html:c});t+=d;});});
+if(capList.length)capList[capList.length-1].e=TM.total;
+window.getHits=()=>{const h=[];SC.forEach((o,i)=>{const a=LN[i].start,b=LN[i].end;if(i>0)h.push({t:a,k:'whoosh'});(o.hits?o.hits(a,b):[]).forEach(x=>h.push({t:x,k:'hit'}));});return h;};
+window.renderAt=function(t){
+  const f=Math.floor(t*30);$('gt').setAttribute('seed',1+Math.floor(f/3)%7);$('bt').setAttribute('seed',3+Math.floor(f/4)%5);
+  let si=0;
+  SC.forEach((o,i)=>{const[a,b]=win[i];const v=Math.min(p(t,a-0.05,0.25),1-p(t,b-0.12,0.18));o.el.style.opacity=v;o.el.style.visibility=v>0?'visible':'hidden';
+    if(t>=a)si=i; if(v>0){o.el.style.transform=`scale(${1+0.025*p(t,a,b-a)})`;o.el.style.transformOrigin='540px 900px';o.anim(t,LN[i].start,LN[i].end);}});
+  const bg=$('bgw');const bt=ST.scenes[si].bg||'';if(bg.dataset.k!=si){bg.textContent=bt;bg.dataset.k=si;}
+  bg.style.transform=`translateX(${-60*p(t,win[si][0],Math.min(win[si][1],TM.total)-win[si][0]+0.5)}px)`;bg.style.opacity=p(t,win[si][0],0.4);
+  $('bar').style.width=(1080*cl(t/TM.total))+'px';
+  const c=capList.find(c=>t>=c.s&&t<c.e),cap=$('cap');
+  if(c){if(cap.dataset.k!=c.s){cap.innerHTML=`<span>${c.html}</span>`;cap.dataset.k=c.s;}cap.firstChild.style.transform=`scale(${0.9+0.1*eo(p(t,c.s,0.12))})`;cap.style.opacity=1;}else cap.style.opacity=0;
+};
+// medir y ajustar textos solo cuando las fuentes ya cargaron
+Promise.all([...document.fonts].map(f=>f.load().catch(()=>{}))).then(()=>document.fonts.ready).then(()=>{SC.forEach(o=>o.after&&o.after());window.READY=true;});
+</script>
+</body></html>
