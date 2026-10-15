@@ -1,7 +1,7 @@
 {
   "id": "2026-10-15-juarez-ultimo",
   "header": "LIGA MX · APERTURA 2026",
-  "voice": "em_santa",
+  "voice": "em_alex",
   "scenes": [
     {
       "type": "stats", "bg": "11", "speed": 1.05,

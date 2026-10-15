@@ -34,7 +34,7 @@ Los dos videos no deben repetir tema, equipo protagonista ni gancho. Revisa `sto
 {
   "id": "2026-10-16-tema",            // igual al nombre del archivo, sin .json
   "header": "LIGA MX · APERTURA 2026",  // línea pequeña bajo la marca
-  "voice": "em_santa",                  // voz por defecto
+  "voice": "em_alex",                   // voz por defecto (la que eligió Alberto)
   "scenes": [ { "type": "...", "say": "...", "captions": ["..."], "bg": "18", ... } ],
   "post": "Texto para publicar con pregunta al final 👇",
   "hashtags": ["#LigaMX", "..."],

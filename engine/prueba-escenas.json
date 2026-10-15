@@ -1,7 +1,7 @@
 {
   "id": "prueba-escenas",
   "header": "PRUEBA DE PLANTILLA · DATOS FICTICIOS",
-  "voice": "em_santa",
+  "voice": "em_alex",
   "scenes": [
     {
       "type": "headline", "bg": "!",

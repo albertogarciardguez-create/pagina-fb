@@ -57,7 +57,7 @@ def tts(story, outdir):
     from kokoro_onnx import Kokoro
     m, v = ensure_model()
     k = Kokoro(m, v)
-    voice = story.get("voice", "em_santa")
+    voice = story.get("voice", "em_alex")
     sr = 24000
     parts = [np.zeros(int(sr * 0.35), np.float32)]
     t = 0.35
