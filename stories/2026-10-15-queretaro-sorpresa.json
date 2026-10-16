@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-15-queretaro-sorpresa",
+  "header": "LIGA MX · APERTURA 2026",
+  "voice": "em_santa",
+  "scenes": [
+    {
+      "type": "stats", "bg": "20", "speed": 1.08,
+      "say": "¡Querétaro es tercero del Apertura… y está a un solo punto del líder!",
+      "captions": ["¡Querétaro es <em>3°</em>", "del Apertura…", "a un <em>solo punto</em>", "del líder!"],
+      "items": [
+        {"n": "20", "label": "PUNTOS", "color": "green"},
+        {"n": "3°", "label": "LUGAR", "color": "green"},
+        {"n": "+7", "label": "DIFERENCIA"}
+      ]
+    },
+    {
+      "type": "table", "bg": "3",
+      "say": "En la tabla general, los Gallos pelean hasta el liderato.",
+      "captions": ["En la tabla general,", "los Gallos pelean", "hasta el <em>liderato</em>."],
+      "title": "TABLA GENERAL", "sub": "J11", "stamp": "SORPRESA",
+      "rows": [
+        {"pos": 1, "team": "AMÉRICA", "pts": 21},
+        {"pos": 2, "team": "TOLUCA", "pts": 20},
+        {"pos": 3, "team": "QUERÉTARO", "pts": 20, "hl": true},
+        {"pos": 4, "team": "CHIVAS", "pts": 19},
+        {"pos": 5, "team": "LEÓN", "pts": 18}
+      ]
+    },
+    {
+      "type": "scoreboard", "bg": "2-0",
+      "say": "En la jornada once golpearon fuerte: ¡dos a cero al Atlante, con gol de Homenchenko y de Muñoz!",
+      "captions": ["En la <em>J11</em> golpearon:", "¡<em>2-0</em> al Atlante,", "gol de Homenchenko", "y de <em>Muñoz</em>!"],
+      "tag": "ÚLTIMO TRIUNFO · J11", "home": "GALLOS", "away": "ATLANTE",
+      "goals": [{"side": "home", "at": 0.42}, {"side": "home", "at": 0.6}],
+      "note": "GOLES DE", "noteHL": "HOMENCHENKO · MUÑOZ"
+    },
+    {
+      "type": "stats", "bg": "8", "speed": 1.08,
+      "say": "¿Su secreto? Quince goles a favor… y apenas ocho en contra.",
+      "captions": ["¿Su secreto?", "<em>15</em> goles a favor…", "y apenas <em>8</em>", "en contra."],
+      "items": [
+        {"n": "15", "label": "A FAVOR", "color": "green"},
+        {"n": "8", "label": "EN CONTRA", "color": "red"},
+        {"n": "+7", "label": "DIFERENCIA"}
+      ]
+    },
+    {
+      "type": "headline", "bg": "DT", "gap": 0.3,
+      "say": "Y detrás está el Chino González, que el año pasado fue campeón en Chile con Coquimbo.",
+      "captions": ["Detrás está", "<em>el Chino</em> González,", "campeón en Chile", "con <em>Coquimbo</em>."],
+      "tag": "EL ARTÍFICE", "title": "ESTEBAN\nGONZÁLEZ", "sub": "CAMPEÓN EN CHILE CON COQUIMBO"
+    },
+    {
+      "type": "headline", "bg": "J12", "gap": 0.3,
+      "say": "Este sábado los Gallos visitan a Santos, buscando seguir en lo más alto.",
+      "captions": ["Este <em>sábado</em>", "visitan a <em>Santos</em>,", "por seguir", "en lo más alto."],
+      "tag": "PRÓXIMO PARTIDO · J12", "title": "VISITAN A\nSANTOS", "sub": "SÁBADO 17:00"
+    },
+    {
+      "type": "question", "bg": "¿?",
+      "say": "A ver, aficionado: ¿este Querétaro es candidato de verdad al título… o se va a caer en la recta final? ¡Te leo en los comentarios!",
+      "captions": ["A ver, aficionado:", "¿este Querétaro", "es <em>candidato real</em>…", "o se va a caer", "en la recta final?", "¡Te leo en los <em>comentarios</em>!"],
+      "pre": "AFICIONADO, DIME:", "q": "¿CANDIDATO\nO ESPEJISMO?",
+      "opts": ["ES CANDIDATO REAL", "SE VA A CAER"]
+    }
+  ],
+  "post": "Querétaro es TERCERO del Apertura 2026, a solo un punto del líder América. 20 puntos, 15 goles a favor y apenas 8 en contra: el Chino González tiene a los Gallos soñando. ¿Es candidato de verdad al título… o se va a caer en la recta final? 👇",
+  "hashtags": ["#Querétaro", "#GallosBlancos", "#LigaMX", "#Apertura2026", "#América", "#FútbolMexicano"],
+  "sources": [
+    "https://www.excelsior.com.mx/deportes/liga-mx-posiciones-apertura-2026-jornada-11",
+    "https://www.foxsports.com.mx/2026/10/10/canta-el-gallo-queretaro-derroto-al-atlante-y-se-metio-a-los-primeros-lugares-del-apertura-2026/",
+    "https://www.emol.com/noticias/Deportes/2026/10/11/1213852/quererato-esteban-gonzalez-elogios-mexico.html",
+    "https://www.record.com.mx/historia/fechas-y-horarios-de-la-jornada-12-del-apertura-2026-2026101315434617216"
+  ]
+}

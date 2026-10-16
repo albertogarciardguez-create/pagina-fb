@@ -1,0 +1,73 @@
+{
+  "id": "2026-10-15-bravos-cruz-azul",
+  "header": "LIGA MX · APERTURA 2026",
+  "voice": "em_alex",
+  "scenes": [
+    {
+      "type": "stats", "bg": "11", "speed": 1.05,
+      "say": "¡Cuatro puntos! ¡Una sola victoria! ¡Y nueve derrotas en once partidos!",
+      "captions": ["¡<em>4</em> puntos!", "¡<em>1</em> sola victoria!", "¡Y <em>9</em> derrotas", "en <em>11</em> partidos!"],
+      "items": [
+        {"n": "4", "label": "PUNTOS", "color": "red"},
+        {"n": "1", "label": "VICTORIA", "color": "green"},
+        {"n": "9", "label": "DERROTAS", "color": "red"}
+      ]
+    },
+    {
+      "type": "table", "bg": "18",
+      "say": "En la tabla general, Bravos de Juárez es el último… y por mucho.",
+      "captions": ["En la tabla general,", "Bravos es el <em>último</em>…", "y por mucho."],
+      "title": "TABLA GENERAL", "sub": "J11", "stamp": "ÚLTIMO",
+      "rows": [
+        {"pos": 14, "team": "SANTOS", "pts": 13},
+        {"pos": 15, "team": "SAN LUIS", "pts": 12},
+        {"pos": 16, "team": "ATLANTE", "pts": 11},
+        {"pos": 17, "team": "NECAXA", "pts": 9},
+        {"pos": 18, "team": "FC JUÁREZ", "pts": 4, "hl": true}
+      ]
+    },
+    {
+      "type": "results", "bg": "-18", "gap": 0.22,
+      "say": "Arrancaron con ocho derrotas al hilo… y hoy cargan menos dieciocho de diferencia de goles.",
+      "captions": ["Arrancaron con <em>8</em>", "derrotas al hilo…", "y hoy cargan <em>-18</em>", "de diferencia de goles."],
+      "title": "SUS 11 PARTIDOS",
+      "seq": ["L","L","L","L","L","L","L","L","W","L","D"],
+      "counter": {"value": -18, "label": "DIFERENCIA\nDE GOLES", "color": "red"}
+    },
+    {
+      "type": "scoreboard", "bg": "2-0",
+      "say": "¿La única alegría? ¡El dos a cero a Tigres, con doblete de Estupiñán!",
+      "captions": ["¿La única alegría?", "¡El <em>2-0</em> a Tigres,", "con doblete", "de <em>Estupiñán</em>!"],
+      "tag": "LA ÚNICA ALEGRÍA · J9", "home": "JUÁREZ", "away": "TIGRES",
+      "goals": [{"side": "home", "at": 0.42}, {"side": "home", "at": 0.56}],
+      "note": "DOBLETE DE", "noteHL": "ESTUPIÑÁN"
+    },
+    {
+      "type": "headline", "bg": "J12", "gap": 0.3,
+      "say": "Y este sábado visitan a Cruz Azul, que es séptimo con diecisiete puntos. ¡Cuesta arriba!",
+      "captions": ["Y este <em>sábado</em>", "visitan a <em>Cruz Azul</em>,", "séptimo con <em>17</em> puntos.", "¡Cuesta arriba!"],
+      "tag": "PRÓXIMO PARTIDO · J12", "title": "VISITAN A\nCRUZ AZUL", "sub": "SÁBADO 21:00 · 7° LUGAR"
+    },
+    {
+      "type": "count", "bg": "6", "speed": 1.1, "gap": 0.4,
+      "say": "Quedan seis partidos. ¡Dieciocho puntos en juego para salvar el torneo!",
+      "captions": ["Quedan <em>6</em> partidos.", "¡<em>18</em> puntos en juego", "para salvar el torneo!"],
+      "big": "QUEDAN 6", "dots": 6, "sub": "18 PUNTOS", "subLabel": "EN JUEGO"
+    },
+    {
+      "type": "question", "bg": "¿?",
+      "say": "A ver, juarense, sé honesto: ¿esto todavía tiene arreglo… o ya hay que pensar en el próximo torneo? ¡Te leo en los comentarios!",
+      "captions": ["A ver, juarense,", "sé honesto:", "¿esto <em>tiene arreglo</em>…", "o ya pensamos", "en el próximo torneo?", "¡Te leo en los <em>comentarios</em>!"],
+      "pre": "JUARENSE, SÉ HONESTO:", "q": "¿TIENE\nARREGLO?",
+      "opts": ["SÍ, TODAVÍA SE PUEDE", "YA, AL OTRO TORNEO"]
+    }
+  ],
+  "post": "Bravos de Juárez: 4 puntos en 11 partidos, último de toda la Liga MX y -18 de diferencia de goles. Este sábado visitan a Cruz Azul. A ver, juarense, sé honesto: ¿esto todavía tiene arreglo… o ya hay que pensar en el próximo torneo? 👇",
+  "hashtags": ["#FCJuárez", "#Bravos", "#LigaMX", "#Apertura2026", "#CruzAzul", "#CiudadJuárez", "#FútbolMexicano"],
+  "sources": [
+    "https://www.excelsior.com.mx/deportes/liga-mx-posiciones-apertura-2026-jornada-11",
+    "https://www.foxsports.com.mx/2026/10/10/fc-juarez-vs-tijuana-en-vivo-mira-el-minuto-a-minuto-y-goles-partido-jornada-11-liga-mx-apertura-2026/",
+    "https://www.record.com.mx/historia/fechas-y-horarios-de-la-jornada-12-del-apertura-2026-2026101315434617216",
+    "https://www.foxsports.com.mx/2026/09/18/al-fin-fc-juarez-vencio-a-tigres-y-corto-su-racha-de-8-derrotas-en-fila-en-el-apertura-2026/"
+  ]
+}
