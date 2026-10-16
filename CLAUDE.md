@@ -28,6 +28,16 @@ Los dos videos no deben repetir tema, equipo protagonista ni gancho. Revisa `sto
 7. **Entregar a Alberto**: manda los dos MP4 con SendUserFile. En tu mensaje final, para cada video (A y B) incluye, listo para copiar: la hora exacta sugerida para programarlo hoy, el texto del post con hashtags y las fuentes.
 8. **Guardar**: haz commit solo de los JSON de las historias (`salida/` está ignorada) y push a `main`. Si el push falla, continúa.
 
+## Publicación automática (cuando esté configurada)
+
+Después del paso 6, intenta programar cada video directo en la página:
+
+1. Busca en Google Drive (conector) el archivo **`senorfutbol-facebook.json`** con `{"page_id": "...", "token": "..."}`. Nunca copies el token al repositorio, a un commit ni a tu mensaje.
+2. Programa cada video con su hora del día (formato `AAAA-MM-DD HH:MM`, hora de Ciudad Juárez):
+   `FB_PAGE_ID=<page_id> FB_PAGE_TOKEN=<token> python3 engine/publish.py salida/<id>/<id>.mp4 salida/<id>/post.txt "<hora>"`
+3. Si salió bien, en tu mensaje final di que el video **ya quedó programado** y a qué hora (Alberto puede borrarlo en Meta Business Suite si algo no le gusta), y manda igual el MP4 con SendUserFile para que lo vea.
+4. Si no existe el archivo, no hay acceso de red a Facebook o la API marca error (token vencido, permisos), entrega como siempre para publicar a mano y explica el error en una línea.
+
 ## Esquema de la historia
 
 ```json
