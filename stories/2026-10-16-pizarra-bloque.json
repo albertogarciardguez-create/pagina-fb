@@ -1,0 +1,569 @@
+{
+ "id": "2026-10-16-pizarra-bloque",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "15M",
+   "say": "¿Te meten goles por el centro todo el partido? Tu equipo está partido. Así se defiende en bloque.",
+   "captions": [
+    "¿Te meten goles",
+    "por el <em>centro</em>",
+    "todo el partido?",
+    "Tu equipo",
+    "está <em>partido</em>.",
+    "Así se defiende",
+    "en <em>bloque</em>."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "DEFIENDE\nEN BLOQUE",
+   "sub": "Que no te pasen por el centro"
+  },
+  {
+   "type": "board",
+   "bg": "!",
+   "title": "EQUIPO PARTIDO",
+   "say": "Aquí el problema: los de arriba presionan, los de atrás se quedan, y en medio queda un hueco enorme.",
+   "captions": [
+    "Aquí el problema:",
+    "los de arriba",
+    "<em>presionan</em>,",
+    "los de atrás",
+    "se quedan,",
+    "y en medio queda",
+    "un <em>hueco</em> enorme."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 34,
+     "y": 86,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 66,
+     "y": 86,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 20,
+     "y": 36
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "MD",
+     "x": 80,
+     "y": 36
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 28,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 30,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 70,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 12,
+     "y": 50
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 56
+    },
+    {
+     "id": "R6",
+     "x": 88,
+     "y": 50
+    },
+    {
+     "id": "R7",
+     "x": 60,
+     "y": 72
+    }
+   ],
+   "ball": "R5",
+   "steps": [
+    {
+     "at": 0.55,
+     "zone": {
+      "x": 18,
+      "y": 46,
+      "w": 64,
+      "h": 30,
+      "label": "HUECO"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "15M",
+   "title": "TODOS JUNTOS",
+   "inherit": true,
+   "say": "La solución: todos se juntan. Entre tu delantero y tus defensas, no más de quince metros.",
+   "captions": [
+    "La solución:",
+    "todos se <em>juntan</em>.",
+    "Entre tu delantero",
+    "y tus defensas,",
+    "no más de",
+    "<em>15 metros</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "DC": [
+       50,
+       50
+      ],
+      "MI": [
+       26,
+       62
+      ],
+      "MC": [
+       50,
+       64
+      ],
+      "MD": [
+       74,
+       62
+      ],
+      "DI": [
+       38,
+       80
+      ],
+      "DD": [
+       64,
+       80
+      ],
+      "R5": [
+       50,
+       40
+      ],
+      "R7": [
+       60,
+       72
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        50,
+        49
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MC",
+       "to": [
+        50,
+        63
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DI",
+       "to": [
+        38,
+        81
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DD",
+       "to": [
+        64,
+        81
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.55,
+     "zone": {
+      "x": 16,
+      "y": 44,
+      "w": 68,
+      "h": 42,
+      "label": "15 METROS",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "←",
+   "title": "QUE JUEGUEN POR FUERA",
+   "inherit": true,
+   "say": "Así el rival solo puede jugar por fuera. Y cuando el balón va a la banda, todo el bloque se mueve hacia ese lado.",
+   "captions": [
+    "Así el rival",
+    "solo puede jugar",
+    "por <em>fuera</em>.",
+    "Y cuando el balón",
+    "va a la banda,",
+    "todo el bloque",
+    "se <em>mueve</em> hacia ese lado."
+   ],
+   "steps": [
+    {
+     "at": 0.2,
+     "ball": "R4",
+     "arrows": [
+      {
+       "from": "R5",
+       "to": "R4",
+       "kind": "pass",
+       "curve": 0.2
+      }
+     ]
+    },
+    {
+     "at": 0.55,
+     "pos": {
+      "MI": [
+       18,
+       60
+      ],
+      "MC": [
+       36,
+       62
+      ],
+      "DC": [
+       38,
+       48
+      ],
+      "MD": [
+       60,
+       62
+      ],
+      "DI": [
+       28,
+       80
+      ],
+      "DD": [
+       52,
+       80
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        37,
+        60
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MD",
+       "to": [
+        61,
+        62
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DD",
+       "to": [
+        53,
+        80
+       ],
+       "kind": "run"
+      }
+     ],
+     "zone": {
+      "x": 6,
+      "y": 42,
+      "w": 64,
+      "h": 44,
+      "label": "BASCULA",
+      "color": "green"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "BANDA",
+   "title": "AHÍ SE PRESIONA",
+   "inherit": true,
+   "say": "La banda es tu aliada: ahí lo encierras contra la raya y recuperas.",
+   "captions": [
+    "La banda",
+    "es tu <em>aliada</em>:",
+    "ahí lo encierras",
+    "contra la raya",
+    "y <em>recuperas</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "MI": [
+       16,
+       56
+      ],
+      "DC": [
+       22,
+       44
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        16,
+        57
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "DC",
+       "to": [
+        22,
+        45
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 0,
+      "y": 36,
+      "w": 34,
+      "h": 26,
+      "label": "PRESIÓN"
+     }
+    },
+    {
+     "at": 0.7,
+     "ball": "MI",
+     "pos": {
+      "R4": [
+       6,
+       46
+      ]
+     },
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "4V4",
+   "title": "ENTRÉNALO: 4 VS 4",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: cuatro contra cuatro. Si tu bloque se separa más de quince metros, punto para el ataque.",
+   "captions": [
+    "Entrénalo así:",
+    "<em>4 contra 4</em>.",
+    "Si tu bloque",
+    "se separa más de",
+    "<em>15 metros</em>,",
+    "punto para el ataque."
+   ],
+   "team": [
+    {
+     "id": "A",
+     "x": 30,
+     "y": 72,
+     "label": ""
+    },
+    {
+     "id": "B",
+     "x": 70,
+     "y": 72,
+     "label": ""
+    },
+    {
+     "id": "C",
+     "x": 40,
+     "y": 58,
+     "label": ""
+    },
+    {
+     "id": "D",
+     "x": 60,
+     "y": 58,
+     "label": ""
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 20,
+     "y": 36
+    },
+    {
+     "id": "R2",
+     "x": 50,
+     "y": 30
+    },
+    {
+     "id": "R3",
+     "x": 80,
+     "y": 36
+    },
+    {
+     "id": "R4",
+     "x": 50,
+     "y": 46
+    }
+   ],
+   "ball": "R2",
+   "steps": [
+    {
+     "at": 0.1,
+     "zone": {
+      "x": 22,
+      "y": 52,
+      "w": 56,
+      "h": 28,
+      "label": "15 METROS",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.4,
+     "ball": "R3",
+     "arrows": [
+      {
+       "from": "R2",
+       "to": "R3",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.65,
+     "pos": {
+      "A": [
+       44,
+       72
+      ],
+      "B": [
+       80,
+       70
+      ],
+      "C": [
+       54,
+       58
+      ],
+      "D": [
+       74,
+       54
+      ]
+     },
+     "arrows": [
+      {
+       "from": "D",
+       "to": [
+        74,
+        55
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "B",
+       "to": [
+        79,
+        70
+       ],
+       "kind": "run"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu equipo defiende junto o partido? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu equipo",
+    "defiende <em>junto</em>",
+    "o <em>partido</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿DEFIENDEN\nJUNTOS O\nPARTIDOS?",
+   "opts": [
+    "JUNTOS",
+    "PARTIDOS"
+   ]
+  }
+ ],
+ "post": "¿Te meten goles por el centro todo el partido? Tu equipo está partido. Así se defiende en bloque en fútbol 7. 💾 Guárdalo para tu próximo entrenamiento. ¿Tu equipo defiende junto o partido? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#Defensa",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}

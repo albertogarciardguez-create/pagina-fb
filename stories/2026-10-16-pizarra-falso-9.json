@@ -1,0 +1,599 @@
+{
+ "id": "2026-10-16-pizarra-falso-9",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "9",
+   "say": "¿El rival se encierra atrás y no hay por dónde entrar? Usa el truco del falso nueve.",
+   "captions": [
+    "¿El rival",
+    "se <em>encierra</em> atrás",
+    "y no hay",
+    "por dónde entrar?",
+    "Usa el truco",
+    "del <em>falso 9</em>."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "EL TRUCO\nDEL FALSO 9",
+   "sub": "Cómo abrir una defensa cerrada"
+  },
+  {
+   "type": "board",
+   "bg": "X",
+   "title": "LA DEFENSA TE ESPERA",
+   "say": "Tu nueve está pegado a los defensas. Lo tienen marcado y no le llega nada.",
+   "captions": [
+    "Tu nueve",
+    "está <em>pegado</em>",
+    "a los defensas.",
+    "Lo tienen marcado",
+    "y no le llega <em>nada</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 32,
+     "y": 74,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 68,
+     "y": 74,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 40
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 58
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 40
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 26,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 38,
+     "y": 18
+    },
+    {
+     "id": "R3",
+     "x": 62,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 26,
+     "y": 32
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 36
+    },
+    {
+     "id": "R6",
+     "x": 74,
+     "y": 32
+    },
+    {
+     "id": "R7",
+     "x": 66,
+     "y": 56
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.45,
+     "zone": {
+      "x": 24,
+      "y": 10,
+      "w": 52,
+      "h": 24,
+      "label": "TODO CERRADO"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "↓",
+   "title": "EL 9 BAJA",
+   "inherit": true,
+   "say": "Ahora el nueve baja a recibir. Si un defensa lo sigue, deja un hueco atrás.",
+   "captions": [
+    "Ahora el nueve",
+    "<em>baja</em> a recibir.",
+    "Si un defensa",
+    "lo sigue,",
+    "deja un <em>hueco</em> atrás."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "DC": [
+       50,
+       46
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        50,
+        45
+       ],
+       "kind": "run"
+      }
+     ],
+     "ball": "DC"
+    },
+    {
+     "at": 0.15,
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        50,
+        47
+       ],
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "pos": {
+      "R3": [
+       56,
+       36
+      ],
+      "R5": [
+       36,
+       44
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R3",
+       "to": [
+        56,
+        35
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.8,
+     "zone": {
+      "x": 54,
+      "y": 8,
+      "w": 28,
+      "h": 18,
+      "label": "HUECO",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "GOL",
+   "title": "EL EXTERIOR ATACA",
+   "inherit": true,
+   "say": "Ese hueco lo ataca el exterior en diagonal. Pase al espacio… ¡y gol!",
+   "captions": [
+    "Ese hueco",
+    "lo ataca el <em>exterior</em>",
+    "en diagonal.",
+    "Pase al espacio…",
+    "¡y <em>gol</em>!"
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "MD": [
+       68,
+       14
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        69,
+        15
+       ],
+       "kind": "run",
+       "curve": -0.15
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "ball": "MD",
+     "arrows": [
+      {
+       "from": "DC",
+       "to": "MD",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.8,
+     "ball": [
+      56,
+      0.5
+     ],
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        56,
+        1
+       ],
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "180°",
+   "title": "SI NADIE LO SIGUE",
+   "say": "Y si nadie lo sigue, el nueve recibe libre, de frente, y puede girar y tirar.",
+   "captions": [
+    "Y si nadie lo sigue,",
+    "el nueve recibe <em>libre</em>,",
+    "de frente,",
+    "y puede <em>girar</em>",
+    "y tirar."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 32,
+     "y": 74,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 68,
+     "y": 74,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 40
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 60
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 40
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 46,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 38,
+     "y": 18
+    },
+    {
+     "id": "R3",
+     "x": 62,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 26,
+     "y": 32
+    },
+    {
+     "id": "R5",
+     "x": 34,
+     "y": 44
+    },
+    {
+     "id": "R6",
+     "x": 74,
+     "y": 32
+    },
+    {
+     "id": "R7",
+     "x": 66,
+     "y": 70
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.2,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.45,
+     "pos": {
+      "DC": [
+       52,
+       30
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        52,
+        31
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.78,
+     "ball": [
+      46,
+      0.5
+     ],
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        46,
+        1
+       ],
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "4V3",
+   "title": "ENTRÉNALO: FALSO 9",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: cuatro contra tres. El gol solo vale si lo mete un exterior, nunca el nueve.",
+   "captions": [
+    "Entrénalo así:",
+    "<em>4 contra 3</em>.",
+    "El gol solo vale",
+    "si lo mete",
+    "un <em>exterior</em>,",
+    "nunca el nueve."
+   ],
+   "team": [
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 24,
+     "label": "9"
+    },
+    {
+     "id": "MI",
+     "x": 18,
+     "y": 40
+    },
+    {
+     "id": "MD",
+     "x": 82,
+     "y": 40
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 62
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 4
+    },
+    {
+     "id": "R2",
+     "x": 36,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 64,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 50,
+     "y": 32
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "DC": [
+       50,
+       44
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        50,
+        43
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.35,
+     "ball": "DC",
+     "pos": {
+      "R4": [
+       50,
+       33
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.55,
+     "pos": {
+      "MD": [
+       64,
+       12
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        65,
+        13
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "ball": "MD",
+     "arrows": [
+      {
+       "from": "DC",
+       "to": "MD",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu nueve baja a jugar o se queda arriba esperando? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu nueve",
+    "<em>baja</em> a jugar",
+    "o se queda arriba",
+    "<em>esperando</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿TU 9 BAJA\nO SE QUEDA\nARRIBA?",
+   "opts": [
+    "BAJA A JUGAR",
+    "SE QUEDA ARRIBA"
+   ]
+  }
+ ],
+ "post": "¿El rival se encierra y no hay por dónde entrar? El truco del falso 9 explicado para fútbol 7. 💾 Guárdalo para tu próximo entrenamiento. ¿Tu 9 baja a jugar o se queda arriba? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#Falso9",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}

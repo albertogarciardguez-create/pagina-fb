@@ -1,0 +1,473 @@
+{
+ "id": "2026-10-16-pizarra-salida-desde-atras",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "PO",
+   "say": "¿Tu portero la revienta cada vez que la tiene? Así salen jugando equipos como el PSG, y lo puedes copiar en fútbol siete.",
+   "captions": [
+    "¿Tu portero",
+    "la <em>revienta</em>",
+    "cada vez que la tiene?",
+    "Así salen jugando",
+    "equipos como el <em>PSG</em>,",
+    "y lo puedes copiar",
+    "en fútbol 7."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "SAL JUGANDO\nDESDE ATRÁS",
+   "sub": "Como el PSG, en tu fútbol 7"
+  },
+  {
+   "type": "board",
+   "bg": "3V2",
+   "title": "EL PORTERO ES UNO MÁS",
+   "say": "Con el portero tienes un jugador extra. Si te presionan dos, tú sales con tres.",
+   "captions": [
+    "Con el portero",
+    "tienes un <em>jugador extra</em>.",
+    "Si te presionan dos,",
+    "tú sales con <em>tres</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 93
+    },
+    {
+     "id": "DI",
+     "x": 30,
+     "y": 82,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 70,
+     "y": 82,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 58
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 66
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 58
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 36,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 30,
+     "y": 30
+    },
+    {
+     "id": "R3",
+     "x": 70,
+     "y": 30
+    },
+    {
+     "id": "R4",
+     "x": 22,
+     "y": 50
+    },
+    {
+     "id": "R5",
+     "x": 60,
+     "y": 72
+    },
+    {
+     "id": "R6",
+     "x": 78,
+     "y": 50
+    },
+    {
+     "id": "R7",
+     "x": 40,
+     "y": 72
+    }
+   ],
+   "ball": "PO",
+   "steps": [
+    {
+     "at": 0.45,
+     "zone": {
+      "x": 14,
+      "y": 76,
+      "w": 72,
+      "h": 23,
+      "label": "3 CONTRA 2",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "←→",
+   "title": "DEFENSAS ABIERTOS",
+   "inherit": true,
+   "say": "Primero, los defensas se abren casi hasta la banda. El portero juega al que quede libre.",
+   "captions": [
+    "Primero, los defensas",
+    "se <em>abren</em>",
+    "casi hasta la banda.",
+    "El portero juega",
+    "al que quede <em>libre</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.2,
+     "pos": {
+      "DI": [
+       10,
+       82
+      ],
+      "DD": [
+       90,
+       82
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DI",
+       "to": [
+        11,
+        82
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DD",
+       "to": [
+        89,
+        82
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.65,
+     "ball": "DD",
+     "arrows": [
+      {
+       "from": "PO",
+       "to": "DD",
+       "kind": "pass",
+       "curve": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "!",
+   "title": "SI LO PRESIONAN",
+   "inherit": true,
+   "say": "Si el rival sale a presionarlo, el balón va al exterior, que ya estaba esperando pegado a la raya.",
+   "captions": [
+    "Si el rival",
+    "sale a <em>presionarlo</em>,",
+    "el balón va",
+    "al <em>exterior</em>,",
+    "que ya estaba esperando",
+    "pegado a la raya."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "R5": [
+       82,
+       74
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R5",
+       "to": [
+        83,
+        75
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "ball": "MD",
+     "pos": {
+      "MD": [
+       92,
+       60
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DD",
+       "to": "MD",
+       "kind": "pass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "1-2-3",
+   "title": "EL MEDIO DE FRENTE",
+   "inherit": true,
+   "say": "Y de ahí, al medio que se ofrece de frente. En tres pases ya rompiste su presión.",
+   "captions": [
+    "Y de ahí,",
+    "al medio",
+    "que se ofrece <em>de frente</em>.",
+    "En <em>tres pases</em>",
+    "ya rompiste",
+    "su presión."
+   ],
+   "steps": [
+    {
+     "at": 0.25,
+     "ball": "MC",
+     "pos": {
+      "MC": [
+       62,
+       58
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.65,
+     "ball": "DC",
+     "pos": {
+      "DC": [
+       58,
+       30
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3+1",
+   "title": "ENTRÉNALO: 3 + PO VS 2",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: portero, dos defensas y un medio contra dos delanteros. Punto si cruzan medio campo con el balón controlado.",
+   "captions": [
+    "Entrénalo así:",
+    "portero, dos defensas",
+    "y un medio",
+    "contra <em>dos delanteros</em>.",
+    "Punto si cruzan",
+    "<em>medio campo</em>",
+    "con el balón controlado."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 93
+    },
+    {
+     "id": "DI",
+     "x": 18,
+     "y": 82,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 82,
+     "y": 82,
+     "label": "DF"
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 68
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 40,
+     "y": 74
+    },
+    {
+     "id": "R2",
+     "x": 62,
+     "y": 74
+    }
+   ],
+   "ball": "PO",
+   "steps": [
+    {
+     "at": 0.15,
+     "ball": "DI",
+     "arrows": [
+      {
+       "from": "PO",
+       "to": "DI",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.4,
+     "pos": {
+      "R1": [
+       24,
+       80
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R1",
+       "to": [
+        25,
+        80
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "ball": "MC",
+     "pos": {
+      "MC": [
+       44,
+       64
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DI",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.82,
+     "pos": {
+      "MC": [
+       46,
+       48
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        46,
+        49
+       ],
+       "kind": "run"
+      }
+     ],
+     "zone": {
+      "x": 0,
+      "y": 44,
+      "w": 100,
+      "h": 8,
+      "label": "MEDIO CAMPO",
+      "color": "green"
+     },
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu equipo sale jugando o la revienta? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu equipo",
+    "sale <em>jugando</em>",
+    "o la <em>revienta</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿SALES JUGANDO\nO LA\nREVIENTAS?",
+   "opts": [
+    "SALIMOS JUGANDO",
+    "PELOTAZO Y A CORRER"
+   ]
+  }
+ ],
+ "post": "Tu portero no tiene que reventarla: así salen jugando equipos como el PSG y lo puedes copiar en fútbol 7. 💾 Guárdalo para tu próximo entrenamiento. ¿Tu equipo sale jugando o la revienta? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#SalidaDesdeAtrás",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}

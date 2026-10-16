@@ -1,0 +1,564 @@
+{
+ "id": "2026-10-16-pizarra-carriles",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "5",
+   "say": "El error más común en fútbol siete: todos corren hacia el balón. Arréglalo con la regla de los carriles.",
+   "captions": [
+    "El error más común",
+    "en fútbol 7:",
+    "todos corren",
+    "hacia el <em>balón</em>.",
+    "Arréglalo con",
+    "la regla de los <em>carriles</em>."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "LA REGLA\nDE LOS\nCARRILES",
+   "sub": "Ocupa bien la cancha"
+  },
+  {
+   "type": "board",
+   "bg": "!",
+   "title": "EL AMONTONAMIENTO",
+   "say": "Así juegan muchos equipos: todos juntos alrededor del balón. Al rival le basta con cerrar el centro.",
+   "captions": [
+    "Así juegan",
+    "muchos equipos:",
+    "todos <em>juntos</em>",
+    "alrededor del balón.",
+    "Al rival le basta",
+    "con cerrar el <em>centro</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 40,
+     "y": 76,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 60,
+     "y": 76,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 38,
+     "y": 52
+    },
+    {
+     "id": "MC",
+     "x": 52,
+     "y": 60
+    },
+    {
+     "id": "MD",
+     "x": 66,
+     "y": 48
+    },
+    {
+     "id": "DC",
+     "x": 52,
+     "y": 36,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 36,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 64,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 28,
+     "y": 38
+    },
+    {
+     "id": "R5",
+     "x": 46,
+     "y": 46
+    },
+    {
+     "id": "R6",
+     "x": 72,
+     "y": 34
+    },
+    {
+     "id": "R7",
+     "x": 76,
+     "y": 70
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.4,
+     "zone": {
+      "x": 32,
+      "y": 32,
+      "w": 40,
+      "h": 34,
+      "label": "TODOS JUNTOS"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "5",
+   "title": "5 CARRILES",
+   "inherit": true,
+   "say": "Divide la cancha en cinco carriles. La regla: nunca dos jugadores del mismo equipo en el mismo carril.",
+   "captions": [
+    "Divide la cancha",
+    "en <em>5 carriles</em>.",
+    "La regla:",
+    "nunca dos jugadores",
+    "del mismo equipo",
+    "en el <em>mismo carril</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "MI": [
+       10,
+       46
+      ],
+      "MD": [
+       90,
+       46
+      ],
+      "MC": [
+       50,
+       58
+      ],
+      "DC": [
+       50,
+       26
+      ],
+      "DI": [
+       30,
+       78
+      ],
+      "DD": [
+       70,
+       78
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        11,
+        46
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MD",
+       "to": [
+        89,
+        46
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DC",
+       "to": [
+        50,
+        27
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.4,
+     "zone": {
+      "x": 0,
+      "y": 0,
+      "w": 20,
+      "h": 100,
+      "label": "BANDA",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.55,
+     "zone": {
+      "x": 40,
+      "y": 0,
+      "w": 20,
+      "h": 100,
+      "label": "CENTRO",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 80,
+      "y": 0,
+      "w": 20,
+      "h": 100,
+      "label": "BANDA",
+      "color": "green"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "↔",
+   "title": "SE ABRE EL PASILLO",
+   "inherit": true,
+   "say": "Si tus exteriores están abiertos, los rivales tienen que abrirse con ellos, y se abre un pasillo por el centro.",
+   "captions": [
+    "Si tus exteriores",
+    "están <em>abiertos</em>,",
+    "los rivales tienen",
+    "que abrirse con ellos,",
+    "y se abre un <em>pasillo</em>",
+    "por el centro."
+   ],
+   "steps": [
+    {
+     "at": 0.25,
+     "pos": {
+      "R4": [
+       18,
+       40
+      ],
+      "R6": [
+       82,
+       40
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R4",
+       "to": [
+        19,
+        40
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R6",
+       "to": [
+        81,
+        40
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "ball": "DC",
+     "zone": {
+      "x": 36,
+      "y": 30,
+      "w": 28,
+      "h": 24,
+      "label": "PASILLO",
+      "color": "green"
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "→",
+   "title": "Y SI CIERRAN EL CENTRO",
+   "inherit": true,
+   "say": "Y si cierran el centro, el balón va a la banda, donde tu exterior está solo.",
+   "captions": [
+    "Y si cierran",
+    "el <em>centro</em>,",
+    "el balón va",
+    "a la <em>banda</em>,",
+    "donde tu exterior",
+    "está solo."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "ball": "MC",
+     "pos": {
+      "R4": [
+       38,
+       40
+      ],
+      "R6": [
+       62,
+       40
+      ],
+      "R5": [
+       50,
+       34
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "ball": "MD",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MD",
+       "kind": "pass",
+       "curve": 0.15
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "pos": {
+      "MD": [
+       90,
+       22
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        90,
+        23
+       ],
+       "kind": "run"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "5",
+   "title": "ENTRÉNALO: CARRILES",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: marca los carriles con conos. Si dos del mismo equipo pisan el mismo carril, el balón es para el rival.",
+   "captions": [
+    "Entrénalo así:",
+    "marca los carriles",
+    "con <em>conos</em>.",
+    "Si dos del mismo equipo",
+    "pisan el mismo carril,",
+    "el balón es",
+    "para el <em>rival</em>."
+   ],
+   "team": [
+    {
+     "id": "A",
+     "x": 10,
+     "y": 50,
+     "label": ""
+    },
+    {
+     "id": "B",
+     "x": 30,
+     "y": 64,
+     "label": ""
+    },
+    {
+     "id": "C",
+     "x": 50,
+     "y": 40,
+     "label": ""
+    },
+    {
+     "id": "D",
+     "x": 70,
+     "y": 64,
+     "label": ""
+    },
+    {
+     "id": "E",
+     "x": 90,
+     "y": 50,
+     "label": ""
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 40,
+     "y": 52
+    },
+    {
+     "id": "R2",
+     "x": 60,
+     "y": 52
+    }
+   ],
+   "ball": "C",
+   "steps": [
+    {
+     "at": 0.1,
+     "zone": {
+      "x": 20,
+      "y": 0,
+      "w": 20,
+      "h": 100,
+      "label": "",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.18,
+     "zone": {
+      "x": 60,
+      "y": 0,
+      "w": 20,
+      "h": 100,
+      "label": "",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.35,
+     "ball": "D",
+     "arrows": [
+      {
+       "from": "C",
+       "to": "D",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.55,
+     "ball": "E",
+     "arrows": [
+      {
+       "from": "D",
+       "to": "E",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "pos": {
+      "D": [
+       86,
+       60
+      ]
+     },
+     "arrows": [
+      {
+       "from": "D",
+       "to": [
+        86,
+        59
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 80,
+      "y": 40,
+      "w": 20,
+      "h": 30,
+      "label": "¡FALTA!"
+     },
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu equipo se abre o se amontona? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu equipo",
+    "se <em>abre</em>",
+    "o se <em>amontona</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿SE ABREN\nO SE\nAMONTONAN?",
+   "opts": [
+    "NOS ABRIMOS",
+    "NOS AMONTONAMOS"
+   ]
+  }
+ ],
+ "post": "El error más común del fútbol 7: todos corren al balón. Arréglalo con la regla de los carriles. 💾 Guárdalo para tu próximo entrenamiento. ¿Tu equipo se abre o se amontona? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#JuegoDePosición",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}
