@@ -68,6 +68,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper)}
 #cap{left:60px;right:60px;top:1390px;text-align:center}
 #cap span{display:inline-block;background:var(--ink);color:var(--paper);font:800 68px/1.15 Barlow;padding:10px 26px 8px;letter-spacing:1px;text-transform:uppercase;border-radius:6px}
 #cap span em{font-style:normal;color:var(--lime)}
+#cap.words span{background:transparent;color:var(--ink);font:400 112px/1 Anton;letter-spacing:1px;padding:0}
+#cap.words span em{color:var(--ink);background:var(--lime);padding:0 14px}
 #handle{left:0;right:0;top:1560px;text-align:center;font:600 30px Barlow;letter-spacing:4px;color:#6a665e}
 </style></head>
 <body><div id="stage">
@@ -195,6 +197,68 @@ ranking(s){const rows=(s.rows||[]).slice(0,5);const mx=Math.max(...rows.map(r=>M
   rows.forEach((r,k)=>e.appendChild(el(`<div class="rk abs ${r.hl?'hl':''}" style="top:${450+k*150}px"><span class="pos">${k+1}</span><div class="bar">${esc(r.name)}${r.team?`<small>${esc(r.team)}</small>`:''}</div><span class="val">${esc(r.val)}</span></div>`)));
   const R=[...e.querySelectorAll('.rk')];
   return {el:e,anim(t,a,b){R.forEach((row,k)=>{const t0=a+0.1+(R.length-1-k)*0.18;const x=eo(p(t,t0,0.5));row.style.opacity=cl(p(t,t0,0.15));row.querySelector('.bar').style.width=(260+430*Math.abs(rows[k].val)/mx)*x+'px';});},hits(a,b){return [a+0.1];}};},
+board(s){
+  // Pizarra táctica de fútbol 7: coordenadas en % (x 0-100 izq→der, y 0-100 arriba=portería rival, abajo=portería propia)
+  const PW=640,PH=900,PX=220,PY=s.title?420:340;
+  const e=el(`<div class="scene">${s.title?`<div class="title abs" style="top:318px;text-align:center;left:60px;right:60px">${esc(s.title)}${s.sub?` <span>· ${esc(s.sub)}</span>`:''}</div>`:''}
+  <svg class="abs" style="left:${PX}px;top:${PY}px;overflow:visible" width="${PW}" height="${PH}" viewBox="0 0 ${PW} ${PH}">
+   <g fill="none" stroke="#151515" stroke-width="6" stroke-linecap="round" style="filter:url(#boil)">
+    <rect x="0" y="0" width="${PW}" height="${PH}"/><line x1="0" y1="${PH/2}" x2="${PW}" y2="${PH/2}"/><circle cx="${PW/2}" cy="${PH/2}" r="80"/>
+    <rect x="${PW*0.22}" y="0" width="${PW*0.56}" height="${PH*0.15}"/><rect x="${PW*0.22}" y="${PH*0.85}" width="${PW*0.56}" height="${PH*0.15}"/>
+    <path d="M${PW*0.38} 0 L${PW*0.38} -26 L${PW*0.62} -26 L${PW*0.62} 0" stroke-width="8"/><path d="M${PW*0.38} ${PH} L${PW*0.38} ${PH+26} L${PW*0.62} ${PH+26} L${PW*0.62} ${PH}" stroke-width="8"/>
+   </g>
+   <circle cx="${PW/2}" cy="${PH/2}" r="7" fill="#151515"/>
+   <g class="zones"></g><g class="arrows"></g><g class="players"></g>
+   <g class="ballB"><circle r="13" fill="#fff" stroke="#151515" stroke-width="5"/><circle r="4.5" fill="#151515"/></g>
+  </svg>
+  ${s.timer?`<div class="abs tmr" style="right:70px;top:${PY+20}px;text-align:center"><div class="big tmrn c-red" style="font-size:150px">${s.timer.from}</div><div class="mid" style="font-size:44px">${esc(s.timer.label||'SEG')}</div></div>`:''}
+  ${s.note?`<div class="abs nt" style="left:60px;top:${PY+20}px;width:150px"><span class="tag" style="font-size:36px;letter-spacing:3px">${esc(s.note)}</span></div>`:''}</div>`);
+  const prev=window.__lastBoard||{};
+  const start={...(s.inherit?prev.pos:{})};
+  (s.team||[]).forEach(p=>{start[p.id]=[p.x,p.y]});(s.rival||[]).forEach(p=>{start[p.id]=[p.x,p.y]});
+  const meta={...(s.inherit?prev.meta:{})};
+  (s.team||[]).forEach(p=>meta[p.id]={side:'us',label:p.label??p.id});(s.rival||[]).forEach(p=>meta[p.id]={side:'them',label:p.label??''});
+  const steps=(s.steps||[]).slice().sort((a,b)=>a.at-b.at);
+  // estados por paso
+  const states=[{at:0,pos:{...start},ball:s.ball??(s.inherit?prev.ball:null)}];
+  steps.forEach(st=>{const last=states[states.length-1];const pos={...last.pos};Object.entries(st.pos||{}).forEach(([k,v])=>pos[k]=v);states.push({at:st.at,pos,ball:st.ball??last.ball,st});});
+  const fin=states[states.length-1];window.__lastBoard={pos:{...fin.pos},meta:{...meta},ball:fin.ball};
+  const NS='http://www.w3.org/2000/svg';const mk=(t,a)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);return n;};
+  const gP=e.querySelector('.players'),gA=e.querySelector('.arrows'),gZ=e.querySelector('.zones'),ball=e.querySelector('.ballB');
+  const P={};Object.keys(meta).forEach(id=>{const m=meta[id];const g=mk('g',{});const us=m.side==='us';
+    g.appendChild(mk('circle',{r:31,fill:us?'#B8E62E':'#E03A2D',stroke:'#151515','stroke-width':6}));
+    const tx=mk('text',{'text-anchor':'middle',y:12,'font-family':'Anton','font-size':m.label.length>2?24:32,fill:us?'#151515':'#F2EFE8'});tx.textContent=m.label;g.appendChild(tx);gP.appendChild(g);P[id]=g;});
+  const xy=(v)=>[v[0]/100*PW,v[1]/100*PH];
+  function posAt(t,a,b){const d=b-a;let cur=states[0].pos,idx=0;
+    for(let i=1;i<states.length;i++){const ts=a+d*states[i].at;if(t>=ts){idx=i;}}
+    const res={};const S0=states[Math.max(0,idx)];const ts=a+d*S0.at;const k=idx===0?1:eo(p(t,ts,0.7));const from=idx>0?states[idx-1].pos:S0.pos;
+    Object.keys(S0.pos).forEach(id=>{const f=from[id]||S0.pos[id],to=S0.pos[id];res[id]=[f[0]+(to[0]-f[0])*k,f[1]+(to[1]-f[1])*k];});return {pos:res,idx,k};}
+  // flechas y zonas
+  const AR=[];steps.forEach((st,si)=>{(st.arrows||[]).forEach(ar=>{const color=ar.kind==='press'?'#E03A2D':(ar.kind==='run'?'#4F7A06':'#151515');
+     const path=mk('path',{fill:'none',stroke:color,'stroke-width':ar.kind==='pass'?6:7,'stroke-linecap':'round','marker-end':''});const head=mk('path',{fill:color});gA.appendChild(path);gA.appendChild(head);AR.push({si,ar,path,head});});
+    if(st.zone){const z=st.zone;const r=mk('rect',{x:z.x/100*PW,y:z.y/100*PH,width:z.w/100*PW,height:z.h/100*PH,fill:z.color==='green'?'rgba(184,230,46,.35)':'rgba(224,58,45,.18)',stroke:z.color==='green'?'#4F7A06':'#E03A2D','stroke-width':5,'stroke-dasharray':'14 10',rx:14});
+     const tl=mk('text',{x:z.x/100*PW+14,y:z.y/100*PH+40,'font-family':'Barlow','font-weight':800,'font-size':34,fill:z.color==='green'?'#4F7A06':'#C2301F'});tl.textContent=z.label||'';const g=mk('g',{});g.appendChild(r);g.appendChild(tl);gZ.appendChild(g);st.__z=g;}});
+  const end=(v,pos)=>typeof v==='string'?xy(pos[v]||[50,50]):xy(v);
+  return {el:e,
+   anim(t,a,b){const d=b-a;const {pos,idx}=posAt(t,a,b);
+    Object.entries(P).forEach(([id,g])=>{const v=pos[id];if(!v){g.style.opacity=0;return;}const[x,y]=xy(v);g.setAttribute('transform',`translate(${x},${y})`);g.style.opacity=1;});
+    // balón
+    const holderAt=(i)=>states[i].ball;const bt=a+d*states[idx].at;const bNow=holderAt(idx),bPrev=idx>0?holderAt(idx-1):bNow;
+    const bxy=(h)=>h==null?null:(typeof h==='string'?(()=>{const q=xy(pos[h]||[50,50]);return [q[0]+20,q[1]-24];})():xy(h));
+    const A=bxy(bPrev),Bb=bxy(bNow);if(!Bb){ball.style.opacity=0;}else{const k=idx>0?eo(p(t,bt,0.6)):1;const s0=A||Bb;ball.setAttribute('transform',`translate(${s0[0]+(Bb[0]-s0[0])*k},${s0[1]+(Bb[1]-s0[1])*k})`);ball.style.opacity=1;}
+    AR.forEach(o=>{const st=steps[o.si];const ts=a+d*st.at;const nx=o.si+1<steps.length?a+d*steps[o.si+1].at:b+1;const vis=t>=ts&&t<nx+0.35;
+      if(!vis){o.path.style.opacity=0;o.head.style.opacity=0;return;}const fade=1-p(t,nx,0.35);
+      const stPos=states[o.si+1].pos, prvPos=states[o.si].pos;const f=end(o.ar.from,o.ar.kind==='pass'?prvPos:prvPos),to=end(o.ar.to,stPos);
+      const mx=(f[0]+to[0])/2+(o.ar.curve||0)*(to[1]-f[1])*0.25,my=(f[1]+to[1])/2-(o.ar.curve||0)*(to[0]-f[0])*0.25;
+      o.path.setAttribute('d',`M${f[0]} ${f[1]} Q${mx} ${my} ${to[0]} ${to[1]}`);const L=o.path.getTotalLength();const x=eo(p(t,ts,0.55));
+      if(o.ar.kind==='pass'){const n=Math.floor(L*x/22);let r=[];for(let i=0;i<n;i++)r.push(10,12);r.push(0,L*2);o.path.setAttribute('stroke-dasharray',r.join(' '));}else{o.path.setAttribute('stroke-dasharray',`${L*x} ${L*2}`);}
+      const pt=o.path.getPointAtLength(Math.max(0,L*x-1)),pt0=o.path.getPointAtLength(Math.max(0,L*x-14));const ang=Math.atan2(pt.y-pt0.y,pt.x-pt0.x);
+      o.head.setAttribute('d',`M${pt.x+Math.cos(ang)*14} ${pt.y+Math.sin(ang)*14} L${pt.x+Math.cos(ang+2.5)*16} ${pt.y+Math.sin(ang+2.5)*16} L${pt.x+Math.cos(ang-2.5)*16} ${pt.y+Math.sin(ang-2.5)*16} Z`);
+      o.path.style.opacity=fade;o.head.style.opacity=x>0.05?fade:0;});
+    steps.forEach((st,si)=>{if(!st.__z)return;const ts=a+d*st.at;const nx=st.zoneHold?b+1:(si+1<steps.length?a+d*steps[si+1].at:b+1);st.__z.style.opacity=t>=ts&&t<nx+0.3?cl(p(t,ts,0.3))*(1-p(t,nx,0.3)):0;});
+    if(s.timer){const tn=e.querySelector('.tmrn');const t0=a+d*(s.timer.at||0),t1=a+d*(s.timer.end||0.95);const v=Math.max(0,Math.ceil(s.timer.from*(1-p(t,t0,t1-t0))));tn.textContent=v;pop(e.querySelector('.tmr'),t,t0-0.1,0.3,0.7,0);}
+    if(s.note)pop(e.querySelector('.nt'),t,a+0.2,0.35,0.7,0);},
+   hits(a,b){const d=b-a;return steps.filter(st=>st.zone||st.hit).map(st=>a+d*st.at);}};},
 question(s){const o=(s.opts||[]).slice(0,2);const e=el(`<div class="scene"><div class="abs q" style="left:80px;right:80px;top:330px;text-align:center"><div class="mid">${esc(s.pre||'')}</div><div class="big qq" style="font-size:200px;margin-top:16px">${esc(s.q).replace(/\n/g,'<br>')}</div></div>
   ${o[0]?`<div class="opt abs o1" style="top:900px"><i style="background:var(--lime);border:6px solid var(--ink)"></i><span>${esc(o[0])}</span></div>`:''}
   ${o[1]?`<div class="opt abs o2" style="top:1080px"><i style="background:var(--red)"></i><span>${esc(o[1])}</span></div>`:''}</div>`);
@@ -209,7 +273,13 @@ ST.scenes.forEach((s,i)=>{const f=B[s.type];if(!f)throw new Error('Tipo de escen
 // Ventanas de tiempo: cada escena dura lo que su línea de voz (la última escena puede abarcar varias líneas)
 const LN=TM.lines;
 const win=SC.map((o,i)=>[i==0?0:LN[i].start, i<N-1?LN[i+1].start:99]);
-const capList=[];ST.scenes.forEach((s,i)=>{const L=LN[i];const ch=(s.captions&&s.captions.length)?s.captions:[s.say];const lens=ch.map(c=>c.replace(/<[^>]+>/g,'').length+4);const tot=lens.reduce((x,y)=>x+y,0);let t=L.start;ch.forEach((c,k)=>{const d=(L.end-L.start)*lens[k]/tot;capList.push({s:t,e:t+d+0.08,html:c});t+=d;});});
+// modo "words": subtítulos de 1–2 palabras a la vez, grandes, con palabras clave resaltadas
+const WORDS=ST.captionMode==='words';
+function wordChunks(html){const out=[];const re=/<em>(.*?)<\/em>|([^<]+)/g;let m;while((m=re.exec(html))){const em=m[1]!=null;(em?m[1]:m[2]).trim().split(/\s+/).forEach(w=>{if(!w)return;if(/^[.,!?:;…¡¿]+$/.test(w)&&out.length&&!/^[¡¿]/.test(w)){out[out.length-1].p=(out[out.length-1].p||'')+w;return;}out.push({w,em});});}
+  const g=[];for(let i=0;i<out.length;){const a=out[i],b=out[i+1];if(b&&a.w.length+b.w.length<=11&&!/[.,!?:…]$/.test(a.w+(a.p||''))){g.push([a,b]);i+=2;}else{g.push([a]);i+=1;}}
+  return g.map(ws=>ws.map(x=>(x.em?`<em>${x.w}</em>`:x.w)+(x.p||'')).join(' '));}
+if(WORDS)document.getElementById('cap').classList.add('words');
+const capList=[];ST.scenes.forEach((s,i)=>{const L=LN[i];let ch=(s.captions&&s.captions.length)?s.captions:[s.say];if(WORDS)ch=ch.flatMap(wordChunks);const lens=ch.map(c=>c.replace(/<[^>]+>/g,'').length+4);const tot=lens.reduce((x,y)=>x+y,0);let t=L.start;ch.forEach((c,k)=>{const d=(L.end-L.start)*lens[k]/tot;capList.push({s:t,e:t+d+0.08,html:c});t+=d;});});
 if(capList.length)capList[capList.length-1].e=TM.total;
 window.getHits=()=>{const h=[];SC.forEach((o,i)=>{const a=LN[i].start,b=LN[i].end;if(i>0)h.push({t:a,k:'whoosh'});(o.hits?o.hits(a,b):[]).forEach(x=>h.push({t:x,k:'hit'}));});return h;};
 window.renderAt=function(t){

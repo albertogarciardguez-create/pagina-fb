@@ -1,0 +1,9 @@
+{
+  "_nota": "Ligas que se agregan al texto de cada post. Si una url está vacía, no se pone. 'para' indica en qué tipo de video va: noticia, pizarra o ambos.",
+  "ligas": [
+    {"para": "pizarra", "texto": "📘 Libro de Jugadas de Fútbol 7 (sistemas, presión y 20 ejercicios):", "url": ""},
+    {"para": "pizarra", "texto": "🧰 Conos, petos y pizarras para tu equipo:", "url": ""},
+    {"para": "noticia", "texto": "👕 Jerseys de Liga MX:", "url": ""},
+    {"para": "ambos", "texto": "📩 Publicidad y patrocinios en Señor Fútbol:", "url": ""}
+  ]
+}

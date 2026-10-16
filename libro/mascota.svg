@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="El Señor: un balón con bombín y bigote">
+<defs><clipPath id="ballLibro"><circle cx="200" cy="262" r="146"/></clipPath></defs>
+<ellipse cx="200" cy="412" rx="120" ry="9" fill="#151515" opacity="0.16"/>
+<circle cx="200" cy="262" r="146" fill="#FFFFFF"/>
+<g clip-path="url(#ballLibro)">
+<g fill="none" stroke="#C9C3B6" stroke-width="5" stroke-linecap="round"><path d="M76 252 L118 200"/><path d="M324 252 L282 200"/><path d="M78 288 L132 330"/><path d="M322 288 L268 330"/><path d="M168 362 L148 330"/><path d="M232 362 L252 330"/></g>
+<path d="M40 214 L78 236 L74 286 L34 304 Z" fill="#151515"/>
+<path d="M360 214 L322 236 L326 286 L366 304 Z" fill="#151515"/>
+<path d="M168 360 L232 360 L250 408 L200 440 L150 408 Z" fill="#151515"/>
+<path d="M96 118 L150 112 L162 150 L118 170 L84 150 Z" fill="#151515"/>
+<path d="M304 118 L250 112 L238 150 L282 170 L316 150 Z" fill="#151515"/>
+</g>
+<circle cx="200" cy="262" r="146" fill="none" stroke="#151515" stroke-width="12"/>
+<path d="M136 216 L182 226" stroke="#151515" stroke-width="11" stroke-linecap="round"/>
+<path d="M264 216 L218 226" stroke="#151515" stroke-width="11" stroke-linecap="round"/>
+<ellipse cx="162" cy="250" rx="12" ry="16" fill="#151515"/>
+<ellipse cx="238" cy="250" rx="12" ry="16" fill="#151515"/>
+<path d="M200 284 C214 270 246 268 268 280 C284 289 296 302 314 297 C306 316 280 322 258 314 C238 307 220 302 200 304 Z" fill="#151515"/>
+<path d="M200 284 C186 270 154 268 132 280 C116 289 104 302 86 297 C94 316 120 322 142 314 C162 307 180 302 200 304 Z" fill="#151515"/>
+<g transform="rotate(-9 200 120)">
+<path d="M118 120 C116 42 158 8 200 8 C242 8 284 42 282 120 Z" fill="#151515"/>
+<path d="M120 88 L280 88 L282 118 L118 118 Z" fill="#B8E62E"/>
+<path d="M148 66 C150 44 166 30 186 24" fill="none" stroke="#3A3A3A" stroke-width="8" stroke-linecap="round"/>
+<ellipse cx="200" cy="122" rx="152" ry="22" fill="#151515"/>
+</g>
+</svg>

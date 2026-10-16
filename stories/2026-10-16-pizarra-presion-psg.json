@@ -1,0 +1,833 @@
+{
+ "id": "2026-10-16-pizarra-presion-psg",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "PSG",
+   "say": "¿Quieres que tu equipo de fútbol siete presione como el PSG de Luis Enrique? Te explico la regla más fácil.",
+   "captions": [
+    "¿Quieres que tu equipo",
+    "de fútbol <em>7</em>",
+    "presione como el <em>PSG</em>",
+    "de Luis Enrique?",
+    "Te explico",
+    "la regla más fácil."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "PRESIONA\nCOMO EL PSG",
+   "sub": "En tu liga de fútbol 7, versión fácil"
+  },
+  {
+   "type": "board",
+   "bg": "2-3-1",
+   "title": "NUESTRO 2-3-1",
+   "say": "Tu equipo juega en dos, tres, uno. Atacas con el balón en los pies del medio.",
+   "captions": [
+    "Tu equipo juega",
+    "en <em>2-3-1</em>.",
+    "Atacas con el balón",
+    "en los pies del medio."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 32,
+     "y": 78
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 68,
+     "y": 78
+    },
+    {
+     "id": "MI",
+     "x": 18,
+     "y": 52
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 56
+    },
+    {
+     "id": "MD",
+     "x": 82,
+     "y": 52
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 50,
+     "y": 32
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 34,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 24,
+     "y": 36
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "R6",
+     "x": 76,
+     "y": 36
+    },
+    {
+     "id": "R7",
+     "x": 50,
+     "y": 66
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.55,
+     "ball": "MD",
+     "pos": {
+      "MD": [
+       82,
+       46
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MD",
+       "kind": "pass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "!",
+   "title": "PERDEMOS EL BALÓN",
+   "inherit": true,
+   "say": "Y entonces lo pierdes. Aquí casi todos los equipos se echan para atrás… y es un error.",
+   "captions": [
+    "Y entonces",
+    "lo <em>pierdes</em>.",
+    "Aquí casi todos",
+    "se echan para atrás…",
+    "y es un <em>error</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "ball": "R6",
+     "pos": {
+      "R6": [
+       80,
+       42
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R6",
+       "to": "MD",
+       "kind": "press"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "at": 0.55,
+     "pos": {
+      "MI": [
+       22,
+       62
+      ],
+      "MC": [
+       50,
+       66
+      ],
+      "MD": [
+       80,
+       58
+      ],
+      "DC": [
+       50,
+       46
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        50,
+        68
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DC",
+       "to": [
+        50,
+        48
+       ],
+       "kind": "run"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "5",
+   "title": "REGLA DE LOS 5 SEGUNDOS",
+   "say": "Regla de los cinco segundos: los tres más cercanos van al balón al mismo tiempo. Uno presiona, otro tapa el pase al centro y el otro cierra la banda.",
+   "captions": [
+    "Regla de los",
+    "<em>5 segundos</em>:",
+    "los tres más cercanos",
+    "van al balón",
+    "al mismo tiempo.",
+    "Uno <em>presiona</em>,",
+    "otro tapa el pase",
+    "al centro",
+    "y el otro",
+    "cierra la banda."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 32,
+     "y": 78
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 68,
+     "y": 78
+    },
+    {
+     "id": "MI",
+     "x": 18,
+     "y": 52
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 56
+    },
+    {
+     "id": "MD",
+     "x": 82,
+     "y": 46
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 50,
+     "y": 32
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 34,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 24,
+     "y": 36
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "R6",
+     "x": 80,
+     "y": 42
+    },
+    {
+     "id": "R7",
+     "x": 50,
+     "y": 66
+    }
+   ],
+   "ball": "R6",
+   "timer": {
+    "from": 5,
+    "label": "SEG",
+    "at": 0.12,
+    "end": 0.95
+   },
+   "steps": [
+    {
+     "at": 0.2,
+     "pos": {
+      "MD": [
+       82,
+       36
+      ],
+      "MC": [
+       64,
+       44
+      ],
+      "DC": [
+       58,
+       34
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        82,
+        37
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "MC",
+       "to": [
+        64,
+        45
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "DC",
+       "to": [
+        58,
+        35
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 56,
+      "y": 26,
+      "w": 42,
+      "h": 26,
+      "label": "PRESIÓN"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.62,
+     "pos": {
+      "MI": [
+       36,
+       46
+      ],
+      "DD": [
+       70,
+       62
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        36,
+        47
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DD",
+       "to": [
+        70,
+        63
+       ],
+       "kind": "run"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "GOL",
+   "title": "RECUPERAS ARRIBA",
+   "inherit": true,
+   "say": "Si la recuperas ahí, estás a dos pases del gol. ¡Balón al nueve… y a definir!",
+   "captions": [
+    "Si la <em>recuperas</em> ahí,",
+    "estás a <em>2 pases</em>",
+    "del gol.",
+    "¡Balón al nueve…",
+    "y a <em>definir</em>!"
+   ],
+   "steps": [
+    {
+     "at": 0.12,
+     "ball": "MD",
+     "pos": {
+      "R6": [
+       86,
+       50
+      ]
+     },
+     "hit": true
+    },
+    {
+     "at": 0.45,
+     "ball": "DC",
+     "pos": {
+      "DC": [
+       56,
+       20
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": "DC",
+       "kind": "pass"
+      },
+      {
+       "from": "DC",
+       "to": [
+        56,
+        21
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.78,
+     "ball": [
+      52,
+      0.5
+     ],
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        52,
+        1
+       ],
+       "kind": "pass",
+       "curve": 0.2
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "OJO",
+   "title": "SI NO LA RECUPERAS",
+   "say": "Pero si en cinco segundos no la recuperaste, todos atrás y juntos. Sin desesperarse.",
+   "captions": [
+    "Pero si en",
+    "<em>5 segundos</em>",
+    "no la recuperaste,",
+    "todos <em>atrás</em>",
+    "y <em>juntos</em>.",
+    "Sin desesperarse."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 32,
+     "y": 74
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 70,
+     "y": 62
+    },
+    {
+     "id": "MI",
+     "x": 36,
+     "y": 46
+    },
+    {
+     "id": "MC",
+     "x": 64,
+     "y": 44
+    },
+    {
+     "id": "MD",
+     "x": 82,
+     "y": 36
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 58,
+     "y": 34
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 34,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 24,
+     "y": 36
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "R6",
+     "x": 80,
+     "y": 42
+    },
+    {
+     "id": "R7",
+     "x": 50,
+     "y": 66
+    }
+   ],
+   "ball": "R6",
+   "steps": [
+    {
+     "at": 0.2,
+     "ball": "R4",
+     "arrows": [
+      {
+       "from": "R6",
+       "to": "R4",
+       "kind": "pass",
+       "curve": -0.3
+      }
+     ]
+    },
+    {
+     "at": 0.45,
+     "pos": {
+      "MI": [
+       24,
+       62
+      ],
+      "MC": [
+       50,
+       64
+      ],
+      "MD": [
+       76,
+       62
+      ],
+      "DC": [
+       50,
+       46
+      ],
+      "DI": [
+       36,
+       80
+      ],
+      "DD": [
+       64,
+       80
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        76,
+        61
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MC",
+       "to": [
+        50,
+        63
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "DC",
+       "to": [
+        50,
+        47
+       ],
+       "kind": "run"
+      }
+     ],
+     "zone": {
+      "x": 14,
+      "y": 56,
+      "w": 72,
+      "h": 30,
+      "label": "BLOQUE JUNTO",
+      "color": "green"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "4V2",
+   "title": "ENTRÉNALO: 4 VS 2",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: cuatro contra dos en un cuadro chico. El que pierde el balón tiene cinco segundos para recuperarlo.",
+   "captions": [
+    "Entrénalo así:",
+    "<em>4 contra 2</em>",
+    "en un cuadro chico.",
+    "El que pierde el balón",
+    "tiene <em>5 segundos</em>",
+    "para recuperarlo."
+   ],
+   "team": [
+    {
+     "id": "A",
+     "label": "",
+     "x": 30,
+     "y": 36
+    },
+    {
+     "id": "B",
+     "label": "",
+     "x": 70,
+     "y": 36
+    },
+    {
+     "id": "C",
+     "label": "",
+     "x": 70,
+     "y": 64
+    },
+    {
+     "id": "D",
+     "label": "",
+     "x": 30,
+     "y": 64
+    }
+   ],
+   "rival": [
+    {
+     "id": "X",
+     "x": 46,
+     "y": 46
+    },
+    {
+     "id": "Y",
+     "x": 56,
+     "y": 54
+    }
+   ],
+   "ball": "A",
+   "steps": [
+    {
+     "at": 0.1,
+     "ball": "B",
+     "arrows": [
+      {
+       "from": "A",
+       "to": "B",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 22,
+      "y": 28,
+      "w": 56,
+      "h": 44,
+      "label": "CUADRO CHICO",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.3,
+     "ball": "C",
+     "pos": {
+      "X": [
+       58,
+       46
+      ],
+      "Y": [
+       62,
+       58
+      ]
+     },
+     "arrows": [
+      {
+       "from": "B",
+       "to": "C",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "ball": "Y",
+     "pos": {
+      "Y": [
+       66,
+       60
+      ]
+     },
+     "arrows": [
+      {
+       "from": "Y",
+       "to": "C",
+       "kind": "press"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "at": 0.7,
+     "pos": {
+      "C": [
+       64,
+       58
+      ],
+      "B": [
+       66,
+       48
+      ]
+     },
+     "arrows": [
+      {
+       "from": "C",
+       "to": [
+        64,
+        59
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "B",
+       "to": [
+        66,
+        49
+       ],
+       "kind": "press"
+      }
+     ]
+    }
+   ],
+   "timer": {
+    "from": 5,
+    "label": "SEG",
+    "at": 0.55,
+    "end": 0.98
+   }
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu equipo presiona o se echa para atrás? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu equipo <em>presiona</em>",
+    "o se echa para atrás?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿PRESIONAS\nO TE ECHAS\nATRÁS?",
+   "opts": [
+    "PRESIONAMOS ARRIBA",
+    "NOS ECHAMOS ATRÁS"
+   ]
+  }
+ ],
+ "post": "La regla de los 5 segundos: así puedes presionar como el PSG de Luis Enrique en tu liga de fútbol 7. 💾 Guárdalo para tu próximo entrenamiento. Entrenador, sé honesto: ¿tu equipo presiona o se echa para atrás? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#PSG",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}

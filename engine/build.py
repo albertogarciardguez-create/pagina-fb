@@ -17,7 +17,7 @@ CACHE = os.path.expanduser("~/.cache/senorfutbol")
 MODEL_URL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/"
 FPS = 30
 SR = 44100
-SCENE_TYPES = {"stats", "table", "results", "scoreboard", "play", "count", "headline", "compare", "ranking", "question"}
+SCENE_TYPES = {"stats", "table", "results", "scoreboard", "play", "count", "headline", "compare", "ranking", "question", "board"}
 
 
 def log(*a):
@@ -40,8 +40,8 @@ def validate(story):
         if k not in story:
             errs.append(f"falta '{k}'")
     sc = story.get("scenes", [])
-    if not 3 <= len(sc) <= 10:
-        errs.append(f"usa entre 3 y 10 escenas (hay {len(sc)})")
+    if not 3 <= len(sc) <= 16:
+        errs.append(f"usa entre 3 y 16 escenas (hay {len(sc)})")
     for i, s in enumerate(sc):
         if s.get("type") not in SCENE_TYPES:
             errs.append(f"escena {i}: tipo '{s.get('type')}' no existe ({', '.join(sorted(SCENE_TYPES))})")
@@ -150,8 +150,23 @@ def mix(story, outdir, raw, timing, hits):
     return path
 
 
+def link_lines(story):
+    cfg = os.path.join(ROOT, "config", "ligas.json")
+    if not os.path.exists(cfg):
+        return []
+    kind = story.get("kind", "noticia")
+    out = []
+    for l in json.load(open(cfg, encoding="utf-8")).get("ligas", []):
+        if l.get("url") and l.get("para") in (kind, "ambos"):
+            out.append(f"{l['texto']} {l['url']}")
+    return out
+
+
 def caption_text(story):
     lines = [story.get("post", "").strip()]
+    links = link_lines(story)
+    if links:
+        lines.append("\n".join(links))
     if story.get("hashtags"):
         lines.append(" ".join(story["hashtags"]))
     txt = "\n\n".join(l for l in lines if l)
