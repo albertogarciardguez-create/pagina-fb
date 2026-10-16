@@ -84,6 +84,7 @@ Coordenadas en % de la cancha: `x` 0–100 de izquierda a derecha, `y` 0–100 d
  "rival": [{"id": "R1", "x": 50, "y": 6}, ...],                                                  // rojos
  "ball": "MC",                                   // id del que la tiene o [x, y]
  "inherit": false,                               // true = arranca con las posiciones finales de la escena board anterior (omite team/rival)
+ "view": "top",                                  // opcional: acerca la media cancha de arriba (y 0–50 llena toda la pizarra); úsalo en balón parado y jugadas en el área
  "timer": {"from": 5, "label": "SEG", "at": 0.12, "end": 0.95},   // cuenta regresiva opcional
  "note": "EJERCICIO",                            // etiqueta opcional
  "steps": [                                      // momentos dentro de la línea de voz (at 0–1)

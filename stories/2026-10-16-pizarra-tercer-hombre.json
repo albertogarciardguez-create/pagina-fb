@@ -1,0 +1,524 @@
+{
+ "id": "2026-10-16-pizarra-tercer-hombre",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "3",
+   "say": "¿Te tapan el pase y no sabes qué hacer? Usa al tercer hombre: la jugada favorita del juego de posición.",
+   "captions": [
+    "¿Te <em>tapan</em> el pase",
+    "y no sabes",
+    "qué hacer?",
+    "Usa al",
+    "<em>tercer hombre</em>:",
+    "la jugada favorita",
+    "del juego de posición."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "EL TERCER\nHOMBRE",
+   "sub": "La jugada que rompe cualquier presión"
+  },
+  {
+   "type": "board",
+   "bg": "X",
+   "title": "EL PASE TAPADO",
+   "say": "Quieres darle el balón al nueve, pero el rival te tapa la línea de pase.",
+   "captions": [
+    "Quieres darle",
+    "el balón al <em>nueve</em>,",
+    "pero el rival",
+    "te <em>tapa</em>",
+    "la línea de pase."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 32,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 68,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 16,
+     "y": 50
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "id": "MD",
+     "x": 84,
+     "y": 50
+    },
+    {
+     "id": "DC",
+     "x": 52,
+     "y": 28,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 36,
+     "y": 18
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 30,
+     "y": 40
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 46
+    },
+    {
+     "id": "R6",
+     "x": 72,
+     "y": 40
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.45,
+     "zone": {
+      "x": 38,
+      "y": 34,
+      "w": 26,
+      "h": 22,
+      "label": "TAPADO"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "A·B·C",
+   "title": "A → B → C",
+   "inherit": true,
+   "say": "Entonces juegas con un tercero: le das al compañero de al lado, y él, de primera, se la pone al nueve, que llega de frente.",
+   "captions": [
+    "Entonces juegas",
+    "con un <em>tercero</em>:",
+    "le das al compañero",
+    "de al lado,",
+    "y él, <em>de primera</em>,",
+    "se la pone al nueve,",
+    "que llega <em>de frente</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.12,
+     "pos": {
+      "MI": [
+       24,
+       54
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        25,
+        54
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.3,
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MI",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "pos": {
+      "DC": [
+       36,
+       32
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        37,
+        32
+       ],
+       "kind": "run",
+       "curve": 0.15
+      }
+     ]
+    },
+    {
+     "at": 0.68,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "GOL",
+   "title": "DE PRIMERA",
+   "inherit": true,
+   "say": "Un toque, otro toque… y ya estás frente a la portería.",
+   "captions": [
+    "Un toque,",
+    "otro toque…",
+    "y ya estás",
+    "frente a la <em>portería</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "DC": [
+       46,
+       13
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        46,
+        14
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "ball": [
+      48,
+      0.5
+     ],
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        48,
+        1
+       ],
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "△",
+   "title": "LA CLAVE: TRIÁNGULOS",
+   "say": "La clave es estar siempre en triángulo. Nunca dos jugadores en la misma línea.",
+   "captions": [
+    "La clave",
+    "es estar siempre",
+    "en <em>triángulo</em>.",
+    "Nunca dos jugadores",
+    "en la <em>misma línea</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 30,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 70,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 22,
+     "y": 52
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "id": "MD",
+     "x": 78,
+     "y": 52
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 34,
+     "label": "9"
+    }
+   ],
+   "rival": [],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.15,
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MI",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.35,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.55,
+     "ball": "MD",
+     "arrows": [
+      {
+       "from": "DC",
+       "to": "MD",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "MD",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "1T",
+   "title": "ENTRÉNALO: TRIÁNGULOS",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: tres jugadores en triángulo y un defensor en medio. Solo valen pases a un toque.",
+   "captions": [
+    "Entrénalo así:",
+    "tres jugadores",
+    "en <em>triángulo</em>",
+    "y un defensor en medio.",
+    "Solo valen pases",
+    "a <em>un toque</em>."
+   ],
+   "team": [
+    {
+     "id": "A",
+     "x": 30,
+     "y": 66,
+     "label": "A"
+    },
+    {
+     "id": "B",
+     "x": 50,
+     "y": 34,
+     "label": "B"
+    },
+    {
+     "id": "C",
+     "x": 70,
+     "y": 66,
+     "label": "C"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 54
+    }
+   ],
+   "ball": "A",
+   "steps": [
+    {
+     "at": 0.15,
+     "ball": "B",
+     "arrows": [
+      {
+       "from": "A",
+       "to": "B",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 22,
+      "y": 26,
+      "w": 56,
+      "h": 48,
+      "label": "",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.35,
+     "ball": "C",
+     "pos": {
+      "R1": [
+       58,
+       50
+      ]
+     },
+     "arrows": [
+      {
+       "from": "B",
+       "to": "C",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.55,
+     "ball": "A",
+     "pos": {
+      "R1": [
+       46,
+       60
+      ]
+     },
+     "arrows": [
+      {
+       "from": "C",
+       "to": "A",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "ball": "B",
+     "pos": {
+      "R1": [
+       42,
+       48
+      ]
+     },
+     "arrows": [
+      {
+       "from": "A",
+       "to": "B",
+       "kind": "pass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu equipo juega a un toque o cada quien se la lleva solo? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu equipo juega",
+    "a <em>un toque</em>",
+    "o cada quien",
+    "se la lleva <em>solo</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿UN TOQUE\nO CADA\nQUIEN SOLO?",
+   "opts": [
+    "A UN TOQUE",
+    "CADA QUIEN SOLO"
+   ]
+  }
+ ],
+ "post": "¿Te tapan el pase? Usa al tercer hombre: la jugada favorita del juego de posición, explicada para fútbol 7. 💾 Guárdalo para tu próximo entrenamiento. ¿Tu equipo juega a un toque o cada quien se la lleva solo? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#TercerHombre",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}

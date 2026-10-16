@@ -1,0 +1,161 @@
+{
+ "id": "2026-10-16-goleo-rondon",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "12",
+   "speed": 1.05,
+   "say": "¡Doce goles después de once jornadas! Salomón Rondón va solo en el goleo de la Liga MX.",
+   "captions": [
+    "¡<em>12 goles</em>",
+    "después de",
+    "<em>11 jornadas</em>!",
+    "Salomón Rondón",
+    "va <em>solo</em>",
+    "en el goleo",
+    "de la Liga MX."
+   ],
+   "items": [
+    {
+     "n": "12",
+     "label": "GOLES",
+     "color": "green"
+    },
+    {
+     "n": "J11",
+     "label": "APERTURA 2026"
+    }
+   ]
+  },
+  {
+   "type": "ranking",
+   "bg": "TOP",
+   "say": "Detrás de él, Julián Carranza con siete, y un triple empate con seis: Henry Martín, Juninho… y Óscar Estupiñán.",
+   "captions": [
+    "Detrás de él,",
+    "Julián Carranza",
+    "con <em>siete</em>,",
+    "y un triple empate",
+    "con <em>seis</em>:",
+    "Henry Martín,",
+    "Juninho…",
+    "y Óscar <em>Estupiñán</em>."
+   ],
+   "title": "GOLEO",
+   "sub": "J11",
+   "rows": [
+    {
+     "name": "RONDÓN",
+     "team": "PACHUCA",
+     "val": 12,
+     "hl": true
+    },
+    {
+     "name": "CARRANZA",
+     "team": "NECAXA",
+     "val": 7
+    },
+    {
+     "name": "H. MARTÍN",
+     "team": "AMÉRICA",
+     "val": 6
+    },
+    {
+     "name": "JUNINHO",
+     "team": "PUMAS",
+     "val": 6
+    },
+    {
+     "name": "ESTUPIÑÁN",
+     "team": "FC JUÁREZ",
+     "val": 6
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "+5",
+   "say": "Le lleva cinco goles de ventaja al segundo lugar. ¡Cinco!",
+   "captions": [
+    "Le lleva",
+    "<em>5 goles</em>",
+    "de ventaja",
+    "al segundo lugar.",
+    "¡<em>Cinco</em>!"
+   ],
+   "items": [
+    {
+     "n": "+5",
+     "label": "DE VENTAJA",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "6",
+   "say": "Y ojo, juarense: Estupiñán está en el top tres con seis goles… jugando en el equipo que va último.",
+   "captions": [
+    "Y ojo, <em>juarense</em>:",
+    "Estupiñán está",
+    "en el <em>top 3</em>",
+    "con seis goles…",
+    "jugando en el equipo",
+    "que va <em>último</em>."
+   ],
+   "tag": "ORGULLO BRAVO",
+   "title": "ESTUPIÑÁN,\nTOP 3\nDEL GOLEO",
+   "sub": "6 goles en el equipo que va último"
+  },
+  {
+   "type": "count",
+   "bg": "6",
+   "say": "Quedan seis jornadas. ¿Rondón llega a los veinte goles?",
+   "captions": [
+    "Quedan <em>6 jornadas</em>.",
+    "¿Rondón llega",
+    "a los <em>20 goles</em>?"
+   ],
+   "big": "QUEDAN 6",
+   "dots": 6,
+   "sub": "¿LLEGA A 20?",
+   "subLabel": "JORNADAS POR JUGAR · 12 GOLES HOY"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "¿Rondón es el mejor nueve de la Liga MX… o hay otro? ¡Te leo en los comentarios!",
+   "captions": [
+    "¿Rondón es",
+    "el <em>mejor nueve</em>",
+    "de la Liga MX…",
+    "o hay otro?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "AFICIONADO, SÉ HONESTO:",
+   "q": "¿EL MEJOR 9\nDE LA LIGA?",
+   "opts": [
+    "RONDÓN",
+    "OTRO (COMENTA CUÁL)"
+   ]
+  }
+ ],
+ "post": "12 goles después de 11 jornadas: Salomón Rondón va solo en el goleo de la Liga MX. Y Óscar Estupiñán, top 3 jugando en el equipo que va último. ¿Rondón es el mejor 9 de la liga o hay otro? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Apertura2026",
+  "#Rondón",
+  "#Pachuca",
+  "#FCJuárez",
+  "#Bravos",
+  "#FútbolMexicano"
+ ],
+ "sources": [
+  "https://www.infobae.com/mexico/2026/10/14/apertura-2026-como-van-las-tablas-de-minutos-de-menores-de-goleo-y-de-atajadas-de-la-liga-mx-tras-11-jornadas/",
+  "https://www.contramuro.com/lo-que-dejo-la-jornada-11-del-apertura-2026-de-la-liga-mx/"
+ ]
+}

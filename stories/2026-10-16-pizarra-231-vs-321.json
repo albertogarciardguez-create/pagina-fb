@@ -1,0 +1,608 @@
+{
+ "id": "2026-10-16-pizarra-231-vs-321",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "VS",
+   "say": "¿Dos, tres, uno o tres, dos, uno? El dilema de todo entrenador de fútbol siete. Te lo explico en un minuto.",
+   "captions": [
+    "¿<em>2-3-1</em>",
+    "o <em>3-2-1</em>?",
+    "El dilema",
+    "de todo entrenador",
+    "de fútbol 7.",
+    "Te lo explico",
+    "en un minuto."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "2-3-1\nVS 3-2-1",
+   "sub": "¿Cuál le conviene a tu equipo?"
+  },
+  {
+   "type": "board",
+   "bg": "2-3-1",
+   "title": "EL 2-3-1",
+   "say": "El dos, tres, uno pone tres en medio. Tienes el balón, abres la cancha y atacas con más gente.",
+   "captions": [
+    "El <em>2-3-1</em>",
+    "pone tres en medio.",
+    "Tienes el balón,",
+    "abres la cancha",
+    "y atacas con <em>más gente</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 32,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 68,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 52
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 58
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 52
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 30,
+     "label": "9"
+    }
+   ],
+   "rival": [],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.3,
+     "zone": {
+      "x": 4,
+      "y": 44,
+      "w": 92,
+      "h": 22,
+      "label": "3 EN MEDIO",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.7,
+     "ball": "MD",
+     "pos": {
+      "MD": [
+       88,
+       40
+      ],
+      "MI": [
+       12,
+       40
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MD",
+       "kind": "pass"
+      },
+      {
+       "from": "MI",
+       "to": [
+        12,
+        41
+       ],
+       "kind": "run"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "!",
+   "title": "SU DEBILIDAD",
+   "inherit": true,
+   "say": "Su debilidad: si los exteriores suben, quedan huecos a la espalda y solo dos defensas atrás.",
+   "captions": [
+    "Su <em>debilidad</em>:",
+    "si los exteriores suben,",
+    "quedan <em>huecos</em>",
+    "a la espalda",
+    "y solo dos defensas atrás."
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 24,
+     "y": 46
+    },
+    {
+     "id": "R2",
+     "x": 76,
+     "y": 46
+    }
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "ball": "R1",
+     "arrows": [
+      {
+       "from": "MD",
+       "to": "R1",
+       "kind": "pass",
+       "curve": 0.1
+      }
+     ]
+    },
+    {
+     "at": 0.35,
+     "pos": {
+      "R1": [
+       14,
+       70
+      ],
+      "R2": [
+       86,
+       70
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R1",
+       "to": [
+        15,
+        69
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R2",
+       "to": [
+        85,
+        69
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 0,
+      "y": 58,
+      "w": 26,
+      "h": 24,
+      "label": "HUECO"
+     },
+     "zoneHold": true,
+     "hit": true
+    },
+    {
+     "at": 0.55,
+     "zone": {
+      "x": 74,
+      "y": 58,
+      "w": 26,
+      "h": 24,
+      "label": "HUECO"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3-2-1",
+   "title": "EL 3-2-1",
+   "say": "El tres, dos, uno es más seguro: tres atrás y dos medios que protegen. Es muy difícil que te contraataquen.",
+   "captions": [
+    "El <em>3-2-1</em>",
+    "es más seguro:",
+    "tres atrás",
+    "y dos medios",
+    "que protegen.",
+    "Es muy difícil",
+    "que te <em>contraataquen</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 20,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "DC2",
+     "x": 50,
+     "y": 82,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 80,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 34,
+     "y": 56,
+     "label": "MC"
+    },
+    {
+     "id": "MD",
+     "x": 66,
+     "y": 56,
+     "label": "MC"
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 30,
+     "label": "9"
+    }
+   ],
+   "rival": [],
+   "ball": "DC2",
+   "steps": [
+    {
+     "at": 0.3,
+     "zone": {
+      "x": 8,
+      "y": 68,
+      "w": 84,
+      "h": 20,
+      "label": "3 ATRÁS",
+      "color": "green"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "9",
+   "title": "SU DEBILIDAD",
+   "inherit": true,
+   "say": "Su debilidad: tu nueve se queda solo y en medio puedes quedar dos contra tres.",
+   "captions": [
+    "Su <em>debilidad</em>:",
+    "tu nueve",
+    "se queda <em>solo</em>",
+    "y en medio",
+    "puedes quedar",
+    "<em>2 contra 3</em>."
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 36,
+     "y": 42
+    },
+    {
+     "id": "R2",
+     "x": 50,
+     "y": 36
+    },
+    {
+     "id": "R3",
+     "x": 64,
+     "y": 42
+    },
+    {
+     "id": "R4",
+     "x": 40,
+     "y": 22
+    },
+    {
+     "id": "R5",
+     "x": 60,
+     "y": 22
+    }
+   ],
+   "steps": [
+    {
+     "at": 0.2,
+     "zone": {
+      "x": 30,
+      "y": 12,
+      "w": 40,
+      "h": 26,
+      "label": "9 SOLO"
+     }
+    },
+    {
+     "at": 0.6,
+     "zone": {
+      "x": 22,
+      "y": 32,
+      "w": 56,
+      "h": 30,
+      "label": "2 CONTRA 3"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "↕",
+   "title": "EL TRUCO: LOS DOS",
+   "note": "HÍBRIDO",
+   "say": "El truco de los equipos grandes: atacas en dos, tres, uno y, al perder el balón, un exterior baja y defiendes en tres, dos, uno.",
+   "captions": [
+    "El truco de los",
+    "<em>equipos grandes</em>:",
+    "atacas en <em>2-3-1</em>",
+    "y al perder el balón,",
+    "un exterior baja",
+    "y defiendes en <em>3-2-1</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 32,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 68,
+     "y": 78,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 52
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 58
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 52
+    },
+    {
+     "id": "DC",
+     "x": 50,
+     "y": 30,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 40
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.45,
+     "ball": "R1",
+     "hit": true
+    },
+    {
+     "at": 0.6,
+     "pos": {
+      "MD": [
+       80,
+       78
+      ],
+      "DD": [
+       56,
+       82
+      ],
+      "DI": [
+       26,
+       78
+      ],
+      "MC": [
+       62,
+       58
+      ],
+      "MI": [
+       36,
+       56
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        80,
+        77
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MI",
+       "to": [
+        37,
+        56
+       ],
+       "kind": "run"
+      }
+     ],
+     "zone": {
+      "x": 10,
+      "y": 70,
+      "w": 80,
+      "h": 18,
+      "label": "SIN BALÓN: 3 ATRÁS",
+      "color": "green"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "5",
+   "title": "ENTRÉNALO: CAMBIO",
+   "note": "EJERCICIO",
+   "inherit": true,
+   "say": "Entrénalo así: partido normal, y cada vez que pierdan el balón, el exterior tiene cinco segundos para bajar.",
+   "captions": [
+    "Entrénalo así:",
+    "partido normal,",
+    "y cada vez que",
+    "<em>pierdan</em> el balón,",
+    "el exterior tiene",
+    "<em>5 segundos</em>",
+    "para bajar."
+   ],
+   "timer": {
+    "from": 5,
+    "label": "SEG",
+    "at": 0.5,
+    "end": 0.95
+   },
+   "steps": [
+    {
+     "at": 0.1,
+     "pos": {
+      "MD": [
+       86,
+       52
+      ],
+      "DD": [
+       68,
+       78
+      ],
+      "DI": [
+       32,
+       78
+      ],
+      "MC": [
+       50,
+       58
+      ],
+      "MI": [
+       14,
+       52
+      ]
+     },
+     "ball": "MC"
+    },
+    {
+     "at": 0.45,
+     "ball": "R1",
+     "hit": true
+    },
+    {
+     "at": 0.55,
+     "pos": {
+      "MD": [
+       80,
+       78
+      ],
+      "DD": [
+       56,
+       82
+      ],
+      "DI": [
+       26,
+       78
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MD",
+       "to": [
+        80,
+        77
+       ],
+       "kind": "run"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Todo esto y mucho más viene en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Todo esto y más",
+    "viene en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿tu equipo juega dos, tres, uno o tres, dos, uno? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento.",
+    "Y dime:",
+    "¿tu equipo juega",
+    "<em>2-3-1</em>",
+    "o <em>3-2-1</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿2-3-1\nO 3-2-1?",
+   "opts": [
+    "2-3-1",
+    "3-2-1"
+   ]
+  }
+ ],
+ "post": "¿2-3-1 o 3-2-1? El dilema de todo entrenador de fútbol 7, explicado en un minuto (y el truco de los equipos grandes para usar los dos). 💾 Guárdalo para tu próximo entrenamiento. ¿Cuál usa tu equipo? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#Sistemas",
+  "#FútbolAmateur",
+  "#CiudadJuárez",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}

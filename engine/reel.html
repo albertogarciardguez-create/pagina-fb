@@ -199,15 +199,17 @@ ranking(s){const rows=(s.rows||[]).slice(0,5);const mx=Math.max(...rows.map(r=>M
   return {el:e,anim(t,a,b){R.forEach((row,k)=>{const t0=a+0.1+(R.length-1-k)*0.18;const x=eo(p(t,t0,0.5));row.style.opacity=cl(p(t,t0,0.15));row.querySelector('.bar').style.width=(260+430*Math.abs(rows[k].val)/mx)*x+'px';});},hits(a,b){return [a+0.1];}};},
 board(s){
   // Pizarra táctica de fútbol 7: coordenadas en % (x 0-100 izq→der, y 0-100 arriba=portería rival, abajo=portería propia)
-  const PW=640,PH=900,PX=220,PY=s.title?420:340;
+  const PW=640,PH=900,PX=220,PY=s.title?420:340;const ZY=s.view==='top'?2:1;
   const e=el(`<div class="scene">${s.title?`<div class="title abs" style="top:318px;text-align:center;left:60px;right:60px">${esc(s.title)}${s.sub?` <span>· ${esc(s.sub)}</span>`:''}</div>`:''}
   <svg class="abs" style="left:${PX}px;top:${PY}px;overflow:visible" width="${PW}" height="${PH}" viewBox="0 0 ${PW} ${PH}">
    <g fill="none" stroke="#151515" stroke-width="6" stroke-linecap="round" style="filter:url(#boil)">
-    <rect x="0" y="0" width="${PW}" height="${PH}"/><line x1="0" y1="${PH/2}" x2="${PW}" y2="${PH/2}"/><circle cx="${PW/2}" cy="${PH/2}" r="80"/>
+    ${ZY===2?`<rect x="0" y="0" width="${PW}" height="${PH}"/><path d="M${PW/2-160} ${PH} A160 160 0 0 1 ${PW/2+160} ${PH}"/>
+    <rect x="${PW*0.22}" y="0" width="${PW*0.56}" height="${PH*0.30}"/><rect x="${PW*0.36}" y="0" width="${PW*0.28}" height="${PH*0.11}"/>
+    <path d="M${PW*0.38} 0 L${PW*0.38} -30 L${PW*0.62} -30 L${PW*0.62} 0" stroke-width="9"/><path d="M${PW-34} 0 A34 34 0 0 0 ${PW} 34"/>`:`<rect x="0" y="0" width="${PW}" height="${PH}"/><line x1="0" y1="${PH/2}" x2="${PW}" y2="${PH/2}"/><circle cx="${PW/2}" cy="${PH/2}" r="80"/>
     <rect x="${PW*0.22}" y="0" width="${PW*0.56}" height="${PH*0.15}"/><rect x="${PW*0.22}" y="${PH*0.85}" width="${PW*0.56}" height="${PH*0.15}"/>
-    <path d="M${PW*0.38} 0 L${PW*0.38} -26 L${PW*0.62} -26 L${PW*0.62} 0" stroke-width="8"/><path d="M${PW*0.38} ${PH} L${PW*0.38} ${PH+26} L${PW*0.62} ${PH+26} L${PW*0.62} ${PH}" stroke-width="8"/>
+    <path d="M${PW*0.38} 0 L${PW*0.38} -26 L${PW*0.62} -26 L${PW*0.62} 0" stroke-width="8"/><path d="M${PW*0.38} ${PH} L${PW*0.38} ${PH+26} L${PW*0.62} ${PH+26} L${PW*0.62} ${PH}" stroke-width="8"/>`}
    </g>
-   <circle cx="${PW/2}" cy="${PH/2}" r="7" fill="#151515"/>
+   ${ZY===2?'':`<circle cx="${PW/2}" cy="${PH/2}" r="7" fill="#151515"/>`}
    <g class="zones"></g><g class="arrows"></g><g class="players"></g>
    <g class="ballB"><circle r="13" fill="#fff" stroke="#151515" stroke-width="5"/><circle r="4.5" fill="#151515"/></g>
   </svg>
@@ -228,7 +230,7 @@ board(s){
   const P={};Object.keys(meta).forEach(id=>{const m=meta[id];const g=mk('g',{});const us=m.side==='us';
     g.appendChild(mk('circle',{r:31,fill:us?'#B8E62E':'#E03A2D',stroke:'#151515','stroke-width':6}));
     const tx=mk('text',{'text-anchor':'middle',y:12,'font-family':'Anton','font-size':m.label.length>2?24:32,fill:us?'#151515':'#F2EFE8'});tx.textContent=m.label;g.appendChild(tx);gP.appendChild(g);P[id]=g;});
-  const xy=(v)=>[v[0]/100*PW,v[1]/100*PH];
+  const xy=(v)=>[v[0]/100*PW,v[1]/100*PH*ZY];
   function posAt(t,a,b){const d=b-a;let cur=states[0].pos,idx=0;
     for(let i=1;i<states.length;i++){const ts=a+d*states[i].at;if(t>=ts){idx=i;}}
     const res={};const S0=states[Math.max(0,idx)];const ts=a+d*S0.at;const k=idx===0?1:eo(p(t,ts,0.7));const from=idx>0?states[idx-1].pos:S0.pos;
@@ -236,8 +238,8 @@ board(s){
   // flechas y zonas
   const AR=[];steps.forEach((st,si)=>{(st.arrows||[]).forEach(ar=>{const color=ar.kind==='press'?'#E03A2D':(ar.kind==='run'?'#4F7A06':'#151515');
      const path=mk('path',{fill:'none',stroke:color,'stroke-width':ar.kind==='pass'?6:7,'stroke-linecap':'round','marker-end':''});const head=mk('path',{fill:color});gA.appendChild(path);gA.appendChild(head);AR.push({si,ar,path,head});});
-    if(st.zone){const z=st.zone;const r=mk('rect',{x:z.x/100*PW,y:z.y/100*PH,width:z.w/100*PW,height:z.h/100*PH,fill:z.color==='green'?'rgba(184,230,46,.35)':'rgba(224,58,45,.18)',stroke:z.color==='green'?'#4F7A06':'#E03A2D','stroke-width':5,'stroke-dasharray':'14 10',rx:14});
-     const tl=mk('text',{x:z.x/100*PW+14,y:z.y/100*PH+40,'font-family':'Barlow','font-weight':800,'font-size':34,fill:z.color==='green'?'#4F7A06':'#C2301F'});tl.textContent=z.label||'';const g=mk('g',{});g.appendChild(r);g.appendChild(tl);gZ.appendChild(g);st.__z=g;}});
+    if(st.zone){const z=st.zone;const r=mk('rect',{x:z.x/100*PW,y:z.y/100*PH*ZY,width:z.w/100*PW,height:z.h/100*PH*ZY,fill:z.color==='green'?'rgba(184,230,46,.35)':'rgba(224,58,45,.18)',stroke:z.color==='green'?'#4F7A06':'#E03A2D','stroke-width':5,'stroke-dasharray':'14 10',rx:14});
+     const tl=mk('text',{x:z.x/100*PW+14,y:z.y/100*PH*ZY+40,'font-family':'Barlow','font-weight':800,'font-size':34,fill:z.color==='green'?'#4F7A06':'#C2301F'});tl.textContent=z.label||'';const g=mk('g',{});g.appendChild(r);g.appendChild(tl);gZ.appendChild(g);st.__z=g;}});
   const end=(v,pos)=>typeof v==='string'?xy(pos[v]||[50,50]):xy(v);
   return {el:e,
    anim(t,a,b){const d=b-a;const {pos,idx}=posAt(t,a,b);
