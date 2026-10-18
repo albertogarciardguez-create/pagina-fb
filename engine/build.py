@@ -54,17 +54,31 @@ def validate(story):
 
 
 def tts(story, outdir):
-    from kokoro_onnx import Kokoro
-    m, v = ensure_model()
-    k = Kokoro(m, v)
-    voice = story.get("voice", "em_alex")
+    sys.path.insert(0, ENGINE)
+    import voces
+    motor, _ = voces.cargar_config(story)
+    try:
+        voz = voces.crear(story)
+        return _tts_lines(story, outdir, voz)
+    except voces.MotorNoDisponible as e:
+        if motor == "kokoro":
+            raise
+        log(f"AVISO: no se pudo usar la voz '{motor}' ({e}). Uso kokoro para todo el video.")
+        return _tts_lines(story, outdir, voces.crear(story, "kokoro"), aviso=str(e))
+
+
+def _tts_lines(story, outdir, voz, aviso=""):
+    import voces
     sr = 24000
     parts = [np.zeros(int(sr * 0.35), np.float32)]
     t = 0.35
     lines = []
-    for i, s in enumerate(story["scenes"]):
-        a, sr = k.create(s["say"], voice=voice, speed=s.get("speed", 1.12), lang="es-419")
-        a = a.astype(np.float32)
+    sc = story["scenes"]
+    log(f"voz: {voz.motor}")
+    for i, s in enumerate(sc):
+        a, sr_a = voz.decir(s["say"], s.get("speed", 1.12),
+                            sc[i - 1]["say"] if i else "", sc[i + 1]["say"] if i + 1 < len(sc) else "")
+        a = voces.remuestrear(np.asarray(a, np.float32), sr_a, sr)
         d = len(a) / sr
         lines.append({"i": i, "start": round(t, 3), "end": round(t + d, 3)})
         gap = s.get("gap", 0.3)
@@ -76,7 +90,9 @@ def tts(story, outdir):
     y = y / max(1e-6, np.abs(y).max()) * 0.92
     raw = os.path.join(outdir, "voz_raw.wav")
     sf.write(raw, y, sr)
-    timing = {"total": round(t, 3), "lines": lines}
+    timing = {"total": round(t, 3), "lines": lines, "motor": voz.motor}
+    if aviso:
+        timing["aviso_voz"] = aviso
     json.dump(timing, open(os.path.join(outdir, "timing.json"), "w"), indent=1)
     log(f"voz lista: {t:.1f} s")
     return raw, timing

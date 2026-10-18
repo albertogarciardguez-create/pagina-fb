@@ -8,4 +8,13 @@ python3 engine/build.py stories/2026-10-15-juarez-ultimo.json --preview   # hoja
 python3 engine/build.py stories/2026-10-15-juarez-ultimo.json             # video final
 ```
 
+Herramientas extra:
+
+```bash
+python3 engine/noticias.py                       # temas de Liga MX del día → noticias/AAAA-MM-DD.md
+VOZ_MOTOR=chatterbox python3 engine/build.py ... # probar otra voz (kokoro | elevenlabs | chatterbox)
+```
+
+La voz se configura en `config/voz.json` y las fuentes de noticias en `config/fuentes.json`.
+
 El video y el texto para publicar quedan en `salida/<id>/`. Las instrucciones completas, el esquema de escenas y las reglas de contenido están en `CLAUDE.md`.

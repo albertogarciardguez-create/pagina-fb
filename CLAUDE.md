@@ -18,7 +18,7 @@ Todos los videos usan `"captionMode": "words"` (subtítulos de 1–2 palabras a 
 Los dos videos no deben repetir tema, equipo protagonista ni gancho. Revisa `stories/` para no repetir los temas de los últimos 7 días.
 
 1. **Instalar** (una vez por sesión): `bash setup.sh`
-2. **Elegir los temas.** Video A: busca en la web lo más relevante de Liga MX de las últimas 24–48 h y el calendario de hoy; si hay algo de **FC Juárez**, dale prioridad. Video B: elige el siguiente concepto táctico de fútbol 7 que no se haya hecho en `stories/` (revisa los `kind: pizarra` anteriores).
+2. **Elegir los temas.** Video A: primero corre `python3 engine/noticias.py` y lee `noticias/AAAA-MM-DD.md` (temas de las últimas 36 h ya agrupados y ordenados, con ⭐ si es de FC Juárez y ⚠️ si se parece a una historia reciente). Si termina con código 2 (sin internet desde la terminal, como en la nube), busca en la web lo más relevante de Liga MX de las últimas 24–48 h y el calendario de hoy. Ese archivo son pistas, no datos: el paso 3 sigue siendo obligatorio. Si hay algo de **FC Juárez**, dale prioridad. Video B: elige el siguiente concepto táctico de fútbol 7 que no se haya hecho en `stories/` (revisa los `kind: pizarra` anteriores).
 3. **Verificar datos.** Cada número y cada hecho debe salir de una fuente confiable (Mediotiempo, ESPN, Récord, TUDN, Claro Sports, El Informador, sitio oficial de la Liga MX, etc.). Usa WebFetch para leer la nota, no solo el titular. **Nunca inventes ni estimes un dato.** Si no puedes confirmarlo, no lo uses. Anota las URL en `sources`.
 4. **Escribir las dos historias** en `stories/AAAA-MM-DD-a-tema-corto.json` (noticia) y `stories/AAAA-MM-DD-b-pizarra-tema.json` (pizarra). Ejemplos: `stories/2026-10-15-juarez-ultimo.json` y `stories/2026-10-16-pizarra-presion-psg.json`.
    - Duración y número de escenas según la tabla de arriba.
@@ -31,6 +31,21 @@ Los dos videos no deben repetir tema, equipo protagonista ni gancho. Revisa `sto
 6. **Generar los videos**: `python3 engine/build.py stories/<archivo>.json` (~3–5 min cada uno). Quedan en `salida/<id>/<id>.mp4` y el texto para publicar en `salida/<id>/post.txt`, que ya incluye las ligas de `config/ligas.json` que correspondan al `kind` del video (libro, afiliados, publicidad).
 7. **Entregar a Alberto**: manda los dos MP4 con SendUserFile. En tu mensaje final, para cada video (A y B) incluye, listo para copiar: la hora exacta sugerida para programarlo hoy, el texto del post con hashtags y las fuentes.
 8. **Guardar**: haz commit solo de los JSON de las historias (`salida/` está ignorada) y push a `main`. Si el push falla, continúa.
+
+## Voz en off
+
+El motor de voz se elige en `config/voz.json` (`"motor"`), o para una prueba con `VOZ_MOTOR=<motor> python3 engine/build.py ...`:
+
+| Motor | Qué es | Requisitos |
+|---|---|---|
+| `kokoro` | Voz offline gratuita (`em_alex`). Respaldo de todos los demás. | Ninguno (lo instala `setup.sh`) |
+| `elevenlabs` | Voz más expresiva por API; puede ser la voz clonada de Alberto. Gasta créditos. | Llave en `~/.config/senorfutbol/elevenlabs.key` o `ELEVENLABS_API_KEY`; `voice_id` en `config/voz.json` |
+| `chatterbox` | Voz clonada de Alberto a partir de una grabación, con control de emoción (`exageracion`). Gratis y local, licencia MIT; en la Mac usa el chip M. | `python3 -m pip install chatterbox-tts` y la grabación en `chatterbox.referencia` (10–20 s, WAV) |
+
+- Si el motor elegido falla (sin llave, sin internet, sin paquete o sin grabación), el video sale completo con `kokoro` y `build.py` imprime `AVISO:`. Menciona ese aviso en el mensaje final.
+- Cada línea se guarda en caché (`~/.cache/senorfutbol/voz/`): la hoja de revisión y el video final usan el mismo audio y ElevenLabs no cobra dos veces. Cambiar el texto de una escena solo regenera esa línea (y, con ElevenLabs, las vecinas, porque usa el contexto para la entonación).
+- Nunca guardes la llave de ElevenLabs en el repositorio ni la pongas en un mensaje.
+- En la nube no hay acceso a ElevenLabs ni a Hugging Face desde la terminal: ahí siempre sale con `kokoro`.
 
 ## Publicación automática (cuando esté configurada)
 

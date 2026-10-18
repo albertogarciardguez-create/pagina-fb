@@ -1,0 +1,24 @@
+{
+  "_nota": "motor: kokoro (gratis, offline, respaldo) | elevenlabs (API, gasta créditos) | chatterbox (tu voz clonada, local en la Mac). Si el motor elegido falla, el video sale con kokoro. Para probar uno sin cambiar este archivo: VOZ_MOTOR=chatterbox python3 engine/build.py ...",
+  "motor": "kokoro",
+  "kokoro": {
+    "voz": "em_alex"
+  },
+  "elevenlabs": {
+    "_nota": "La llave NO va aquí: guárdala en ~/.config/senorfutbol/elevenlabs.key o en la variable ELEVENLABS_API_KEY. voice_id = tu voz clonada (Voices > tu voz > ID).",
+    "voice_id": "",
+    "modelo": "eleven_multilingual_v2",
+    "estabilidad": 0.35,
+    "similitud": 0.8,
+    "estilo": 0.45,
+    "velocidad": 1.05
+  },
+  "chatterbox": {
+    "_nota": "referencia = 10 a 20 segundos de tu voz, limpia y con la energía que quieres (WAV). exageracion 0.5 = normal, 0.7 = más emoción. cfg más bajo = ritmo más pausado.",
+    "referencia": "~/Videos/voz-alberto.wav",
+    "exageracion": 0.6,
+    "cfg": 0.4,
+    "temperatura": 0.8,
+    "velocidad": 1.05
+  }
+}

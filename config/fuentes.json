@@ -1,0 +1,21 @@
+{
+  "_nota": "Fuentes para engine/noticias.py. 'busquedas' usa Google Noticias (México, español). 'rss' acepta cualquier feed RSS/Atom directo de un medio. 'pesos' sube en el ranking las notas que mencionan esas palabras.",
+  "busquedas": [
+    "\"Liga MX\"",
+    "\"FC Juárez\" OR \"Bravos de Juárez\"",
+    "\"Liga MX\" fichaje OR refuerzo OR baja",
+    "\"Liga MX\" arbitraje OR polémica OR expulsión OR VAR",
+    "\"Liga MX\" técnico OR despido OR cesado",
+    "\"Liga MX\" goleo OR racha OR invicto OR récord"
+  ],
+  "rss": [],
+  "pesos": {
+    "juárez": 6, "juarez": 6, "bravos": 6,
+    "polémica": 2, "polemica": 2, "var": 2, "arbitraje": 2, "expuls": 2, "penal": 1,
+    "despid": 3, "cesad": 3, "renuncia": 3, "crisis": 2,
+    "fichaje": 2, "refuerzo": 2, "baja": 1,
+    "récord": 2, "racha": 2, "invicto": 2, "goleada": 2, "remontada": 2,
+    "liguilla": 1, "play-in": 1, "clásico": 2, "clasico": 2
+  },
+  "excluir": ["apuesta", "momios", "casino", "pronóstico de apuestas", "femenil sub", "fantasy"]
+}
