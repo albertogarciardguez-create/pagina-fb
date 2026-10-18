@@ -30,6 +30,10 @@ def cargar_config(story):
     p = os.path.join(ROOT, "config", "voz.json")
     if os.path.exists(p):
         cfg = json.load(open(p, encoding="utf-8"))
+    local = os.path.expanduser("~/.config/senorfutbol/voz.json")  # ajustes de esta computadora, fuera de git
+    if os.path.exists(local):
+        for k, v in json.load(open(local, encoding="utf-8")).items():
+            cfg[k] = {**cfg.get(k, {}), **v} if isinstance(v, dict) and isinstance(cfg.get(k), dict) else v
     motor = os.environ.get("VOZ_MOTOR") or story.get("tts") or cfg.get("motor") or "kokoro"
     return motor.strip().lower(), cfg
 

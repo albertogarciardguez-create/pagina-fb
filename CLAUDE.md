@@ -42,6 +42,7 @@ El motor de voz se elige en `config/voz.json` (`"motor"`), o para una prueba con
 | `elevenlabs` | Voz más expresiva por API; puede ser la voz clonada de Alberto. Gasta créditos. | Llave en `~/.config/senorfutbol/elevenlabs.key` o `ELEVENLABS_API_KEY`; `voice_id` en `config/voz.json` |
 | `chatterbox` | Voz clonada de Alberto a partir de una grabación, con control de emoción (`exageracion`). Gratis y local, licencia MIT; en la Mac usa el chip M. | `python3 -m pip install chatterbox-tts` y la grabación en `chatterbox.referencia` (10–20 s, WAV) |
 
+- Cada computadora puede tener sus propios ajustes en `~/.config/senorfutbol/voz.json` (fuera de git; mismo formato, solo lo que cambia, p. ej. `{"motor": "chatterbox"}`). Tienen prioridad sobre `config/voz.json`.
 - Si el motor elegido falla (sin llave, sin internet, sin paquete o sin grabación), el video sale completo con `kokoro` y `build.py` imprime `AVISO:`. Menciona ese aviso en el mensaje final.
 - Cada línea se guarda en caché (`~/.cache/senorfutbol/voz/`): la hoja de revisión y el video final usan el mismo audio y ElevenLabs no cobra dos veces. Cambiar el texto de una escena solo regenera esa línea (y, con ElevenLabs, las vecinas, porque usa el contexto para la entonación).
 - Nunca guardes la llave de ElevenLabs en el repositorio ni la pongas en un mensaje.
