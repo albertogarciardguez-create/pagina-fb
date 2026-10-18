@@ -1,0 +1,69 @@
+{
+  "id": "2026-10-17-a-bravos-medio-tiempo",
+  "header": "LIGA MX · APERTURA 2026 · J12",
+  "voice": "em_alex",
+  "kind": "noticia",
+  "captionMode": "words",
+  "scenes": [
+    {
+      "type": "scoreboard", "bg": "3-0", "speed": 1.08,
+      "say": "¡Tres a cero! ¡Al medio tiempo! ¡No puede ser, Bravos!",
+      "captions": ["¡<em>3-0</em>!", "¡Al medio tiempo!", "¡No puede ser, <em>Bravos</em>!"],
+      "tag": "MEDIO TIEMPO · J12", "home": "CRUZ AZUL", "away": "JUÁREZ",
+      "goals": [{"side": "home", "at": 0.08}, {"side": "home", "at": 0.2}, {"side": "home", "at": 0.32}],
+      "note": "ESTADIO", "noteHL": "BANORTE"
+    },
+    {
+      "type": "play", "bg": "4'", "speed": 1.14,
+      "say": "¡Minuto cuatro! Centro de Palavecino y Montaño la empuja. ¡Ni se habían acomodado!",
+      "captions": ["¡Minuto <em>4</em>!", "Centro de <em>Palavecino</em>", "y <em>Montaño</em> la empuja.", "¡Ni se habían", "<em>acomodado</em>!"],
+      "minute": "4'", "vs": "CRUZ AZUL", "sub": "1-0", "play": "cross_right",
+      "passer": "PALAVECINO", "scorer": "MONTAÑO", "result": "1-0 · TEMPRANERO"
+    },
+    {
+      "type": "play", "bg": "23'", "speed": 1.14,
+      "say": "Al veintitrés, Mozo manda el centro y Charly Rodríguez remata al segundo palo. ¡Solito!",
+      "captions": ["Al <em>23</em>,", "<em>Mozo</em> manda el centro", "y <em>Charly Rodríguez</em>", "remata al segundo palo.", "¡<em>Solito</em>!"],
+      "minute": "23'", "vs": "CRUZ AZUL", "sub": "2-0", "play": "cross_right",
+      "passer": "MOZO", "scorer": "CH. RODRÍGUEZ", "result": "2-0 · SEGUNDO PALO"
+    },
+    {
+      "type": "headline", "bg": "¡UF!", "speed": 1.1,
+      "say": "¿Y Bravos? ¡Un balón al travesaño cerca del minuto cuarenta! Hasta ahí llegó la ilusión.",
+      "captions": ["¿Y <em>Bravos</em>?", "¡Un balón", "al <em>travesaño</em>", "cerca del <em>40</em>!", "Hasta ahí llegó", "la ilusión."],
+      "tag": "LO ÚNICO DE BRAVOS", "title": "¡AL\nTRAVESAÑO!", "sub": "CERCA DEL MINUTO 40"
+    },
+    {
+      "type": "play", "bg": "45+3'", "speed": 1.14,
+      "say": "Y en el agregado, Montaño la pone y Omar Campos firma el tercero. ¡Tres a cero!",
+      "captions": ["Y en el <em>agregado</em>,", "<em>Montaño</em> la pone", "y <em>Omar Campos</em>", "firma el tercero.", "¡<em>3-0</em>!"],
+      "minute": "45+3'", "vs": "CRUZ AZUL", "sub": "3-0", "play": "shot",
+      "passer": "MONTAÑO", "scorer": "O. CAMPOS", "result": "3-0 · AL DESCANSO"
+    },
+    {
+      "type": "stats", "bg": "18", "speed": 1.08,
+      "say": "Llegaron últimos de la tabla, con cuatro puntos… ¡y así se van al vestidor!",
+      "captions": ["Llegaron <em>últimos</em>", "de la tabla,", "con <em>4</em> puntos…", "¡y así se van", "al <em>vestidor</em>!"],
+      "items": [
+        {"n": "18°", "label": "LUGAR", "color": "red"},
+        {"n": "4", "label": "PUNTOS", "color": "red"},
+        {"n": "0", "label": "GOLES HOY", "color": "ink"}
+      ]
+    },
+    {
+      "type": "question", "bg": "¿?",
+      "say": "Juarense, dime la verdad: ¿todavía crees en el milagro del segundo tiempo… o ya le apagaste a la tele? ¡Te leo en los comentarios!",
+      "captions": ["Juarense,", "dime la verdad:", "¿crees en el <em>milagro</em>", "del segundo tiempo…", "o ya le <em>apagaste</em>?", "¡Te leo en los <em>comentarios</em>!"],
+      "pre": "JUARENSE, LA VERDAD:", "q": "¿HAY\nMILAGRO?",
+      "opts": ["CREO EN EL MILAGRO", "YA LE APAGUÉ"]
+    }
+  ],
+  "post": "¡3-0 al medio tiempo! 😩 Cruz Azul le pega a Bravos en el Estadio Banorte: Montaño al 4', Charly Rodríguez al 23' y Omar Campos en el agregado. Lo único de Juárez: un balón al travesaño. Juarense, dime la verdad: ¿crees en el milagro del segundo tiempo o ya le apagaste? 👇",
+  "hashtags": ["#FCJuárez", "#Bravos", "#CruzAzul", "#LigaMX", "#Apertura2026", "#CiudadJuárez", "#FútbolMexicano"],
+  "sources": [
+    "https://vavel.com/mx/futbol-mexicano/2026/10/17/1275481-cruz-azul-vs-fc-juarez-en-vivo-y-en-directo-liga-mx.html",
+    "https://www.vavel.com/en-us/soccer/2026/10/17/1275482-cruz-azul-vs-fc-juarez-live-updates-liga-mx.html",
+    "https://www.record.com.mx/futbol/partido/cruz-azul-fc-juarez-11162155/cobertura-en-vivo",
+    "https://www.clarosports.com/futbol/liga-mx/cruz-azul-vs-juarez-en-vivo-el-partido-de-la-jornada-12-de-la-liga-mx-resultado-y-goles-hoy-apertura-2026/"
+  ]
+}
