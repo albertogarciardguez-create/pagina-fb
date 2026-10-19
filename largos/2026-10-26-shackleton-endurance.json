@@ -1,0 +1,843 @@
+{
+ "id": "2026-10-26-shackleton-endurance",
+ "canal": "Impulso Real",
+ "plantilla": "plano",
+ "musica": "pulso",
+ "bpm": 84,
+ "voice": "em_alex",
+ "speed": 1.06,
+ "pausaFrase": 0.22,
+ "pausaEscena": 0.6,
+ "scenes": [
+  {
+   "type": "ink",
+   "icon": "ice",
+   "bg": "1915",
+   "plano": "PLANO 01 · ANTÁRTIDA",
+   "say": "En mil novecientos quince, veintiocho hombres quedaron atrapados en el hielo de la Antártida. Nadie en el mundo sabía dónde estaban. Su barco quedó aplastado, y luego se hundió.",
+   "kicker": "ANTÁRTIDA · 1915",
+   "lines": [
+    {
+     "t": "28 hombres atrapados en el <em>hielo</em>",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "NADIE SABÍA DÓNDE ESTABAN",
+     "style": "label",
+     "s": 1
+    },
+    {
+     "t": "El barco se hundió.",
+     "style": "mid",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "497",
+   "say": "Pasaron cuatrocientos noventa y siete días sin pisar tierra firme. Y al final, regresaron vivos. Los veintiocho. Todos.",
+   "items": [
+    {
+     "n": "497",
+     "label": "DÍAS SIN TIERRA",
+     "s": 0
+    },
+    {
+     "n": "28",
+     "label": "REGRESARON",
+     "s": 1
+    },
+    {
+     "n": "0",
+     "label": "MUERTOS",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "compass",
+   "plano": "PLANO 03 · LIDERAZGO",
+   "say": "¿Cómo lo lograron? No fue suerte. Fue una forma de liderar que hoy, más de cien años después, se estudia en las escuelas de negocios. En este video te cuento la historia de Ernest Shackleton. Y al final, te dejo tres lecciones para aplicar con tu equipo, en tu trabajo o en tu casa, a partir de mañana.",
+   "kicker": "EN ESTE VIDEO",
+   "lines": [
+    {
+     "t": "No fue suerte.",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "Fue <em>liderazgo</em>.",
+     "style": "big",
+     "s": 2
+    },
+    {
+     "t": "ERNEST SHACKLETON",
+     "style": "label",
+     "s": 3
+    },
+    {
+     "t": "3 lecciones para tu equipo",
+     "style": "mid",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 1,
+   "title": "El anuncio que nunca existió",
+   "say": "Capítulo uno. El anuncio que nunca existió."
+  },
+  {
+   "type": "quote",
+   "pre": "EL ANUNCIO MÁS FAMOSO",
+   "bg": "LONDRES",
+   "say": "Seguramente has visto este anuncio. Dicen que Shackleton lo publicó en un periódico de Londres: se buscan hombres para viaje peligroso. Sueldo bajo, frío extremo, largos meses de oscuridad total. Regreso seguro, dudoso. Honor y reconocimiento en caso de éxito.",
+   "q": "Se buscan hombres para viaje peligroso. Sueldo bajo, frío extremo, largos meses de oscuridad total. Regreso seguro, <em>dudoso</em>. Honor y reconocimiento en caso de éxito.",
+   "qs": 1,
+   "qe": 4,
+   "author": "EL ANUNCIO, SEGÚN LA LEYENDA"
+  },
+  {
+   "type": "ink",
+   "icon": "scroll",
+   "plano": "PLANO 05 · ARCHIVO",
+   "say": "El problema es que ese anuncio nunca se ha encontrado. Hay historiadores que llevan años revisando periódicos de la época, y no aparece por ningún lado. Lo más probable es que sea un mito. Pero la expedición sí fue real. Y lo que pasó después fue todavía más extremo que el anuncio.",
+   "kicker": "LA VERDAD",
+   "lines": [
+    {
+     "t": "Nunca se ha encontrado.",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "Probablemente es un <em>mito</em>.",
+     "style": "mid",
+     "s": 2
+    },
+    {
+     "t": "PERO LA EXPEDICIÓN FUE REAL",
+     "style": "label",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "compass",
+   "accIdx": 1,
+   "bg": "1874",
+   "plano": "PLANO 06 · EL EXPLORADOR",
+   "say": "Pero, ¿quién era Ernest Shackleton? Nació en Irlanda en mil ochocientos setenta y cuatro, y se hizo marino a los dieciséis años. Antes del Endurance ya había estado dos veces en la Antártida. En su expedición anterior llegó más cerca del Polo Sur que nadie hasta ese momento, y el rey lo nombró caballero. Pero en mil novecientos once, el noruego Roald Amundsen llegó primero al Polo. Así que Shackleton buscó un reto todavía más grande.",
+   "kicker": "IRLANDA · 1874",
+   "lines": [
+    {
+     "t": "Ernest Shackleton",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "MARINO DESDE LOS 16 AÑOS",
+     "style": "label",
+     "s": 1
+    },
+    {
+     "t": "Récord: el más cerca del <em>Polo Sur</em>",
+     "style": "mid",
+     "s": 3
+    },
+    {
+     "t": "1911: Amundsen llega primero",
+     "style": "mid",
+     "color": "dimc",
+     "s": 4
+    },
+    {
+     "t": "Un reto más grande",
+     "style": "mid",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "LA MISIÓN · 1914",
+   "bg": "ENDURANCE",
+   "say": "En diciembre de mil novecientos catorce, el barco Endurance zarpó de la isla de Georgia del Sur, rumbo a la Antártida. La misión era histórica: cruzar el continente helado a pie, de costa a costa, por primera vez. Iban veintiocho hombres y casi setenta perros de trineo.",
+   "points": [
+    {
+     "y": "Dic 1914",
+     "t": "ZARPA DE GEORGIA DEL SUR",
+     "s": 0
+    },
+    {
+     "y": "La misión",
+     "t": "CRUZAR LA ANTÁRTIDA A PIE",
+     "s": 1
+    },
+    {
+     "y": "28",
+     "t": "HOMBRES A BORDO",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 2,
+   "title": "Atrapados",
+   "say": "Capítulo dos. Atrapados."
+  },
+  {
+   "type": "ink",
+   "icon": "ice",
+   "bg": "WEDDELL",
+   "plano": "PLANO 08 · MAR DE WEDDELL",
+   "say": "Pero el mar de Weddell tenía otros planes. El dieciocho de enero de mil novecientos quince, cuando ya estaban cerca de su destino, el hielo se cerró alrededor del barco. Y no lo soltó. El Endurance quedó congelado en medio del mar, como un insecto atrapado en ámbar. Durante meses, el hielo lo fue arrastrando a la deriva.",
+   "kicker": "MAR DE WEDDELL",
+   "lines": [
+    {
+     "t": "18 de enero de 1915",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "El hielo se <em>cerró</em>.",
+     "style": "mid",
+     "s": 1,
+     "d": 2.2
+    },
+    {
+     "t": "Y NO LO SOLTÓ",
+     "style": "label",
+     "s": 2
+    },
+    {
+     "t": "A la deriva, durante meses",
+     "style": "mid",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "people",
+   "bg": "RUTINA",
+   "plano": "PLANO 09 · LA TRIPULACIÓN",
+   "say": "Cualquier otro líder habría entrado en pánico. Shackleton hizo algo muy distinto: mantuvo la rutina. Cada quien tenía horarios, tareas y turnos. Y en los ratos libres, los hombres jugaban fútbol sobre el hielo. Parece un detalle menor. Pero para Shackleton, el peor enemigo no era el frío. Era la desesperación.",
+   "kicker": "LA PRIMERA DECISIÓN",
+   "lines": [
+    {
+     "t": "Mantener la <em>rutina</em>.",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "HORARIOS · TAREAS · TURNOS",
+     "style": "label",
+     "s": 2
+    },
+    {
+     "t": "Fútbol sobre el hielo",
+     "style": "mid",
+     "s": 3
+    },
+    {
+     "t": "El enemigo era la <em>desesperación</em>.",
+     "style": "mid",
+     "s": 6
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "ship",
+   "accIdx": 1,
+   "bg": "1915",
+   "plano": "PLANO 10 · EL ENDURANCE",
+   "say": "Pero el hielo no perdona. Poco a poco, la presión empezó a aplastar el casco. El veintisiete de octubre, Shackleton dio la orden de abandonar el barco. Y el veintiuno de noviembre, el Endurance desapareció bajo el hielo. Shackleton solo dijo: se va, muchachos.",
+   "kicker": "EL FINAL DEL BARCO",
+   "lines": [
+    {
+     "t": "La presión aplastó el casco",
+     "style": "mid",
+     "s": 1
+    },
+    {
+     "t": "27 OCT · ABANDONAR EL BARCO",
+     "style": "label",
+     "s": 2
+    },
+    {
+     "t": "21 de noviembre",
+     "style": "big",
+     "s": 3
+    },
+    {
+     "t": "“Se va, <em>muchachos</em>.”",
+     "style": "mid",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 3,
+   "title": "497 días",
+   "say": "Capítulo tres. Cuatrocientos noventa y siete días."
+  },
+  {
+   "type": "route",
+   "title": "DEL HIELO A LA ISLA ELEFANTE",
+   "bg": "HIELO",
+   "say": "Ahora estaban solos, acampando sobre placas de hielo que flotaban en el océano. Así pasaron meses. Cuando el hielo empezó a romperse, subieron a tres botes salvavidas. Y después de casi una semana remando entre olas y hielo, el quince de abril de mil novecientos dieciséis llegaron a la isla Elefante. Era la primera vez que pisaban tierra en cuatrocientos noventa y siete días.",
+   "points": [
+    {
+     "x": 8,
+     "y": 20,
+     "label": "Endurance",
+     "sub": "SE HUNDE",
+     "s": 0,
+     "up": false
+    },
+    {
+     "x": 40,
+     "y": 42,
+     "label": "Campamentos en el hielo",
+     "s": 1,
+     "up": true
+    },
+    {
+     "x": 58,
+     "y": 62,
+     "label": "3 botes salvavidas",
+     "s": 2,
+     "up": true
+    },
+    {
+     "x": 82,
+     "y": 80,
+     "label": "Isla Elefante",
+     "sub": "15 ABR 1916",
+     "s": 3,
+     "up": true
+    }
+   ],
+   "counter": {
+    "value": 497,
+    "suffix": " DÍAS",
+    "label": "SIN TIERRA",
+    "s": 4,
+    "dur": 2.5
+   }
+  },
+  {
+   "type": "ink",
+   "icon": "mountain",
+   "bg": "ELEFANTE",
+   "plano": "PLANO 13 · ISLA ELEFANTE",
+   "say": "Pero la isla Elefante era una roca helada, lejos de cualquier ruta de barcos. Nadie los iba a encontrar ahí. Así que Shackleton tomó la decisión más arriesgada de su vida. Iría a buscar ayuda él mismo. En un bote de apenas siete metros, cruzando uno de los mares más peligrosos del planeta.",
+   "kicker": "ISLA ELEFANTE",
+   "lines": [
+    {
+     "t": "Nadie los iba a encontrar.",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "La decisión más <em>arriesgada</em>",
+     "style": "mid",
+     "s": 2
+    },
+    {
+     "t": "UN BOTE DE 7 METROS",
+     "style": "label",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "route",
+   "title": "EL VIAJE DEL JAMES CAIRD",
+   "bg": "OCÉANO",
+   "say": "El veinticuatro de abril, Shackleton y cinco hombres salieron en el bote James Caird. Veintidós se quedaron en la isla, al mando de su amigo Frank Wild. Durante dieciséis días navegaron unos mil trescientos kilómetros, con olas gigantes, empapados y congelados. Y lo imposible ocurrió: llegaron a Georgia del Sur.",
+   "points": [
+    {
+     "x": 6,
+     "y": 30,
+     "label": "Isla Elefante",
+     "sub": "24 ABR · 22 SE QUEDAN",
+     "s": 0,
+     "up": false
+    },
+    {
+     "x": 50,
+     "y": 62,
+     "label": "Océano Austral",
+     "sub": "16 DÍAS",
+     "s": 2,
+     "up": true
+    },
+    {
+     "x": 92,
+     "y": 40,
+     "label": "Georgia del Sur",
+     "sub": "LLEGAN",
+     "s": 3,
+     "up": true
+    }
+   ],
+   "counter": {
+    "value": 1300,
+    "suffix": " KM",
+    "label": "EN UN BOTE",
+    "s": 2,
+    "dur": 5
+   }
+  },
+  {
+   "type": "ink",
+   "icon": "mountain",
+   "accIdx": 4,
+   "bg": "36 H",
+   "plano": "PLANO 16 · GEORGIA DEL SUR",
+   "say": "Pero llegaron al lado equivocado de la isla. La estación ballenera estaba del otro lado de montañas y glaciares que nadie había atravesado. Shackleton, Worsley y Crean caminaron treinta y seis horas sin parar, con tornillos del bote clavados en las botas para no resbalar. El veinte de mayo, sucios e irreconocibles, llegaron a la estación ballenera de Stromness.",
+   "kicker": "GEORGIA DEL SUR",
+   "lines": [
+    {
+     "t": "El lado <em>equivocado</em>",
+     "style": "mid",
+     "s": 0
+    },
+    {
+     "t": "36 horas sin parar",
+     "style": "big",
+     "s": 2
+    },
+    {
+     "t": "TORNILLOS EN LAS BOTAS",
+     "style": "label",
+     "s": 2,
+     "d": 3
+    },
+    {
+     "t": "20 de mayo · Stromness",
+     "style": "mid",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "boat",
+   "accIdx": 0,
+   "bg": "ESPERA",
+   "plano": "PLANO 18 · ISLA ELEFANTE",
+   "say": "Mientras tanto, en la isla Elefante, los veintidós hombres esperaban. Voltearon los dos botes que les quedaban y los usaron como techo. Comían focas y pingüinos. Para no perder la cabeza, jugaban cartas, cantaban y leían una y otra vez los pocos libros que habían salvado. El más joven del grupo, Perce Blackborow, perdió los dedos de un pie por congelamiento. Y Frank Wild hizo lo mismo que Shackleton: mantuvo a todos ocupados, con tareas y rutinas, todos los días.",
+   "kicker": "MIENTRAS TANTO · ISLA ELEFANTE",
+   "lines": [
+    {
+     "t": "Dos botes como <em>techo</em>",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "FOCAS · PINGÜINOS",
+     "style": "label",
+     "s": 2
+    },
+    {
+     "t": "Cartas, canciones y libros",
+     "style": "mid",
+     "s": 3
+    },
+    {
+     "t": "Frank Wild mantuvo la <em>rutina</em>",
+     "style": "mid",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "EL RESCATE DE LA ISLA ELEFANTE",
+   "bg": "RESCATE",
+   "say": "Pero todavía faltaban veintidós hombres. Shackleton intentó volver por ellos, y el hielo no lo dejó pasar. Lo intentó una segunda vez. Y una tercera. Nada. Hasta que en el cuarto intento, a bordo del barco chileno Yelcho, el treinta de agosto de mil novecientos dieciséis, llegó a la isla Elefante.",
+   "points": [
+    {
+     "y": "1.º",
+     "t": "BLOQUEADO POR EL HIELO",
+     "s": 1
+    },
+    {
+     "y": "2.º",
+     "t": "BLOQUEADO",
+     "s": 2
+    },
+    {
+     "y": "3.º",
+     "t": "BLOQUEADO",
+     "s": 3
+    },
+    {
+     "y": "4.º",
+     "t": "YELCHO · 30 AGO 1916",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "VIVOS",
+   "say": "Los veintidós hombres seguían vivos. Habían pasado más de cuatro meses esperando en esa isla. Así, los veintiocho hombres del Endurance sobrevivieron. Ni uno solo murió.",
+   "items": [
+    {
+     "n": "22",
+     "label": "SEGUÍAN VIVOS",
+     "s": 0
+    },
+    {
+     "n": "4",
+     "label": "MESES ESPERANDO",
+     "s": 1
+    },
+    {
+     "n": "28",
+     "label": "SOBREVIVIERON",
+     "s": 2
+    }
+   ],
+   "foot": "Ni uno solo <em>murió</em>.",
+   "footS": 3
+  },
+  {
+   "type": "chapter",
+   "n": 4,
+   "title": "El líder",
+   "say": "Capítulo cuatro. El líder."
+  },
+  {
+   "type": "ink",
+   "icon": "heart",
+   "accIdx": 1,
+   "bg": "NIMROD",
+   "plano": "PLANO 21 · EXPEDICIÓN NIMROD",
+   "say": "Años antes, en otra expedición, Shackleton y sus hombres caminaban por el hielo con muy poca comida. Una mañana, Shackleton le dio en secreto su única galleta del desayuno a su compañero Frank Wild. Y le dijo que si no se la comía, la iba a tirar a la nieve. Wild escribió en su diario: nadie sabrá jamás lo que significó esa galleta para mí.",
+   "kicker": "OTRA EXPEDICIÓN · NIMROD",
+   "lines": [
+    {
+     "t": "Su única <em>galleta</em>",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "EN SECRETO, PARA FRANK WILD",
+     "style": "label",
+     "s": 1,
+     "d": 2.5
+    },
+    {
+     "t": "“Nadie sabrá jamás lo que significó esa galleta para mí.”",
+     "style": "small",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "pre": "A MENOS DE 200 KM DEL POLO SUR",
+   "bg": "POLO SUR",
+   "say": "En esa misma expedición, Shackleton llegó a menos de doscientos kilómetros del Polo Sur. Podía haber sido el primero en llegar. Pero vio que sus hombres no aguantarían el regreso, y decidió dar la vuelta. Después le escribió a su esposa: pensé que preferirías un burro vivo a un león muerto.",
+   "q": "Pensé que preferirías un <em>burro vivo</em> a un león muerto.",
+   "qs": 3,
+   "author": "SHACKLETON, A SU ESPOSA"
+  },
+  {
+   "type": "timeline",
+   "title": "LA META CAMBIÓ, LOS VALORES NO",
+   "bg": "META",
+   "say": "Eso es lo que hacía diferente a Shackleton. Su meta cambió muchas veces. Primero era cruzar la Antártida. Luego, salvar el barco. Y al final, solo una cosa: que todos volvieran a casa. Pero sus valores nunca cambiaron.",
+   "points": [
+    {
+     "y": "Meta 1",
+     "t": "CRUZAR LA ANTÁRTIDA",
+     "s": 2
+    },
+    {
+     "y": "Meta 2",
+     "t": "SALVAR EL BARCO",
+     "s": 3
+    },
+    {
+     "y": "Meta 3",
+     "t": "QUE TODOS VOLVIERAN",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "bg": "CONTROL",
+   "say": "Es la misma idea de los estoicos. No podía controlar el hielo. Ni el mar. Ni el clima. Pero sí podía controlar el ánimo de su gente. Y cada una de sus decisiones.",
+   "left": {
+    "title": "SÍ DEPENDÍA DE ÉL",
+    "s": 4,
+    "items": [
+     {
+      "t": "El ánimo del equipo",
+      "s": 4
+     },
+     {
+      "t": "Sus decisiones",
+      "s": 5
+     },
+     {
+      "t": "Sus valores",
+      "s": 5,
+      "d": 1.0
+     }
+    ]
+   },
+   "right": {
+    "title": "NO DEPENDÍA DE ÉL",
+    "s": 1,
+    "items": [
+     {
+      "t": "El hielo",
+      "s": 1
+     },
+     {
+      "t": "El mar",
+      "s": 2
+     },
+     {
+      "t": "El clima",
+      "s": 3
+     }
+    ]
+   },
+   "strikeS": 4
+  },
+  {
+   "type": "chapter",
+   "n": 5,
+   "title": "Tu expedición",
+   "say": "Capítulo cinco. Tu expedición."
+  },
+  {
+   "type": "list",
+   "title": "TODOS ENFRENTAMOS NUESTRO PROPIO HIELO",
+   "center": "TÚ",
+   "bg": "HOY",
+   "say": "Tú y yo no vamos a cruzar la Antártida. Pero todos enfrentamos nuestro propio hielo: una crisis en el trabajo, un equipo desmotivado, un proyecto que se hunde. Así que aquí van tres lecciones de Shackleton para aplicar a partir de mañana.",
+   "items": [
+    {
+     "t": "Una crisis en el trabajo",
+     "s": 1,
+     "d": 1.6
+    },
+    {
+     "t": "Un equipo desmotivado",
+     "s": 1,
+     "d": 3.0
+    },
+    {
+     "t": "Un proyecto que se hunde",
+     "s": 1,
+     "d": 4.2
+    },
+    {
+     "t": "Tu propia tormenta",
+     "s": 1,
+     "d": 5.2
+    }
+   ],
+   "foot": "3 lecciones para mañana",
+   "footS": 2
+  },
+  {
+   "type": "step",
+   "n": "1",
+   "title": "Rutina en la tormenta",
+   "say": "Lección número uno: la rutina en la tormenta. Cuando todo se complica, lo primero que se pierde es el orden. Y con el orden, se pierde la calma. Mantén las juntas, los horarios y los pequeños rituales de tu equipo, aunque parezcan menores. Como el fútbol sobre el hielo. La rutina le dice a tu gente: seguimos de pie.",
+   "items": [
+    {
+     "t": "Lo primero que se pierde es el orden",
+     "s": 1
+    },
+    {
+     "t": "Mantén juntas, horarios y rituales",
+     "s": 3
+    },
+    {
+     "t": "Como el fútbol sobre el hielo",
+     "s": 4
+    },
+    {
+     "t": "“Seguimos de pie”",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "n": "2",
+   "title": "Cambia la meta, no los valores",
+   "say": "Lección número dos: cambia la meta, no los valores. Cuando el plan original ya no es posible, no te aferres a él. Pregúntate: ¿cuál es mi nueva victoria? Para Shackleton, fue traer a todos de regreso. Tu meta puede cambiar mil veces. Lo que no puede cambiar es la forma en que tratas a tu gente.",
+   "items": [
+    {
+     "t": "Si el plan ya no es posible, suéltalo",
+     "s": 1
+    },
+    {
+     "t": "¿Cuál es mi nueva victoria?",
+     "s": 2
+    },
+    {
+     "t": "La meta cambia; tus valores, no",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "n": "3",
+   "title": "Da primero",
+   "say": "Lección número tres: da primero. Shackleton daba el ejemplo antes de pedir. Esta semana, antes de exigirle algo a tu equipo, dale algo tú: tu tiempo, tu reconocimiento, tu ayuda. Esa es tu galleta. Y créeme: nadie va a olvidar lo que significó.",
+   "items": [
+    {
+     "t": "Da el ejemplo antes de pedir",
+     "s": 1
+    },
+    {
+     "t": "Tiempo, reconocimiento, ayuda",
+     "s": 2
+    },
+    {
+     "t": "Esa es tu galleta",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "2022",
+   "say": "En marzo de dos mil veintidós, una expedición encontró los restos del Endurance a tres mil ocho metros de profundidad, sorprendentemente bien conservados. El barco se perdió. Pero ni un solo hombre se perdió con él.",
+   "items": [
+    {
+     "n": "2022",
+     "label": "LO ENCONTRARON",
+     "s": 0
+    },
+    {
+     "n": "3,008",
+     "label": "METROS DE PROFUNDIDAD",
+     "s": 0,
+     "d": 3.5
+    }
+   ],
+   "foot": "El barco se perdió. <em>Los hombres, no.</em>",
+   "footS": 1
+  },
+  {
+   "type": "ink",
+   "icon": "sunrise",
+   "bg": "VICTORIA",
+   "plano": "PLANO 31 · LA LECCIÓN",
+   "say": "Shackleton no cumplió la misión que se propuso. Y aun así, es recordado como uno de los grandes líderes de la historia. Porque a veces, ganar no es llegar a donde planeaste. Es llegar con todos.",
+   "kicker": "LA VERDADERA VICTORIA",
+   "lines": [
+    {
+     "t": "No cumplió la misión.",
+     "style": "mid",
+     "color": "dimc",
+     "s": 0
+    },
+    {
+     "t": "Uno de los grandes líderes de la historia",
+     "style": "small",
+     "s": 1
+    },
+    {
+     "t": "Ganar es llegar con <em>todos</em>.",
+     "style": "big",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "say": "Ahora cuéntame tú en los comentarios: ¿cuál es el hielo que estás enfrentando hoy, y cuál va a ser tu nueva victoria? Te leo. Si esta historia te sirvió, suscríbete a Impulso Real, y compártela con alguien que esté liderando un equipo. Nos vemos en la próxima historia.",
+   "q": "¿Cuál es el <em>hielo</em> que enfrentas hoy?",
+   "subS": 2,
+   "foot": "Compártelo con alguien que lidere un equipo",
+   "footS": 2
+  }
+ ],
+ "thumb": {
+  "icon": "ship",
+  "accIdx": 1,
+  "kicker": "28 HOMBRES · 497 DÍAS",
+  "title": "Atrapados en el <em>hielo</em>",
+  "sub": "Y VOLVIERON TODOS"
+ },
+ "cc": {
+  "mil novecientos quince": "1915",
+  "mil novecientos catorce": "1914",
+  "mil novecientos dieciséis": "1916",
+  "dos mil veintidós": "2022",
+  "cuatrocientos noventa y siete": "497",
+  "veintiocho": "28",
+  "veintidós": "22",
+  "dieciocho de enero": "18 de enero",
+  "veintisiete de octubre": "27 de octubre",
+  "veintiuno de noviembre": "21 de noviembre",
+  "quince de abril": "15 de abril",
+  "veinticuatro de abril": "24 de abril",
+  "veinte de mayo": "20 de mayo",
+  "treinta de agosto": "30 de agosto",
+  "treinta y seis horas": "36 horas",
+  "mil trescientos kilómetros": "1,300 kilómetros",
+  "dieciséis días": "16 días",
+  "tres mil ocho metros": "3,008 metros",
+  "doscientos kilómetros": "200 kilómetros",
+  "siete metros": "7 metros",
+  "mil ochocientos setenta y cuatro": "1874",
+  "mil novecientos once": "1911",
+  "dieciséis años": "16 años"
+ },
+ "youtube": {
+  "titulo": "Atrapados 497 días en el hielo… y volvieron los 28 | Shackleton y el liderazgo en crisis",
+  "intro": "28 hombres atrapados en el hielo",
+  "cierre": "Tu turno",
+  "descripcion": "En 1915, el barco Endurance quedó atrapado en el hielo de la Antártida y después se hundió. Sus 28 hombres pasaron 497 días sin pisar tierra firme, cruzaron 1,300 km de océano en un bote de 7 metros… y regresaron todos con vida.\n\nEsta es la historia de Ernest Shackleton, el líder que cambió de meta sin cambiar de valores, y de las 3 lecciones de liderazgo en crisis que puedes aplicar con tu equipo desde mañana: la rutina en la tormenta, cambiar la meta y no los valores, y dar primero.\n\n👇 Cuéntame en los comentarios: ¿cuál es el hielo que estás enfrentando hoy?",
+  "pie": "Suscríbete a Impulso Real para más historias de estoicismo, liderazgo y fortaleza interior.\n\n#Liderazgo #Shackleton #Estoicismo",
+  "etiquetas": [
+   "shackleton",
+   "endurance",
+   "liderazgo",
+   "liderazgo en crisis",
+   "ernest shackleton",
+   "antartida",
+   "historias de liderazgo",
+   "estoicismo",
+   "trabajo en equipo",
+   "historias que inspiran",
+   "desarrollo personal",
+   "impulso real"
+  ]
+ },
+ "sources": [
+  "https://www.rgs.org/media/ev4lehtv/wseshackletonexpeditiontimeline.pdf",
+  "https://ernestshackleton.net/endurance-expedition",
+  "https://www.smithsonianmag.com/smart-news/shackleton-probably-never-took-out-an-ad-seeking-men-for-a-hazardous-journey-5552379",
+  "https://explorersweb.com/shackleton-100-years-south-georgia-crossing-2016-05-20-46815/",
+  "https://www.sea.museum/2015/03/30/shackleton/stranded-on-elephant-island",
+  "https://noc.ac.uk/news/sir-ernest-shackletons-ship-endurance-discovered",
+  "https://www.scootle.edu.au/ec/viewing/R8827/transcript.html",
+  "https://ukaht.org/latest-news/interesting-facts-about-ernest-shackleton/"
+ ]
+}

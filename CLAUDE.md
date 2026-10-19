@@ -140,3 +140,13 @@ Reglas del guion:
 - Contenido original: nada de clips, fotos ni música de terceros (política de contenido reutilizado/inauténtico de YouTube).
 
 Tipos de escena: `chapter` (n, title), `ink` (icon, kicker, lines[{t, style: big|mid|small|label|tag, color: gold|red|dimc, s}]), `quote` (q, qs, qe, author, pre), `stats` (items[{n, label, s}], foot, footS), `timeline` (title, points[{y, t, s}]), `split` (left/right {title, s, items[{t, s}]}, strikeS, foot), `step` (n, title, items[{t, s}]), `list` (title, items, foot, footY), `duo` (left/right {role, name, s}, arrowS, foot), `end` (q, subS, foot). Íconos: parachute, bars, scroll, chain, column, laurel, sunrise, mind, key, moon. `bg` = palabra gigante de fondo. `thumb` define la miniatura, `youtube` el título/descripción/etiquetas y `cc` los reemplazos de números para los subtítulos.
+
+## Plantilla "plano" (estilo de los reels de TikTok/Facebook) — la que se usa desde el episodio 2
+
+Con `"plantilla": "plano"` en la historia, `build_largo.py` usa `engine/plano.html`: fondo #0F0F10 con cuadrícula, líneas #ECE9E3, acento naranja #FF6A3D, Inter + Lora itálica + DejaVu Sans Mono, igual que la marca de Impulso Real en Facebook, TikTok y YouTube. Es más dinámica: subtítulos palabra por palabra con la palabra actual en naranja, palabras que entran una por una, contadores animados, pulsos en líneas punteadas, zoom en cada oración, barrido naranja entre escenas, partículas y reloj. Alberto pidió este estilo porque al primer video le faltó dinamismo.
+
+- Campos extra de la historia: `"musica": "pulso"` (bombo suave a `"bpm"`), `"speed"` 1.06, `"pausaFrase"` 0.22, `"pausaEscena"` 0.6.
+- Duración mínima **8:00** (YouTube solo permite anuncios a mitad del video desde 8 min): ~1,350–1,450 palabras con ese ritmo.
+- Escena nueva `route` (viajes/mapas): `title`, `points` [{`x`,`y` en %, `label`, `sub`, `s`, `up`}], `counter` {`value`, `suffix`, `label`, `s`, `dur`}. En `list` hay `center` y los elementos aceptan `d`; en `stats` también.
+- Íconos extra: ship, ice, boat, mountain, compass, people, flame, heart (`accIdx` = trazo que va en naranja).
+- `thumb` admite `<em>` en el título (palabra en Lora naranja). Ejemplo completo: `largos/2026-10-26-shackleton-endurance.json`. Render ~20–25 min en la nube.

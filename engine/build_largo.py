@@ -18,7 +18,24 @@ ENGINE = os.path.join(ROOT, "engine")
 sys.path.insert(0, ENGINE)
 FPS = 30
 SR = 44100
-TYPES = {"chapter", "ink", "quote", "stats", "timeline", "split", "step", "list", "duo", "end"}
+TYPES = {"chapter", "ink", "quote", "stats", "timeline", "split", "step", "list", "duo", "end", "route"}
+import base64
+
+
+def plantilla(story):
+    """largo = estilo dorado (episodio 1); plano = estilo de los reels de TikTok/Facebook."""
+    return story.get("plantilla", "largo")
+
+
+def foto(pg, story, path=None, t=None):
+    """Captura un cuadro: en "plano" se lee directo del canvas (más rápido)."""
+    if plantilla(story) == "plano":
+        data = base64.b64decode(pg.evaluate("t=>window.frame(t)", t))
+        if path:
+            open(path, "wb").write(data)
+        return data
+    pg.evaluate(f"renderAt({t})")
+    return pg.screenshot(path=path, type="jpeg", quality=90) if not path else pg.screenshot(path=path)
 
 
 def log(*a):
@@ -171,6 +188,19 @@ def mix(story, outdir, raw, timing, hits):
     ve = np.convolve(np.abs(v), np.ones(w) / w, mode="same")
     duck = lp(np.where(ve > 0.015, 0.55, 1.0), 0.00025)
     mus = mus * 0.17 * duck
+    if story.get("musica") == "pulso":  # pulso suave (bombo + shaker) que da ritmo sin tapar la voz
+        bpm = story.get("bpm", 84); beat = 60 / bpm; rng2 = np.random.default_rng(seed + 1)
+        nk = int(.35 * SR); xk = np.arange(nk) / SR
+        kick = np.sin(2 * np.pi * np.cumsum(42 + 55 * np.exp(-xk / 0.035)) / SR) * np.exp(-xk / 0.14)
+        hn = int(.06 * SR); hat = (lambda z: z - lp(z, 0.45))(rng2.standard_normal(hn)) * np.exp(-np.arange(hn) / SR / 0.015)
+        pulse = np.zeros(N)
+        for bt in range(int(N / SR / beat)):
+            i0 = int(bt * beat * SR)
+            for sig, off, g in ((kick, 0, 1.0 if bt % 2 == 0 else .7), (hat, beat / 2, .35)):
+                j0 = i0 + int(off * SR); j1 = min(N, j0 + len(sig))
+                if j0 < N: pulse[j0:j1] += sig[:j1 - j0] * g
+        pulse = pulse / max(1e-6, np.abs(pulse).max()) * 0.11 * lp(np.where(ve > 0.015, 0.6, 1.0), 0.00025)
+        mus = mus + pulse
     fade = int(3 * SR)
     mus[:fade] *= np.linspace(0, 1, fade); mus[-fade:] *= np.linspace(1, 0, fade)
     rng = np.random.default_rng(seed)
@@ -181,7 +211,10 @@ def mix(story, outdir, raw, timing, hits):
         if 0 <= i < N:
             j = min(N, i + len(sig)); sfx[i:j] += sig[:j - i]
     for h in hits:
-        if h["k"] == "whoosh":
+        if h["k"] == "tick":
+            n = int(.08 * SR); x = np.arange(n) / SR
+            add(np.sin(2 * np.pi * 1800 * x) * np.exp(-x / 0.012) * 0.35, h["t"])
+        elif h["k"] == "whoosh":
             n = int(.9 * SR); x = np.arange(n) / n
             add(lp(rng.standard_normal(n), 0.08) * np.sin(np.pi * x) ** 2 * 0.35, h["t"] - .6)
         else:
@@ -251,7 +284,7 @@ def abrir(pw, story, timing, w=1920, h=1080):
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
     pg.add_init_script(f"window.STORY={json.dumps(story, ensure_ascii=False)};window.TIMING={json.dumps(timing)};")
-    pg.goto(f"file://{ENGINE}/largo.html")
+    pg.goto(f"file://{ENGINE}/{plantilla(story)}.html")
     try:
         pg.wait_for_function("window.READY===true", timeout=30000)
     except Exception:
@@ -268,8 +301,7 @@ def render_tramo(story, timing, f0, f1, out):
         ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg", "-i", "-",
                                "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-maxrate", "9M", "-bufsize", "14M", "-pix_fmt", "yuv420p", "-r", str(FPS), out], stdin=subprocess.PIPE)
         for f in range(f0, f1):
-            pg.evaluate(f"renderAt({f / FPS})")
-            ff.stdin.write(pg.screenshot(type="jpeg", quality=90))
+            ff.stdin.write(foto(pg, story, t=f / FPS))
             if (f - f0) % 900 == 0:
                 log(f"tramo {os.path.basename(out)}: cuadro {f - f0}/{f1 - f0}")
         ff.stdin.close(); ff.wait(); br.close()
@@ -292,25 +324,31 @@ def main():
             pdir = os.path.join(outdir, "revision"); os.makedirs(pdir, exist_ok=True)
             for f in os.listdir(pdir): os.remove(os.path.join(pdir, f))
             k = 0
+            ext = "jpg" if plantilla(story) == "plano" else "png"
             for sc in timing["scenes"]:
                 for t in (sc["start"] + 1.5, sc["end"] - 0.1):
-                    pg.evaluate(f"renderAt({t})"); pg.screenshot(path=f"{pdir}/f{k:03d}.png"); k += 1
+                    foto(pg, story, f"{pdir}/f{k:03d}.{ext}", t); k += 1
             br.close()
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{pdir}/f%03d.png", "-vf",
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{pdir}/f%03d.{ext}", "-vf",
                             f"scale=480:270,tile=6x{(k + 5) // 6}:padding=6:color=white", "-frames:v", "1",
                             os.path.join(outdir, "revision.png")], check=True)
             log("hoja de revisión:", os.path.join(outdir, "revision.png"), f"| {k} cuadros en", pdir)
             return
         hits = pg.evaluate("window.getHits()")
         if story.get("thumb"):
-            pg.evaluate(f"renderThumb({json.dumps(story['thumb'], ensure_ascii=False)})")
             png = os.path.join(outdir, "miniatura.png")
-            pg.screenshot(path=png)
+            if plantilla(story) == "plano":
+                open(png, "wb").write(base64.b64decode(pg.evaluate("th=>window.thumbPNG(th)", story["thumb"])))
+            else:
+                pg.evaluate(f"renderThumb({json.dumps(story['thumb'], ensure_ascii=False)})")
+                pg.screenshot(path=png)
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", png, "-vf", "scale=1280:720", "-q:v", "2",
                             os.path.join(outdir, "miniatura.jpg")], check=True)
         br.close()
     audio = mix(story, outdir, raw, timing, hits)
     n = int(timing["total"] * FPS)
+    if os.environ.get("LARGO_HASTA"):  # muestra corta: solo los primeros N segundos
+        n = min(n, int(float(os.environ["LARGO_HASTA"]) * FPS))
     workers = max(1, min(int(os.environ.get("LARGO_PROCESOS", os.cpu_count() or 2)), 6))
     cortes = [n * k // workers for k in range(workers + 1)]
     tramos = [os.path.join(outdir, f"tramo{k}.mp4") for k in range(workers)]
