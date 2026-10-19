@@ -118,3 +118,25 @@ Una flecha de carrera o presión debe terminar donde el jugador queda en ese pas
 - Polémica sí, insultos o burlas a personas no. Nada de promover apuestas.
 - Si no hay una noticia de Liga MX con datos verificables ese día, haz un video de contexto (tabla, goleo, carrera por la Liguilla) con datos confirmados, nunca inventados.
 - No cambies `engine/` en la tarea diaria salvo que algo esté roto; si lo arreglas, explícalo en el mensaje final.
+
+---
+
+# Videos largos para YouTube — Impulso Real
+
+Además de los reels, el repositorio genera **videos largos horizontales (1920×1080, 8–10 min)** para el canal de YouTube **Impulso Real** (historias de estoicismo, liderazgo y fortaleza interior). Sin rostro: tipografía cinemática dorado/negro, íconos de línea que se dibujan, voz en off, música ambiental generada y capítulos.
+
+```bash
+python3 engine/build_largo.py largos/<historia>.json --preview   # voz + hoja de revisión (salida/<id>/revision.png)
+python3 engine/build_largo.py largos/<historia>.json             # MP4 + miniatura.jpg + subtitulos.srt + youtube.txt
+VOZ_MOTOR=chatterbox python3 engine/build_largo.py ...           # con la voz clonada de Alberto (en la Mac)
+```
+
+Ejemplo completo: `largos/2026-10-19-epicteto-stockdale.json`. Render: ~30–40 min en la nube (2 procesos); `LARGO_PROCESOS=6` en la Mac lo acelera.
+
+Reglas del guion:
+- 1,200–1,400 palabras (≈ 8–9 min), español mexicano, números con letra en `say`. Gancho fuerte en los primeros 30 s, promesa de lo que van a aprender, 3–4 capítulos (`chapter`), ejercicios prácticos y cierre con pregunta para comentarios.
+- Cada `say` se parte en oraciones; los campos `s` (índice de oración, desde 0) sincronizan qué aparece en pantalla con lo que dice la voz.
+- Cada dato histórico se verifica en una fuente confiable y se anota en `sources`. Si una anécdota no es segura, se dice ("cuenta una historia antigua…").
+- Contenido original: nada de clips, fotos ni música de terceros (política de contenido reutilizado/inauténtico de YouTube).
+
+Tipos de escena: `chapter` (n, title), `ink` (icon, kicker, lines[{t, style: big|mid|small|label|tag, color: gold|red|dimc, s}]), `quote` (q, qs, qe, author, pre), `stats` (items[{n, label, s}], foot, footS), `timeline` (title, points[{y, t, s}]), `split` (left/right {title, s, items[{t, s}]}, strikeS, foot), `step` (n, title, items[{t, s}]), `list` (title, items, foot, footY), `duo` (left/right {role, name, s}, arrowS, foot), `end` (q, subS, foot). Íconos: parachute, bars, scroll, chain, column, laurel, sunrise, mind, key, moon. `bg` = palabra gigante de fondo. `thumb` define la miniatura, `youtube` el título/descripción/etiquetas y `cc` los reemplazos de números para los subtítulos.

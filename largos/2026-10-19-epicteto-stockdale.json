@@ -1,0 +1,201 @@
+{
+  "id": "2026-10-19-epicteto-stockdale",
+  "canal": "Impulso Real",
+  "voice": "em_alex",
+  "speed": 1.0,
+  "scenes": [
+    {"type": "ink", "icon": "parachute", "bg": "1965",
+     "say": "El nueve de septiembre de mil novecientos sesenta y cinco, un piloto de la Marina de Estados Unidos es derribado sobre Vietnam del Norte, y sale disparado de su avión. Se llama James Stockdale. Mientras baja en paracaídas, directo a las manos del enemigo, tiene un pensamiento muy extraño. No piensa en su avión. No piensa en la guerra. Piensa en un esclavo griego que vivió hace casi dos mil años.",
+     "kicker": "VIETNAM DEL NORTE",
+     "lines": [
+       {"t": "9 de septiembre\nde 1965", "style": "big", "s": 0},
+       {"t": "JAMES STOCKDALE", "style": "label", "s": 1, "gap": 6},
+       {"t": "Piloto de la Marina de EE. UU.", "style": "small", "s": 1, "d": 0.4},
+       {"t": "Pensó en un esclavo griego.", "style": "mid", "color": "gold", "s": 5}
+     ]},
+    {"type": "quote", "bg": "EPICTETO",
+     "say": "Años después, él mismo lo contó. Al salir del avión, pensó: estoy dejando el mundo de la tecnología, y entrando al mundo de Epicteto.",
+     "q": "Estoy dejando el mundo de la tecnología y entrando al mundo de Epicteto.", "qs": 1, "author": "JAMES STOCKDALE"},
+    {"type": "stats", "bg": "PRISIÓN",
+     "say": "Lo que vino después fueron siete años y medio como prisionero de guerra. Cuatro de ellos, en confinamiento solitario. No todos los prisioneros lo resistieron. Pero Stockdale salió de pie. ¿Qué sabía ese esclavo, que le permitió a un hombre aguantar lo que parecía imposible?",
+     "items": [{"n": "7½", "label": "AÑOS PRISIONERO", "s": 0}, {"n": "4", "label": "AÑOS EN SOLITARIO", "s": 1}],
+     "foot": "¿Qué sabía ese esclavo?", "footS": 4},
+    {"type": "ink", "icon": "key",
+     "say": "En este video te lo voy a contar. Vas a conocer la historia de ese esclavo, y la regla que terminó enseñándole a un emperador. Y al final, te voy a dejar tres ejercicios para que lo apliques desde mañana: en tu trabajo, en tu casa, y en tu cabeza.",
+     "kicker": "EN ESTE VIDEO",
+     "lines": [
+       {"t": "La historia del esclavo", "style": "mid", "s": 1},
+       {"t": "La regla que salvó a Stockdale", "style": "mid", "s": 1, "d": 1.2},
+       {"t": "3 ejercicios para mañana", "style": "mid", "color": "gold", "s": 2}
+     ]},
+
+    {"type": "chapter", "n": 1, "title": "La caída", "say": "Capítulo uno. La caída."},
+    {"type": "ink", "icon": "bars", "bg": "HANÓI",
+     "say": "Stockdale no era un prisionero cualquiera. Era comandante de un ala aérea, y se convirtió en uno de los oficiales de mayor rango entre los prisioneros. Lo llevaron a la prisión de Hoa Lo, que los propios presos apodaban, con ironía, el Hilton de Hanói. Ahí, sus captores buscaban una sola cosa: quebrarlos. Con tortura. Con aislamiento. Con mentiras. Querían confesiones, mensajes contra su propio país, y que se traicionaran entre ellos.",
+     "kicker": "PRISIÓN DE HOA LO",
+     "lines": [
+       {"t": "Oficial de alto rango", "style": "small", "s": 1},
+       {"t": "“El Hilton\nde Hanói”", "style": "big", "s": 2},
+       {"t": "TORTURA", "style": "label", "color": "red", "s": 4, "gap": 4},
+       {"t": "AISLAMIENTO", "style": "label", "color": "red", "s": 5, "gap": 4},
+       {"t": "MENTIRAS", "style": "label", "color": "red", "s": 6}
+     ]},
+    {"type": "ink", "icon": "scroll", "bg": "MANUAL",
+     "say": "Pero años antes, mientras estudiaba un posgrado en la Universidad de Stanford, Stockdale había conocido a los filósofos estoicos. Y entre ellos, un librito muy delgado, escrito hace casi dos mil años. Se llama el Enquiridión. En griego quiere decir, algo así como, lo que se lleva en la mano. Un manual. Stockdale lo estudió a fondo, sin imaginar que algún día ese manual se iba a convertir en su forma de sobrevivir.",
+     "kicker": "UNIVERSIDAD DE STANFORD",
+     "lines": [
+       {"t": "Los estoicos", "style": "small", "s": 0},
+       {"t": "El Enquiridión", "style": "big", "s": 2},
+       {"t": "“Lo que se lleva en la mano”", "style": "mid", "color": "gold", "s": 3},
+       {"t": "Su manual para sobrevivir.", "style": "small", "s": 5}
+     ]},
+
+    {"type": "chapter", "n": 2, "title": "El esclavo", "say": "Capítulo dos. El esclavo."},
+    {"type": "ink", "icon": "chain", "bg": "ESCLAVO",
+     "say": "Epicteto nació a mediados del siglo primero, en Hierápolis, una ciudad de Frigia, en lo que hoy es Turquía. Nació esclavo. De hecho, su nombre en griego significa, simplemente, adquirido. Como si fuera una cosa que alguien compró. Siendo joven, vivió en Roma como esclavo de Epafrodito, un hombre poderoso que había sido secretario del emperador Nerón.",
+     "kicker": "HIERÁPOLIS, FRIGIA · SIGLO I",
+     "lines": [
+       {"t": "Epicteto", "style": "big", "s": 0},
+       {"t": "Nació esclavo.", "style": "mid", "s": 1},
+       {"t": "Su nombre significa “adquirido”.", "style": "mid", "color": "gold", "s": 2},
+       {"t": "Esclavo de Epafrodito, secretario de Nerón", "style": "small", "s": 4}
+     ]},
+    {"type": "quote", "bg": "CALMA",
+     "say": "Epicteto cojeaba. Una historia antigua cuenta que su amo le torcía la pierna, y que él, sin alterarse, le advirtió: si sigues, la vas a romper. Y cuando la pierna se rompió, solo le dijo: te lo dije.",
+     "q": "Si sigues, la vas a romper… Te lo dije.", "qs": 1, "qe": 2, "author": "EPICTETO, SEGÚN LA TRADICIÓN"},
+    {"type": "ink", "icon": "column",
+     "say": "No sabemos si esa historia es cierta. Otros autores antiguos dicen que era cojo desde niño. Pero sí sabemos que, aun siendo esclavo, pudo estudiar con Musonio Rufo, uno de los grandes maestros estoicos de Roma.",
+     "kicker": "LO QUE SÍ SABEMOS",
+     "lines": [
+       {"t": "¿Leyenda o verdad?", "style": "small", "s": 0},
+       {"t": "Musonio Rufo", "style": "big", "s": 2},
+       {"t": "Su maestro estoico en Roma", "style": "mid", "color": "gold", "s": 2, "d": 0.8}
+     ]},
+    {"type": "timeline", "bg": "NICÓPOLIS", "title": "DE ESCLAVO A MAESTRO",
+     "say": "Con el tiempo, Epicteto obtuvo su libertad, y empezó a enseñar filosofía en Roma. Pero a finales del siglo primero, el emperador Domiciano expulsó a los filósofos de la ciudad. Epicteto se fue a Nicópolis, en Grecia, y ahí abrió su propia escuela. Llegaban alumnos de muchas partes del imperio. Él nunca escribió un solo libro. Pero uno de sus alumnos, Arriano, tomó apuntes de sus clases. De esos apuntes salieron los Discursos, y ese pequeño manual: el Enquiridión.",
+     "points": [
+       {"y": "Libre", "t": "ENSEÑA EN ROMA", "s": 0},
+       {"y": "Exilio", "t": "DOMICIANO EXPULSA A LOS FILÓSOFOS", "s": 1},
+       {"y": "Nicópolis", "t": "ABRE SU ESCUELA", "s": 2},
+       {"y": "Arriano", "t": "SUS APUNTES: EL ENQUIRIDIÓN", "s": 5}
+     ]},
+    {"type": "duo", "bg": "ROMA",
+     "say": "Y aquí viene lo increíble. Décadas después, el hombre más poderoso del mundo, el emperador Marco Aurelio, escribió en sus Meditaciones que le agradecía a su maestro Rústico por haberle dado a conocer los apuntes de Epicteto. Un esclavo cojo, sin poder y sin dinero, terminó enseñándole a un emperador. Y casi dos mil años después, le enseñaría a un piloto prisionero cómo no quebrarse.",
+     "left": {"role": "ESCLAVO", "name": "Epicteto", "s": 0},
+     "right": {"role": "EMPERADOR", "name": "Marco Aurelio", "s": 1},
+     "arrowS": 2, "foot": "Y siglos después, a un piloto prisionero.", "footS": 3},
+
+    {"type": "chapter", "n": 3, "title": "La regla", "say": "Capítulo tres. La regla."},
+    {"type": "quote", "pre": "ENQUIRIDIÓN · CAPÍTULO 1",
+     "say": "El Enquiridión empieza con una sola idea. Y todo lo demás sale de ahí. Escúchala bien. De las cosas que existen, unas dependen de nosotros, y otras no dependen de nosotros.",
+     "q": "De las cosas que existen, unas dependen de nosotros y otras no.", "qs": 3, "author": "EPICTETO"},
+    {"type": "split", "bg": "CONTROL",
+     "say": "¿Qué depende de ti? Tus juicios: lo que decides creer sobre lo que te pasa. Tus deseos, y lo que rechazas. Tus acciones. ¿Y qué no depende de ti? Tu cuerpo. Tus bienes. Tu reputación. El puesto que te dan, o que te quitan. Lo que piensan los demás. Epicteto dice que el sufrimiento empieza cuando confundimos las dos listas. Cuando queremos controlar lo que no depende de nosotros, y descuidamos lo único que sí.",
+     "left": {"title": "DEPENDE DE TI", "s": 0, "items": [{"t": "Tus juicios", "s": 1}, {"t": "Tus deseos y rechazos", "s": 2}, {"t": "Tus acciones", "s": 3}]},
+     "right": {"title": "NO DEPENDE DE TI", "s": 4, "items": [{"t": "Tu cuerpo", "s": 5}, {"t": "Tus bienes", "s": 6}, {"t": "Tu reputación", "s": 7}, {"t": "Tu puesto", "s": 8}, {"t": "Lo que piensan los demás", "s": 9}]},
+     "strikeS": 11, "foot": "Ahí empieza el sufrimiento.", "footS": 10},
+    {"type": "ink", "icon": "bars",
+     "say": "Ahora piensa en Stockdale en su celda. Le quitaron la libertad. Le quitaron la salud. Le quitaron el contacto con su familia. Todo eso estaba en la segunda lista. Pero había algo que ningún guardia podía tocar: sus juicios, sus opiniones, y su voluntad. Eso seguía siendo suyo.",
+     "kicker": "EN LA CELDA",
+     "lines": [
+       {"t": "SIN LIBERTAD", "style": "label", "color": "dimc", "s": 1, "gap": 4},
+       {"t": "SIN SALUD", "style": "label", "color": "dimc", "s": 2, "gap": 4},
+       {"t": "SIN SU FAMILIA", "style": "label", "color": "dimc", "s": 3, "gap": 30},
+       {"t": "Pero su voluntad\nseguía siendo suya.", "style": "big", "s": 5}
+     ]},
+    {"type": "ink", "icon": "laurel", "bg": "LEALTAD",
+     "say": "Con esa idea, Stockdale, como uno de los oficiales al mando, les dio a los prisioneros reglas claras para resistir. Se comunicaban en secreto, con un código de golpes en las paredes. Se cuidaban unos a otros. No podían controlar el dolor. Pero sí podían controlar cómo respondían, y a quién le eran leales.",
+     "kicker": "RESISTIR SIN QUEBRARSE",
+     "lines": [
+       {"t": "Reglas claras", "style": "big", "s": 0},
+       {"t": "Un código de golpes en las paredes", "style": "small", "s": 1},
+       {"t": "El dolor no dependía de ellos.", "style": "mid", "color": "dimc", "s": 3},
+       {"t": "Su respuesta, sí.", "style": "mid", "color": "gold", "s": 4}
+     ]},
+    {"type": "ink", "icon": "moon", "bg": "NAVIDAD",
+     "say": "Años después, el escritor Jim Collins le preguntó quiénes no lograron salir. Su respuesta fue sorprendente: los optimistas. Los que decían: vamos a salir para Navidad. Y llegaba Navidad, y no salían. Luego decían: para Pascua. Y llegaba Pascua, y tampoco. Y se murieron, dijo Stockdale, con el corazón roto.",
+     "kicker": "LOS QUE NO SALIERON",
+     "lines": [
+       {"t": "Los optimistas.", "style": "big", "s": 1},
+       {"t": "“Salimos para Navidad.”", "style": "mid", "color": "dimc", "s": 2},
+       {"t": "“Salimos para Pascua.”", "style": "mid", "color": "dimc", "s": 4},
+       {"t": "Murieron con el corazón roto.", "style": "mid", "color": "red", "s": 6}
+     ]},
+    {"type": "quote", "pre": "LA PARADOJA DE STOCKDALE", "qy": 300, "ay": 860,
+     "say": "Por eso, Stockdale dejó una lección que hoy se conoce como la paradoja de Stockdale. Nunca confundas la fe en que vas a prevalecer al final, que jamás puedes perder, con la disciplina de enfrentar los hechos más brutales de tu realidad actual, sean cuales sean.",
+     "q": "Nunca confundas la fe en que vas a prevalecer al final con la disciplina de enfrentar los hechos más brutales de tu realidad actual.", "qs": 1, "author": "JAMES STOCKDALE"},
+    {"type": "ink", "icon": "mind", "bg": "EQUILIBRIO",
+     "say": "Fíjate en el equilibrio. Fe absoluta en que vas a salir adelante. Y al mismo tiempo, realismo total con lo que estás viviendo hoy. Eso es Epicteto puro: no te engañes con lo que no controlas, y no sueltes nunca lo que sí.",
+     "kicker": "EL EQUILIBRIO",
+     "lines": [
+       {"t": "Fe en el final", "style": "big", "s": 1},
+       {"t": "Realismo total hoy", "style": "big", "color": "gold", "s": 2},
+       {"t": "No te engañes con lo que no controlas.\nNo sueltes nunca lo que sí.", "style": "small", "s": 3}
+     ]},
+
+    {"type": "chapter", "n": 4, "title": "Tu propia celda", "say": "Capítulo cuatro. Tu propia celda."},
+    {"type": "list", "bg": "HOY", "title": "TODOS TENEMOS UNA CELDA",
+     "say": "Probablemente tú no estás en una prisión de guerra. Pero todos tenemos nuestra propia celda. El cliente que no te contesta. El jefe que no te reconoce. La economía. Los comentarios de la gente. Y cada día gastamos energía peleando contra cosas que no dependen de nosotros.",
+     "items": [{"t": "El cliente que no contesta", "s": 2}, {"t": "El jefe que no te reconoce", "s": 3}, {"t": "La economía", "s": 4}, {"t": "Lo que dice la gente", "s": 5}],
+     "foot": "Energía gastada en lo que no controlas.", "footS": 6, "footY": 700},
+    {"type": "quote",
+     "say": "Epicteto lo dijo de otra forma. No son las cosas las que nos perturban, sino las opiniones que tenemos sobre las cosas.",
+     "q": "No nos perturban las cosas, sino las opiniones que tenemos sobre ellas.", "qs": 1, "author": "EPICTETO · ENQUIRIDIÓN, 5"},
+    {"type": "ink", "icon": "key",
+     "say": "Así que vamos a lo práctico. Aquí tienes tres ejercicios para aplicar esto desde mañana. Son sencillos, pero si los haces todos los días, van a cambiar tu forma de reaccionar.",
+     "kicker": "A LO PRÁCTICO",
+     "lines": [
+       {"t": "Tres ejercicios", "style": "big", "s": 1},
+       {"t": "para empezar mañana", "style": "mid", "color": "gold", "s": 1, "d": 0.8},
+       {"t": "Sencillos. Diarios.", "style": "small", "s": 2}
+     ]},
+    {"type": "step", "n": "1", "title": "Las dos columnas",
+     "say": "Ejercicio número uno: las dos columnas. Cuando algo te preocupe, toma una hoja y divídela en dos. Del lado izquierdo, escribe lo que sí depende de ti. Del lado derecho, lo que no. Luego tacha completa la columna derecha. Y pon toda tu energía en la izquierda. Parece muy simple, pero en unos minutos tu cabeza pasa del problema a la acción.",
+     "items": [{"t": "Divide una hoja en dos", "s": 1}, {"t": "Izquierda: lo que sí depende de ti", "s": 2}, {"t": "Derecha: lo que no", "s": 3}, {"t": "Tacha la derecha completa", "s": 4}, {"t": "Toda tu energía, a la izquierda", "s": 5}]},
+    {"type": "step", "n": "2", "title": "La pregunta",
+     "say": "Ejercicio número dos: la pregunta antes de reaccionar. Antes de contestar ese mensaje, de discutir o de enojarte, hazte una sola pregunta. ¿Esto depende de mí? Si la respuesta es no, Epicteto te recomienda decirte: esto no es asunto mío. Y soltarlo. Si la respuesta es sí, entonces actúa, pero con calma, y con tus valores por delante.",
+     "items": [{"t": "Antes de reaccionar, detente", "s": 1}, {"t": "¿Esto depende de mí?", "s": 2}, {"t": "No: “esto no es asunto mío”", "s": 3}, {"t": "Sí: actúa con calma", "s": 5}]},
+    {"type": "step", "n": "3", "title": "La revisión de la noche",
+     "say": "Ejercicio número tres: la revisión de la noche. En sus Discursos, Epicteto les recomendaba a sus alumnos repasar su día antes de dormir, con tres preguntas. ¿En qué fallé? ¿Qué hice hoy? ¿Y qué me faltó hacer? Sin castigarte. Como un entrenador que revisa el partido, para jugar mejor el siguiente.",
+     "items": [{"t": "¿En qué fallé?", "s": 2}, {"t": "¿Qué hice hoy?", "s": 3}, {"t": "¿Qué me faltó hacer?", "s": 4}, {"t": "Sin castigarte, como un entrenador", "s": 5}]},
+
+    {"type": "stats", "bg": "LIBRE",
+     "say": "El doce de febrero de mil novecientos setenta y tres, después de siete años y medio, James Stockdale fue liberado. Tres años después recibió la Medalla de Honor, la máxima condecoración militar de su país. Y él mismo dijo que había vivido de la sabiduría de Epicteto.",
+     "items": [{"n": "1973", "label": "LIBERADO", "s": 0}, {"n": "1976", "label": "MEDALLA DE HONOR", "s": 1}],
+     "foot": "“Viví de la sabiduría de Epicteto.”", "footS": 2},
+    {"type": "ink", "icon": "sunrise", "bg": "LIBERTAD",
+     "say": "Epicteto pasó gran parte de su vida sin poder, sin dinero, y sin libertad. Y aun así, nadie pudo gobernar lo que pasaba dentro de su cabeza. Esa es la verdadera libertad. No depende de dónde estás. Depende de cómo decides responder.",
+     "kicker": "LA VERDADERA LIBERTAD",
+     "lines": [
+       {"t": "Sin poder. Sin dinero.\nSin libertad.", "style": "mid", "color": "dimc", "s": 0},
+       {"t": "Nadie gobernó su mente.", "style": "big", "s": 1},
+       {"t": "No depende de dónde estás.", "style": "mid", "s": 3},
+       {"t": "Depende de cómo respondes.", "style": "mid", "color": "gold", "s": 4}
+     ]},
+    {"type": "end",
+     "say": "Ahora dime tú, en los comentarios. ¿Qué cosa te está quitando la paz hoy, que en realidad no depende de ti? Te leo. Si esta historia te sirvió, suscríbete a Impulso Real, y compártela con alguien que esté pasando por un momento difícil. Nos vemos en la próxima historia.",
+     "q": "¿Qué te está quitando la paz\nque no depende de ti?", "subS": 3, "foot": "Compártelo con alguien que lo necesite.", "footS": 3}
+  ],
+  "thumb": {"icon": "bars", "kicker": "7½ AÑOS PRESO", "title": "Lo salvó\nuna sola\nregla", "sub": "EPICTETO · STOCKDALE", "subY": 860, "bg": "1965"},
+  "cc": {
+    "nueve de septiembre de mil novecientos sesenta y cinco": "9 de septiembre de 1965",
+    "doce de febrero de mil novecientos setenta y tres": "12 de febrero de 1973",
+    "siete años y medio": "7 años y medio",
+    "casi dos mil años": "casi 2,000 años",
+    "siglo primero": "siglo I"
+  },
+  "youtube": {
+    "titulo": "Un esclavo de hace 2,000 años le salvó la vida a este piloto | Epicteto y la regla del control",
+    "intro": "El piloto que pensó en un esclavo",
+    "cierre": "Tu turno",
+    "descripcion": "En 1965, el piloto James Stockdale fue derribado sobre Vietnam del Norte y pasó 7 años y medio como prisionero de guerra, 4 de ellos en confinamiento solitario. Lo que lo mantuvo de pie fue un pequeño manual escrito hace casi 2,000 años por Epicteto, un esclavo que terminó enseñándole a un emperador.\n\nEn esta historia vas a conocer la vida de Epicteto, la regla que está al inicio del Enquiridión (lo que depende de ti y lo que no), la paradoja de Stockdale y 3 ejercicios estoicos para aplicarla desde mañana.\n\n👇 Cuéntame en los comentarios: ¿qué te está quitando la paz hoy que no depende de ti?",
+    "pie": "Suscríbete a Impulso Real para más historias de estoicismo, liderazgo y fortaleza interior.\n\n#Estoicismo #Epicteto #DesarrolloPersonal",
+    "etiquetas": ["estoicismo", "epicteto", "enquiridion", "james stockdale", "paradoja de stockdale", "marco aurelio", "filosofia estoica", "dicotomia del control", "historias que inspiran", "desarrollo personal", "fortaleza mental", "impulso real"]
+  },
+  "sources": [
+    "https://www.hoover.org/research/courage-under-fire-testing-epictetuss-doctrines-laboratory-human-behavior",
+    "https://www.artofmanliness.com/character/self-improvement/stockdale-paradox/",
+    "https://en.wikisource.org/wiki/The_Discourses_of_Epictetus;_with_the_Encheiridion_and_Fragments/Epictetus",
+    "Enquiridión 1 y 5; Discursos 3.10; Marco Aurelio, Meditaciones 1.7"
+  ]
+}
