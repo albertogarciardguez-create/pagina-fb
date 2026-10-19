@@ -266,7 +266,7 @@ def render_tramo(story, timing, f0, f1, out):
     with sync_playwright() as pw:
         br, pg = abrir(pw, story, timing)
         ff = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg", "-i", "-",
-                               "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(FPS), out], stdin=subprocess.PIPE)
+                               "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-maxrate", "9M", "-bufsize", "14M", "-pix_fmt", "yuv420p", "-r", str(FPS), out], stdin=subprocess.PIPE)
         for f in range(f0, f1):
             pg.evaluate(f"renderAt({f / FPS})")
             ff.stdin.write(pg.screenshot(type="jpeg", quality=90))
