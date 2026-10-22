@@ -1,0 +1,142 @@
+{
+ "canal": "Impulso Real",
+ "plantilla": "plano_v",
+ "musica": "pulso",
+ "bpm": 92,
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.35,
+ "inicio": 0.12,
+ "cola": 1.0,
+ "tag": "SHACKLETON · 1915",
+ "id": "short-shackleton-1-sobrevivir",
+ "scenes": [
+  {
+   "type": "ink",
+   "icon": "ice",
+   "bg": "1915",
+   "say": "Veintiocho hombres quedaron atrapados en la Antártida. Lo increíble no fue sobrevivir una semana.",
+   "lines": [
+    {
+     "t": "28 hombres atrapados",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "en la <em>Antártida</em>",
+     "style": "big",
+     "s": 0,
+     "d": 1.0
+    },
+    {
+     "t": "NO FUE UNA SEMANA",
+     "style": "label",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "497",
+   "say": "Fue sobrevivir cuatrocientos noventa y siete días sin pisar tierra. Su barco se hundió. Nadie sabía dónde estaban.",
+   "items": [
+    {
+     "n": "497",
+     "label": "días sin pisar tierra",
+     "s": 0
+    }
+   ],
+   "foot": "Su barco se hundió. Nadie sabía dónde <em>estaban</em>.",
+   "footS": 1
+  },
+  {
+   "type": "route",
+   "title": "EL ÚNICO PLAN",
+   "say": "Su líder, Ernest Shackleton, cruzó mil trescientos kilómetros de océano en un bote de siete metros para pedir ayuda. Y volvió por ellos.",
+   "points": [
+    {
+     "x": 10,
+     "y": 12,
+     "label": "Isla Elefante",
+     "sub": "22 ESPERANDO",
+     "s": 0
+    },
+    {
+     "x": 60,
+     "y": 55,
+     "label": "Océano Austral",
+     "sub": "BOTE DE 7 M",
+     "s": 0,
+     "align": "left"
+    },
+    {
+     "x": 90,
+     "y": 88,
+     "label": "Georgia del Sur",
+     "sub": "AYUDA",
+     "s": 1
+    }
+   ],
+   "counter": {
+    "value": 1300,
+    "suffix": " KM",
+    "label": "EN UN BOTE",
+    "s": 0,
+    "dur": 3.5
+   }
+  },
+  {
+   "type": "stats",
+   "bg": "28",
+   "say": "Al final regresaron los veintiocho. Todos.",
+   "items": [
+    {
+     "n": "28",
+     "label": "regresaron vivos",
+     "s": 0
+    }
+   ],
+   "foot": "<em>Todos.</em>",
+   "footS": 1
+  },
+  {
+   "type": "end",
+   "say": "La historia completa está en Impulso Real.",
+   "pill": "HISTORIA COMPLETA EN EL CANAL",
+   "pillS": 0
+  }
+ ],
+ "cc": {
+  "mil novecientos quince": "1915",
+  "mil novecientos catorce": "1914",
+  "mil novecientos dieciséis": "1916",
+  "cuatrocientos noventa y siete": "497",
+  "veintiocho": "28",
+  "veintidós": "22",
+  "mil trescientos": "1,300",
+  "dieciséis": "16",
+  "treinta y seis": "36",
+  "siete metros": "7 metros",
+  "cien": "100",
+  "doscientos": "200"
+ },
+ "sources": [
+  "https://www.rgs.org/media/ev4lehtv/wseshackletonexpeditiontimeline.pdf",
+  "https://explorersweb.com/shackleton-100-years-south-georgia-crossing-2016-05-20-46815/",
+  "https://ernestshackleton.net/endurance-expedition"
+ ],
+ "youtube": {
+  "titulo": "28 hombres atrapados en la Antártida… y volvieron todos #shorts",
+  "descripcion": "Historia completa: «Atrapados 497 días en el hielo… y volvieron los 28» en el canal Impulso Real.\n\n#Shackleton #Liderazgo #Estoicismo #Historias",
+  "etiquetas": [
+   "shackleton",
+   "liderazgo",
+   "endurance",
+   "historias",
+   "estoicismo",
+   "shorts",
+   "impulso real"
+  ]
+ }
+}

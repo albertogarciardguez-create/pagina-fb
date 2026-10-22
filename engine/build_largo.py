@@ -29,7 +29,7 @@ def plantilla(story):
 
 def foto(pg, story, path=None, t=None):
     """Captura un cuadro: en "plano" se lee directo del canvas (más rápido)."""
-    if plantilla(story) == "plano":
+    if plantilla(story).startswith("plano"):
         data = base64.b64decode(pg.evaluate("t=>window.frame(t)", t))
         if path:
             open(path, "wb").write(data)
@@ -79,8 +79,9 @@ def _tts(story, outdir, voz, aviso=""):
     sr = 24000
     vel = story.get("speed", 1.0)
     pausa_frase, pausa_escena = story.get("pausaFrase", 0.38), story.get("pausaEscena", 0.95)
-    parts = [np.zeros(int(sr * 1.2), np.float32)]
-    t = 1.2
+    ini = story.get("inicio", 1.2)
+    parts = [np.zeros(int(sr * ini), np.float32)]
+    t = ini
     scenes = []
     todas = []
     for s in story["scenes"]:
@@ -105,7 +106,8 @@ def _tts(story, outdir, voz, aviso=""):
             if k % 20 == 0:
                 log(f"  {k}/{len(plano)} frases")
         scenes.append({"i": i, "start": sents[0]["start"], "end": sents[-1]["end"], "sents": sents})
-    parts.append(np.zeros(int(sr * 2.5), np.float32)); t += 2.5
+    cola = story.get("cola", 2.5)
+    parts.append(np.zeros(int(sr * cola), np.float32)); t += cola
     y = np.concatenate(parts)
     y = y / max(1e-6, np.abs(y).max()) * 0.92
     raw = os.path.join(outdir, "voz_raw.wav")
@@ -270,7 +272,7 @@ def youtube_txt(story, timing, path):
             caps.append(f"{ts(last[0]['start'] - 0.5, False)} {yt['cierre']}")
     desc = yt.get("descripcion", "").strip()
     txt = (f"TÍTULO:\n{yt.get('titulo', story['id'])}\n\n"
-           f"DESCRIPCIÓN:\n{desc}\n\nCapítulos:\n" + "\n".join(caps) +
+           f"DESCRIPCIÓN:\n{desc}" + ("\n\nCapítulos:\n" + "\n".join(caps) if len(caps) > 2 else "") +
            ("\n\n" + yt["pie"].strip() if yt.get("pie") else "") +
            f"\n\nETIQUETAS:\n{', '.join(yt.get('etiquetas', []))}\n")
     if story.get("sources"):
@@ -279,6 +281,8 @@ def youtube_txt(story, timing, path):
 
 
 def abrir(pw, story, timing, w=1920, h=1080):
+    if story.get("plantilla") == "plano_v":
+        w, h = 1080, 1920
     br = pw.chromium.launch(args=["--disable-gpu"])
     pg = br.new_page(viewport={"width": w, "height": h})
     errors = []
@@ -324,13 +328,13 @@ def main():
             pdir = os.path.join(outdir, "revision"); os.makedirs(pdir, exist_ok=True)
             for f in os.listdir(pdir): os.remove(os.path.join(pdir, f))
             k = 0
-            ext = "jpg" if plantilla(story) == "plano" else "png"
+            ext = "jpg" if plantilla(story).startswith("plano") else "png"
             for sc in timing["scenes"]:
                 for t in (sc["start"] + 1.5, sc["end"] - 0.1):
                     foto(pg, story, f"{pdir}/f{k:03d}.{ext}", t); k += 1
             br.close()
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{pdir}/f%03d.{ext}", "-vf",
-                            f"scale=480:270,tile=6x{(k + 5) // 6}:padding=6:color=white", "-frames:v", "1",
+                            f"scale={'270:480' if story.get('plantilla') == 'plano_v' else '480:270'},tile=6x{(k + 5) // 6}:padding=6:color=white", "-frames:v", "1",
                             os.path.join(outdir, "revision.png")], check=True)
             log("hoja de revisión:", os.path.join(outdir, "revision.png"), f"| {k} cuadros en", pdir)
             return

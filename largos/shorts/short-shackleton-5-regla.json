@@ -1,0 +1,127 @@
+{
+ "canal": "Impulso Real",
+ "plantilla": "plano_v",
+ "musica": "pulso",
+ "bpm": 92,
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.35,
+ "inicio": 0.12,
+ "cola": 1.0,
+ "tag": "SHACKLETON · 1915",
+ "id": "short-shackleton-5-regla",
+ "scenes": [
+  {
+   "type": "ink",
+   "icon": "compass",
+   "accIdx": 1,
+   "bg": "REGLA",
+   "say": "La regla de liderazgo de Shackleton que todavía funciona cien años después.",
+   "lines": [
+    {
+     "t": "La regla de <em>liderazgo</em> de Shackleton",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "100 AÑOS DESPUÉS",
+     "style": "label",
+     "s": 0,
+     "d": 2.6
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "SU META CAMBIÓ 3 VECES",
+   "say": "Su meta era cruzar la Antártida. Luego fue salvar el barco. Y al final, solo una: que todos volvieran a casa.",
+   "points": [
+    {
+     "y": "Meta 1",
+     "t": "CRUZAR LA ANTÁRTIDA",
+     "s": 0
+    },
+    {
+     "y": "Meta 2",
+     "t": "SALVAR EL BARCO",
+     "s": 1
+    },
+    {
+     "y": "Meta 3",
+     "t": "QUE TODOS VOLVIERAN",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "pre": "LA REGLA",
+   "say": "Cambia la meta, no los valores.",
+   "q": "Cambia la <em>meta</em>, no los valores.",
+   "qs": 0
+  },
+  {
+   "type": "ink",
+   "icon": "heart",
+   "accIdx": 1,
+   "bg": "HOY",
+   "say": "Si tu plan ya no es posible, no te aferres. Pregúntate: ¿cuál es mi nueva victoria? Para Shackleton, fue traer a todos de regreso. Y lo logró.",
+   "lines": [
+    {
+     "t": "Si el plan ya no es posible, suéltalo",
+     "style": "mid",
+     "s": 0
+    },
+    {
+     "t": "¿Cuál es mi nueva <em>victoria</em>?",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "TRAER A TODOS DE REGRESO",
+     "style": "label",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "say": "La historia completa está en Impulso Real.",
+   "pill": "HISTORIA COMPLETA EN EL CANAL",
+   "pillS": 0
+  }
+ ],
+ "cc": {
+  "mil novecientos quince": "1915",
+  "mil novecientos catorce": "1914",
+  "mil novecientos dieciséis": "1916",
+  "cuatrocientos noventa y siete": "497",
+  "veintiocho": "28",
+  "veintidós": "22",
+  "mil trescientos": "1,300",
+  "dieciséis": "16",
+  "treinta y seis": "36",
+  "siete metros": "7 metros",
+  "cien": "100",
+  "doscientos": "200"
+ },
+ "sources": [
+  "https://www.rgs.org/media/ev4lehtv/wseshackletonexpeditiontimeline.pdf",
+  "https://explorersweb.com/shackleton-100-years-south-georgia-crossing-2016-05-20-46815/",
+  "https://ernestshackleton.net/endurance-expedition"
+ ],
+ "youtube": {
+  "titulo": "La regla de liderazgo de Shackleton que sigue funcionando 100 años después #shorts",
+  "descripcion": "Historia completa: «Atrapados 497 días en el hielo… y volvieron los 28» en el canal Impulso Real.\n\n#Shackleton #Liderazgo #Estoicismo #Historias",
+  "etiquetas": [
+   "shackleton",
+   "liderazgo",
+   "endurance",
+   "historias",
+   "estoicismo",
+   "shorts",
+   "impulso real"
+  ]
+ }
+}

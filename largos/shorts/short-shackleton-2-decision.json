@@ -1,0 +1,141 @@
+{
+ "canal": "Impulso Real",
+ "plantilla": "plano_v",
+ "musica": "pulso",
+ "bpm": 92,
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.35,
+ "inicio": 0.12,
+ "cola": 1.0,
+ "tag": "SHACKLETON · 1915",
+ "id": "short-shackleton-2-decision",
+ "scenes": [
+  {
+   "type": "ink",
+   "icon": "ship",
+   "accIdx": 1,
+   "bg": "HIELO",
+   "say": "Su barco empezó a ser aplastado por el hielo. Y Shackleton tomó una decisión que parecía suicida.",
+   "lines": [
+    {
+     "t": "El hielo aplastó su <em>barco</em>",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "UNA DECISIÓN SUICIDA",
+     "style": "label",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "ATRAPADOS · 1915",
+   "say": "Abandonaron el barco. Un mes después, se hundió. Meses acampando sobre hielo flotante, hasta llegar a una isla donde nadie los iba a encontrar.",
+   "points": [
+    {
+     "y": "Octubre",
+     "t": "ABANDONAN EL BARCO",
+     "s": 0
+    },
+    {
+     "y": "Noviembre",
+     "t": "SE HUNDE",
+     "s": 1
+    },
+    {
+     "y": "Meses",
+     "t": "SOBRE HIELO FLOTANTE",
+     "s": 2
+    },
+    {
+     "y": "Isla Elefante",
+     "t": "NADIE LOS ENCONTRARÍA",
+     "s": 2,
+     "d": 2.6
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "boat",
+   "bg": "7 M",
+   "say": "Entonces decidió ir él mismo por ayuda. En un bote de siete metros. Mil trescientos kilómetros por uno de los mares más peligrosos del mundo.",
+   "lines": [
+    {
+     "t": "Ir él mismo por <em>ayuda</em>",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "BOTE DE 7 METROS",
+     "style": "label",
+     "s": 1
+    },
+    {
+     "t": "1,300 km de mar",
+     "style": "mid",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "16",
+   "say": "Dieciséis días después, llegó. Y caminó treinta y seis horas por montañas heladas hasta encontrar a alguien.",
+   "items": [
+    {
+     "n": "16",
+     "label": "días en el mar",
+     "s": 0
+    },
+    {
+     "n": "36",
+     "label": "horas caminando sin parar",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "say": "La historia completa está en Impulso Real.",
+   "pill": "HISTORIA COMPLETA EN EL CANAL",
+   "pillS": 0
+  }
+ ],
+ "cc": {
+  "mil novecientos quince": "1915",
+  "mil novecientos catorce": "1914",
+  "mil novecientos dieciséis": "1916",
+  "cuatrocientos noventa y siete": "497",
+  "veintiocho": "28",
+  "veintidós": "22",
+  "mil trescientos": "1,300",
+  "dieciséis": "16",
+  "treinta y seis": "36",
+  "siete metros": "7 metros",
+  "cien": "100",
+  "doscientos": "200"
+ },
+ "sources": [
+  "https://www.rgs.org/media/ev4lehtv/wseshackletonexpeditiontimeline.pdf",
+  "https://explorersweb.com/shackleton-100-years-south-georgia-crossing-2016-05-20-46815/",
+  "https://ernestshackleton.net/endurance-expedition"
+ ],
+ "youtube": {
+  "titulo": "La decisión que parecía suicida (y los salvó) #shorts",
+  "descripcion": "Historia completa: «Atrapados 497 días en el hielo… y volvieron los 28» en el canal Impulso Real.\n\n#Shackleton #Liderazgo #Estoicismo #Historias",
+  "etiquetas": [
+   "shackleton",
+   "liderazgo",
+   "endurance",
+   "historias",
+   "estoicismo",
+   "shorts",
+   "impulso real"
+  ]
+ }
+}

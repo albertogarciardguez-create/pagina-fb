@@ -1,0 +1,111 @@
+{
+ "canal": "Impulso Real",
+ "plantilla": "plano_v",
+ "musica": "pulso",
+ "bpm": 92,
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.35,
+ "inicio": 0.12,
+ "cola": 1.0,
+ "tag": "SHACKLETON · 1915",
+ "id": "short-shackleton-3-497-dias",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "497",
+   "say": "Imagina pasar cuatrocientos noventa y siete días sin pisar tierra.",
+   "items": [
+    {
+     "n": "497",
+     "label": "días sin pisar tierra",
+     "s": 0
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "1914 – 1916",
+   "say": "Diciembre de mil novecientos catorce: zarpan hacia la Antártida. Enero: el hielo atrapa el barco. Noviembre: el barco se hunde. Y abril de mil novecientos dieciséis: tocan tierra por primera vez.",
+   "points": [
+    {
+     "y": "Dic 1914",
+     "t": "ZARPAN",
+     "s": 0
+    },
+    {
+     "y": "Ene 1915",
+     "t": "EL HIELO LOS ATRAPA",
+     "s": 1
+    },
+    {
+     "y": "Nov 1915",
+     "t": "EL BARCO SE HUNDE",
+     "s": 2
+    },
+    {
+     "y": "Abr 1916",
+     "t": "PRIMERA VEZ EN TIERRA",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "mountain",
+   "bg": "ROCA",
+   "say": "Pero esa tierra era una roca helada en medio de la nada. Lo más difícil todavía no empezaba.",
+   "lines": [
+    {
+     "t": "Una roca <em>helada</em>",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "Lo más difícil todavía no empezaba.",
+     "style": "mid",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "say": "La historia completa está en Impulso Real.",
+   "pill": "¿CÓMO SALIERON? · EN EL CANAL",
+   "pillS": 0
+  }
+ ],
+ "cc": {
+  "mil novecientos quince": "1915",
+  "mil novecientos catorce": "1914",
+  "mil novecientos dieciséis": "1916",
+  "cuatrocientos noventa y siete": "497",
+  "veintiocho": "28",
+  "veintidós": "22",
+  "mil trescientos": "1,300",
+  "dieciséis": "16",
+  "treinta y seis": "36",
+  "siete metros": "7 metros",
+  "cien": "100",
+  "doscientos": "200"
+ },
+ "sources": [
+  "https://www.rgs.org/media/ev4lehtv/wseshackletonexpeditiontimeline.pdf",
+  "https://explorersweb.com/shackleton-100-years-south-georgia-crossing-2016-05-20-46815/",
+  "https://ernestshackleton.net/endurance-expedition"
+ ],
+ "youtube": {
+  "titulo": "Imagina pasar 497 días sin pisar tierra #shorts",
+  "descripcion": "Historia completa: «Atrapados 497 días en el hielo… y volvieron los 28» en el canal Impulso Real.\n\n#Shackleton #Liderazgo #Estoicismo #Historias",
+  "etiquetas": [
+   "shackleton",
+   "liderazgo",
+   "endurance",
+   "historias",
+   "estoicismo",
+   "shorts",
+   "impulso real"
+  ]
+ }
+}

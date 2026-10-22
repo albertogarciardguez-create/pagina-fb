@@ -1,0 +1,124 @@
+{
+ "canal": "Impulso Real",
+ "plantilla": "plano_v",
+ "musica": "pulso",
+ "bpm": 92,
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.35,
+ "inicio": 0.12,
+ "cola": 1.0,
+ "tag": "SHACKLETON · 1915",
+ "id": "short-shackleton-4-unidos",
+ "scenes": [
+  {
+   "type": "ink",
+   "icon": "people",
+   "bg": "28",
+   "say": "¿Cómo mantienes unidos a veintiocho hombres cuando todos creen que van a morir?",
+   "lines": [
+    {
+     "t": "¿Cómo mantienes <em>unidos</em> a 28 hombres",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "QUE CREEN QUE VAN A MORIR",
+     "style": "label",
+     "s": 0,
+     "d": 2.4
+    }
+   ]
+  },
+  {
+   "type": "ink",
+   "icon": "compass",
+   "accIdx": 1,
+   "bg": "RUTINA",
+   "say": "Shackleton no dio discursos. Mantuvo la rutina. Horarios, tareas y turnos, todos los días. Y en los ratos libres, fútbol sobre el hielo.",
+   "kicker": "SU RESPUESTA",
+   "lines": [
+    {
+     "t": "No dio discursos.",
+     "style": "mid",
+     "color": "dimc",
+     "s": 0
+    },
+    {
+     "t": "Mantuvo la <em>rutina</em>.",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "HORARIOS · TAREAS · TURNOS",
+     "style": "label",
+     "s": 2
+    },
+    {
+     "t": "Fútbol sobre el hielo",
+     "style": "mid",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "pre": "SU REGLA",
+   "say": "Porque para él, el peor enemigo no era el frío. Era la desesperación. Y la rutina era su antídoto.",
+   "q": "El peor enemigo no era el frío. Era la <em>desesperación</em>.",
+   "qs": 0,
+   "qe": 1
+  },
+  {
+   "type": "stats",
+   "bg": "28",
+   "say": "Resultado: regresaron los veintiocho.",
+   "items": [
+    {
+     "n": "28",
+     "label": "regresaron vivos",
+     "s": 0
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "say": "La historia completa está en Impulso Real.",
+   "pill": "HISTORIA COMPLETA EN EL CANAL",
+   "pillS": 0
+  }
+ ],
+ "cc": {
+  "mil novecientos quince": "1915",
+  "mil novecientos catorce": "1914",
+  "mil novecientos dieciséis": "1916",
+  "cuatrocientos noventa y siete": "497",
+  "veintiocho": "28",
+  "veintidós": "22",
+  "mil trescientos": "1,300",
+  "dieciséis": "16",
+  "treinta y seis": "36",
+  "siete metros": "7 metros",
+  "cien": "100",
+  "doscientos": "200"
+ },
+ "sources": [
+  "https://www.rgs.org/media/ev4lehtv/wseshackletonexpeditiontimeline.pdf",
+  "https://explorersweb.com/shackleton-100-years-south-georgia-crossing-2016-05-20-46815/",
+  "https://ernestshackleton.net/endurance-expedition"
+ ],
+ "youtube": {
+  "titulo": "¿Cómo mantienes unidos a 28 hombres que creen que van a morir? #shorts",
+  "descripcion": "Historia completa: «Atrapados 497 días en el hielo… y volvieron los 28» en el canal Impulso Real.\n\n#Shackleton #Liderazgo #Estoicismo #Historias",
+  "etiquetas": [
+   "shackleton",
+   "liderazgo",
+   "endurance",
+   "historias",
+   "estoicismo",
+   "shorts",
+   "impulso real"
+  ]
+ }
+}
