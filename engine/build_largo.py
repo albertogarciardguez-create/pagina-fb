@@ -63,6 +63,9 @@ def validate(story):
 
 
 def tts(story, outdir):
+    if story.get("audio_externo"):  # voz grabada aparte y alineada con engine/alinear.py
+        raw = os.path.join(outdir, "voz_raw.wav")
+        return raw, json.load(open(os.path.join(outdir, "timing.json"), encoding="utf-8"))
     import voces
     motor, _ = voces.cargar_config(story)
     try:
