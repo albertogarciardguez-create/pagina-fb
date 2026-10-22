@@ -138,5 +138,7 @@
    "shorts",
    "impulso real"
   ]
- }
+ },
+ "audio_externo": true,
+ "voz": "Edgardo (ElevenLabs)"
 }
