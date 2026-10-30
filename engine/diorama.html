@@ -104,7 +104,7 @@ function fx(t, polvo) {
 }
 
 const POS = { top: [540, 360, 'center'], topleft: [90, 360, 'left'], topright: [930, 300, 'right'],
-  left: [90, 1360, 'left'], center: [540, 900, 'center'], q: [540, 250, 'center'] };
+  left: [90, 1360, 'left'], center: [540, 900, 'center'], low: [540, 1420, 'center'], high: [540, 230, 'center'], mid: [540, 560, 'center'], lowleft: [90, 1490, 'left'], q: [540, 250, 'center'] };
 
 function fitFont(txt, weight, fam, size, maxW) {
   let s = size; g.font = `${weight} ${s}px ${fam}`;
@@ -124,7 +124,7 @@ function title(tt, t, t0, t1) {
   const lines = tt.b.split('\n'); lines.forEach((l, j) => g.fillText(l, x, y + j * bs * 1.02));
   if (tt.l) {
     const ls = fitFont(tt.l, 400, 'MR', 64, maxW);
-    g.shadowColor = 'rgba(0,0,0,.55)'; g.shadowBlur = 20; g.shadowOffsetY = 3; g.fillStyle = '#FFFFFF';
+    if (arena) { g.shadowColor = 'rgba(255,244,222,.6)'; g.shadowBlur = 14; g.shadowOffsetY = 0; g.fillStyle = '#5A4128'; } else { g.shadowColor = 'rgba(0,0,0,.55)'; g.shadowBlur = 20; g.shadowOffsetY = 3; g.fillStyle = '#FFFFFF'; }
     g.fillText(tt.l, x, y + (lines.length - 1) * bs * 1.02 + ls * 1.18);
   }
   g.restore();
