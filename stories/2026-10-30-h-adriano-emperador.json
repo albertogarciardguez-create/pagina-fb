@@ -1,0 +1,189 @@
+{
+  "id": "2026-10-30-h-adriano-emperador",
+  "header": "HISTORIAS DEL FÚTBOL",
+  "voice": "em_alex",
+  "kind": "historia",
+  "captionMode": "words",
+  "scenes": [
+    {
+      "type": "headline",
+      "bg": "TODO",
+      "speed": 0.92,
+      "gap": 0.45,
+      "say": "Lo tuvo todo. Le decían el Emperador… y terminó escondido en una favela.",
+      "captions": [
+        "Lo tuvo <em>todo</em>.",
+        "Le decían",
+        "el <em>Emperador</em>…",
+        "y terminó escondido",
+        "en una <em>favela</em>."
+      ],
+      "tag": "LA HISTORIA DE ADRIANO",
+      "title": "LO TUVO\nTODO…",
+      "sub": "Y LO PERDIÓ TODO"
+    },
+    {
+      "type": "headline",
+      "bg": "2004",
+      "speed": 0.97,
+      "say": "Dos mil cuatro. Adriano le gana la Copa América a Argentina. ¡El mundo estaba a sus pies!",
+      "captions": [
+        "<em>2004</em>.",
+        "Adriano le gana",
+        "la <em>Copa América</em>",
+        "a Argentina.",
+        "¡El mundo",
+        "estaba a sus pies!"
+      ],
+      "tag": "COPA AMÉRICA 2004",
+      "title": "CAMPEÓN\nCONTRA\nARGENTINA",
+      "sub": "CON BRASIL"
+    },
+    {
+      "type": "count",
+      "bg": "9",
+      "speed": 0.92,
+      "gap": 0.5,
+      "say": "Nueve días después… suena el teléfono. Su padre había muerto.",
+      "captions": [
+        "<em>9</em> días después…",
+        "suena el teléfono.",
+        "Su padre",
+        "había <em>muerto</em>."
+      ],
+      "big": "9 DÍAS",
+      "sub": "UNA LLAMADA",
+      "subLabel": "LO CAMBIÓ TODO",
+      "subColor": "red"
+    },
+    {
+      "type": "headline",
+      "bg": "\"",
+      "speed": 0.92,
+      "gap": 0.4,
+      "say": "Él mismo lo confesó: el fútbol nunca volvió a ser el mismo.",
+      "captions": [
+        "Él mismo lo confesó:",
+        "el fútbol",
+        "<em>nunca volvió</em>",
+        "a ser el mismo."
+      ],
+      "tag": "SU CONFESIÓN",
+      "title": "“EL FÚTBOL\nNUNCA VOLVIÓ\nA SER EL MISMO”",
+      "sub": "ADRIANO"
+    },
+    {
+      "type": "stats",
+      "bg": "48",
+      "speed": 1.0,
+      "say": "Aun así ganó cuatro títulos de liga con el Inter… y jugó cuarenta y ocho partidos con Brasil.",
+      "captions": [
+        "Aun así ganó",
+        "<em>4</em> títulos de liga",
+        "con el Inter…",
+        "y jugó <em>48</em> partidos",
+        "con Brasil."
+      ],
+      "items": [
+        {
+          "n": "4",
+          "label": "LIGAS CON EL INTER",
+          "color": "green"
+        },
+        {
+          "n": "48",
+          "label": "CON BRASIL"
+        }
+      ]
+    },
+    {
+      "type": "headline",
+      "bg": "2009",
+      "speed": 0.97,
+      "gap": 0.4,
+      "say": "Pero el dolor pudo más. En dos mil nueve dejó el Inter… y se refugió en la favela donde creció.",
+      "captions": [
+        "Pero el <em>dolor</em>",
+        "pudo más.",
+        "En <em>2009</em> dejó el Inter…",
+        "y se refugió",
+        "en la favela",
+        "donde creció."
+      ],
+      "tag": "2009",
+      "title": "ADIÓS\nA EUROPA",
+      "sub": "DE VUELTA A VILA CRUZEIRO"
+    },
+    {
+      "type": "headline",
+      "bg": "YO",
+      "speed": 0.9,
+      "gap": 0.5,
+      "say": "Años después escribió: el mayor desperdicio del fútbol… soy yo.",
+      "captions": [
+        "Años después escribió:",
+        "el mayor <em>desperdicio</em>",
+        "del fútbol…",
+        "soy <em>yo</em>."
+      ],
+      "tag": "EN SUS PALABRAS",
+      "title": "“EL MAYOR\nDESPERDICIO\nDEL FÚTBOL:\nYO”",
+      "sub": "ADRIANO, 2024"
+    },
+    {
+      "type": "headline",
+      "bg": "ADIÓS",
+      "speed": 0.97,
+      "gap": 0.5,
+      "say": "En su despedida, en el Maracaná, apareció en la pantalla un mensaje de su padre, hecho con inteligencia artificial… y el Emperador lloró.",
+      "captions": [
+        "En su despedida,",
+        "en el <em>Maracaná</em>,",
+        "apareció en la pantalla",
+        "un mensaje",
+        "de su <em>padre</em>,",
+        "hecho con",
+        "inteligencia artificial…",
+        "y el Emperador",
+        "<em>lloró</em>."
+      ],
+      "tag": "15 DIC 2024 · MARACANÁ",
+      "title": "SU ÚLTIMO\nPARTIDO",
+      "sub": "Y UN MENSAJE DE SU PADRE"
+    },
+    {
+      "type": "question",
+      "bg": "¿?",
+      "speed": 1.0,
+      "say": "¿Tú qué crees? ¿Le falló el fútbol… o se rindió él? ¡Te leo en los comentarios!",
+      "captions": [
+        "¿Tú qué crees?",
+        "¿Le falló <em>el fútbol</em>…",
+        "o se rindió <em>él</em>?",
+        "¡Te leo en los <em>comentarios</em>!"
+      ],
+      "pre": "TÚ QUÉ CREES:",
+      "q": "¿LE FALLÓ\nEL FÚTBOL?",
+      "opts": [
+        "LE FALTÓ APOYO",
+        "ÉL SE RINDIÓ"
+      ]
+    }
+  ],
+  "post": "Le ganó la Copa América a Argentina y nueve días después perdió a su padre. Adriano, el Emperador, lo tuvo todo… y lo perdió todo. ¿Le falló el fútbol o se rindió él? 👇",
+  "hashtags": [
+    "#Adriano",
+    "#ElEmperador",
+    "#HistoriasDelFútbol",
+    "#Inter",
+    "#Brasil",
+    "#FútbolMexicano",
+    "#SeñorFútbol"
+  ],
+  "sources": [
+    "https://www.clarosports.com/futbol/adriano-muestra-su-lado-mas-vulnerable-el-mayor-desperdicio-del-futbol-yo/",
+    "https://www.latercera.com/el-deportivo/noticia/de-ser-figura-mundial-a-vagar-por-las-favelas-el-dia-en-que-adriano-revelo-la-tragica-llamada-que-lo-hizo-dejar-el-futbol/375H6IDVTJG57LJE62AEH7I7PA/",
+    "https://supersport.com/olympic games paris 2024/general$/news/6bf3a4bc-1fe2-48cf-addb-73da57d67acf/brazil-s-fallen-emperor-adriano-bids-farewell-to-football",
+    "https://www.foxsports.com.mx/2024/12/15/adriano-leite-recibe-mensaje-de-su-padre-muerto-gracias-a-la-ia-en-partido-de-despedida-video/"
+  ]
+}
