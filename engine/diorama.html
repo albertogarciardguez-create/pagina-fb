@@ -1,0 +1,220 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:MB;src:url(fonts/Montserrat-ExtraBold.ttf)}
+@font-face{font-family:MR;src:url(fonts/Montserrat-Regular.ttf)}
+@font-face{font-family:MS;src:url(fonts/Montserrat-SemiBold.ttf)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Plantilla "diorama" de Impulso Real: imágenes fijas estilo stop-motion (plastilina + papel) con cámara,
+// "boil" a 12 fps, polvo, grano, viñeta, títulos de dos líneas, dial del logo, puntos de progreso y cierre de marca.
+const W = 1080, H = 1920, S = window.STORY, T = window.TIMING, I = window.IMGS || {};
+const cv = document.getElementById('c'), g = cv.getContext('2d');
+const OR = '#FF6B3D';
+let imgs = {}, logo = null, logoBg = '#0B0B0B', grain = [], vig = null, dust = [];
+
+const rnd = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const cl = (x, a, b) => Math.max(a, Math.min(b, x));
+const ease = p => { p = cl(p, 0, 1); return 0.5 - 0.5 * Math.cos(Math.PI * p); };
+
+async function load() {
+  const L = src => new Promise(r => { if (!src) return r(null); const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+  for (const k in I) imgs[k] = await L(I[k]);
+  logo = await L(window.LOGO);
+  if (logo) {
+    const c = document.createElement('canvas'); c.width = c.height = 8; const x = c.getContext('2d');
+    x.drawImage(logo, 0, 0, 20, 20, 0, 0, 8, 8); const d = x.getImageData(3, 3, 1, 1).data;
+    logoBg = `rgb(${d[0]},${d[1]},${d[2]})`;
+  }
+  for (let k = 0; k < 4; k++) {
+    const c = document.createElement('canvas'); c.width = 540; c.height = 960; const x = c.getContext('2d');
+    const im = x.createImageData(540, 960);
+    for (let j = 0; j < im.data.length; j += 4) { const v = Math.random() * 255; im.data[j] = im.data[j + 1] = im.data[j + 2] = v; im.data[j + 3] = 255; }
+    x.putImageData(im, 0, 0); grain.push(c);
+  }
+  vig = document.createElement('canvas'); vig.width = W; vig.height = H;
+  const vx = vig.getContext('2d'), gr = vx.createRadialGradient(W / 2, H * 0.48, H * 0.26, W / 2, H * 0.5, H * 0.74);
+  gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,0.5)'); vx.fillStyle = gr; vx.fillRect(0, 0, W, H);
+  for (let k = 0; k < 46; k++) dust.push({ x: rnd(k) * W, y: rnd(k + 50) * H, vx: (rnd(k + 90) - 0.5) * 18, vy: -6 - rnd(k + 130) * 14,
+    r: 1.2 + rnd(k + 170) * 2.8, a: 0.16 + rnd(k + 210) * 0.34, ph: rnd(k + 250) * 6.28 });
+  await document.fonts.load('800 96px MB'); await document.fonts.load('400 64px MR'); await document.fonts.load('600 40px MS');
+  window.READY = true;
+}
+
+function cam(mv, p, t) {
+  const e = ease(p), q = Math.floor(t * 12);                       // "boil" de stop-motion: cambia 12 veces por segundo
+  let s = 1.06, dx = (rnd(q) - .5) * 2.4, dy = (rnd(q + 7) - .5) * 2.4, r = (rnd(q + 13) - .5) * 0.0012;
+  switch (mv) {
+    case 'in': s = 1.05 + 0.10 * e; break;
+    case 'out': s = 1.16 - 0.10 * e; break;
+    case 'right': s = 1.14; dx += 50 - 100 * e; break;            // la cámara viaja a la derecha
+    case 'left': s = 1.14; dx += -50 + 100 * e; break;
+    case 'up': s = 1.14; dy += -80 + 160 * e; break;              // la cámara sube (grúa / tilt arriba)
+    case 'down': s = 1.10 + 0.05 * e; dy += 80 - 160 * e; break;  // la cámara baja (descenso al foso)
+    case 'shake': s = 1.10 + 0.06 * e; dx += Math.sin(t * 2.1) * 14 + (rnd(q + 3) - .5) * 6; dy += Math.sin(t * 1.7) * 10; r += Math.sin(t * 1.3) * 0.006; break;
+    case 'none': s = 1.06; break;
+  }
+  return { s, dx, dy, r };
+}
+
+function drawImg(name, rx, ry, rw, rh, c, foco) {
+  const im = imgs[name];
+  g.save(); g.beginPath(); g.rect(rx, ry, rw, rh); g.clip();
+  if (!im) {
+    const gr = g.createLinearGradient(0, ry, 0, ry + rh); gr.addColorStop(0, '#D9C7A3'); gr.addColorStop(1, '#9C7E55');
+    g.fillStyle = gr; g.fillRect(rx, ry, rw, rh);
+    g.fillStyle = 'rgba(60,40,20,.55)'; g.font = '800 72px MB'; g.textAlign = 'center';
+    g.fillText('FALTA ' + name.toUpperCase(), rx + rw / 2, ry + rh / 2); g.restore(); return;
+  }
+  const base = Math.max(rw / im.width, rh / im.height) * c.s, iw = im.width * base, ih = im.height * base;
+  const fx = foco ? foco[0] : .5, fy = foco ? foco[1] : .5;
+  let x = cl(rx + rw / 2 - iw * fx + c.dx, rx + rw - iw, rx), y = cl(ry + rh / 2 - ih * fy + c.dy, ry + rh - ih, ry);
+  g.translate(rx + rw / 2, ry + rh / 2); g.rotate(c.r); g.translate(-(rx + rw / 2), -(ry + rh / 2));
+  g.drawImage(im, x, y, iw, ih); g.restore();
+}
+
+const sceneAt = t => { let i = 0; T.cuts.forEach((c, k) => { if (t >= c) i = k; }); return i; };
+const winEnd = i => i + 1 < T.cuts.length ? T.cuts[i + 1] : T.total;
+
+function drawScene(i, t) {
+  const sc = S.scenes[i], a = T.cuts[i], b = winEnd(i), p = (t - a) / (b - a), mv = sc.move || 'in';
+  if (sc.split) {
+    const half = (H - 6) / 2, p2 = (t - a - 0.5) / Math.max(0.5, b - a - 0.5);
+    drawImg(sc.img[0], 0, 0, W, half, cam(mv, p, t), sc.foco && sc.foco[0]);
+    drawImg(sc.img[1], 0, half + 6, W, half, cam(mv, Math.max(0, p2), t + 0.37), sc.foco && sc.foco[1]);
+    g.fillStyle = '#E9DCC0'; g.fillRect(0, half, W, 6);
+  } else drawImg(sc.img[0], 0, 0, W, H, cam(mv, p, t), sc.foco);
+}
+
+function fx(t, polvo) {
+  g.drawImage(vig, 0, 0);
+  if (polvo > 0) {
+    const q = Math.floor(t * 12) / 12;
+    for (const d of dust) {
+      let x = (d.x + d.vx * q + Math.sin(q * 0.8 + d.ph) * 8) % W; if (x < 0) x += W;
+      let y = (d.y + d.vy * q) % H; if (y < 0) y += H;
+      const R = d.r * 3, gr = g.createRadialGradient(x, y, 0, x, y, R);
+      gr.addColorStop(0, `rgba(255,238,205,${d.a * polvo})`); gr.addColorStop(1, 'rgba(255,238,205,0)');
+      g.fillStyle = gr; g.fillRect(x - R, y - R, 2 * R, 2 * R);
+    }
+  }
+  g.save(); g.globalAlpha = 0.07; g.globalCompositeOperation = 'overlay';
+  g.drawImage(grain[Math.floor(t * 12) % 4], 0, 0, W, H); g.restore();
+}
+
+const POS = { top: [540, 360, 'center'], topleft: [90, 360, 'left'], topright: [930, 300, 'right'],
+  left: [90, 1360, 'left'], center: [540, 900, 'center'], q: [540, 250, 'center'] };
+
+function fitFont(txt, weight, fam, size, maxW) {
+  let s = size; g.font = `${weight} ${s}px ${fam}`;
+  while (s > 40 && Math.max(...txt.split('\n').map(l => g.measureText(l).width)) > maxW) { s -= 4; g.font = `${weight} ${s}px ${fam}`; }
+  return s;
+}
+
+function title(tt, t, t0, t1) {
+  const k = ease((t - t0) / 0.45), out = 1 - ease((t - (t1 - 0.3)) / 0.3), al = Math.min(k, out);
+  if (t < t0 || al <= 0) return;
+  const [x, y0, align] = POS[tt.pos || 'top'], y = y0 + (1 - k) * 14, maxW = align === 'center' ? 780 : 840;
+  g.save(); g.globalAlpha = al; g.textAlign = align; if (k < 1) g.filter = `blur(${(1 - k) * 8}px)`;
+  const arena = tt.color === 'arena';
+  const bs = fitFont(tt.b, 800, 'MB', tt.big ? 150 : 96, maxW);
+  g.shadowColor = arena ? 'rgba(255,244,222,.6)' : 'rgba(0,0,0,.55)'; g.shadowBlur = arena ? 16 : 22; g.shadowOffsetY = arena ? 0 : 3;
+  g.fillStyle = arena ? '#7A5A3A' : '#FFFFFF';
+  const lines = tt.b.split('\n'); lines.forEach((l, j) => g.fillText(l, x, y + j * bs * 1.02));
+  if (tt.l) {
+    const ls = fitFont(tt.l, 400, 'MR', 64, maxW);
+    g.shadowColor = 'rgba(0,0,0,.55)'; g.shadowBlur = 20; g.shadowOffsetY = 3; g.fillStyle = '#FFFFFF';
+    g.fillText(tt.l, x, y + (lines.length - 1) * bs * 1.02 + ls * 1.18);
+  }
+  g.restore();
+}
+
+function dial(d, t, t0, t1) {
+  const k = ease((t - t0) / 0.35), out = 1 - ease((t - (t1 - 0.3)) / 0.3), al = Math.min(k, out);
+  if (t < t0 || al <= 0) return;
+  const cx = d.x || 540, cy = d.y || 820, R = d.r || 230, sc = 0.92 + 0.08 * k;
+  g.save(); g.globalAlpha = al; g.translate(cx, cy); g.scale(sc, sc);
+  g.fillStyle = 'rgba(14,14,15,.74)'; g.beginPath(); g.arc(0, 0, R * 1.18, 0, 6.2832); g.fill();
+  const fill = d.tipo === 'dias' ? ease((t - t0 - 0.2) / (d.dur || 2.0)) : 0, lit = Math.round(fill * (d.n || 30));
+  const hand = d.tipo === 'noche' ? (t - t0) / (d.vuelta || 3.0) * 6.2832 : null;
+  g.lineCap = 'round';
+  for (let j = 0; j < 60; j++) {
+    const a = j / 60 * 6.2832 - 1.5708, maj = j % 5 === 0, L = maj ? R * 0.14 : R * 0.08;
+    let col = maj ? 'rgba(236,233,227,.95)' : 'rgba(236,233,227,.5)';
+    if (d.tipo === 'dias' && j < lit) col = OR;
+    if (hand !== null) { let df = (hand % 6.2832) - j / 60 * 6.2832; if (df < 0) df += 6.2832; if (df < 1.3) col = `rgba(255,107,61,${(1 - df / 1.3).toFixed(3)})`; }
+    g.strokeStyle = col; g.lineWidth = maj ? 5 : 2.5;
+    g.beginPath(); g.moveTo(Math.cos(a) * (R - L), Math.sin(a) * (R - L)); g.lineTo(Math.cos(a) * R, Math.sin(a) * R); g.stroke();
+  }
+  g.strokeStyle = 'rgba(110,110,115,.9)'; g.lineWidth = 7; g.beginPath(); g.arc(0, 0, R * 0.72, 0, 6.2832); g.stroke();
+  g.textAlign = 'center';
+  if (d.tipo === 'dias') {
+    g.fillStyle = '#fff'; g.font = `800 ${Math.round(R * 0.62)}px MB`; g.fillText(String(lit), 0, R * 0.16);
+    g.fillStyle = OR; g.font = `600 ${Math.round(R * 0.17)}px MS`; g.letterSpacing = '6px'; g.fillText(d.sub || 'DÍAS', 0, R * 0.46);
+  } else {
+    const a = hand - 1.5708; g.shadowColor = OR; g.shadowBlur = 18; g.strokeStyle = OR; g.lineWidth = 9;
+    g.beginPath(); g.moveTo(0, 0); g.lineTo(Math.cos(a) * R * 0.62, Math.sin(a) * R * 0.62); g.stroke();
+    g.shadowBlur = 0; g.fillStyle = '#ECE9E3'; g.beginPath(); g.arc(0, 0, 11, 0, 6.2832); g.fill();
+    g.font = `600 ${Math.round(R * 0.15)}px MS`; g.letterSpacing = '6px'; g.fillText(d.sub || 'NOCHE', 0, R * 0.42);
+  }
+  g.restore();
+}
+
+function dots(acto) {
+  const n = 5, y = 1640, sp = 36, x0 = 540 - sp * (n - 1) / 2;
+  g.save();
+  for (let k = 0; k < n; k++) {
+    const on = k + 1 === acto; g.beginPath(); g.arc(x0 + k * sp, y, on ? 8 : 6, 0, 6.2832);
+    g.fillStyle = on ? OR : 'rgba(255,255,255,.55)'; g.shadowColor = on ? OR : 'rgba(0,0,0,.6)'; g.shadowBlur = on ? 16 : 6; g.fill();
+  }
+  g.restore();
+}
+
+function cierre(i, t) {
+  const sc = S.scenes[i], a = T.cuts[i], r = t - a, E = T.ev[i];
+  if (i > 0) drawScene(i - 1, t);
+  g.save(); g.globalAlpha = ease(r / 0.9); g.fillStyle = logoBg; g.fillRect(0, 0, W, H); g.restore();
+  if (logo) {
+    const wp = ease((r - 0.3) / 1.1);                                // el dial "se cierra" en sentido del reloj
+    if (wp > 0) {
+      g.save(); g.beginPath(); g.moveTo(540, 900); g.arc(540, 900, 820, -1.5708, -1.5708 + 6.2832 * wp); g.closePath(); g.clip();
+      g.globalAlpha = Math.min(1, wp * 1.5); g.drawImage(logo, 0, 360, 1080, 1080); g.restore();
+    }
+    const pg = ease((r - 1.3) / 0.5);
+    if (pg > 0) {
+      const pu = 0.55 + 0.45 * Math.sin((r - 1.3) * 3.2), gr = g.createRadialGradient(540, 900, 0, 540, 900, 270);
+      gr.addColorStop(0, `rgba(255,107,61,${0.24 * pg * pu})`); gr.addColorStop(1, 'rgba(255,107,61,0)'); g.fillStyle = gr; g.fillRect(270, 630, 540, 540);
+    }
+  }
+  (sc.titles || []).forEach((tt, k) => title(tt, t, E.titles[k], T.total + 1));
+  const n1 = ease((r - 1.6) / 0.5);
+  if (n1 > 0) {
+    g.save(); g.globalAlpha = n1; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.letterSpacing = '12px';
+    g.fillText('IMPULSO REAL', 546, 1530 + (1 - n1) * 14); g.restore();
+  }
+  const n2 = ease((r - 2.0) / 0.5);
+  if (n2 > 0) {
+    const s = 1 + 0.035 * Math.sin((r - 2.0) * 4) * n2, w = 330, h = 84;
+    g.save(); g.globalAlpha = n2; g.translate(540, 1610); g.scale(s, s);
+    g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, h / 2); g.fillStyle = 'rgba(255,107,61,.14)'; g.fill();
+    g.lineWidth = 4; g.strokeStyle = OR; g.shadowColor = OR; g.shadowBlur = 14; g.stroke();
+    g.shadowBlur = 0; g.fillStyle = OR; g.font = '600 38px MS'; g.letterSpacing = '4px'; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.fillText('SEGUIR +', 4, 2); g.restore();
+  }
+}
+
+window.render = function (t) {
+  const i = sceneAt(t), sc = S.scenes[i], a = T.cuts[i], b = winEnd(i), E = T.ev[i];
+  g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+  if (sc.tipo === 'cierre') { cierre(i, t); fx(t, 0); return; }
+  drawScene(i, t);
+  if (sc.fade && i > 0 && t < a + 0.5) { g.save(); g.globalAlpha = 1 - ease((t - a) / 0.5); drawScene(i - 1, t); g.restore(); }
+  fx(t, sc.polvo === undefined ? 1 : sc.polvo);
+  if (sc.dial) dial(sc.dial, t, E.dial, b);
+  (sc.titles || []).forEach((tt, k) => title(tt, t, E.titles[k], b));
+  if (sc.acto) dots(sc.acto);
+};
+window.frame = t => { window.render(t); return cv.toDataURL('image/jpeg', 0.9).split(',')[1]; };
+load();
+</script></body></html>

@@ -150,3 +150,15 @@ Con `"plantilla": "plano"` en la historia, `build_largo.py` usa `engine/plano.ht
 - Escena nueva `route` (viajes/mapas): `title`, `points` [{`x`,`y` en %, `label`, `sub`, `s`, `up`}], `counter` {`value`, `suffix`, `label`, `s`, `dur`}. En `list` hay `center` y los elementos aceptan `d`; en `stats` también.
 - Íconos extra: ship, ice, boat, mountain, compass, people, flame, heart (`accIdx` = trazo que va en naranja).
 - `thumb` admite `<em>` en el título (palabra en Lora naranja). Ejemplo completo: `largos/2026-10-26-shackleton-endurance.json`. Render ~20–25 min en la nube.
+
+## Reels "diorama" (Impulso Real) — historias en stop-motion de plastilina y papel
+
+`engine/build_diorama.py` anima **imágenes fijas** (estilo diorama: figuras de plastilina, escenarios de papel recortado) sin gastar créditos: cámara (in, out, left, right, up, down, shake, none), "boil" de stop-motion a 12 fps, polvo, grano, viñeta, títulos de dos líneas en Montserrat (negrita + ligera), puntos de progreso por acto, el dial del logo como elemento narrativo (`dias` cuenta, `noche` gira) y cierre con el logo de Impulso Real, pregunta, "IMPULSO REAL" y botón "SEGUIR +". Música por actos (`menor`, `foso` con latido, `mayor`) y efectos (`tambor`, `sello`, `rugido`, `piedra`, `tick`, `papel`, `campana`) generados, sin archivos de terceros.
+
+```bash
+python3 engine/build_diorama.py diorama/<historia>.json --preview   # hoja salida/<id>/revision.png (líneas rojas = zona segura)
+python3 engine/build_diorama.py diorama/<historia>.json             # MP4 1080x1920 30 fps + post.txt
+```
+
+- Imágenes en `diorama/img/<id>/` con los nombres de `img` (p01a, p02…; jpg/png/webp). Voz de ElevenLabs en `diorama/audio/<id>.mp3`: se alinea sola por pausas (`engine/alinear.py`), así que cada `say` debe ser exactamente lo que dice la voz. Sin audio, sale con kokoro (prueba). Ambas carpetas están fuera de git.
+- Escena: `say`, `img` [1, o 2 con `split`], `move`, `acto` (1–5), `mus`, `nivel`, `corte` (música en seco al terminar la línea), `fade`, `polvo`, `foco`, `titles` [{`b`, `l`, `pos`: top|topleft|topright|left|center|q, `color`: arena, `big`, `s`, `at`}], `dial` {`tipo`: dias|noche, `n`, `sub`, `s`, `at`, `dur`, `vuelta`, `y`, `r`}, `sfx` [{`k`, `s`, `at`, `d`, `g`}]. Última escena `"tipo": "cierre"`. Ejemplo: `diorama/2026-10-30-daniel-foso.json`.

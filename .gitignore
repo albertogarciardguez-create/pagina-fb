@@ -2,3 +2,5 @@ salida/
 __pycache__/
 *.pyc
 noticias/
+diorama/img/
+diorama/audio/
