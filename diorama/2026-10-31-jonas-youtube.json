@@ -71,7 +71,8 @@
     {
      "b": "Tres lecciones",
      "l": "para aplicar desde hoy",
-     "s": 1
+     "s": 1,
+     "color": "arena"
     }
    ]
   },
@@ -548,12 +549,14 @@
    "titles": [
     {
      "b": "Por segunda vez",
-     "s": 1
+     "s": 1,
+     "color": "arena"
     },
     {
      "b": "La misma misión",
      "pos": "low",
-     "s": 3
+     "s": 3,
+     "color": "arena"
     }
    ]
   },
@@ -634,13 +637,15 @@
    "titles": [
     {
      "b": "Misericordia",
-     "s": 2
+     "s": 2,
+     "color": "arena"
     },
     {
      "b": "Pero Jonás",
      "l": "no estaba feliz",
      "pos": "low",
-     "s": 4
+     "s": 4,
+     "color": "arena"
     }
    ]
   },
@@ -686,7 +691,8 @@
     {
      "b": "La planta",
      "l": "se secó",
-     "s": 1
+     "s": 1,
+     "color": "arena"
     }
    ]
   },
@@ -703,12 +709,14 @@
     {
      "b": "¿Y yo no voy a",
      "l": "tener compasión?",
-     "s": 1
+     "s": 1,
+     "color": "arena"
     },
     {
      "b": "Una pregunta abierta",
      "pos": "low",
-     "s": 2
+     "s": 2,
+     "color": "arena"
     }
    ]
   },
@@ -754,7 +762,8 @@
     {
      "b": "2. Tu peor error",
      "l": "no es el final",
-     "s": 0
+     "s": 0,
+     "color": "arena"
     }
    ]
   },
@@ -788,12 +797,14 @@
     {
      "b": "Ejercicio",
      "l": "una hoja, dos columnas",
-     "s": 1
+     "s": 1,
+     "color": "arena"
     },
     {
      "b": "Solo el primer paso",
      "pos": "low",
-     "s": 5
+     "s": 5,
+     "color": "arena"
     }
    ]
   },
@@ -810,7 +821,8 @@
     {
      "b": "Siempre puedes",
      "l": "dar la vuelta",
-     "s": 2
+     "s": 2,
+     "color": "arena"
     }
    ]
   },

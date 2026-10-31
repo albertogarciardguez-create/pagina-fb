@@ -202,9 +202,26 @@ def mezcla(story, out, raw, timing):
 
 
 # ---------- imágenes y render ----------
-def data_url(path, max_lado=2400):
+def rellenar(im, f):
+    """Cubre una franja lisa de arriba (fracción f de la altura) con la escena reflejada y desenfocada."""
+    from PIL import Image, ImageFilter
+    w, h = im.size; b = int(h * f)
+    if b < 4:
+        return im
+    rad = max(8, w / 40)
+    fill = im.crop((0, b, w, min(h, 2 * b))).transpose(Image.FLIP_TOP_BOTTOM).resize((w, b)).filter(ImageFilter.GaussianBlur(rad))
+    out = im.copy(); out.paste(fill, (0, 0))
+    s = max(6, int(h * 0.04)); blur = out.filter(ImageFilter.GaussianBlur(rad))
+    col = np.clip((b + s - np.arange(h)) / (2 * s), 0, 1)
+    mask = Image.fromarray((np.repeat(col[:, None], w, 1) * 255).astype(np.uint8))
+    return Image.composite(blur, out, mask)
+
+
+def data_url(path, max_lado=2400, franja=0.0):
     from PIL import Image
     im = Image.open(path).convert("RGB")
+    if franja:
+        im = rellenar(im, franja)
     if max(im.size) > max_lado:
         r = max_lado / max(im.size); im = im.resize((round(im.width * r), round(im.height * r)), Image.LANCZOS)
     b = io.BytesIO(); im.save(b, "JPEG", quality=90)
@@ -214,11 +231,14 @@ def data_url(path, max_lado=2400):
 def imagenes(story):
     carpeta = os.path.join(ROOT, story.get("imagenes", f"diorama/img/{story['id']}"))
     out, faltan = {}, []
+    fr = dict(story.get("franjas", {}))
+    if os.path.exists(os.path.join(carpeta, "franjas.json")):  # franjas lisas que dejó el generador de imágenes
+        fr.update(json.load(open(os.path.join(carpeta, "franjas.json"))))
     for sc in story["scenes"]:
         for n in sc.get("img", []):
             p = next((os.path.join(carpeta, n + e) for e in EXT if os.path.exists(os.path.join(carpeta, n + e))), None)
             if p:
-                out[n] = data_url(p)
+                out[n] = data_url(p, franja=fr.get(n, 0.0))
             else:
                 faltan.append(n)
     if faltan:
