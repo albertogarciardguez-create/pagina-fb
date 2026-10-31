@@ -14,7 +14,7 @@ import numpy as np, soundfile as sf
 ENGINE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(ENGINE)
 sys.path.insert(0, ENGINE)
-from build_largo import lp, SR, _tts  # noqa: E402
+from build_largo import lp, SR, _tts, srt  # noqa: E402
 
 FPS = 30
 EXT = (".jpg", ".jpeg", ".png", ".webp")
@@ -27,6 +27,13 @@ def log(*a):
 # ---------- voz y tiempos ----------
 def voz(story, path, out):
     mp3 = os.path.join(ROOT, story.get("audio", f"diorama/audio/{story['id']}.mp3"))
+    base = mp3[:-4]
+    partes = [f"{base}_{k}.mp3" for k in range(1, 30) if os.path.exists(f"{base}_{k}.mp3")]
+    if not os.path.exists(mp3) and partes:  # voz larga entregada en varias partes: _1.mp3, _2.mp3...
+        lista = os.path.join(out, "partes.txt")
+        open(lista, "w").write("".join(f"file '{x}'\n" for x in partes))
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lista, "-c:a", "libmp3lame", "-q:a", "2", mp3], check=True)
+        log(f"voz: uní {len(partes)} partes en {os.path.relpath(mp3, ROOT)}")
     if os.path.exists(mp3):
         log("voz: alineando", os.path.relpath(mp3, ROOT))
         subprocess.run([sys.executable, os.path.join(ENGINE, "alinear.py"), mp3, path], check=True, cwd=ROOT)
@@ -104,6 +111,14 @@ def sfx_sig(k, rng):
         return (z * 6 * (0.5 + 0.5 * np.sin(2 * np.pi * 28 * x)) + tone * 0.5) * env * 0.55
     if k == "campana":
         x = xs(3.5); return sum(np.sin(2 * np.pi * f * x) * np.exp(-x / 1.2) for f in (293.66, 369.99, 440.0, 587.33)) * np.minimum(1, x / 0.005) * 0.25
+    if k == "olas":
+        x = xs(3.0); return lp(rng.standard_normal(len(x)), 0.04) * np.sin(np.pi * x / 3.0) ** 2 * 1.6
+    if k == "trueno":
+        x = xs(3.0); z = rng.standard_normal(len(x))
+        return (z * np.exp(-x / 0.05) * 0.5 + lp(z, 0.01) * 14 * np.exp(-x / 1.1) * np.minimum(1, x / 0.08)) * 0.6
+    if k == "agua":
+        x = xs(1.2); z = rng.standard_normal(len(x))
+        return (lp(z, 0.25) * np.exp(-x / 0.12) + lp(z, 0.03) * 3 * np.exp(-x / 0.5)) * 0.6
     # "tambor": golpe grave de apertura
     x = xs(2.5); s = np.sin(2 * np.pi * np.cumsum(32 + 40 * np.exp(-x / 0.08)) / SR) * np.exp(-x / 0.9)
     return s * 0.9 + lp(rng.standard_normal(len(x)), 0.05) * np.exp(-x / 0.6) * 0.4
@@ -162,8 +177,14 @@ def mezcla(story, out, raw, timing):
     for i, (sc, e) in enumerate(zip(story["scenes"], timing["ev"])):
         if sc.get("tipo") == "cierre":
             add("whoosh", cuts[i] + 0.25); add("campana", cuts[i] + 1.3, 0.8)
+        elif sc.get("tipo") == "capitulo":
+            add("whoosh", cuts[i] - 0.3)
         elif i > 0:
             add("papel", cuts[i] - 0.05, 0.8)
+        if sc.get("ambiente") == "olas":
+            fin = cuts[i + 1] if i + 1 < len(cuts) else total
+            for at in np.arange(cuts[i], fin - 1.0, 2.4):
+                add("olas", at, 0.45)
         for x, at in zip(sc.get("sfx", []), e["sfx"]):
             add(x["k"], at, x.get("g", 1.0))
         d = sc.get("dial")
@@ -207,7 +228,8 @@ def imagenes(story):
 
 def abrir(pw, story, timing, imgs):
     br = pw.chromium.launch(args=["--disable-gpu"])
-    pg = br.new_page(viewport={"width": 1080, "height": 1920})
+    hz = story.get("formato") == "horizontal"
+    pg = br.new_page(viewport={"width": 1920 if hz else 1080, "height": 1080 if hz else 1920})
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
     logo = data_url(os.path.join(ENGINE, "assets", "impulso_logo.png"))
@@ -230,7 +252,8 @@ def cuadro(pg, t):
 def revision(pg, story, timing, out):
     from PIL import Image, ImageDraw
     cuts, ev, total = timing["cuts"], timing["ev"], timing["total"]
-    tw, th, cols = 270, 480, 5
+    hz = story.get("formato") == "horizontal"
+    tw, th, cols = (384, 216, 4) if hz else (270, 480, 5)
     n = len(story["scenes"]); rows = (n + cols - 1) // cols
     hoja = Image.new("RGB", (cols * tw + (cols + 1) * 8, rows * (th + 30) + 8), (24, 24, 24))
     d = ImageDraw.Draw(hoja)
@@ -239,12 +262,34 @@ def revision(pg, story, timing, out):
         t = total - 0.4 if sc.get("tipo") == "cierre" else min(fin - 0.35, max([cuts[i] + 0.8] + [x + 0.7 for x in ev[i]["titles"]] + ([ev[i]["dial"] + 2.3] if "dial" in ev[i] else [])))
         im = Image.open(io.BytesIO(cuadro(pg, t))).resize((tw, th))
         dd = ImageDraw.Draw(im)  # zona segura: 250 px abajo y 150 px a la derecha (botones de TikTok/Reels)
-        dd.line([(0, th * 1670 / 1920), (tw, th * 1670 / 1920)], fill=(255, 60, 60), width=1)
-        dd.line([(tw * 930 / 1080, 0), (tw * 930 / 1080, th)], fill=(255, 60, 60), width=1)
+        if not hz:
+            dd.line([(0, th * 1670 / 1920), (tw, th * 1670 / 1920)], fill=(255, 60, 60), width=1)
+            dd.line([(tw * 930 / 1080, 0), (tw * 930 / 1080, th)], fill=(255, 60, 60), width=1)
         x, y = 8 + (i % cols) * (tw + 8), 8 + (i // cols) * (th + 30)
         hoja.paste(im, (x, y)); d.text((x + 4, y + th + 6), f"{i + 1}  {t:.1f}s  {', '.join(sc.get('img', []))}", fill=(230, 230, 230))
     p = os.path.join(out, "revision.png"); hoja.save(p)
     log("hoja de revisión:", os.path.relpath(p, ROOT))
+
+
+def youtube(story, timing, out):
+    """Subtítulos .srt, youtube.txt con capítulos y miniatura.jpg (video largo)."""
+    srt(timing, os.path.join(out, "subtitulos.srt"), story.get("cc"))
+    yt = story["youtube"]
+    mmss = lambda x: f"{int(x // 60)}:{int(x % 60):02d}"
+    caps = ["0:00 " + yt.get("intro", "Introducción")]
+    caps += [f"{mmss(timing['cuts'][i])} {sc['cap_titulo'].replace(chr(10), ' ')}" for i, sc in enumerate(story["scenes"]) if sc.get("tipo") == "capitulo"]
+    txt = [yt["titulo"], "", yt["descripcion"], "", "Capítulos:", *caps, "", " ".join(yt.get("hashtags", [])), "", "Etiquetas: " + ", ".join(yt.get("etiquetas", []))]
+    open(os.path.join(out, "youtube.txt"), "w", encoding="utf-8").write("\n".join(txt) + "\n")
+    log("youtube.txt y subtitulos.srt listos")
+
+
+def miniatura(pg, story, timing, out):
+    m = story.get("miniatura")
+    if m is None:
+        return
+    from PIL import Image
+    t = max([timing["cuts"][m] + 0.9] + [x + 0.9 for x in timing["ev"][m]["titles"]])
+    Image.open(io.BytesIO(cuadro(pg, t))).convert("RGB").resize((1280, 720)).save(os.path.join(out, "miniatura.jpg"), quality=92)
 
 
 def main():
@@ -260,6 +305,8 @@ def main():
     with sync_playwright() as pw:
         br, pg = abrir(pw, story, timing, imgs)
         revision(pg, story, timing, out)
+        if story.get("formato") == "horizontal":
+            miniatura(pg, story, timing, out)
         if preview:
             br.close(); return
         audio = mezcla(story, out, raw, timing)
@@ -273,6 +320,8 @@ def main():
             if f % 300 == 0:
                 log(f"  cuadro {f}/{nf}")
         ff.stdin.close(); ff.wait(); br.close()
+    if story.get("youtube"):
+        youtube(story, timing, out)
     post = story.get("post", "") + "\n\n" + " ".join(story.get("hashtags", []))
     open(os.path.join(out, "post.txt"), "w", encoding="utf-8").write(post.strip() + "\n")
     if timing.get("aviso_voz"):

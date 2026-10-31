@@ -1,0 +1,863 @@
+{
+ "id": "2026-10-31-jonas-youtube",
+ "titulo": "Jonás y el gran pez (YouTube)",
+ "formato": "horizontal",
+ "actos": 6,
+ "voice": "em_alex",
+ "speed": 1.0,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.6,
+ "inicio": 0.4,
+ "cola": 5.0,
+ "audio": "diorama/audio/2026-10-31-jonas-youtube.mp3",
+ "imagenes": "diorama/img/jonas",
+ "miniatura": 0,
+ "scenes": [
+  {
+   "say": "Imagina que Dios te pide hacer algo que te aterra... Y tú compras un boleto exactamente en la dirección contraria. Eso hizo un hombre llamado Jonás. Y esa huida terminó en el lugar más oscuro que puedas imaginar: el vientre de un gran pez.",
+   "img": [
+    "j01"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "Huyó de Dios",
+     "l": "en la dirección contraria",
+     "s": 1
+    }
+   ],
+   "sfx": [
+    {
+     "k": "trueno",
+     "s": 0,
+     "d": -0.2
+    }
+   ]
+  },
+  {
+   "say": "Pero esta no es solo una historia para niños. Es la historia de todos los que alguna vez hemos huido de lo que sabemos que tenemos que hacer. Y de lo que pasa cuando, por fin, dejamos de correr.",
+   "img": [
+    "j02"
+   ],
+   "move": "up",
+   "acto": 1,
+   "mus": "menor",
+   "polvo": 0.6,
+   "titles": [
+    {
+     "b": "No es un cuento",
+     "l": "para niños",
+     "s": 0
+    },
+    {
+     "b": "Es tu historia",
+     "pos": "low",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "En los próximos minutos vas a conocer cuatro momentos de su vida: la huida, la tormenta, los tres días en la oscuridad y una segunda oportunidad que nadie esperaba. Y al final, te voy a dejar tres lecciones prácticas que puedes aplicar desde hoy.",
+   "img": [
+    "j03"
+   ],
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Tres lecciones",
+     "l": "para aplicar desde hoy",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Capítulo uno. La orden que no quería cumplir.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 1",
+   "cap_titulo": "La orden que no quería cumplir",
+   "mus": "menor"
+  },
+  {
+   "say": "Jonás era profeta en Israel. Un día recibió una orden muy clara: Levántate, ve a Nínive, esa gran ciudad, y proclama contra ella, porque su maldad ha llegado hasta mí.",
+   "img": [
+    "j04"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Ve a Nínive",
+     "l": "la orden de Dios",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "No era un desconocido. La Biblia también lo menciona en el libro de los Reyes como profeta en tiempos del rey Jeroboam segundo, originario de un pueblo llamado Gat-hefer. Era un hombre con experiencia. Sabía escuchar a Dios. Y aun así, esta vez, no quiso obedecer.",
+   "img": [
+    "j04"
+   ],
+   "move": "out",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Un profeta",
+     "l": "con experiencia",
+     "s": 0
+    },
+    {
+     "b": "Y aun así",
+     "l": "no quiso obedecer",
+     "pos": "low",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "say": "Para entender por qué Jonás tembló, tienes que saber qué era Nínive. Era una de las grandes ciudades del imperio asirio, el enemigo más temido de Israel. Los asirios eran famosos por su crueldad con los pueblos que conquistaban. Ir a Nínive a decirles que estaban mal... era como entrar a la guarida del lobo.",
+   "img": [
+    "j05"
+   ],
+   "move": "left",
+   "acto": 1,
+   "mus": "foso",
+   "nivel": 0.7,
+   "titles": [
+    {
+     "b": "Nínive",
+     "l": "capital del enemigo",
+     "s": 1
+    },
+    {
+     "b": "La guarida del lobo",
+     "pos": "low",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "say": "Así que Jonás tomó una decisión. No discutió. No pidió una señal. Simplemente se levantó... y huyó. Bajó al puerto de Jope, encontró un barco que iba a Tarsis, al otro extremo del mundo conocido, pagó su pasaje y se subió.",
+   "img": [
+    "j06"
+   ],
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Y huyó",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "say": "Nínive estaba al oriente. Tarsis, al occidente. Jonás no solo estaba evitando una tarea: estaba poniendo toda la distancia posible entre él y lo que Dios le había pedido.",
+   "img": [
+    "j07"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Nínive al oriente",
+     "l": "Tarsis al occidente"
+    }
+   ]
+  },
+  {
+   "say": "Fíjate en un detalle. La historia dice que Jonás bajó a Jope, bajó al barco y después bajó a lo más profundo de la nave para dormir. Cada paso de su huida fue hacia abajo. Así funciona huir de lo que sabemos que es correcto: nunca parece una caída, hasta que miras cuánto has bajado.",
+   "img": [
+    "j08"
+   ],
+   "move": "down",
+   "acto": 1,
+   "mus": "menor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "Bajó, bajó y bajó",
+     "s": 1
+    },
+    {
+     "b": "Huir siempre",
+     "l": "es ir hacia abajo",
+     "pos": "low",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "say": "Capítulo dos. La tormenta.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 2",
+   "cap_titulo": "La tormenta",
+   "mus": "foso"
+  },
+  {
+   "say": "Apenas el barco se alejó de la costa, se levantó un viento tan fuerte que el mar se volvió loco. Las olas golpeaban de lado a lado y la nave parecía a punto de partirse en dos.",
+   "img": [
+    "j09"
+   ],
+   "move": "shake",
+   "acto": 2,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "La tormenta",
+     "l": "a punto de partir el barco",
+     "s": 1
+    }
+   ],
+   "sfx": [
+    {
+     "k": "trueno",
+     "s": 0,
+     "at": 0.4
+    },
+    {
+     "k": "trueno",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Los marineros, hombres acostumbrados al mar, estaban aterrados. Cada uno clamaba a su propio dios. Empezaron a tirar la carga al agua para aligerar el barco. Y mientras todos peleaban por sobrevivir... Jonás seguía dormido.",
+   "img": [
+    "j10"
+   ],
+   "move": "shake",
+   "acto": 2,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "Cada uno",
+     "l": "clamaba a su dios",
+     "s": 1
+    },
+    {
+     "b": "Jonás dormía",
+     "pos": "low",
+     "s": 3,
+     "at": 0.4
+    }
+   ],
+   "sfx": [
+    {
+     "k": "agua",
+     "s": 2,
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "El capitán bajó, lo despertó y le dijo: ¿Qué haces durmiendo? ¡Levántate y clama a tu Dios! Tal vez se acuerde de nosotros y no muramos.",
+   "img": [
+    "j11"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "¡Levántate!",
+     "l": "y clama a tu Dios",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Desesperados, los marineros echaron suertes para saber quién tenía la culpa de esa tormenta. Y la suerte cayó sobre Jonás. Todos lo rodearon con las mismas preguntas: ¿Quién eres? ¿De dónde vienes? ¿Qué hiciste?",
+   "img": [
+    "j12"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "La suerte",
+     "l": "cayó sobre Jonás",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Y Jonás, por primera vez en toda la historia, dijo la verdad: Soy hebreo, y temo al Señor, Dios de los cielos, que hizo el mar y la tierra. Les contó que estaba huyendo de Él. Y entonces dijo algo que nadie esperaba: Tómenme y échenme al mar, y el mar se calmará. Yo sé que por mi culpa les ha venido esta tormenta.",
+   "img": [
+    "j13"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "Dijo la verdad",
+     "s": 0,
+     "at": 0.4
+    },
+    {
+     "b": "Échenme al mar",
+     "l": "es por mi culpa",
+     "pos": "low",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "say": "Los marineros no querían hacerlo. Remaron con todas sus fuerzas para volver a tierra. Pero no pudieron: el mar se embravecía cada vez más.",
+   "img": [
+    "j14"
+   ],
+   "move": "shake",
+   "acto": 2,
+   "mus": "foso",
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "Remaron",
+     "l": "con todas sus fuerzas",
+     "s": 1
+    }
+   ],
+   "sfx": [
+    {
+     "k": "trueno",
+     "s": 2,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "Al final, lo tomaron... Y lo lanzaron al agua. Y en ese mismo instante, el mar dejó de rugir.",
+   "img": [
+    "j15"
+   ],
+   "move": "down",
+   "acto": 2,
+   "mus": "foso",
+   "corte": true,
+   "ambiente": "olas",
+   "titles": [
+    {
+     "b": "El mar",
+     "l": "dejó de rugir",
+     "s": 2
+    }
+   ],
+   "sfx": [
+    {
+     "k": "agua",
+     "s": 1,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Silencio total. Los marineros, que minutos antes le rezaban a muchos dioses, se quedaron mirando el agua en calma, llenos de temor, y ofrecieron sacrificios al Dios de Jonás. Mientras tanto, Jonás se hundía en la oscuridad del mar.",
+   "img": [
+    "j16"
+   ],
+   "move": "out",
+   "fade": true,
+   "acto": 2,
+   "mus": "mayor",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "Silencio total",
+     "s": 0
+    },
+    {
+     "b": "Jonás se hundía",
+     "pos": "low",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "say": "Capítulo tres. Tres días en la oscuridad.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 3",
+   "cap_titulo": "Tres días en la oscuridad",
+   "mus": "foso"
+  },
+  {
+   "say": "Pero la historia no termina en el fondo del mar. Dios preparó un gran pez para que se tragara a Jonás. Y Jonás estuvo en el vientre del pez tres días y tres noches.",
+   "img": [
+    "j17"
+   ],
+   "move": "down",
+   "acto": 3,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Un gran pez",
+     "l": "preparado por Dios",
+     "s": 1
+    }
+   ],
+   "dial": {
+    "tipo": "dias",
+    "n": 3,
+    "sub": "DÍAS",
+    "s": 2,
+    "dur": 1.2,
+    "x": 1560,
+    "y": 560,
+    "r": 200
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 1,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Piénsalo. Oscuridad absoluta. Sin saber si era de día o de noche. Sin saber si iba a salir con vida. Y ahí, en el peor lugar posible, Jonás hizo lo que no había hecho en toda la historia: oró.",
+   "img": [
+    "j18"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.6,
+   "polvo": 0.6,
+   "titles": [
+    {
+     "b": "Oscuridad absoluta",
+     "s": 1
+    },
+    {
+     "b": "Y ahí, oró",
+     "pos": "low",
+     "s": 4,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Desde el vientre del pez, dijo: En mi angustia clamé al Señor, y Él me respondió. Me arrojaste a lo profundo, las algas se enredaron en mi cabeza... Pero tú sacaste mi vida del abismo. Y termina con una frase que lo cambia todo: La salvación viene del Señor.",
+   "img": [
+    "j19"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.7,
+   "titles": [
+    {
+     "b": "En mi angustia",
+     "l": "clamé al Señor",
+     "s": 0,
+     "at": 0.3
+    },
+    {
+     "b": "La salvación",
+     "l": "viene del Señor",
+     "pos": "low",
+     "s": 3,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Fíjate en algo. Jonás no oró cuando recibió la orden. No oró en el barco, ni en la tormenta. Oró cuando ya no tenía a dónde huir. A veces llegamos al fondo, no para quedarnos ahí, sino para que por fin dejemos de escapar y volvamos a hablar con Dios.",
+   "img": [
+    "j18"
+   ],
+   "move": "out",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.6,
+   "polvo": 0.6,
+   "titles": [
+    {
+     "b": "Oró cuando ya",
+     "l": "no tenía a dónde huir",
+     "s": 3
+    },
+    {
+     "b": "Dejar de escapar",
+     "pos": "low",
+     "s": 4,
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Entonces Dios habló al pez, y el pez vomitó a Jonás en tierra firme. Mojado, cubierto de algas, con la luz del amanecer en la cara... Pero vivo. Muchos siglos después, Jesús mismo usaría esta historia como señal: así como Jonás estuvo tres días en el vientre del pez, Él estaría tres días en el corazón de la tierra.",
+   "img": [
+    "j20"
+   ],
+   "move": "out",
+   "fade": true,
+   "acto": 3,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Vivo",
+     "s": 2
+    },
+    {
+     "b": "La señal de Jonás",
+     "l": "Mateo 12:40",
+     "pos": "low",
+     "s": 3
+    }
+   ],
+   "sfx": [
+    {
+     "k": "agua",
+     "s": 0,
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Capítulo cuatro. La segunda oportunidad.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 4",
+   "cap_titulo": "La segunda oportunidad",
+   "mus": "mayor"
+  },
+  {
+   "say": "Y aquí viene una de las frases más poderosas de todo el libro: Vino la palabra del Señor por segunda vez a Jonás. Por segunda vez. Dios no lo descartó por haber huido. Le dio exactamente la misma misión. Y esta vez, Jonás se levantó y fue a Nínive.",
+   "img": [
+    "j21"
+   ],
+   "move": "up",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Por segunda vez",
+     "s": 1
+    },
+    {
+     "b": "La misma misión",
+     "pos": "low",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "say": "Nínive era tan grande que se necesitaban tres días para recorrerla. Jonás entró y caminó un día entero, gritando un mensaje de solo unas palabras: Dentro de cuarenta días, Nínive será destruida.",
+   "img": [
+    "j22"
+   ],
+   "move": "right",
+   "acto": 4,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Un mensaje",
+     "l": "de pocas palabras",
+     "s": 1
+    }
+   ],
+   "dial": {
+    "tipo": "dias",
+    "n": 40,
+    "sub": "DÍAS",
+    "s": 1,
+    "at": 0.6,
+    "dur": 2.0,
+    "x": 1560,
+    "y": 560,
+    "r": 210
+   }
+  },
+  {
+   "say": "Y pasó lo impensable. La gente le creyó a Dios. Proclamaron ayuno y se vistieron de cilicio, desde el más grande hasta el más pequeño.",
+   "img": [
+    "j23"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Le creyeron",
+     "l": "a Dios",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Cuando la noticia llegó al rey, se levantó de su trono, se quitó su manto, se cubrió de cilicio y se sentó sobre ceniza. Y ordenó a toda la ciudad: que cada uno se aparte de su mal camino y de la violencia que hay en sus manos. ¿Quién sabe si Dios se arrepentirá y nos perdonará?",
+   "img": [
+    "j24"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "El rey",
+     "l": "se sentó en ceniza",
+     "s": 0,
+     "at": 0.6
+    },
+    {
+     "b": "¿Quién sabe?",
+     "pos": "low",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "say": "Y Dios vio lo que hicieron, vio que se apartaron de su mal camino... Y no les envió el castigo. Una de las ciudades más crueles del mundo antiguo recibió misericordia. Cualquiera pensaría que Jonás estaría feliz. Pero no lo estaba.",
+   "img": [
+    "j25"
+   ],
+   "move": "up",
+   "acto": 4,
+   "mus": "mayor",
+   "nivel": 1.1,
+   "titles": [
+    {
+     "b": "Misericordia",
+     "s": 2
+    },
+    {
+     "b": "Pero Jonás",
+     "l": "no estaba feliz",
+     "pos": "low",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "say": "Capítulo cinco. La planta y la pregunta.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 5",
+   "cap_titulo": "La planta y la pregunta",
+   "mus": "menor"
+  },
+  {
+   "say": "Jonás se enojó muchísimo. Y le reclamó a Dios: Por eso huí. Yo sabía que tú eres un Dios clemente y piadoso, lento para la ira y grande en misericordia. Salió de la ciudad, se hizo una enramada y se sentó a ver qué pasaría con Nínive.",
+   "img": [
+    "j26"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Por eso huí",
+     "s": 1,
+     "at": 0.3
+    },
+    {
+     "b": "Lento para la ira",
+     "l": "grande en misericordia",
+     "pos": "low",
+     "s": 2,
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Dios hizo crecer una planta que le dio sombra, y Jonás se alegró mucho por ella. Pero al amanecer siguiente, un gusano la hirió y la planta se secó. Llegó un viento caliente del oriente, el sol le pegaba en la cabeza, y Jonás se enfureció otra vez.",
+   "img": [
+    "j27"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "La planta",
+     "l": "se secó",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Entonces Dios le hizo una pregunta: Tú tuviste lástima de una planta en la que no trabajaste, que nació en una noche y en una noche murió. ¿Y yo no voy a tener compasión de Nínive, donde hay más de ciento veinte mil personas...? Y así, con una pregunta abierta, termina el libro de Jonás.",
+   "img": [
+    "j27"
+   ],
+   "move": "out",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "¿Y yo no voy a",
+     "l": "tener compasión?",
+     "s": 1
+    },
+    {
+     "b": "Una pregunta abierta",
+     "pos": "low",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "say": "Capítulo seis. Lo que Jonás te enseña hoy.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 6",
+   "cap_titulo": "Lo que Jonás te enseña hoy",
+   "mus": "mayor"
+  },
+  {
+   "say": "Primera lección: huir siempre te cuesta más que obedecer. Jonás pagó su pasaje para escapar, pero la factura real fue la tormenta. ¿Qué conversación difícil, qué decisión o qué responsabilidad estás evitando hoy? Escríbela. Ponerle nombre es el primer paso para dejar de correr.",
+   "img": [
+    "j06"
+   ],
+   "move": "left",
+   "acto": 6,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "1. Huir cuesta más",
+     "l": "que obedecer",
+     "s": 0
+    },
+    {
+     "b": "Escríbelo hoy",
+     "pos": "low",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "say": "Segunda lección: tu peor error no es el final de tu historia. La palabra llegó a Jonás por segunda vez. Si fallaste, no te quedes en el vientre del pez lamentándote: levántate y haz hoy lo que dejaste pendiente.",
+   "img": [
+    "j21"
+   ],
+   "move": "in",
+   "acto": 6,
+   "mus": "mayor",
+   "nivel": 0.9,
+   "titles": [
+    {
+     "b": "2. Tu peor error",
+     "l": "no es el final",
+     "s": 0
+    }
+   ]
+  },
+  {
+   "say": "Tercera lección: cuidado con querer misericordia para ti y justicia para los demás. Jonás aceptó con gusto su segunda oportunidad, pero no quería que Nínive tuviera la suya. Esta semana, piensa en una persona a la que no has querido perdonar... Y da un paso, aunque sea pequeño.",
+   "img": [
+    "j26"
+   ],
+   "move": "out",
+   "acto": 6,
+   "mus": "mayor",
+   "nivel": 0.9,
+   "titles": [
+    {
+     "b": "3. Misericordia",
+     "l": "también para los demás",
+     "s": 0
+    }
+   ]
+  },
+  {
+   "say": "Te dejo un ejercicio para esta semana. Toma una hoja y divídela en dos. Del lado izquierdo, escribe aquello de lo que estás huyendo. Del lado derecho, el primer paso pequeño que puedes dar en las próximas veinticuatro horas. No el plan completo. Solo el primer paso. Jonás no tuvo que salvar a Nínive de un día para otro: solo tuvo que levantarse e ir.",
+   "img": [
+    "j03"
+   ],
+   "move": "in",
+   "acto": 6,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "Ejercicio",
+     "l": "una hoja, dos columnas",
+     "s": 1
+    },
+    {
+     "b": "Solo el primer paso",
+     "pos": "low",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "say": "Jonás huyó de Dios y terminó en el fondo del mar. Pero incluso ahí, Dios no huyó de él. No importa qué tan lejos hayas corrido: siempre puedes dar la vuelta.",
+   "img": [
+    "j25"
+   ],
+   "move": "up",
+   "acto": 6,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "titles": [
+    {
+     "b": "Siempre puedes",
+     "l": "dar la vuelta",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "say": "Y ahora te pregunto: ¿De qué estás huyendo tú? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿De qué estás",
+     "l": "huyendo tú?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titulo": "Jonás y el gran pez: huyó de Dios y terminó en el fondo del mar | Historia bíblica completa",
+  "intro": "Introducción",
+  "descripcion": "Dios le pidió a Jonás ir a Nínive, la capital del enemigo más cruel de Israel. Él compró un boleto en la dirección contraria. Esta es la historia completa de Jonás (Jonás 1–4): la huida, la tormenta, los tres días en el vientre del gran pez, la segunda oportunidad y la pregunta con la que termina el libro. Al final, tres lecciones prácticas para dejar de huir de lo que sabes que tienes que hacer.\n\n¿De qué estás huyendo tú? Te leo en los comentarios.\nSuscríbete a Impulso Real para más historias de fe, liderazgo y fortaleza interior.\n\nFuentes: Jonás 1–4; Mateo 12:40.",
+  "hashtags": [
+   "#Jonás",
+   "#HistoriasBiblicas",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "Jonás",
+   "Jonás y la ballena",
+   "Jonás y el gran pez",
+   "historia de Jonás",
+   "historias bíblicas",
+   "Biblia",
+   "Nínive",
+   "fe",
+   "segunda oportunidad",
+   "Impulso Real"
+  ]
+ },
+ "post": "La historia completa de Jonás: huyó de Dios y terminó en el fondo del mar 🐋",
+ "hashtags": [
+  "#Jonás",
+  "#HistoriasBiblicas",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "Jonás 1–4 (Biblia)",
+  "Mateo 12:40",
+  "2 Reyes 14:25"
+ ]
+}

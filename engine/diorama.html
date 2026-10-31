@@ -9,8 +9,9 @@ html,body{margin:0;background:#000}canvas{display:block}
 <script>
 // Plantilla "diorama" de Impulso Real: imágenes fijas estilo stop-motion (plastilina + papel) con cámara,
 // "boil" a 12 fps, polvo, grano, viñeta, títulos de dos líneas, dial del logo, puntos de progreso y cierre de marca.
-const W = 1080, H = 1920, S = window.STORY, T = window.TIMING, I = window.IMGS || {};
-const cv = document.getElementById('c'), g = cv.getContext('2d');
+const S = window.STORY, T = window.TIMING, I = window.IMGS || {}, HZ = S.formato === 'horizontal';
+const W = HZ ? 1920 : 1080, H = HZ ? 1080 : 1920;
+const cv = document.getElementById('c'); cv.width = W; cv.height = H; const g = cv.getContext('2d');
 const OR = '#FF6B3D';
 let imgs = {}, logo = null, logoBg = '#0B0B0B', grain = [], vig = null, dust = [];
 
@@ -103,7 +104,9 @@ function fx(t, polvo) {
   g.drawImage(grain[Math.floor(t * 12) % 4], 0, 0, W, H); g.restore();
 }
 
-const POS = { top: [540, 360, 'center'], topleft: [90, 360, 'left'], topright: [930, 300, 'right'],
+const POS = HZ ? { top: [960, 190, 'center'], high: [960, 150, 'center'], mid: [960, 300, 'center'], topleft: [110, 180, 'left'],
+  topright: [1810, 180, 'right'], left: [110, 820, 'left'], lowleft: [110, 900, 'left'], low: [960, 900, 'center'], center: [960, 560, 'center'],
+  q: [1400, 330, 'center'] } : { top: [540, 360, 'center'], topleft: [90, 360, 'left'], topright: [930, 300, 'right'],
   left: [90, 1360, 'left'], center: [540, 900, 'center'], low: [540, 1420, 'center'], high: [540, 230, 'center'], mid: [540, 560, 'center'], lowleft: [90, 1490, 'left'], q: [540, 250, 'center'] };
 
 function fitFont(txt, weight, fam, size, maxW) {
@@ -115,7 +118,7 @@ function fitFont(txt, weight, fam, size, maxW) {
 function title(tt, t, t0, t1) {
   const k = ease((t - t0) / 0.45), out = 1 - ease((t - (t1 - 0.3)) / 0.3), al = Math.min(k, out);
   if (t < t0 || al <= 0) return;
-  const [x, y0, align] = POS[tt.pos || 'top'], y = y0 + (1 - k) * 14, maxW = align === 'center' ? 780 : 840;
+  const [x, y0, align] = POS[tt.pos || 'top'], y = y0 + (1 - k) * 14, maxW = HZ ? (tt.pos === 'q' ? 900 : align === 'center' ? 1500 : 1100) : align === 'center' ? 780 : 840;
   g.save(); g.globalAlpha = al; g.textAlign = align; if (k < 1) g.filter = `blur(${(1 - k) * 8}px)`;
   const arena = tt.color === 'arena';
   const bs = fitFont(tt.b, 800, 'MB', tt.big ? 150 : 96, maxW);
@@ -133,7 +136,7 @@ function title(tt, t, t0, t1) {
 function dial(d, t, t0, t1) {
   const k = ease((t - t0) / 0.35), out = 1 - ease((t - (t1 - 0.3)) / 0.3), al = Math.min(k, out);
   if (t < t0 || al <= 0) return;
-  const cx = d.x || 540, cy = d.y || 820, R = d.r || 230, sc = 0.92 + 0.08 * k;
+  const cx = d.x || W / 2, cy = d.y || (HZ ? 520 : 820), R = d.r || 230, sc = 0.92 + 0.08 * k;
   g.save(); g.globalAlpha = al; g.translate(cx, cy); g.scale(sc, sc);
   g.fillStyle = 'rgba(14,14,15,.74)'; g.beginPath(); g.arc(0, 0, R * 1.18, 0, 6.2832); g.fill();
   const fill = d.tipo === 'dias' ? ease((t - t0 - 0.2) / (d.dur || 2.0)) : 0, lit = Math.round(fill * (d.n || 30));
@@ -162,7 +165,7 @@ function dial(d, t, t0, t1) {
 }
 
 function dots(acto) {
-  const n = 5, y = 1640, sp = 36, x0 = 540 - sp * (n - 1) / 2;
+  const n = S.actos || 5, y = HZ ? H - 56 : 1640, sp = 36, x0 = W / 2 - sp * (n - 1) / 2;
   g.save();
   for (let k = 0; k < n; k++) {
     const on = k + 1 === acto; g.beginPath(); g.arc(x0 + k * sp, y, on ? 8 : 6, 0, 6.2832);
@@ -173,30 +176,31 @@ function dots(acto) {
 
 function cierre(i, t) {
   const sc = S.scenes[i], a = T.cuts[i], r = t - a, E = T.ev[i];
-  if (i > 0) drawScene(i - 1, t);
+  const L = HZ ? { cx: 520, cy: 540, sz: 900, tx: 1400, y1: 640, y2: 750 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610 };
+  if (i > 0 && S.scenes[i - 1].img) drawScene(i - 1, t);
   g.save(); g.globalAlpha = ease(r / 0.9); g.fillStyle = logoBg; g.fillRect(0, 0, W, H); g.restore();
   if (logo) {
     const wp = ease((r - 0.3) / 1.1);                                // el dial "se cierra" en sentido del reloj
     if (wp > 0) {
-      g.save(); g.beginPath(); g.moveTo(540, 900); g.arc(540, 900, 820, -1.5708, -1.5708 + 6.2832 * wp); g.closePath(); g.clip();
-      g.globalAlpha = Math.min(1, wp * 1.5); g.drawImage(logo, 0, 360, 1080, 1080); g.restore();
+      g.save(); g.beginPath(); g.moveTo(L.cx, L.cy); g.arc(L.cx, L.cy, L.sz * 0.76, -1.5708, -1.5708 + 6.2832 * wp); g.closePath(); g.clip();
+      g.globalAlpha = Math.min(1, wp * 1.5); g.drawImage(logo, L.cx - L.sz / 2, L.cy - L.sz / 2, L.sz, L.sz); g.restore();
     }
     const pg = ease((r - 1.3) / 0.5);
     if (pg > 0) {
-      const pu = 0.55 + 0.45 * Math.sin((r - 1.3) * 3.2), gr = g.createRadialGradient(540, 900, 0, 540, 900, 270);
-      gr.addColorStop(0, `rgba(255,107,61,${0.24 * pg * pu})`); gr.addColorStop(1, 'rgba(255,107,61,0)'); g.fillStyle = gr; g.fillRect(270, 630, 540, 540);
+      const pu = 0.55 + 0.45 * Math.sin((r - 1.3) * 3.2), gr = g.createRadialGradient(L.cx, L.cy, 0, L.cx, L.cy, 270);
+      gr.addColorStop(0, `rgba(255,107,61,${0.24 * pg * pu})`); gr.addColorStop(1, 'rgba(255,107,61,0)'); g.fillStyle = gr; g.fillRect(L.cx - 270, L.cy - 270, 540, 540);
     }
   }
   (sc.titles || []).forEach((tt, k) => title(tt, t, E.titles[k], T.total + 1));
   const n1 = ease((r - 1.6) / 0.5);
   if (n1 > 0) {
     g.save(); g.globalAlpha = n1; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.letterSpacing = '12px';
-    g.fillText('IMPULSO REAL', 546, 1530 + (1 - n1) * 14); g.restore();
+    g.fillText('IMPULSO REAL', L.tx, L.y1 + (1 - n1) * 14); g.restore();
   }
   const n2 = ease((r - 2.0) / 0.5);
   if (n2 > 0) {
     const s = 1 + 0.035 * Math.sin((r - 2.0) * 4) * n2, w = 330, h = 84;
-    g.save(); g.globalAlpha = n2; g.translate(540, 1610); g.scale(s, s);
+    g.save(); g.globalAlpha = n2; g.translate(L.tx - 6, L.y2); g.scale(s, s);
     g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, h / 2); g.fillStyle = 'rgba(255,107,61,.14)'; g.fill();
     g.lineWidth = 4; g.strokeStyle = OR; g.shadowColor = OR; g.shadowBlur = 14; g.stroke();
     g.shadowBlur = 0; g.fillStyle = OR; g.font = '600 38px MS'; g.letterSpacing = '4px'; g.textAlign = 'center'; g.textBaseline = 'middle';
@@ -204,12 +208,38 @@ function cierre(i, t) {
   }
 }
 
+function capitulo(i, t) {
+  const sc = S.scenes[i], a = T.cuts[i], b = winEnd(i), r = t - a, cx = W / 2, cy = H / 2, R = Math.min(W, H) * 0.44;
+  const out = 1 - ease((t - (b - 0.35)) / 0.35), k = ease(r / 0.9), k1 = ease((r - 0.15) / 0.5), k2 = ease((r - 0.4) / 0.6);
+  g.fillStyle = logoBg; g.fillRect(0, 0, W, H);
+  g.strokeStyle = 'rgba(255,255,255,.035)'; g.lineWidth = 1;
+  for (let x = 0; x < W; x += 60) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke(); }
+  for (let y = 0; y < H; y += 60) { g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }
+  g.save(); g.globalAlpha = 0.5 * out; g.translate(cx, cy); g.rotate(r * 0.05); g.lineCap = 'round';
+  for (let j = 0; j < Math.round(60 * k); j++) {
+    const an = j / 60 * 6.2832 - 1.5708, maj = j % 5 === 0, Lg = maj ? R * 0.09 : R * 0.05;
+    g.strokeStyle = maj ? 'rgba(236,233,227,.9)' : 'rgba(236,233,227,.45)'; g.lineWidth = maj ? 4 : 2;
+    g.beginPath(); g.moveTo(Math.cos(an) * (R - Lg), Math.sin(an) * (R - Lg)); g.lineTo(Math.cos(an) * R, Math.sin(an) * R); g.stroke();
+  }
+  g.restore();
+  const tit = sc.cap_titulo || '', lines = tit.split('\n');
+  g.save(); g.textAlign = 'center'; g.globalAlpha = k1 * out; g.fillStyle = OR; g.font = '600 40px MS'; g.letterSpacing = '10px';
+  g.fillText(sc.cap || '', cx + 5, cy - 90 + (1 - k1) * 12);
+  g.letterSpacing = '0px'; g.globalAlpha = k2 * out; g.fillStyle = '#fff';
+  const fs = fitFont(tit, 800, 'MB', HZ ? 110 : 96, W - 240);
+  if (k2 < 1) g.filter = `blur(${(1 - k2) * 8}px)`;
+  lines.forEach((l, j) => g.fillText(l, cx, cy + 30 + j * fs * 1.05 + (1 - k2) * 14));
+  g.filter = 'none'; g.fillStyle = OR; const lw = 180 * k2; g.fillRect(cx - lw / 2, cy + 30 + (lines.length - 1) * fs * 1.05 + 48, lw, 5);
+  g.restore();
+}
+
 window.render = function (t) {
   const i = sceneAt(t), sc = S.scenes[i], a = T.cuts[i], b = winEnd(i), E = T.ev[i];
   g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
   if (sc.tipo === 'cierre') { cierre(i, t); fx(t, 0); return; }
+  if (sc.tipo === 'capitulo') { capitulo(i, t); fx(t, 0); return; }
   drawScene(i, t);
-  if (sc.fade && i > 0 && t < a + 0.5) { g.save(); g.globalAlpha = 1 - ease((t - a) / 0.5); drawScene(i - 1, t); g.restore(); }
+  if (sc.fade && i > 0 && S.scenes[i - 1].img && t < a + 0.5) { g.save(); g.globalAlpha = 1 - ease((t - a) / 0.5); drawScene(i - 1, t); g.restore(); }
   fx(t, sc.polvo === undefined ? 1 : sc.polvo);
   if (sc.dial) dial(sc.dial, t, E.dial, b);
   (sc.titles || []).forEach((tt, k) => title(tt, t, E.titles[k], b));
