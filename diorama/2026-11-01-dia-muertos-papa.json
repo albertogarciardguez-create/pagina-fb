@@ -150,7 +150,7 @@
   {
    "say": "Por un rato, la casa vuelve a estar completa.",
    "img": [
-    "d08"
+    "d07"
    ],
    "move": "out",
    "acto": 3,
@@ -212,6 +212,10 @@
      "b": "Ya es hora",
      "pos": "low"
     }
+   ],
+   "foco": [
+    0.5,
+    0.42
    ]
   },
   {
@@ -290,12 +294,13 @@
    "titles": [
     {
      "b": "Te espero el próximo año,",
-     "l": "papá"
+     "l": "papá",
+     "pos": "low"
     },
     {
      "b": "Para mi papá",
      "l": "siempre en mi corazón",
-     "pos": "low",
+     "pos": "high",
      "at": 0.9
     }
    ]
