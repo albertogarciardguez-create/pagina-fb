@@ -30,9 +30,11 @@ def voz(story, path, out):
     base = mp3[:-4]
     partes = [f"{base}_{k}.mp3" for k in range(1, 30) if os.path.exists(f"{base}_{k}.mp3")]
     if not os.path.exists(mp3) and partes:  # voz larga entregada en varias partes: _1.mp3, _2.mp3...
-        lista = os.path.join(out, "partes.txt")
-        open(lista, "w").write("".join(f"file '{x}'\n" for x in partes))
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lista, "-c:a", "libmp3lame", "-q:a", "2", mp3], check=True)
+        gap = story.get("pausaPartes", 0.6)  # silencio entre partes (p. ej. cambios de voz en un diálogo)
+        ins = sum([["-i", x] for x in partes], [])
+        fil = "".join(f"[{k}:a]aresample=44100,aformat=channel_layouts=mono,apad=pad_dur={gap}[a{k}];" for k in range(len(partes)))
+        fil += "".join(f"[a{k}]" for k in range(len(partes))) + f"concat=n={len(partes)}:v=0:a=1[o]"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", *ins, "-filter_complex", fil, "-map", "[o]", "-c:a", "libmp3lame", "-q:a", "2", mp3], check=True)
         log(f"voz: uní {len(partes)} partes en {os.path.relpath(mp3, ROOT)}")
     if os.path.exists(mp3):
         log("voz: alineando", os.path.relpath(mp3, ROOT))

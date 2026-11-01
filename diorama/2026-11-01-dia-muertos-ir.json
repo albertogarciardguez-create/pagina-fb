@@ -1,0 +1,303 @@
+{
+ "voice": "em_alex",
+ "speed": 1.0,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.55,
+ "inicio": 0.35,
+ "pausaPartes": 0.7,
+ "imagenes": "diorama/img/dia-muertos",
+ "id": "2026-11-01-dia-muertos-ir",
+ "titulo": "Día de Muertos (Impulso Real)",
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-01-dia-muertos-ir.mp3",
+ "scenes": [
+  {
+   "say": "Cada año, el dos de noviembre, pongo la mesa para uno más.",
+   "img": [
+    "d01"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "2 de noviembre",
+     "l": "pongo la mesa para uno más"
+    }
+   ],
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Le sirvo su café de olla, su pan... y enciendo las velas.",
+   "img": [
+    "d02"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Su café, su pan",
+     "l": "y sus velas"
+    }
+   ]
+  },
+  {
+   "say": "Y espero.",
+   "img": [
+    "d03"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "Y espero"
+    }
+   ],
+   "dial": {
+    "tipo": "noche",
+    "sub": "ESPERA",
+    "s": 0,
+    "at": 0.1,
+    "vuelta": 2.5,
+    "y": 760,
+    "r": 160
+   }
+  },
+  {
+   "say": "Hasta que el camino de flores se ilumina.",
+   "img": [
+    "d04"
+   ],
+   "move": "up",
+   "acto": 2,
+   "mus": "mayor",
+   "nivel": 0.7,
+   "titles": [
+    {
+     "b": "El camino de flores",
+     "l": "se ilumina",
+     "at": 0.4
+    }
+   ],
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "¿Me estabas esperando, mijo?",
+   "img": [
+    "d05"
+   ],
+   "move": "in",
+   "fade": true,
+   "acto": 2,
+   "mus": "mayor",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "¿Me estabas esperando,",
+     "l": "mijo?",
+     "pos": "low"
+    }
+   ]
+  },
+  {
+   "say": "Todo el año, papá.",
+   "img": [
+    "d06"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "mayor",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "Todo el año, papá",
+     "pos": "low"
+    }
+   ]
+  },
+  {
+   "say": "Platicamos como antes. Se ríe de mis cosas. Me pregunta por todos.",
+   "img": [
+    "d07"
+   ],
+   "move": "right",
+   "acto": 3,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Platicamos",
+     "l": "como antes"
+    }
+   ]
+  },
+  {
+   "say": "Por un rato, la casa vuelve a estar completa.",
+   "img": [
+    "d08"
+   ],
+   "move": "out",
+   "acto": 3,
+   "mus": "mayor",
+   "nivel": 1.1,
+   "titles": [
+    {
+     "b": "La casa",
+     "l": "vuelve a estar completa"
+    }
+   ]
+  },
+  {
+   "say": "Ya me tengo que ir, mijo.",
+   "img": [
+    "d09"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "Ya me tengo que ir,",
+     "l": "mijo",
+     "pos": "low"
+    }
+   ]
+  },
+  {
+   "say": "¿Tan pronto?",
+   "img": [
+    "d10"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "nivel": 0.5,
+   "corte": true,
+   "titles": [
+    {
+     "b": "¿Tan pronto?",
+     "pos": "low",
+     "big": true
+    }
+   ]
+  },
+  {
+   "say": "Ya es hora.",
+   "img": [
+    "d11"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "nivel": 0.4,
+   "titles": [
+    {
+     "b": "Ya es hora",
+     "pos": "low"
+    }
+   ]
+  },
+  {
+   "say": "Me abrazó como cuando era niño.",
+   "img": [
+    "d12"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "Me abrazó",
+     "l": "como cuando era niño"
+    }
+   ]
+  },
+  {
+   "say": "Y se fue por el mismo camino de flores.",
+   "img": [
+    "d13"
+   ],
+   "move": "in",
+   "fade": true,
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Por el mismo",
+     "l": "camino de flores"
+    }
+   ]
+  },
+  {
+   "say": "Dicen que el dos de noviembre vuelven a visitarnos. Yo no lo dudo.",
+   "img": [
+    "d14"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Vuelven a visitarnos",
+     "l": "yo no lo dudo",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Porque nadie muere del todo... mientras alguien lo siga esperando.",
+   "img": [
+    "d15"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "titles": [
+    {
+     "b": "Nadie muere del todo",
+     "l": "mientras alguien lo espere"
+    }
+   ]
+  },
+  {
+   "say": "¿Y tú, a quién vas a esperar este dos de noviembre?",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿A quién vas a esperar",
+     "l": "este 2 de noviembre?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "Cada 2 de noviembre pongo la mesa para uno más 🕯️🧡 Porque nadie muere del todo mientras alguien lo siga esperando. ¿A quién vas a esperar tú este año? 👇",
+ "hashtags": [
+  "#DiaDeMuertos",
+  "#2DeNoviembre",
+  "#Ofrenda",
+  "#Papá",
+  "#ImpulsoReal"
+ ],
+ "sources": []
+}
