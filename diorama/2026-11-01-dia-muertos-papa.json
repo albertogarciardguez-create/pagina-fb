@@ -4,7 +4,7 @@
  "pausaFrase": 0.3,
  "pausaEscena": 0.55,
  "inicio": 0.35,
- "pausaPartes": 0.7,
+ "pausaPartes": 1.0,
  "imagenes": "diorama/img/dia-muertos",
  "id": "2026-11-01-dia-muertos-papa",
  "titulo": "Día de Muertos (dedicatoria a mi papá)",
