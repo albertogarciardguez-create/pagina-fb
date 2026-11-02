@@ -43,7 +43,7 @@
   {
    "say": "Sabes que se fue. Pero tu cabeza lo sigue buscando.",
    "img": [
-    "d03"
+    "h02"
    ],
    "move": "in",
    "acto": 1,
@@ -141,7 +141,7 @@
   {
    "say": "El amor no se fue con él. Se quedó contigo, buscando a dónde ir.",
    "img": [
-    "d01"
+    "h07"
    ],
    "move": "in",
    "acto": 4,
@@ -156,7 +156,7 @@
   {
    "say": "Por eso el recuerdo es eterno: porque cada vez que lo nombras, vuelve.",
    "img": [
-    "d15"
+    "h08"
    ],
    "move": "in",
    "acto": 5,
