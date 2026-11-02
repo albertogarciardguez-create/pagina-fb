@@ -30,8 +30,14 @@
    "titles": [
     {
      "b": "Hay ausencias",
-     "l": "que no se acostumbran"
+     "l": "que no se acostumbran",
+     "pos": "high",
+     "color": "arena"
     }
+   ],
+   "foco": [
+    0.35,
+    0.5
    ]
   },
   {
@@ -59,7 +65,9 @@
    "mus": "menor",
    "titles": [
     {
-     "b": "Entre la gente"
+     "b": "Entre la gente",
+     "pos": "high",
+     "color": "arena"
     }
    ]
   },
@@ -75,7 +83,8 @@
    "titles": [
     {
      "b": "Himno Eterno",
-     "l": "Porter"
+     "l": "Porter",
+     "pos": "low"
     }
    ]
   },
@@ -91,7 +100,8 @@
    "titles": [
     {
      "b": "El mundo",
-     "l": "se ve más gris"
+     "l": "se ve más gris",
+     "pos": "low"
     }
    ]
   },
@@ -123,7 +133,8 @@
    "corte": true,
    "titles": [
     {
-     "b": "Hasta que entiendes"
+     "b": "Hasta que entiendes",
+     "pos": "high"
     }
    ]
   },
