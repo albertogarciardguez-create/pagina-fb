@@ -1,5 +1,5 @@
 {
-  "_nota": "motor: kokoro (gratis, offline, respaldo) | elevenlabs (API, gasta créditos) | chatterbox (tu voz clonada, local en la Mac). Si el motor elegido falla, el video sale con kokoro. Para probar uno sin cambiar este archivo: VOZ_MOTOR=chatterbox python3 engine/build.py ...",
+  "_nota": "motor: kokoro (gratis, offline, respaldo) | elevenlabs (API, gasta créditos) | edge (voces de Microsoft, gratis con internet) | chatterbox (tu voz clonada, local en la Mac). Si el motor elegido falla, el video sale con kokoro. Para probar uno sin cambiar este archivo: VOZ_MOTOR=chatterbox python3 engine/build.py ...",
   "motor": "kokoro",
   "kokoro": {
     "voz": "em_alex"
@@ -20,5 +20,11 @@
     "cfg": 0.4,
     "temperatura": 0.8,
     "velocidad": 1.05
+  },
+  "edge": {
+    "_nota": "Voces gratis de Microsoft (necesita internet). Lista: edge-tts --list-voices | grep es-. tono en Hz (p. ej. -5Hz más grave).",
+    "voz": "es-MX-DaliaNeural",
+    "tono": "+0Hz",
+    "velocidad": 1.0
   }
 }

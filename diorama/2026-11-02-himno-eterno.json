@@ -1,15 +1,15 @@
 {
  "voice": "em_alex",
  "speed": 1.0,
- "pausaFrase": 0.3,
- "pausaEscena": 0.55,
- "inicio": 0.35,
+ "pausaFrase": 0.35,
+ "pausaEscena": 0.7,
+ "inicio": 0.5,
  "cola": 4.2,
  "pausaPartes": 1.0,
  "id": "2026-11-02-himno-eterno",
  "titulo": "Himno Eterno (Porter)",
  "imagenes": "diorama/img/dia-muertos",
- "audio": "diorama/audio/2026-11-02-himno-eterno.mp3",
+ "audio": "diorama/audio/2026-11-02-himno-eterno-edge.mp3",
  "scenes": [
   {
    "say": "Hay ausencias a las que uno nunca se acostumbra.",
@@ -196,5 +196,7 @@
   "#Duelo",
   "#ImpulsoReal"
  ],
- "sources": []
+ "sources": [],
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural"
 }

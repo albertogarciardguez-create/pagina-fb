@@ -2,7 +2,7 @@
 # Instala lo necesario para generar los reels (voz offline, render y fuentes ya incluidas).
 set -e
 cd "$(dirname "$0")"
-python3 -m pip install --break-system-packages -q kokoro-onnx soundfile numpy 2>/dev/null || python3 -m pip install -q kokoro-onnx soundfile numpy
+python3 -m pip install --break-system-packages -q kokoro-onnx soundfile numpy edge-tts 2>/dev/null || python3 -m pip install -q kokoro-onnx soundfile numpy edge-tts
 python3 -c "import playwright" 2>/dev/null || python3 -m pip install --break-system-packages -q playwright
 command -v ffmpeg >/dev/null || { echo "Falta ffmpeg"; exit 1; }
 python3 - <<'EOF'

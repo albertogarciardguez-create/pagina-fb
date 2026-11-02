@@ -40,10 +40,15 @@ def voz(story, path, out):
         log("voz: alineando", os.path.relpath(mp3, ROOT))
         subprocess.run([sys.executable, os.path.join(ENGINE, "alinear.py"), mp3, path], check=True, cwd=ROOT)
         return os.path.join(out, "voz_raw.wav"), json.load(open(os.path.join(out, "timing.json"), encoding="utf-8"))
-    log(f"AVISO: no encontré {os.path.relpath(mp3, ROOT)}; uso la voz gratuita kokoro solo para probar.")
     import voces
     st = dict(story, scenes=[dict(s, type="plano") for s in story["scenes"]])
-    return _tts(st, out, voces.crear(st, "kokoro"), aviso="sin audio de ElevenLabs")
+    motor, _ = voces.cargar_config(story)
+    log(f"voz: sin MP3 en {os.path.relpath(mp3, ROOT)}; genero con el motor '{motor}'")
+    try:
+        return _tts(st, out, voces.crear(st))
+    except voces.MotorNoDisponible as e:
+        log(f"AVISO: el motor '{motor}' falló ({e}); uso kokoro.")
+        return _tts(st, out, voces.crear(st, "kokoro"), aviso=str(e))
 
 
 def eventos(story, timing):
@@ -90,7 +95,22 @@ def bombo(n_s=0.4, f0=40, f1=55):
     return np.sin(2 * np.pi * np.cumsum(f0 + f1 * np.exp(-x / 0.035)) / SR) * np.exp(-x / 0.14)
 
 
+def _archivo_sonido(k):
+    """Sonido descargado (Pixabay, Freesound CC0, etc.) en diorama/sonidos/<k>.wav|mp3: reemplaza al generado."""
+    for ext in (".wav", ".mp3", ".ogg", ".flac"):
+        p = os.path.join(ROOT, "diorama", "sonidos", k + ext)
+        if os.path.exists(p):
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", p, "-ac", "1", "-ar", str(SR), "/tmp/_sfx.wav"], check=True)
+            a, _ = sf.read("/tmp/_sfx.wav")
+            return a / max(1e-6, np.abs(a).max()) * 0.8
+    return None
+
+
 def sfx_sig(k, rng):
+    a = _archivo_sonido(k)
+    if a is not None:
+        return a
+
     def xs(sec):
         return np.arange(int(sec * SR)) / SR
     if k == "tick":
@@ -162,6 +182,11 @@ def mezcla(story, out, raw, timing):
             c0 = int((timing["scenes"][i]["end"] + 0.03) * SR); r = int(0.012 * SR)
             mask[c0:b] = 0; mask[c0:c0 + r] = np.linspace(1, 0, min(r, max(0, b - c0)))[:len(mask[c0:c0 + r])]
     mus = sum(capas[k] / max(1e-6, np.abs(capas[k]).max()) * lp(gan[k], 1 / (0.35 * SR)) for k in capas)
+    if story.get("musica_archivo"):  # pista libre de derechos descargada (Pixabay, YouTube Audio Library…), en bucle
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-stream_loop", "-1", "-i", os.path.join(ROOT, story["musica_archivo"]),
+                        "-t", str(N / SR), "-ac", "1", "-ar", str(SR), "/tmp/_mus.wav"], check=True)
+        m, _ = sf.read("/tmp/_mus.wav"); m = np.pad(m, (0, max(0, N - len(m))))[:N]
+        mus = m / max(1e-6, np.abs(m).max()) * 1.6
     ir_n = int(2.5 * SR); ir = rng.standard_normal(ir_n) * np.exp(-np.arange(ir_n) / SR / 0.7); ir = lp(ir, 0.3); ir /= np.abs(ir).sum() / 8
     from numpy.fft import rfft, irfft
     L = 1 << int(np.ceil(np.log2(N + ir_n)))

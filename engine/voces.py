@@ -199,7 +199,33 @@ def chatterbox(story, cfg):
     return Voz("chatterbox", params, gen)
 
 
-MOTORES = {"kokoro": kokoro, "elevenlabs": elevenlabs, "chatterbox": chatterbox}
+# ---------- edge (voces neuronales de Microsoft, gratis, sin créditos) ----------
+def edge(story, cfg):
+    c = cfg.get("edge", {})
+    voz = story.get("edge_voz") or c.get("voz", "es-MX-DaliaNeural")
+    tono, vel_base = c.get("tono", "+0Hz"), c.get("velocidad", 1.0)
+    try:
+        import edge_tts  # noqa: F401
+    except ImportError:
+        raise MotorNoDisponible("falta el paquete edge-tts (python3 -m pip install edge-tts)")
+
+    def gen(texto, vel, previo, siguiente):
+        import asyncio, edge_tts
+        pct = int(round((vel_base * vel / VEL_BASE - 1) * 100))
+        with tempfile.TemporaryDirectory() as d:
+            mp3, wav = os.path.join(d, "a.mp3"), os.path.join(d, "a.wav")
+            try:
+                asyncio.run(edge_tts.Communicate(texto, voz, rate=f"{pct:+d}%", pitch=tono).save(mp3))
+            except Exception as e:
+                raise MotorNoDisponible(f"edge-tts sin conexión ({e.__class__.__name__})")
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp3, "-ac", "1", "-ar", "24000", wav], check=True)
+            a, sr = sf.read(wav, dtype="float32")
+        return a, sr
+
+    return Voz("edge", {"voz": voz, "tono": tono, "vel": vel_base}, gen)
+
+
+MOTORES = {"kokoro": kokoro, "elevenlabs": elevenlabs, "chatterbox": chatterbox, "edge": edge}
 
 
 def crear(story, motor=None):
