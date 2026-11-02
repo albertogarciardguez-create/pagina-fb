@@ -1,15 +1,15 @@
 {
  "voice": "em_alex",
  "speed": 1.0,
- "pausaFrase": 0.3,
- "pausaEscena": 0.55,
- "inicio": 0.35,
+ "pausaFrase": 0.35,
+ "pausaEscena": 0.7,
+ "inicio": 0.5,
  "cola": 4.2,
  "pausaPartes": 1.0,
  "id": "2026-11-02-te-veo-a-la-vuelta",
  "titulo": "Te veo a la vuelta (José Madero)",
  "imagenes": "diorama/img/vuelta",
- "audio": "diorama/audio/2026-11-02-te-veo-a-la-vuelta.mp3",
+ "audio": "diorama/audio/2026-11-02-te-veo-a-la-vuelta-edge.mp3",
  "scenes": [
   {
    "say": "Te veo a la vuelta. Lo decimos cuando alguien sale a la tienda.",
@@ -97,7 +97,7 @@
    ]
   },
   {
-   "say": "Te veo a la vuelta, vieja.",
+   "say": "Y le dijo al oído: te veo a la vuelta, vieja.",
    "img": [
     "t05"
    ],
@@ -109,7 +109,9 @@
    "titles": [
     {
      "b": "Te veo a la vuelta,",
-     "l": "vieja"
+     "l": "vieja",
+     "s": 0,
+     "at": 0.45
     }
    ]
   },
@@ -197,5 +199,7 @@
   "#Amor",
   "#ImpulsoReal"
  ],
- "sources": []
+ "sources": [],
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural"
 }
