@@ -51,7 +51,9 @@
    "titles": [
     {
      "b": "Sabes que se fue",
-     "l": "pero lo sigues buscando"
+     "l": "pero lo sigues buscando",
+     "color": "arena",
+     "pos": "high"
     }
    ]
   },
@@ -149,7 +151,9 @@
    "titles": [
     {
      "b": "El amor se quedó",
-     "l": "contigo"
+     "l": "contigo",
+     "color": "arena",
+     "pos": "high"
     }
    ]
   },
@@ -165,7 +169,9 @@
    "titles": [
     {
      "b": "Cada vez que lo nombras",
-     "l": "vuelve"
+     "l": "vuelve",
+     "color": "arena",
+     "pos": "high"
     }
    ]
   },
