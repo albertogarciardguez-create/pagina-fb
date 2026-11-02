@@ -30,7 +30,8 @@
    "titles": [
     {
      "b": "Te veo a la vuelta",
-     "l": "una despedida de todos los días"
+     "l": "una despedida de todos los días",
+     "pos": "high"
     }
    ]
   },
@@ -45,7 +46,8 @@
    "titles": [
     {
      "b": "Una frase pequeña",
-     "l": "para una ausencia corta"
+     "l": "para una ausencia corta",
+     "pos": "high"
     }
    ]
   },
@@ -60,7 +62,8 @@
    "titles": [
     {
      "b": "Al final",
-     "l": "de toda una vida"
+     "l": "de toda una vida",
+     "pos": "high"
     }
    ]
   },
@@ -76,7 +79,8 @@
    "titles": [
     {
      "b": "Cuando el tiempo",
-     "l": "empieza a cobrar lo suyo"
+     "l": "empieza a cobrar lo suyo",
+     "pos": "high"
     }
    ]
   },
@@ -92,7 +96,8 @@
    "titles": [
     {
      "b": "No fue despedida",
-     "l": "fue promesa"
+     "l": "fue promesa",
+     "pos": "high"
     }
    ]
   },
@@ -111,7 +116,8 @@
      "b": "Te veo a la vuelta,",
      "l": "vieja",
      "s": 0,
-     "at": 0.45
+     "at": 0.45,
+     "pos": "high"
     }
    ]
   },
@@ -127,7 +133,8 @@
    "titles": [
     {
      "b": "No es un final",
-     "l": "es doblar la esquina"
+     "l": "es doblar la esquina",
+     "pos": "high"
     }
    ]
   },
@@ -143,8 +150,13 @@
    "titles": [
     {
      "b": "Te veo a la vuelta",
-     "l": "José Madero"
+     "l": "José Madero",
+     "pos": "high"
     }
+   ],
+   "foco": [
+    0.3,
+    0.5
    ]
   },
   {
@@ -158,8 +170,13 @@
    "titles": [
     {
      "b": "No lo despedimos",
-     "l": "lo esperamos"
+     "l": "lo esperamos",
+     "pos": "high"
     }
+   ],
+   "foco": [
+    0.75,
+    0.5
    ]
   },
   {
@@ -174,7 +191,8 @@
    "titles": [
     {
      "b": "A la vuelta",
-     "l": "alguien nos espera"
+     "l": "alguien nos espera",
+     "pos": "high"
     }
    ]
   },
