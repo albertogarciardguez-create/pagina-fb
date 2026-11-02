@@ -52,8 +52,8 @@
     {
      "b": "Sabes que se fue",
      "l": "pero lo sigues buscando",
-     "color": "arena",
-     "pos": "high"
+     "pos": "high",
+     "caja": true
     }
    ]
   },
@@ -152,8 +152,8 @@
     {
      "b": "El amor se quedó",
      "l": "contigo",
-     "color": "arena",
-     "pos": "high"
+     "pos": "high",
+     "caja": true
     }
    ]
   },
@@ -170,8 +170,8 @@
     {
      "b": "Cada vez que lo nombras",
      "l": "vuelve",
-     "color": "arena",
-     "pos": "high"
+     "pos": "high",
+     "caja": true
     }
    ]
   },
