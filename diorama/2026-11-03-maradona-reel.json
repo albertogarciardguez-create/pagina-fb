@@ -1,0 +1,245 @@
+{
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "intensidad": 1.5,
+ "imagenes": "diorama/img/maradona",
+ "inicio": 0.3,
+ "id": "2026-11-03-maradona-reel",
+ "titulo": "Maradona (reel)",
+ "speed": 1.12,
+ "pausaFrase": 0.22,
+ "pausaEscena": 0.4,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-03-maradona-reel-edge.mp3",
+ "scenes": [
+  {
+   "say": "Nació en un barrio sin agua potable... y terminó siendo llamado el mejor del siglo.",
+   "img": [
+    "v01a",
+    "v01b"
+   ],
+   "split": true,
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "int": 1.4,
+   "titles": [
+    {
+     "b": "Villa Fiorito",
+     "l": "sin agua potable",
+     "pos": "topright"
+    },
+    {
+     "b": "El mejor",
+     "l": "del siglo",
+     "pos": "lowleft",
+     "s": 1
+    }
+   ],
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Diego Armando Maradona. Un niño de Villa Fiorito, con una pelota y un sueño: jugar un Mundial.",
+   "img": [
+    "v02"
+   ],
+   "clip": "c2",
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Un niño",
+     "pos": "high",
+     "l": "con un sueño"
+    }
+   ],
+   "chip": "1960 · BUENOS AIRES"
+  },
+  {
+   "say": "Debutó en primera división diez días antes de cumplir dieciséis años.",
+   "img": [
+    "v03"
+   ],
+   "move": "right",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Debutó a los 15",
+     "pos": "high",
+     "l": "en primera división"
+    }
+   ],
+   "chip": "1976 · ARGENTINOS JUNIORS"
+  },
+  {
+   "say": "Barcelona y Nápoles pagaron por él récords mundiales.",
+   "img": [
+    "v04"
+   ],
+   "move": "left",
+   "acto": 2,
+   "mus": "foso",
+   "nivel": 0.7,
+   "titles": [
+    {
+     "b": "Dos récords",
+     "pos": "high",
+     "l": "mundiales de fichaje"
+    }
+   ],
+   "chip": "1982–1984"
+  },
+  {
+   "say": "Y en Nápoles, una ciudad olvidada, ganó dos ligas que nadie creía posibles.",
+   "img": [
+    "v05"
+   ],
+   "move": "up",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Nápoles",
+     "pos": "high",
+     "l": "campeón por primera vez"
+    }
+   ],
+   "chip": "1987 · ITALIA"
+  },
+  {
+   "say": "México, mil novecientos ochenta y seis. Contra Inglaterra, en cuatro minutos, hizo el gol más polémico... y el más hermoso de la historia.",
+   "img": [
+    "v06"
+   ],
+   "clip": "c1",
+   "move": "shake",
+   "acto": 3,
+   "mus": "foso",
+   "int": 1.2,
+   "titles": [
+    {
+     "b": "El gol del siglo",
+     "pos": "high",
+     "s": 1,
+     "at": 0.5
+    }
+   ],
+   "chip": "1986 · ESTADIO AZTECA"
+  },
+  {
+   "say": "Levantó la Copa del Mundo como capitán.",
+   "img": [
+    "v07"
+   ],
+   "move": "up",
+   "acto": 3,
+   "mus": "mayor",
+   "nivel": 1.2,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "titles": [
+    {
+     "b": "Campeón del mundo",
+     "pos": "high",
+     "l": "como capitán"
+    }
+   ],
+   "chip": "1986 · MÉXICO"
+  },
+  {
+   "say": "Pero la fama también tiene un precio. Las adicciones lo alejaron de la cancha.",
+   "img": [
+    "v08"
+   ],
+   "move": "down",
+   "acto": 4,
+   "mus": "foso",
+   "nivel": 0.5,
+   "corte": true,
+   "titles": [
+    {
+     "b": "La fama",
+     "pos": "high",
+     "l": "tiene un precio"
+    }
+   ]
+  },
+  {
+   "say": "Cayó muchas veces. Y muchas veces se volvió a levantar.",
+   "img": [
+    "v09"
+   ],
+   "move": "up",
+   "acto": 4,
+   "mus": "menor",
+   "fade": true,
+   "titles": [
+    {
+     "b": "Cayó",
+     "pos": "high",
+     "l": "y se levantó"
+    }
+   ]
+  },
+  {
+   "say": "Murió en dos mil veinte, a los sesenta años. Pero en cada potrero, todavía hay un niño que sueña con ser Diego.",
+   "img": [
+    "v10"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "titles": [
+    {
+     "b": "Todavía hay un niño",
+     "pos": "high",
+     "l": "que sueña con ser Diego"
+    }
+   ],
+   "chip": "1960 – 2020"
+  },
+  {
+   "say": "¿Qué te enseñó a ti la historia de Maradona?",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Qué te enseñó",
+     "l": "su historia?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "Nació en un barrio sin agua potable y terminó siendo el mejor del siglo ⚽ La historia de Diego Armando Maradona en un minuto. ¿Qué te enseñó a ti su historia? 👇",
+ "hashtags": [
+  "#Maradona",
+  "#Diego",
+  "#Futbol",
+  "#Historia",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Diego_Maradona",
+  "https://espndeportes.espn.com/futbol/argentina/nota/_/id/7797546/diego-armando-maradona-diez-10-murio-muerte-60-anos",
+  "https://www.poresto.com/deportes/2021/6/22/maradona-se-cumplen-35-anos-de-la-mano-de-dios-en-mexico-86.html",
+  "https://www.vanguardia.com/deportes/futbol/2025/10/20/hace-49-anos-debuto-maradona-asi-comenzo-la-leyenda-del-10/"
+ ]
+}

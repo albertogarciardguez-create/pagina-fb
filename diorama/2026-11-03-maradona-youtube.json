@@ -1,0 +1,812 @@
+{
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "intensidad": 1.5,
+ "imagenes": "diorama/img/maradona",
+ "inicio": 0.3,
+ "id": "2026-11-03-maradona-youtube",
+ "titulo": "Maradona (YouTube)",
+ "formato": "horizontal",
+ "actos": 5,
+ "speed": 1.0,
+ "pausaFrase": 0.4,
+ "pausaEscena": 0.8,
+ "cola": 5.0,
+ "miniatura": 17,
+ "audio": "diorama/audio/2026-11-03-maradona-youtube-edge.mp3",
+ "scenes": [
+  {
+   "say": "Un niño descalzo, en un barrio sin agua potable, le dijo a una cámara de televisión que su sueño era jugar un Mundial... y ganarlo. Años después, lo cumplió. Y se convirtió en el futbolista más amado, y más discutido, de la historia.",
+   "img": [
+    "m01"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ],
+   "titles": [
+    {
+     "b": "Un sueño",
+     "pos": "high",
+     "l": "en un barrio sin agua"
+    }
+   ]
+  },
+  {
+   "say": "Esta es la historia de Diego Armando Maradona. La del genio que tocó el cielo con un balón... y la del hombre que tuvo que pelear contra sí mismo.",
+   "img": [
+    "m02"
+   ],
+   "move": "out",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Diego Armando",
+     "pos": "high",
+     "l": "Maradona"
+    }
+   ]
+  },
+  {
+   "say": "En los próximos minutos vas a recorrer su vida: el barrio, la gloria, la caída y lo que su historia nos puede enseñar a todos. Quédate hasta el final, porque ahí está lo más importante.",
+   "img": [
+    "m03"
+   ],
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Del barrio",
+     "pos": "high",
+     "l": "a la leyenda"
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 1. Villa Fiorito.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 1",
+   "cap_titulo": "Villa Fiorito",
+   "mus": "menor"
+  },
+  {
+   "say": "Diego nació el treinta de octubre de mil novecientos sesenta en Lanús, y creció en Villa Fiorito, un asentamiento humilde al sur de Buenos Aires. Era el quinto de ocho hijos.",
+   "img": [
+    "m04"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Villa Fiorito",
+     "pos": "high",
+     "l": "Buenos Aires"
+    }
+   ],
+   "chip": "1960 · LANÚS"
+  },
+  {
+   "say": "En su casa no sobraba nada. Pero había una pelota. Cuentan que se la regalaron cuando era muy pequeño y que dormía abrazado a ella.",
+   "img": [
+    "m05"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "clip": "c2",
+   "titles": [
+    {
+     "b": "Una pelota",
+     "pos": "high",
+     "l": "y nada más"
+    }
+   ]
+  },
+  {
+   "say": "Cuando tenía unos diez años, una cámara de televisión lo grabó haciendo malabares con la pelota en un potrero. Le preguntaron cuál era su sueño. Respondió, sin dudar, que quería jugar un Mundial y salir campeón. Era un niño flaco, con la pelota pegada al pie, que hablaba como si ya supiera a dónde iba.",
+   "img": [
+    "m05"
+   ],
+   "move": "out",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Su sueño:",
+     "pos": "high",
+     "l": "ganar un Mundial"
+    }
+   ]
+  },
+  {
+   "say": "En los potreros de tierra aprendió lo que ninguna escuela enseña: a esconder el balón, a esquivar golpes y a jugar con hambre.",
+   "img": [
+    "m06"
+   ],
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "El potrero",
+     "pos": "high",
+     "l": "su primera escuela"
+    }
+   ]
+  },
+  {
+   "say": "Con apenas ocho años lo descubrieron para las inferiores de Argentinos Juniors, en un equipo infantil que casi no perdía. Ahí empezó a correr la voz: había un niño que hacía cosas que nadie había visto.",
+   "img": [
+    "m07"
+   ],
+   "move": "left",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Los Cebollitas",
+     "pos": "high",
+     "l": "un niño distinto"
+    }
+   ],
+   "chip": "ARGENTINOS JUNIORS"
+  },
+  {
+   "say": "Cuentan que en el medio tiempo de los partidos de primera división, el pequeño Diego salía a la cancha a hacer malabares con el balón, y la gente se quedaba en las tribunas solo para verlo. Antes de debutar, ya tenía público.",
+   "img": [
+    "m07"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Antes de debutar",
+     "pos": "high",
+     "l": "ya tenía público"
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 2. El salto.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 2",
+   "cap_titulo": "El salto",
+   "mus": "menor"
+  },
+  {
+   "say": "El veinte de octubre de mil novecientos setenta y seis, diez días antes de cumplir dieciséis años, debutó en primera división. En su primer partido, le tiró un caño a un rival.",
+   "img": [
+    "m08"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Debut",
+     "pos": "high",
+     "l": "a los 15 años"
+    }
+   ],
+   "chip": "1976 · DEBUT"
+  },
+  {
+   "say": "En Argentinos Juniors se convirtió en goleador del torneo argentino varias veces seguidas. Tenía diecisiete años y ya era la gran promesa del país. Pero entonces llegó su primer gran golpe.",
+   "img": [
+    "m08"
+   ],
+   "move": "right",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Goleador",
+     "pos": "high",
+     "l": "a los 17 años"
+    }
+   ]
+  },
+  {
+   "say": "En mil novecientos setenta y ocho, el técnico César Luis Menotti lo dejó fuera de la lista para el Mundial que se jugó en Argentina. El país salió campeón... y Diego lo vio por televisión. Lloró. Y usó ese dolor como combustible.",
+   "img": [
+    "m27"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Fuera del Mundial",
+     "pos": "high",
+     "l": "de 1978"
+    }
+   ],
+   "chip": "1978 · ARGENTINA"
+  },
+  {
+   "say": "Un año después, en Japón, fue campeón del Mundial juvenil y lo eligieron el mejor jugador del torneo. La revancha había empezado.",
+   "img": [
+    "m26"
+   ],
+   "move": "up",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Campeón juvenil",
+     "pos": "high",
+     "l": "en Japón"
+    }
+   ],
+   "chip": "1979 · JAPÓN"
+  },
+  {
+   "say": "En mil novecientos ochenta y uno llegó a Boca Juniors, el club de sus amores, y ganó el campeonato.",
+   "img": [
+    "m09"
+   ],
+   "move": "up",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Boca Juniors",
+     "pos": "high",
+     "l": "campeón"
+    }
+   ],
+   "chip": "1981 · BOCA"
+  },
+  {
+   "say": "Al año siguiente, el Barcelona pagó por él una cifra récord mundial. Pero en España llegaron las lesiones, la hepatitis y una entrada brutal que le rompió el tobillo.",
+   "img": [
+    "m10"
+   ],
+   "move": "right",
+   "acto": 2,
+   "mus": "foso",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "Barcelona",
+     "pos": "high",
+     "l": "récord y lesiones"
+    }
+   ],
+   "chip": "1982 · BARCELONA"
+  },
+  {
+   "say": "Aun así, en España dejó jugadas inolvidables y ganó la Copa del Rey. Pero sentía que algo le faltaba: un lugar donde lo quisieran no solo por su talento, sino como uno de los suyos.",
+   "img": [
+    "m10"
+   ],
+   "move": "left",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Le faltaba",
+     "pos": "high",
+     "l": "un hogar"
+    }
+   ]
+  },
+  {
+   "say": "Muchos pensaron que su carrera había terminado. Se equivocaron.",
+   "img": [
+    "m10"
+   ],
+   "move": "out",
+   "acto": 2,
+   "mus": "foso",
+   "nivel": 0.5,
+   "corte": true,
+   "titles": [
+    {
+     "b": "Muchos pensaron",
+     "pos": "high",
+     "l": "que había terminado"
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 3. Nápoles.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 3",
+   "cap_titulo": "Nápoles",
+   "mus": "mayor"
+  },
+  {
+   "say": "En mil novecientos ochenta y cuatro, otra cifra récord lo llevó al Nápoles, un equipo del sur de Italia que nunca había sido campeón y que el norte rico miraba con desprecio.",
+   "img": [
+    "m11"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Nápoles",
+     "pos": "high",
+     "l": "el sur olvidado"
+    }
+   ],
+   "chip": "1984 · NÁPOLES"
+  },
+  {
+   "say": "Setenta mil personas llenaron el estadio solo para verlo dar unos toques al balón y saludar.",
+   "img": [
+    "m12"
+   ],
+   "move": "up",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "70 mil personas",
+     "pos": "high",
+     "l": "solo para verlo"
+    }
+   ]
+  },
+  {
+   "say": "Y Diego les cumplió. Ganó dos ligas italianas, la primera en toda la historia del club, una Copa de Italia y una Copa de la UEFA.",
+   "img": [
+    "m13"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "mayor",
+   "nivel": 1.1,
+   "titles": [
+    {
+     "b": "Dos ligas",
+     "pos": "high",
+     "l": "y una Copa UEFA"
+    }
+   ],
+   "chip": "1987 · 1990"
+  },
+  {
+   "say": "Cuando Nápoles ganó su primera liga, la fiesta duró semanas. En el cementerio de la ciudad alguien escribió un mensaje para los muertos: no saben lo que se perdieron. Así de grande fue lo que Diego le dio a esa gente.",
+   "img": [
+    "m13"
+   ],
+   "move": "out",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "No saben",
+     "l": "lo que se perdieron",
+     "pos": "high"
+    }
+   ]
+  },
+  {
+   "say": "En Nápoles todavía hay murales con su cara. Para esa ciudad, no fue un jugador: fue una revancha.",
+   "img": [
+    "m14"
+   ],
+   "move": "left",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "No fue un jugador",
+     "pos": "high",
+     "l": "fue una revancha"
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 4. México 86.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 4",
+   "cap_titulo": "México 86",
+   "mus": "foso"
+  },
+  {
+   "say": "Pero su momento más grande llegó en México, en el Mundial de mil novecientos ochenta y seis. Diego era el capitán de Argentina.",
+   "img": [
+    "m15"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "foso",
+   "nivel": 0.7,
+   "titles": [
+    {
+     "b": "México 86",
+     "pos": "high",
+     "l": "el capitán"
+    }
+   ],
+   "chip": "1986 · MÉXICO"
+  },
+  {
+   "say": "El veintidós de junio, en el Estadio Azteca, Argentina enfrentó a Inglaterra en cuartos de final, cuatro años después de la guerra de las Malvinas. No era un partido cualquiera.",
+   "img": [
+    "m16"
+   ],
+   "move": "right",
+   "acto": 3,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Argentina vs. Inglaterra",
+     "pos": "high",
+     "l": "no era un partido más"
+    }
+   ],
+   "chip": "22 JUNIO 1986 · AZTECA"
+  },
+  {
+   "say": "Primero marcó con la mano. El árbitro no lo vio. Él lo llamó la mano de Dios.",
+   "img": [
+    "m17"
+   ],
+   "move": "shake",
+   "acto": 3,
+   "mus": "foso",
+   "int": 1.2,
+   "titles": [
+    {
+     "b": "La mano de Dios",
+     "pos": "high",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "say": "Cuatro minutos después, tomó el balón en su propia mitad, dejó atrás a medio equipo inglés, al portero... y marcó el que sería votado como el gol del siglo.",
+   "img": [
+    "m18"
+   ],
+   "clip": "c3",
+   "move": "right",
+   "acto": 3,
+   "mus": "mayor",
+   "int": 1.2,
+   "titles": [
+    {
+     "b": "El gol del siglo",
+     "pos": "high",
+     "s": 0,
+     "at": 0.85,
+     "big": true
+    }
+   ]
+  },
+  {
+   "say": "Corrió unos sesenta metros en unos diez segundos. Dejó atrás a cinco jugadores. Hasta el narrador que transmitía el partido terminó llorando y gritando. En un mismo partido, el lado más pícaro y el lado más genial de Diego, separados por solo cuatro minutos.",
+   "img": [
+    "m18"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "60 metros",
+     "pos": "high",
+     "l": "10 segundos"
+    }
+   ]
+  },
+  {
+   "say": "En la final venció tres a dos a Alemania Federal, en el mismo Azteca. Diego levantó la Copa del Mundo y ganó el Balón de Oro del torneo.",
+   "img": [
+    "m19"
+   ],
+   "clip": "c4",
+   "move": "up",
+   "acto": 3,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.7
+    }
+   ],
+   "titles": [
+    {
+     "b": "Campeón del mundo",
+     "pos": "high",
+     "l": "Balón de Oro"
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 5. La caída.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 5",
+   "cap_titulo": "La caída",
+   "mus": "menor"
+  },
+  {
+   "say": "Cuatro años después llegó a otra final del mundo, en Italia, pero Argentina perdió uno a cero. Y fuera de la cancha, el ídolo empezaba a romperse.",
+   "img": [
+    "m20"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Italia 90",
+     "pos": "high",
+     "l": "la otra final"
+    }
+   ],
+   "chip": "1990 · ITALIA"
+  },
+  {
+   "say": "En mil novecientos noventa y uno dio positivo por cocaína y fue suspendido quince meses. En el Mundial de Estados Unidos noventa y cuatro dio positivo de nuevo y lo expulsaron del torneo.",
+   "img": [
+    "m21"
+   ],
+   "move": "down",
+   "acto": 4,
+   "mus": "foso",
+   "nivel": 0.5,
+   "dial": {
+    "tipo": "dias",
+    "n": 15,
+    "sub": "MESES",
+    "s": 0,
+    "at": 0.6,
+    "dur": 1.5,
+    "x": 1560,
+    "y": 560,
+    "r": 190
+   },
+   "titles": [
+    {
+     "b": "La caída",
+     "pos": "high",
+     "l": "del ídolo"
+    }
+   ]
+  },
+  {
+   "say": "Las adicciones casi le cuestan la vida. Hubo hospitales, recaídas y años muy oscuros.",
+   "img": [
+    "m22"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "foso",
+   "nivel": 0.4,
+   "corte": true,
+   "titles": [
+    {
+     "b": "Años oscuros",
+     "pos": "high"
+    }
+   ]
+  },
+  {
+   "say": "Y aun así, siempre volvía. En el año dos mil, la FIFA lo nombró jugador del siglo, junto a Pelé. Años después, dirigió a la selección argentina en el Mundial de Sudáfrica.",
+   "img": [
+    "m23"
+   ],
+   "move": "up",
+   "acto": 4,
+   "mus": "mayor",
+   "fade": true,
+   "titles": [
+    {
+     "b": "Jugador del siglo",
+     "pos": "high",
+     "l": "junto a Pelé"
+    }
+   ],
+   "chip": "2000 · FIFA"
+  },
+  {
+   "say": "Como entrenador, llegó hasta los cuartos de final, donde Alemania goleó a Argentina. No fue el Diego de la cancha, pero seguía ahí, de pie, defendiendo la camiseta que amaba.",
+   "img": [
+    "m23"
+   ],
+   "move": "right",
+   "acto": 4,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Como entrenador",
+     "pos": "high",
+     "l": "Sudáfrica 2010"
+    }
+   ],
+   "chip": "2010 · SUDÁFRICA"
+  },
+  {
+   "say": "El veinticinco de noviembre de dos mil veinte, Diego murió en su casa, cerca de Tigre, a los sesenta años. Argentina declaró tres días de duelo, y millones lo despidieron en las calles.",
+   "img": [
+    "m24"
+   ],
+   "move": "out",
+   "acto": 4,
+   "mus": "menor",
+   "nivel": 0.6,
+   "titles": [
+    {
+     "b": "1960 – 2020",
+     "pos": "high",
+     "l": "adiós, Diego"
+    }
+   ],
+   "chip": "25 NOV 2020"
+  },
+  {
+   "say": "Capítulo 6. Lo que nos deja.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 6",
+   "cap_titulo": "Lo que nos deja",
+   "mus": "mayor"
+  },
+  {
+   "say": "Primera lección: el origen no define el destino. Diego salió de un lugar donde casi nadie salía. El talento se entrena en cualquier potrero.",
+   "img": [
+    "m06"
+   ],
+   "move": "left",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "1. El origen",
+     "pos": "high",
+     "l": "no define el destino"
+    }
+   ]
+  },
+  {
+   "say": "Segunda lección: la caída no borra la gloria, pero tampoco la gloria te protege de la caída. El talento sin cuidado de uno mismo se puede perder.",
+   "img": [
+    "m22"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "2. El talento",
+     "pos": "high",
+     "l": "necesita cuidado"
+    }
+   ]
+  },
+  {
+   "say": "Tercera lección: rodéate de quien te cuide, no solo de quien te aplauda. A Diego le sobraron aplausos y le faltó, muchas veces, alguien que lo protegiera de sí mismo.",
+   "img": [
+    "m12"
+   ],
+   "move": "out",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "3. Rodéate",
+     "pos": "high",
+     "l": "de quien te cuide"
+    }
+   ]
+  },
+  {
+   "say": "Te dejo un ejercicio. Piensa en tu propio potrero: ese lugar difícil de donde vienes o donde estás hoy. Escribe tres cosas que ese lugar te enseñó y que nadie te puede quitar. Ese es tu talento entrenado. Ahora escribe una cosa que te está quitando energía y que necesitas cuidar. Ahí empieza tu propia jugada.",
+   "img": [
+    "m06"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Ejercicio:",
+     "pos": "high",
+     "l": "tu propio potrero"
+    }
+   ]
+  },
+  {
+   "say": "Si tú o alguien que quieres está luchando contra una adicción, pedir ayuda no es debilidad. Es el regate más valiente.",
+   "img": [
+    "m09"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 0.7,
+   "titles": [
+    {
+     "b": "Pedir ayuda",
+     "pos": "high",
+     "l": "es el regate más valiente"
+    }
+   ]
+  },
+  {
+   "say": "Diego fue genio y fue humano. Y quizá por eso, en cada potrero del mundo, todavía hay un niño que sueña con ser él.",
+   "img": [
+    "m25"
+   ],
+   "move": "up",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "titles": [
+    {
+     "b": "Genio",
+     "pos": "high",
+     "l": "y humano"
+    }
+   ]
+  },
+  {
+   "say": "Y ahora te pregunto: ¿qué te enseñó a ti la historia de Maradona? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Qué te enseñó",
+     "l": "su historia?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titulo": "Maradona: del barrio sin agua al gol del siglo | La historia completa de Diego",
+  "intro": "Introducción",
+  "descripcion": "La historia de Diego Armando Maradona contada en un diorama de plastilina: Villa Fiorito, su debut a los 15 años, los récords de Barcelona y Nápoles, la mano de Dios y el gol del siglo en México 86, la caída por las adicciones y lo que su vida nos enseña.\n\n¿Qué te enseñó a ti su historia? Te leo en los comentarios.\nSuscríbete a Impulso Real para más historias de fortaleza, liderazgo y segundas oportunidades.\n\nSi tú o alguien cercano lucha contra una adicción: Línea de la Vida 800 911 2000 (México, 24 h).",
+  "hashtags": [
+   "#Maradona",
+   "#Futbol",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "Maradona",
+   "Diego Armando Maradona",
+   "historia de Maradona",
+   "gol del siglo",
+   "mano de Dios",
+   "México 86",
+   "Nápoles",
+   "Villa Fiorito",
+   "documental",
+   "Impulso Real"
+  ]
+ },
+ "post": "La historia completa de Diego Armando Maradona ⚽",
+ "hashtags": [
+  "#Maradona",
+  "#Futbol",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Diego_Maradona",
+  "https://espndeportes.espn.com/futbol/argentina/nota/_/id/7797546/diego-armando-maradona-diez-10-murio-muerte-60-anos",
+  "https://www.poresto.com/deportes/2021/6/22/maradona-se-cumplen-35-anos-de-la-mano-de-dios-en-mexico-86.html",
+  "https://www.vanguardia.com/deportes/futbol/2025/10/20/hace-49-anos-debuto-maradona-asi-comenzo-la-leyenda-del-10/"
+ ]
+}

@@ -13,7 +13,7 @@ const S = window.STORY, T = window.TIMING, I = window.IMGS || {}, HZ = S.formato
 const W = HZ ? 1920 : 1080, H = HZ ? 1080 : 1920;
 const cv = document.getElementById('c'); cv.width = W; cv.height = H; const g = cv.getContext('2d');
 const OR = '#FF6B3D';
-let imgs = {}, logo = null, logoBg = '#0B0B0B', grain = [], vig = null, dust = [];
+let clips = {}, imgs = {}, logo = null, logoBg = '#0B0B0B', grain = [], vig = null, dust = [];
 
 const rnd = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
 const cl = (x, a, b) => Math.max(a, Math.min(b, x));
@@ -22,6 +22,8 @@ const ease = p => { p = cl(p, 0, 1); return 0.5 - 0.5 * Math.cos(Math.PI * p); }
 async function load() {
   const L = src => new Promise(r => { if (!src) return r(null); const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
   for (const k in I) imgs[k] = await L(I[k]);
+  const CL = window.CLIPS || {};
+  for (const k in CL) { clips[k] = []; for (const u of CL[k]) { const f = await L(u); if (f) clips[k].push(f); } }
   logo = await L(window.LOGO);
   if (logo) {
     const c = document.createElement('canvas'); c.width = c.height = 8; const x = c.getContext('2d');
@@ -61,7 +63,7 @@ function cam(mv, p, t, k) {
 }
 
 function drawImg(name, rx, ry, rw, rh, c, foco) {
-  const im = imgs[name];
+  const im = typeof name === 'string' ? imgs[name] : name;
   g.save(); g.beginPath(); g.rect(rx, ry, rw, rh); g.clip();
   if (!im) {
     const gr = g.createLinearGradient(0, ry, 0, ry + rh); gr.addColorStop(0, '#D9C7A3'); gr.addColorStop(1, '#9C7E55');
@@ -86,7 +88,11 @@ function drawScene(i, t) {
     drawImg(sc.img[0], 0, 0, W, half, cam(mv, p, t, sc.int), sc.foco && sc.foco[0]);
     drawImg(sc.img[1], 0, half + 6, W, half, cam(mv, Math.max(0, p2), t + 0.37, sc.int), sc.foco && sc.foco[1]);
     g.fillStyle = '#E9DCC0'; g.fillRect(0, half, W, 6);
-  } else drawImg(sc.img[0], 0, 0, W, H, cam(mv, p, t, sc.int), sc.foco);
+  } else {
+    const fr = sc.clip && clips[sc.clip] && clips[sc.clip].length ? clips[sc.clip] : null;  // clip de video: cuadros a 12 fps (se queda en el último)
+    const src = fr ? fr[Math.min(fr.length - 1, Math.max(0, Math.floor((t - a) * 12)))] : sc.img[0];
+    drawImg(src, 0, 0, W, H, cam(mv, p, t, fr ? Math.min(0.6, sc.int || 1) : sc.int), sc.foco);
+  }
 }
 
 function fx(t, polvo) {
@@ -119,7 +125,7 @@ function fitFont(txt, weight, fam, size, maxW) {
 function title(tt, t, t0, t1) {
   const k = ease((t - t0) / 0.45), out = 1 - ease((t - (t1 - 0.3)) / 0.3), al = Math.min(k, out);
   if (t < t0 || al <= 0) return;
-  const [x, y0, align] = POS[tt.pos || 'top'], y = y0 + (1 - k) * 14, maxW = HZ ? (tt.pos === 'q' ? 900 : align === 'center' ? 1500 : 1100) : align === 'center' ? 780 : 840;
+  const [x, y00, align] = POS[tt.pos || 'top'], y0 = y00 + (CHIP && y00 < (HZ ? 260 : 420) ? (HZ ? 90 : 130) : 0), y = y0 + (1 - k) * 14, maxW = HZ ? (tt.pos === 'q' ? 900 : align === 'center' ? 1500 : 1100) : align === 'center' ? 780 : 840;
   g.save(); g.globalAlpha = al; g.textAlign = align; if (k < 1) g.filter = `blur(${(1 - k) * 8}px)`;
   const arena = tt.color === 'arena';
   const bs = fitFont(tt.b, 800, 'MB', tt.big ? 150 : 96, maxW);
@@ -171,6 +177,16 @@ function dial(d, t, t0, t1) {
     g.font = `600 ${Math.round(R * 0.15)}px MS`; g.letterSpacing = '6px'; g.fillText(d.sub || 'NOCHE', 0, R * 0.42);
   }
   g.restore();
+}
+
+function chip(txt, t, a) {  // etiqueta de año / lugar con punto naranja
+  const k = ease((t - a - 0.15) / 0.4); if (k <= 0) return;
+  g.save(); g.globalAlpha = k; g.font = '600 34px MS'; g.letterSpacing = '4px';
+  const w = g.measureText(txt).width + 86, x = HZ ? 70 : 60, y = HZ ? 56 : 110, h = 64;
+  g.translate(-(1 - k) * 40, 0); g.fillStyle = 'rgba(14,14,15,.72)'; g.beginPath(); g.roundRect(x, y, w, h, h / 2); g.fill();
+  g.strokeStyle = 'rgba(255,107,61,.8)'; g.lineWidth = 2; g.stroke();
+  g.fillStyle = OR; g.shadowColor = OR; g.shadowBlur = 12; g.beginPath(); g.arc(x + 34, y + h / 2, 8 + Math.sin(t * 5) * 1.5, 0, 6.2832); g.fill();
+  g.shadowBlur = 0; g.fillStyle = '#fff'; g.textBaseline = 'middle'; g.fillText(txt, x + 56, y + h / 2 + 2); g.restore();
 }
 
 function dots(acto) {
@@ -242,9 +258,11 @@ function capitulo(i, t) {
   g.restore();
 }
 
+let CHIP = false;
 window.render = function (t) {
   const i = sceneAt(t), sc = S.scenes[i], a = T.cuts[i], b = winEnd(i), E = T.ev[i];
   g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+  CHIP = !!sc.chip;
   if (sc.tipo === 'cierre') { cierre(i, t); fx(t, 0); return; }
   if (sc.tipo === 'capitulo') { capitulo(i, t); fx(t, 0); return; }
   drawScene(i, t);
@@ -252,6 +270,7 @@ window.render = function (t) {
   fx(t, sc.polvo === undefined ? 1 : sc.polvo);
   if (sc.dial) dial(sc.dial, t, E.dial, b);
   (sc.titles || []).forEach((tt, k) => title(tt, t, E.titles[k], b));
+  if (sc.chip) chip(sc.chip, t, a);
   if (sc.acto) dots(sc.acto);
 };
 window.frame = t => { window.render(t); return cv.toDataURL('image/jpeg', 0.9).split(',')[1]; };

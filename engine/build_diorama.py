@@ -273,15 +273,34 @@ def imagenes(story):
     return out
 
 
-def abrir(pw, story, timing, imgs):
-    br = pw.chromium.launch(args=["--disable-gpu"])
+def clips(story, out):
+    """Clips de video (p. ej. Gemini/Veo) en la carpeta de imágenes: <clip>.mp4 → cuadros a 12 fps (look stop-motion)."""
+    carpeta = os.path.join(ROOT, story.get("imagenes", f"diorama/img/{story['id']}"))
+    res = {}
+    for sc in story["scenes"]:
+        c = sc.get("clip")
+        if not c or c in res:
+            continue
+        src = next((os.path.join(carpeta, c + e) for e in (".mp4", ".mov", ".webm") if os.path.exists(os.path.join(carpeta, c + e))), None)
+        if not src:
+            continue
+        d = os.path.join(out, "clips", c); os.makedirs(d, exist_ok=True)
+        lado = "1920:-2" if story.get("formato") == "horizontal" else "-2:1920"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", f"fps=12,scale={lado}", "-frames:v", "120", "-q:v", "3", f"{d}/f%03d.jpg"], check=True)
+        res[c] = [f"file://{d}/{f}" for f in sorted(os.listdir(d)) if f.endswith(".jpg")]
+        log(f"clip {c}: {len(res[c])} cuadros")
+    return res
+
+
+def abrir(pw, story, timing, imgs, cl=None):
+    br = pw.chromium.launch(args=["--disable-gpu", "--allow-file-access-from-files"])
     hz = story.get("formato") == "horizontal"
     pg = br.new_page(viewport={"width": 1920 if hz else 1080, "height": 1080 if hz else 1920})
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
     logo = data_url(os.path.join(ENGINE, "assets", "impulso_logo.png"))
     pg.add_init_script(f"window.STORY={json.dumps(story, ensure_ascii=False)};window.TIMING={json.dumps(timing)};"
-                       f"window.IMGS={json.dumps(imgs)};window.LOGO={json.dumps(logo)};")
+                       f"window.IMGS={json.dumps(imgs)};window.LOGO={json.dumps(logo)};window.CLIPS={json.dumps(cl or {})};")
     pg.goto(f"file://{ENGINE}/diorama.html")
     try:
         pg.wait_for_function("window.READY===true", timeout=60000)
@@ -350,7 +369,7 @@ def main():
     imgs = imagenes(story)
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
-        br, pg = abrir(pw, story, timing, imgs)
+        br, pg = abrir(pw, story, timing, imgs, clips(story, out))
         revision(pg, story, timing, out)
         if story.get("formato") == "horizontal":
             miniatura(pg, story, timing, out)
