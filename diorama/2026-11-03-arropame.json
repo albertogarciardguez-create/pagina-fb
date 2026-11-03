@@ -1,0 +1,217 @@
+{
+ "id": "2026-11-03-arropame",
+ "titulo": "Arrópame (José Madero)",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.1,
+ "pausaFrase": 0.25,
+ "pausaEscena": 0.45,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "intensidad": 1.5,
+ "audio": "diorama/audio/2026-11-03-arropame-edge.mp3",
+ "imagenes": "diorama/img/arropame",
+ "scenes": [
+  {
+   "say": "¿Y si Arrópame no es una canción de amor?",
+   "img": [
+    "a01"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "foso",
+   "nivel": 0.6,
+   "int": 1.5,
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ],
+   "titles": [
+    {
+     "b": "¿Y si no es",
+     "pos": "high",
+     "l": "una canción de amor?"
+    }
+   ]
+  },
+  {
+   "say": "Al principio suena a ternura: arropar, dormir, quedarse cerca.",
+   "img": [
+    "a02"
+   ],
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "int": 1.5,
+   "titles": [
+    {
+     "b": "Suena a ternura",
+     "pos": "high",
+     "l": "arropar, dormir, quedarse cerca"
+    }
+   ]
+  },
+  {
+   "say": "Pero hay quien la escucha distinto: como si José Madero le hablara a la muerte.",
+   "img": [
+    "a03"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "menor",
+   "int": 1.6,
+   "titles": [
+    {
+     "b": "Una carta",
+     "pos": "high",
+     "l": "a la muerte",
+     "s": 0,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y la muerte deja de ser una sombra lejana. Se vuelve un tú: alguien a quien se puede mirar de frente.",
+   "img": [
+    "a04"
+   ],
+   "move": "out",
+   "acto": 2,
+   "mus": "menor",
+   "int": 1.4,
+   "titles": [
+    {
+     "b": "Ya no es una sombra",
+     "pos": "high",
+     "l": "es un tú"
+    }
+   ]
+  },
+  {
+   "say": "Toda la canción vive en una contradicción: lo que da miedo, también parece prometer descanso.",
+   "img": [
+    "a05"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "foso",
+   "nivel": 0.6,
+   "int": 1.6,
+   "titles": [
+    {
+     "b": "Miedo y descanso",
+     "pos": "high",
+     "l": "la contradicción"
+    }
+   ]
+  },
+  {
+   "say": "Habla del panteón, del cuerpo que vuelve a la tierra... y aun así, no huye.",
+   "img": [
+    "a06"
+   ],
+   "move": "up",
+   "acto": 3,
+   "mus": "foso",
+   "nivel": 0.5,
+   "int": 1.5,
+   "corte": true,
+   "titles": [
+    {
+     "b": "Y aun así",
+     "pos": "high",
+     "l": "no huye"
+    }
+   ]
+  },
+  {
+   "say": "No es una invitación a irse antes de tiempo. Es perderle el miedo a lo inevitable.",
+   "img": [
+    "a07"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "mayor",
+   "nivel": 0.7,
+   "int": 1.4,
+   "fade": true,
+   "titles": [
+    {
+     "b": "Perderle el miedo",
+     "pos": "high",
+     "l": "a lo inevitable",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Porque cuando aceptas que un día te vas a ir, empiezas a vivir distinto.",
+   "img": [
+    "a08"
+   ],
+   "move": "left",
+   "acto": 4,
+   "mus": "mayor",
+   "int": 1.5,
+   "titles": [
+    {
+     "b": "Empiezas",
+     "pos": "high",
+     "l": "a vivir distinto"
+    }
+   ]
+  },
+  {
+   "say": "Los estoicos lo llamaban memento mori: recuerda que vas a morir. No para temer, sino para no desperdiciar el hoy.",
+   "img": [
+    "a09"
+   ],
+   "move": "up",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "int": 1.5,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "titles": [
+    {
+     "b": "Memento mori",
+     "pos": "high",
+     "l": "no desperdicies el hoy"
+    }
+   ]
+  },
+  {
+   "say": "¿Tú cómo la escuchas: canción de amor, o carta a la muerte?",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Canción de amor",
+     "l": "o carta a la muerte?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "¿Y si «Arrópame» no es una canción de amor? 🕯️ Una lectura de la canción de José Madero. ¿Tú cómo la escuchas? 👇",
+ "hashtags": [
+  "#Arropame",
+  "#JoseMadero",
+  "#MementoMori",
+  "#Estoicismo",
+  "#ImpulsoReal"
+ ],
+ "sources": []
+}
