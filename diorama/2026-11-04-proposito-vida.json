@@ -1,0 +1,219 @@
+{
+ "id": "2026-11-04-proposito-vida",
+ "titulo": "¿Cuál es nuestro propósito?",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "intensidad": 1.5,
+ "audio": "diorama/audio/2026-11-04-proposito-vida-edge.mp3",
+ "imagenes": "diorama/img/proposito-vida",
+ "scenes": [
+  {
+   "say": "¿Para qué estoy aquí? Tarde o temprano, todos nos hacemos esa pregunta.",
+   "img": [
+    "p01"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "int": 1.5,
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ],
+   "titles": [
+    {
+     "b": "¿Para qué",
+     "pos": "high",
+     "l": "estoy aquí?"
+    }
+   ]
+  },
+  {
+   "say": "A los cuarenta, muchos tenemos trabajo, cuentas y rutina... y aun así sentimos un vacío.",
+   "img": [
+    "p02"
+   ],
+   "chip": "35–45 AÑOS",
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "int": 1.5,
+   "titles": [
+    {
+     "b": "Trabajo, cuentas",
+     "pos": "high",
+     "l": "y un vacío"
+    }
+   ]
+  },
+  {
+   "say": "La buena noticia: tu propósito no se inventa. Se descubre.",
+   "img": [
+    "p03"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "mayor",
+   "nivel": 0.7,
+   "int": 1.4,
+   "titles": [
+    {
+     "b": "No se inventa",
+     "pos": "high",
+     "l": "se descubre"
+    }
+   ]
+  },
+  {
+   "say": "Primera pista: mira lo que te duele del mundo. Eso que no soportas ver, quizá es lo que viniste a sanar.",
+   "img": [
+    "p04"
+   ],
+   "chip": "PISTA 1",
+   "move": "left",
+   "acto": 2,
+   "mus": "menor",
+   "int": 1.5,
+   "titles": [
+    {
+     "b": "1. Lo que te duele",
+     "pos": "high",
+     "l": "quizá viniste a sanarlo"
+    }
+   ]
+  },
+  {
+   "say": "Segunda pista: mira tus dones. Lo que haces bien casi sin esfuerzo no es casualidad.",
+   "img": [
+    "p05"
+   ],
+   "chip": "PISTA 2",
+   "move": "in",
+   "acto": 3,
+   "mus": "mayor",
+   "int": 1.5,
+   "titles": [
+    {
+     "b": "2. Tus dones",
+     "pos": "high",
+     "l": "no son casualidad"
+    }
+   ]
+  },
+  {
+   "say": "Tercera pista: mira a quién tienes cerca. Tu propósito casi siempre tiene nombre y cara.",
+   "img": [
+    "p06"
+   ],
+   "chip": "PISTA 3",
+   "move": "out",
+   "acto": 3,
+   "mus": "mayor",
+   "int": 1.4,
+   "titles": [
+    {
+     "b": "3. Tiene nombre",
+     "pos": "high",
+     "l": "y cara"
+    }
+   ]
+  },
+  {
+   "say": "Jesús lo resumió en dos mandamientos: amar a Dios y amar a tu prójimo.",
+   "img": [
+    "p07"
+   ],
+   "chip": "MATEO 22:37-39",
+   "move": "up",
+   "acto": 4,
+   "mus": "mayor",
+   "nivel": 1.1,
+   "int": 1.3,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "titles": [
+    {
+     "b": "Amar a Dios",
+     "pos": "high",
+     "l": "y a tu prójimo"
+    }
+   ]
+  },
+  {
+   "say": "Tu propósito no es un lugar al que llegas. Es la manera en que caminas cada día.",
+   "img": [
+    "p08"
+   ],
+   "move": "right",
+   "acto": 4,
+   "mus": "mayor",
+   "int": 1.5,
+   "fade": true,
+   "titles": [
+    {
+     "b": "No es un lugar",
+     "pos": "high",
+     "l": "es cómo caminas"
+    }
+   ]
+  },
+  {
+   "say": "Empieza hoy: un acto de servicio, con lo que tienes, donde estás.",
+   "img": [
+    "p09"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "int": 1.5,
+   "titles": [
+    {
+     "b": "Empieza hoy",
+     "pos": "high",
+     "l": "con lo que tienes, donde estás"
+    }
+   ]
+  },
+  {
+   "say": "¿Qué crees que viniste a hacer a este mundo? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Qué viniste",
+     "l": "a hacer aquí?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "¿Para qué estoy aquí? 🙏 3 pistas para encontrar tu propósito. ¿Qué crees que viniste a hacer a este mundo? 👇",
+ "hashtags": [
+  "#proposito",
+  "#fe",
+  "#Dios",
+  "#motivacion",
+  "#reflexion",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "Mateo 22:37-39"
+ ]
+}
