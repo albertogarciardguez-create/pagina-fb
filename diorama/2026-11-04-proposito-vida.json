@@ -33,8 +33,9 @@
    "titles": [
     {
      "b": "¿Para qué",
-     "pos": "high",
-     "l": "estoy aquí?"
+     "pos": "low",
+     "l": "estoy aquí?",
+     "caja": true
     }
    ]
   },
@@ -88,7 +89,8 @@
     {
      "b": "1. Lo que te duele",
      "pos": "high",
-     "l": "quizá viniste a sanarlo"
+     "l": "quizá viniste a sanarlo",
+     "caja": true
     }
    ]
   },
@@ -106,7 +108,8 @@
     {
      "b": "2. Tus dones",
      "pos": "high",
-     "l": "no son casualidad"
+     "l": "no son casualidad",
+     "caja": true
     }
    ]
   },
@@ -123,8 +126,9 @@
    "titles": [
     {
      "b": "3. Tiene nombre",
-     "pos": "high",
-     "l": "y cara"
+     "pos": "low",
+     "l": "y cara",
+     "caja": true
     }
    ]
   },
@@ -150,8 +154,9 @@
    "titles": [
     {
      "b": "Amar a Dios",
-     "pos": "high",
-     "l": "y a tu prójimo"
+     "pos": "low",
+     "l": "y a tu prójimo",
+     "caja": true
     }
    ]
   },
@@ -186,8 +191,9 @@
    "titles": [
     {
      "b": "Empieza hoy",
-     "pos": "high",
-     "l": "con lo que tienes, donde estás"
+     "pos": "low",
+     "l": "con lo que tienes, donde estás",
+     "caja": true
     }
    ]
   },
