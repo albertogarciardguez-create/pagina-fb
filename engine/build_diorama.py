@@ -204,6 +204,15 @@ def mezcla(story, out, raw, timing):
     for i, (sc, e) in enumerate(zip(story["scenes"], timing["ev"])):
         if sc.get("tipo") == "cierre":
             add("whoosh", cuts[i] + 0.25); add("campana", cuts[i] + 1.3, 0.8)
+        elif sc.get("tipo") == "recorte":
+            add("papel", cuts[i] - 0.05, 0.8)
+            fin = cuts[i + 1] if i + 1 < len(cuts) else total; dur = fin - cuts[i]
+            ws = [w for ln in sc.get("recorte", {}).get("titulo", "").split("|") for w in ln.split()]
+            span = min(dur * 0.55, 0.32 * len(ws) + 0.4)
+            for k in range(len(ws)):
+                add("papel", cuts[i] + 0.15 + k * span / max(1, len(ws)), 0.9)
+            if sc.get("recorte", {}).get("sello"):
+                sa = sc["recorte"].get("selloAt"); add("sello", cuts[i] + (sa * dur if sa is not None else dur * 0.55), 0.7)
         elif sc.get("tipo") == "capitulo":
             add("whoosh", cuts[i] - 0.3)
         elif i > 0:
@@ -325,7 +334,7 @@ def revision(pg, story, timing, out):
     d = ImageDraw.Draw(hoja)
     for i, sc in enumerate(story["scenes"]):
         fin = cuts[i + 1] if i + 1 < len(cuts) else total
-        t = total - 0.4 if sc.get("tipo") == "cierre" else min(fin - 0.35, max([cuts[i] + 0.8] + [x + 0.7 for x in ev[i]["titles"]] + ([ev[i]["dial"] + 2.3] if "dial" in ev[i] else [])))
+        t = total - 0.4 if sc.get("tipo") == "cierre" else (cuts[i] + 0.85 * (fin - cuts[i])) if sc.get("tipo") == "recorte" else min(fin - 0.35, max([cuts[i] + 0.8] + [x + 0.7 for x in ev[i]["titles"]] + ([ev[i]["dial"] + 2.3] if "dial" in ev[i] else [])))
         im = Image.open(io.BytesIO(cuadro(pg, t))).resize((tw, th))
         dd = ImageDraw.Draw(im)  # zona segura: 250 px abajo y 150 px a la derecha (botones de TikTok/Reels)
         if not hz:

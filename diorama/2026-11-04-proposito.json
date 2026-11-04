@@ -1,0 +1,156 @@
+{
+ "id": "2026-11-04-proposito",
+ "titulo": "Nuestro propósito (35–45)",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.08,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "periodico": "EL DIARIO DEL PROPÓSITO",
+ "edicion": "Edición especial · Para quienes creen que ya es tarde",
+ "audio": "diorama/audio/2026-11-04-proposito-edge.mp3",
+ "imagenes": "diorama/img/proposito",
+ "scenes": [
+  {
+   "say": "Tienes entre treinta y cinco y cuarenta y cinco años... y a veces sientes que se te pasó el tren.",
+   "tipo": "recorte",
+   "mus": "menor",
+   "acto": 1,
+   "recorte": {
+    "titulo": "¿SE ME PASÓ|EL TREN?",
+    "sub": "Lo que muchos piensan y pocos dicen",
+    "sello": "35–45 AÑOS",
+    "marca": 4
+   },
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Que todos ya encontraron su propósito... menos tú.",
+   "tipo": "recorte",
+   "mus": "menor",
+   "acto": 1,
+   "recorte": {
+    "titulo": "TODOS LO|ENCONTRARON|MENOS TÚ",
+    "marca": 4
+   }
+  },
+  {
+   "say": "Pero escucha esto. Moisés tenía ochenta años cuando habló frente al faraón.",
+   "tipo": "recorte",
+   "mus": "foso",
+   "acto": 2,
+   "recorte": {
+    "titulo": "MOISÉS:|80 AÑOS",
+    "sub": "Éxodo 7:7",
+    "sello": "DATO"
+   },
+   "nivel": 0.6
+  },
+  {
+   "say": "Abraham salió de su tierra a los setenta y cinco.",
+   "tipo": "recorte",
+   "mus": "foso",
+   "acto": 2,
+   "recorte": {
+    "titulo": "ABRAHAM:|75 AÑOS",
+    "sub": "Génesis 12:4"
+   },
+   "nivel": 0.6
+  },
+  {
+   "say": "El propósito no tiene fecha de caducidad.",
+   "tipo": "recorte",
+   "mus": "mayor",
+   "acto": 2,
+   "recorte": {
+    "titulo": "SIN FECHA DE|CADUCIDAD",
+    "sello": "NOTICIA",
+    "selloAt": 0.5,
+    "marca": 3
+   },
+   "corte": true
+  },
+  {
+   "say": "Lo que te dolió, lo que viviste, lo que aprendiste... nada fue en vano.",
+   "tipo": "recorte",
+   "mus": "menor",
+   "acto": 3,
+   "recorte": {
+    "titulo": "NADA FUE|EN VANO",
+    "sub": "Todo te preparó para esto"
+   }
+  },
+  {
+   "say": "Tu propósito no siempre es algo enorme. A veces está en tu familia, en tu trabajo bien hecho, o en la persona que hoy necesita tu ayuda.",
+   "tipo": "recorte",
+   "mus": "mayor",
+   "acto": 3,
+   "recorte": {
+    "titulo": "TU PROPÓSITO|ESTÁ CERCA",
+    "lista": [
+     "TU FAMILIA",
+     "TU TRABAJO",
+     "SERVIR A OTRO"
+    ]
+   }
+  },
+  {
+   "say": "Haz hoy lo que Dios te pone enfrente. Lo demás... se va acomodando.",
+   "tipo": "recorte",
+   "mus": "mayor",
+   "acto": 4,
+   "recorte": {
+    "titulo": "HAZ LO QUE|TIENES ENFRENTE",
+    "sub": "Un paso a la vez"
+   }
+  },
+  {
+   "say": "No llegaste tarde. Llegaste justo a tiempo para lo que sigue.",
+   "tipo": "recorte",
+   "mus": "mayor",
+   "acto": 5,
+   "recorte": {
+    "titulo": "NO LLEGASTE|TARDE",
+    "marca": 2,
+    "sello": "A TIEMPO",
+    "selloAt": 0.6
+   },
+   "nivel": 1.25
+  },
+  {
+   "say": "¿Cuál crees que es tu propósito? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Cuál es",
+     "l": "tu propósito?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "¿Sientes que se te pasó el tren? 🚂 Moisés tenía 80 y Abraham 75. Tu propósito no tiene fecha de caducidad. ¿Cuál crees que es el tuyo? 👇",
+ "hashtags": [
+  "#proposito",
+  "#fe",
+  "#Dios",
+  "#motivacion",
+  "#reflexion",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "Éxodo 7:7",
+  "Génesis 12:4"
+ ]
+}
