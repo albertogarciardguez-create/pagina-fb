@@ -253,11 +253,31 @@ def rellenar(im, f):
     return Image.composite(blur, out, mask)
 
 
-def data_url(path, max_lado=2400, franja=0.0):
+def componer(im, alto=1300, fx=0.5, W=1080, H=1920):
+    """Imagen horizontal en reel vertical: la escena nítida a `alto` px (recortada a lo ancho en fx)
+    sobre la misma imagen ampliada, desenfocada y oscurecida."""
+    from PIL import Image, ImageFilter, ImageEnhance
+    r = max(W / im.width, H / im.height)
+    bg = im.resize((round(im.width * r), round(im.height * r)), Image.LANCZOS)
+    bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
+    bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(40))).enhance(0.55)
+    fw = round(im.width * alto / im.height); fg = im.resize((fw, alto), Image.LANCZOS)
+    x0 = int(min(max(fx * fw - W / 2, 0), max(fw - W, 0))); fg = fg.crop((x0, 0, x0 + min(W, fw), alto))
+    y0 = (H - alto) // 2
+    m = Image.new("L", fg.size, 255); s = 60
+    for i in range(s):  # bordes de arriba y abajo suaves
+        v = int(255 * i / s); m.paste(v, (0, i, fg.width, i + 1)); m.paste(v, (0, alto - 1 - i, fg.width, alto - i))
+    bg.paste(fg, ((W - fg.width) // 2, y0), m)
+    return bg
+
+
+def data_url(path, max_lado=2400, franja=0.0, comp=None):
     from PIL import Image
     im = Image.open(path).convert("RGB")
     if franja:
         im = rellenar(im, franja)
+    if comp and im.width > im.height:
+        im = componer(im, comp[0], comp[1])
     if max(im.size) > max_lado:
         r = max_lado / max(im.size); im = im.resize((round(im.width * r), round(im.height * r)), Image.LANCZOS)
     b = io.BytesIO(); im.save(b, "JPEG", quality=90)
@@ -274,7 +294,9 @@ def imagenes(story):
         for n in sc.get("img", []):
             p = next((os.path.join(carpeta, n + e) for e in EXT if os.path.exists(os.path.join(carpeta, n + e))), None)
             if p:
-                out[n] = data_url(p, franja=fr.get(n, 0.0))
+                c = story.get("componer") if story.get("formato") != "horizontal" else None
+                comp = (c.get("alto", 1300), c.get("x", {}).get(n, 0.5)) if c else None
+                out[n] = data_url(p, franja=fr.get(n, 0.0), comp=comp)
             else:
                 faltan.append(n)
     if faltan:
@@ -295,7 +317,14 @@ def clips(story, out):
             continue
         d = os.path.join(out, "clips", c); os.makedirs(d, exist_ok=True)
         lado = "1920:-2" if story.get("formato") == "horizontal" else "-2:1920"
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", f"fps=12,scale={lado}", "-frames:v", "120", "-q:v", "3", f"{d}/f%03d.jpg"], check=True)
+        vf = f"fps=12,scale={lado}"
+        cp = story.get("componer") if story.get("formato") != "horizontal" else None
+        if cp:  # clip horizontal en reel vertical: nítido al centro sobre fondo desenfocado
+            a = cp.get("alto", 1300); fx = cp.get("x", {}).get(c, 0.5)
+            vf = (f"fps=12,split[a][b];[a]scale=-2:1920,crop=1080:1920,boxblur=30:2,eq=brightness=-0.18[bg];"
+                  f"[b]scale=-2:{a},crop='min(1080,iw)':{a}:'max(0,min(iw-1080,{fx}*iw-540))':0[fg];"
+                  f"[bg][fg]overlay=(W-w)/2:(H-h)/2")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", vf, "-frames:v", "120", "-q:v", "3", f"{d}/f%03d.jpg"], check=True)
         res[c] = [f"file://{d}/{f}" for f in sorted(os.listdir(d)) if f.endswith(".jpg")]
         log(f"clip {c}: {len(res[c])} cuadros")
     return res

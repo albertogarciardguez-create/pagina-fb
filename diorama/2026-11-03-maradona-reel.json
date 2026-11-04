@@ -16,8 +16,8 @@
   {
    "say": "Nació en un barrio sin agua potable... y terminó siendo llamado el mejor del siglo.",
    "img": [
-    "v01a",
-    "v01b"
+    "m01",
+    "m02"
    ],
    "split": true,
    "move": "in",
@@ -49,9 +49,8 @@
   {
    "say": "Diego Armando Maradona. Un niño de Villa Fiorito, con una pelota y un sueño: jugar un Mundial.",
    "img": [
-    "v02"
+    "m05"
    ],
-   "clip": "c2",
    "move": "in",
    "acto": 1,
    "mus": "menor",
@@ -67,7 +66,7 @@
   {
    "say": "Debutó en primera división diez días antes de cumplir dieciséis años.",
    "img": [
-    "v03"
+    "m08"
    ],
    "move": "right",
    "acto": 2,
@@ -84,7 +83,7 @@
   {
    "say": "Barcelona y Nápoles pagaron por él récords mundiales.",
    "img": [
-    "v04"
+    "m11"
    ],
    "move": "left",
    "acto": 2,
@@ -102,7 +101,7 @@
   {
    "say": "Y en Nápoles, una ciudad olvidada, ganó dos ligas que nadie creía posibles.",
    "img": [
-    "v05"
+    "m13"
    ],
    "move": "up",
    "acto": 2,
@@ -119,9 +118,9 @@
   {
    "say": "México, mil novecientos ochenta y seis. Contra Inglaterra, en cuatro minutos, hizo el gol más polémico... y el más hermoso de la historia.",
    "img": [
-    "v06"
+    "m18"
    ],
-   "clip": "c1",
+   "clip": "c3",
    "move": "shake",
    "acto": 3,
    "mus": "foso",
@@ -139,7 +138,7 @@
   {
    "say": "Levantó la Copa del Mundo como capitán.",
    "img": [
-    "v07"
+    "m19"
    ],
    "move": "up",
    "acto": 3,
@@ -160,12 +159,13 @@
      "l": "como capitán"
     }
    ],
-   "chip": "1986 · MÉXICO"
+   "chip": "1986 · MÉXICO",
+   "clip": "c4"
   },
   {
    "say": "Pero la fama también tiene un precio. Las adicciones lo alejaron de la cancha.",
    "img": [
-    "v08"
+    "m22"
    ],
    "move": "down",
    "acto": 4,
@@ -183,7 +183,7 @@
   {
    "say": "Cayó muchas veces. Y muchas veces se volvió a levantar.",
    "img": [
-    "v09"
+    "m23"
    ],
    "move": "up",
    "acto": 4,
@@ -200,7 +200,7 @@
   {
    "say": "Murió en dos mil veinte, a los sesenta años. Pero en cada potrero, todavía hay un niño que sueña con ser Diego.",
    "img": [
-    "v10"
+    "m25"
    ],
    "move": "in",
    "acto": 5,
@@ -241,5 +241,14 @@
   "https://espndeportes.espn.com/futbol/argentina/nota/_/id/7797546/diego-armando-maradona-diez-10-murio-muerte-60-anos",
   "https://www.poresto.com/deportes/2021/6/22/maradona-se-cumplen-35-anos-de-la-mano-de-dios-en-mexico-86.html",
   "https://www.vanguardia.com/deportes/futbol/2025/10/20/hace-49-anos-debuto-maradona-asi-comenzo-la-leyenda-del-10/"
- ]
+ ],
+ "componer": {
+  "alto": 1250,
+  "x": {
+   "m01": 0.45,
+   "m02": 0.7,
+   "c3": 0.5,
+   "m18": 0.5
+  }
+ }
 }
