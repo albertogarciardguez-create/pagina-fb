@@ -520,13 +520,38 @@ def main():
     tmp = os.path.join(outdir, "_tmp")
     os.makedirs(tmp, exist_ok=True)
     pw, ph, top = geometria(story)
-    if "--prompts" in sys.argv:  # lista para pegar en Gemini / Kling / Seedance
-        txt = [f"ESTILO BASE: {story.get('estilo', '')}\nPERSONAJES: {json.dumps(story.get('personajes', {}), ensure_ascii=False)}\n"]
+    if "--prompts" in sys.argv:  # hoja para copiar y pegar en Gemini (cada prompt ya trae estilo y personajes)
+        import re
+        est, pers = story.get("estilo", ""), story.get("personajes", {})
+        carpeta = os.path.dirname(story["tomas"][0].get("src", f"anime/img/{sid}/t01.png"))
+        L = [f"# Prompts para Gemini — {story['titulo'].replace('*', '')}", "",
+             "## Cómo usarla", "1. Abre un chat nuevo en Gemini (modelo de imagen) y genera primero las HOJAS DE PERSONAJE.",
+             "2. Para cada toma: adjunta la hoja del personaje que aparece y pega el prompt tal cual.",
+             "3. Si sale texto, logos o escudos, pide: \"same image, remove all text and logos\".",
+             f"4. Descarga cada imagen y guárdala con su nombre (t01.png, t02.png…) en `{carpeta}/`.",
+             f"5. En la Mac: `python3 engine/build_anime.py anime/{os.path.basename(path)}`", "",
+             "## Hojas de personaje", ""]
+        for k, v in pers.items():
+            L += [f"### {k}", "```", f"Character reference sheet of {v}. Front view, side view and back view, full body, "
+                  f"neutral pose, plain dark background. {est} Wide 16:9 image.", "```", ""]
+        L += ["## Tomas", ""]
         for i, tm in enumerate(story["tomas"]):
-            txt.append(f"— TOMA {i + 1:02d} → {tm.get('src', '')}\nIMAGEN: {tm.get('prompt', '')}\n"
-                       + (f"MOVIMIENTO (clip 5 s): {tm['video_prompt']}\n" if tm.get("video_prompt") else ""))
-        open(os.path.join(outdir, "prompts.txt"), "w", encoding="utf-8").write("\n".join(txt))
-        log(f"prompts: {os.path.join(outdir, 'prompts.txt')}")
+            pr = tm.get("prompt", "")
+            usa = [k for k in pers if re.search(rf"\b{k}\b", pr)]
+            for k in usa:
+                pr = re.sub(rf"\b{k}'s\b", f"the {k.lower()}'s", pr)
+                pr = re.sub(rf"\b{k}\b", f"the {k.lower()} ({pers[k]})", pr, count=1)
+                pr = re.sub(rf"\b{k}\b", f"the {k.lower()}", pr)
+            d = tm.get("dice", {})
+            d = d[0] if isinstance(d, list) and d else d
+            L += [f"### {os.path.basename(tm.get('src', ''))}" + (f"  · adjunta hoja: {', '.join(usa)}" if usa else "")
+                  + (f"  · dice: “{d['t']}”" if d else ""),
+                  "```", f"Generate a wide 16:9 image. {pr[0].upper() + pr[1:]}. {est}", "```", ""]
+            if tm.get("video_prompt"):
+                L += ["> Clip opcional (modo híbrido): " + tm["video_prompt"], ""]
+        out = os.path.join(outdir, f"prompts-{sid}.md")
+        open(out, "w", encoding="utf-8").write("\n".join(L))
+        log(f"prompts: {out}")
         return
     lin = lineas_velocidad(os.path.join(CACHE, f"lineas_{pw}x{ph}"), pw, ph)
 
