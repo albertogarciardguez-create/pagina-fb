@@ -539,7 +539,6 @@ def main():
             pr = tm.get("prompt", "")
             usa = [k for k in pers if re.search(rf"\b{k}\b", pr)]
             for k in usa:
-                pr = re.sub(rf"\b{k}'s\b", f"the {k.lower()}'s", pr)
                 pr = re.sub(rf"\b{k}\b", f"the {k.lower()} ({pers[k]})", pr, count=1)
                 pr = re.sub(rf"\b{k}\b", f"the {k.lower()}", pr)
             d = tm.get("dice", {})
