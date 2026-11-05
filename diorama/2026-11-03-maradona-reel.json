@@ -49,7 +49,7 @@
   {
    "say": "Diego Armando Maradona. Un niño de Villa Fiorito, con una pelota y un sueño: jugar un Mundial.",
    "img": [
-    "m05"
+    "m06"
    ],
    "move": "in",
    "acto": 1,
@@ -61,7 +61,8 @@
      "l": "con un sueño"
     }
    ],
-   "chip": "1960 · BUENOS AIRES"
+   "chip": "1960 · BUENOS AIRES",
+   "clip": "c2"
   },
   {
    "say": "Debutó en primera división diez días antes de cumplir dieciséis años.",
@@ -75,7 +76,8 @@
     {
      "b": "Debutó a los 15",
      "pos": "high",
-     "l": "en primera división"
+     "l": "en primera división",
+     "caja": true
     }
    ],
    "chip": "1976 · ARGENTINOS JUNIORS"
@@ -93,7 +95,8 @@
     {
      "b": "Dos récords",
      "pos": "high",
-     "l": "mundiales de fichaje"
+     "l": "mundiales de fichaje",
+     "caja": true
     }
    ],
    "chip": "1982–1984"
@@ -110,10 +113,12 @@
     {
      "b": "Nápoles",
      "pos": "high",
-     "l": "campeón por primera vez"
+     "l": "campeón por primera vez",
+     "caja": true
     }
    ],
-   "chip": "1987 · ITALIA"
+   "chip": "1987 · ITALIA",
+   "clip": "c5"
   },
   {
    "say": "México, mil novecientos ochenta y seis. Contra Inglaterra, en cuatro minutos, hizo el gol más polémico... y el más hermoso de la historia.",
@@ -130,7 +135,8 @@
      "b": "El gol del siglo",
      "pos": "high",
      "s": 1,
-     "at": 0.5
+     "at": 0.5,
+     "caja": true
     }
    ],
    "chip": "1986 · ESTADIO AZTECA"
@@ -156,7 +162,8 @@
     {
      "b": "Campeón del mundo",
      "pos": "high",
-     "l": "como capitán"
+     "l": "como capitán",
+     "caja": true
     }
    ],
    "chip": "1986 · MÉXICO",
@@ -176,14 +183,16 @@
     {
      "b": "La fama",
      "pos": "high",
-     "l": "tiene un precio"
+     "l": "tiene un precio",
+     "caja": true
     }
    ]
   },
   {
    "say": "Cayó muchas veces. Y muchas veces se volvió a levantar.",
    "img": [
-    "m23"
+    "m20",
+    "m15"
    ],
    "move": "up",
    "acto": 4,
@@ -192,10 +201,19 @@
    "titles": [
     {
      "b": "Cayó",
-     "pos": "high",
-     "l": "y se levantó"
+     "l": "muchas veces",
+     "pos": "topright",
+     "caja": true
+    },
+    {
+     "b": "Y se levantó",
+     "l": "otra vez",
+     "pos": "lowleft",
+     "s": 1,
+     "caja": true
     }
-   ]
+   ],
+   "split": true
   },
   {
    "say": "Murió en dos mil veinte, a los sesenta años. Pero en cada potrero, todavía hay un niño que sueña con ser Diego.",
@@ -210,7 +228,8 @@
     {
      "b": "Todavía hay un niño",
      "pos": "high",
-     "l": "que sueña con ser Diego"
+     "l": "que sueña con ser Diego",
+     "caja": true
     }
    ],
    "chip": "1960 – 2020"
@@ -247,8 +266,11 @@
   "x": {
    "m01": 0.45,
    "m02": 0.7,
-   "c3": 0.5,
-   "m18": 0.5
+   "c3": 0.42,
+   "m18": 0.5,
+   "m06": 0.45,
+   "c2": 0.45,
+   "c5": 0.5
   }
  }
 }

@@ -265,8 +265,12 @@ def componer(im, alto=1300, fx=0.5, W=1080, H=1920):
     x0 = int(min(max(fx * fw - W / 2, 0), max(fw - W, 0))); fg = fg.crop((x0, 0, x0 + min(W, fw), alto))
     y0 = (H - alto) // 2
     m = Image.new("L", fg.size, 255); s = 60
-    for i in range(s):  # bordes de arriba y abajo suaves
-        v = int(255 * i / s); m.paste(v, (0, i, fg.width, i + 1)); m.paste(v, (0, alto - 1 - i, fg.width, alto - i))
+    for i in range(s):  # bordes suaves (arriba/abajo, o a los lados si no llena el ancho)
+        v = int(255 * i / s)
+        if alto < H:
+            m.paste(v, (0, i, fg.width, i + 1)); m.paste(v, (0, alto - 1 - i, fg.width, alto - i))
+        if fg.width < W:
+            m.paste(v, (i, 0, i + 1, alto)); m.paste(v, (fg.width - 1 - i, 0, fg.width - i, alto))
     bg.paste(fg, ((W - fg.width) // 2, y0), m)
     return bg
 
@@ -276,8 +280,8 @@ def data_url(path, max_lado=2400, franja=0.0, comp=None):
     im = Image.open(path).convert("RGB")
     if franja:
         im = rellenar(im, franja)
-    if comp and im.width > im.height:
-        im = componer(im, comp[0], comp[1])
+    if comp and (im.width > im.height) != (comp[2] > comp[3]):  # orientación distinta a la del video
+        im = componer(im, min(comp[0], comp[3]), comp[1], comp[2], comp[3])
     if max(im.size) > max_lado:
         r = max_lado / max(im.size); im = im.resize((round(im.width * r), round(im.height * r)), Image.LANCZOS)
     b = io.BytesIO(); im.save(b, "JPEG", quality=90)
@@ -294,8 +298,8 @@ def imagenes(story):
         for n in sc.get("img", []):
             p = next((os.path.join(carpeta, n + e) for e in EXT if os.path.exists(os.path.join(carpeta, n + e))), None)
             if p:
-                c = story.get("componer") if story.get("formato") != "horizontal" else None
-                comp = (c.get("alto", 1300), c.get("x", {}).get(n, 0.5)) if c else None
+                c = story.get("componer"); hz = story.get("formato") == "horizontal"
+                comp = (c.get("alto", 1080 if hz else 1300), c.get("x", {}).get(n, 0.5), *((1920, 1080) if hz else (1080, 1920))) if c else None
                 out[n] = data_url(p, franja=fr.get(n, 0.0), comp=comp)
             else:
                 faltan.append(n)

@@ -99,7 +99,7 @@
   {
    "say": "En su casa no sobraba nada. Pero había una pelota. Cuentan que se la regalaron cuando era muy pequeño y que dormía abrazado a ella.",
    "img": [
-    "m05"
+    "m06"
    ],
    "move": "in",
    "acto": 1,
@@ -116,7 +116,7 @@
   {
    "say": "Cuando tenía unos diez años, una cámara de televisión lo grabó haciendo malabares con la pelota en un potrero. Le preguntaron cuál era su sueño. Respondió, sin dudar, que quería jugar un Mundial y salir campeón. Era un niño flaco, con la pelota pegada al pie, que hablaba como si ya supiera a dónde iba.",
    "img": [
-    "m05"
+    "m01"
    ],
    "move": "out",
    "acto": 1,
@@ -377,7 +377,8 @@
      "l": "y una Copa UEFA"
     }
    ],
-   "chip": "1987 · 1990"
+   "chip": "1987 · 1990",
+   "clip": "c5"
   },
   {
    "say": "Cuando Nápoles ganó su primera liga, la fiesta duró semanas. En el cementerio de la ciudad alguien escribió un mensaje para los muertos: no saben lo que se perdieron. Así de grande fue lo que Diego le dio a esa gente.",
@@ -808,5 +809,8 @@
   "https://espndeportes.espn.com/futbol/argentina/nota/_/id/7797546/diego-armando-maradona-diez-10-murio-muerte-60-anos",
   "https://www.poresto.com/deportes/2021/6/22/maradona-se-cumplen-35-anos-de-la-mano-de-dios-en-mexico-86.html",
   "https://www.vanguardia.com/deportes/futbol/2025/10/20/hace-49-anos-debuto-maradona-asi-comenzo-la-leyenda-del-10/"
- ]
+ ],
+ "componer": {
+  "alto": 1080
+ }
 }

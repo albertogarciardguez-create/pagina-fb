@@ -33,7 +33,7 @@
    "titles": [
     {
      "b": "¿Para qué",
-     "pos": "low",
+     "pos": "high",
      "l": "estoy aquí?",
      "caja": true
     }
@@ -53,7 +53,8 @@
     {
      "b": "Trabajo, cuentas",
      "pos": "high",
-     "l": "y un vacío"
+     "l": "y un vacío",
+     "caja": true
     }
    ]
   },
