@@ -13,7 +13,7 @@
  "pausaFrase": 0.4,
  "pausaEscena": 0.8,
  "cola": 5.0,
- "miniatura": 17,
+ "miniatura": 31,
  "audio": "diorama/audio/2026-11-03-maradona-youtube-edge.mp3",
  "scenes": [
   {
@@ -221,7 +221,7 @@
   {
    "say": "En mil novecientos setenta y ocho, el técnico César Luis Menotti lo dejó fuera de la lista para el Mundial que se jugó en Argentina. El país salió campeón... y Diego lo vio por televisión. Lloró. Y usó ese dolor como combustible.",
    "img": [
-    "m27"
+    "m03"
    ],
    "move": "in",
    "acto": 2,
@@ -290,7 +290,7 @@
   {
    "say": "Aun así, en España dejó jugadas inolvidables y ganó la Copa del Rey. Pero sentía que algo le faltaba: un lugar donde lo quisieran no solo por su talento, sino como uno de los suyos.",
    "img": [
-    "m10"
+    "m11"
    ],
    "move": "left",
    "acto": 2,
@@ -306,7 +306,7 @@
   {
    "say": "Muchos pensaron que su carrera había terminado. Se equivocaron.",
    "img": [
-    "m10"
+    "m21"
    ],
    "move": "out",
    "acto": 2,
@@ -618,12 +618,13 @@
      "l": "junto a Pelé"
     }
    ],
-   "chip": "2000 · FIFA"
+   "chip": "2000 · FIFA",
+   "clip": "c6"
   },
   {
    "say": "Como entrenador, llegó hasta los cuartos de final, donde Alemania goleó a Argentina. No fue el Diego de la cancha, pero seguía ahí, de pie, defendiendo la camiseta que amaba.",
    "img": [
-    "m23"
+    "m15"
    ],
    "move": "right",
    "acto": 4,
@@ -761,7 +762,8 @@
      "pos": "high",
      "l": "y humano"
     }
-   ]
+   ],
+   "clip": "c7"
   },
   {
    "say": "Y ahora te pregunto: ¿qué te enseñó a ti la historia de Maradona? Te leo en los comentarios.",

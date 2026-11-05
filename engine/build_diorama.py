@@ -8,7 +8,7 @@ Imágenes: diorama/img/<id>/<nombre>.(jpg|jpeg|png|webp), con los nombres de "im
 Voz: diorama/audio/<id>.mp3 (la toma de ElevenLabs). Se alinea sola con engine/alinear.py.
 Si falta el audio, usa la voz gratuita kokoro solo para probar (imprime AVISO).
 """
-import base64, hashlib, io, json, os, subprocess, sys
+import base64, hashlib, io, json, os, shutil, subprocess, sys
 import numpy as np, soundfile as sf
 
 ENGINE = os.path.dirname(os.path.abspath(__file__))
@@ -319,7 +319,7 @@ def clips(story, out):
         src = next((os.path.join(carpeta, c + e) for e in (".mp4", ".mov", ".webm") if os.path.exists(os.path.join(carpeta, c + e))), None)
         if not src:
             continue
-        d = os.path.join(out, "clips", c); os.makedirs(d, exist_ok=True)
+        d = os.path.join(out, "clips", c); shutil.rmtree(d, ignore_errors=True); os.makedirs(d)  # sin cuadros viejos de otro clip
         lado = "1920:-2" if story.get("formato") == "horizontal" else "-2:1920"
         vf = f"fps=12,scale={lado}"
         cp = story.get("componer") if story.get("formato") != "horizontal" else None

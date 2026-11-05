@@ -191,8 +191,7 @@
   {
    "say": "Cayó muchas veces. Y muchas veces se volvió a levantar.",
    "img": [
-    "m20",
-    "m15"
+    "m23"
    ],
    "move": "up",
    "acto": 4,
@@ -202,18 +201,18 @@
     {
      "b": "Cayó",
      "l": "muchas veces",
-     "pos": "topright",
+     "pos": "high",
      "caja": true
     },
     {
      "b": "Y se levantó",
      "l": "otra vez",
-     "pos": "lowleft",
+     "pos": "low",
      "s": 1,
      "caja": true
     }
    ],
-   "split": true
+   "clip": "c6"
   },
   {
    "say": "Murió en dos mil veinte, a los sesenta años. Pero en cada potrero, todavía hay un niño que sueña con ser Diego.",
@@ -232,7 +231,8 @@
      "caja": true
     }
    ],
-   "chip": "1960 – 2020"
+   "chip": "1960 – 2020",
+   "clip": "c7"
   },
   {
    "say": "¿Qué te enseñó a ti la historia de Maradona?",
@@ -270,7 +270,9 @@
    "m18": 0.5,
    "m06": 0.45,
    "c2": 0.45,
-   "c5": 0.5
+   "c5": 0.5,
+   "c6": 0.5,
+   "c7": 0.5
   }
  }
 }
