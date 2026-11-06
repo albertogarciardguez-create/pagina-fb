@@ -26,7 +26,7 @@ FPS, W, H, SR = 30, 1080, 1920, 44100
 
 MARCAS = {
     "senorfutbol": {"acento": "#F5C518", "firma": "SEÑOR FÚTBOL", "lema": "Aquí el fútbol se debate",
-                    "boton": "SÍGUENOS +", "logo": None},
+                    "boton": "SÍGUENOS +", "logo": "engine/assets/senorfutbol_logo.png", "circulo": True},
     "impulso": {"acento": "#FF6A3D", "firma": "IMPULSO REAL", "lema": "Historias que te levantan",
                 "boton": "SEGUIR +", "logo": "engine/assets/impulso_logo.png"},
 }
@@ -131,9 +131,14 @@ def tarjeta_cierre(story, marca, out):
     y = 560
     if marca["logo"]:
         lg = Image.open(ruta(marca["logo"])).convert("RGBA").resize((300, 300))
-        arr = np.array(lg)  # quita el fondo cuadrado del logo para que flote sobre negro
-        dist = np.abs(arr[:, :, :3].astype(int) - arr[4, 4, :3].astype(int)).sum(2)
-        arr[:, :, 3] = np.clip((dist - 10) * 10, 0, 255).astype(np.uint8)
+        arr = np.array(lg)
+        if marca.get("circulo"):  # logo redondo: recorta el disco (con su aro) y quita las esquinas
+            yy, xx = np.mgrid[:300, :300]
+            r = np.hypot(xx - 149.5, yy - 149.5)
+            arr[:, :, 3] = (np.clip((141 - r) * 255, 0, 255)).astype(np.uint8)
+        else:  # quita el fondo cuadrado del logo para que flote sobre negro
+            dist = np.abs(arr[:, :, :3].astype(int) - arr[4, 4, :3].astype(int)).sum(2)
+            arr[:, :, 3] = np.clip((dist - 10) * 10, 0, 255).astype(np.uint8)
         lg = Image.fromarray(arr)
         im.paste(lg, ((W - 300) // 2, y - 40), lg)
         y += 300
