@@ -1,0 +1,845 @@
+{
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "intensidad": 1.5,
+ "imagenes": "diorama/img/cristiano",
+ "inicio": 0.3,
+ "id": "2026-11-05-cristiano-youtube",
+ "titulo": "Cristiano Ronaldo (YouTube)",
+ "formato": "horizontal",
+ "actos": 5,
+ "speed": 1.0,
+ "pausaFrase": 0.4,
+ "pausaEscena": 0.8,
+ "cola": 5.0,
+ "miniatura": 25,
+ "audio": "diorama/audio/2026-11-05-cristiano-youtube-edge.mp3",
+ "componer": {
+  "alto": 1080
+ },
+ "scenes": [
+  {
+   "say": "Un niño de una isla pobre, en medio del océano Atlántico, no se despegaba de su balón. Su papá acomodaba uniformes en un club de barrio. Nadie apostaba por él.",
+   "img": [
+    "r01"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Una isla pobre",
+     "l": "y un balón",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ese niño se convirtió en el máximo goleador de la historia del futbol de selecciones. Y casi todo lo que logró, lo construyó a base de trabajo.",
+   "img": [
+    "r02"
+   ],
+   "move": "up",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Cristiano Ronaldo",
+     "l": "el récord del trabajo",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Hoy te cuento su historia completa. Y al final, te dejo tres lecciones que puedes aplicar en tu vida, sin importar de dónde vengas.",
+   "img": [
+    "r19"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Tres lecciones",
+     "l": "para tu vida",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 1. Madeira.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 1",
+   "cap_titulo": "Madeira",
+   "mus": "menor"
+  },
+  {
+   "say": "Cristiano Ronaldo dos Santos Aveiro nació el cinco de febrero de mil novecientos ochenta y cinco en Funchal, en la isla de Madeira, Portugal. Era el menor de cuatro hermanos.",
+   "img": [
+    "r03"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Funchal",
+     "l": "isla de Madeira",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "1985 · MADEIRA"
+  },
+  {
+   "say": "La familia vivía con muy poco. Su mamá, Dolores, trabajaba como cocinera y hacía milagros para que alcanzara la comida en la mesa.",
+   "img": [
+    "r03"
+   ],
+   "move": "right",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Una casa humilde",
+     "l": "y mucho esfuerzo",
+     "pos": "high",
+     "caja": true,
+     "s": 1
+    }
+   ]
+  },
+  {
+   "say": "Su papá, José Dinis, era jardinero municipal y utilero en el Andorinha, un club pequeño de la isla. Ahí, entre uniformes y balones viejos, Cristiano empezó a jugar.",
+   "img": [
+    "r04"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Su papá",
+     "l": "cuidaba los uniformes",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "En las calles empinadas de Madeira, el balón nunca se le despegaba de los pies. Era flaco, era pequeño... pero no se rendía nunca. Si perdía, lloraba de coraje y pedía la revancha.",
+   "img": [
+    "r05"
+   ],
+   "move": "left",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Flaco y pequeño",
+     "l": "pero no se rendía",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "clip": "c1"
+  },
+  {
+   "say": "A los doce años, el Sporting de Lisboa lo fichó. Y tuvo que tomar la decisión más difícil de su infancia: dejar a su familia y cruzar el mar, solo.",
+   "img": [
+    "r06"
+   ],
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "A los 12 años",
+     "l": "solo, lejos de casa",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "1997 · LISBOA"
+  },
+  {
+   "say": "Capítulo 2. Lisboa.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 2",
+   "cap_titulo": "Lisboa",
+   "mus": "menor"
+  },
+  {
+   "say": "En Lisboa, todo era distinto. Extrañaba a su mamá, a sus hermanos, a su isla. Los otros niños se burlaban de su acento. Él mismo ha contado que lloraba casi todos los días.",
+   "img": [
+    "r07"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Lloraba",
+     "l": "casi todos los días",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "nivel": 0.7
+  },
+  {
+   "say": "Y a los quince años llegó el golpe más fuerte. Los médicos descubrieron que su corazón se aceleraba, incluso cuando estaba en reposo. Su carrera podía terminar antes de empezar.",
+   "img": [
+    "r08"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Su corazón",
+     "l": "podía detener su sueño",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2000"
+  },
+  {
+   "say": "Lo operaron con láser, en un solo día. Y unos días después... ya estaba entrenando otra vez.",
+   "img": [
+    "r08"
+   ],
+   "move": "out",
+   "acto": 2,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Días después",
+     "l": "volvió a entrenar",
+     "pos": "high",
+     "caja": true,
+     "s": 1
+    }
+   ],
+   "corte": true
+  },
+  {
+   "say": "Desde entonces, se volvió obsesivo con el trabajo. Se quedaba después de los entrenamientos, practicaba regates hasta que oscurecía y repetía cada jugada una y otra vez.",
+   "img": [
+    "r09"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Entrenar",
+     "l": "cuando nadie te ve",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Se cuenta que, como le decían que era demasiado flaco, empezaba a hacer ejercicio a escondidas, de noche, cuando los demás ya dormían.",
+   "img": [
+    "r09"
+   ],
+   "move": "left",
+   "acto": 2,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Demasiado flaco",
+     "l": "le decían",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "A los diecisiete años debutó con el primer equipo del Sporting. En Lisboa ya todos hablaban del flaco de Madeira.",
+   "img": [
+    "r10"
+   ],
+   "move": "up",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Debut",
+     "l": "a los 17 años",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2002 · SPORTING"
+  },
+  {
+   "say": "En agosto de dos mil tres, el Sporting jugó un amistoso contra el Manchester United para inaugurar su nuevo estadio. Cristiano, de dieciocho años, volvió locos a los defensas ingleses.",
+   "img": [
+    "r11"
+   ],
+   "move": "shake",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Un amistoso",
+     "l": "que le cambió la vida",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2003 · LISBOA"
+  },
+  {
+   "say": "Se cuenta que los propios jugadores del United le pidieron a su técnico, Alex Ferguson, que lo firmara de inmediato. Días después, lo ficharon por más de doce millones de libras. Y le dieron la camiseta más pesada del club: el número siete.",
+   "img": [
+    "r12"
+   ],
+   "move": "in",
+   "acto": 2,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "El número 7",
+     "l": "a los 18 años",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 3. Manchester.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 3",
+   "cap_titulo": "Manchester",
+   "mus": "menor"
+  },
+  {
+   "say": "En Inglaterra le pegaban, lo provocaban y lo criticaban por hacer demasiados lujos. Él respondió de la única forma que sabía: trabajando más que nadie. Llegaba primero a entrenar y se iba al último.",
+   "img": [
+    "r13"
+   ],
+   "move": "right",
+   "acto": 3,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Llegaba primero",
+     "l": "y se iba al último",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "clip": "c2"
+  },
+  {
+   "say": "En dos mil cinco, su papá murió a los cincuenta y dos años, por problemas causados por el alcohol. Fue un golpe durísimo. Cristiano ha contado que, por eso, eligió no tomar alcohol.",
+   "img": [
+    "r27"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Perdió a su papá",
+     "l": "y eligió otro camino",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2005",
+   "nivel": 0.7
+  },
+  {
+   "say": "Y usó el dolor como combustible. En dos mil ocho ganó la Premier League y la Champions League con el Manchester United.",
+   "img": [
+    "r14"
+   ],
+   "move": "up",
+   "acto": 3,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Campeón de Europa",
+     "l": "con el United",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2008 · MOSCÚ"
+  },
+  {
+   "say": "Ese mismo año recibió su primer Balón de Oro. El niño que lloraba en Lisboa ya era el mejor jugador del mundo.",
+   "img": [
+    "r15"
+   ],
+   "move": "in",
+   "acto": 3,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Primer Balón de Oro",
+     "l": "a los 23 años",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 4. Madrid.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 4",
+   "cap_titulo": "Madrid",
+   "mus": "mayor"
+  },
+  {
+   "say": "En dos mil nueve, el Real Madrid pagó por él la cifra más alta de la historia en ese momento. Unas ochenta mil personas llenaron el Santiago Bernabéu solo para verlo con la camiseta blanca.",
+   "img": [
+    "r16"
+   ],
+   "move": "out",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Fichaje récord",
+     "l": "80 mil personas para verlo",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2009 · MADRID"
+  },
+  {
+   "say": "Ahí nació su festejo más famoso: la carrera, el salto, el giro en el aire... y el grito que hoy imitan niños en todo el mundo.",
+   "img": [
+    "r17"
+   ],
+   "move": "up",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "El salto",
+     "l": "que imita el mundo",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "clip": "c3"
+  },
+  {
+   "say": "Pero detrás del festejo había una disciplina feroz: comida medida, horas de sueño, gimnasio, recuperación. Mientras otros descansaban, él seguía entrenando.",
+   "img": [
+    "r19"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Disciplina",
+     "l": "todos los días",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "nivel": 0.8
+  },
+  {
+   "say": "En nueve temporadas marcó cuatrocientos cincuenta y un goles en cuatrocientos treinta y ocho partidos. Más de un gol por partido. Es el máximo goleador en la historia del Real Madrid.",
+   "img": [
+    "r18"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "451 goles",
+     "l": "en 438 partidos",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Rompió récords que parecían imposibles: sesenta y un goles en una sola temporada, y diecisiete goles en una sola edición de la Champions League.",
+   "img": [
+    "r17"
+   ],
+   "move": "in",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "61 goles",
+     "l": "en una temporada",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Ganó cuatro Champions League con el Madrid. Sumando la del United, cinco en total. Y llegó a cinco Balones de Oro.",
+   "img": [
+    "r28"
+   ],
+   "move": "right",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "5 Champions",
+     "l": "y 5 Balones de Oro",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 5. Las lágrimas.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 5",
+   "cap_titulo": "Las lágrimas",
+   "mus": "menor"
+  },
+  {
+   "say": "Pero con Portugal, el gran título no llegaba. Hasta la final de la Eurocopa de dos mil dieciséis, en París, contra Francia, la selección de casa.",
+   "img": [
+    "r20"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "La final",
+     "l": "contra Francia, en París",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2016 · PARÍS"
+  },
+  {
+   "say": "En los primeros minutos, una entrada le lastimó la rodilla. Intentó seguir. No pudo. Salió llorando, en camilla, en el partido más importante de su vida.",
+   "img": [
+    "r20"
+   ],
+   "move": "out",
+   "acto": 5,
+   "mus": "foso",
+   "titles": [
+    {
+     "b": "Salió llorando",
+     "l": "en camilla",
+     "pos": "high",
+     "caja": true,
+     "s": 1
+    }
+   ],
+   "corte": true
+  },
+  {
+   "say": "Pero no se fue al vestidor. Regresó a la orilla de la cancha, con la rodilla vendada, y les gritaba indicaciones a sus compañeros como si fuera otro entrenador.",
+   "img": [
+    "r21"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Con la rodilla vendada",
+     "l": "siguió liderando",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "En el tiempo extra, Portugal anotó. Ganaron uno a cero. Por primera vez en su historia, Portugal era campeón de Europa.",
+   "img": [
+    "r22"
+   ],
+   "move": "up",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Campeón de Europa",
+     "l": "por primera vez",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "clip": "c4",
+   "nivel": 1.2
+  },
+  {
+   "say": "Aquel niño que lloraba solo en Lisboa volvió a llorar. Pero esta vez, eran lágrimas de campeón.",
+   "img": [
+    "r22"
+   ],
+   "move": "out",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Lágrimas",
+     "l": "de campeón",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Después vinieron la Juventus, un regreso al Manchester United y, en dos mil veintitrés, el Al-Nassr de Arabia Saudita. Muchos dijeron que ya estaba acabado. Él siguió metiendo goles.",
+   "img": [
+    "r23"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Ya estaba acabado",
+     "l": "decían muchos",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2023 · ARABIA"
+  },
+  {
+   "say": "En dos mil veintiséis, con cuarenta y un años, jugó su sexto Mundial. Y contra Uzbekistán se convirtió en el primer jugador en anotar en seis Mundiales distintos.",
+   "img": [
+    "r24"
+   ],
+   "move": "shake",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Gol en 6 Mundiales",
+     "l": "el primero en la historia",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "chip": "2026 · MUNDIAL"
+  },
+  {
+   "say": "Portugal cayó en octavos de final contra España, y Cristiano volvió a llorar. Pero se fue con ciento cuarenta y seis goles con su selección: el máximo goleador de selecciones en la historia del futbol varonil.",
+   "img": [
+    "r25"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "146 goles",
+     "l": "con Portugal",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Hoy suma más de novecientos ochenta goles oficiales en su carrera. Y a sus cuarenta y un años, sigue persiguiendo los mil.",
+   "img": [
+    "r23"
+   ],
+   "move": "up",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Más de 980 goles",
+     "l": "y va por los mil",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Capítulo 6. Lo que nos deja.",
+   "tipo": "capitulo",
+   "cap": "CAPÍTULO 6",
+   "cap_titulo": "Lo que nos deja",
+   "mus": "mayor"
+  },
+  {
+   "say": "Porque la historia de Cristiano no se trata solo de goles. Se trata de lo que hacía cuando nadie lo estaba viendo. Y eso, cualquiera de nosotros lo puede copiar.",
+   "img": [
+    "r19"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Cuando nadie",
+     "l": "te está viendo",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Primera lección: tu origen no es tu destino. Venir de abajo no es una excusa. Puede ser tu mayor motor.",
+   "img": [
+    "r05"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "1. Tu origen",
+     "l": "no es tu destino",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Segunda lección: el talento abre la puerta, pero la disciplina te mantiene adentro. Hubo jugadores con tanto talento como él. Muy pocos con su constancia.",
+   "img": [
+    "r09"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "2. La disciplina",
+     "l": "te mantiene adentro",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Tercera lección: cuando no puedas jugar, lidera. Aquella final la ganó desde la orilla de la cancha, con la rodilla vendada.",
+   "img": [
+    "r21"
+   ],
+   "move": "right",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "3. Si no puedes jugar",
+     "l": "lidera",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Tu ejercicio para esta semana: elige un hábito pequeño. Diez minutos de lectura, de ejercicio o de estudio. Y hazlo todos los días, sin excusas. Así se construyen los récords: un día a la vez.",
+   "img": [
+    "r19"
+   ],
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Ejercicio:",
+     "l": "10 minutos diarios",
+     "pos": "high",
+     "caja": true
+    }
+   ]
+  },
+  {
+   "say": "Un niño de una isla pobre demostró que el trabajo puede llevarte más lejos que cualquier talento. Y quizá, en algún lugar, hay otro niño mirando el mar... con un balón bajo el brazo.",
+   "img": [
+    "r26"
+   ],
+   "move": "out",
+   "acto": 5,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Un día a la vez",
+     "l": "así se hacen los récords",
+     "pos": "high",
+     "caja": true
+    }
+   ],
+   "nivel": 1.25
+  },
+  {
+   "say": "Y ahora te pregunto: ¿qué hábito vas a empezar hoy? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Qué hábito",
+     "l": "vas a empezar hoy?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "La historia completa de Cristiano Ronaldo ⚽",
+ "hashtags": [
+  "#CristianoRonaldo",
+  "#CR7",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.realmadrid.com/es-ES/el-club/historia/leyendas-futbol/cristiano-ronaldo-dos-santos-aveiro",
+  "https://gestion.pe/mix/tendencias-mix/conoce-a-los-padres-de-cristiano-ronaldo-tuvieron-una-vida-dificil-cr7-nnda-nnlt-noticia/",
+  "https://sportskeeda.com/football/news-cristiano-ronaldo-s-heart-surgery-at-15-almost-derailed-his-career",
+  "https://www.expreso.ec/deportes/copa-mundial-de-futbol/portugal-cae-cristiano-ronaldo-da-ultimo-adios-copa-mundo-records-6-ediciones-288265.html",
+  "https://abc7.com/post/cristiano-ronaldo-primer-jugador-en-marcar-en-seis-mundiales-con-doblete-ante-uzbekistn/19364803",
+  "https://www.cronica.com.mx/deportes/2026/10/29/cristiano-ronaldo-marca-nuevo-hat-trick-con-el-al-nassr-cuantos-goles-le-faltan-para-llegar-a-mil/"
+ ],
+ "youtube": {
+  "titulo": "Cristiano Ronaldo: de una isla pobre al récord del trabajo | Su historia completa",
+  "intro": "Introducción",
+  "descripcion": "La historia de Cristiano Ronaldo contada en un diorama de plastilina: su infancia humilde en Madeira, el niño que lloraba solo en Lisboa, la operación del corazón a los 15 años, el número 7 del Manchester United, los 451 goles con el Real Madrid, las lágrimas y la gloria de la Euro 2016, y su sexto Mundial a los 41 años. Al final, 3 lecciones y un ejercicio para tu vida.\n\n¿Qué hábito vas a empezar hoy? Te leo en los comentarios.\nSuscríbete a Impulso Real para más historias de disciplina, liderazgo y fortaleza interior.\n\nSi tú o alguien cercano lucha contra el alcohol u otra adicción: Línea de la Vida 800 911 2000 (México, 24 h).",
+  "hashtags": [
+   "#CristianoRonaldo",
+   "#CR7",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "Cristiano Ronaldo",
+   "CR7",
+   "historia de Cristiano Ronaldo",
+   "biografía Cristiano Ronaldo",
+   "Madeira",
+   "Real Madrid",
+   "Manchester United",
+   "Euro 2016",
+   "Mundial 2026",
+   "disciplina",
+   "motivación",
+   "Impulso Real"
+  ]
+ }
+}
