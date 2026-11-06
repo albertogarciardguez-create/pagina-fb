@@ -1,0 +1,140 @@
+{
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "intensidad": 1.5,
+ "inicio": 0.3,
+ "id": "2026-11-05-cristiano-infografia",
+ "titulo": "Cristiano Ronaldo (infografía)",
+ "speed": 1.12,
+ "pausaFrase": 0.22,
+ "pausaEscena": 0.4,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-05-cristiano-reel-edge.mp3",
+ "scenes": [
+  {
+   "say": "Nació en una isla pobre... y se convirtió en el máximo goleador de selecciones de la historia.",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.6
+    }
+   ],
+   "vis": "isla",
+   "tag": "MADEIRA · 1985",
+   "cnt": [
+    {
+     "n": 146,
+     "l": "goles con Portugal",
+     "s": 1,
+     "at": 0.3,
+     "y": 650
+    }
+   ]
+  },
+  {
+   "say": "A los doce años dejó a su familia y cruzó el mar, solo, para jugar en Lisboa.",
+   "acto": 1,
+   "mus": "menor",
+   "vis": "barco",
+   "tag": "12 AÑOS · SOLO"
+  },
+  {
+   "say": "A los quince, lo operaron del corazón. Días después, ya estaba entrenando.",
+   "acto": 2,
+   "mus": "foso",
+   "vis": "corazon",
+   "tag": "15 AÑOS"
+  },
+  {
+   "say": "A los dieciocho, el Manchester United le dio el número siete.",
+   "acto": 2,
+   "mus": "mayor",
+   "vis": "camiseta",
+   "tag": "18 AÑOS · MANCHESTER"
+  },
+  {
+   "say": "Llegaba primero a entrenar y se iba al último. Siempre.",
+   "acto": 2,
+   "mus": "menor",
+   "vis": "lluvia",
+   "tag": "EL PRIMERO Y EL ÚLTIMO"
+  },
+  {
+   "say": "El Real Madrid pagó por él un récord mundial. Él respondió con cuatrocientos cincuenta y un goles.",
+   "acto": 3,
+   "mus": "mayor",
+   "vis": "goles",
+   "tag": "2009 · MADRID",
+   "cnt": [
+    {
+     "n": 451,
+     "l": "goles",
+     "s": 0,
+     "at": 0.3,
+     "dur": 2.2,
+     "y": 650
+    }
+   ]
+  },
+  {
+   "say": "En la final de la Euro dos mil dieciséis, salió llorando, lesionado...",
+   "acto": 4,
+   "mus": "foso",
+   "corte": true,
+   "vis": "camilla",
+   "tag": "2016 · FINAL DE LA EURO"
+  },
+  {
+   "say": "...y desde la orilla de la cancha, guio a Portugal a su primer título.",
+   "acto": 4,
+   "mus": "mayor",
+   "vis": "trofeo",
+   "tag": "CAMPEÓN DE EUROPA"
+  },
+  {
+   "say": "A los cuarenta y un años, fue el primero en marcar en seis Mundiales.",
+   "acto": 5,
+   "mus": "mayor",
+   "vis": "mundiales",
+   "tag": "2026 · 41 AÑOS"
+  },
+  {
+   "say": "El talento abre la puerta. La disciplina te mantiene adentro.",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "vis": "frase"
+  },
+  {
+   "say": "¿Qué hábito vas a empezar hoy?",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué hábito",
+    "vas a empezar hoy?"
+   ]
+  }
+ ],
+ "post": "Nació en una isla pobre y se convirtió en el máximo goleador de selecciones de la historia ⚽ La historia de Cristiano Ronaldo en un minuto. ¿Qué hábito vas a empezar hoy? 👇",
+ "hashtags": [
+  "#CristianoRonaldo",
+  "#CR7",
+  "#futbol",
+  "#disciplina",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.realmadrid.com/es-ES/el-club/historia/leyendas-futbol/cristiano-ronaldo-dos-santos-aveiro",
+  "https://gestion.pe/mix/tendencias-mix/conoce-a-los-padres-de-cristiano-ronaldo-tuvieron-una-vida-dificil-cr7-nnda-nnlt-noticia/",
+  "https://sportskeeda.com/football/news-cristiano-ronaldo-s-heart-surgery-at-15-almost-derailed-his-career",
+  "https://www.expreso.ec/deportes/copa-mundial-de-futbol/portugal-cae-cristiano-ronaldo-da-ultimo-adios-copa-mundo-records-6-ediciones-288265.html",
+  "https://abc7.com/post/cristiano-ronaldo-primer-jugador-en-marcar-en-seis-mundiales-con-doblete-ante-uzbekistn/19364803",
+  "https://www.cronica.com.mx/deportes/2026/10/29/cristiano-ronaldo-marca-nuevo-hat-trick-con-el-al-nassr-cuantos-goles-le-faltan-para-llegar-a-mil/"
+ ],
+ "plantilla": "infografia"
+}

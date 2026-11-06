@@ -343,7 +343,7 @@ def abrir(pw, story, timing, imgs, cl=None):
     logo = data_url(os.path.join(ENGINE, "assets", "impulso_logo.png"))
     pg.add_init_script(f"window.STORY={json.dumps(story, ensure_ascii=False)};window.TIMING={json.dumps(timing)};"
                        f"window.IMGS={json.dumps(imgs)};window.LOGO={json.dumps(logo)};window.CLIPS={json.dumps(cl or {})};")
-    pg.goto(f"file://{ENGINE}/diorama.html")
+    pg.goto(f"file://{ENGINE}/{story.get('plantilla', 'diorama')}.html")  # "infografia" = animación vectorial sin imágenes
     try:
         pg.wait_for_function("window.READY===true", timeout=60000)
     except Exception:
