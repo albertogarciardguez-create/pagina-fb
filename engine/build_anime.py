@@ -55,6 +55,8 @@ def h(obj):
 
 # ───────────────────────── layout ─────────────────────────
 def geometria(story):
+    if story.get("formato") == "9:16":  # imágenes verticales: la imagen llena la pantalla
+        return 1080, 1920, 0
     if story.get("formato") == "4:3":
         pw, ph = 1080, 810
     else:
@@ -96,13 +98,23 @@ def envolver(draw, texto, fnt, ancho):
 
 def fondo_titulo(story, marca, out):
     pw, ph, top = geometria(story)
-    im = Image.new("RGB", (W, H), "#000000")
+    vertical = ph == H
+    im = Image.new("RGBA" if vertical else "RGB", (W, H), (0, 0, 0, 0) if vertical else "#000000")
     d = ImageDraw.Draw(im)
     tam = story.get("titulo_tam", 62)
     fnt = fuente("Montserrat-ExtraBold.ttf", tam)
     lineas = envolver(d, story["titulo"], fnt, W - 88)
     alto = len(lineas) * int(tam * 1.18)
     y = top - 34 - alto
+    if vertical:  # degradados oscuros arriba (título) y abajo (subtítulos) sobre la imagen
+        g = np.zeros((H, W, 4), np.uint8)
+        a = np.zeros(H)
+        a[:620] = np.linspace(225, 0, 620)
+        a[1180:] = np.linspace(0, 170, H - 1180)
+        g[:, :, 3] = a[:, None].astype(np.uint8)
+        im = Image.alpha_composite(Image.fromarray(g), im)
+        d = ImageDraw.Draw(im)
+        y = 190
     tag = fuente("Montserrat-SemiBold.ttf", 28)
     d.text((44, y - 52), " ".join(marca["firma"]), font=tag, fill=marca["acento"])
     for ln in lineas:
@@ -170,7 +182,8 @@ def lineas_velocidad(d, pw, ph, n=6):
 
 
 def filtro_movimiento(mov, n, pw, ph):
-    big_w, big_h = pw * 2, ph * 2
+    k = 1.5 if ph > 1080 else 2
+    big_w, big_h = int(pw * k) // 2 * 2, int(ph * k) // 2 * 2
     zc = "1.10"
     cen_x, cen_y = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
     p = f"(on/{max(n - 1, 1)})"
@@ -492,14 +505,16 @@ def subtitulos(story, subs, marca, out):
     pw, ph, top = geometria(story)
     ac = marca["acento"].lstrip("#")
     acc = f"&H00{ac[4:6]}{ac[2:4]}{ac[0:2]}&"
-    y = top + ph + 46
+    vertical = ph == H
+    y = 1290 if vertical else top + ph + 46
+    fam, borde, tam = ("Montserrat ExtraBold", 5, 62) if vertical else ("Montserrat SemiBold", 0, 50)
     with open(out, "w", encoding="utf-8") as f:
         f.write("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 0\n\n"
                 "[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
                 "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, "
                 "Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-                f"Style: S,Montserrat SemiBold,{story.get('sub_tam', 50)},&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,"
-                f"0,0,0,0,100,100,0,0,1,0,0,8,60,60,{y},1\n\n"
+                f"Style: S,{fam},{story.get('sub_tam', tam)},&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,"
+                f"0,0,0,0,100,100,0,0,1,{borde},0,8,60,60,{y},1\n\n"
                 "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
         for a, b, txt in subs:
             t = txt
@@ -610,7 +625,8 @@ def main():
     fondo_titulo(story, marca, bg)
     tarjeta_cierre(story, marca, cie)
     mp4 = os.path.join(outdir, f"{sid}.mp4")
-    fc = (f"[0:v][1:v]overlay=0:{top}:shortest=1,ass={ass}:fontsdir={FONTS},fps={FPS},format=yuv420p[m];"
+    base = "[1:v][0:v]overlay=0:0:shortest=1" if ph == H else f"[0:v][1:v]overlay=0:{top}:shortest=1"
+    fc = (f"{base},ass={ass}:fontsdir={FONTS},fps={FPS},format=yuv420p[m];"
           f"[2:v]scale=1188:2112,zoompan=z='1.1-0.1*on/{int(cierre_d * FPS)}':d={int(cierre_d * FPS)}:s={W}x{H}:fps={FPS},"
           f"fade=t=in:st=0:d=0.35,format=yuv420p[c];[m][c]concat=n=2:v=1:a=0[v]")
     run(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-framerate", str(FPS), "-i", bg, "-i", pic,
@@ -627,7 +643,7 @@ def main():
     filas = math.ceil(len(plan) / cols)
     sel = "+".join(f"eq(n\\,{int((p['t0'] + p['dur'] * 0.6) * FPS)})" for p in plan)
     run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-vf",
-         f"select='{sel}',crop=1080:{ph + 260}:0:{top - 40},scale=360:-2,tile={cols}x{filas}",
+         f"select='{sel}'," + ("scale=240:-2" if ph == H else f"crop=1080:{ph + 260}:0:{top - 40},scale=360:-2") + f",tile={cols}x{filas}",
          "-frames:v", "1", "-q:v", "3", os.path.join(outdir, "revision.jpg")])
     post = story.get("post", "")
     if story.get("hashtags"):
