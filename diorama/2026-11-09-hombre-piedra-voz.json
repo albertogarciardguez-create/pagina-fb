@@ -1,0 +1,271 @@
+{
+ "id": "2026-11-09-hombre-piedra-voz",
+ "titulo": "Hombre de piedra (con voz)",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.0,
+ "pausaFrase": 0.35,
+ "pausaEscena": 0.6,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "intensidad": 0.6,
+ "imagenes": "diorama/img/hombre-piedra",
+ "audio": "diorama/audio/2026-11-09-hombre-piedra-voz-edge.mp3",
+ "scenes": [
+  {
+   "say": "Hay días en que uno se vuelve de piedra. Para no sufrir... dejas de sentir.",
+   "img": [
+    "f1"
+   ],
+   "clip": "c1",
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "titles": [
+    {
+     "b": "Hombre",
+     "l": "de piedra",
+     "pos": "low",
+     "caja": true
+    }
+   ],
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.7
+    },
+    {
+     "k": "piedra",
+     "s": 1,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "Te cae la lluvia, la vida pasa frente a ti... y nada te toca.",
+   "img": [
+    "f2"
+   ],
+   "clip": "c2",
+   "move": "in",
+   "acto": 1,
+   "mus": "menor",
+   "nivel": 0.8,
+   "titles": [
+    {
+     "b": "Nada",
+     "l": "te toca",
+     "pos": "low",
+     "caja": true,
+     "s": 0,
+     "at": 0.6
+    }
+   ],
+   "sfx": [
+    {
+     "k": "trueno",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.7
+    },
+    {
+     "k": "agua",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Pierdes lo que más querías. Y lo peor no es el dolor... es que ya no duele.",
+   "img": [
+    "f3"
+   ],
+   "clip": "c3",
+   "move": "in",
+   "acto": 2,
+   "mus": "foso",
+   "corte": true,
+   "titles": [
+    {
+     "b": "Ya no",
+     "l": "duele",
+     "pos": "low",
+     "caja": true,
+     "s": 1,
+     "at": 0.5
+    }
+   ],
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Hasta que alguien te toma de la mano. Sin pedirte nada. Y algo dentro empieza a romperse.",
+   "img": [
+    "f4"
+   ],
+   "clip": "c4",
+   "move": "in",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.9,
+   "titles": [
+    {
+     "b": "Alguien",
+     "l": "te tomó de la mano",
+     "pos": "low",
+     "caja": true
+    }
+   ],
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "piedra",
+     "s": 2,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "La piedra se hace arena. Y debajo... todavía estabas tú.",
+   "img": [
+    "f5"
+   ],
+   "clip": "c5",
+   "move": "none",
+   "acto": 3,
+   "mus": "mayor",
+   "polvo": 1.6,
+   "titles": [
+    {
+     "b": "Todavía",
+     "l": "estabas tú",
+     "pos": "low",
+     "caja": true,
+     "s": 1,
+     "at": 0.4
+    }
+   ],
+   "sfx": [
+    {
+     "k": "piedra",
+     "s": 0,
+     "at": 0.2
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Vuelve el color. Vuelven las lágrimas. Y por fin... vuelves a sentir.",
+   "img": [
+    "f6"
+   ],
+   "clip": "c6",
+   "move": "in",
+   "acto": 4,
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "Vuelves",
+     "l": "a sentir",
+     "pos": "low",
+     "caja": true,
+     "s": 2
+    }
+   ],
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Porque no fuimos hechos para sobrevivir de piedra...",
+   "img": [
+    "f7"
+   ],
+   "clip": "c7",
+   "move": "out",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.15,
+   "titles": [
+    {
+     "b": "No fuimos hechos",
+     "l": "para ser de piedra",
+     "pos": "low",
+     "caja": true
+    }
+   ],
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.2,
+     "g": 0.8
+    }
+   ]
+  },
+  {
+   "say": "Fuimos hechos para sentir, para cantar... y para amar con el alma.",
+   "img": [
+    "f8"
+   ],
+   "clip": "c8",
+   "move": "in",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.3,
+   "titles": [
+    {
+     "b": "Amar",
+     "l": "con el alma",
+     "pos": "low",
+     "caja": true,
+     "s": 0,
+     "at": 0.7
+    }
+   ]
+  },
+  {
+   "say": "¿Qué te ayudó a ti a volver a sentir? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "titles": [
+    {
+     "b": "¿Qué te ayudó",
+     "l": "a volver a sentir?",
+     "pos": "q"
+    }
+   ]
+  }
+ ],
+ "post": "¿Alguna vez te volviste de piedra para no sentir? 🪨",
+ "hashtags": [
+  "#HombreDePiedra",
+  "#reflexion",
+  "#ImpulsoReal"
+ ],
+ "sources": []
+}
