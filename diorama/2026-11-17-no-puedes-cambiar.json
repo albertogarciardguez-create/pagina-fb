@@ -1,0 +1,247 @@
+{
+ "id": "2026-11-17-no-puedes-cambiar",
+ "titulo": "No puedes cambiar a quien no ve el problema",
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-17-no-puedes-cambiar-edge.mp3",
+ "scenes": [
+  {
+   "say": "¿Por qué no puedes cambiar a alguien, por más que lo intentes?",
+   "vis": "jalar",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.7
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "La psicología lo explica: nadie cambia una conducta en la que no ve ningún problema.",
+   "vis": "venda",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.35,
+     "g": 0.7
+    },
+    {
+     "k": "piedra",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Los psicólogos Prochaska y DiClemente describieron cinco etapas del cambio. La primera se llama precontemplación: la persona todavía no ve el problema.",
+   "vis": "escalera",
+   "titulo": "LAS 5 ETAPAS DEL CAMBIO",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.05,
+     "g": 0.7
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.7
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.35,
+     "g": 0.7
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.7
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.65,
+     "g": 0.7
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "say": "Y mientras esté ahí, tus consejos rebotan. No porque no te quiera... sino porque no ve para qué.",
+   "vis": "rebote",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Peor aún: entre más insistes, más se resiste. Se llama reactancia psicológica: cuando sentimos que nos presionan, defendemos justo lo contrario.",
+   "vis": "cuerda",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Entonces, ¿qué sí puedes hacer? Uno: pregunta en vez de sermonear. Una buena pregunta lo hace pensar; un sermón lo hace defenderse.",
+   "vis": "pregunta",
+   "tag": "1",
+   "acto": 3,
+   "mus": "mayor",
+   "corte": false,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Dos: deja que viva las consecuencias de sus decisiones. Rescatarlo de todo le quita la razón para cambiar.",
+   "vis": "consecuencias",
+   "tag": "2",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Tres: pon límites y cuida tu paz. Ayudar no significa cargar con todo.",
+   "vis": "limite",
+   "tag": "3",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Y cuatro: quédate cerca. Cuando por fin vea el problema, va a necesitar a alguien que no se haya ido.",
+   "vis": "cerca",
+   "tag": "4",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Porque el cambio es como una puerta: solo se abre desde adentro.",
+   "vis": "puerta",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Tú has intentado cambiar a alguien que no quería cambiar? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Has intentado cambiar",
+    "a quien no quería?"
+   ]
+  }
+ ],
+ "post": "No puedes cambiar a quien no ve el problema 🧩",
+ "hashtags": [
+  "#psicologia",
+  "#relaciones",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://psicologiaymente.com/psicologia/modelo-transteorico-cambio-prochaska-diclemente",
+  "https://www.ui1.es/blog-ui1/reactancia-psicologica-por-que-prohibir-algo-hace-que-lo-deseemos-mas"
+ ]
+}

@@ -1,0 +1,272 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:MB;src:url(fonts/Montserrat-ExtraBold.ttf)}
+@font-face{font-family:MR;src:url(fonts/Montserrat-Regular.ttf)}
+@font-face{font-family:MS;src:url(fonts/Montserrat-SemiBold.ttf)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Plantilla "papel" (Impulso Real): video explicativo en PAPEL RECORTADO, todo dibujado en código.
+// Piezas de papel con bordes irregulares, sombra, textura y "boil" de stop-motion a 12 fps; personajes de papel
+// genéricos; subtítulos en tiras de papel con la palabra actual marcada; etiquetas con cinta; cierre de marca.
+// Escena: {"vis": tipo, "tag": "1", "say": ...}. Tipos en V.<vis>.
+const S = window.STORY, T = window.TIMING, W = 1080, H = 1920;
+const cv = document.getElementById('c'), g = cv.getContext('2d');
+const OR = '#FF6B3D', C = { crema: '#F4ECD8', kraft: '#C9A06A', teal: '#2F6F73', mostaza: '#E3A72F', coral: '#E8603C', marino: '#26344D',
+  rojo: '#C8423A', verde: '#5E8C4A', gris: '#8C8C88', piel: '#E2B48C', pielO: '#C9946B', pelo: '#3A2A20', blanco: '#FBF7EE' };
+let logo = null, logoBg = '#0B0B0B', TEX = null;
+const rnd = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const cl = (x, a, b) => Math.max(a, Math.min(b, x));
+const ease = p => { p = cl(p, 0, 1); return 0.5 - 0.5 * Math.cos(Math.PI * p); };
+const back = p => { p = cl(p, 0, 1); const c = 1.7; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
+const lerp = (a, b, p) => a + (b - a) * p;
+let NOW = 0;
+const tick = () => Math.floor(NOW * 12);  // 12 fps de stop-motion
+
+async function load() {
+  const L = src => new Promise(r => { if (!src) return r(null); const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+  logo = await L(window.LOGO);
+  if (logo) { const c = document.createElement('canvas'); c.width = c.height = 8; const x = c.getContext('2d');
+    x.drawImage(logo, 0, 0, 20, 20, 0, 0, 8, 8); const d = x.getImageData(3, 3, 1, 1).data; logoBg = `rgb(${d[0]},${d[1]},${d[2]})`; }
+  const tc = document.createElement('canvas'); tc.width = tc.height = 384; const x = tc.getContext('2d');  // textura de papel
+  const id = x.createImageData(384, 384);
+  for (let k = 0; k < id.data.length; k += 4) { const v = 200 + Math.random() * 55; id.data[k] = id.data[k + 1] = id.data[k + 2] = v; id.data[k + 3] = 255; }
+  x.putImageData(id, 0, 0); x.strokeStyle = 'rgba(120,100,80,.25)'; x.lineWidth = 1;
+  for (let k = 0; k < 160; k++) { const a = Math.random() * 6.28, px = Math.random() * 384, py = Math.random() * 384, l = 6 + Math.random() * 22; x.beginPath(); x.moveTo(px, py); x.lineTo(px + Math.cos(a) * l, py + Math.sin(a) * l); x.stroke(); }
+  TEX = g.createPattern(tc, 'repeat');
+  await document.fonts.load('80px MB'); await document.fonts.load('40px MS'); await document.fonts.load('40px MR');
+  window.READY = true;
+}
+const sceneAt = t => { let i = 0; while (i + 1 < T.cuts.length && t >= T.cuts[i + 1]) i++; return i; };
+const winEnd = i => i + 1 < T.cuts.length ? T.cuts[i + 1] : T.total;
+const sentAt = (i, s, f) => { const ss = T.scenes[i].sents, se = ss[Math.min(s || 0, ss.length - 1)]; return se.start + (f || 0) * (se.end - se.start); };
+
+// ---------- papel: polígonos con borde irregular, sombra, textura y boil ----------
+function poly(pts, seed, amt) {  // traza un contorno recortado a mano
+  g.beginPath(); const n = pts.length, tk = tick();
+  for (let e = 0; e < n; e++) { const [ax, ay] = pts[e], [bx, by] = pts[(e + 1) % n], L = Math.hypot(bx - ax, by - ay), m = Math.max(1, Math.round(L / 26)), nx = -(by - ay) / (L || 1), ny = (bx - ax) / (L || 1);
+    for (let k = 0; k < m; k++) { const f = k / m, j = (rnd(seed * 31 + e * 7 + k + (tk % 3) * 0.37) - 0.5) * (amt ?? 3); const x = ax + (bx - ax) * f + nx * j, y = ay + (by - ay) * f + ny * j; (e || k) ? g.lineTo(x, y) : g.moveTo(x, y); } }
+  g.closePath();
+}
+const rectP = (x, y, w, h) => [[x, y], [x + w, y], [x + w, y + h], [x, y + h]];
+const circP = (x, y, r, n) => { n = n || Math.max(14, Math.round(r / 6)); return Array.from({ length: n }, (_, k) => [x + Math.cos(k / n * 6.2832) * r, y + Math.sin(k / n * 6.2832) * r]); };
+function papel(pts, color, seed, o) {  // una pieza de papel
+  o = o || {}; const b = boil(seed);
+  g.save(); g.translate(b.x, b.y);
+  poly(pts, seed, o.amt);
+  g.shadowColor = 'rgba(40,25,10,.38)'; g.shadowBlur = o.sb ?? 10; g.shadowOffsetX = 5; g.shadowOffsetY = 8;
+  g.fillStyle = color; g.fill(); g.shadowColor = 'transparent';
+  g.save(); g.clip(); g.globalCompositeOperation = 'multiply'; g.globalAlpha = 0.28; g.fillStyle = TEX; g.fillRect(-200, -200, W + 400, H + 400); g.restore();
+  g.strokeStyle = 'rgba(255,255,255,.28)'; g.lineWidth = 2; g.stroke();
+  g.restore();
+}
+function boil(seed) { const tk = tick(); return { x: (rnd(seed * 13 + tk) - 0.5) * 2.4, y: (rnd(seed * 17 + tk + 5) - 0.5) * 2.4 }; }
+function pop(t0, x, y, fn, dur) {  // la pieza "cae" sobre la mesa
+  const p = back((NOW - t0) / (dur || 0.35)); if (p <= 0) return;
+  g.save(); g.translate(x, y); g.scale(p, p); g.rotate((1 - Math.min(1, p)) * 0.25); g.translate(-x, -y); fn(); g.restore();
+}
+function fondo(col) {
+  g.fillStyle = col || C.crema; g.fillRect(0, 0, W, H);
+  g.save(); g.globalCompositeOperation = 'multiply'; g.globalAlpha = 0.35; g.fillStyle = TEX; g.fillRect(0, 0, W, H); g.restore();
+  const v = g.createRadialGradient(W / 2, H * 0.5, H * 0.3, W / 2, H * 0.5, H * 0.75); v.addColorStop(0, 'rgba(60,35,15,0)'); v.addColorStop(1, 'rgba(60,35,15,.35)'); g.fillStyle = v; g.fillRect(0, 0, W, H);
+}
+function suelo(y, col, seed) { papel([[-20, y], [W + 20, y - 10], [W + 20, H + 20], [-20, H + 20]], col || C.kraft, seed || 900, { amt: 6 }); }
+function texto(txt, x, y, size, col, font) { g.save(); g.font = `${font || 800} ${size}px ${font === 400 ? 'MR' : 'MB'}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = col || '#222'; g.fillText(txt, x, y); g.restore(); }
+function cartel(txt, x, y, col, size, seed, tc) {  // tira de papel con texto
+  g.save(); g.font = `800 ${size || 46}px MB`; const w = g.measureText(txt).width + 50, h = (size || 46) * 1.7; g.restore();
+  papel(rectP(x - w / 2, y - h / 2, w, h), col || C.blanco, seed || 77, { amt: 2.5 }); texto(txt, x + boil(seed || 77).x, y + 3 + boil(seed || 77).y, size || 46, tc || '#222');
+}
+function cinta(x, y, a) { g.save(); g.translate(x, y); g.rotate(a || -0.2); g.fillStyle = 'rgba(240,230,200,.75)'; g.fillRect(-45, -16, 90, 32); g.restore(); }
+
+// ---------- personaje de papel genérico ----------
+// o: {cam, pan, pose: stand|pull|tug|sit|walk|arms|offer|ask, venda, lean, fase, triste, mira}
+function fig(x, y, h, o, seed) {
+  o = o || {}; const u = h / 10, s = seed || 1, f = o.fase || 0, cam = o.cam || C.teal, pan = o.pan || C.marino;
+  g.save(); g.translate(x, y); g.rotate(o.lean || 0); if (o.mira < 0) g.scale(-1, 1);
+  g.fillStyle = 'rgba(40,25,10,.18)'; g.beginPath(); g.ellipse(0, 0, u * 2, u * 0.4, 0, 0, 7); g.fill();
+  const limb = (px, py, len, wd, ang, col, sd) => { g.save(); g.translate(px, py); g.rotate(ang); papel(rectP(-wd / 2, 0, wd, len), col, s * 10 + sd, { amt: 2, sb: 6 }); g.restore(); };
+  const sit = o.pose === 'sit', hip = sit ? -3.2 * u : -4.5 * u;
+  let l1 = 0, l2 = 0; if (o.pose === 'walk') { l1 = 0.45 * Math.sin(f); l2 = -l1; } if (o.pose === 'pull' || o.pose === 'tug') { l1 = 0.45; l2 = 0.1; }
+  if (sit) { limb(-0.6 * u, hip, 2.4 * u, 0.95 * u, -1.5, pan, 1); limb(0.6 * u, hip, 2.4 * u, 0.95 * u, -1.5, pan, 2); limb(2.4 * u, hip, 3.2 * u, 0.95 * u, 0, pan, 3); limb(2.9 * u, hip, 3.2 * u, 0.95 * u, 0, pan, 4); }
+  else { limb(-0.6 * u, hip, 4.5 * u, 1 * u, l1, pan, 1); limb(0.6 * u, hip, 4.5 * u, 1 * u, l2, pan, 2); }
+  const top = hip - 3.7 * u;
+  let a1 = 0.18, a2 = -0.18;
+  if (o.pose === 'arms') { a1 = 2.6; a2 = -2.6; }
+  if (o.pose === 'pull' || o.pose === 'tug') { a1 = -1.35 + 0.05 * Math.sin(f); a2 = -1.55 + 0.05 * Math.sin(f); }
+  if (o.pose === 'offer') { a1 = 0.2; a2 = -1.2; }
+  if (o.pose === 'ask') { a1 = 0.2; a2 = -2.2 + 0.15 * Math.sin(f * 2); }
+  if (o.pose === 'walk') { a1 = -0.4 * Math.sin(f); a2 = 0.4 * Math.sin(f); }
+  if (o.triste) { a1 = 0.05; a2 = -0.05; }
+  limb(-1.45 * u, top + 0.4 * u, 3.4 * u, 0.8 * u, a1, cam, 5);
+  papel([[-1.6 * u, top], [1.6 * u, top], [1.35 * u, hip + 0.3 * u], [-1.35 * u, hip + 0.3 * u]], cam, s * 10 + 6, { amt: 2.5 });
+  limb(1.45 * u, top + 0.4 * u, 3.4 * u, 0.8 * u, a2, cam, 7);
+  const hy = top - 1.25 * u + (o.triste ? 0.35 * u : 0), hx = o.triste ? 0.3 * u : 0;
+  papel(circP(hx, hy, 1.15 * u), C.piel, s * 10 + 8, { amt: 2 });
+  papel([...circP(hx, hy - 0.15 * u, 1.18 * u, 20).filter(p => p[1] < hy - 0.25 * u)], C.pelo, s * 10 + 9, { amt: 2, sb: 3 });
+  const b = boil(s * 10 + 8); g.save(); g.translate(b.x + hx, b.y + hy);
+  if (o.venda) { papel(rectP(-1.3 * u, -0.45 * u, 2.6 * u, 0.6 * u), C.rojo, s * 10 + 11, { amt: 1.5, sb: 3 }); papel([[1.1 * u, -0.3 * u], [1.9 * u, 0.4 * u], [1.6 * u, 0.6 * u], [1.0 * u, 0.0]], C.rojo, s * 10 + 12, { amt: 1, sb: 3 }); }
+  else { g.fillStyle = '#2A1E16'; const ey = o.triste ? 0.05 * u : -0.1 * u; g.beginPath(); g.arc(-0.42 * u, ey, 0.12 * u, 0, 7); g.arc(0.42 * u, ey, 0.12 * u, 0, 7); g.fill(); }
+  g.strokeStyle = '#7A3B26'; g.lineWidth = u * 0.12; g.lineCap = 'round'; g.beginPath();
+  if (o.triste) g.arc(0, 0.75 * u, 0.32 * u, Math.PI * 1.2, Math.PI * 1.8); else g.arc(0, 0.25 * u, 0.32 * u, 0.25, Math.PI - 0.25); g.stroke();
+  g.restore(); g.restore();
+}
+function burbuja(x, y, r, txt, col, seed, cola) {
+  papel(circP(x, y, r), col || C.blanco, seed, { amt: 3 }); if (cola) papel([[x - r * 0.3, y + r * 0.8], [x + cola * r * 0.9, y + r * 1.35], [x + r * 0.15, y + r * 0.85]], col || C.blanco, seed + 1, { amt: 2, sb: 4 });
+  if (txt) texto(txt, x, y + 4, r * 0.75, '#222');
+}
+function corazon(x, y, s, col, seed) { const p = []; for (let k = 0; k < 40; k++) { const a = k / 40 * 6.2832; p.push([x + s * 16 * Math.pow(Math.sin(a), 3) / 16, y - s * (13 * Math.cos(a) - 5 * Math.cos(2 * a) - 2 * Math.cos(3 * a) - Math.cos(4 * a)) / 16]); } papel(p, col || C.coral, seed || 55, { amt: 2.5 }); }
+function nube(x, y, s, col, seed) { [[0, 0, 1], [-0.9, 0.25, 0.7], [0.9, 0.25, 0.75], [0.35, -0.45, 0.7]].forEach(([dx, dy, r], k) => papel(circP(x + dx * s, y + dy * s, r * s), col || C.gris, (seed || 60) + k, { amt: 3 })); }
+function cuerda(x1, y1, x2, y2, seed) { const n = 14; g.save(); g.strokeStyle = '#8A5A2B'; g.lineWidth = 12; g.lineCap = 'round'; g.shadowColor = 'rgba(40,25,10,.35)'; g.shadowOffsetY = 6; g.shadowBlur = 6; g.beginPath();
+  for (let k = 0; k <= n; k++) { const f = k / n, x = lerp(x1, x2, f), y = lerp(y1, y2, f) + Math.sin(f * Math.PI) * 18 + (rnd(seed + k + tick() % 3) - 0.5) * 3; k ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); g.restore(); }
+
+// ---------- subtítulos en tiras de papel ----------
+function palabras(i) {
+  const out = [];
+  for (const se of T.scenes[i].sents) { const ws = se.text.split(/\s+/).filter(Boolean), tot = ws.reduce((a, w) => a + w.length + 2, 0); let acc = 0;
+    for (const w of ws) { const a = se.start + (acc / tot) * (se.end - se.start); acc += w.length + 2; out.push({ w, a, b: se.start + (acc / tot) * (se.end - se.start) }); } }
+  return out;
+}
+const PAL = {};
+function subtitulos(i, t) {
+  const ws = PAL[i] || (PAL[i] = palabras(i)); if (!ws.length || t < ws[0].a - 0.05) return;
+  let k = ws.findIndex(w => t < w.b); if (k < 0) k = ws.length - 1;
+  g.font = '800 60px MB'; g.textBaseline = 'middle';
+  if (!ws.grp) { ws.grp = []; let cur = 0, n = 0;
+    ws.forEach((w, j) => { const wd = g.measureText(w.w).width + 18; if (n >= 4 || (n && cur + wd > 900)) { cur = 0; n = 0; } if (!n) ws.grp.push(j); cur += wd; n++; ws[j].g = ws.grp.length - 1; }); }
+  const gi = ws[k].g, g0 = ws.grp[gi], grp = ws.slice(g0, gi + 1 < ws.grp.length ? ws.grp[gi + 1] : ws.length), y = 310, sp = 18;
+  const wd = grp.map(w => g.measureText(w.w).width), tw = wd.reduce((a, b) => a + b, 0) + sp * (grp.length - 1);
+  papel(rectP(W / 2 - tw / 2 - 34, y - 56, tw + 68, 112), C.blanco, 400 + gi, { amt: 3 }); cinta(W / 2 - tw / 2 - 20, y - 52, -0.3); cinta(W / 2 + tw / 2 + 20, y - 52, 0.3);
+  let x = W / 2 - tw / 2;
+  grp.forEach((w, j) => { const on = g0 + j === k, dim = g0 + j > k;
+    if (on) { const p = ease((t - w.a) / 0.15); g.save(); g.globalAlpha = 0.85; g.fillStyle = OR; g.beginPath(); g.moveTo(x - 8, y + 30); g.lineTo(x - 8 + (wd[j] + 16) * p, y + 26); g.lineTo(x - 8 + (wd[j] + 16) * p, y - 30); g.lineTo(x - 8, y - 26); g.fill(); g.restore(); }
+    g.font = '800 60px MB'; g.textAlign = 'left'; g.fillStyle = dim ? 'rgba(30,30,30,.32)' : '#1E1E1E'; g.fillText(w.w, x, y + 3); x += wd[j] + sp; });
+}
+
+// ---------- escenas ----------
+const V = {};
+const D = i => winEnd(i) - T.cuts[i];
+V.jalar = (i, r, t) => {
+  fondo(C.crema); suelo(1500, C.kraft);
+  papel([[600, 1500], [700, 1380], [860, 1360], [960, 1500]], C.gris, 31, { amt: 6 });  // piedra
+  fig(780, 1440, 380, { cam: C.mostaza, pan: C.marino }, 2);
+  const tir = Math.sin(t * 7) * 0.04; cuerda(380, 1150, 710, 1180, 5);
+  fig(300, 1500, 400, { cam: C.teal, pan: C.marino, pose: 'pull', lean: -0.32 + tir, fase: t * 6 }, 1);
+  if (r > 0.8) pop(T.cuts[i] + 0.8, 360, 900, () => burbuja(360, 900, 90, '¡!', C.blanco, 81, 0.3));
+};
+V.venda = (i, r, t) => {
+  fondo(C.crema); suelo(1520, C.kraft);
+  fig(380, 1520, 470, { cam: C.mostaza, pan: C.marino, venda: true }, 2);
+  const t1 = sentAt(i, 0, 0.35);
+  pop(t1, 780, 1300, () => { papel([[620, 1520], [650, 1290], [760, 1180], [900, 1210], [960, 1520]], C.rojo, 32, { amt: 5 }); g.strokeStyle = 'rgba(0,0,0,.35)'; g.lineWidth = 5; g.beginPath(); g.moveTo(780, 1210); g.lineTo(760, 1320); g.lineTo(800, 1400); g.stroke(); }, 0.45);
+  pop(t1 + 0.4, 790, 1080, () => cartel('PROBLEMA', 790, 1080, C.blanco, 44, 33, C.rojo), 0.3);
+};
+V.escalera = (i, r, t) => {
+  fondo(C.crema);
+  const et = ['PRECONTEMPLACIÓN', 'CONTEMPLACIÓN', 'PREPARACIÓN', 'ACCIÓN', 'MANTENIMIENTO'], cols = [C.coral, C.mostaza, C.verde, C.teal, C.marino];
+  const t0 = T.cuts[i] + 0.3, paso = Math.min(0.55, (sentAt(i, 0, 1) - t0) / 5);
+  et.forEach((e, k) => { const x = 90 + k * 175, y = 1330 - k * 120, hh = 1700 - y;
+    pop(t0 + k * paso, x + 85, y, () => { papel(rectP(x, y, 175, hh), cols[k], 40 + k, { amt: 3 });
+      g.save(); g.translate(x + 87 + boil(40 + k).x, y + 90 + (hh - 90) / 2); g.rotate(-Math.PI / 2); g.font = '800 34px MB'; { const m = g.measureText(e).width, f = Math.min(34, 34 * (hh - 120) / m); g.font = `800 ${f}px MB`; } g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#FFF8EC'; g.fillText(e, 0, 0); g.restore();
+      texto(String(k + 1), x + 87, y + 46, 54, '#FFF8EC'); }, 0.35); });
+  g.save(); g.translate(0, 0); g.restore();
+  const t2 = sentAt(i, 1, 0);
+  if (t > t2) { const p = ease((t - t2) / 0.4); g.save(); g.globalAlpha = p; g.strokeStyle = OR; g.lineWidth = 10; g.setLineDash([22, 14]); g.strokeRect(70, 1310, 215, 410); g.restore(); }
+  fig(177, 1330, 300, { cam: C.mostaza, pan: C.marino, venda: t > t2 }, 2);
+};
+V.rebote = (i, r, t) => {
+  fondo(C.crema); suelo(1560, C.kraft);
+  fig(220, 1560, 420, { cam: C.teal, pan: C.marino, pose: 'ask', fase: t * 3 }, 1);
+  papel(rectP(560, 760, 90, 800), C.gris, 34, { amt: 4 });  // muro
+  for (let y = 790; y < 1540; y += 70) { g.strokeStyle = 'rgba(0,0,0,.15)'; g.lineWidth = 3; g.beginPath(); g.moveTo(565, y); g.lineTo(645, y); g.stroke(); }
+  fig(860, 1560, 420, { cam: C.mostaza, pan: C.marino, venda: true }, 2);
+  for (let k = 0; k < 3; k++) { const per = 1.6, tt = (t + k * per / 3) % per / per, x = tt < 0.6 ? lerp(330, 500, tt / 0.6) : lerp(500, 300, (tt - 0.6) / 0.4), y = 1000 + k * 160 + (tt < 0.6 ? 0 : -Math.sin((tt - 0.6) / 0.4 * Math.PI) * 120);
+    g.save(); g.translate(x, y); g.rotate(tt < 0.6 ? 0 : (tt - 0.6) * 5); g.translate(-x, -y); burbuja(x, y, 52, ['…', '!', '?'][k], C.blanco, 82 + k * 3); g.restore(); }
+};
+V.cuerda = (i, r, t) => {
+  fondo(C.crema); suelo(1540, C.kraft);
+  const fuerza = ease((t - T.cuts[i]) / D(i)), sw = Math.sin(t * 8) * 0.03;
+  cuerda(330, 1180, 750, 1180, 9);
+  fig(250, 1540, 400, { cam: C.teal, pan: C.marino, pose: 'pull', lean: -0.28 + sw, fase: t * 6 }, 1);
+  fig(830, 1540, 400, { cam: C.mostaza, pan: C.marino, pose: 'tug', lean: 0.18 + 0.2 * fuerza - sw, mira: -1, fase: t * 6 }, 2);
+  cartel('REACTANCIA', W / 2, 820, C.marino, 54, 35, '#FFF8EC'); cinta(W / 2 - 170, 790, -0.4);
+  papel(rectP(240, 960, 600, 46), C.blanco, 36, { amt: 2 }); papel(rectP(240, 960, 600 * (0.15 + 0.85 * fuerza), 46), C.rojo, 37, { amt: 2, sb: 2 });
+  texto('RESISTENCIA', W / 2, 1050, 34, C.rojo);
+};
+V.pregunta = (i, r, t) => {
+  fondo(C.crema); suelo(1560, C.kraft);
+  fig(260, 1560, 420, { cam: C.teal, pan: C.marino, pose: 'ask', fase: t * 3 }, 1);
+  fig(820, 1560, 420, { cam: C.mostaza, pan: C.marino, mira: -1 }, 2);
+  pop(T.cuts[i] + 0.3, 360, 920, () => burbuja(360, 920, 110, '?', C.mostaza, 83, 0.4));
+  const t2 = sentAt(i, 1, 0.3);
+  if (t > T.cuts[i] + 0.6 && t < t2) { const x = 780, y = 950; burbuja(x, y, 95, '!', C.blanco, 86, -0.4); g.save(); g.strokeStyle = C.rojo; g.lineWidth = 14; g.beginPath(); g.moveTo(x - 80, y - 80); g.lineTo(x + 80, y + 80); g.stroke(); g.restore(); }
+  pop(t2, 790, 960, () => { burbuja(790, 960, 100, '', C.blanco, 88, -0.4); papel(circP(790, 940, 40), C.mostaza, 89, { amt: 2 }); papel(rectP(772, 978, 36, 30), C.gris, 90, { amt: 1 });
+    for (let k = 0; k < 8; k++) { const a = k / 8 * 6.28; g.strokeStyle = C.mostaza; g.lineWidth = 6; g.beginPath(); g.moveTo(790 + Math.cos(a) * 125, 940 + Math.sin(a) * 125); g.lineTo(790 + Math.cos(a) * 150, 940 + Math.sin(a) * 150); g.stroke(); } }, 0.4);
+};
+V.consecuencias = (i, r, t) => {
+  fondo(C.crema); suelo(1560, C.kraft);
+  const p = ease((t - T.cuts[i]) / D(i));
+  papel([[620, 1560], [780, 1548], [800, 1600], [610, 1610]], '#5A7FA6', 38, { amt: 4, sb: 2 });  // charco
+  fig(lerp(180, 520, p), 1560, 400, { cam: C.mostaza, pan: C.marino, pose: 'walk', fase: t * 7 }, 2);
+  const hx = lerp(860, 1180, ease((t - sentAt(i, 0, 0.5)) / 0.8));
+  g.save(); g.translate(hx, 1150); g.rotate(-0.25); papel(rectP(-40, -70, 360, 110), C.teal, 39, { amt: 3 }); papel(rectP(-150, -95, 130, 160), C.piel, 91, { amt: 3 });
+  for (let k = 0; k < 4; k++) papel(rectP(-230, -95 + k * 40, 90, 32), C.piel, 140 + k, { amt: 2, sb: 4 }); papel(rectP(-90, -150, 34, 80), C.piel, 145, { amt: 2, sb: 4 }); g.restore();
+  cartel('SIN RESCATES', W / 2, 820, C.coral, 52, 92, '#FFF8EC');
+};
+V.limite = (i, r, t) => {
+  fondo(C.crema); suelo(1600, C.kraft);
+  const p = ease((t - T.cuts[i] - 0.3) / 1.0);
+  g.save(); g.strokeStyle = OR; g.lineWidth = 12; g.setLineDash([30, 18]); g.lineDashOffset = -t * 30; g.beginPath(); g.arc(W / 2, 1230, 330, -1.57, -1.57 + 6.283 * p); g.stroke(); g.restore();
+  fig(W / 2, 1520, 420, { cam: C.teal, pan: C.marino }, 1);
+  corazon(W / 2, 1040, 1.2 + 0.08 * Math.sin(t * 5), C.coral, 56);
+  for (let k = 0; k < 3; k++) { const a = -2.4 + k * 1.2, d = 470 - 50 * Math.abs(Math.sin(t * 2 + k)); nube(W / 2 + Math.cos(a) * d, 1230 + Math.sin(a) * d * 0.9, 55, C.gris, 61 + k * 5); }
+  cartel('TU PAZ', W / 2, 760, C.blanco, 52, 93, C.teal);
+};
+V.cerca = (i, r, t) => {
+  fondo(C.crema); suelo(1560, C.kraft);
+  const gl = g.createRadialGradient(780, 900, 20, 780, 900, 500); gl.addColorStop(0, 'rgba(255,200,90,.45)'); gl.addColorStop(1, 'rgba(255,200,90,0)'); g.fillStyle = gl; g.fillRect(0, 0, W, H);
+  papel(rectP(200, 1440, 220, 125), C.kraft, 94, { amt: 3 });
+  fig(300, 1565, 380, { cam: C.mostaza, pan: C.marino, pose: 'sit', triste: t < sentAt(i, 1, 0.5) }, 2);
+  fig(720, 1560, 420, { cam: C.teal, pan: C.marino, pose: 'offer', mira: -1 }, 1);
+};
+V.puerta = (i, r, t) => {
+  fondo(C.crema); suelo(1600, C.kraft);
+  papel(rectP(270, 640, 540, 960), C.marino, 95, { amt: 4 });  // marco
+  const ab = ease((t - sentAt(i, 0, 0.55)) / 1.2);
+  const gl = g.createLinearGradient(0, 700, 0, 1600); gl.addColorStop(0, '#FFE6A8'); gl.addColorStop(1, '#FFC25A'); g.fillStyle = gl; g.fillRect(300, 670, 480, 930);
+  if (ab > 0.3) fig(540, 1600, 480 * ease((ab - 0.3) / 0.7), { cam: C.mostaza, pan: C.marino, pose: 'arms', fase: t * 3 }, 2);
+  const w = 480 * (1 - 0.82 * ab); papel(rectP(300, 670, w, 930), C.coral, 96, { amt: 3 });
+  if (w > 120) { papel(circP(300 + w - 40, 1140, 16), C.mostaza, 97, { amt: 1 }); }
+  if (ab > 0.2) { g.save(); g.globalAlpha = ease((ab - 0.2) / 0.5); for (let k = 0; k < 12; k++) { g.fillStyle = 'rgba(255,220,140,.6)'; g.fillRect(780 + k * 10, 700 + rnd(k) * 800, 120 + rnd(k + 3) * 200, 6); } g.restore(); }
+};
+
+function cierre(i, t) {
+  const sc = S.scenes[i], r = t - T.cuts[i], L = { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610 };
+  g.fillStyle = logoBg; g.fillRect(0, 0, W, H);
+  if (logo) { const wp = ease((r - 0.2) / 1.1); if (wp > 0) { g.save(); g.beginPath(); g.moveTo(L.cx, L.cy); g.arc(L.cx, L.cy, L.sz * 0.76, -1.5708, -1.5708 + 6.2832 * wp); g.closePath(); g.clip();
+    g.globalAlpha = Math.min(1, wp * 1.5); g.drawImage(logo, L.cx - L.sz / 2, L.cy - L.sz / 2, L.sz, L.sz); g.restore(); } }
+  const q = sc.q || ['', ''], a = ease((r - 0.3) / 0.5);
+  if (a > 0) { g.save(); g.globalAlpha = a; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.fillText(q[0], W / 2, 300); g.font = '400 58px MR'; g.fillText(q[1] || '', W / 2, 380); g.restore(); }
+  const n1 = ease((r - 1.4) / 0.5);
+  if (n1 > 0) { g.save(); g.globalAlpha = n1; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.letterSpacing = '12px'; g.fillText('IMPULSO REAL', L.tx, L.y1 + (1 - n1) * 14); g.restore(); }
+  const n2 = ease((r - 1.8) / 0.5);
+  if (n2 > 0) { const s = 1 + 0.035 * Math.sin((r - 1.8) * 4) * n2, w = 330, h = 84; g.save(); g.globalAlpha = n2; g.translate(L.tx - 6, L.y2); g.scale(s, s);
+    g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, h / 2); g.fillStyle = 'rgba(255,107,61,.14)'; g.fill(); g.lineWidth = 4; g.strokeStyle = OR; g.stroke();
+    g.fillStyle = OR; g.font = '600 38px MS'; g.letterSpacing = '4px'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('SEGUIR +', 4, 2); g.restore(); }
+}
+
+window.render = function (t) {
+  NOW = t; const i = sceneAt(t), sc = S.scenes[i], r = t - T.cuts[i];
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+  if (sc.tipo === 'cierre') { cierre(i, t); return; }
+  const z = 1 + 0.03 * ease(r / Math.max(1, D(i)));
+  g.save(); g.translate(W / 2, H * 0.6); g.scale(z, z); g.translate(-W / 2, -H * 0.6);
+  (V[sc.vis] || V.venda)(i, r, t); g.restore();
+  if (sc.tag) { const p = back((r - 0.15) / 0.35); if (p > 0) { g.save(); g.translate(150, 520); g.scale(p, p); g.rotate(-0.08); papel(circP(0, 0, 70), OR, 300 + i, { amt: 3 }); texto(sc.tag, 0, 4, 76, '#FFF8EC'); g.restore(); } }
+  if (sc.titulo) { const p = back((r - 0.1) / 0.35); if (p > 0) { g.save(); g.translate(W / 2, 520); g.scale(p, p); g.translate(-W / 2, -520); cartel(sc.titulo, W / 2, 520, C.marino, 48, 310 + i, '#FFF8EC'); g.restore(); } }
+  subtitulos(i, t);
+  if (r < 0.2 && i > 0) { g.fillStyle = `rgba(244,236,216,${0.6 * (1 - r / 0.2)})`; g.fillRect(0, 0, W, H); }
+};
+window.frame = t => { window.render(t); return cv.toDataURL('image/jpeg', 0.9).split(',')[1]; };
+load();
+</script></body></html>
