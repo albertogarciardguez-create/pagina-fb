@@ -1,0 +1,362 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.32,
+ "pausaEscena": 0.55,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-17-interestelar-edge.mp3",
+ "scenes": [
+  {
+   "say": "¿Dejarías a tus hijos... para poder salvarlos? Esa es la pregunta detrás de Interestelar, la película de Christopher Nolan.",
+   "vis": "polvo",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.7
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "En el futuro, la Tierra se está muriendo. Las tormentas de polvo lo cubren todo, y las cosechas se pierden una tras otra.",
+   "vis": "plaga",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Cooper, un expiloto convertido en granjero, vive con sus dos hijos. Su hija Murph jura que en su cuarto hay un fantasma que tira los libros del librero.",
+   "vis": "librero",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Pero no es un fantasma. El polvo forma un mensaje en código binario: son coordenadas que los llevan a una base secreta de la NASA.",
+   "vis": "nasa",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Ahí le ofrecen una misión imposible: cruzar el espacio para buscarle un nuevo hogar a la humanidad. Murph le ruega que no se vaya. Él le deja su reloj... y le promete volver.",
+   "vis": "despedida",
+   "acto": 2,
+   "mus": "menor",
+   "nivel": 0.85,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.2,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Y despega, sin saber cuándo los volverá a ver.",
+   "vis": "cohete",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.7
+    },
+    {
+     "k": "trueno",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Junto a Saturno, cruzan un agujero de gusano: una puerta hacia otra galaxia.",
+   "vis": "saturno",
+   "acto": 2,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "El primer planeta es de agua, muy cerca de un agujero negro. Ahí, cada hora equivale a siete años en la Tierra. Y una ola gigante los retrasa...",
+   "vis": "ola",
+   "titulo": "1 HORA = 7 AÑOS",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.1
+    },
+    {
+     "k": "agua",
+     "s": 2,
+     "at": 0.2,
+     "g": 0.7
+    },
+    {
+     "k": "trueno",
+     "s": 2,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Cuando regresan a la nave, en la Tierra ya pasaron veintitrés años. Cooper ve los mensajes de sus hijos, ya adultos... y se derrumba.",
+   "vis": "mensajes",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.8,
+   "corte": true,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Luego viene la traición: el doctor Mann, el héroe que esperaban rescatar, mintió sobre su planeta helado para que fueran por él.",
+   "vis": "hielo",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Sin combustible para volver, Cooper toma una decisión. Se suelta de la nave y cae al agujero negro, para que su compañera Brand pueda seguir.",
+   "vis": "agujero",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Adentro aparece un lugar imposible: detrás del librero de Murph, a través del tiempo. Él era el fantasma.",
+   "vis": "teseracto",
+   "acto": 4,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Desde ahí, mueve la manecilla del reloj que le regaló, en código Morse. Y Murph, ya adulta, entiende el mensaje... y resuelve la ecuación que salva a la humanidad.",
+   "vis": "reloj",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3
+    },
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.4,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Cooper despierta en una estación espacial. Murph es ahora una anciana, rodeada de su familia. Y le dice que ya no lo necesita ahí: que vaya por Brand.",
+   "vis": "estacion",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Interestelar no habla solo del espacio. Habla del tiempo, lo único que no se recupera. Y del amor de un padre, capaz de atravesarlo.",
+   "vis": "leccion",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.1,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Así que hoy, guarda el teléfono. Abraza a tus hijos. Ese tiempo... no vuelve.",
+   "vis": "abrazo",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Qué película te hizo llorar como esta? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué película",
+    "te hizo llorar así?"
+   ]
+  }
+ ],
+ "thumb": [
+  "INTERESTELAR",
+  "EL TIEMPO NO VUELVE"
+ ],
+ "sources": [
+  "https://empireonline.com/movies/features/interstellar-explained",
+  "https://unamglobal.unam.mx/global_revista/interestelar-cuando-la-ciencia-guia-la-ficcion/"
+ ],
+ "post": "Interestelar en 2 minutos 🚀",
+ "hashtags": [
+  "#Interestelar",
+  "#Interstellar",
+  "#ImpulsoReal"
+ ],
+ "id": "2026-11-17-interestelar-youtube",
+ "titulo": "Interestelar (YouTube)",
+ "formato": "horizontal",
+ "miniatura": 10,
+ "youtube": {
+  "titulo": "Interestelar explicada en papel: el padre que cruzó el tiempo por su hija",
+  "intro": "Interestelar en papel recortado",
+  "descripcion": "La historia de Interestelar (Christopher Nolan, 2014) contada en animación de papel recortado: la Tierra moribunda, el fantasma del librero, el planeta donde una hora son siete años, los 23 años perdidos, el agujero negro y el reloj de Murph. Al final, la lección que nos deja como padres: el tiempo es lo único que no se recupera.\n\nContiene spoilers. Animación original de Impulso Real, sin imágenes ni música de la película.\n\n¿Qué película te hizo llorar como esta? Te leo en los comentarios.",
+  "hashtags": [
+   "#Interestelar",
+   "#Interstellar",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "Interestelar",
+   "Interstellar",
+   "Interestelar explicada",
+   "Christopher Nolan",
+   "resumen de película",
+   "Cooper y Murph",
+   "agujero negro",
+   "película de padre e hija",
+   "reflexión",
+   "Impulso Real"
+  ]
+ }
+}
