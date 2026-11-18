@@ -1,0 +1,77 @@
+# Publicador automático: genera los videos autorizados (cola/*.json) y los sube a
+# Facebook, Instagram, YouTube y TikTok. Ver agentes/AGENTES.md y agentes/CONFIGURAR.md.
+name: Publicador de redes
+
+on:
+  push:
+    branches: [main]
+    paths: ["cola/*.json"]
+  schedule:
+    - cron: "*/20 * * * *"   # revisa cada 20 min si ya toca publicar en Instagram/TikTok
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicador
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SF_FB_PAGE_ID: ${{ secrets.SF_FB_PAGE_ID }}
+      SF_FB_TOKEN: ${{ secrets.SF_FB_TOKEN }}
+      SF_IG_ID: ${{ secrets.SF_IG_ID }}
+      SF_YT_REFRESH: ${{ secrets.SF_YT_REFRESH }}
+      SF_TIKTOK_REFRESH: ${{ secrets.SF_TIKTOK_REFRESH }}
+      IR_FB_PAGE_ID: ${{ secrets.IR_FB_PAGE_ID }}
+      IR_FB_TOKEN: ${{ secrets.IR_FB_TOKEN }}
+      IR_IG_ID: ${{ secrets.IR_IG_ID }}
+      IR_YT_REFRESH: ${{ secrets.IR_YT_REFRESH }}
+      IR_TIKTOK_REFRESH: ${{ secrets.IR_TIKTOK_REFRESH }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+      TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ¿Hay algo que publicar?
+        id: rev
+        run: python3 engine/publicador.py --revisar >> "$GITHUB_OUTPUT"
+
+      - name: Caché (voz y navegador)
+        if: steps.rev.outputs.generar == 'si'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/senorfutbol
+            ~/.cache/ms-playwright
+          key: motor-${{ hashFiles('setup.sh') }}
+
+      - name: Instalar motor de video
+        if: steps.rev.outputs.generar == 'si'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          python3 -m pip install --break-system-packages -q playwright
+          python3 -m playwright install --with-deps chromium
+          bash setup.sh
+
+      - name: Generar y publicar
+        if: steps.rev.outputs.trabajo == 'si'
+        run: python3 engine/publicador.py
+
+      - name: Guardar estado
+        if: always() && steps.rev.outputs.trabajo == 'si'
+        run: |
+          git config user.name "publicador-redes[bot]"
+          git config user.email "publicador@users.noreply.github.com"
+          git add cola/estado
+          git diff --cached --quiet && exit 0
+          git commit -qm "Estado de publicaciones [skip ci]"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done

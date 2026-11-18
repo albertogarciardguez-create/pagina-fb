@@ -1,5 +1,7 @@
 # Fábrica de reels — Señor Fútbol
 
+> **Agentes de redes:** si te lanzó una tarea programada de “Agentes de redes” (planeador, agente Señor Fútbol o agente Impulso Real), sigue **`agentes/AGENTES.md`**: solo se produce lo que Alberto autorizó en la hoja de temario, y la publicación la hace GitHub Actions a partir de `cola/*.json`. Cuentas y secretos: `agentes/CONFIGURAR.md`.
+
 Este repositorio genera los reels animados de la página de Facebook **Señor Fútbol** (facebook.com/senorfutbol), de Alberto García (Ciudad Juárez). Formato: video vertical 1080×1920, 25–35 s, gráficas animadas estilo papel/tinta, voz en off en español, música y efectos, subtítulos. **Nadie sale a cuadro.** Todo el contenido es original (sin escudos, fotos ni clips de transmisiones), para que la página pueda monetizar.
 
 ## Flujo diario (lo que debe hacer la tarea programada)
