@@ -1,0 +1,348 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.32,
+ "pausaEscena": 0.55,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-17-la-llegada-edge.mp3",
+ "scenes": [
+  {
+   "say": "Si pudieras ver tu futuro, con todo el dolor que trae... ¿lo volverías a vivir igual? Esa es la pregunta de La llegada, la película de Denis Villeneuve.",
+   "vis": "futuro",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Un día, doce naves gigantes aparecen en distintos lugares del mundo. Nadie sabe qué quieren.",
+   "vis": "mapa",
+   "acto": 1,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    },
+    {
+     "k": "rugido",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "El ejército busca a Louise Banks, una lingüista, y a Ian, un físico. Su misión: lograr hablar con ellos.",
+   "vis": "reclutan",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Dentro de la nave, detrás de un enorme vidrio, aparecen dos criaturas de siete patas: los heptápodos.",
+   "vis": "concha",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.85,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "No hablan como nosotros. Escriben con círculos de tinta, y cada círculo es una frase completa, sin principio ni fin.",
+   "vis": "logograma",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "agua",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Louise empieza desde cero: una pizarra, su nombre, palabras sencillas. Y poco a poco, el idioma comienza a abrirse.",
+   "vis": "pizarra",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Pero un día, la traducción dice: ofrecer arma. El mundo entra en pánico. China da un ultimátum... y otros países la siguen.",
+   "vis": "alarma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.7
+    },
+    {
+     "k": "tick",
+     "s": 2,
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "say": "Louise insiste: arma también puede significar herramienta. Ellos no vienen a atacarnos... vienen a dejarnos un regalo.",
+   "vis": "herramienta",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Unos soldados ponen una bomba en la nave. Uno de los heptápodos queda herido de muerte, pero antes salvan a Louise y a Ian.",
+   "vis": "bomba",
+   "acto": 3,
+   "mus": "foso",
+   "corte": true,
+   "sfx": [
+    {
+     "k": "trueno",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.9
+    },
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.65,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ahí entiende cuál es el regalo: al aprender su idioma, empieza a ver el tiempo como ellos. Pasado, presente y futuro... al mismo tiempo.",
+   "vis": "tiempo",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Las imágenes de una niña que creíamos recuerdos son, en realidad, su futuro: su hija, Hannah. Una niña que va a morir joven, de una enfermedad incurable.",
+   "vis": "hija",
+   "acto": 4,
+   "mus": "menor",
+   "nivel": 0.8,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Con ese mismo don, Louise detiene la guerra. Llama al general chino a su número privado, y le repite las últimas palabras de su esposa... palabras que él mismo le contará años después.",
+   "vis": "llamada",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "El general detiene el ataque. Los demás países lo siguen. Y las naves se van.",
+   "vis": "partida",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Al final, Louise sabe todo lo que viene: el amor, la niña... y la despedida. Y aun así, decide vivirlo. Dice que sí.",
+   "vis": "decision",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 2,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "La llegada nos deja una idea poderosa: el dolor no le quita valor a la vida. Hay historias que valen la pena, aunque sepamos cómo terminan.",
+   "vis": "circulo",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.15,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Así que hoy, abraza a los tuyos como si ya supieras lo que vale cada día.",
+   "vis": "abrazo",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Tú volverías a vivir tu vida, sabiendo cómo termina? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿La vivirías igual",
+    "sabiendo el final?"
+   ]
+  }
+ ],
+ "thumb": [
+  "LA LLEGADA",
+  "¿LA VIVIRÍAS IGUAL?"
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Arrival_(film)",
+  "https://www.xataka.com/magnet/esta-es-la-teoria-linguistica-en-la-que-se-basa-la-llegada-la-pelicula-de-ciencia-ficcion-del-ano"
+ ],
+ "post": "La llegada en 2 minutos 🛸",
+ "hashtags": [
+  "#LaLlegada",
+  "#Arrival",
+  "#ImpulsoReal"
+ ],
+ "id": "2026-11-17-la-llegada-youtube",
+ "titulo": "La llegada (YouTube)",
+ "formato": "horizontal",
+ "miniatura": 9,
+ "youtube": {
+  "titulo": "La llegada explicada en papel: ¿vivirías tu vida igual sabiendo cómo termina?",
+  "intro": "La llegada en papel recortado",
+  "descripcion": "La historia de La llegada (Arrival, Denis Villeneuve, 2016) contada en animación de papel recortado: las doce naves, los heptápodos y su escritura en círculos de tinta, el malentendido de \"ofrecer arma\", el regalo de ver el tiempo completo, Hannah y la llamada que detuvo una guerra. Al final, la lección: el dolor no le quita valor a la vida.\n\nBasada en el relato \"La historia de tu vida\" de Ted Chiang. Contiene spoilers. Animación original de Impulso Real, sin imágenes ni música de la película.\n\n¿Tú volverías a vivir tu vida, sabiendo cómo termina? Te leo en los comentarios.",
+  "hashtags": [
+   "#LaLlegada",
+   "#Arrival",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "La llegada",
+   "Arrival",
+   "La llegada explicada",
+   "Denis Villeneuve",
+   "Ted Chiang",
+   "heptápodos",
+   "resumen de película",
+   "película de ciencia ficción",
+   "reflexión",
+   "Impulso Real"
+  ]
+ }
+}

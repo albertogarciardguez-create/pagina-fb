@@ -396,6 +396,108 @@ V2.abrazo = (i, r, t) => {
   pop(sentAt(i, 1, 0), 500, 300, () => corazon(500, 300, 5 + 0.25 * Math.sin(t * 5), C.coral, 1125), 0.4);
 };
 
+// ---- escenas V2 de "La llegada" ----
+const LOUISE = { cam: '#7A8FA6', pan: C.marino, largo: true, pelo: '#7A4A2A' }, IAN = { cam: '#6B7A52', pan: '#3A3F4A' }, HANNAH = { cam: C.coral, pan: C.marino, largo: true, pelo: '#7A4A2A' },
+  GENERAL = { cam: '#4E5A36', pan: '#3A4228' }, TRAJE = { cam: '#E88A2E', pan: '#E88A2E', astro: true };
+function concha(x, y, s, a, sd) { g.save(); g.translate(x, y); g.rotate(a || 0.12); const p = []; for (let k = 0; k < 40; k++) { const th = k / 40 * 6.2832; p.push([Math.sin(th) * 75 * s * Math.pow(Math.abs(Math.sin(th)), 0.6), -Math.cos(th) * 230 * s]); }
+  papel(p, '#3E4246', sd || 1200, { amt: 3, sb: 16 }); g.fillStyle = 'rgba(255,255,255,.08)'; g.beginPath(); g.ellipse(-18 * s, -40 * s, 14 * s, 150 * s, 0, 0, 7); g.fill(); g.restore(); }
+function niebla(t, a) { for (let k = 0; k < 9; k++) { const x = (rnd(k) * 1600 + t * (14 + k * 3)) % 1700 - 450, y = 200 + rnd(k + 4) * 700; g.save(); g.globalAlpha = (a || 0.35) * (0.5 + 0.5 * rnd(k + 2)); g.fillStyle = '#FFFFFF'; g.beginPath(); g.ellipse(x, y, 260, 70, 0, 0, 7); g.fill(); g.restore(); } }
+function heptapodo(x, y, s, t, sd) { g.save(); g.translate(x, y); g.scale(s, s); g.globalAlpha = 0.92;
+  for (let k = 0; k < 7; k++) { const a = Math.PI * (0.15 + k * 0.7 / 6) + 0.05 * Math.sin(t * 1.3 + k); g.save(); g.rotate(a - Math.PI / 2); papel([[-14, 0], [14, 0], [6, 330], [-6, 330]], '#2C2F33', (sd || 1210) + k, { amt: 3, sb: 8 }); papel(circP(0, 330, 18), '#2C2F33', (sd || 1210) + 10 + k, { amt: 2, sb: 4 }); g.restore(); }
+  papel(ellP(0, -170, 90, 210, 30), '#33373C', (sd || 1210) + 20, { amt: 4, sb: 12 }); g.restore(); }
+function tinta(x, y, r, p, sd, col) {  // logograma: anillo de tinta con salpicaduras
+  if (p <= 0) return; g.save(); g.strokeStyle = col || 'rgba(20,20,22,.92)'; g.lineCap = 'round';
+  const a0 = rnd(sd) * 6.28; for (let k = 0; k < 3; k++) { g.lineWidth = 22 - k * 6; g.beginPath(); g.arc(x, y, r + (k - 1) * 9 + Math.sin(k * 3 + sd) * 4, a0, a0 + 6.2832 * p); g.stroke(); }
+  g.fillStyle = col || 'rgba(20,20,22,.92)'; for (let k = 0; k < 9; k++) { const a = a0 + rnd(sd + k) * 6.2832 * p, rr = r + 16 + rnd(sd + k + 20) * 60, w = 6 + rnd(sd + k + 40) * 16;
+    g.beginPath(); g.ellipse(x + Math.cos(a) * rr, y + Math.sin(a) * rr, w, w * 0.7, a, 0, 7); g.fill(); g.lineWidth = w * 0.7; g.beginPath(); g.moveTo(x + Math.cos(a) * r, y + Math.sin(a) * r); g.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr); g.stroke(); }
+  g.restore(); }
+function interior(t) { cielo('#F2F2EE', '#C9CFCC'); niebla(t, 0.5); papel(rectP(-800, 0, 2600, 40), '#2A2C2F', 1220, { amt: 3 }); papel(rectP(-800, 860, 2600, 700), '#2A2C2F', 1221, { amt: 4 }); }
+const CONT = [[[140, 230], [330, 210], [360, 330], [280, 440], [190, 420], [120, 320]], [[300, 470], [380, 480], [370, 640], [320, 760], [290, 600]], [[470, 230], [570, 220], [570, 320], [480, 330]],
+  [[480, 360], [610, 350], [630, 480], [560, 640], [500, 560]], [[580, 210], [860, 200], [900, 330], [800, 450], [650, 430], [590, 330]], [[790, 590], [890, 580], [900, 670], [800, 680]]];
+const NAVES = [[230, 300], [330, 270], [210, 380], [340, 560], [520, 270], [540, 420], [580, 560], [680, 290], [760, 360], [850, 270], [720, 420], [850, 630]];
+
+V2.futuro = (i, r, t) => {
+  cielo('#20283A', '#3A4560'); niebla(t, 0.12); tierra(840, '#2A3040');
+  const p = ease((r - 0.3) / 1.6); tinta(500, 420, 230, p, 7, 'rgba(240,236,226,.9)');
+  if (p > 0.6) { g.save(); g.globalAlpha = ease((p - 0.6) / 0.4); fig(500, 520, 200, HANNAH, 3); g.restore(); }
+  fig(500, 850, 300, { ...LOUISE, espalda: true }, 1);
+};
+V2.mapa = (i, r, t) => {
+  cielo('#9FC3D3', '#7BA6BB'); CONT.forEach((c, k) => papel(c, ['#C9B07A', '#B8A06A'][k % 2], 1230 + k, { amt: 5 }));
+  const d = Math.min(0.35, (D(i) - 1.2) / 12); NAVES.forEach(([x, y], k) => pop(T.cuts[i] + 0.4 + k * d, x, y, () => concha(x, y, 0.22, 0.12, 1240 + k), 0.3));
+  const n = NAVES.filter((_, k) => NOW > T.cuts[i] + 0.4 + k * d).length; if (n) cartel(`${n} NAVES`, 500, 860, C.marino, 64, 1260, '#FFF8EC');
+};
+V2.reclutan = (i, r, t) => {
+  cielo('#C7D3D6', '#A8B6B0'); niebla(t, 0.25); concha(820, 330, 1.0, 0.1, 1270); tierra(820, '#7E8B5E');
+  papel([[60, 820], [210, 640], [360, 820]], '#5E6B3E', 1271, { amt: 3 }); papel([[180, 820], [210, 700], [240, 820]], '#3E4628', 1272, { amt: 2, sb: 3 });
+  fig(470, 830, 320, LOUISE, 1); fig(600, 830, 340, IAN, 2); fig(740, 830, 340, GENERAL, 4);
+};
+V2.concha = (i, r, t) => {
+  const t1 = sentAt(i, 0, 0.85);
+  if (t < t1) { cielo('#D2DBDB', '#9FB0AA'); niebla(t, 0.4); tierra(860, '#6E7E52'); concha(500, 420 + Math.sin(t) * 8, 1.35, 0.1, 1280); fig(470, 870, 90, TRAJE, 1); fig(530, 870, 90, { ...TRAJE, cam: '#E8862E' }, 2); }
+  else { interior(t); g.save(); g.globalAlpha = ease((t - t1) / 1.5); heptapodo(330, 420, 0.8, t, 1290); heptapodo(690, 380, 0.9, t + 1, 1300); g.restore();
+    fig(500, 850, 300, TRAJE, 1); }
+};
+V2.logograma = (i, r, t) => { interior(t); heptapodo(500, 300, 0.55, t, 1310); tinta(500, 520, 210, ease((r - 0.5) / 2.5), 11);
+  if (t > sentAt(i, 1, 0.3)) pop(sentAt(i, 1, 0.3), 500, 520, () => cartel('= UNA FRASE', 500, 520, C.mostaza, 48, 1311, '#222'), 0.3); };
+V2.pizarra = (i, r, t) => { interior(t); tinta(260, 300, 90, 1, 21); tinta(740, 280, 80, ease((r - 1) / 1.5), 23);
+  fig(500, 850, 330, { ...TRAJE, pose: 'offer' }, 1); g.save(); g.translate(560, 560); g.rotate(-0.06); papel(rectP(-10, -100, 240, 150), C.blanco, 1320, { amt: 2 }); texto('HUMANO', 110, -25, 46, '#222'); g.restore();
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 300, 560, () => cartel('LOUISE', 300, 560, C.blanco, 44, 1321), 0.3); };
+V2.alarma = (i, r, t) => {
+  cielo('#3A2228', '#1E1418'); const fl = Math.sin(t * 8) > 0 ? 0.25 : 0; g.fillStyle = `rgba(220,40,40,${fl})`; g.fillRect(-1500, -1500, 4000, 4000);
+  [[180, 470], [500, 450], [820, 470]].forEach(([x, y], k) => { papel(rectP(x - 140, y - 110, 280, 210), '#1B1B1E', 1330 + k, { amt: 3 }); papel(rectP(x - 125, y - 95, 250, 180), ['#C8423A', '#3A5A8A', '#C8423A'][k], 1335 + k, { amt: 2, sb: 2 }); texto(k === 1 ? '24 H' : '!', x, y - 5, 90, '#FFF8EC'); });
+  pop(T.cuts[i] + 0.4, 500, 220, () => cartel('OFRECER ARMA', 500, 220, C.rojo, 70, 1340, '#FFF8EC'), 0.3); tierra(860, '#2A1E20');
+  const h = Math.max(0, 24 - Math.floor((t - sentAt(i, 1, 0)) * 3)); if (t > sentAt(i, 1, 0)) cartel(`ULTIMÁTUM ${h}:00`, 500, 760, C.blanco, 56, 1341, C.rojo);
+};
+V2.herramienta = (i, r, t) => {
+  interior(t); cartel('ARMA', 500, 230, C.blanco, 80, 1350, '#222');
+  const t1 = sentAt(i, 0, 0.55); if (t > t1) { const p = ease((t - t1) / 0.4); g.save(); g.strokeStyle = C.rojo; g.lineWidth = 16; g.lineCap = 'round'; g.beginPath(); g.moveTo(370, 230); g.lineTo(370 + 260 * p, 230); g.stroke(); g.restore();
+    pop(t1 + 0.4, 500, 380, () => cartel('HERRAMIENTA', 500, 380, C.verde, 72, 1351, '#FFF8EC'), 0.3); }
+  const t2 = sentAt(i, 1, 0.5); pop(t2, 500, 640, () => { papel(rectP(400, 560, 200, 150), C.coral, 1352, { amt: 3 }); papel(rectP(380, 530, 240, 50), C.coral, 1353, { amt: 3 }); papel(rectP(485, 530, 30, 180), C.mostaza, 1354, { amt: 1, sb: 3 });
+    papel([[500, 530], [440, 480], [460, 530]], C.mostaza, 1355, { amt: 1, sb: 3 }); papel([[500, 530], [560, 480], [540, 530]], C.mostaza, 1356, { amt: 1, sb: 3 }); }, 0.4);
+  fig(220, 850, 300, TRAJE, 1);
+};
+V2.bomba = (i, r, t) => {
+  interior(t); const t1 = sentAt(i, 0, 0.6), p = cl((t - t1) / 1.2, 0, 1);
+  heptapodo(680, 380, 0.85, t, 1360); if (t > t1) { for (let k = 4; k >= 0; k--) papel(circP(380, 600, (80 + k * 80) * ease(p * 1.4)), ['#FFF3C2', '#FFD36A', '#F59A3A', '#E0602E', '#A83A2A'][k], 1365 + k, { amt: 8, sb: 6 }); }
+  const fx = t > t1 ? lerp(380, 130, ease(p)) : 380, fa = t > t1 ? -1.2 * ease(p) : 0; g.save(); g.translate(fx, 850 - 120 * Math.sin(p * Math.PI)); g.rotate(fa); fig(0, 0, 280, TRAJE, 1); g.restore();
+  if (t > t1 && p < 1) { g.fillStyle = `rgba(255,255,255,${0.6 * (1 - p)})`; g.fillRect(-1500, -1500, 4000, 4000); }
+};
+V2.tiempo = (i, r, t) => {
+  cielo('#20283A', '#2E3A55'); niebla(t, 0.1); g.save(); g.translate(500, 460); g.rotate(t * 0.15); g.translate(-500, -460); tinta(500, 460, 290, 1, 31, 'rgba(240,236,226,.85)');
+  const esc = [[HANNAH, 120], [HANNAH, 200], [LOUISE, 260], [IAN, 260], [HANNAH, 160]];
+  esc.forEach(([o, h], k) => { const a = k / 5 * 6.2832 - 1.57, x = 500 + Math.cos(a) * 290, y = 460 + Math.sin(a) * 290;
+    pop(T.cuts[i] + 0.5 + k * 0.5, x, y, () => { papel(circP(x, y, 95), [C.mostaza, C.teal, C.coral, '#8FB06A', '#A07CC0'][k], 1370 + k, { amt: 3 }); g.save(); g.translate(x, y + 80); g.rotate(-(t * 0.15)); fig(0, 0, h * 0.7, o, 20 + k); g.restore(); }, 0.35); });
+  g.restore(); fig(500, 880, 220, { ...LOUISE, espalda: true }, 1);
+};
+V2.hija = (i, r, t) => {
+  cielo('#F6E2B8', '#E3B97A'); tierra(820, '#9DBB72');
+  for (let k = 0; k < 14; k++) { const x = 40 + k * 70, y = 840 + (k % 3) * 30; papel(rectP(x - 3, y - 50, 6, 50), C.verde, 1380 + k, { amt: 1, sb: 2 }); papel(circP(x, y - 56, 16), [C.coral, C.mostaza, C.blanco][k % 3], 1400 + k, { amt: 1, sb: 3 }); }
+  fig(620 + Math.sin(t * 2) * 60, 840, 230, { ...HANNAH, pose: 'walk', fase: t * 6, mira: Math.cos(t * 2) > 0 ? 1 : -1 }, 3); fig(300, 840, 320, LOUISE, 1);
+  const t1 = sentAt(i, 1, 0.3); if (t > t1) { g.fillStyle = `rgba(30,35,55,${0.45 * ease((t - t1) / 1.5)})`; g.fillRect(-1500, -1500, 4000, 4000); }
+  pop(sentAt(i, 0, 0.6), 620, 180, () => cartel('HANNAH', 620, 180, C.blanco, 54, 1420, C.coral), 0.3);
+};
+V2.llamada = (i, r, t) => {
+  cielo('#1E2638', '#34405A'); tierra(820, '#2A3242'); fig(200, 830, 330, { ...LOUISE, pose: 'ask', fase: 0 }, 1); fig(800, 830, 340, { ...GENERAL, mira: -1, pose: 'ask', fase: 0 }, 4);
+  g.save(); g.setLineDash([16, 14]); g.lineDashOffset = -t * 60; g.strokeStyle = C.mostaza; g.lineWidth = 7; g.beginPath(); g.moveTo(260, 470); g.quadraticCurveTo(500, 150, 740, 470); g.stroke(); g.restore();
+  const q = (t * 0.5) % 1, bx = (1 - q) * (1 - q) * 260 + 2 * (1 - q) * q * 500 + q * q * 740, by = (1 - q) * (1 - q) * 470 + 2 * (1 - q) * q * 150 + q * q * 470; papel(circP(bx, by, 18), C.mostaza, 1430, { amt: 1 });
+  const t2 = sentAt(i, 1, 0.5); if (t > t2) pop(t2, 500, 560, () => burbuja(500, 560, 110, '…', C.blanco, 1431), 0.35);
+};
+V2.partida = (i, r, t) => {
+  cielo('#F4C99A', '#A9BFD0'); papel(circP(820, 300, 90), '#FFE3B0', 1440, { amt: 2, sb: 0 }); tierra(860, '#7E8B5E');
+  const p = ease((t - sentAt(i, 1, 0)) / 2.5); g.save(); g.globalAlpha = 1 - 0.9 * p; concha(500, 480 - 500 * p, 1.4 * (1 - 0.6 * p), 0.1, 1441); g.restore();
+  fig(380, 870, 280, LOUISE, 1); fig(600, 870, 300, GENERAL, 4);
+};
+V2.decision = (i, r, t) => {
+  cielo('#F7E2C2', '#E7BE90'); g.save(); g.globalAlpha = 0.5; tinta(500, 420, 280, ease(r / 2), 41, 'rgba(120,80,50,.6)'); g.restore(); tierra(840, C.kraft);
+  fig(450, 850, 340, LOUISE, 1); fig(560, 850, 360, { ...IAN, mira: -1, pose: 'offer' }, 2);
+  pop(sentAt(i, 2, 0), 505, 330, () => corazon(505, 330, 5 + 0.25 * Math.sin(t * 5), C.coral, 1450), 0.4);
+};
+V2.circulo = (i, r, t) => {
+  cielo('#FBEBD0', '#F0CFA0'); tierra(860, C.kraft); tinta(500, 520, 330, ease(r / 3), 51, 'rgba(30,30,32,.85)');
+  fig(400, 760, 300, LOUISE, 1); fig(600, 760, 320, IAN, 2); fig(500, 760, 200, HANNAH, 3);
+};
+
 function cierre(i, t) {
   const sc = S.scenes[i], r = t - T.cuts[i], L = HZ ? { cx: 960, cy: 560, sz: 780, tx: 964, y1: 950, y2: 1025, q1: 90, q2: 160 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610, q1: 300, q2: 380 };
   g.fillStyle = logoBg; g.fillRect(0, 0, W, H);
