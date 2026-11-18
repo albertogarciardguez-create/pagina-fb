@@ -36,7 +36,7 @@ async function load() {
   x.putImageData(id, 0, 0); x.strokeStyle = 'rgba(120,100,80,.25)'; x.lineWidth = 1;
   for (let k = 0; k < 160; k++) { const a = Math.random() * 6.28, px = Math.random() * 384, py = Math.random() * 384, l = 6 + Math.random() * 22; x.beginPath(); x.moveTo(px, py); x.lineTo(px + Math.cos(a) * l, py + Math.sin(a) * l); x.stroke(); }
   TEX = g.createPattern(tc, 'repeat');
-  await document.fonts.load('80px MB'); await document.fonts.load('40px MS'); await document.fonts.load('40px MR');
+  await document.fonts.load('900 100px "Noto Serif CJK SC"', '忍'); await document.fonts.load('80px MB'); await document.fonts.load('40px MS'); await document.fonts.load('40px MR');
   window.READY = true;
 }
 const sceneAt = t => { let i = 0; while (i + 1 < T.cuts.length && t >= T.cuts[i + 1]) i++; return i; };
@@ -496,6 +496,95 @@ V2.decision = (i, r, t) => {
 V2.circulo = (i, r, t) => {
   cielo('#FBEBD0', '#F0CFA0'); tierra(860, C.kraft); tinta(500, 520, 330, ease(r / 3), 51, 'rgba(30,30,32,.85)');
   fig(400, 760, 300, LOUISE, 1); fig(600, 760, 320, IAN, 2); fig(500, 760, 200, HANNAH, 3);
+};
+
+// ---- escenas V2 de "Nin: la perseverancia del samurái" ----
+const SAM = { cam: '#26344D', pan: '#3B3B44', pelo: '#1E1A18' };
+function samurai(x, y, h, o, sd) {  // figura de papel con moño, haori y katana (genérica)
+  o = o || {}; const u = h / 10; g.save(); g.translate(x, y); g.rotate(o.lean || 0);
+  papel(rectP(-1.9 * u, -4.9 * u, 3.8 * u, 2.6 * u), o.pan || '#3B3B44', (sd || 1500) + 1, { amt: 2 });  // hakama
+  g.restore(); fig(x, y, h, { ...SAM, ...o }, sd || 15);
+  g.save(); g.translate(x, y); g.rotate(o.lean || 0);
+  papel(circP(0, -10.75 * u, 0.42 * u), '#1E1A18', (sd || 1500) + 2, { amt: 1, sb: 3 });  // moño
+  g.save(); g.translate(1.2 * u, -4.7 * u); g.rotate(-0.55); papel(rectP(-0.16 * u, -0.2 * u, 0.32 * u, 5.4 * u), '#2A2A2A', (sd || 1500) + 3, { amt: 1, sb: 4 }); papel(rectP(-0.45 * u, 1.2 * u, 0.9 * u, 0.22 * u), C.mostaza, (sd || 1500) + 4, { amt: 1, sb: 2 }); g.restore();
+  g.restore(); }
+function kanji(x, y, s, a) { g.save(); g.globalAlpha = a ?? 1; g.font = `900 ${s}px "Noto Serif CJK SC"`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = 'rgba(20,18,16,.92)'; g.fillText('忍', x, y); g.restore(); }
+function sello(x, y, r, txt) { papel(circP(x, y, r), C.rojo, 1510, { amt: 2 }); texto(txt, x, y + 3, r * 0.7, '#FFF8EC'); }
+
+V2.kanji = (i, r, t) => {
+  cielo('#F3E9D2', '#E2CFA8'); const p = ease((r - 0.3) / 1.4);
+  papel(rectP(260, 60, 480, 700), '#FBF6EA', 1520, { amt: 3 }); papel(rectP(240, 40, 520, 26), '#7A5232', 1521, { amt: 2 }); papel(rectP(240, 755, 520, 26), '#7A5232', 1522, { amt: 2 });
+  g.save(); g.beginPath(); g.rect(260, 60, 480, 700 * p + 1); g.clip(); kanji(500, 390, 380); g.restore();
+  if (r > 1.5) pop(T.cuts[i] + 1.5, 650, 690, () => sello(650, 690, 50, 'NIN'), 0.3);
+  samurai(130, 920, 260, {}, 15);
+};
+V2.paciencia = (i, r, t) => {
+  cielo('#EFE4CC', '#D9C59E'); tierra(820, C.kraft); const t1 = sentAt(i, 1, 0);
+  papel(rectP(90, 640, 320, 110), '#8A5A6A', 1530, { amt: 3 }); papel(rectP(70, 600, 50, 150), '#7A4A5A', 1531, { amt: 3 }); papel(rectP(380, 600, 50, 150), '#7A4A5A', 1532, { amt: 3 });
+  fig(250, 820, 300, { cam: C.mostaza, pan: C.marino, pose: 'sit', triste: true }, 2); relojP(250, 330, 80, t * 6.28 / 3, 1533);
+  g.save(); g.globalAlpha = t > t1 ? ease((t - t1) / 0.5) : 0.25; samurai(720, 830, 380, {}, 15); g.restore();
+  if (t > t1) pop(t1 + 0.3, 720, 240, () => cartel('ACTIVA', 720, 240, C.verde, 60, 1534, '#FFF8EC'), 0.3);
+  pop(T.cuts[i] + 0.5, 250, 180, () => cartel('PASIVA', 250, 180, C.gris, 52, 1535, '#FFF8EC'), 0.3);
+};
+V2.sol_nieve = (i, r, t) => {
+  const t1 = sentAt(i, 0, 0.45), k = ease((t - t1) / 1.2);
+  cielo(k < 0.5 ? '#F7C27A' : '#C9D6E2', k < 0.5 ? '#E8873A' : '#8FA4B8'); tierra(820, k < 0.5 ? '#C9965A' : '#EEF2F5');
+  if (k < 0.5) { papel(circP(780, 200, 110), '#FFE08A', 1540, { amt: 2, sb: 0 }); for (let j = 0; j < 12; j++) { const a = j / 12 * 6.28 + t * 0.3; g.strokeStyle = 'rgba(255,224,138,.7)'; g.lineWidth = 10; g.beginPath(); g.moveTo(780 + Math.cos(a) * 140, 200 + Math.sin(a) * 140); g.lineTo(780 + Math.cos(a) * 190, 200 + Math.sin(a) * 190); g.stroke(); } }
+  else for (let j = 0; j < 120; j++) { const x = (rnd(j) * 1600 + Math.sin(t + j) * 30) - 300, y = (rnd(j + 3) * 1100 + t * 90) % 1100 - 100; g.fillStyle = 'rgba(255,255,255,.9)'; g.beginPath(); g.arc(x, y, 4 + rnd(j) * 5, 0, 7); g.fill(); }
+  samurai(500, 830, 440, {}, 15);
+  if (t > sentAt(i, 0, 0.85)) pop(sentAt(i, 0, 0.85), 500, 180, () => cartel('FIRME', 500, 180, C.marino, 60, 1541, '#FFF8EC'), 0.3);
+};
+V2.motivacion = (i, r, t) => {
+  cielo('#2A2F44', '#454B66'); tierra(820, '#3A3F52'); const p = ease(r / Math.max(1, D(i) - 0.3));
+  g.save(); g.translate(260, 520); papel(rectP(-70, -170, 140, 300), '#1E2230', 1550, { amt: 2 }); papel(rectP(-30, -195, 60, 30), '#1E2230', 1551, { amt: 1 });
+  const h = 270 * (1 - p); papel(rectP(-55, 115 - h, 110, h + 1), p > 0.7 ? C.rojo : C.verde, 1552, { amt: 1, sb: 2 }); g.restore();
+  texto('MOTIVACIÓN', 260, 700, 34, '#F4ECD8');
+  fig(lerp(560, 780, p), 830, 320, { cam: C.coral, pan: C.marino, pose: 'walk', fase: t * 6 }, 3);
+};
+V2.tres = (i, r, t) => {
+  cielo('#F3E9D2', '#E2CFA8'); tierra(860, C.kraft);
+  const items = [['TRABAJO', C.teal], ['PAREJA', C.coral], ['SALUD', C.verde]], d = Math.max(0.5, (sentAt(i, 0, 1) - T.cuts[i] - 0.3) / 3);
+  items.forEach(([n, c], k) => { const x = 180 + k * 320, y = 420; pop(T.cuts[i] + 0.3 + k * d, x, y, () => { papel(rectP(x - 130, y - 170, 260, 340), c, 1560 + k, { amt: 3 }); texto(n, x, y + 120, 40, '#FFF8EC');
+    if (k === 0) { papel(rectP(x - 60, y - 70, 120, 90), '#5A3A22', 1570, { amt: 2, sb: 3 }); papel(rectP(x - 25, y - 95, 50, 28), '#5A3A22', 1571, { amt: 1, sb: 2 }); }
+    if (k === 1) corazon(x, y - 30, 5, '#FFF0E6', 1572);
+    if (k === 2) { papel(rectP(x - 80, y - 35, 160, 20), '#333', 1573, { amt: 1, sb: 2 }); papel(rectP(x - 90, y - 70, 30, 90), '#333', 1574, { amt: 1, sb: 2 }); papel(rectP(x + 60, y - 70, 30, 90), '#333', 1575, { amt: 1, sb: 2 }); } }, 0.35); });
+  const t1 = sentAt(i, 1, 0.2); if (t > t1) pop(t1, 500, 720, () => cartel('YA NO ES DIVERTIDO', 500, 720, C.marino, 52, 1576, '#FFF8EC'), 0.3);
+};
+V2.microondas = (i, r, t) => {
+  cielo('#EFE4CC', '#D9C59E'); tierra(860, '#B08A5E'); papel(rectP(160, 260, 680, 420), '#D9D6CC', 1580, { amt: 3 }); papel(rectP(200, 300, 420, 340), '#3A3F4A', 1581, { amt: 2 });
+  const gl = 0.5 + 0.5 * Math.sin(t * 6); g.fillStyle = `rgba(255,214,120,${0.25 + 0.2 * gl})`; g.fillRect(210, 310, 400, 320);
+  papel(rectP(650, 300, 160, 100), '#1B1B1E', 1582, { amt: 2, sb: 2 }); const t1 = sentAt(i, 1, 0.2), dias = t > t1 ? Math.min(3, 1 + Math.floor((t - t1) / 0.7)) : 0;
+  texto(dias ? `DÍA ${dias}` : '00:03', 730, 352, 40, '#7CFC9A');
+  const t2 = sentAt(i, 1, 0.75); if (t > t2) { pop(t2, 500, 470, () => cartel('ABANDONO', 500, 470, C.rojo, 72, 1583, '#FFF8EC'), 0.3); }
+};
+V2.roca = (i, r, t) => {
+  cielo('#9FB6C6', '#5E7C93'); papel(rectP(-800, 640, 2600, 900), '#2F5F7A', 1590, { amt: 5 });
+  papel([[330, 900], [360, 560], [460, 450], [600, 470], [690, 600], [720, 900]], '#6E6A64', 1591, { amt: 6 }); papel([[420, 620], [470, 520], [560, 510], [600, 600]], '#827D76', 1592, { amt: 4, sb: 3 });
+  const per = 1.8, f = ((t - T.cuts[i]) % per) / per, wx = lerp(-200, 330, ease(Math.min(1, f * 1.6)));
+  papel([[wx - 400, 900], [wx - 300, 700], [wx - 120, 600], [wx, 650], [wx + 20, 900]], '#4F89A8', 1593, { amt: 5 });
+  if (f > 0.55) { const s = (f - 0.55) / 0.45; for (let k = 0; k < 14; k++) { const a = -1.6 + rnd(k) * 1.4, d = 60 + 200 * s; g.fillStyle = `rgba(255,255,255,${1 - s})`; g.beginPath(); g.arc(330 + Math.cos(a) * d * 0.6, 600 + Math.sin(a) * d, 10 + rnd(k + 3) * 10, 0, 7); g.fill(); } }
+  pop(sentAt(i, 1, 0.3), 220, 330, () => cartel('DUDA', 220, 330, C.blanco, 46, 1594, C.marino), 0.3); pop(sentAt(i, 1, 0.55), 220, 430, () => cartel('CANSANCIO', 220, 430, C.blanco, 46, 1595, C.marino), 0.3);
+  samurai(540, 470, 150, {}, 15);
+};
+V2.gotas = (i, r, t) => {
+  cielo('#1E2236', '#2E3550'); tierra(820, '#3A3F52'); papel(rectP(700, 380, 30, 440), '#8C8C88', 1600, { amt: 2 }); papel(circP(715, 370, 34), '#FFE6A0', 1601, { amt: 2, sb: 20 });
+  const gl = g.createRadialGradient(715, 380, 10, 715, 600, 380); gl.addColorStop(0, 'rgba(255,230,160,.4)'); gl.addColorStop(1, 'rgba(255,230,160,0)'); g.fillStyle = gl; g.fillRect(300, 300, 900, 600);
+  const f = (t * 1.4) % 1; samurai(480, 830, 360, { pose: f < 0.5 ? 'arms' : 'stand', fase: 0 }, 15);
+  const n = Math.round(1000 * ease((r - 0.3) / Math.max(1, D(i) - 0.8))); cartel(`${n.toLocaleString('es-MX')} ESFUERZOS`, 500, 200, C.mostaza, 58, 1602, '#222');
+  if (t > sentAt(i, 2, 0)) pop(sentAt(i, 2, 0), 500, 320, () => cartel('0 APLAUSOS', 500, 320, C.blanco, 46, 1603, C.rojo), 0.3);
+};
+V2.minuto = (i, r, t) => {
+  cielo('#F2B880', '#B9734F'); tierra(820, '#9C6B45'); const t1 = sentAt(i, 1, 0.2), p = ease((t - t1) / 1.6);
+  samurai(330, 830, 360, {}, 15); g.save(); g.globalAlpha = 1 - 0.85 * p; samurai(680 + 400 * p, 830, 360, { pan: '#5A3A3A', cam: '#7A3A3A', mira: -1 }, 16); g.restore();
+  relojP(500, 250, 90, (t - T.cuts[i]) * 6.28 / 4, 1610); if (t > t1 + 0.8) pop(t1 + 0.8, 650, 180, () => sello(650, 180, 58, '+1'), 0.3);
+};
+V2.reto = (i, r, t) => {
+  cielo('#FBEBD0', '#F0CFA0'); tierra(860, C.kraft);
+  g.save(); g.translate(500, 430); g.rotate(-0.04); papel(rectP(-230, -260, 460, 520), C.blanco, 1620, { amt: 3 }); papel(rectP(-230, -260, 460, 110), C.rojo, 1621, { amt: 2, sb: 3 }); texto('MAÑANA', 0, -205, 54, '#FFF8EC');
+  for (let k = 0; k < 12; k++) { const x = -170 + (k % 4) * 113, y = -100 + Math.floor(k / 4) * 110; papel(rectP(x - 40, y - 40, 80, 80), '#EFE6D2', 1630 + k, { amt: 1, sb: 2 }); }
+  const t1 = sentAt(i, 1, 0); if (t > t1) { const q = ease((t - t1) / 0.6); g.strokeStyle = OR; g.lineWidth = 12; g.beginPath(); g.arc(-170 + 113, -100 + 110, 60, -1.6, -1.6 + 6.3 * q); g.stroke(); }
+  g.restore(); if (t > sentAt(i, 1, 0.3)) pop(sentAt(i, 1, 0.3), 500, 790, () => cartel('+1 DÍA', 500, 790, OR, 70, 1650, '#FFF8EC'), 0.3);
+  samurai(140, 870, 240, {}, 15);
 };
 
 function cierre(i, t) {
