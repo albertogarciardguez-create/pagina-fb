@@ -104,7 +104,7 @@ function fig(x, y, h, o, seed) {
   limb(1.45 * u, top + 0.4 * u, 3.4 * u, 0.8 * u, a2, cam, 7);
   const hy = top - 1.25 * u + (o.triste ? 0.35 * u : 0), hx = o.triste ? 0.3 * u : 0, pc = o.canas ? '#D6D2CA' : (o.pelo || C.pelo);
   if (o.largo) papel(rectP(hx - 1.32 * u, hy - 0.5 * u, 2.64 * u, 2.3 * u), pc, s * 10 + 13, { amt: 2, sb: 3 });
-  papel(circP(hx, hy, 1.15 * u), C.piel, s * 10 + 8, { amt: 2 });
+  papel(circP(hx, hy, 1.15 * u), o.piel || C.piel, s * 10 + 8, { amt: 2 });
   papel([...circP(hx, hy - 0.15 * u, 1.18 * u, 20).filter(p => p[1] < hy - 0.25 * u)], pc, s * 10 + 9, { amt: 2, sb: 3 });
   const b = boil(s * 10 + 8); g.save(); g.translate(b.x + hx, b.y + hy);
   if (o.venda) { papel(rectP(-1.3 * u, -0.45 * u, 2.6 * u, 0.6 * u), C.rojo, s * 10 + 11, { amt: 1.5, sb: 3 }); papel([[1.1 * u, -0.3 * u], [1.9 * u, 0.4 * u], [1.6 * u, 0.6 * u], [1.0 * u, 0.0]], C.rojo, s * 10 + 12, { amt: 1, sb: 3 }); }
@@ -585,6 +585,81 @@ V2.reto = (i, r, t) => {
   const t1 = sentAt(i, 1, 0); if (t > t1) { const q = ease((t - t1) / 0.6); g.strokeStyle = OR; g.lineWidth = 12; g.beginPath(); g.arc(-170 + 113, -100 + 110, 60, -1.6, -1.6 + 6.3 * q); g.stroke(); }
   g.restore(); if (t > sentAt(i, 1, 0.3)) pop(sentAt(i, 1, 0.3), 500, 790, () => cartel('+1 DÍA', 500, 790, OR, 70, 1650, '#FFF8EC'), 0.3);
   samurai(140, 870, 240, {}, 15);
+};
+
+// ---- escenas V2 de "La piedra" ----
+function roca(x, y, s, sd, col) { papel([[x - 90 * s, y], [x - 80 * s, y - 60 * s], [x - 30 * s, y - 100 * s], [x + 40 * s, y - 95 * s], [x + 90 * s, y - 50 * s], [x + 95 * s, y]], col || '#8A857D', sd || 1700, { amt: 4 * s, sb: 10 });
+  papel([[x - 40 * s, y - 70 * s], [x + 10 * s, y - 88 * s], [x + 50 * s, y - 70 * s], [x, y - 60 * s]], '#A39E95', (sd || 1700) + 1, { amt: 2, sb: 2 }); }
+const PERS = { cam: C.teal, pan: C.marino };
+V2.piedra = (i, r, t) => {
+  cielo('#EFE4CC', '#D9C59E'); tierra(760, C.kraft); const p = back((r - 0.2) / 0.5); g.save(); g.translate(500, 760); g.scale(Math.max(0, p) * 2.4, Math.max(0, p) * 2.4); roca(0, 0, 1, 1700); g.restore();
+  const t1 = sentAt(i, 1, 0); if (t > t1) { pop(t1, 270, 280, () => cartel('TROPIEZO', 270, 280, C.gris, 52, 1702, '#FFF8EC'), 0.3); pop(t1 + 0.6, 730, 280, () => cartel('OBRA DE ARTE', 730, 280, C.mostaza, 52, 1703, '#222'), 0.3); }
+};
+V2.tropiezo = (i, r, t) => {
+  cielo('#C9D8E0', '#A9BFCB'); tierra(820, '#9C9488'); roca(560, 830, 0.5, 1710);
+  const p = cl((r - 0.3) / 1.6, 0, 1), x = lerp(150, 520, Math.min(1, p * 1.1)), caida = cl((p - 0.85) / 0.15, 0, 1);
+  fig(x, 830, 330, { ...PERS, pose: caida ? 'arms' : 'walk', fase: t * 7, lean: 0.9 * ease(caida), triste: caida > 0 }, 1);
+  if (!caida) { g.save(); g.translate(x + 40, 830 - 330 * 0.66); papel(rectP(-14, -24, 28, 46), '#222', 1711, { amt: 1, sb: 3 }); papel(rectP(-10, -19, 20, 34), '#7FB2CF', 1712, { amt: 1, sb: 1 }); g.restore(); }
+  if (caida > 0.5) pop(T.cuts[i] + 0.3 + 1.6, 640, 420, () => burbuja(640, 420, 80, '¡#@!', C.blanco, 1713, -0.3));
+};
+V2.proyectil = (i, r, t) => {
+  cielo('#3A3040', '#5A4458'); tierra(820, '#4A4048'); papel(rectP(640, 260, 300, 560), '#6E5A5A', 1720, { amt: 3 }); papel(rectP(700, 330, 180, 160), '#9CC3D5', 1721, { amt: 2, sb: 3 });
+  const f = cl((r - 0.6) / 1.0, 0, 1); fig(230, 830, 340, { cam: '#7A3A3A', pan: '#3A2A2A', pose: f > 0 ? 'ask' : 'stand', fase: t * 3 }, 2);
+  if (f > 0 && f < 1) { const x = lerp(290, 790, f), y = lerp(560, 410, f) - Math.sin(f * Math.PI) * 180; g.save(); g.translate(x, y); g.rotate(f * 8); roca(0, 30, 0.3, 1722); g.restore(); }
+  if (f >= 1) { g.strokeStyle = '#222'; g.lineWidth = 5; for (let k = 0; k < 7; k++) { const a = k / 7 * 6.28; g.beginPath(); g.moveTo(790, 410); g.lineTo(790 + Math.cos(a) * (60 + rnd(k) * 40), 410 + Math.sin(a) * (50 + rnd(k + 2) * 40)); g.stroke(); } }
+};
+V2.construye = (i, r, t) => {
+  cielo('#F2DDB0', '#E3B97A'); tierra(820, C.kraft); const n = Math.floor(cl((r - 0.3) / Math.max(1, D(i) - 0.6), 0, 1) * 15);
+  for (let k = 0; k < n; k++) { const fila = Math.floor(k / 5), col = k % 5; roca(430 + col * 100 + (fila % 2) * 50, 820 - fila * 80, 0.55, 1730 + k, ['#8A857D', '#9A948A', '#7D786F'][k % 3]); }
+  if (n >= 15) pop(T.cuts[i] + D(i) - 0.3, 650, 520, () => papel([[400, 590], [650, 430], [900, 590]], C.rojo, 1750, { amt: 3 }), 0.3);
+  fig(230, 830, 340, { cam: C.mostaza, pan: C.marino, pose: 'offer' }, 3);
+};
+V2.asiento = (i, r, t) => {
+  cielo('#F6B97A', '#C47A4E'); papel(circP(780, 520, 120), '#FFD9A0', 1760, { amt: 2, sb: 0 }); tierra(820, '#8E6A3E');
+  for (let k = 0; k < 7; k++) papel(rectP(-200 + k * 60, 760 + (k % 2) * 6, 1500, 8), 'rgba(90,60,30,.4)', 1761 + k, { amt: 2, sb: 0 });
+  roca(420, 830, 1.1, 1770); fig(370, 832, 330, { cam: '#C4A15A', pan: '#5A4A3A', pose: 'sit', triste: true }, 4);
+  g.save(); g.translate(640, 830); g.rotate(-0.25); papel(rectP(-6, -330, 12, 330), '#7A5232', 1771, { amt: 1, sb: 3 }); papel(rectP(-50, -340, 100, 22), '#8C8C88', 1772, { amt: 1, sb: 3 }); g.restore();
+};
+V2.juguete = (i, r, t) => {
+  cielo('#BFE0EE', '#E9F1E4'); tierra(800, '#C9B98E');
+  [[300, 860], [420, 860], [360, 750], [300, 640], [420, 640], [360, 530]].forEach(([x, y], k) => { g.save(); g.strokeStyle = 'rgba(255,248,236,.9)'; g.lineWidth = 6; g.strokeRect(x, y - 0, 110, 100); texto(String(k + 1), x + 55, y + 50, 40, 'rgba(255,248,236,.9)'); g.restore(); });
+  const sx = 455, sy = lerp(800, 690, Math.abs(Math.sin(t * 2))); roca(sx, sy, 0.22, 1780);
+  fig(650 + Math.sin(t * 4) * 10, 830 - Math.abs(Math.sin(t * 4)) * 50, 230, { cam: C.coral, pan: C.marino, pose: 'arms', fase: t * 4 }, 5);
+  fig(820, 830, 210, { cam: C.mostaza, pan: C.marino, largo: true, pelo: '#6B3E26', pose: 'arms', fase: t * 3 }, 6);
+};
+V2.honda = (i, r, t) => {
+  cielo('#E8D3A4', '#C9A16A'); tierra(820, '#B08A5E'); const t1 = sentAt(i, 0, 0.55), f = cl((t - t1) / 0.8, 0, 1), caida = cl((t - t1 - 0.8) / 0.8, 0, 1);
+  g.save(); g.translate(760, 830); g.rotate(1.2 * ease(caida)); fig(0, 0, 560, { cam: '#5A5A52', pan: '#3A3A34', mira: -1 }, 7); g.restore();
+  fig(210, 830, 260, { cam: '#C4A15A', pan: '#7A5A3A', pose: 'ask', fase: t * 3 }, 8);
+  if (t < t1) { const a = t * 14; g.strokeStyle = '#5A3A22'; g.lineWidth = 4; g.beginPath(); g.moveTo(235, 560); g.lineTo(235 + Math.cos(a) * 70, 520 + Math.sin(a) * 30); g.stroke(); }
+  else if (f < 1) { roca(lerp(260, 740, f), lerp(540, 300, f) - Math.sin(f * Math.PI) * 60 + 20, 0.18, 1790); }
+  pop(T.cuts[i] + 0.4, 420, 80, () => cartel('DAVID VS. GOLIAT', 420, 80, C.marino, 52, 1791, '#FFF8EC'), 0.3);
+};
+V2.marmol = (i, r, t) => {
+  cielo('#E9E4DA', '#CFC6B8'); tierra(860, '#B8AC98'); const t1 = sentAt(i, 1, 0), p = ease((t - t1) / Math.max(1, winEnd(i) - t1 - 0.6));
+  if (t < t1) pop(T.cuts[i] + 0.8, 500, 120, () => cartel('25 AÑOS ABANDONADO', 500, 120, C.gris, 46, 1801, '#FFF8EC'), 0.3);
+  if (p > 0.15) fig(520, 860, 560, { cam: '#F2EEE6', pan: '#F2EEE6', pelo: '#E6E0D4', piel: '#EEEAE2' }, 9);
+  g.save(); g.globalAlpha = 1 - 0.95 * p; papel(rectP(380, 240, 280, 620), '#F4F1EA', 1800, { amt: 3 }); g.restore();
+  if (t > t1) { const k = Math.floor(t * 6); for (let j = 0; j < 5; j++) { const f = ((t * 3 + j * 0.2) % 1); g.fillStyle = '#FBFAF6'; g.fillRect(660 + f * 120 + rnd(k + j) * 30, 420 + j * 60 - f * 80, 10, 10); }
+    g.save(); g.translate(720, 470 + Math.sin(t * 12) * 12); g.rotate(-0.6); papel(rectP(-8, -90, 16, 110), '#8C8C88', 1802, { amt: 1, sb: 3 }); papel(rectP(-14, 20, 28, 70), '#7A5232', 1803, { amt: 1, sb: 3 }); g.restore();
+    fig(860, 860, 320, { cam: '#8A6A4A', pan: '#4A3A2A', pose: 'ask', mira: -1, fase: t * 6 }, 10); }
+};
+V2.diferencia = (i, r, t) => {
+  cielo('#EFE4CC', '#D9C59E'); roca(500, 520, 1.6, 1810);
+  ['TROPIEZO', 'ARMA', 'CASA', 'ASIENTO', 'JUGUETE', 'VICTORIA', 'ARTE'].forEach((w, k) => { const a = k / 7 * 6.28 - 1.57, x = 500 + Math.cos(a) * 340, y = 420 + Math.sin(a) * 300;
+    pop(T.cuts[i] + 0.2 + k * 0.25, x, y, () => cartel(w, x, y, C.blanco, 34, 1820 + k, '#222'), 0.25); });
+  const t1 = sentAt(i, 1, 0.5); if (t > t1) pop(t1, 500, 860, () => cartel('LA DIFERENCIA ERES TÚ', 500, 860, OR, 54, 1830, '#FFF8EC'), 0.35);
+};
+V2.camino = (i, r, t) => {
+  cielo('#C9D8E0', '#A9BFCB'); papel([[380, 860], [460, 200], [540, 200], [620, 860]], '#C9B98E', 1840, { amt: 4 }); tierra(860, '#8FB06A');
+  roca(500, 560, 1.4, 1841); const ws = ['CRISIS', 'FRACASO', 'PÉRDIDA', 'DEUDA'], k = Math.floor((t - T.cuts[i]) / 1.1) % 4; cartel(ws[k], 500, 500, C.rojo, 44, 1842 + k, '#FFF8EC');
+  fig(500, 900, 300, { ...PERS, triste: true }, 1);
+};
+V2.escalon = (i, r, t) => {
+  cielo('#F7DCA8', '#E8A86A'); papel(circP(840, 160, 90), '#FFE6A0', 1850, { amt: 2, sb: 0 }); tierra(860, C.kraft);
+  for (let k = 0; k < 5; k++) roca(200 + k * 150, 860 - k * 110, 1.0 + 0.1 * k, 1855 + k);
+  const t1 = sentAt(i, 0, 0.6), p = cl((t - t1) / Math.max(1, winEnd(i) - t1 - 0.5), 0, 1), st = Math.min(4, Math.floor(p * 5));
+  fig(200 + st * 150, 860 - st * 110 - 95 * (1 + 0.1 * st) + 10, 260, { ...PERS, pose: p >= 0.95 ? 'arms' : 'walk', fase: t * 6 }, 1);
 };
 
 function cierre(i, t) {
