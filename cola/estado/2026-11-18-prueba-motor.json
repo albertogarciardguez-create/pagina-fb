@@ -1,6 +1,0 @@
-{
- "redes": {},
- "error_video": "Command '['/usr/bin/python3', 'engine/build_diorama.py', 'diorama/2026-11-18-la-piedra-reel.json']' returned non-zero exit status 1.",
- "intentos_video": 1,
- "actualizado": "2026-11-18 13:35"
-}

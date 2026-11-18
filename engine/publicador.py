@@ -44,6 +44,20 @@ def epoch(hora):
     return datetime.strptime(hora, "%Y-%m-%d %H:%M").replace(tzinfo=TZ).timestamp()
 
 
+def hora_red(item, red):
+    """Cada red puede tener su propia hora: "horas": {"tiktok": "2026-11-20 19:00"}; si no, usa "hora"."""
+    return epoch(item.get("horas", {}).get(red, item["hora"]))
+
+
+def metricas_pendientes():
+    """Una vez al día, después de las 6 am, si hay secretos de Meta o YouTube."""
+    if not (env("SF_FB_TOKEN") or env("IR_FB_TOKEN") or env("YT_CLIENT_ID")) or datetime.now(TZ).hour < 6:
+        return False
+    p = os.path.join(ROOT, "cola", "metricas", "seguidores.json")
+    hoy = datetime.now(TZ).strftime("%Y-%m-%d")
+    return not (os.path.exists(p) and hoy in json.load(open(p, encoding="utf-8")))
+
+
 def estado_path(i):
     return os.path.join(ROOT, "cola", "estado", f"{i}.json")
 
@@ -71,9 +85,9 @@ def credenciales(red, pagina):
 
 def pendientes(item, est, ahora):
     """Redes que toca intentar en esta corrida."""
-    ts = epoch(item["hora"])
     out = []
     for red in item.get("redes", []):
+        ts = hora_red(item, red)
         r = est["redes"].get(red, {})
         if r.get("ok") or r.get("omitido") or r.get("intentos", 0) >= MAX_INTENTOS:
             continue
@@ -121,7 +135,13 @@ def asegurar_video(item, est):
         if SIMULAR:
             return "(simulado).mp4", item.get("texto") or historia.get("post", "")
         log("generando", item["historia"], "con", MOTORES[item.get("motor", "reel")])
-        subprocess.run([sys.executable, MOTORES[item.get("motor", "reel")], item["historia"]], cwd=ROOT, check=True)
+        r = subprocess.run([sys.executable, MOTORES[item.get("motor", "reel")], item["historia"]], cwd=ROOT,
+                           capture_output=True, text=True)
+        print(r.stdout[-3000:], r.stderr[-3000:], flush=True)
+        if r.returncode:
+            raise RuntimeError(f"el motor falló ({r.returncode}): " + (r.stderr or r.stdout)[-1200:])
+        if "AVISO" in r.stdout + r.stderr:
+            est["aviso"] = [l for l in (r.stdout + r.stderr).splitlines() if "AVISO" in l][-1][:300]
         gh("release", "view", "cola", check=False).returncode and gh(
             "release", "create", "cola", "--title", "Cola de publicación", "--notes",
             "Videos generados por el publicador automático (agentes/AGENTES.md).", check=False)
@@ -140,7 +160,7 @@ def asegurar_video(item, est):
 
 
 def publicar(red, item, mp4, texto, cred, ahora):
-    ts = epoch(item["hora"])
+    ts = hora_red(item, red)
     futuro = ts > ahora + 15 * 60
     if SIMULAR:
         return {"id": "simulado", "url": None, "programado": futuro and red in ("facebook", "youtube")}
@@ -187,7 +207,7 @@ def main():
         try:
             mp4, texto = asegurar_video(item, est)
         except Exception as e:
-            est["error_video"] = str(e)[:400]
+            est["error_video"] = str(e)[-1500:]
             est["intentos_video"] = est.get("intentos_video", 0) + 1
             if est["intentos_video"] >= MAX_INTENTOS:
                 est["estado"] = "error"
@@ -212,10 +232,18 @@ def main():
             est["estado"] = "completo"
         guardar_estado(item["id"], est)
         resumen.append((item, est))
+    medir = metricas_pendientes()
     if revisar:
-        print(f"trabajo={'si' if trabajo else 'no'}")
+        print(f"trabajo={'si' if trabajo or medir else 'no'}")
         print(f"generar={'si' if generar else 'no'}")
         return
+    if medir and not SIMULAR:
+        try:
+            import metricas
+            metricas.main()
+            log("indicadores actualizados: cola/metricas/RESUMEN.md")
+        except Exception as e:
+            log("AVISO: no pude actualizar indicadores:", str(e)[:300])
     if resumen and env("GITHUB_STEP_SUMMARY"):
         with open(env("GITHUB_STEP_SUMMARY"), "a", encoding="utf-8") as f:
             f.write("| Publicación | Hora | Red | Resultado |\n|---|---|---|---|\n")
