@@ -233,6 +233,11 @@ def main():
         guardar_estado(item["id"], est)
         resumen.append((item, est))
     medir = metricas_pendientes()
+    if revisar and env("GITHUB_STEP_SUMMARY"):
+        nombres = [f"{p}_{n}" for p in ("SF", "IR") for n in ("FB_PAGE_ID", "FB_TOKEN", "IG_ID", "YT_REFRESH", "TIKTOK_REFRESH")]
+        nombres += ["YT_CLIENT_ID", "YT_CLIENT_SECRET", "TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET"]
+        with open(env("GITHUB_STEP_SUMMARY"), "a", encoding="utf-8") as f:
+            f.write("### Secretos que ve el publicador\n\n" + " · ".join(f"{n} {'✅' if env(n) else '—'}" for n in nombres) + "\n\n")
     if revisar:
         print(f"trabajo={'si' if trabajo or medir else 'no'}")
         print(f"generar={'si' if generar else 'no'}")
