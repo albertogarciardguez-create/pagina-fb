@@ -1,0 +1,6 @@
+{
+ "redes": {},
+ "error_video": "el motor falló (1): Traceback (most recent call last):\n  File \"/home/runner/work/pagina-fb/pagina-fb/engine/build_diorama.py\", line 441, in <module>\n    main()\n    ~~~~^^\n  File \"/home/runner/work/pagina-fb/pagina-fb/engine/build_diorama.py\", line 414, in main\n    br, pg = abrir(pw, story, timing, imgs, clips(story, out))\n             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/pagina-fb/pagina-fb/engine/build_diorama.py\", line 343, in abrir\n    logo = data_url(os.path.join(ENGINE, \"assets\", \"impulso_logo.png\"))\n  File \"/home/runner/work/pagina-fb/pagina-fb/engine/build_diorama.py\", line 279, in data_url\n    from PIL import Image\nModuleNotFoundError: No module named 'PIL'\n",
+ "intentos_video": 1,
+ "actualizado": "2026-11-18 13:44"
+}
