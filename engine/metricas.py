@@ -178,6 +178,21 @@ def resumen(pubs, hist):
         for k, v in sorted(ps.items(), key=lambda x: -x[1].get("puntaje", 0))[:5]:
             c = lambda r: ", ".join(f"{a[:4]} {b}" for a, b in v["redes"].get(r, {}).items() if a != "puntaje") or "–"
             out.append(f"| {k} | {v.get('puntaje', 0)} | {c('facebook')} | {c('instagram')} | {c('youtube')} |")
+    # candidatas a promoción pagada (config/anuncios.json): mejores de los últimos 7 días con seguidores o compartidos
+    try:
+        cfg = json.load(open(os.path.join(ROOT, "config", "anuncios.json"), encoding="utf-8"))
+    except Exception:
+        cfg = {"activo": False, "por_semana": 2}
+    hace7 = (datetime.now(TZ).timestamp() - 7 * 86400)
+    out.append(f"\n## Candidatas a promoción ({'ACTIVO' if cfg.get('activo') else 'apagado: $0, solo sugerencia'})")
+    out += ["| Página | Publicación | Puntaje | Por qué |", "|---|---|---|---|"]
+    for pag in ("senorfutbol", "impulsoreal"):
+        ps = [(k, v) for k, v in pubs.items() if v["pagina"] == pag and
+              datetime.strptime(v["hora"], "%Y-%m-%d %H:%M").replace(tzinfo=TZ).timestamp() >= hace7]
+        for k, v in sorted(ps, key=lambda x: -x[1].get("puntaje", 0))[:cfg.get("por_semana", 2)]:
+            seg = sum(r.get("seguidores", 0) for r in v["redes"].values())
+            comp = sum(r.get("compartidos", 0) for r in v["redes"].values())
+            out.append(f"| {pag} | {k} | {v.get('puntaje', 0)} | {seg} seguidores nuevos, {comp} compartidos |")
     dias = sorted(hist)[-8:]
     if dias:
         out += ["\n## Seguidores (últimos días)", "| Día | SF FB | SF IG | IR FB | IR IG |", "|---|---|---|---|---|"]

@@ -106,7 +106,16 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 5. En la hoja, J = `En cola · <hora>` y K = `https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/<id>.mp4` (el video aparece ahí ~10 min después).
 6. Mensaje final (corto, listo para leer en el celular): por cada publicación, hora, tema, redes, link del video y sus textos por red listos para copiar (sobre todo el de TikTok); y una línea con el resultado de ayer. Nada de explicar el proceso.
 
-## Publicador (GitHub Actions)
+## 4 · Agente de anuncios (Meta Ads) — APAGADO hasta que Alberto genere ingresos
+
+Configuración en `config/anuncios.json` (`"activo": false`, tope $1,500 MXN/mes, objetivo **seguidores de la página**, modo **pausa**). Mientras esté apagado **no se crea ni se gasta nada**: el publicador solo lista cada día las 2 mejores publicaciones por página en la sección “Candidatas a promoción” de `cola/metricas/RESUMEN.md`, y el planeador las menciona en su mensaje (“si hubiera presupuesto, impulsaría…”).
+
+Cuando Alberto pida activarlo (`"activo": true`):
+1. Cada lunes el planeador agrega en la hoja, pestaña `Anuncios`, las candidatas (2 por semana) con presupuesto diario = tope mensual × reparto de la página ÷ 30 y duración `dias_por_anuncio`.
+2. Solo con Autorizado = Sí se crea la campaña en el Administrador de anuncios **en pausa** (objetivo Interacción → me gusta/seguidores de la página, usando la publicación existente, público de `publico`), y Alberto la activa.
+3. Nunca se pasa del tope mensual ni se promociona algo que no haya funcionado orgánicamente (puntaje del Top 5).
+
+
 
 - Se dispara con cada push que agrega `cola/*.json` y cada 20 min.
 - Genera el video una sola vez (lo guarda en el release `cola`), programa **Facebook** (Reels API) y **YouTube** (`publishAt`) en cuanto llega, y sube **Instagram** (Reels, subida reanudable) y **TikTok** (bandeja de borradores) a su hora.

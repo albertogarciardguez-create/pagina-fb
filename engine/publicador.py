@@ -195,8 +195,28 @@ def publicar(red, item, mp4, texto, cred, ahora):
     raise ValueError(red)
 
 
+def siguiente(ahora):
+    """Segundos hasta la próxima red que espera su hora (IG/TikTok); -1 si no hay ninguna."""
+    prox = None
+    for item in items():
+        est = cargar_estado(item["id"])
+        if est.get("estado") in ("completo", "caducado", "error"):
+            continue
+        for red in item.get("redes", []):
+            r = est["redes"].get(red, {})
+            if red not in ESPERAN_HORA or r.get("ok") or r.get("omitido") or r.get("intentos", 0) >= MAX_INTENTOS:
+                continue
+            t = hora_red(item, red) - ESPERAN_HORA[red] + 60
+            if t > ahora and (prox is None or t < prox):
+                prox = t
+    return -1 if prox is None else int(prox - ahora)
+
+
 def main():
     ahora = time.time()
+    if "--siguiente" in sys.argv:
+        print(f"espera={siguiente(ahora)}")
+        return
     revisar = "--revisar" in sys.argv
     trabajo = generar = False
     resumen = []

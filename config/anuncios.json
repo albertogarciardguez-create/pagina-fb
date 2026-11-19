@@ -1,0 +1,11 @@
+{
+  "_nota": "Agente de anuncios (Meta Ads). Mientras 'activo' sea false NO se crea ni se gasta nada: solo se listan las candidatas en cola/metricas/RESUMEN.md. Para activarlo, Alberto lo pide en el chat y se pone true.",
+  "activo": false,
+  "presupuesto_mensual_mxn": 1500,
+  "reparto": {"senorfutbol": 0.5, "impulsoreal": 0.5},
+  "objetivo": "seguidores",
+  "modo": "pausa",
+  "por_semana": 2,
+  "dias_por_anuncio": 5,
+  "publico": {"pais": "MX", "edad_sf": [18, 44], "edad_ir": [28, 50], "ciudad_prioridad": "Ciudad Juárez"}
+}

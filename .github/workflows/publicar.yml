@@ -7,20 +7,43 @@ on:
     branches: [main]
     paths: ["cola/*.json"]
   schedule:
-    - cron: "*/20 * * * *"   # revisa cada 20 min si ya toca publicar en Instagram/TikTok
+    - cron: "*/20 * * * *"   # respaldo: GitHub a veces retrasa horas estas corridas
   workflow_dispatch:
+    inputs:
+      esperar:
+        description: "Esperar a la siguiente hora de Instagram/TikTok antes de publicar (uso interno)"
+        default: "no"
 
 permissions:
   contents: write
-
-concurrency:
-  group: publicador
-  cancel-in-progress: false
+  actions: write
 
 jobs:
+  # Cadena de espera: si hay Instagram/TikTok pendientes para más tarde, una corrida duerme hasta su hora
+  # (máx. 5 h 45 min) y luego publica. Así no dependemos del cron de GitHub, que se retrasa.
+  espera:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    concurrency:
+      group: ${{ inputs.esperar == 'si' && 'espera-cadena' || format('espera-{0}', github.run_id) }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+        if: inputs.esperar == 'si'
+      - name: Dormir hasta la siguiente hora
+        if: inputs.esperar == 'si'
+        run: |
+          s=$(python3 engine/publicador.py --siguiente | cut -d= -f2)
+          echo "segundos hasta la siguiente publicación: $s"
+          if [ "$s" -gt 0 ]; then sleep $(( s < 20700 ? s : 20700 )); fi
+
   publicar:
+    needs: espera
     runs-on: ubuntu-latest
     timeout-minutes: 150
+    concurrency:
+      group: publicador
+      cancel-in-progress: false
     env:
       GH_TOKEN: ${{ github.token }}
       SF_FB_PAGE_ID: ${{ secrets.SF_FB_PAGE_ID }}
@@ -75,3 +98,10 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -qm "Estado de publicaciones [skip ci]"
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+
+      - name: Programar la siguiente espera
+        if: always()
+        run: |
+          git pull -q --rebase || true
+          s=$(python3 engine/publicador.py --siguiente | cut -d= -f2)
+          if [ "$s" -gt 0 ]; then gh workflow run publicar.yml -f esperar=si && echo "siguiente publicación en $s s"; fi
