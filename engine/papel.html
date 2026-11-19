@@ -662,6 +662,122 @@ V2.escalon = (i, r, t) => {
   fig(200 + st * 150, 860 - st * 110 - 95 * (1 + 0.1 * st) + 10, 260, { ...PERS, pose: p >= 0.95 ? 'arms' : 'walk', fase: t * 6 }, 1);
 };
 
+// ---- escenas V2 de "La regla de los 2 minutos" ----
+const YO = { cam: C.teal, pan: C.marino };
+function sillon(x, y) { papel(rectP(x - 170, y - 150, 340, 150), '#7A4A3A', 1900, { amt: 3 }); papel(rectP(x - 200, y - 200, 60, 200), '#6A3E30', 1901, { amt: 2 }); papel(rectP(x + 140, y - 200, 60, 200), '#6A3E30', 1902, { amt: 2 }); papel(rectP(x - 170, y - 260, 340, 120), '#6A3E30', 1903, { amt: 3 }); }
+V2.sillon = (i, r, t) => {
+  cielo('#E9E1D0', '#D3C4A6'); tierra(840, '#B08A5E'); sillon(300, 840); fig(290, 800, 300, { ...YO, pose: 'sit', triste: true }, 1);
+  const p = back((r - 0.4) / 0.5); if (p > 0) { g.save(); g.translate(640, 840); g.scale(p, p); papel([[-180, 0], [0, -560], [180, 0]], '#8C8C88', 1904, { amt: 5 }); papel([[-60, -380], [0, -560], [60, -380]], C.blanco, 1905, { amt: 3 }); g.restore(); }
+  const t1 = sentAt(i, 1, 0); if (t > t1) pop(t1, 600, 200, () => cartel('PRIMER PASO', 600, 200, OR, 50, 1906, '#FFF8EC'), 0.3);
+};
+V2.metas = (i, r, t) => {
+  cielo('#F3E9D2', '#E2CFA8'); tierra(860, C.kraft); fig(170, 860, 300, { ...YO, pose: 'ask', fase: t * 3 }, 1);
+  [['GYM DIARIO', C.teal], ['30 LIBROS', C.coral], ['CORRER 10 KM', C.marino]].forEach(([w, c], k) => pop(T.cuts[i] + 0.4 + k * 0.7, 560, 240 + k * 150, () => cartel(w, 560, 240 + k * 150, c, 56 + k * 6, 1910 + k, '#FFF8EC'), 0.3));
+  const t1 = sentAt(i, 1, 0); if (t > t1) { pop(t1, 560, 720, () => cartel('NI EMPIEZAS', 560, 720, C.rojo, 64, 1914, '#FFF8EC'), 0.3); }
+};
+V2.cronometro = (i, r, t) => {
+  cielo('#2A2F44', '#454B66'); tierra(860, '#3A3F52'); const R = 230, cx = 500, cy = 430;
+  papel(circP(cx, cy, R + 30), '#D9D6CC', 1920, { amt: 3 }); papel(rectP(cx - 40, cy - R - 90, 80, 70), '#D9D6CC', 1921, { amt: 2 }); papel(circP(cx, cy, R), C.blanco, 1922, { amt: 2, sb: 4 });
+  const p = cl((t - sentAt(i, 1, 0)) / 3, 0, 1); g.save(); g.fillStyle = OR; g.globalAlpha = 0.85; g.beginPath(); g.moveTo(cx, cy); g.arc(cx, cy, R - 12, -1.5708, -1.5708 + 6.2832 * p); g.closePath(); g.fill(); g.restore();
+  const s = Math.round(120 * (1 - p)); texto(`${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`, cx, cy + 6, 120, '#1E1E1E');
+  cartel('REGLA DE LOS 2 MINUTOS', 500, 800, OR, 50, 1923, '#FFF8EC');
+};
+function librito(x, y, s, abierto, sd) { if (abierto) { papel([[x - 160 * s, y - 100 * s], [x, y - 80 * s], [x, y + 100 * s], [x - 160 * s, y + 80 * s]], C.blanco, sd, { amt: 2 }); papel([[x, y - 80 * s], [x + 160 * s, y - 100 * s], [x + 160 * s, y + 80 * s], [x, y + 100 * s]], '#F6F0E2', sd + 1, { amt: 2 });
+  for (let k = 0; k < 5; k++) { g.fillStyle = 'rgba(40,40,40,.35)'; g.fillRect(x - 135 * s, y - 55 * s + k * 28 * s, 110 * s, 6 * s); g.fillRect(x + 25 * s, y - 55 * s + k * 28 * s, 110 * s, 6 * s); } } else papel(rectP(x - 50 * s, y - 70 * s, 100 * s, 140 * s), [C.coral, C.teal, C.mostaza, C.marino, C.verde][sd % 5], sd, { amt: 2 }); }
+V2.pagina = (i, r, t) => {
+  cielo('#FBEBD0', '#F0CFA0'); tierra(860, C.kraft); const t1 = sentAt(i, 1, 0.3);
+  if (t < t1) { for (let k = 0; k < 30; k++) { const x = 130 + (k % 10) * 68, y = 330 + Math.floor(k / 10) * 160; pop(T.cuts[i] + 0.2 + k * 0.04, x, y, () => librito(x, y, 0.6, false, 1930 + k), 0.25); } }
+  else { pop(t1, 500, 420, () => librito(500, 420, 1.6, true, 1970), 0.35); pop(t1 + 0.5, 500, 720, () => cartel('1 PÁGINA', 500, 720, OR, 72, 1972, '#FFF8EC'), 0.3); }
+};
+V2.tenis = (i, r, t) => {
+  cielo('#C9D8E0', '#A9BFCB'); tierra(860, '#8FB06A'); papel(rectP(560, 320, 220, 540), '#7A5232', 1980, { amt: 3 }); papel(rectP(585, 345, 170, 490), '#9A6A42', 1981, { amt: 2, sb: 3 }); papel(circP(730, 600, 14), C.mostaza, 1982, { amt: 1, sb: 2 });
+  const p = cl((r - 0.5) / Math.max(1, D(i) - 1), 0, 1); fig(lerp(200, 520, p), 860, 330, { cam: C.coral, pan: '#3A3F4A', pose: p > 0 && p < 1 ? 'walk' : 'stand', fase: t * 7 }, 2);
+  pop(T.cuts[i] + 0.3, 300, 250, () => cartel('ROPA ✓', 300, 250, C.blanco, 52, 1983, C.verde), 0.3); if (p > 0.6) pop(T.cuts[i] + 0.5 + 0.6 * Math.max(1, D(i) - 1), 300, 360, () => cartel('PUERTA ✓', 300, 360, C.blanco, 52, 1984, C.verde), 0.3);
+};
+V2.aparecer = (i, r, t) => {
+  cielo('#F2DDB0', '#E3B97A'); tierra(860, C.kraft); const n = Math.min(7, Math.floor((r - 0.2) / Math.max(0.3, (D(i) - 0.5) / 7)) + 1);
+  for (let k = 0; k < 7; k++) { const x = 140 + k * 120; papel(rectP(x - 50, 260, 100, 110), C.blanco, 1990 + k, { amt: 2 }); texto(['L', 'M', 'M', 'J', 'V', 'S', 'D'][k], x, 290, 30, '#555');
+    if (k < n) { g.strokeStyle = OR; g.lineWidth = 9; g.beginPath(); g.moveTo(x - 25, 330); g.lineTo(x - 5, 350); g.lineTo(x + 28, 305); g.stroke(); } }
+  fig(500, 860, 340, { ...YO, pose: n >= 7 ? 'arms' : 'stand' }, 1); const t1 = sentAt(i, 1, 0); if (t > t1) pop(t1, 500, 470, () => cartel('ALGUIEN QUE APARECE', 500, 470, C.marino, 50, 1999, '#FFF8EC'), 0.3);
+};
+V2.crece = (i, r, t) => {
+  cielo('#BFE0EE', '#E9F1E4'); tierra(860, '#8FB06A'); const xs = [230, 500, 770], ws = ['2 MIN', '5 MIN', 'HÁBITO'];
+  xs.forEach((x, k) => { const t0 = sentAt(i, Math.min(k, 2), 0); if (t > t0) { pop(t0, x, 800, () => { const h = [90, 220, 420][k]; papel(rectP(x - 8, 860 - h, 16, h), C.verde, 2000 + k, { amt: 1.5, sb: 3 }); for (let j = 0; j <= k; j++) papel(ellP(x + (j % 2 ? 40 : -40), 860 - h * (0.4 + 0.25 * j), 46, 22, 14), C.verde, 2005 + k * 3 + j, { amt: 1.5, sb: 3 }); if (k === 2) papel(circP(x, 860 - h, 50), C.coral, 2015, { amt: 2 }); }, 0.35);
+    cartel(ws[k], x, 230 + k * 40, k === 2 ? OR : C.blanco, 46, 2016 + k, k === 2 ? '#FFF8EC' : '#222'); } });
+};
+V2.lista = (i, r, t) => {
+  cielo('#FBEBD0', '#F0CFA0'); tierra(860, C.kraft); g.save(); g.translate(500, 420); g.rotate(-0.03); papel(rectP(-260, -280, 520, 560), C.blanco, 2020, { amt: 3 }); papel(rectP(-260, -280, 520, 100), C.teal, 2021, { amt: 2, sb: 3 }); texto('HOY · 2 MIN', 0, -230, 50, '#FFF8EC');
+  ['LEER 1 PÁGINA', 'PONERME LOS TENIS', 'ESCRIBIR 1 LÍNEA', 'GUARDAR $10'].forEach((w, k) => { const y = -120 + k * 95; papel(rectP(-220, y - 30, 60, 60), '#EFE6D2', 2022 + k, { amt: 1, sb: 2 }); texto(w, 30, y + 2, 34, '#333');
+    if (t > T.cuts[i] + 0.6 + k * 0.6) { g.strokeStyle = OR; g.lineWidth = 10; g.beginPath(); g.moveTo(-208, y); g.lineTo(-192, y + 18); g.lineTo(-165, y - 22); g.stroke(); } });
+  g.restore(); if (t > sentAt(i, 0, 0.6)) pop(sentAt(i, 0, 0.6), 500, 790, () => cartel('EMPIEZA HOY', 500, 790, OR, 66, 2030, '#FFF8EC'), 0.3);
+};
+
+// ---- escenas V2 de "José y sus hermanos" ----
+const JOSE = { cam: C.mostaza, pan: '#7A5A3A' }, HERM = [{ cam: '#8A6A4A', pan: '#4A3A2A' }, { cam: '#6B7A52', pan: '#3A3A34' }, { cam: '#7A3A3A', pan: '#3A2A2A' }, { cam: '#5A5A52', pan: '#3A3A34' }];
+function tunica(x, y, h, sd) { const u = h / 10, top = y - 8.2 * u, cols = [C.coral, C.mostaza, C.teal, C.rojo, C.verde]; for (let k = 0; k < 5; k++) papel(rectP(x - 1.55 * u, top + k * 0.78 * u, 3.1 * u, 0.8 * u), cols[k], (sd || 2100) + k, { amt: 1, sb: 2 }); }
+function jose(x, y, h, o, sd) { fig(x, y, h, { ...JOSE, ...(o || {}) }, sd || 21); tunica(x + (o && o.triste ? 0 : 0), y, h, 2100 + (sd || 21)); }
+function hermanos(x0, y, h, dx, o) { HERM.forEach((c, k) => fig(x0 + k * dx, y, h, { ...c, ...(o || {}) }, 30 + k)); }
+function piramide(x, y, s, sd) { papel([[x - 200 * s, y], [x, y - 220 * s], [x + 200 * s, y]], '#D8B36A', sd, { amt: 3 }); papel([[x, y - 220 * s], [x + 200 * s, y], [x + 60 * s, y]], '#C29A52', sd + 1, { amt: 2, sb: 2 }); }
+V2.tunica = (i, r, t) => {
+  cielo('#F6C38B', '#E09A5E'); tierra(840, '#B08A5E'); fig(250, 840, 300, { cam: '#E6E0D4', pan: '#8A7A6A', canas: true, pose: 'offer' }, 20); jose(470, 840, 300, {}, 21);
+  const t1 = sentAt(i, 2, 0); if (t > t1) { const p = ease((t - t1) / 0.6); g.save(); g.globalAlpha = p; hermanos(640, 840, 290, 90, { triste: true }); g.restore(); pop(t1 + 0.4, 790, 300, () => cartel('ENVIDIA', 790, 300, C.rojo, 52, 2110, '#FFF8EC'), 0.3); }
+  pop(T.cuts[i] + 0.4, 360, 200, () => cartel('17 AÑOS', 360, 200, C.blanco, 52, 2111, '#222'), 0.3);
+};
+V2.pozo = (i, r, t) => {
+  cielo('#E8D3A4', '#C9A16A'); tierra(760, '#B08A5E'); papel(ellP(500, 800, 230, 70), '#3A2A1E', 2120, { amt: 3 }); papel(ellP(500, 790, 190, 50), '#120C08', 2121, { amt: 2, sb: 0 });
+  const p = ease((r - 0.6) / 1.2); g.save(); g.beginPath(); g.rect(-500, -500, 2000, 1290 + 0 * p); g.clip(); jose(500, lerp(760, 980, p), 260, { triste: true }, 22); g.restore();
+  papel(ellP(500, 830, 240, 40), '#B08A5E', 2122, { amt: 3 }); hermanos(90, 760, 280, 80, {});
+  const t1 = sentAt(i, 1, 0); if (t > t1) pop(t1, 500, 260, () => cartel('AÑOS DESPUÉS…', 500, 260, C.marino, 54, 2123, '#FFF8EC'), 0.3);
+};
+V2.venta = (i, r, t) => {
+  cielo('#F2DDB0', '#E3B97A'); tierra(840, '#C9A16A'); const p = cl((r - 0.3) / Math.max(1, D(i) - 0.5), 0, 1), x = lerp(150, 760, p);
+  for (let k = 0; k < 2; k++) { const cx = x + k * 210; g.save(); g.translate(cx, 840); papel(ellP(0, -190, 110, 60), '#C29A52', 2130 + k, { amt: 3 }); papel(ellP(0, -270, 30, 50), '#C29A52', 2132 + k, { amt: 2 }); papel(ellP(70, -330, 45, 28), '#C29A52', 2134 + k, { amt: 2 });
+    for (let j = 0; j < 4; j++) papel(rectP(-80 + j * 45, -150, 18, 150 + Math.sin(t * 6 + j + k) * 8), '#B08A5E', 2136 + k * 4 + j, { amt: 1, sb: 2 }); g.restore(); }
+  jose(x - 140, 840, 260, { pose: 'walk', fase: t * 6, triste: true }, 23); g.strokeStyle = '#8A5A2B'; g.lineWidth = 6; g.beginPath(); g.moveTo(x - 110, 700); g.lineTo(x - 30, 680); g.stroke();
+  pop(T.cuts[i] + 0.4, 450, 180, () => cartel('20 PIEZAS DE PLATA', 450, 180, C.mostaza, 50, 2144, '#222'), 0.3); pop(sentAt(i, 0, 0.7), 450, 300, () => cartel('RUMBO A EGIPTO', 450, 300, C.marino, 50, 2145, '#FFF8EC'), 0.3);
+};
+V2.carcel = (i, r, t) => {
+  cielo('#3A3040', '#5A4458'); tierra(840, '#4A4048'); papel(rectP(200, 260, 600, 580), '#5A5058', 2150, { amt: 3 }); jose(500, 840, 300, { pose: 'sit', triste: true }, 24);
+  for (let k = 0; k < 7; k++) papel(rectP(230 + k * 85, 240, 22, 620), '#2A2430', 2151 + k, { amt: 1, sb: 4 });
+  pop(sentAt(i, 0, 0.3), 500, 170, () => cartel('ESCLAVO', 500, 170, C.gris, 50, 2160, '#FFF8EC'), 0.3); const t1 = sentAt(i, 1, 0.2); if (t > t1) pop(t1, 500, 920, () => cartel('ACUSADO FALSAMENTE', 500, 920, C.rojo, 48, 2161, '#FFF8EC'), 0.3);
+};
+V2.espigas = (i, r, t) => {
+  cielo('#2A2F44', '#454B66'); estrellas(60, t); tierra(860, '#3A3F52'); const t1 = sentAt(i, 1, 0.3);
+  for (let k = 0; k < 7; k++) { const x = 120 + k * 60; if (t > T.cuts[i] + 0.3 + k * 0.12) maiz(x, 860, 260, true, k, t); }
+  for (let k = 0; k < 7; k++) { const x = 560 + k * 60; if (t > t1 + k * 0.12) maiz(x, 860, 200, false, k + 7, t); }
+  pop(T.cuts[i] + 0.4, 300, 300, () => cartel('7 AÑOS DE ABUNDANCIA', 300, 300, C.verde, 38, 2170, '#FFF8EC'), 0.3); if (t > t1) pop(t1, 720, 400, () => cartel('7 DE HAMBRE', 720, 400, C.rojo, 44, 2171, '#FFF8EC'), 0.3);
+};
+V2.granero = (i, r, t) => {
+  cielo('#F6C38B', '#E09A5E'); piramide(700, 840, 1.0, 2180); tierra(840, '#D8B36A');
+  const n = Math.floor(cl((r - 0.3) / Math.max(1, D(i) - 0.6), 0, 1) * 6); for (let k = 0; k < 6; k++) { const x = 120 + k * 95; papel(rectP(x - 40, 560, 80, 280), '#B08A5E', 2185 + k, { amt: 2 }); if (k < n) papel(rectP(x - 32, 640, 64, 192), C.mostaza, 2192 + k, { amt: 1, sb: 2 }); papel([[x - 48, 565], [x, 520], [x + 48, 565]], '#8A5A2B', 2199 + k, { amt: 1, sb: 2 }); }
+  jose(700, 840, 320, { pose: 'arms' }, 25); pop(T.cuts[i] + 0.4, 430, 220, () => cartel('GOBERNADOR DE EGIPTO · 30 AÑOS', 430, 220, C.marino, 40, 2206, '#FFF8EC'), 0.3);
+};
+V2.inclinan = (i, r, t) => {
+  cielo('#F2DDB0', '#E3B97A'); tierra(840, '#D8B36A'); papel(rectP(600, 520, 200, 320), '#C29A52', 2210, { amt: 3 }); jose(700, 600, 260, { pose: 'sit' }, 26);
+  const t1 = sentAt(i, 1, 0.3), b = ease((t - sentAt(i, 2, 0)) / 0.6); HERM.forEach((c, k) => { g.save(); g.translate(110 + k * 120, 840); g.rotate(-0.7 * b); fig(0, 0, 280, { ...c, triste: true }, 30 + k); g.restore(); });
+  if (t > t1) pop(t1, 330, 250, () => cartel('¿SUS HERMANOS?', 330, 250, C.rojo, 52, 2211, '#FFF8EC'), 0.3);
+};
+V2.poder = (i, r, t) => {
+  cielo('#4A2E2A', '#7A4A3A'); tierra(840, '#5A3A2A'); jose(500, 840, 380, {}, 27); HERM.forEach((c, k) => fig([130, 260, 690, 800][k], 860, 200, { ...c, triste: true }, 30 + k));
+  const pul = 1 + 0.04 * Math.sin(t * 8); g.save(); g.translate(500, 300); g.scale(pul, pul); cartel('¿VENGANZA?', 0, 0, C.rojo, 76, 2220, '#FFF8EC'); g.restore();
+};
+V2.perdon = (i, r, t) => {
+  cielo('#FBEBD0', '#F0CFA0'); const gl = g.createRadialGradient(500, 420, 20, 500, 420, 600); gl.addColorStop(0, 'rgba(255,220,140,.6)'); gl.addColorStop(1, 'rgba(255,220,140,0)'); g.fillStyle = gl; g.fillRect(-500, -500, 2000, 2000); tierra(840, C.kraft);
+  const p = ease((r - 0.5) / 1.2); hermanos(lerp(140, 560, p), 845, 290, 85, {}); jose(lerp(300, 470, p), 840, 320, { pose: 'arms' }, 28);
+  const t1 = sentAt(i, 0, 0.2); if (t > t1) for (let k = 0; k < 3; k++) { const f = ((t - t1) * 0.8 + k * 0.33) % 1; g.fillStyle = `rgba(120,180,230,${1 - f})`; g.beginPath(); g.ellipse(lerp(300, 470, p) + 20, 540 + f * 60 + k * 4, 6, 10, 0, 0, 7); g.fill(); }
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 280, () => corazon(500, 280, 6 + 0.3 * Math.sin(t * 5), C.coral, 2230), 0.4);
+};
+V2.genesis = (i, r, t) => {
+  cielo('#EFE4CC', '#D9C59E'); g.save(); g.translate(500, 450); g.rotate(-0.03); papel(rectP(-380, -300, 760, 560), '#F6F0E2', 2240, { amt: 3 });
+  const L = ['"Ustedes pensaron', 'hacerme mal,', 'pero Dios lo', 'encaminó a bien."']; L.forEach((l, k) => { if (t > T.cuts[i] + 0.3 + k * 0.6) texto(l, 0, -190 + k * 95, 58, k === 3 ? OR : '#222'); }); g.restore();
+  pop(T.cuts[i] + 2.4, 500, 830, () => cartel('GÉNESIS 50:20', 500, 830, C.marino, 50, 2241, '#FFF8EC'), 0.3);
+};
+V2.leccion2 = (i, r, t) => {
+  cielo('#F7DCA8', '#E8A86A'); papel(circP(700, 360, 90), '#FFE6A0', 2250, { amt: 2, sb: 0 }); tierra(840, C.kraft); jose(500, 840, 340, {}, 29);
+  pop(sentAt(i, 0, 0.1), 500, 160, () => cartel('LO QUE TE HICIERON', 500, 160, C.gris, 46, 2251, '#FFF8EC'), 0.3); if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 920, () => cartel('NO TE DEFINE', 500, 920, OR, 64, 2252, '#FFF8EC'), 0.3);
+};
+
+
 function cierre(i, t) {
   const sc = S.scenes[i], r = t - T.cuts[i], L = HZ ? { cx: 960, cy: 560, sz: 780, tx: 964, y1: 950, y2: 1025, q1: 90, q2: 160 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610, q1: 300, q2: 380 };
   g.fillStyle = logoBg; g.fillRect(0, 0, W, H);

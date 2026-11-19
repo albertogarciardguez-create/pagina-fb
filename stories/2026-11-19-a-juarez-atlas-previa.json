@@ -1,0 +1,201 @@
+{
+ "id": "2026-11-19-a-juarez-atlas-previa",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "18",
+   "speed": 1.08,
+   "say": "¡Último lugar y ya eliminado! Pero mañana, Bravos le puede complicar el cierre a Atlas.",
+   "captions": [
+    "¡<em>Último lugar</em>",
+    "y ya eliminado!",
+    "Pero mañana,",
+    "Bravos le puede",
+    "<em>complicar</em> el cierre",
+    "a <em>Atlas</em>."
+   ],
+   "items": [
+    {
+     "n": "18°",
+     "label": "LUGAR",
+     "color": "red"
+    },
+    {
+     "n": "11",
+     "label": "PUNTOS",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "bg": "27",
+   "say": "Atlas llega quinto, con veintisiete puntos… ¡empatado con Toluca, que es cuarto!",
+   "captions": [
+    "Atlas llega <em>quinto</em>,",
+    "con <em>27</em> puntos…",
+    "¡empatado con <em>Toluca</em>,",
+    "que es cuarto!"
+   ],
+   "title": "TABLA GENERAL",
+   "sub": "J16",
+   "rows": [
+    {
+     "pos": 3,
+     "team": "CHIVAS",
+     "pts": 30
+    },
+    {
+     "pos": 4,
+     "team": "TOLUCA",
+     "pts": 27
+    },
+    {
+     "pos": 5,
+     "team": "ATLAS",
+     "pts": 27,
+     "hl": true
+    },
+    {
+     "pos": 6,
+     "team": "SANTOS",
+     "pts": 25
+    },
+    {
+     "pos": 7,
+     "team": "MONTERREY",
+     "pts": 24
+    },
+    {
+     "pos": 8,
+     "team": "LEÓN",
+     "pts": 23
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "TOP 4",
+   "say": "Atlas ya está en la Liguilla. Lo que se juega es meterse entre los cuatro primeros.",
+   "captions": [
+    "Atlas ya está",
+    "en la <em>Liguilla</em>.",
+    "Lo que se juega",
+    "es meterse entre",
+    "los <em>4 primeros</em>."
+   ],
+   "tag": "LO QUE SE JUEGA ATLAS",
+   "title": "ENTRAR AL\nTOP 4",
+   "sub": "Ya está en la Liguilla"
+  },
+  {
+   "type": "stats",
+   "bg": "+7",
+   "gap": 0.35,
+   "say": "Y ojo: en sus primeros once partidos, Bravos sumó cuatro puntos. ¡En los últimos cinco, siete!",
+   "captions": [
+    "Y ojo:",
+    "en sus primeros",
+    "<em>11</em> partidos,",
+    "Bravos sumó",
+    "<em>4</em> puntos.",
+    "¡En los últimos <em>5</em>,",
+    "<em>7</em>!"
+   ],
+   "items": [
+    {
+     "n": "4",
+     "label": "PTS EN 11 PJ",
+     "color": "red"
+    },
+    {
+     "n": "7",
+     "label": "PTS EN LOS ÚLTIMOS 5",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "bg": "VS",
+   "say": "En el papel no hay comparación: Atlas ganó ocho partidos; Bravos, solo tres.",
+   "captions": [
+    "En el papel",
+    "no hay comparación:",
+    "Atlas ganó <em>8</em>;",
+    "Bravos, solo <em>3</em>."
+   ],
+   "title": "CARA A CARA",
+   "left": "JUÁREZ",
+   "right": "ATLAS",
+   "rows": [
+    {
+     "label": "PUNTOS",
+     "l": "11",
+     "r": "27"
+    },
+    {
+     "label": "GANADOS",
+     "l": "3",
+     "r": "8"
+    },
+    {
+     "label": "PERDIDOS",
+     "l": "11",
+     "r": "5"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "J17",
+   "say": "Mañana viernes, ocho de la noche, hora de Juárez, en el Olímpico.",
+   "captions": [
+    "Mañana <em>viernes</em>,",
+    "<em>8</em> de la noche,",
+    "hora de Juárez,",
+    "en el <em>Olímpico</em>."
+   ],
+   "tag": "JORNADA 17 · ÚLTIMA FECHA",
+   "title": "VIERNES\n8:00 PM",
+   "sub": "Hora de Juárez · Estadio Olímpico Benito Juárez"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Juarense: ¿Bravos le pega a Atlas para despedirse… o gana Atlas? ¡Te leo en los comentarios!",
+   "captions": [
+    "Juarense:",
+    "¿Bravos <em>le pega</em>",
+    "a Atlas",
+    "para despedirse…",
+    "o <em>gana Atlas</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "JUARENSE, DIME:",
+   "q": "¿QUIÉN\nGANA?",
+   "opts": [
+    "BRAVOS LE PEGA",
+    "GANA ATLAS"
+   ]
+  }
+ ],
+ "post": "Último lugar y ya eliminado… pero Bravos le puede complicar el cierre a Atlas. Mañana viernes, 8:00 pm (hora de Juárez), en el Olímpico Benito Juárez. ¿Bravos le pega a Atlas o se lleva los tres puntos el visitante? 👇",
+ "hashtags": [
+  "#FCJuárez",
+  "#Bravos",
+  "#Atlas",
+  "#LigaMX",
+  "#Apertura2026"
+ ],
+ "sources": [
+  "https://www.tvazteca.com/aztecadeportes/asi-va-la-tabla-general-del-apertura-2026-antes-de-la-ultima-jornada-de-la-liga-bbva-mx/",
+  "https://nnc.mx/articulo/fc-juarez-vs-atlas-en-vivo-horario-alineaciones-resultado",
+  "https://futboltotal.futbol/partido/fc-juarez-vs-atlas-liga-mx-2026-11-21",
+  "https://www.infobae.com/mexico/deportes/2026/11/18/liga-mx-horarios-transmisiones-y-que-partidos-se-podran-ver-de-manera-gratuita/"
+ ]
+}

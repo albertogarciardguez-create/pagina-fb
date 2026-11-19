@@ -1,0 +1,611 @@
+{
+ "id": "2026-11-19-b-pizarra-pared",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "1-2",
+   "say": "¿Tu equipo no pasa de media cancha? Le falta un solo pase: ¡la pared!",
+   "captions": [
+    "¿Tu equipo",
+    "no pasa",
+    "de <em>media cancha</em>?",
+    "Le falta",
+    "un solo pase:",
+    "¡la <em>pared</em>!"
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "LA PARED\n(1-2)",
+   "sub": "El pase que rompe una línea"
+  },
+  {
+   "type": "board",
+   "bg": "X",
+   "title": "TE SALEN DE FRENTE",
+   "say": "Llevas el balón y un rival te sale de frente. Si intentas driblarlo, la pierdes.",
+   "captions": [
+    "Llevas el balón",
+    "y un rival",
+    "te sale <em>de frente</em>.",
+    "Si intentas driblarlo,",
+    "la <em>pierdes</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 30,
+     "y": 80,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 70,
+     "y": 80,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 22,
+     "y": 56
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 64
+    },
+    {
+     "id": "MD",
+     "x": 80,
+     "y": 54
+    },
+    {
+     "id": "DC",
+     "x": 58,
+     "y": 26,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 36,
+     "y": 18
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 28,
+     "y": 42
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 52
+    },
+    {
+     "id": "R6",
+     "x": 74,
+     "y": 40
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.3,
+     "pos": {
+      "R5": [
+       50,
+       56
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R5",
+       "to": [
+        50,
+        56
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 34,
+      "y": 46,
+      "w": 32,
+      "h": 26,
+      "label": "CERRADO",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "1",
+   "title": "PASA… Y ARRANCA",
+   "inherit": true,
+   "say": "Mejor tócala al compañero de al lado. Y en cuanto sueltes el pase, ¡arranca por la espalda del rival!",
+   "captions": [
+    "Mejor tócala",
+    "al <em>compañero</em>",
+    "de al lado.",
+    "Y en cuanto",
+    "sueltes el pase,",
+    "¡<em>arranca</em> por la espalda",
+    "del rival!"
+   ],
+   "steps": [
+    {
+     "at": 0.12,
+     "pos": {
+      "MI": [
+       30,
+       58
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        30,
+        58
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.32,
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MI",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "pos": {
+      "MC": [
+       58,
+       42
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        58,
+        42
+       ],
+       "kind": "run",
+       "curve": -0.25
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "2",
+   "title": "DE PRIMERA",
+   "inherit": true,
+   "say": "Tu compañero te la devuelve de primera, al espacio. El rival se quedó viendo el balón… ¡y ya lo pasaste!",
+   "captions": [
+    "Tu compañero",
+    "te la devuelve",
+    "<em>de primera</em>,",
+    "al espacio.",
+    "El rival se quedó",
+    "viendo el balón…",
+    "¡y ya lo <em>pasaste</em>!"
+   ],
+   "steps": [
+    {
+     "at": 0.2,
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "at": 0.55,
+     "pos": {
+      "MC": [
+       42,
+       34
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        42,
+        34
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.78,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 30,
+      "y": 18,
+      "w": 40,
+      "h": 24,
+      "label": "VENTAJA",
+      "color": "green"
+     }
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "3",
+   "say": "Tres claves: pase firme al pie, arranque inmediato… y devolución a un toque.",
+   "captions": [
+    "<em>3</em> claves:",
+    "<em>pase firme</em> al pie,",
+    "<em>arranque</em> inmediato…",
+    "y devolución",
+    "a <em>un toque</em>."
+   ],
+   "items": [
+    {
+     "n": "1",
+     "label": "PASE FIRME"
+    },
+    {
+     "n": "2",
+     "label": "ARRANCA YA",
+     "color": "green"
+    },
+    {
+     "n": "3",
+     "label": "UN TOQUE"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "✗",
+   "title": "EL ERROR COMÚN",
+   "say": "El error más común: das el pase y te quedas parado. Eso no es pared… es regalarle tiempo al rival.",
+   "captions": [
+    "El error",
+    "más común:",
+    "das el pase",
+    "y te quedas <em>parado</em>.",
+    "Eso no es pared…",
+    "es <em>regalarle tiempo</em>",
+    "al rival."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "x": 30,
+     "y": 80,
+     "label": "DF"
+    },
+    {
+     "id": "DD",
+     "x": 70,
+     "y": 80,
+     "label": "DF"
+    },
+    {
+     "id": "MI",
+     "x": 30,
+     "y": 58
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 64
+    },
+    {
+     "id": "MD",
+     "x": 80,
+     "y": 54
+    },
+    {
+     "id": "DC",
+     "x": 58,
+     "y": 26,
+     "label": "9"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 36,
+     "y": 18
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 28,
+     "y": 42
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 56
+    },
+    {
+     "id": "R6",
+     "x": 74,
+     "y": 40
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.2,
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MI",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.45,
+     "pos": {
+      "R4": [
+       24,
+       50
+      ],
+      "R5": [
+       38,
+       58
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R4",
+       "to": [
+        24,
+        50
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R5",
+       "to": [
+        38,
+        58
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 14,
+      "y": 44,
+      "w": 32,
+      "h": 24,
+      "label": "ENCERRADO",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "10",
+   "title": "ENTRÉNALO: 2 VS 1",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: dos atacantes contra un defensor, en un cuadro de diez por diez. Solo vale pasar la línea con pared.",
+   "captions": [
+    "Entrénalo así:",
+    "<em>2 atacantes</em>",
+    "contra <em>1</em> defensor,",
+    "en un cuadro",
+    "de <em>10 x 10</em>.",
+    "Solo vale",
+    "pasar la línea",
+    "con <em>pared</em>."
+   ],
+   "team": [
+    {
+     "id": "A",
+     "x": 44,
+     "y": 72,
+     "label": "A"
+    },
+    {
+     "id": "B",
+     "x": 66,
+     "y": 62,
+     "label": "B"
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 46,
+     "y": 52
+    }
+   ],
+   "ball": "A",
+   "steps": [
+    {
+     "at": 0.12,
+     "zone": {
+      "x": 30,
+      "y": 36,
+      "w": 44,
+      "h": 44,
+      "label": "",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.35,
+     "ball": "B",
+     "pos": {
+      "R1": [
+       46,
+       60
+      ]
+     },
+     "arrows": [
+      {
+       "from": "A",
+       "to": "B",
+       "kind": "pass"
+      },
+      {
+       "from": "R1",
+       "to": [
+        46,
+        60
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.52,
+     "pos": {
+      "A": [
+       50,
+       44
+      ]
+     },
+     "arrows": [
+      {
+       "from": "A",
+       "to": [
+        50,
+        44
+       ],
+       "kind": "run",
+       "curve": -0.2
+      }
+     ]
+    },
+    {
+     "at": 0.72,
+     "ball": "A",
+     "arrows": [
+      {
+       "from": "B",
+       "to": "A",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Esta y más jugadas vienen en el Libro de Jugadas de Fútbol siete de Señor Fútbol. ¡Muy pronto!",
+   "captions": [
+    "Esta y más jugadas",
+    "vienen en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "¡Muy pronto!"
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento, y mándaselo a tu equipo. Y dime: ¿ustedes tiran paredes… o puro pelotazo? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento,",
+    "y mándaselo",
+    "a tu equipo.",
+    "Y dime:",
+    "¿ustedes tiran <em>paredes</em>…",
+    "o puro <em>pelotazo</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "ENTRENADOR, SÉ HONESTO:",
+   "q": "¿PAREDES O\nPELOTAZO?",
+   "opts": [
+    "PAREDES",
+    "PURO PELOTAZO"
+   ]
+  }
+ ],
+ "post": "¿Tu equipo no pasa de media cancha? Le falta un solo pase: la pared (1-2), explicada para fútbol 7 y con ejercicio. 💾 Guárdalo y mándaselo a tu equipo. ¿Ustedes tiran paredes o puro pelotazo? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#FútbolAmateur",
+  "#SeñorFútbol"
+ ],
+ "sources": []
+}
