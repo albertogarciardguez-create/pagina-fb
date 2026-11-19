@@ -18,7 +18,7 @@ Columnas: A Fecha (AAAA-MM-DD) · B Hora (HH:MM, Ciudad Juárez) · C Página (`
 
 ## Reglas para todos los agentes
 
-- **Nada se produce sin autorización.** Solo filas con H = `Sí` o `Sí con cambios` (aplica lo que diga la columna I). Vacío o `No` = no se hace.
+- **Nada se produce sin autorización.** Cuenta como autorizada la fila cuya columna H diga `Sí`, `Sí con cambios` o `Autorizado` (sin importar mayúsculas). Si la columna I (Cambios que pides) trae algo, aplícalo siempre. Vacío o `No` = no se hace.
 - Gasta pocos tokens: no leas archivos enteros que no necesitas, un solo preview por video salvo que haya errores, mensajes finales cortos.
 - Español mexicano. Nunca inventes datos; todo dato real se verifica (ver CLAUDE.md). Sin escudos, logos, fotos ni clips de terceros. Nada de apuestas.
 - Nunca pongas tokens ni llaves en el repositorio, en la hoja ni en mensajes. Los secretos viven solo en GitHub.
@@ -85,7 +85,8 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 1. Lee la hoja (`Temario!A:K`). Toma las filas de **hoy** de tu página con H autorizado y J vacío o “Pendiente”. Si no hay ninguna, actualiza J de las filas de hoy sin autorización con `No autorizado` y termina con un mensaje de una línea.
 2. Antes de producir, revisa `cola/estado/` de ayer: escribe en J de esas filas `Publicado: FB ✅ IG ✅ YT ✅ TikTok ✅` (o el error en pocas palabras).
 3. Para cada fila autorizada:
-   - **Señor Fútbol (motor `reel`)**: sigue el “Flujo diario” de CLAUDE.md (verificación con fuentes, historia en `stories/AAAA-MM-DD-a-…json` o `-b-…json`, `--preview` y revisar `revision.png` con Read). Voz: la de `config/voz.json`.
+   - **Señor Fútbol (motor `reel`)**: sigue el “Flujo diario” de CLAUDE.md (verificación con fuentes, historia en `stories/AAAA-MM-DD-a-…json` o `-b-…json`, `--preview` y revisar `revision.png` con Read). Voz: pon en la historia `"tts": "edge", "edge_voz": "es-MX-JorgeNeural"` (voz gratis más fluida que kokoro; Alberto la pidió así). En la nube el preview puede salir con kokoro; el video final en GitHub sale con Jorge. Escribe `say` con puntuación natural (comas, puntos suspensivos) para que fluya, sin exclamaciones en cada frase.
+   - Si ya existe una historia de esa fecha y tema en `stories/` o `diorama/` (p. ej. una prueba previa), reúsala y ajústala en vez de escribirla de cero.
    - **Impulso Real (motor `diorama`)**: historia en `diorama/AAAA-MM-DD-<tema>-reel.json` con `"plantilla": "papel"` (o `"infografia"`), `"tts": "edge"`, `"edge_voz": "es-MX-DaliaNeural"`, sin campo `audio`. Reutiliza escenas `vis` existentes siempre que se pueda; si hace falta una nueva, agrégala en la plantilla y revisa que se vea bien. Gancho en el segundo 0–2, cierre `"tipo": "cierre"` con pregunta. Preview con `python3 engine/build_diorama.py <json> --preview` y revisa la hoja con Read.
    - Antes de escribir, lee el Top 5 de tu página en `cola/metricas/RESUMEN.md` y usa la **estructura** de la tabla de estructuras de video; copia el tipo de gancho que mejor funciona.
    - No hace falta generar el MP4 final aquí: lo genera el publicador en GitHub.
