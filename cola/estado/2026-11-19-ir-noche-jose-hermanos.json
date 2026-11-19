@@ -1,0 +1,12 @@
+{
+ "redes": {
+  "facebook": {
+   "omitido": "faltan secretos: IR_FB_PAGE_ID, IR_FB_TOKEN"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, IR_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-19-ir-noche-jose-hermanos.mp4",
+ "actualizado": "2026-11-19 09:19"
+}
