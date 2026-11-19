@@ -850,6 +850,64 @@ V2.ahora = (i, r, t) => { cielo('#F7DCA8', '#E8A86A'); papel(circP(820, 180, 90)
   const p = ease((t - sentAt(i, 0, 0.6)) / 1.2); fig(lerp(560, 300, p), 830, 320, { ...PERS, pose: 'walk', fase: t * 6, mira: -1 }, 1);
   pop(T.cuts[i] + 0.4, 260, 440, () => cartel('HOY', 260, 440, OR, 60, 2203, '#FFF8EC'), 0.3); };
 
+// ---- escenas V2 de "Los Amantes de Teruel" ----
+const DIEGO = { cam: '#7A5A3A', pan: '#4A3A2A', pelo: '#3A2A1E' }, DIEGO_R = { cam: '#2F5A8A', pan: '#3A3F4A', pelo: '#3A2A1E' }, ISABEL = { cam: '#A83A4A', pan: '#7A2A3A', largo: true, pelo: '#5A3A22' },
+  PADRE_I = { cam: '#4A3A5A', pan: '#3A2A3A', canas: true }, AZAGRA = { cam: '#2A4A3A', pan: '#1E2A22' };
+function torre(x, y, s) { papel(rectP(x - 55 * s, y - 420 * s, 110 * s, 420 * s), '#C9925A', 2300, { amt: 2 }); for (let k = 0; k < 5; k++) { papel(rectP(x - 55 * s, y - (90 + k * 70) * s, 110 * s, 14 * s), k % 2 ? '#2F7A6A' : '#E8D3A0', 2301 + k, { amt: 1, sb: 2 }); }
+  papel([[x - 60 * s, y - 420 * s], [x, y - 490 * s], [x + 60 * s, y - 420 * s]], '#A8743E', 2310, { amt: 2 }); papel(rectP(x - 18 * s, y - 380 * s, 36 * s, 50 * s), '#3A2A1E', 2311, { amt: 1, sb: 2 }); }
+function pueblo(gy, t) { for (let k = 0; k < 8; k++) { const x = -150 + k * 170, h = 90 + rnd(k + 40) * 80; papel(rectP(x, gy - h, 130, h), ['#E8D6B4', '#D9C29A', '#EDE0C4'][k % 3], 2320 + k, { amt: 2 }); papel([[x - 10, gy - h], [x + 65, gy - h - 45], [x + 140, gy - h]], '#B8562E', 2330 + k, { amt: 2, sb: 3 }); } }
+function velas(xs, y, on, sd) { xs.forEach((x, k) => { papel(rectP(x - 14, y - 110, 28, 110), '#EDE6D4', (sd || 2340) + k, { amt: 1 }); if (on) { const fl = 1 + 0.15 * Math.sin(NOW * 12 + k); papel([[x - 10 * fl, y - 110], [x, y - 150 - 6 * fl], [x + 10 * fl, y - 110]], C.mostaza, (sd || 2340) + 10 + k, { amt: 1, sb: 0 }); } }); }
+function arcos(col) { for (let k = 0; k < 4; k++) { const x = -150 + k * 380; papel(rectP(x, 120, 60, 720), col || '#8A7A64', 2350 + k, { amt: 2 }); g.save(); g.strokeStyle = col || '#8A7A64'; g.lineWidth = 40; g.beginPath(); g.arc(x + 220, 280, 190, Math.PI, 0); g.stroke(); g.restore(); } }
+
+V2.teruel = (i, r, t) => { cielo('#F2C38A', '#C9865A'); papel([[-800, 820], [200, 640], [700, 620], [1800, 760], [1800, 1500], [-800, 1500]], '#B08A5E', 2360, { amt: 5 }); pueblo(700, t); torre(520, 660, 1.1);
+  fig(430, 860, 260, DIEGO, 1); fig(560, 860, 240, ISABEL, 2); pop(T.cuts[i] + 0.4, 500, 120, () => cartel('5 AÑOS · 1 DÍA', 500, 120, C.blanco, 56, 2361, C.rojo), 0.3); };
+V2.pobre = (i, r, t) => { cielo('#EFE4CC', '#D9C59E'); tierra(820, C.kraft); fig(230, 830, 320, DIEGO, 1); fig(400, 830, 300, ISABEL, 2);
+  fig(760, 830, 340, { ...PADRE_I, mira: -1 }, 3); papel(circP(860, 600, 50), '#C9A06A', 2370, { amt: 2 }); texto('$', 860, 604, 50, '#5A3A22');
+  if (t > sentAt(i, 1, 0.3)) pop(sentAt(i, 1, 0.3), 760, 300, () => burbuja(760, 300, 80, 'NO', C.blanco, 2371, -0.3)); };
+V2.plazo = (i, r, t) => { cielo('#EFE4CC', '#D9C59E'); tierra(860, C.kraft);
+  for (let k = 0; k < 5; k++) pop(T.cuts[i] + 0.5 + k * 0.35, 140 + k * 180, 380, () => { papel(rectP(70 + k * 180, 280, 140, 190), C.blanco, 2380 + k, { amt: 2 }); papel(rectP(70 + k * 180, 280, 140, 40), C.rojo, 2390 + k, { amt: 1, sb: 2 }); texto(String(k + 1), 140 + k * 180, 400, 70, '#222'); }, 0.3);
+  pop(T.cuts[i] + 2.4, 500, 160, () => cartel('5 AÑOS PARA HACERSE RICO', 500, 160, C.marino, 46, 2395, '#FFF8EC'), 0.3);
+  fig(320, 870, 280, DIEGO, 1); fig(680, 870, 280, { ...PADRE_I, mira: -1, pose: 'offer' }, 3); if (t > sentAt(i, 1, 0.4)) fig(500, 870, 260, { ...ISABEL, pose: 'arms', fase: 0 }, 2); };
+V2.guerra = (i, r, t) => { cielo('#C9A88A', '#8A6A5A'); for (let k = 0; k < 4; k++) papel([[k * 330 - 400, 820], [k * 330 - 200, 460 + rnd(k) * 120], [k * 330, 820]], '#7A6A5A', 2400 + k, { amt: 4 }); tierra(820, '#8A7250');
+  for (let k = 0; k < 4; k++) papel([[620 + k * 90, 820], [660 + k * 90, 720], [700 + k * 90, 820]], '#E8D6B4', 2410 + k, { amt: 2, sb: 4 });
+  const p = ease(r / D(i)); fig(lerp(200, 520, p), 830, 300, { ...DIEGO, pose: 'walk', fase: t * 6 }, 1); espada(lerp(240, 560, p), 690, 0.5, 0.8, 2420);
+  papel(ellP(lerp(170, 490, p), 650, 40, 55, 20), '#8A3A2A', 2421, { amt: 2, sb: 4 }); };
+V2.espera = (i, r, t) => { cielo('#3A3A50', '#5A5A72'); papel(rectP(-800, 0, 2600, 1500), '#C9B08A', 2430, { amt: 3 }); papel(rectP(320, 200, 360, 440), '#2A3450', 2431, { amt: 3 });
+  const n = Math.min(5, 1 + Math.floor(r / Math.max(0.6, (D(i) - 0.5) / 5))); const cols = ['#9DBB72', '#F2C66A', '#C9865A', '#DDE6EE', '#9DBB72'];
+  g.fillStyle = cols[n - 1]; g.globalAlpha = 0.5; g.fillRect(330, 210, 340, 420); g.globalAlpha = 1; for (let k = 0; k < 10; k++) { const f = ((t * 0.4 + k / 10) % 1); g.fillStyle = n === 4 ? '#FFFFFF' : '#C9865A'; g.fillRect(340 + rnd(k) * 320, 210 + f * 410, 10, 10); }
+  papel(rectP(495, 200, 10, 440), '#7A5232', 2432, { amt: 1, sb: 0 }); papel(rectP(320, 415, 360, 10), '#7A5232', 2433, { amt: 1, sb: 0 });
+  fig(500, 900, 340, { ...ISABEL, triste: true }, 2); cartel(`AÑO ${n}`, 500, 120, C.blanco, 56, 2434 + n, '#222'); };
+V2.bodaT = (i, r, t) => { cielo('#E8D3B0', '#C9A880'); arcos('#B8A68A'); tierra(840, '#8A7A64'); velas([120, 880], 840, true, 2440);
+  fig(560, 850, 340, { ...AZAGRA, mira: -1 }, 4); fig(420, 850, 300, { ...ISABEL, cam: '#EDE6D4', pan: '#EDE6D4', triste: true }, 2); fig(250, 850, 320, PADRE_I, 3);
+  if (t > sentAt(i, 0, 0.6)) pop(sentAt(i, 0, 0.6), 500, 120, () => cartel('PEDRO DE AZAGRA', 500, 120, C.marino, 48, 2445, '#FFF8EC'), 0.3); };
+V2.regreso = (i, r, t) => { cielo('#F2C38A', '#C9865A'); tierra(820, '#B08A5E'); pueblo(700, t); torre(800, 700, 0.9);
+  const p = ease(r / D(i)); fig(lerp(120, 460, p), 830, 320, { ...DIEGO_R, pose: 'walk', fase: t * 6 }, 1); papel(rectP(lerp(150, 490, p), 690, 90, 60), '#7A5232', 2450, { amt: 2, sb: 4 }); papel(rectP(lerp(150, 490, p), 680, 90, 20), C.mostaza, 2451, { amt: 1, sb: 2 });
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 120, () => cartel('LLEGÓ EL MISMO DÍA', 500, 120, C.rojo, 50, 2452, '#FFF8EC'), 0.3); };
+V2.beso = (i, r, t) => { cielo('#1A1E30', '#2A2E44'); papel(rectP(-800, 0, 2600, 1500), '#2E2A3A', 2460, { amt: 3 }); tierra(840, '#221E2A');
+  const t2 = sentAt(i, 2, 0.2), p = cl((t - t2) / 1, 0, 1); velas([820], 840, p < 1, 2465);
+  const gl = g.createRadialGradient(820, 680, 10, 820, 680, 400); gl.addColorStop(0, `rgba(255,200,100,${0.35 * (1 - p)})`); gl.addColorStop(1, 'rgba(255,200,100,0)'); g.fillStyle = gl; g.fillRect(300, 200, 1000, 800);
+  fig(560, 850, 320, { ...ISABEL, mira: -1, triste: t > sentAt(i, 1, 0) }, 2);
+  g.save(); g.translate(330, 850); g.rotate(-1.35 * ease(p)); fig(0, 0, 340, { ...DIEGO_R, pose: p ? 'stand' : 'offer' }, 1); g.restore();
+  if (t > sentAt(i, 0, 0.5) && t < t2) pop(sentAt(i, 0, 0.5), 450, 300, () => corazon(450, 300, 3.5, C.coral, 2466), 0.3); };
+V2.funeral = (i, r, t) => { cielo('#3A3440', '#2A2430'); arcos('#5A5260'); tierra(840, '#3A3440'); velas([260, 740], 760, true, 2470);
+  papel(rectP(280, 700, 440, 70), '#5A3A22', 2475, { amt: 2 }); g.save(); g.translate(660, 700); g.rotate(-Math.PI / 2); fig(0, 0, 330, { ...DIEGO_R, piel: '#E8D6C4' }, 1); g.restore();
+  const t1 = sentAt(i, 0, 0.6), p = ease((t - t1) / 1.2); fig(lerp(860, 420, p), 850, 320, { ...ISABEL, cam: '#2A2A30', pan: '#2A2A30', lean: -0.5 * ease((t - t1 - 1.2) / 0.6), mira: -1 }, 2);
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 300, () => corazon(500, 300, 4 + 0.2 * Math.sin(t * 4), C.coral, 2476), 0.4);
+  pop(T.cuts[i] + 0.4, 500, 120, () => cartel('IGLESIA DE SAN PEDRO', 500, 120, C.blanco, 46, 2477, '#222'), 0.3); };
+V2.juntos = (i, r, t) => { cielo('#2A2420', '#1A1410'); papel(rectP(-800, 0, 2600, 1500), '#4A3A2A', 2480, { amt: 4 });
+  for (let k = 0; k < 2; k++) { papel(rectP(260 + k * 260, 520, 220, 340), '#7A6A54', 2481 + k, { amt: 3 }); papel(rectP(280 + k * 260, 540, 180, 300), '#5A4A3A', 2483 + k, { amt: 2, sb: 3 }); }
+  const t1 = sentAt(i, 1, 0); if (t > t1) { fig(150, 880, 260, { cam: '#6A5A3A', pan: '#3A2A1E', pose: 'offer' }, 5); papel(circP(220, 640, 20), '#FFE6A0', 2486, { amt: 1, sb: 20 }); pop(t1 + 0.3, 500, 120, () => cartel('1555', 500, 120, C.mostaza, 80, 2487, '#222'), 0.3); }
+  else pop(T.cuts[i] + 0.4, 500, 300, () => corazon(500, 300, 4, C.coral, 2488), 0.3); };
+V2.mausoleo = (i, r, t) => { cielo('#2A2A34', '#3A3A48'); const gl = g.createRadialGradient(500, 500, 20, 500, 500, 600); gl.addColorStop(0, 'rgba(255,240,210,.35)'); gl.addColorStop(1, 'rgba(255,240,210,0)'); g.fillStyle = gl; g.fillRect(-500, -500, 2000, 2000);
+  for (let k = 0; k < 2; k++) { const x = 270 + k * 460; papel(rectP(x - 180, 560, 360, 260), '#D9D3C6', 2490 + k, { amt: 2 }); g.save(); g.translate(x + 150, 560); g.rotate(-Math.PI / 2); fig(0, 0, 300, { cam: '#F2EEE6', pan: '#F2EEE6', pelo: '#E6E0D4', piel: '#EEEAE2', largo: k === 1 }, 30 + k); g.restore(); }
+  const p = ease((t - sentAt(i, 0, 0.6)) / 1.5), gap = lerp(80, 14, p); papel(rectP(500 - gap / 2 - 70, 520, 70, 26), '#EEEAE2', 2495, { amt: 1, sb: 4 }); papel(rectP(500 + gap / 2, 520, 70, 26), '#EEEAE2', 2496, { amt: 1, sb: 4 });
+  pop(T.cuts[i] + 0.4, 500, 120, () => cartel('MAUSOLEO DE LOS AMANTES', 500, 120, C.blanco, 44, 2497, '#222'), 0.3); };
+V2.tiempoAmor = (i, r, t) => { cielo('#F7DCA8', '#E8A86A'); tierra(820, C.kraft); arena(500, 420, 0.9, ease(r / D(i))); fig(220, 830, 320, DIEGO_R, 1); fig(780, 830, 300, { ...ISABEL, mira: -1 }, 2); };
+V2.abrazoYa = (i, r, t) => { cielo('#FBEBD0', '#F0CFA0'); tierra(840, C.kraft); const p = ease((t - T.cuts[i] - 0.4) / 1.4);
+  fig(lerp(180, 440, p), 850, 330, { ...PERS, pose: p < 1 ? 'walk' : 'arms', fase: t * 6 }, 1); fig(600, 850, 310, { ...ISABEL, cam: C.coral, mira: -1, pose: p >= 1 ? 'arms' : 'stand', fase: 0 }, 2);
+  if (p >= 1) pop(T.cuts[i] + 1.8, 520, 300, () => corazon(520, 300, 5 + 0.25 * Math.sin(t * 5), C.coral, 2500), 0.4);
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 120, () => cartel('NO LO DEJES PARA DESPUÉS', 500, 120, OR, 48, 2501, '#FFF8EC'), 0.3); };
+
 function cierre(i, t) {
   const sc = S.scenes[i], r = t - T.cuts[i], L = HZ ? { cx: 960, cy: 560, sz: 780, tx: 964, y1: 950, y2: 1025, q1: 90, q2: 160 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610, q1: 300, q2: 380 };
   g.fillStyle = logoBg; g.fillRect(0, 0, W, H);

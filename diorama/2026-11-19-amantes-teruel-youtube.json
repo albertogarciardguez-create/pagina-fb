@@ -1,0 +1,300 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.32,
+ "pausaEscena": 0.55,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-19-amantes-teruel-edge.mp3",
+ "scenes": [
+  {
+   "say": "Cinco años de espera. Un solo día de diferencia. Y una historia de amor que se volvió leyenda: los Amantes de Teruel.",
+   "vis": "teruel",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Cuenta la leyenda que en el siglo trece, en Teruel, España, Diego de Marcilla e Isabel de Segura se amaban desde niños. Pero él no tenía fortuna, y el padre de ella no aceptaba la boda.",
+   "vis": "pobre",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Diego pidió un plazo: cinco años para hacerse rico. El padre aceptó, e Isabel prometió esperarlo.",
+   "vis": "plazo",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.45,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.9,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Diego se fue a la guerra a buscar fortuna y honor, lejos de casa.",
+   "vis": "guerra",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Pasaron los años. Isabel esperó y esperó... sin saber si él seguía vivo.",
+   "vis": "espera",
+   "acto": 2,
+   "mus": "menor",
+   "nivel": 0.8,
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.2
+    },
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "Al cumplirse el plazo, su padre la casó con Pedro de Azagra, un noble de Albarracín.",
+   "vis": "bodaT",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y ese mismo día, Diego regresó a Teruel. Rico... y con su promesa cumplida. Pero había llegado tarde.",
+   "vis": "regreso",
+   "acto": 3,
+   "mus": "foso",
+   "corte": true,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.5
+    },
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Esa noche entró a verla y le pidió un solo beso. Isabel, ya casada, se lo negó. Y Diego murió de tristeza a sus pies.",
+   "vis": "beso",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.7,
+   "corte": true,
+   "sfx": [
+    {
+     "k": "piedra",
+     "s": 2,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Al día siguiente, en su funeral, Isabel se acercó y le dio el beso que le había negado. Y murió junto a él.",
+   "vis": "funeral",
+   "acto": 4,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Los enterraron juntos. Y en mil quinientos cincuenta y cinco, al reparar la iglesia de San Pedro, encontraron dos cuerpos momificados, uno al lado del otro.",
+   "vis": "juntos",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "piedra",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Hoy descansan en un mausoleo en Teruel, esculpidos por Juan de Ávalos: acostados, con las manos que se buscan... pero no se tocan.",
+   "vis": "mausoleo",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Los Amantes de Teruel nos recuerdan algo que olvidamos fácil: el amor también es cuestión de tiempo.",
+   "vis": "tiempoAmor",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "No guardes el abrazo, el beso o el te quiero para después. A veces, un solo día lo cambia todo.",
+   "vis": "abrazoYa",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Tú habrías esperado cinco años por amor? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Esperarías 5 años",
+    "por amor?"
+   ]
+  }
+ ],
+ "thumb": [
+  "LOS AMANTES DE TERUEL",
+  "5 AÑOS · 1 DÍA TARDE"
+ ],
+ "sources": [
+  "https://www.culturagenial.com/es/los-amantes-de-teruel/",
+  "https://en.wikipedia.org/wiki/Lovers_of_Teruel",
+  "https://www.turismodearagon.com/ficha/mausoleo-de-los-amantes-iglesia-y-torre-de-san-pedro/"
+ ],
+ "post": "Los Amantes de Teruel ❤️",
+ "hashtags": [
+  "#AmantesDeTeruel",
+  "#ImpulsoReal"
+ ],
+ "id": "2026-11-19-amantes-teruel-youtube",
+ "titulo": "Amantes de Teruel (YouTube)",
+ "formato": "horizontal",
+ "miniatura": 10,
+ "youtube": {
+  "titulo": "Los Amantes de Teruel: 5 años de espera y un solo día tarde",
+  "intro": "Los Amantes de Teruel en papel recortado",
+  "descripcion": "La leyenda de los Amantes de Teruel contada en animación de papel recortado: Diego de Marcilla e Isabel de Segura, el plazo de cinco años, la boda con Pedro de Azagra, el regreso el mismo día, el beso negado y el beso final. En 1555 se hallaron dos cuerpos juntos en la iglesia de San Pedro, y hoy descansan en el mausoleo esculpido por Juan de Ávalos, con las manos que casi se tocan.\n\nAl final, la lección: el amor también es cuestión de tiempo.\n\n¿Tú habrías esperado cinco años por amor? Te leo en los comentarios.",
+  "hashtags": [
+   "#AmantesDeTeruel",
+   "#Teruel",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "Amantes de Teruel",
+   "leyenda de los Amantes de Teruel",
+   "Diego de Marcilla",
+   "Isabel de Segura",
+   "Teruel",
+   "mausoleo de los amantes",
+   "historias de amor",
+   "leyendas de España",
+   "reflexión",
+   "Impulso Real"
+  ]
+ }
+}
