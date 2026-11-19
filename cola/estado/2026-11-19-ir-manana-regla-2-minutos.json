@@ -5,8 +5,19 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, IR_TIKTOK_REFRESH"
+  },
+  "facebook": {
+   "ok": true,
+   "id": "1786575715792831",
+   "url": "https://www.facebook.com/reel/1786575715792831",
+   "programado": false,
+   "fecha": "2026-11-19 16:04"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-19-ir-manana-regla-2-minutos.mp4",
- "actualizado": "2026-11-19 11:26"
+ "actualizado": "2026-11-19 16:04",
+ "estado": "completo"
 }
