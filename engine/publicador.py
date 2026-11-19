@@ -7,6 +7,8 @@ Cada archivo cola/<id>.json es una publicación autorizada:
    "hora": "2026-11-19 13:15",                       # hora de Ciudad Juárez
    "redes": ["facebook", "instagram", "youtube", "tiktok"],
    "titulo": "Título para YouTube (opcional)", "texto": "texto del post (opcional; si no, sale de post.txt)"}
+Si la historia trae "redes_textos" {"facebook": "...", "instagram": "...", "youtube": {"titulo", "descripcion"},
+"tiktok": "..."}, cada red usa su texto (TikTok va a la bandeja: su texto queda en el estado para pegarlo).
 
 El estado de cada una queda en cola/estado/<id>.json. El video se genera una sola vez y se guarda como
 archivo del release "cola" del repositorio, para que las corridas siguientes no lo vuelvan a generar.
@@ -159,7 +161,20 @@ def asegurar_video(item, est):
     return mp4, texto
 
 
+def textos_red(item):
+    try:
+        return json.load(open(os.path.join(ROOT, item["historia"]), encoding="utf-8")).get("redes_textos") or {}
+    except Exception:
+        return {}
+
+
 def publicar(red, item, mp4, texto, cred, ahora):
+    tr = textos_red(item).get(red)
+    if red == "youtube" and isinstance(tr, dict):
+        item = {**item, "titulo": item.get("titulo") or tr.get("titulo")}
+        texto = tr.get("descripcion") or texto
+    elif isinstance(tr, str) and tr.strip() and not item.get("texto"):
+        texto = tr.strip()
     ts = hora_red(item, red)
     futuro = ts > ahora + 15 * 60
     if SIMULAR:
@@ -175,7 +190,8 @@ def publicar(red, item, mp4, texto, cred, ahora):
         when = datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") if futuro else None
         return redes.youtube_short(*cred, mp4, titulo, texto, when, tags, "17" if item["pagina"] == "senorfutbol" else "22")
     if red == "tiktok":
-        return redes.tiktok_borrador(*cred, mp4)
+        res = redes.tiktok_borrador(*cred, mp4)
+        return {**(res or {}), "texto_para_pegar": texto}
     raise ValueError(red)
 
 

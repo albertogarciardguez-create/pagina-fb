@@ -89,6 +89,9 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
    - **Impulso Real (motor `diorama`)**: historia en `diorama/AAAA-MM-DD-<tema>-reel.json` con `"plantilla": "papel"` (o `"infografia"`), `"tts": "edge"`, `"edge_voz": "es-MX-DaliaNeural"`, sin campo `audio`. Reutiliza escenas `vis` existentes siempre que se pueda; si hace falta una nueva, agrégala en la plantilla y revisa que se vea bien. Gancho en el segundo 0–2, cierre `"tipo": "cierre"` con pregunta. Preview con `python3 engine/build_diorama.py <json> --preview` y revisa la hoja con Read.
    - Antes de escribir, lee el Top 5 de tu página en `cola/metricas/RESUMEN.md` y usa la **estructura** de la tabla de estructuras de video; copia el tipo de gancho que mejor funciona.
    - No hace falta generar el MP4 final aquí: lo genera el publicador en GitHub.
+   - **Textos para redes**: en cada historia agrega `"redes_textos"` con un texto por red (primera línea = gancho, pregunta para comentar, 3–5 hashtags):
+     `{"facebook": "post completo con contexto", "instagram": "más corto, con llamado a guardar/compartir", "youtube": {"titulo": "≤ 90 caracteres + #Shorts", "descripcion": "2–3 líneas + hashtags"}, "tiktok": "≤ 150 caracteres + 3–4 hashtags"}`.
+     El publicador usa el de cada red; el de TikTok queda en el estado para pegarlo al publicar el borrador.
    - Horas: la de Facebook/YouTube es la columna B; si F dice “IG hh:mm · TikTok hh:mm”, van en `"horas"`; si no, usa la tabla de horarios.
    - Crea `cola/<id>.json`:
      ```json
@@ -101,7 +104,7 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
    - Si la hora ya está a menos de 25 min, pásala a la siguiente media hora libre y anótalo en J.
 4. `git add` de las historias y de `cola/*.json`, commit `Agente <página> AAAA-MM-DD` y push a `main` (reintenta con `git pull --rebase` si falla). El push dispara el publicador.
 5. En la hoja, J = `En cola · <hora>` y K = `https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/<id>.mp4` (el video aparece ahí ~10 min después).
-6. Mensaje final (corto, listo para leer en el celular): por cada publicación, hora, tema, redes y link del video; y una línea con el resultado de ayer. Nada de explicar el proceso.
+6. Mensaje final (corto, listo para leer en el celular): por cada publicación, hora, tema, redes, link del video y sus textos por red listos para copiar (sobre todo el de TikTok); y una línea con el resultado de ayer. Nada de explicar el proceso.
 
 ## Publicador (GitHub Actions)
 
