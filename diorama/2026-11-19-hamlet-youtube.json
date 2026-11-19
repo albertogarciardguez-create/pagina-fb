@@ -1,0 +1,311 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.32,
+ "pausaEscena": 0.55,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "audio": "diorama/audio/2026-11-19-hamlet-edge.mp3",
+ "scenes": [
+  {
+   "say": "Un príncipe, un fantasma y una venganza que acabó con todos. Esta es la historia de Hamlet, la obra de William Shakespeare que el cine ha llevado a la pantalla una y otra vez.",
+   "vis": "elsinor",
+   "acto": 1,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "d": -0.3,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "En Dinamarca, el rey muere de repente. Y menos de dos meses después, su hermano Claudio se casa con la reina y se queda con la corona.",
+   "vis": "boda",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Una noche, en las murallas del castillo, aparece un fantasma: es el rey muerto. Y le revela a su hijo, Hamlet, un secreto terrible.",
+   "vis": "fantasma",
+   "acto": 1,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.4
+    }
+   ]
+  },
+  {
+   "say": "No murió por la mordida de una serpiente, como dijeron. Su propio hermano le echó veneno en el oído mientras dormía en el jardín. Y le pide una sola cosa: venganza.",
+   "vis": "veneno",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "agua",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.4
+    },
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.6,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Hamlet finge estar loco para descubrir la verdad sin que nadie sospeche. Pero mientras más piensa... menos actúa.",
+   "vis": "locura",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ahí nace la frase más famosa del teatro: ser o no ser, esa es la cuestión. ¿Aguantar en silencio... o actuar?",
+   "vis": "ser",
+   "acto": 2,
+   "mus": "menor",
+   "nivel": 0.8,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Para estar seguro, organiza una obra de teatro que repite el crimen frente al rey. Claudio se levanta furioso y se va. Es culpable.",
+   "vis": "teatro",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.2,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Pero Hamlet vuelve a dudar. Y cuando por fin ataca, se equivoca: atraviesa un tapiz con su espada y mata a Polonio, el padre de su amada Ofelia, que se escondía detrás.",
+   "vis": "tapiz",
+   "acto": 3,
+   "mus": "foso",
+   "corte": true,
+   "sfx": [
+    {
+     "k": "piedra",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ofelia pierde la razón por el dolor, y muere ahogada en un río, rodeada de flores.",
+   "vis": "ofelia",
+   "acto": 3,
+   "mus": "menor",
+   "nivel": 0.7,
+   "sfx": [
+    {
+     "k": "agua",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Hamlet vuelve, y en un cementerio sostiene el cráneo de Yorick, el bufón que lo cargaba en la espalda cuando era niño. Ahí entiende que la muerte nos iguala a todos.",
+   "vis": "calavera",
+   "acto": 4,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Laertes, el hermano de Ofelia, lo reta a un duelo con la punta de su espada envenenada. Y el rey prepara además una copa con veneno, por si acaso.",
+   "vis": "duelo",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.5
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "La reina bebe de la copa por error. Laertes y Hamlet se hieren con la espada envenenada. Y antes de morir, Hamlet por fin mata al rey. El resto es silencio.",
+   "vis": "final",
+   "acto": 5,
+   "mus": "foso",
+   "corte": true,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 3,
+     "at": 0.2,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Hamlet nos deja una lección incómoda: pensar demasiado también es una forma de no decidir. Y la venganza nunca deja ganadores.",
+   "vis": "dudar",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Esa conversación pendiente, esa decisión que llevas meses aplazando... no la dejes para cuando ya sea tarde.",
+   "vis": "ahora",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Qué decisión has estado aplazando, como Hamlet? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué decisión",
+    "estás aplazando?"
+   ]
+  }
+ ],
+ "thumb": [
+  "HAMLET",
+  "¿SER O NO SER?"
+ ],
+ "sources": [
+  "https://www.sparknotes.com/shakespeare/es/hamlet-drama-en-cinco-actos/resumen/",
+  "https://www.culturagenial.com/es/hamlet/",
+  "https://www.gutenberg.org/ebooks/56454"
+ ],
+ "post": "Hamlet en 2 minutos 💀",
+ "hashtags": [
+  "#Hamlet",
+  "#Shakespeare",
+  "#ImpulsoReal"
+ ],
+ "id": "2026-11-19-hamlet-youtube",
+ "titulo": "Hamlet (YouTube)",
+ "formato": "horizontal",
+ "miniatura": 9,
+ "youtube": {
+  "titulo": "Hamlet explicado en papel: el príncipe que pensó tanto que llegó tarde",
+  "intro": "Hamlet en papel recortado",
+  "descripcion": "La historia de Hamlet, de William Shakespeare, contada en animación de papel recortado: el fantasma del rey, el veneno en el oído, la locura fingida, el \"ser o no ser\", la obra de teatro que delató al rey, el tapiz, Ofelia, el cráneo de Yorick y el duelo final con la espada y la copa envenenadas. Al final, la lección: pensar de más también es una forma de no decidir.\n\nContiene spoilers. Animación original de Impulso Real, sin imágenes ni música de ninguna película.\n\n¿Qué decisión has estado aplazando, como Hamlet? Te leo en los comentarios.",
+  "hashtags": [
+   "#Hamlet",
+   "#Shakespeare",
+   "#ImpulsoReal"
+  ],
+  "etiquetas": [
+   "Hamlet",
+   "Shakespeare",
+   "Hamlet resumen",
+   "Hamlet explicado",
+   "ser o no ser",
+   "Ofelia",
+   "Yorick",
+   "literatura clásica",
+   "reflexión",
+   "Impulso Real"
+  ]
+ }
+}

@@ -777,6 +777,78 @@ V2.leccion2 = (i, r, t) => {
   pop(sentAt(i, 0, 0.1), 500, 160, () => cartel('LO QUE TE HICIERON', 500, 160, C.gris, 46, 2251, '#FFF8EC'), 0.3); if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 920, () => cartel('NO TE DEFINE', 500, 920, OR, 64, 2252, '#FFF8EC'), 0.3);
 };
 
+// ---- escenas V2 de "Hamlet" ----
+const HAMLET = { cam: '#22222A', pan: '#22222A' }, CLAUDIO = { cam: '#7A2A3A', pan: '#3A2A2A' }, REINA = { cam: '#6A4A8A', pan: '#4A3A6A', largo: true, pelo: '#C9A06A' },
+  OFELIA = { cam: '#EDE6D4', pan: '#EDE6D4', largo: true, pelo: '#B8742E' }, POLONIO = { cam: '#4A5A6A', pan: '#3A3F4A', canas: true }, LAERTES = { cam: '#3A5A8A', pan: '#2A3A5A' };
+function corona(x, y, s, sd) { papel([[x - 40 * s, y], [x - 44 * s, y - 40 * s], [x - 22 * s, y - 20 * s], [x, y - 48 * s], [x + 22 * s, y - 20 * s], [x + 44 * s, y - 40 * s], [x + 40 * s, y]], C.mostaza, sd || 1900, { amt: 1.5, sb: 4 }); }
+function rey(x, y, h, o, sd) { fig(x, y, h, o, sd); corona(x + (o.triste ? 0.03 * h : 0), y - 1.03 * h, h / 260, (sd || 1) * 7 + 1900); }
+function castillo(x, y, s, col) { const c = col || '#2A2E3A'; papel(rectP(x - 260 * s, y - 260 * s, 520 * s, 260 * s), c, 1910, { amt: 3 });
+  [-260, -90, 90, 200].forEach((dx, k) => { papel(rectP(x + dx * s, y - (380 + (k % 2) * 80) * s, 70 * s, (380 + (k % 2) * 80) * s), c, 1911 + k, { amt: 3 }); for (let j = 0; j < 3; j++) papel(rectP(x + (dx + j * 25) * s, y - (405 + (k % 2) * 80) * s, 16 * s, 25 * s), c, 1920 + k * 3 + j, { amt: 1, sb: 2 }); });
+  for (let k = 0; k < 5; k++) papel(rectP(x + (-200 + k * 90) * s, y - 180 * s, 26 * s, 40 * s), '#F2C66A', 1930 + k, { amt: 1, sb: 0 }); }
+function espada(x, y, a, s, sd) { g.save(); g.translate(x, y); g.rotate(a); g.scale(s, s); papel(rectP(-5, -220, 10, 220), '#D9DDE2', sd || 1940, { amt: 1, sb: 4 }); papel(rectP(-30, -6, 60, 12), C.mostaza, (sd || 1940) + 1, { amt: 1, sb: 3 }); papel(rectP(-7, 6, 14, 50), '#5A3A22', (sd || 1940) + 2, { amt: 1, sb: 3 }); g.restore(); }
+function copa(x, y, s, sd) { papel([[x - 40 * s, y - 120 * s], [x + 40 * s, y - 120 * s], [x + 25 * s, y - 60 * s], [x - 25 * s, y - 60 * s]], C.mostaza, sd || 1950, { amt: 1.5, sb: 4 }); papel(rectP(x - 6 * s, y - 62 * s, 12 * s, 50 * s), C.mostaza, (sd || 1950) + 1, { amt: 1, sb: 3 }); papel(rectP(x - 30 * s, y - 14 * s, 60 * s, 14 * s), C.mostaza, (sd || 1950) + 2, { amt: 1, sb: 3 }); }
+function craneo(x, y, s, sd) { papel(ellP(x, y, 48 * s, 44 * s, 24), '#EDE6D4', sd || 1960, { amt: 2 }); papel(rectP(x - 26 * s, y + 30 * s, 52 * s, 30 * s), '#EDE6D4', (sd || 1960) + 1, { amt: 1.5, sb: 3 });
+  g.fillStyle = '#2A2420'; g.beginPath(); g.ellipse(x - 17 * s, y + 2 * s, 11 * s, 13 * s, 0, 0, 7); g.ellipse(x + 17 * s, y + 2 * s, 11 * s, 13 * s, 0, 0, 7); g.fill(); g.beginPath(); g.moveTo(x, y + 14 * s); g.lineTo(x - 6 * s, y + 26 * s); g.lineTo(x + 6 * s, y + 26 * s); g.fill(); }
+function fantasma(x, y, h, t) { g.save(); g.globalAlpha = 0.55 + 0.1 * Math.sin(t * 3); const gl = g.createRadialGradient(x, y - h * 0.6, 10, x, y - h * 0.6, h * 0.8); gl.addColorStop(0, 'rgba(180,230,255,.6)'); gl.addColorStop(1, 'rgba(180,230,255,0)'); g.fillStyle = gl; g.fillRect(x - h, y - h * 1.5, h * 2, h * 2);
+  rey(x, y - 20 + Math.sin(t * 1.5) * 12, h, { cam: '#BFD8E6', pan: '#BFD8E6', canas: true, piel: '#D8E8F0' }, 21); g.restore(); }
+function noche(t) { cielo('#0E1424', '#25304A'); estrellas(90, t); papel(circP(820, 160, 70), '#F2EBCF', 1970, { amt: 2, sb: 20 }); }
+
+V2.elsinor = (i, r, t) => { noche(t); papel([[-800, 820], [300, 760], [700, 800], [1800, 760], [1800, 1500], [-800, 1500]], '#1A2030', 1971, { amt: 5 }); castillo(500, 790, 1.15);
+  if (r > 1.2) pop(T.cuts[i] + 1.2, 500, 120, () => cartel('HAMLET', 500, 120, C.blanco, 70, 1972, '#22222A'), 0.3); fig(500, 860, 180, HAMLET, 1); };
+V2.boda = (i, r, t) => {
+  const t1 = sentAt(i, 1, 0); if (t < t1) { cielo('#3A3A44', '#22222A'); tierra(820, '#2A2A30'); papel(rectP(380, 640, 240, 90), '#4A3A2A', 1980, { amt: 3 }); corona(500, 640, 1.2, 1981); fig(250, 830, 300, { ...REINA, triste: true }, 3); fig(760, 830, 300, { ...HAMLET, triste: true }, 1); }
+  else { cielo('#E8C99A', '#C9965A'); tierra(820, '#8A5A3A'); rey(420, 830, 330, CLAUDIO, 4); corona(580, 830 - 1.03 * 300, 300 / 260, 1990); fig(580, 830, 300, REINA, 3); pop(t1 + 0.3, 500, 260, () => corazon(500, 260, 4, C.rojo, 1991), 0.3); fig(850, 830, 280, { ...HAMLET, triste: true, mira: -1 }, 1);
+    pop(t1 + 0.6, 500, 120, () => cartel('2 MESES DESPUÉS', 500, 120, C.blanco, 48, 1992, C.rojo), 0.3); }
+};
+V2.fantasma = (i, r, t) => { noche(t); papel(rectP(-800, 700, 2600, 800), '#3A3E4A', 2000, { amt: 4 }); for (let k = 0; k < 12; k++) papel(rectP(-200 + k * 120, 650, 70, 60), '#3A3E4A', 2001 + k, { amt: 2, sb: 4 });
+  g.save(); g.globalAlpha = ease((r - 0.5) / 1.2); fantasma(650, 700, 360, t); g.restore(); fig(300, 710, 320, HAMLET, 1); };
+V2.veneno = (i, r, t) => { cielo('#2A3A2A', '#3A4A30'); tierra(820, '#3A5A2E'); for (let k = 0; k < 6; k++) maiz(60 + k * 180, 820, 120, true, 50 + k, t);
+  g.save(); g.translate(660, 790); g.rotate(-Math.PI / 2); rey(0, 0, 300, { cam: '#5A6A8A', pan: '#3A4A6A', canas: true }, 22); g.restore();
+  const t1 = sentAt(i, 1, 0.3); if (t > t1) { const p = ease((t - t1) / 0.6); g.save(); g.translate(400, lerp(420, 580, p)); g.rotate(1.9); papel([[-20, -60], [20, -60], [26, 40], [-26, 40]], '#3A8A4A', 2010, { amt: 1, sb: 4 }); g.restore();
+    for (let k = 0; k < 3; k++) { const f = ((t * 1.5 + k / 3) % 1); g.fillStyle = '#4ADA6A'; g.beginPath(); g.arc(385 - f * 10, 620 + f * 130, 9, 0, 7); g.fill(); } fig(190, 820, 300, { ...CLAUDIO, pose: 'offer' }, 4); }
+  if (t > sentAt(i, 2, 0)) pop(sentAt(i, 2, 0), 500, 140, () => cartel('VENGANZA', 500, 140, C.rojo, 74, 2011, '#FFF8EC'), 0.3);
+};
+V2.locura = (i, r, t) => { cielo('#3A2E44', '#22222A'); tierra(820, '#2A2430'); const w = Math.sin(t * 3) * 0.12;
+  fig(500, 830, 380, { ...HAMLET, lean: w, pose: Math.sin(t * 2) > 0 ? 'arms' : 'stand', fase: t * 4 }, 1);
+  for (let k = 0; k < 5; k++) { const a = t * 0.8 + k * 1.256, x = 500 + Math.cos(a) * 330, y = 400 + Math.sin(a) * 160; burbuja(x, y, 46, ['?', '!', '…', '?', '¿'][k], C.blanco, 2020 + k * 2); }
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 120, () => cartel('PIENSA… Y NO ACTÚA', 500, 120, C.mostaza, 48, 2030, '#222'), 0.3); };
+V2.ser = (i, r, t) => { cielo('#1C2030', '#2E3448'); tierra(820, '#2A2E3A'); papel([[500, 830], [80, 380], [160, 340], [500, 760]], '#3A4050', 2040, { amt: 3 }); papel([[500, 830], [920, 380], [840, 340], [500, 760]], '#3A4050', 2041, { amt: 3 });
+  pop(T.cuts[i] + 1, 160, 300, () => cartel('SER', 160, 300, C.blanco, 64, 2042, '#22222A'), 0.3); pop(T.cuts[i] + 1.6, 840, 300, () => cartel('NO SER', 840, 300, C.blanco, 64, 2043, '#22222A'), 0.3);
+  const t1 = sentAt(i, 1, 0); if (t > t1) { pop(t1, 160, 420, () => cartel('AGUANTAR', 160, 420, C.gris, 40, 2044, '#FFF8EC'), 0.3); pop(t1 + 0.5, 840, 420, () => cartel('ACTUAR', 840, 420, OR, 40, 2045, '#FFF8EC'), 0.3); }
+  fig(500, 860, 300, { ...HAMLET, mira: Math.sin(t) > 0 ? 1 : -1 }, 1); };
+V2.teatro = (i, r, t) => { cielo('#2A1A1E', '#1A1012'); papel(rectP(120, 200, 760, 520), '#6A1E28', 2050, { amt: 3 }); papel(rectP(160, 240, 680, 440), '#3A2A1E', 2051, { amt: 2 });
+  const op = ease((r - 0.3) / 1); papel([[120, 200], [500 - 340 * op, 200], [500 - 380 * op, 720], [120, 720]], '#9A2A36', 2052, { amt: 3 }); papel([[880, 200], [500 + 340 * op, 200], [500 + 380 * op, 720], [880, 720]], '#9A2A36', 2053, { amt: 3 });
+  if (op > 0.5) { g.save(); g.translate(560, 640); g.rotate(-Math.PI / 2); fig(0, 0, 150, { cam: '#5A6A8A', pan: '#3A4A6A' }, 23); g.restore(); fig(420, 680, 160, { cam: '#7A5A3A', pan: '#3A2A2A', pose: 'offer' }, 24); }
+  tierra(820, '#1A1214'); const t1 = sentAt(i, 1, 0.1), up = t > t1 ? ease((t - t1) / 0.5) : 0;
+  rey(260, 900 - 60 * up, 240, { ...CLAUDIO, pose: up ? 'arms' : 'stand', fase: 0 }, 4); fig(720, 900, 240, HAMLET, 1);
+  if (t > sentAt(i, 2, 0)) pop(sentAt(i, 2, 0), 500, 120, () => cartel('CULPABLE', 500, 120, C.rojo, 70, 2054, '#FFF8EC'), 0.3); };
+V2.tapiz = (i, r, t) => { cielo('#4A3A2A', '#2A2018'); tierra(840, '#3A2A1E'); const t1 = sentAt(i, 1, 0.4), p = cl((t - t1) / 0.5, 0, 1);
+  papel(rectP(520, 160, 380, 680), '#7A5A2A', 2060, { amt: 3 }); for (let k = 0; k < 6; k++) papel(rectP(540 + k * 60, 180, 24, 640), '#8E6A34', 2061 + k, { amt: 2, sb: 2 });
+  fig(240 + 140 * p, 850, 340, { ...HAMLET, pose: p > 0 ? 'offer' : 'stand' }, 1); espada(310 + 160 * p, 600, 1.57, 1.1, 2070);
+  if (p >= 1) { g.save(); g.globalAlpha = ease((t - t1 - 0.5) / 0.8); g.translate(720, 850); g.rotate(-1.4); fig(0, 0, 300, POLONIO, 25); g.restore(); }
+  pop(T.cuts[i] + 0.5, 300, 160, () => burbuja(300, 160, 70, '?', C.blanco, 2071, 0.3)); };
+V2.ofelia = (i, r, t) => { cielo('#9FB6B0', '#C9D6C2'); tierra(700, '#6E8E5A'); papel(rectP(-800, 760, 2600, 800), '#4A7A8A', 2080, { amt: 6 });
+  for (let k = 0; k < 16; k++) { const x = (k * 110 + t * 30) % 1300 - 150, y = 820 + (k % 4) * 45 + Math.sin(t * 2 + k) * 6; papel(circP(x, y, 16), [C.blanco, C.coral, C.mostaza, '#C8A0D8'][k % 4], 2081 + k, { amt: 1, sb: 3 }); papel(circP(x, y, 6), C.mostaza, 2100 + k, { amt: 1, sb: 1 }); }
+  for (let k = 0; k < 8; k++) papel([[60 + k * 130, 700], [80 + k * 130, 560], [100 + k * 130, 700]], '#3E6A3A', 2110 + k, { amt: 2, sb: 3 });
+  if (r < D(i) * 0.5) fig(480, 700, 280, { ...OFELIA, triste: true }, 26); else { g.save(); g.globalAlpha = 1 - ease((r - D(i) * 0.5) / 1); fig(480, 700, 280, { ...OFELIA, triste: true }, 26); g.restore(); } };
+V2.calavera = (i, r, t) => { cielo('#5A5E6A', '#8A8E98'); tierra(820, '#5A4A3A'); for (let k = 0; k < 5; k++) { const x = 60 + k * 220 + (k > 1 ? 120 : 0); papel(rectP(x - 10, 600, 20, 220), '#7A7268', 2120 + k, { amt: 1 }); papel(rectP(x - 50, 650, 100, 20), '#7A7268', 2126 + k, { amt: 1 }); }
+  fig(420, 830, 360, { ...HAMLET, pose: 'offer' }, 1); craneo(560, 470 + Math.sin(t) * 4, 1.1); pop(sentAt(i, 1, 0.2), 560, 280, () => cartel('YORICK', 560, 280, C.blanco, 46, 2130, '#22222A'), 0.3);
+  if (t > sentAt(i, 2, 0)) pop(sentAt(i, 2, 0), 500, 120, () => cartel('LA MUERTE NOS IGUALA', 500, 120, C.marino, 46, 2131, '#FFF8EC'), 0.3); };
+V2.duelo = (i, r, t) => { cielo('#5A3A2A', '#2A1A14'); tierra(820, '#6A4A2E'); const f = Math.sin(t * 6);
+  fig(300 + f * 20, 830, 340, { ...HAMLET, pose: 'offer' }, 1); espada(360 + f * 20, 590, 1.57 + f * 0.15, 1.2, 2140); fig(700 - f * 20, 830, 340, { ...LAERTES, pose: 'offer', mira: -1 }, 27); espada(640 - f * 20, 590, -1.57 - f * 0.15, 1.2, 2145);
+  g.save(); g.fillStyle = '#4ADA6A'; g.globalAlpha = 0.8; g.beginPath(); g.arc(640 - f * 20 - 260, 590 + 0, 9, 0, 7); g.fill(); g.restore();
+  const t1 = sentAt(i, 1, 0.2); if (t > t1) { papel(rectP(820, 640, 160, 20), '#5A3A22', 2150, { amt: 1 }); copa(900, 640, 1, 2151); rey(900, 830, 230, CLAUDIO, 4); for (let k = 0; k < 2; k++) { g.fillStyle = '#4ADA6A'; g.beginPath(); g.arc(900 + k * 14 - 7, 520 - ((t * 2 + k * 0.5) % 1) * 30, 6, 0, 7); g.fill(); } } };
+V2.final = (i, r, t) => { cielo('#2A1418', '#120A0C'); tierra(820, '#2A1A16');
+  const vel = [[180, 0], [360, 1], [640, 2], [820, 3]]; vel.forEach(([x, k]) => { const off = t > sentAt(i, Math.min(k, 3), 0.6); papel(rectP(x - 22, 620, 44, 200), '#EDE6D4', 2160 + k, { amt: 1 }); if (!off) { const fl = 1 + 0.15 * Math.sin(t * 12 + k); papel([[x - 14 * fl, 620], [x, 560 - 10 * fl], [x + 14 * fl, 620]], C.mostaza, 2170 + k, { amt: 1, sb: 0 }); } else { g.fillStyle = 'rgba(200,200,200,.4)'; g.fillRect(x - 3, 540 - ((t * 40) % 60), 6, 40); } });
+  const t2 = sentAt(i, 2, 0.4); if (t > t2) { const p = ease((t - t2) / 1); g.save(); g.translate(500, lerp(400, 800, p)); g.rotate(p * 2.5); corona(0, 0, 1.6, 2180); g.restore(); }
+  if (t > sentAt(i, 3, 0)) pop(sentAt(i, 3, 0), 500, 140, () => cartel('EL RESTO ES SILENCIO', 500, 140, C.blanco, 50, 2181, '#22222A'), 0.4); };
+V2.dudar = (i, r, t) => { cielo('#EFE4CC', '#D9C59E'); tierra(820, C.kraft); g.save(); g.translate(500, 420); for (let k = 0; k < 3; k++) { g.save(); g.rotate(t * (1 + k) * (k % 2 ? -1 : 1)); g.strokeStyle = [C.gris, C.teal, OR][k]; g.lineWidth = 16; g.beginPath(); g.arc(0, 0, 90 + k * 50, 0, 4.5); g.stroke(); g.restore(); } g.restore();
+  fig(500, 830, 300, { ...PERS, triste: true }, 1); pop(sentAt(i, 0, 0.4), 500, 120, () => cartel('PENSAR DE MÁS = NO DECIDIR', 500, 120, C.marino, 44, 2190, '#FFF8EC'), 0.3);
+  if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 720, () => cartel('LA VENGANZA NO TIENE GANADORES', 500, 720, C.rojo, 38, 2191, '#FFF8EC'), 0.3); };
+V2.ahora = (i, r, t) => { cielo('#F7DCA8', '#E8A86A'); papel(circP(820, 180, 90), '#FFE6A0', 2200, { amt: 2, sb: 0 }); tierra(820, C.kraft);
+  g.save(); g.translate(260, 820); papel(rectP(-90, -300, 180, 300), '#5A3A22', 2201, { amt: 2 }); papel(rectP(-75, -285, 150, 285), '#7A5232', 2202, { amt: 2, sb: 3 }); g.restore();
+  const p = ease((t - sentAt(i, 0, 0.6)) / 1.2); fig(lerp(560, 300, p), 830, 320, { ...PERS, pose: 'walk', fase: t * 6, mira: -1 }, 1);
+  pop(T.cuts[i] + 0.4, 260, 440, () => cartel('HOY', 260, 440, OR, 60, 2203, '#FFF8EC'), 0.3); };
 
 function cierre(i, t) {
   const sc = S.scenes[i], r = t - T.cuts[i], L = HZ ? { cx: 960, cy: 560, sz: 780, tx: 964, y1: 950, y2: 1025, q1: 90, q2: 160 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610, q1: 300, q2: 380 };
