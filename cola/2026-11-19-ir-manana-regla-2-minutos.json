@@ -1,4 +1,17 @@
-{"id": "2026-11-19-ir-manana-regla-2-minutos", "pagina": "impulsoreal", "motor": "diorama",
- "historia": "diorama/2026-11-19-regla-2-minutos-reel.json", "hora": "2026-11-19 11:30",
- "redes": ["facebook", "instagram", "youtube", "tiktok"],
- "formato": "IR · Reflexión", "tema": "Hábitos: la regla de los 2 minutos", "titulo": "No te falta motivación: la regla de los 2 minutos #Shorts"}
+{
+ "id": "2026-11-19-ir-manana-regla-2-minutos",
+ "pagina": "impulsoreal",
+ "motor": "diorama",
+ "historia": "diorama/2026-11-19-regla-2-minutos-reel.json",
+ "hora": "2026-11-19 11:30",
+ "redes": [
+  "facebook",
+  "instagram",
+  "youtube",
+  "tiktok"
+ ],
+ "formato": "IR · Reflexión",
+ "tema": "Hábitos: la regla de los 2 minutos",
+ "titulo": "No te falta motivación: la regla de los 2 minutos #Shorts",
+ "nota": "reintento con secretos de Impulso Real"
+}
