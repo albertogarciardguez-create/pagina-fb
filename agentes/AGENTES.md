@@ -24,15 +24,33 @@ Columnas: A Fecha (AAAA-MM-DD) · B Hora (HH:MM, Ciudad Juárez) · C Página (`
 - Nunca pongas tokens ni llaves en el repositorio, en la hoja ni en mensajes. Los secretos viven solo en GitHub.
 - Clona con `git clone --depth 30 https://github.com/albertogarciardguez-create/pagina-fb ~/pagina-fb` (tiempo de espera generoso) y corre `bash setup.sh` antes de generar.
 
+## Objetivo número 1: MONETIZAR (vistas + seguidores/suscriptores)
+
+Todo lo que planean y producen los agentes debe acercar a las páginas a los requisitos de pago de `config/metas.json`. El avance real está en la sección **“Camino a monetizar”** de `cola/metricas/RESUMEN.md`:
+
+| Plataforma | Requisito para cobrar | Qué hacen los agentes |
+|---|---|---|
+| **YouTube Shorts** | Nivel 1: 500 suscriptores + 3 M vistas de Shorts en 90 días (+3 subidas). Nivel 2 (anuncios): 1,000 suscriptores + 10 M vistas en 90 días; **desde el 1 feb 2027 serán 20 M para canales nuevos**, así que hay que entrar antes. | Todo reel se sube también como Short. Cierre con “Suscríbete para la parte 2”. Prioridad a formatos con más vistas. |
+| **TikTok** (Creator Rewards, México) | 10,000 seguidores + 100,000 vistas en 30 días; **solo pagan videos de 1 minuto o más**. | Pizarras, historias y top: **61–75 s**. La noticia puede seguir corta (25–35 s), porque su objetivo es atraer seguidores. |
+| **Facebook** (Monetización de contenido) | Por invitación; paga por el rendimiento de contenido **original**. Hitos internos: 2,500 → 5,000 → 10,000 seguidores. | 100 % contenido original (ya lo es). Alberto registra su interés en Panel profesional → Monetización. |
+| **Instagram** | Sin programa de pago directo; sirve para seguidores y marcas. Hitos: 1,000 → 5,000 → 10,000. | Los mismos reels a su hora. |
+
+Palancas que deben usar siempre:
+- **Series con continuación** (“Parte 1 de 3”, “mañana te cuento cómo terminó”): la razón número 1 para seguir una cuenta es querer ver lo que sigue.
+- **Llamado a seguir en el último segundo**, con un motivo concreto (“Sígueme: cada noche una historia que te cambia el día”), no un “sígueme” genérico.
+- Gancho en el segundo 0–2 y **retención** (re-gancho a la mitad, final en bucle). Las vistas que cuentan para cobrar son las que pasan de los primeros segundos.
+- Mismo video en las 4 redes el mismo día. Constancia: 4 videos diarios, sin días vacíos.
+- Temas con alto volumen de búsqueda (Liga MX en jornada y Liguilla; historias bíblicas y estoicas conocidas) y títulos que se buscan (“¿Por qué…?”, “La historia de…”).
+
 ## Indicadores (lo que deben mover los agentes)
 
 Cada publicación se mide en FB, IG y YouTube (TikTok no da datos sin auditoría) y se resume en **`cola/metricas/RESUMEN.md`** (lo actualiza el publicador una vez al día):
 
-**Puntaje = 10×seguidores nuevos + 4×compartidos + 3×comentarios + 2×guardados + reacciones + reproducciones/100**
+**Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×comentarios + guardados + 0.5×reacciones**
 
-Seguidores, compartidos y comentarios pesan más porque son lo que hace crecer y monetizar la página; las reproducciones solas no. Metas:
+Seguidores y reproducciones pesan más porque son los requisitos para monetizar. Metas:
 - Semanas 1–2: línea base (todas las franjas y formatos con al menos 5 publicaciones).
-- Desde la semana 3: **+10 % de puntaje promedio por semana** por página y **seguidores netos al alza** (tabla de seguidores del RESUMEN).
+- Desde la semana 3: **+10 % de puntaje promedio por semana** por página y **seguidores netos al alza en cada red**.
 - Regla 60/30/10 al planear: 60 % de las publicaciones con los 2 formatos de mejor puntaje, 30 % variaciones de esos (otro gancho, otro tema), 10 % experimentos nuevos.
 - Un formato o una hora que quede en el último lugar dos semanas seguidas (con ≥5 publicaciones) se reemplaza o se mueve ±90 min hacia la mejor hora.
 - Los agentes diarios copian la **estructura y el tipo de gancho** del Top 5 (no el tema).
@@ -55,16 +73,16 @@ Reglas para todos: **gancho en el segundo 0–2** (dato, pregunta o afirmación 
 | Formato | Duración | Estructura | Indicador que busca |
 |---|---|---|---|
 | SF · Noticia | 25–35 s | 1 dato o polémica · 2 contexto (marcador/tabla) · 3–4 lo que nadie está diciendo · 5 qué sigue (Liguilla, próximo rival) · 6 pregunta A/B | Comentarios, compartidos |
-| SF · Pizarra F7 | 45–60 s | 1 problema del amateur (“¿te pasa que…?”) · 2–4 solución en 3 pasos en la pizarra · 5 error común · 6 ejercicio · 7 “guárdalo y mándaselo a tu equipo” · 8 pregunta | Guardados, compartidos |
-| SF · Debate/Top | 30–40 s | Top 5 en cuenta regresiva, el #1 polémico · “¿quién falta?” | Comentarios |
-| IR · Reflexión | 30–45 s | 1 frase contraintuitiva · 2 metáfora visual en papel · 3 tres aplicaciones a la vida diaria · 4 giro · 5 “Envíaselo a quien lo necesite” + pregunta | Compartidos, seguidores |
-| IR · Historia | 50–75 s | 1 empieza en el momento más tenso · 2 contexto · 3 conflicto · 4 giro · 5 la lección en una frase · 6 pregunta personal (“¿Tú qué habrías hecho?”) | Seguidores, retención |
+| SF · Pizarra F7 | 61–70 s | 1 problema del amateur (“¿te pasa que…?”) · 2–4 solución en 3 pasos en la pizarra · 5 error común · 6 ejercicio · 7 “guárdalo y mándaselo a tu equipo” · 8 pregunta | Guardados, compartidos |
+| SF · Debate/Top | 61–70 s | Top 5 en cuenta regresiva, el #1 polémico · “¿quién falta?” | Comentarios |
+| IR · Reflexión | 35–45 s | 1 frase contraintuitiva · 2 metáfora visual en papel · 3 tres aplicaciones a la vida diaria · 4 giro · 5 “Envíaselo a quien lo necesite” + pregunta | Compartidos, seguidores |
+| IR · Historia | 61–75 s | 1 empieza en el momento más tenso · 2 contexto · 3 conflicto · 4 giro · 5 la lección en una frase · 6 pregunta personal (“¿Tú qué habrías hecho?”) | Seguidores, retención |
 
 En el texto del post: primera línea = el gancho (no el título), una pregunta para comentar y 3–5 hashtags.
 
 ## 1 · Planeador semanal (sábado)
 
-1. Lee esta guía y **`cola/metricas/RESUMEN.md`** (si existe): formatos, horas y días con mejor y peor puntaje, Top 5 y tendencia de seguidores. Revisa `git log --oneline -40` y los nombres de `stories/` y `diorama/` de los últimos 14 días para no repetir temas.
+1. Lee esta guía y **`cola/metricas/RESUMEN.md`** (si existe): “Camino a monetizar”, formatos, horas y días con mejor y peor puntaje, Top 5 y tendencia de seguidores. Planea para cerrar la brecha más grande de ese avance (p. ej., si YouTube va lento en suscriptores, más series con “parte 2”). Revisa `git log --oneline -40` y los nombres de `stories/` y `diorama/` de los últimos 14 días para no repetir temas.
 2. Busca en la web el calendario de Liga MX (o Liguilla) y de FC Juárez para la semana siguiente (lunes a domingo).
 3. Escribe en la hoja (añade filas debajo de las existentes, H vacío) **4 publicaciones por día** con las franjas de la tabla de horarios (o las que los datos indiquen) y aplicando la regla 60/30/10:
 
@@ -78,7 +96,7 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
    - En B pon la hora de Facebook; si IG o TikTok van a otra hora, escríbelo en F (“IG 12:30 · TikTok 19:00”).
    - En G pon `FB, IG, YT, TikTok` salvo que Alberto haya pedido otra cosa en la hoja.
    - En E y F escribe tema y gancho concretos (la frase de los primeros 2 s), no genéricos. Marca con “🧪” los experimentos del 10 %.
-4. Mensaje final (corto): link de la hoja, 3 líneas de lo que dicen los indicadores (qué funcionó, qué se cambia y por qué), la tabla compacta de la semana y “Marca Sí / Sí con cambios / No en la columna Autorizado. Lo que no esté autorizado el día anterior no se produce.”
+4. Mensaje final (corto): link de la hoja, el avance hacia monetizar (seguidores y vistas por red contra la meta), 3 líneas de lo que dicen los indicadores (qué funcionó, qué se cambia y por qué), la tabla compacta de la semana y “Marca Sí / Sí con cambios / No en la columna Autorizado. Lo que no esté autorizado el día anterior no se produce.”
 
 ## 2 · Agente Impulso Real (diario, 5:20 am) y 3 · Agente Señor Fútbol (diario, 8:45 am)
 

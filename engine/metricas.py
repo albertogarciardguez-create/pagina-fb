@@ -6,8 +6,8 @@ Salida (en git, la leen los agentes):
   cola/metricas/seguidores.json      seguidores por cuenta y día
   cola/metricas/RESUMEN.md           ranking de formatos, horarios y publicaciones por PUNTAJE
 
-PUNTAJE (lo que buscan los agentes) = 10×seguidores nuevos + 4×compartidos + 3×comentarios + 2×guardados
-                                       + 1×reacciones + reproducciones/100
+PUNTAJE (lo que buscan los agentes) = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×comentarios
+                                       + 1×guardados + 0.5×reacciones
 Si una red no da un dato, ese término vale 0. TikTok no da métricas sin auditoría: se excluye.
 """
 import glob, json, os, sys, time, urllib.parse
@@ -20,7 +20,8 @@ from redes import GRAPH, ErrorRed, http  # noqa: E402
 
 TZ = ZoneInfo("America/Ciudad_Juarez")
 DIR = os.path.join(ROOT, "cola", "metricas")
-PESOS = {"seguidores": 10, "compartidos": 4, "comentarios": 3, "guardados": 2, "reacciones": 1}
+PESOS = {"seguidores": 10, "compartidos": 2, "comentarios": 2, "guardados": 1, "reacciones": 0.5}
+VISTAS_POR_PUNTO = 25  # cada 25 reproducciones = 1 punto (vistas y seguidores son lo que lleva a monetizar)
 FB_MET = {"blue_reels_play_count": "reproducciones", "post_impressions_unique": "alcance",
           "post_video_followers": "seguidores", "post_video_avg_time_watched": "seg_promedio_vistos",
           "post_video_social_actions": "_social", "post_video_likes_by_reaction_type": "_reacciones"}
@@ -88,7 +89,7 @@ def youtube(vid, pref):
 
 
 def puntaje(m):
-    return round(sum(PESOS[k] * m.get(k, 0) for k in PESOS) + m.get("reproducciones", 0) / 100, 1)
+    return round(sum(PESOS[k] * m.get(k, 0) for k in PESOS) + m.get("reproducciones", 0) / VISTAS_POR_PUNTO, 1)
 
 
 def seguidores(hoy):
@@ -107,6 +108,18 @@ def seguidores(hoy):
                 fila["instagram"] = http("GET", f"{GRAPH}/{env(pref + '_IG_ID')}?fields=followers_count&access_token={_q(tok)}").get("followers_count")
         except ErrorRed as e:
             fila["error"] = str(e)[:200]
+    for pref, nombre in (("SF", "senorfutbol"), ("IR", "impulsoreal")):
+        cid, sec, ref = env("YT_CLIENT_ID"), env("YT_CLIENT_SECRET"), env(f"{pref}_YT_REFRESH")
+        if not (cid and sec and ref):
+            continue
+        try:
+            tok = http("POST", "https://oauth2.googleapis.com/token", {"client_id": cid, "client_secret": sec,
+                                                                        "refresh_token": ref, "grant_type": "refresh_token"})["access_token"]
+            it = http("GET", "https://www.googleapis.com/youtube/v3/channels?part=statistics&mine=true",
+                      headers={"Authorization": f"Bearer {tok}"}).get("items", [{}])
+            hist.setdefault(hoy, {}).setdefault(nombre, {})["youtube"] = int(it[0].get("statistics", {}).get("subscriberCount", 0))
+        except (ErrorRed, KeyError, IndexError, ValueError):
+            pass
     json.dump(hist, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     return hist
 
@@ -162,7 +175,7 @@ def _tabla(grupos, titulo):
 
 def resumen(pubs, hist):
     out = [f"# Indicadores — actualizado {datetime.now(TZ):%Y-%m-%d %H:%M}",
-           "Puntaje = 10×seguidores nuevos + 4×compartidos + 3×comentarios + 2×guardados + reacciones + reproducciones/100 (FB+IG+YT)."]
+           "Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×comentarios + guardados + 0.5×reacciones (FB+IG+YT)."]
     for pag in ("senorfutbol", "impulsoreal"):
         ps = {k: v for k, v in pubs.items() if v["pagina"] == pag}
         if not ps:
@@ -193,6 +206,7 @@ def resumen(pubs, hist):
             seg = sum(r.get("seguidores", 0) for r in v["redes"].values())
             comp = sum(r.get("compartidos", 0) for r in v["redes"].values())
             out.append(f"| {pag} | {k} | {v.get('puntaje', 0)} | {seg} seguidores nuevos, {comp} compartidos |")
+    out += camino(pubs, hist)
     dias = sorted(hist)[-8:]
     if dias:
         out += ["\n## Seguidores (últimos días)", "| Día | SF FB | SF IG | IR FB | IR IG |", "|---|---|---|---|---|"]
@@ -200,6 +214,39 @@ def resumen(pubs, hist):
             g = lambda p, r: hist[d].get(p, {}).get(r, "–")
             out.append(f"| {d} | {g('senorfutbol', 'facebook')} | {g('senorfutbol', 'instagram')} | {g('impulsoreal', 'facebook')} | {g('impulsoreal', 'instagram')} |")
     open(os.path.join(DIR, "RESUMEN.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+
+
+def camino(pubs, hist):
+    """Avance hacia los requisitos de monetización de config/metas.json."""
+    try:
+        metas = json.load(open(os.path.join(ROOT, "config", "metas.json"), encoding="utf-8"))
+    except Exception:
+        return []
+    ahora = datetime.now(TZ).timestamp()
+    ult = hist[sorted(hist)[-1]] if hist else {}
+
+    def vistas(pag, red, dias):
+        return sum(v["redes"].get(red, {}).get("reproducciones", 0) for v in pubs.values() if v["pagina"] == pag and
+                   datetime.strptime(v["hora"], "%Y-%m-%d %H:%M").replace(tzinfo=TZ).timestamp() >= ahora - dias * 86400)
+
+    def pct(a, b):
+        return f"{min(100, 100 * a / b):.0f} %" if b else "–"
+    yt, tt, fb = metas["youtube"], metas["tiktok"], metas["facebook"]
+    out = ["\n## Camino a monetizar", "| Página | Meta | Actual | Avance |", "|---|---|---|---|"]
+    for pag, nom in (("senorfutbol", "SF"), ("impulsoreal", "IR")):
+        a = ult.get(pag, {})
+        fbs = a.get("facebook") or 0
+        hito = next((h for h in fb["seguidores_hito"] if h > fbs), fb["seguidores_hito"][-1])
+        out.append(f"| {nom} | Facebook: {hito:,} seguidores (hito) | {fbs:,} | {pct(fbs, hito)} |")
+        ys, yv = a.get("youtube") or 0, vistas(pag, "youtube", 90)
+        for n in ("nivel1", "nivel2"):
+            m = yt[n]
+            out.append(f"| {nom} | YouTube {m['nombre']}: {m['suscriptores']:,} subs + {m['vistas_shorts_90d']:,} vistas Shorts/90 d "
+                       f"| {ys:,} subs · {yv:,} vistas | {pct(ys, m['suscriptores'])} subs · {pct(yv, m['vistas_shorts_90d'])} vistas |")
+        out.append(f"| {nom} | TikTok {tt['nombre']}: {tt['seguidores']:,} seguidores + {tt['vistas_30d']:,} vistas/30 d (videos ≥1 min) "
+                   f"| (TikTok no da datos por API: revisa TikTok Studio) | – |")
+    out.append(f"\n> {yt['nivel2']['aviso']} {tt['aviso']} {fb['aviso']}")
+    return out
 
 
 if __name__ == "__main__":
