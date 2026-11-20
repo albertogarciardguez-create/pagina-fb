@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "3249410598583202",
+   "url": "https://www.facebook.com/reel/3249410598583202",
+   "programado": true,
+   "fecha": "2026-11-20 09:29"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-20-sf-noticia-liderato-j17.mp4",
+ "actualizado": "2026-11-20 09:29"
+}
