@@ -908,6 +908,90 @@ V2.abrazoYa = (i, r, t) => { cielo('#FBEBD0', '#F0CFA0'); tierra(840, C.kraft); 
   if (p >= 1) pop(T.cuts[i] + 1.8, 520, 300, () => corazon(520, 300, 5 + 0.25 * Math.sin(t * 5), C.coral, 2500), 0.4);
   if (t > sentAt(i, 1, 0)) pop(sentAt(i, 1, 0), 500, 120, () => cartel('NO LO DEJES PARA DESPUÉS', 500, 120, OR, 48, 2501, '#FFF8EC'), 0.3); };
 
+// ---- escenas V2 de "Págate primero" ----
+function billete(x, y, s, a, sd) { g.save(); g.translate(x, y); g.rotate(a || 0); g.scale(s, s); papel(rectP(-90, -45, 180, 90), '#7FB069', sd || 2600, { amt: 1.5, sb: 4 }); papel(ellP(0, 0, 26, 30, 16), '#5E8C4A', (sd || 2600) + 1, { amt: 1, sb: 1 }); texto('$', 0, 3, 40, '#FBF7EE'); g.restore(); }
+function moneda(x, y, s, sd) { papel(circP(x, y, 32 * s), C.mostaza, sd || 2610, { amt: 1, sb: 4 }); texto('$', x, y + 2, 34 * s, '#7A5A1A'); }
+function cartera(x, y, s, sd) { papel(rectP(x - 130 * s, y - 80 * s, 260 * s, 160 * s), '#6B4A2E', sd || 2620, { amt: 2 }); papel(rectP(x - 130 * s, y - 80 * s, 260 * s, 50 * s), '#5A3A22', (sd || 2620) + 1, { amt: 1.5, sb: 3 }); }
+function sobre(x, y, s, txt, col, sd) { papel(rectP(x - 110 * s, y - 70 * s, 220 * s, 140 * s), col || C.blanco, sd, { amt: 2 }); g.save(); g.strokeStyle = 'rgba(0,0,0,.18)'; g.lineWidth = 4; g.beginPath(); g.moveTo(x - 105 * s, y - 65 * s); g.lineTo(x, y - 5 * s); g.lineTo(x + 105 * s, y - 65 * s); g.stroke(); g.restore(); texto(txt, x, y + 32 * s, 34 * s, '#222'); }
+function cochinito(x, y, s, sd) { g.save(); g.translate(x, y); g.scale(s, s); [[-90, 70], [-40, 80], [40, 80], [90, 70]].forEach(([lx, ly], k) => papel(rectP(lx - 18, ly - 20, 36, 60), '#D98A9A', sd + 10 + k, { amt: 1, sb: 3 })); papel(ellP(0, 0, 170, 120, 36), '#EFA3B2', sd, { amt: 2.5 }); papel(ellP(165, 10, 40, 34, 20), '#D98A9A', sd + 1, { amt: 1.5, sb: 3 }); papel([[60, -100], [90, -160], [110, -90]], '#D98A9A', sd + 2, { amt: 1, sb: 3 }); papel(rectP(-50, -122, 100, 14), '#5A3A3A', sd + 3, { amt: 0.5, sb: 1 }); g.fillStyle = '#2A1E16'; g.beginPath(); g.arc(100, -30, 9, 0, 7); g.fill(); g.restore(); }
+function cuenta(x, y, txt, col, sd) { papel(rectP(x - 150, y - 180, 300, 360), C.blanco, sd, { amt: 2.5 }); papel(rectP(x - 150, y - 180, 300, 80), col, sd + 1, { amt: 1.5, sb: 3 }); texto(txt, x, y - 138, 40, '#FFF8EC'); }
+V2.sobra = (i, r, t) => { cielo('#E9E1D0', '#D3C4A6'); tierra(860, '#B08A5E'); fig(250, 860, 330, { ...YO, pose: 'offer', triste: r > 1.4 }, 1); g.save(); g.translate(470, 600); g.rotate(Math.PI); cartera(0, 0, 0.9, 2620); g.restore();
+  for (let k = 0; k < 3; k++) { const f = cl((r - 0.5 - k * 0.3) / 2.5, 0, 1); if (f > 0) { const x = 470 + f * 300 + Math.sin(t * 4 + k) * 30, y = 600 - f * 300 + k * 50, w = 0.4 + 0.6 * Math.abs(Math.sin(t * 14 + k)); papel([[x, y], [x - 40, y - 30 * w], [x - 30, y + 10]], '#9A948A', 2630 + k, { amt: 1, sb: 2 }); papel([[x, y], [x + 40, y - 30 * w], [x + 30, y + 10]], '#9A948A', 2633 + k, { amt: 1, sb: 2 }); } }
+  pop(T.cuts[i] + 0.2, 500, 170, () => cartel('LO QUE SOBRA', 500, 170, C.blanco, 56, 2640), 0.3); pop(T.cuts[i] + 1.4, 720, 420, () => cartel('$0', 720, 420, C.rojo, 96, 2641, '#FFF8EC'), 0.3); };
+V2.quincena = (i, r, t) => { cielo('#F3E9D2', '#E2CFA8'); tierra(860, C.kraft); fig(150, 860, 300, { ...YO, pose: 'ask', fase: t * 3 }, 1); cartel('QUINCENA', 470, 160, C.verde, 60, 2650, '#FFF8EC');
+  let n = 6; [['RENTA', 0.4, 780, 330], ['ANTOJOS', 0.6, 780, 470], ['PAGOS', 0.8, 780, 610]].forEach(([w, f, x, y], k) => { const t0 = sentAt(i, 0, f); if (t > t0) n -= 2; pop(t0, x, y, () => cartel(w, x, y, C.coral, 48, 2651 + k, '#FFF8EC'), 0.3); });
+  for (let k = 0; k < n; k++) billete(440 + (k % 2) * 30, 780 - k * 50, 1, (k % 3 - 1) * 0.08, 2660 + k * 2);
+  const t1 = sentAt(i, 1, 0.3); pop(t1, 520, 760, () => cartel('NO QUEDA NADA', 520, 760, C.rojo, 62, 2680, '#FFF8EC'), 0.3); };
+V2.primero = (i, r, t) => { cielo('#FBEBD0', '#F0CFA0'); tierra(880, C.kraft); const p = ease((t - sentAt(i, 0, 0.45)) / 0.8);
+  ['RENTA', 'PAGOS', 'ANTOJOS'].forEach((w, k) => sobre(580, lerp(300 + k * 160, 460 + k * 160, p), 1.15, w, C.blanco, 2700 + k * 2));
+  sobre(580 + Math.sin(p * Math.PI) * 300, lerp(780, 320, p), 1.25, 'TÚ', OR, 2710); fig(170, 880, 300, { ...YO, pose: p >= 1 ? 'arms' : 'stand' }, 1);
+  pop(sentAt(i, 1, 0), 500, 60, () => cartel('EL HOMBRE MÁS RICO', 500, 60, C.marino, 44, 2712, '#FFF8EC'), 0.3); pop(sentAt(i, 1, 0) + 0.2, 500, 135, () => cartel('DE BABILONIA', 500, 135, C.marino, 44, 2713, '#FFF8EC'), 0.3); };
+V2.alcancia = (i, r, t) => { cielo('#BFE0EE', '#E9F1E4'); tierra(860, '#8FB06A'); cochinito(500, 650, 1.3, 2720); const t0 = sentAt(i, 1, 0);
+  if (t > t0) for (let k = 0; k < 2; k++) { const f = ((t - t0) / 0.9 + k * 0.5) % 1; moneda(500, lerp(240, 480, f * f), 1, 2730 + k); }
+  pop(sentAt(i, 1, 0.55), 500, 150, () => cartel('ANTES DE GASTAR', 500, 150, OR, 58, 2735, '#FFF8EC'), 0.3); };
+V2.automatico = (i, r, t) => { cielo('#2A2F44', '#454B66'); tierra(860, '#3A3F52'); cuenta(230, 540, 'NÓMINA', C.teal, 2740); cuenta(770, 540, 'AHORRO', OR, 2743);
+  const t0 = sentAt(i, 1, 0); let n = 0; if (t > t0) { n = Math.min(6, Math.floor((t - t0) / 0.5)); for (let k = 0; k < 2; k++) { const f = ((t - t0) + k * 0.5) % 1; moneda(lerp(230, 770, f), 470 - Math.sin(f * Math.PI) * 240, 1, 2750 + k); } }
+  for (let k = 0; k < n; k++) moneda(770, 660 - k * 30, 1, 2760 + k); for (let k = 0; k < 6 - n; k++) moneda(230, 660 - k * 30, 1, 2770 + k);
+  pop(T.cuts[i] + 0.3, 500, 140, () => cartel('AUTOMÁTICO', 500, 140, C.blanco, 64, 2780), 0.3); pop(sentAt(i, 1, 0.75), 770, 800, () => cartel('NI LO VES', 770, 800, C.marino, 48, 2781, '#FFF8EC'), 0.3); };
+V2.cinco = (i, r, t) => { cielo('#FBEBD0', '#F0CFA0'); tierra(860, C.kraft); const t1 = sentAt(i, 1, 0.5);
+  pop(t1, 500, 260, () => { const s = 1 + 0.03 * Math.sin(t * 6); g.save(); g.translate(500, 260); g.scale(s, s); papel(circP(0, 0, 150), OR, 2790, { amt: 3 }); texto('5%', 0, 8, 130, '#FFF8EC'); g.restore(); }, 0.35);
+  const t2 = sentAt(i, 2, 0); for (let k = 0; k < 5; k++) if (t > t2 + k * 0.25) for (let j = 0; j <= k * 2 + 1; j++) moneda(180 + k * 160, 830 - j * 26, 1, 2800 + k * 12 + j);
+  pop(t2 + 1.3, 500, 500, () => cartel('EL HÁBITO', 500, 500, C.verde, 60, 2870, '#FFF8EC'), 0.3); };
+V2.paz = (i, r, t) => { noche(t); tierra(840, '#2A3048'); sillon(330, 840); fig(320, 800, 300, { ...YO, pose: 'sit' }, 1); cochinito(740, 740, 0.7, 2720);
+  pop(T.cuts[i] + 0.3, 460, 200, () => cartel('DINERO', 460, 200, C.blanco, 60, 2880), 0.3); const t1 = sentAt(i, 1, 0);
+  if (t > t1) { const p = ease((t - t1) / 0.4); g.save(); g.strokeStyle = C.rojo; g.lineWidth = 12; g.beginPath(); g.moveTo(340, 205); g.lineTo(lerp(340, 580, p), 195); g.stroke(); g.restore(); } pop(t1 + 0.5, 460, 370, () => cartel('PAZ', 460, 370, OR, 100, 2881, '#FFF8EC'), 0.35); };
+V2.envia = (i, r, t) => { cielo('#C9D8E0', '#A9BFCB'); tierra(860, '#8FB06A'); g.save(); g.translate(500, 500); g.rotate(-0.05); papel(rectP(-190, -320, 380, 640), '#22252C', 2890, { amt: 2 }); papel(rectP(-165, -280, 330, 560), '#F2F2EE', 2891, { amt: 1.5, sb: 2 });
+  pop(T.cuts[i] + 0.4, 0, -160, () => { papel(rectP(-140, -230, 280, 140), '#DCF2C8', 2892, { amt: 1.5, sb: 3 }); texto('"ESTA QUINCENA', 0, -182, 28, '#222'); texto('SÍ AHORRO"', 0, -140, 28, '#222'); }, 0.3);
+  pop(sentAt(i, 0, 0.5), 0, 40, () => { papel(rectP(-140, -20, 280, 120), OR, 2893, { amt: 1.5, sb: 3 }); texto('MÍRALO', 0, 40, 40, '#FFF8EC'); }, 0.3); g.restore();
+  pop(T.cuts[i] + 0.2, 500, 110, () => cartel('ENVÍASELO', 500, 110, OR, 56, 2894, '#FFF8EC'), 0.3); };
+
+// ---- escenas V2 de "Diógenes y Alejandro" ----
+const DIOG = { cam: '#B8A88A', pan: '#8A7A5A', canas: true }, ALEJ = { cam: '#7A2A3A', pan: '#C9A06A', pelo: '#B8863A' }, SOLD = { cam: '#8A3A2A', pan: '#5A4A3A' };
+function tinaja(x, y, s, sd) { g.save(); g.translate(x, y); g.scale(s, s); papel(ellP(0, -150, 170, 150, 40), '#B5683A', sd || 2900, { amt: 3 }); papel(ellP(-120, -160, 30, 110, 24), '#2A1A12', (sd || 2900) + 1, { amt: 2, sb: 2 }); g.restore(); }
+function solP(x, y, r, t) { g.save(); g.translate(x, y); g.rotate(t * 0.3); for (let k = 0; k < 12; k++) { g.rotate(Math.PI / 6); papel([[-14, -r - 10], [0, -r - 60], [14, -r - 10]], C.mostaza, 2910 + k, { amt: 1, sb: 2 }); } g.restore(); papel(circP(x, y, r), '#F2C14E', 2925, { amt: 2 }); }
+function acostado(x, y, h, o, sd) { g.save(); g.translate(x, y); g.rotate(-Math.PI / 2); fig(0, 0, h, o, sd); g.restore(); }
+function dia(t) { cielo('#F7D98A', '#F2E6C4'); solP(830, 150, 80, t); tierra(840, '#D8B36A'); }
+function sombraP(x0, x1, a) { if (a <= 0) return; g.save(); g.fillStyle = `rgba(30,20,10,${0.32 * a})`; g.beginPath(); g.moveTo(x0, 845); g.lineTo(x1, 740); g.lineTo(x1 - 60, 852); g.lineTo(x0, 852); g.closePath(); g.fill(); g.restore(); }
+function columnas(gy) { for (let k = 0; k < 5; k++) { const x = 120 + k * 190; papel(rectP(x - 28, gy - 520, 56, 520), '#EDE6D4', 2930 + k, { amt: 2 }); } papel(rectP(60, gy - 580, 880, 70), '#E2D8C0', 2936, { amt: 2 }); papel([[60, gy - 580], [500, gy - 700], [940, gy - 580]], '#D8CCB0', 2937, { amt: 2 }); }
+function vaso(x, y, a, sd) { g.save(); g.translate(x, y); g.rotate(a || 0); papel([[-22, -50], [22, -50], [16, 0], [-16, 0]], '#B5683A', sd || 2960, { amt: 1, sb: 3 }); g.restore(); }
+function cofre(x, y, s, sd) { papel(rectP(x - 90 * s, y - 100 * s, 180 * s, 100 * s), '#7A4A2A', sd, { amt: 2 }); for (let k = 0; k < 5; k++) moneda(x - 60 * s + k * 30 * s, y - 108 * s - (k % 2) * 16, 0.7 * s, sd + 2 + k); papel(rectP(x - 95 * s, y - 60 * s, 190 * s, 14 * s), C.mostaza, sd + 1, { amt: 1, sb: 2 }); }
+V2.sol = (i, r, t) => { dia(t); tinaja(150, 840, 0.8, 2900); acostado(600, 800, 260, DIOG, 41); const t1 = sentAt(i, 1, 0.3), p = ease((t - t1 - 0.5) / 0.8), kx = lerp(780, 920, p);
+  sombraP(kx - 30, 290, 1 - p); rey(kx, 840, 340, { ...ALEJ, mira: -1, pose: p > 0 && p < 1 ? 'walk' : 'offer', fase: t * 6 }, 60);
+  pop(T.cuts[i] + 0.3, 500, 170, () => cartel('PÍDEME LO QUE QUIERAS', 500, 170, C.blanco, 46, 3040), 0.3); pop(t1, 500, 330, () => cartel('QUÍTATE DEL SOL', 500, 330, C.rojo, 62, 3041, '#FFF8EC'), 0.3); };
+V2.corinto = (i, r, t) => { cielo('#F7D98A', '#F2E6C4'); tierra(840, '#D8B36A'); columnas(840);
+  [90, 210, 330, 670, 790, 910].forEach((x, k) => fig(x, 870, 220, { cam: [C.teal, C.coral, C.marino, C.verde, C.mostaza, '#6A4A8A'][k], pan: '#4A3A2A', pose: (Math.floor(t * 3) + k) % 2 ? 'arms' : 'stand', mira: x > 500 ? -1 : 1 }, 50 + k));
+  rey(500, 850, 340, { ...ALEJ, pose: 'arms' }, 60);
+  pop(T.cuts[i] + 0.2, 500, 110, () => cartel('CORINTO, GRECIA', 500, 110, C.marino, 50, 2940, '#FFF8EC'), 0.3); pop(sentAt(i, 1, 0.1), 500, 290, () => cartel('ALEJANDRO MAGNO', 500, 290, OR, 56, 2941, '#FFF8EC'), 0.3); };
+V2.felicitan = (i, r, t) => { cielo('#F2DDB0', '#E3B97A'); tierra(840, '#D8B36A'); rey(840, 840, 340, { ...ALEJ, mira: -1 }, 60);
+  for (let k = 0; k < 4; k++) { const x = 100 + k * 140; pop(T.cuts[i] + 0.2 + k * 0.35, x, 700, () => fig(x, 845, 250, { cam: [C.teal, C.marino, C.verde, '#6A4A8A'][k], pan: '#4A3A2A', pose: 'offer', lean: 0.12 }, 70 + k), 0.3); }
+  const t1 = sentAt(i, 1, 0); pop(t1, 680, 720, () => { g.save(); g.setLineDash([16, 12]); g.strokeStyle = C.rojo; g.lineWidth = 7; g.strokeRect(625, 600, 110, 245); g.restore(); texto('?', 680, 720, 110, C.rojo); }, 0.3);
+  pop(t1 + 0.3, 500, 200, () => cartel('MENOS UNO', 500, 200, C.rojo, 64, 2950, '#FFF8EC'), 0.3); };
+V2.tinaja = (i, r, t) => { dia(t); tinaja(520, 840, 1.6, 2900); fig(220, 840, 290, { ...DIOG, pose: 'sit' }, 41);
+  pop(T.cuts[i] + 0.2, 500, 150, () => cartel('DIÓGENES', 500, 150, C.marino, 60, 2955, '#FFF8EC'), 0.3); pop(T.cuts[i] + D(i) * 0.6, 500, 300, () => cartel('SIN CASA · SIN NADA', 500, 300, OR, 52, 2956, '#FFF8EC'), 0.3); };
+V2.vaso = (i, r, t) => { dia(t); papel(rectP(700, 520, 120, 320), '#C9BFA8', 2961, { amt: 2 }); papel(circP(760, 520, 30), '#8A857D', 2962, { amt: 1 });
+  for (let k = 0; k < 6; k++) { const f = (t * 1.6 + k / 6) % 1; g.fillStyle = 'rgba(110,170,220,.85)'; g.beginPath(); g.ellipse(700 - 40 * f, 545 + f * 160, 7, 11, 0, 0, 7); g.fill(); }
+  fig(640, 840, 180, { cam: C.coral, pan: C.marino, pose: 'offer', lean: 0.25 }, 80);
+  const t1 = sentAt(i, 1, 0), p = cl((t - t1) / 0.8, 0, 1); fig(250, 840, 300, { ...DIOG, pose: t > t1 ? 'arms' : 'stand' }, 41);
+  if (t < t1) vaso(305, 715, 0, 2960); else vaso(lerp(305, 480, p), lerp(715, 835, p) - Math.sin(p * Math.PI) * 260, p * 4, 2960);
+  pop(T.cuts[i] + 0.4, 500, 150, () => cartel('CON LAS MANOS', 500, 150, C.blanco, 52, 2963), 0.3); pop(t1 + 0.3, 500, 300, () => cartel('¿PARA QUÉ UN VASO?', 500, 300, OR, 52, 2964, '#FFF8EC'), 0.3); };
+V2.busca = (i, r, t) => { dia(t); tinaja(870, 840, 0.8, 2900); acostado(700, 802, 240, DIOG, 41); const p = ease((t - T.cuts[i] - 0.2) / Math.max(1, D(i) * 0.6));
+  fig(lerp(-60, 170, p), 845, 300, { ...SOLD, pose: p < 1 ? 'walk' : 'stand', fase: t * 6 }, 90); rey(lerp(60, 330, p), 840, 330, { ...ALEJ, pose: p < 1 ? 'walk' : 'stand', fase: t * 6 + 1 }, 60);
+  pop(sentAt(i, 1, 0.3), 640, 470, () => cartel('TOMANDO EL SOL', 640, 470, C.mostaza, 50, 2970, '#222'), 0.3); };
+V2.pide = (i, r, t) => { dia(t); acostado(900, 802, 240, DIOG, 41); cofre(520, 840, 1.1, 2980); rey(300, 840, 360, { ...ALEJ, pose: 'offer' }, 60);
+  pop(sentAt(i, 0, 0.4), 500, 220, () => cartel('PÍDEME LO QUE QUIERAS', 500, 220, OR, 50, 2990, '#FFF8EC'), 0.3); };
+V2.tapas = (i, r, t) => { dia(t); acostado(620, 787, 330, DIOG, 41); sombraP(770, 240, 1); rey(800, 840, 380, { ...ALEJ, mira: -1, pose: 'offer' }, 60);
+  pop(T.cuts[i] + 0.3, 460, 170, () => cartel('NI SE LEVANTÓ', 460, 170, C.blanco, 52, 3000), 0.3);
+  const t1 = sentAt(i, 1, 0.4); pop(t1, 460, 310, () => { const s = 1 + 0.04 * Math.sin(t * 8); g.save(); g.translate(460, 310); g.scale(s, s); cartel('ME TAPAS EL SOL', 0, 0, C.rojo, 62, 3001, '#FFF8EC'); g.restore(); }, 0.3); };
+V2.sinofuera = (i, r, t) => { cielo('#F2DDB0', '#E3B97A'); tierra(840, '#D8B36A'); const t1 = sentAt(i, 1, 0);
+  for (let k = 0; k < 3; k++) fig(110 + k * 130, 845 - (Math.floor(t * 8 + k) % 2) * 6, 260, { ...SOLD, pose: t < t1 ? 'arms' : 'stand' }, 90 + k);
+  if (t < t1) pop(T.cuts[i] + 0.3, 240, 450, () => cartel('JA, JA', 240, 450, C.blanco, 48, 3010), 0.25);
+  rey(740, 840, 360, { ...ALEJ, mira: -1 }, 60);
+  pop(t1 + 0.4, 500, 170, () => cartel('SI NO FUERA ALEJANDRO', 500, 170, C.marino, 46, 3011, '#FFF8EC'), 0.3); pop(sentAt(i, 1, 0.65), 500, 300, () => cartel('SERÍA DIÓGENES', 500, 300, OR, 62, 3012, '#FFF8EC'), 0.3); };
+V2.libre = (i, r, t) => { dia(t); const gl = g.createRadialGradient(500, 500, 20, 500, 500, 520); gl.addColorStop(0, 'rgba(255,225,140,.55)'); gl.addColorStop(1, 'rgba(255,225,140,0)'); g.fillStyle = gl; g.fillRect(-500, -500, 2000, 2000);
+  fig(500, 840, 380, { ...DIOG, pose: 'arms' }, 41);
+  [90, 200, 310, 690, 800, 910, 150, 850].forEach((x, k) => { const f = (t * 0.5 + k / 8) % 1; moneda(x, lerp(-40, 860, f), 0.8, 3020 + k); });
+  pop(sentAt(i, 0, 0.5), 500, 200, () => cartel('NADIE LO PUEDE COMPRAR', 500, 200, OR, 50, 3030, '#FFF8EC'), 0.3); };
+
 function cierre(i, t) {
   const sc = S.scenes[i], r = t - T.cuts[i], L = HZ ? { cx: 960, cy: 560, sz: 780, tx: 964, y1: 950, y2: 1025, q1: 90, q2: 160 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610, q1: 300, q2: 380 };
   g.fillStyle = logoBg; g.fillRect(0, 0, W, H);

@@ -1,0 +1,242 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-20-pagate-primero-reel",
+ "titulo": "Págate primero (reel)",
+ "scenes": [
+  {
+   "say": "Si ahorras lo que te sobra, nunca vas a ahorrar.",
+   "vis": "sobra",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Llega la quincena, y se va en renta, antojos y pagos. Al final del mes, no queda nada.",
+   "vis": "quincena",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "La regla es al revés: págate primero. Es la idea del libro El hombre más rico de Babilonia.",
+   "vis": "primero",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Uno. El día que cobras, aparta una parte antes de gastar un solo peso.",
+   "vis": "alcancia",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "tag": "1"
+  },
+  {
+   "say": "Dos. Que sea automático: una transferencia a otra cuenta, para que ni lo veas.",
+   "vis": "automatico",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ],
+   "tag": "2"
+  },
+  {
+   "say": "Tres. Empieza chico, aunque sea el cinco por ciento. Lo importante es el hábito.",
+   "vis": "cinco",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 2,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.8,
+     "g": 0.5
+    }
+   ],
+   "tag": "3"
+  },
+  {
+   "say": "Porque no ahorras para tener dinero. Ahorras para tener paz.",
+   "vis": "paz",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "nivel": 1.15
+  },
+  {
+   "say": "Envíaselo a quien siempre dice: esta quincena sí ahorro.",
+   "vis": "envia",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "nivel": 1.25
+  },
+  {
+   "say": "¿Cuánto te vas a pagar primero esta quincena? ¿Cinco o diez por ciento? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Cuánto te pagas primero?",
+    "¿5% o 10%?"
+   ]
+  }
+ ],
+ "thumb": [
+  "PÁGATE",
+  "PRIMERO"
+ ],
+ "post": "Si ahorras lo que te sobra, nunca vas a ahorrar. 💸 Págate primero. Envíaselo a quien dice “esta quincena sí ahorro”. ¿5% o 10%? 👇",
+ "hashtags": [
+  "#FinanzasPersonales",
+  "#Ahorro",
+  "#PágatePrimero",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.bankinter.com/blog/finanzas-personales/hombre-mas-rico-de-babilonia-libro-resumen"
+ ],
+ "redes_textos": {
+  "facebook": "Si ahorras lo que te sobra, nunca vas a ahorrar. 💸\n\nLa regla es al revés: págate primero (la idea de “El hombre más rico de Babilonia”).\n1️⃣ El día que cobras, aparta una parte antes de gastar un peso.\n2️⃣ Hazlo automático: transferencia a otra cuenta.\n3️⃣ Empieza chico, aunque sea 5%. Lo importante es el hábito.\n\nNo ahorras para tener dinero. Ahorras para tener paz.\n\nEnvíaselo a quien siempre dice “esta quincena sí ahorro”. ¿Cuánto te vas a pagar primero: 5% o 10%? 👇\n\n#FinanzasPersonales #Ahorro #PágatePrimero #ImpulsoReal",
+  "instagram": "Si ahorras lo que te sobra, nunca vas a ahorrar. 💸\n\nPágate primero: aparta, automatiza y empieza chico.\n\n📌 Guárdalo para tu próxima quincena y mándaselo a quien dice “esta sí ahorro”. ¿5% o 10%? 👇\n\n#FinanzasPersonales #Ahorro #PágatePrimero #DineroInteligente #ImpulsoReal",
+  "youtube": {
+   "titulo": "Si ahorras lo que te sobra, nunca vas a ahorrar #Shorts",
+   "descripcion": "Págate primero: la idea de El hombre más rico de Babilonia en 3 pasos. ¿Cuánto te vas a pagar primero esta quincena?\n\n#FinanzasPersonales #Ahorro #PágatePrimero"
+  },
+  "tiktok": "Si ahorras lo que te sobra, nunca vas a ahorrar 💸 ¿5% o 10%? #ahorro #finanzaspersonales #dinero #ImpulsoReal"
+ }
+}

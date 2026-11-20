@@ -1,0 +1,239 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-20-diogenes-alejandro-reel",
+ "titulo": "Diógenes y Alejandro (reel)",
+ "scenes": [
+  {
+   "say": "El hombre más poderoso del mundo le ofreció lo que quisiera. Y él le pidió que se quitara del sol.",
+   "vis": "sol",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Corinto, Grecia, hace más de dos mil trescientos años. Alejandro Magno acababa de ser nombrado jefe de los griegos.",
+   "vis": "corinto",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.5
+    },
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Políticos y filósofos fueron a felicitarlo. Todos, menos uno.",
+   "vis": "felicitan",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Diógenes. Vivía en una tinaja, sin casa y sin nada.",
+   "vis": "tinaja",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "piedra",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.5
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Un día vio a un niño beber agua con las manos. Y tiró su único vaso.",
+   "vis": "vaso",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.5
+    },
+    {
+     "k": "piedra",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Así que Alejandro fue a buscarlo. Lo encontró acostado, tomando el sol.",
+   "vis": "busca",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.5
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Alejandro le dijo: pídeme lo que quieras.",
+   "vis": "pide",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Diógenes ni se levantó. Solo le dijo: hazte a un lado, que me tapas el sol.",
+   "vis": "tapas",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.7
+    }
+   ],
+   "corte": true
+  },
+  {
+   "say": "Los que estaban ahí se burlaron. Pero Alejandro dijo: si yo no fuera Alejandro, sería Diógenes.",
+   "vis": "sinofuera",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.5
+    },
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Porque al que no necesita nada, nadie lo puede comprar.",
+   "vis": "libre",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "nivel": 1.2
+  },
+  {
+   "say": "¿Y tú, qué le habrías pedido? ¿Oro, o que se quitara del sol? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué le habrías pedido?",
+    "¿Oro o el sol?"
+   ]
+  }
+ ],
+ "thumb": [
+  "QUÍTATE",
+  "DEL SOL"
+ ],
+ "post": "El hombre más poderoso del mundo le ofreció lo que quisiera. Él le pidió que se quitara del sol. ☀️ ¿Tú qué le habrías pedido? 👇",
+ "hashtags": [
+  "#Diógenes",
+  "#AlejandroMagno",
+  "#Filosofía",
+  "#Estoicismo",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.livius.org/sources/content/plutarch/plutarchs-alexander/alexander-and-diogenes/",
+  "https://www.worldhistory.org/article/740/the-life-of-diogenes-of-sinope-in-diogenes-laertiu/"
+ ],
+ "redes_textos": {
+  "facebook": "El hombre más poderoso del mundo le ofreció lo que quisiera. Él le pidió que se quitara del sol. ☀️\n\nCorinto, hace más de 2,300 años. Alejandro Magno acababa de ser nombrado jefe de los griegos y todos fueron a felicitarlo… menos Diógenes, el filósofo que vivía en una tinaja y que tiró su único vaso al ver a un niño beber con las manos.\n\nAlejandro fue a buscarlo: “Pídeme lo que quieras”. Y Diógenes: “Hazte a un lado, que me tapas el sol”. Cuenta Plutarco que Alejandro dijo: “Si yo no fuera Alejandro, sería Diógenes”.\n\nAl que no necesita nada, nadie lo puede comprar.\n\n¿Tú qué le habrías pedido: oro o que se quitara del sol? 👇\n\n#Diógenes #AlejandroMagno #Filosofía #Estoicismo #ImpulsoReal",
+  "instagram": "Le ofrecieron lo que quisiera… y pidió que se quitaran del sol. ☀️\n\nDiógenes y Alejandro Magno: al que no necesita nada, nadie lo puede comprar.\n\n📩 Compártelo con quien necesite recordarlo. ¿Oro o el sol? 👇\n\n#Diógenes #AlejandroMagno #Filosofía #Estoicismo #ImpulsoReal",
+  "youtube": {
+   "titulo": "Le ofreció lo que quisiera… y le pidió que se quitara del sol #Shorts",
+   "descripcion": "Diógenes y Alejandro Magno en Corinto, según Plutarco. Al que no necesita nada, nadie lo puede comprar. ¿Tú qué le habrías pedido?\n\n#Diógenes #Filosofía #Estoicismo"
+  },
+  "tiktok": "Le ofreció lo que quisiera… y pidió que se quitara del sol ☀️ ¿Oro o el sol? #filosofia #diogenes #estoicismo #ImpulsoReal"
+ }
+}
