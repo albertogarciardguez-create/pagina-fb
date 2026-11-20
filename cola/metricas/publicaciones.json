@@ -1,1 +1,30 @@
-{}
+{
+ "2026-11-19-sf-noticia-juarez-atlas": {
+  "pagina": "senorfutbol",
+  "hora": "2026-11-19 13:15",
+  "dia": "Thu",
+  "formato": "SF · Noticia",
+  "tema": "Previa J17: Bravos vs Atlas",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-20 07:01"
+ },
+ "2026-11-19-ir-manana-regla-2-minutos": {
+  "pagina": "impulsoreal",
+  "hora": "2026-11-19 11:30",
+  "dia": "Thu",
+  "formato": "IR · Reflexión",
+  "tema": "Hábitos: la regla de los 2 minutos",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-20 07:01"
+ }
+}
