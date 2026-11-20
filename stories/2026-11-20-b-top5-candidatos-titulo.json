@@ -1,0 +1,315 @@
+{
+ "id": "2026-11-20-b-top5-candidatos-titulo",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "TOP 5",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Uno de estos cinco va a ser campeón… y el número uno te va a molestar.",
+   "captions": [
+    "Uno de estos <em>cinco</em>",
+    "va a ser <em>campeón</em>…",
+    "y el número <em>1</em>",
+    "te va a <em>molestar</em>."
+   ],
+   "tag": "APERTURA 2026",
+   "title": "TOP 5\nCANDIDATOS",
+   "sub": "Al título · antes de la última jornada"
+  },
+  {
+   "type": "stats",
+   "bg": "5",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el cinco, Atlas. Veintisiete puntos y ya está en la Liguilla… pero viene de perder cuatro a uno con Pachuca.",
+   "captions": [
+    "En el <em>5</em>,",
+    "<em>Atlas</em>.",
+    "<em>27</em> puntos",
+    "y ya está",
+    "en la Liguilla…",
+    "pero viene de perder",
+    "<em>4 a 1</em>",
+    "con Pachuca."
+   ],
+   "items": [
+    {
+     "n": "#5",
+     "label": "ATLAS",
+     "color": "ink"
+    },
+    {
+     "n": "27",
+     "label": "PUNTOS",
+     "color": "green"
+    },
+    {
+     "n": "1-4",
+     "label": "VS PACHUCA",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "4",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el cuatro, Toluca. También con veintisiete… y en la jornada pasada le metió cuatro a Monterrey.",
+   "captions": [
+    "En el <em>4</em>,",
+    "<em>Toluca</em>.",
+    "También con <em>27</em>…",
+    "y en la jornada pasada",
+    "le metió <em>4</em>",
+    "a Monterrey."
+   ],
+   "items": [
+    {
+     "n": "#4",
+     "label": "TOLUCA",
+     "color": "ink"
+    },
+    {
+     "n": "27",
+     "label": "PUNTOS",
+     "color": "green"
+    },
+    {
+     "n": "4-0",
+     "label": "VS MONTERREY",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "3",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el tres, Chivas. Treinta puntos, empató con León… y el domingo recibe al líder.",
+   "captions": [
+    "En el <em>3</em>,",
+    "<em>Chivas</em>.",
+    "<em>30</em> puntos,",
+    "empató con León…",
+    "y el domingo",
+    "recibe al <em>líder</em>."
+   ],
+   "items": [
+    {
+     "n": "#3",
+     "label": "CHIVAS",
+     "color": "ink"
+    },
+    {
+     "n": "30",
+     "label": "PUNTOS",
+     "color": "green"
+    },
+    {
+     "n": "1-1",
+     "label": "VS LEÓN",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "TOP 2",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Y ahora sí… los dos de arriba. Aquí es donde empieza la discusión.",
+   "captions": [
+    "Y ahora sí…",
+    "los <em>dos</em> de arriba.",
+    "Aquí es donde",
+    "empieza la <em>discusión</em>."
+   ],
+   "tag": "LO QUE VIENE",
+   "title": "EL TOP 2",
+   "sub": "Aquí empieza la discusión"
+  },
+  {
+   "type": "stats",
+   "bg": "2",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el dos, América. Treinta puntos y más quince de diferencia de goles, la mejor de los tres de arriba.",
+   "captions": [
+    "En el <em>2</em>,",
+    "<em>América</em>.",
+    "<em>30</em> puntos",
+    "y <em>+15</em>",
+    "de diferencia de goles,",
+    "la <em>mejor</em>",
+    "de los tres de arriba."
+   ],
+   "items": [
+    {
+     "n": "#2",
+     "label": "AMÉRICA",
+     "color": "ink"
+    },
+    {
+     "n": "30",
+     "label": "PUNTOS",
+     "color": "green"
+    },
+    {
+     "n": "+15",
+     "label": "DIF. GOLES",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "1",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Y en el uno… Cruz Azul. Líder con treinta y dos puntos, y es el campeón vigente.",
+   "captions": [
+    "Y en el <em>1</em>…",
+    "<em>Cruz Azul</em>.",
+    "Líder con <em>32</em> puntos,",
+    "y es el",
+    "<em>campeón vigente</em>."
+   ],
+   "items": [
+    {
+     "n": "#1",
+     "label": "CRUZ AZUL",
+     "color": "green"
+    },
+    {
+     "n": "32",
+     "label": "PUNTOS",
+     "color": "green"
+    },
+    {
+     "n": "10",
+     "label": "TÍTULOS",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "35",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En mayo ganó la Décima contra Pumas. Y si el domingo le gana a Chivas, es superlíder y cierra en casa toda la Liguilla.",
+   "captions": [
+    "En mayo",
+    "ganó <em>la Décima</em>",
+    "contra Pumas.",
+    "Y si el domingo",
+    "le gana a Chivas,",
+    "es <em>superlíder</em>",
+    "y cierra <em>en casa</em>",
+    "toda la Liguilla."
+   ],
+   "tag": "POR QUÉ ES EL #1",
+   "title": "CAMPEÓN\nY LÍDER",
+   "sub": "Clausura 2026 · 32 puntos"
+  },
+  {
+   "type": "ranking",
+   "bg": "TOP",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Así queda el top: Cruz Azul, América, Chivas, Toluca y Atlas. ¿Quién te falta?",
+   "captions": [
+    "Así queda el top:",
+    "<em>Cruz Azul</em>,",
+    "América,",
+    "Chivas,",
+    "Toluca",
+    "y Atlas.",
+    "¿Quién te <em>falta</em>?"
+   ],
+   "title": "CANDIDATOS",
+   "sub": "J16",
+   "rows": [
+    {
+     "name": "CRUZ AZUL",
+     "team": "LÍDER",
+     "val": 32,
+     "hl": true
+    },
+    {
+     "name": "AMÉRICA",
+     "team": "2°",
+     "val": 30
+    },
+    {
+     "name": "CHIVAS",
+     "team": "3°",
+     "val": 30
+    },
+    {
+     "name": "TOLUCA",
+     "team": "4°",
+     "val": 27
+    },
+    {
+     "name": "ATLAS",
+     "team": "5°",
+     "val": 27
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "speed": 1.15,
+   "say": "Tú dime: ¿Cruz Azul repite como campeón… o te quedas con América? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿<em>Cruz Azul</em>",
+    "repite como campeón…",
+    "o te quedas",
+    "con <em>América</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "TÚ DIME:",
+   "q": "¿QUIÉN ES\nCAMPEÓN?",
+   "opts": [
+    "CRUZ AZUL REPITE",
+    "AMÉRICA"
+   ]
+  }
+ ],
+ "post": "Uno de estos cinco va a ser campeón… y el #1 te va a molestar. 5. Atlas (27) · 4. Toluca (27) · 3. Chivas (30) · 2. América (30, +15) · 1. Cruz Azul (32, líder y campeón vigente). ¿Quién te falta? ¿Cruz Azul repite o te quedas con América? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Apertura2026",
+  "#Liguilla",
+  "#CruzAzul",
+  "#América"
+ ],
+ "sources": [
+  "https://www.excelsior.com.mx/deportes/cruz-azul-es-lider-tabla-general-y-liguilla-momento-apertura-2026",
+  "https://www.tudn.com/futbol/liga-mx/america-cruz-azul-y-chivas-panorama-para-definir-el-liderato-de-la-liga-mx",
+  "https://www.clarosports.com/us/cruz-azul-america-y-chivas-pelean-la-cima-de-la-liga-mx-apertura-2026-como-ver-desde-ee-uu/",
+  "https://www.clarosports.com/futbol/liga-mx/la-decima-cruz-azul-es-campeon-del-clausura-2026-de-la-liga-mx-con-una-voltereta-sobre-pumas/",
+  "https://www.record.com.mx/historia/ultima-llamada-rumbo-a-la-liguilla-fechas-horarios-y-partidos-de-la-jornada-17-de-la-liga-mx-2026111606381896080"
+ ],
+ "redes_textos": {
+  "facebook": "Uno de estos cinco va a ser campeón… y el #1 te va a molestar. 🏆\n\n5️⃣ Atlas · 27 pts, ya en Liguilla (viene de perder 4-1 con Pachuca)\n4️⃣ Toluca · 27 pts (le metió 4-0 a Monterrey)\n3️⃣ Chivas · 30 pts (recibe al líder el domingo)\n2️⃣ América · 30 pts y +15, la mejor diferencia de los de arriba\n1️⃣ Cruz Azul · 32 pts, líder y campeón vigente\n\n¿Quién te falta? ¿Cruz Azul repite o te quedas con América? 👇\n\n#LigaMX #Apertura2026 #Liguilla #CruzAzul #América",
+  "instagram": "Top 5 candidatos al título del Apertura 2026 🏆 El #1 te va a molestar.\n\nGuárdalo y compártelo con el que dice que su equipo es el favorito. ¿Quién te falta? 👇\n\n#LigaMX #Apertura2026 #Liguilla #CruzAzul #América",
+  "youtube": {
+   "titulo": "Top 5 candidatos al título del Apertura 2026 (el #1 te va a molestar) #Shorts",
+   "descripcion": "Cruz Azul, América, Chivas, Toluca y Atlas: quién llega mejor a la Liguilla del Apertura 2026. ¿Quién te falta? Te leo en los comentarios.\n\n#LigaMX #Liguilla #CruzAzul #América"
+  },
+  "tiktok": "Top 5 candidatos al título 🏆 El #1 te va a molestar. ¿Quién falta? #LigaMX #Liguilla #CruzAzul #América"
+ }
+}

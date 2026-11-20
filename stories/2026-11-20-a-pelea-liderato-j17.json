@@ -1,0 +1,233 @@
+{
+ "id": "2026-11-20-a-pelea-liderato-j17",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "J17",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Tres equipos, un solo primer lugar… y noventa minutos para definirlo.",
+   "captions": [
+    "<em>Tres</em> equipos,",
+    "un solo",
+    "<em>primer lugar</em>…",
+    "y <em>90</em> minutos",
+    "para definirlo."
+   ],
+   "items": [
+    {
+     "n": "32",
+     "label": "CRUZ AZUL",
+     "color": "green"
+    },
+    {
+     "n": "30",
+     "label": "AMÉRICA",
+     "color": "ink"
+    },
+    {
+     "n": "30",
+     "label": "CHIVAS",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "bg": "1°",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Cruz Azul llega arriba con treinta y dos, y América y Chivas lo persiguen con treinta.",
+   "captions": [
+    "<em>Cruz Azul</em> llega arriba",
+    "con <em>32</em>,",
+    "y América y Chivas",
+    "lo persiguen",
+    "con <em>30</em>."
+   ],
+   "title": "TABLA GENERAL",
+   "sub": "J16",
+   "rows": [
+    {
+     "pos": 1,
+     "team": "CRUZ AZUL",
+     "pts": 32,
+     "hl": true
+    },
+    {
+     "pos": 2,
+     "team": "AMÉRICA",
+     "pts": 30
+    },
+    {
+     "pos": 3,
+     "team": "CHIVAS",
+     "pts": 30
+    },
+    {
+     "pos": 4,
+     "team": "TOLUCA",
+     "pts": 27
+    },
+    {
+     "pos": 5,
+     "team": "ATLAS",
+     "pts": 27
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "35",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Si Cruz Azul gana en Guadalajara, llega a treinta y cinco y es superlíder, sin importar lo que haga América.",
+   "captions": [
+    "Si <em>Cruz Azul</em> gana",
+    "en Guadalajara,",
+    "llega a <em>35</em>",
+    "y es <em>superlíder</em>,",
+    "sin importar",
+    "lo que haga América."
+   ],
+   "tag": "CRUZ AZUL",
+   "title": "GANA Y ES\nSUPERLÍDER",
+   "sub": "Visita a Chivas el domingo"
+  },
+  {
+   "type": "compare",
+   "bg": "DIF",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Pero ojo… si empata y América le gana a Tigres, el líder es América, por diferencia de goles: más quince contra más once.",
+   "captions": [
+    "Pero ojo…",
+    "si <em>empata</em>",
+    "y América",
+    "le gana a Tigres,",
+    "el líder es <em>América</em>,",
+    "por diferencia de goles:",
+    "<em>+15</em> contra <em>+11</em>."
+   ],
+   "title": "SI EMPATA CRUZ AZUL",
+   "left": "AMÉRICA",
+   "right": "CRUZ AZUL",
+   "rows": [
+    {
+     "label": "PUNTOS",
+     "l": "33",
+     "r": "33"
+    },
+    {
+     "label": "DIF. GOLES",
+     "l": "+15",
+     "r": "+11"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "33",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "¿Y Chivas? Tiene que ganarle al líder en el Akron… y esperar que América no gane.",
+   "captions": [
+    "¿Y <em>Chivas</em>?",
+    "Tiene que ganarle",
+    "al <em>líder</em>",
+    "en el Akron…",
+    "y esperar que",
+    "América <em>no gane</em>."
+   ],
+   "tag": "CHIVAS",
+   "title": "GANAR Y\nESPERAR",
+   "sub": "Necesita que América no gane"
+  },
+  {
+   "type": "headline",
+   "bg": "1°",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Y el premio vale la pena: el superlíder cierra en casa todas sus series de Liguilla.",
+   "captions": [
+    "Y el premio",
+    "vale la pena:",
+    "el <em>superlíder</em>",
+    "cierra <em>en casa</em>",
+    "todas sus series",
+    "de Liguilla."
+   ],
+   "tag": "EL PREMIO",
+   "title": "CERRAR\nEN CASA",
+   "sub": "Todas las series de Liguilla"
+  },
+  {
+   "type": "headline",
+   "bg": "HOY",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Y arranca hoy: Juárez contra Atlas, a las ocho. América visita a Tigres el sábado… y el domingo, Chivas contra Cruz Azul. Hora de Juárez.",
+   "captions": [
+    "Y arranca <em>hoy</em>:",
+    "<em>Juárez</em> contra Atlas,",
+    "a las <em>8</em>.",
+    "América visita a Tigres",
+    "el <em>sábado</em>…",
+    "y el <em>domingo</em>,",
+    "Chivas contra Cruz Azul.",
+    "Hora de Juárez."
+   ],
+   "tag": "HORA DE JUÁREZ",
+   "title": "VIE 8 PM\nSÁB 8 PM\nDOM 4:07 PM",
+   "sub": "Juárez-Atlas · Tigres-América · Chivas-Cruz Azul"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "speed": 1.15,
+   "say": "Tú dime: ¿Cruz Azul termina primero… o se lo arrebatan? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿<em>Cruz Azul</em>",
+    "termina primero…",
+    "o se lo <em>arrebatan</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "TÚ DIME:",
+   "q": "¿QUIÉN TERMINA\nPRIMERO?",
+   "opts": [
+    "CRUZ AZUL",
+    "SE LO QUITAN"
+   ]
+  }
+ ],
+ "post": "Tres equipos, un solo primer lugar y 90 minutos. Cruz Azul (32) es superlíder si gana en Guadalajara; si empata y América (30) le gana a Tigres, el líder es América por diferencia de goles (+15 vs +11). Chivas (30) necesita ganar y que América no gane. ¿Cruz Azul termina primero o se lo arrebatan? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Apertura2026",
+  "#CruzAzul",
+  "#América",
+  "#Chivas"
+ ],
+ "sources": [
+  "https://www.tudn.com/futbol/liga-mx/america-cruz-azul-y-chivas-panorama-para-definir-el-liderato-de-la-liga-mx",
+  "https://www.clarosports.com/us/cruz-azul-america-y-chivas-pelean-la-cima-de-la-liga-mx-apertura-2026-como-ver-desde-ee-uu/",
+  "https://www.record.com.mx/historia/ultima-llamada-rumbo-a-la-liguilla-fechas-horarios-y-partidos-de-la-jornada-17-de-la-liga-mx-2026111606381896080",
+  "https://www.excelsior.com.mx/deportes/cruz-azul-es-lider-tabla-general-y-liguilla-momento-apertura-2026"
+ ],
+ "redes_textos": {
+  "facebook": "Tres equipos, un solo primer lugar y 90 minutos. 🔥\n\nCruz Azul (32) es superlíder si gana en el Akron, pase lo que pase. Si empata y América (30) le gana a Tigres, el líder es América por diferencia de goles: +15 contra +11. ¿Chivas (30)? Tiene que ganarle al líder y esperar que América no gane.\n\nEl premio: el superlíder cierra en casa todas sus series de Liguilla.\n\n📅 Hora de Juárez: hoy Juárez vs Atlas 8:00 pm · sáb Tigres vs América 8:00 pm · dom Chivas vs Cruz Azul 4:07 pm\n\n¿Cruz Azul termina primero o se lo arrebatan? 👇\n\n#LigaMX #Apertura2026 #CruzAzul #América #Chivas",
+  "instagram": "Tres equipos, un solo primer lugar. 👀\n\nCruz Azul gana y es superlíder. Si empata y gana América, se lo quitan por diferencia de goles. Chivas necesita ganar y esperar.\n\n¿Quién termina primero? Comenta 👇 y compártelo con tu compa del América o de Chivas.\n\n#LigaMX #Apertura2026 #CruzAzul #América #Chivas",
+  "youtube": {
+   "titulo": "Cruz Azul, América o Chivas: así se define el superlíder en la J17 #Shorts",
+   "descripcion": "Cruz Azul 32, América 30, Chivas 30: lo que necesita cada uno para terminar primero del Apertura 2026. ¿Quién se queda con el liderato? Te leo en los comentarios.\n\n#LigaMX #CruzAzul #América #Chivas"
+  },
+  "tiktok": "3 equipos, 1 primer lugar 🔥 ¿Cruz Azul, América o Chivas? #LigaMX #CruzAzul #América #Chivas"
+ }
+}
