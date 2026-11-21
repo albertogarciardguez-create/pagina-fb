@@ -9,8 +9,11 @@
   },
   "youtube": {
    "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, SF_TIKTOK_REFRESH"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-20-sf-top5-candidatos.mp4",
- "actualizado": "2026-11-20 09:32"
+ "actualizado": "2026-11-20 20:01"
 }
