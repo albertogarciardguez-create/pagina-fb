@@ -1,4 +1,4 @@
-# Indicadores — actualizado 2026-11-20 07:01
+# Indicadores — actualizado 2026-11-21 07:01
 Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×comentarios + guardados + 0.5×reacciones (FB+IG+YT).
 
 ## Señor Fútbol
@@ -7,24 +7,29 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| SF · Noticia | 0.0 | 1 |
+| SF · Noticia | 0.0 | 2 |
+| SF · Pizarra F7 | 0.0 | 1 |
 
 ### Por hora
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| 13:15 | 0.0 | 1 |
+| 13:15 | 0.0 | 2 |
+| 20:30 | 0.0 | 1 |
 
 ### Por día
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| Thu | 0.0 | 1 |
+| Thu | 0.0 | 2 |
+| Fri | 0.0 | 1 |
 
 ### Top 5 publicaciones
 | Publicación | Puntaje | FB | IG | YT |
 |---|---|---|---|---|
 | 2026-11-19-sf-noticia-juarez-atlas | 0.0 | – | – | – |
+| 2026-11-20-sf-noticia-liderato-j17 | 0.0 | – | – | – |
+| 2026-11-19-sf-pizarra-pared | 0.0 | – | – | – |
 
 ## Impulso Real
 
@@ -32,35 +37,43 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| IR · Reflexión | 0.0 | 1 |
+| IR · Reflexión | 0.0 | 2 |
+| IR · Historia | 0.0 | 1 |
 
 ### Por hora
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
 | 11:30 | 0.0 | 1 |
+| 07:30 | 0.0 | 1 |
+| 21:00 | 0.0 | 1 |
 
 ### Por día
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| Thu | 0.0 | 1 |
+| Thu | 0.0 | 2 |
+| Fri | 0.0 | 1 |
 
 ### Top 5 publicaciones
 | Publicación | Puntaje | FB | IG | YT |
 |---|---|---|---|---|
 | 2026-11-19-ir-manana-regla-2-minutos | 0.0 | – | – | – |
+| 2026-11-20-ir-manana-pagate-primero | 0.0 | – | – | – |
+| 2026-11-19-ir-noche-jose-hermanos | 0.0 | – | – | – |
 
 ## Candidatas a promoción (apagado: $0, solo sugerencia)
 | Página | Publicación | Puntaje | Por qué |
 |---|---|---|---|
 | senorfutbol | 2026-11-19-sf-noticia-juarez-atlas | 0.0 | 0 seguidores nuevos, 0 compartidos |
+| senorfutbol | 2026-11-20-sf-noticia-liderato-j17 | 0.0 | 0 seguidores nuevos, 0 compartidos |
 | impulsoreal | 2026-11-19-ir-manana-regla-2-minutos | 0.0 | 0 seguidores nuevos, 0 compartidos |
+| impulsoreal | 2026-11-20-ir-manana-pagate-primero | 0.0 | 0 seguidores nuevos, 0 compartidos |
 
 ## Camino a monetizar
 | Página | Meta | Actual | Avance |
 |---|---|---|---|
-| SF | Facebook: 2,500 seguidores (hito) | 1,628 | 65 % |
+| SF | Facebook: 2,500 seguidores (hito) | 1,626 | 65 % |
 | SF | YouTube Fan funding / Shopping: 500 subs + 3,000,000 vistas Shorts/90 d | 0 subs · 0 vistas | 0 % subs · 0 % vistas |
 | SF | YouTube Anuncios (YPP): 1,000 subs + 10,000,000 vistas Shorts/90 d | 0 subs · 0 vistas | 0 % subs · 0 % vistas |
 | SF | TikTok Creator Rewards (México): 10,000 seguidores + 100,000 vistas/30 d (videos ≥1 min) | (TikTok no da datos por API: revisa TikTok Studio) | – |
@@ -76,3 +89,4 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 |---|---|---|---|---|
 | 2026-11-19 | 1633 | – | 39 | – |
 | 2026-11-20 | 1628 | – | 40 | – |
+| 2026-11-21 | 1626 | – | 40 | – |
