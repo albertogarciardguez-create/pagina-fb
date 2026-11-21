@@ -1,0 +1,630 @@
+{
+ "id": "2026-11-21-b-pizarra-defender-2v1",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "2v1",
+   "say": "Te llegan dos contra uno… y tu defensa se lanza. Error. Así se defiende.",
+   "captions": [
+    "Te llegan",
+    "<em>dos contra uno</em>…",
+    "y tu defensa",
+    "<em>se lanza</em>.",
+    "Error.",
+    "Así se <em>defiende</em>."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "CÓMO DEFENDER\nUN 2 VS 1",
+   "sub": "Fútbol 7 · Con ejercicio"
+  },
+  {
+   "type": "board",
+   "bg": "✗",
+   "title": "EL ERROR: LANZARSE",
+   "say": "Si tu defensa sale a quitarle el balón al que la lleva, basta un pase… y quedan solos frente a tu portero.",
+   "captions": [
+    "Si tu defensa",
+    "<em>sale a quitarle</em>",
+    "el balón",
+    "al que la lleva,",
+    "basta <em>un pase</em>…",
+    "y quedan <em>solos</em>",
+    "frente a tu portero."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DF",
+     "x": 50,
+     "y": 72
+    },
+    {
+     "id": "LD",
+     "label": "DF",
+     "x": 86,
+     "y": 50
+    },
+    {
+     "id": "MI",
+     "x": 16,
+     "y": 44
+    },
+    {
+     "id": "MC",
+     "x": 44,
+     "y": 46
+    },
+    {
+     "id": "MD",
+     "x": 72,
+     "y": 40
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 52,
+     "y": 22
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 30,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 70,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 56,
+     "y": 32
+    },
+    {
+     "id": "R5",
+     "x": 38,
+     "y": 56
+    },
+    {
+     "id": "R6",
+     "x": 64,
+     "y": 56
+    }
+   ],
+   "ball": "R5",
+   "steps": [
+    {
+     "at": 0.2,
+     "pos": {
+      "DF": [
+       40,
+       63
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DF",
+       "to": [
+        40,
+        63
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.48,
+     "ball": "R6",
+     "arrows": [
+      {
+       "from": "R5",
+       "to": "R6",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.66,
+     "pos": {
+      "R6": [
+       60,
+       80
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R6",
+       "to": [
+        60,
+        80
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.82,
+     "zone": {
+      "x": 34,
+      "y": 78,
+      "w": 32,
+      "h": 18,
+      "label": "GOL",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "1",
+   "title": "1 · RETROCEDE",
+   "say": "Primero: no te lances. Retrocede despacio, entre los dos, y gana tiempo.",
+   "captions": [
+    "Primero:",
+    "<em>no te lances</em>.",
+    "<em>Retrocede</em> despacio,",
+    "entre los dos,",
+    "y <em>gana tiempo</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DF",
+     "x": 50,
+     "y": 72
+    },
+    {
+     "id": "LD",
+     "label": "DF",
+     "x": 86,
+     "y": 50
+    },
+    {
+     "id": "MI",
+     "x": 16,
+     "y": 44
+    },
+    {
+     "id": "MC",
+     "x": 44,
+     "y": 46
+    },
+    {
+     "id": "MD",
+     "x": 72,
+     "y": 40
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 52,
+     "y": 22
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 30,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 70,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 56,
+     "y": 32
+    },
+    {
+     "id": "R5",
+     "x": 38,
+     "y": 56
+    },
+    {
+     "id": "R6",
+     "x": 64,
+     "y": 56
+    }
+   ],
+   "ball": "R5",
+   "steps": [
+    {
+     "at": 0.25,
+     "pos": {
+      "DF": [
+       50,
+       78
+      ],
+      "R5": [
+       40,
+       64
+      ],
+      "R6": [
+       62,
+       64
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DF",
+       "to": [
+        50,
+        78
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 30,
+      "y": 70,
+      "w": 40,
+      "h": 18,
+      "label": "GANA TIEMPO",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "2",
+   "title": "2 · TAPA EL PASE",
+   "inherit": true,
+   "say": "Segundo: párate cargado hacia el compañero libre. Le tapas el pase… y lo obligas a irse por fuera.",
+   "captions": [
+    "Segundo:",
+    "párate <em>cargado</em>",
+    "hacia el compañero libre.",
+    "Le <em>tapas el pase</em>…",
+    "y lo obligas",
+    "a irse <em>por fuera</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.2,
+     "pos": {
+      "DF": [
+       54,
+       74
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DF",
+       "to": [
+        54,
+        74
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.45,
+     "zone": {
+      "x": 44,
+      "y": 60,
+      "w": 20,
+      "h": 10,
+      "label": "CERRADO",
+      "color": "red"
+     }
+    },
+    {
+     "at": 0.7,
+     "pos": {
+      "R5": [
+       24,
+       74
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R5",
+       "to": [
+        24,
+        74
+       ],
+       "kind": "press",
+       "curve": 0.2
+      }
+     ],
+     "zone": {
+      "x": 6,
+      "y": 64,
+      "w": 32,
+      "h": 22,
+      "label": "POR FUERA",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3",
+   "title": "3 · LLEGA LA AYUDA",
+   "inherit": true,
+   "say": "Y tercero: esos segundos que ganaste son para que regrese un compañero. Ya no es dos contra uno… es dos contra dos.",
+   "captions": [
+    "Y tercero:",
+    "esos <em>segundos</em>",
+    "que ganaste",
+    "son para que regrese",
+    "un <em>compañero</em>.",
+    "Ya no es <em>2 vs 1</em>…",
+    "es <em>2 vs 2</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.3,
+     "pos": {
+      "MC": [
+       66,
+       72
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        66,
+        72
+       ],
+       "kind": "run",
+       "curve": -0.2
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 14,
+      "y": 60,
+      "w": 66,
+      "h": 26,
+      "label": "2 VS 2",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "3",
+   "say": "Tres claves: retrocede, tapa el pase… y espera la ayuda.",
+   "captions": [
+    "<em>3</em> claves:",
+    "<em>retrocede</em>,",
+    "<em>tapa el pase</em>…",
+    "y espera",
+    "la <em>ayuda</em>."
+   ],
+   "items": [
+    {
+     "n": "1",
+     "label": "RETROCEDE"
+    },
+    {
+     "n": "2",
+     "label": "TAPA EL PASE",
+     "color": "green"
+    },
+    {
+     "n": "3",
+     "label": "ESPERA AYUDA"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "6",
+   "title": "ENTRÉNALO: 2 VS 1",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: dos atacantes contra un defensor y portero. El defensor gana si aguanta seis segundos sin que le tiren… o si recupera el balón.",
+   "captions": [
+    "Entrénalo así:",
+    "<em>2 atacantes</em>",
+    "contra <em>1 defensor</em>",
+    "y portero.",
+    "El defensor gana",
+    "si aguanta <em>6 segundos</em>",
+    "sin que le tiren…",
+    "o si <em>recupera</em>",
+    "el balón."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "D",
+     "x": 50,
+     "y": 70
+    }
+   ],
+   "rival": [
+    {
+     "id": "A",
+     "x": 38,
+     "y": 46
+    },
+    {
+     "id": "B",
+     "x": 62,
+     "y": 46
+    }
+   ],
+   "ball": "A",
+   "timer": {
+    "from": 6,
+    "label": "SEG",
+    "at": 0.45,
+    "end": 0.95
+   },
+   "steps": [
+    {
+     "at": 0.1,
+     "zone": {
+      "x": 28,
+      "y": 40,
+      "w": 44,
+      "h": 48,
+      "label": "",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.3,
+     "pos": {
+      "A": [
+       40,
+       58
+      ],
+      "B": [
+       60,
+       58
+      ],
+      "D": [
+       52,
+       74
+      ]
+     },
+     "arrows": [
+      {
+       "from": "D",
+       "to": [
+        52,
+        74
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "pos": {
+      "A": [
+       32,
+       68
+      ]
+     },
+     "arrows": [
+      {
+       "from": "A",
+       "to": [
+        32,
+        68
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.85,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Esta y más jugadas vienen en el Libro de Jugadas de Fútbol siete de Señor Fútbol. Muy pronto.",
+   "captions": [
+    "Esta y más jugadas",
+    "vienen en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "Muy pronto."
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento, y mándaselo a tu defensa. Y dime: en un dos contra uno, ¿tú te lanzas… o esperas? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento,",
+    "y mándaselo",
+    "a tu <em>defensa</em>.",
+    "Y dime:",
+    "en un <em>2 vs 1</em>,",
+    "¿tú te <em>lanzas</em>…",
+    "o <em>esperas</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "DEFENSA, SÉ HONESTO:",
+   "q": "¿TE LANZAS\nO ESPERAS?",
+   "opts": [
+    "ME LANZO",
+    "ESPERO"
+   ]
+  }
+ ],
+ "post": "Te llegan dos contra uno y tu defensa se lanza… error. Así se defiende un 2 vs 1 en fútbol 7: retrocede, tapa el pase y espera la ayuda. Con ejercicio. 💾 Guárdalo y mándaselo a tu defensa. ¿Tú te lanzas o esperas? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#FútbolAmateur",
+  "#SeñorFútbol"
+ ],
+ "sources": [],
+ "redes_textos": {
+  "facebook": "Te llegan dos contra uno… y tu defensa se lanza. Error. ⚽\n\n1️⃣ Retrocede entre los dos y gana tiempo\n2️⃣ Párate cargado hacia el compañero libre: tapa el pase y mándalo por fuera\n3️⃣ Espera la ayuda: el 2 vs 1 se vuelve 2 vs 2\n\n🏋️ Ejercicio: 2 atacantes vs 1 defensor y portero; el defensor gana si aguanta 6 segundos sin que le tiren o si recupera.\n\n💾 Guárdalo para tu próximo entrenamiento y mándaselo a tu defensa.\n\nEn un 2 vs 1, ¿tú te lanzas o esperas? 👇\n\n#Fútbol7 #PizarraTáctica #Entrenador #FútbolAmateur #SeñorFútbol",
+  "instagram": "Cómo defender un 2 vs 1 en fútbol 7. 🛡️\n\nRetrocede → tapa el pase → espera la ayuda. + ejercicio para entrenarlo.\n\n💾 Guárdalo y mándaselo a tu defensa. ¿Tú te lanzas o esperas? 👇\n\n#Fútbol7 #PizarraTáctica #Entrenador #FútbolAmateur",
+  "youtube": {
+   "titulo": "Cómo defender un 2 contra 1 en fútbol 7 (y el error que todos cometen) #Shorts",
+   "descripcion": "Retrocede, tapa el pase y espera la ayuda: así se defiende un 2 vs 1, con ejercicio para tu equipo. ¿Tú te lanzas o esperas?\n\n#Fútbol7 #PizarraTáctica #Entrenador"
+  },
+  "tiktok": "Te llegan 2 vs 1… ¿te lanzas o esperas? 🛡️ #Fútbol7 #PizarraTáctica #FútbolAmateur #Entrenador"
+ }
+}

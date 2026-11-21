@@ -1,0 +1,212 @@
+{
+ "id": "2026-11-21-a-juarez-atlas-3-3",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "scoreboard",
+   "bg": "3-3",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Seis goles… y un penal en la última jugada. Así se despidió Juárez: tres a tres contra Atlas.",
+   "captions": [
+    "<em>Seis goles</em>…",
+    "y un <em>penal</em>",
+    "en la última jugada.",
+    "Así se despidió <em>Juárez</em>:",
+    "<em>3-3</em> contra Atlas."
+   ],
+   "tag": "J17 · ÚLTIMA FECHA",
+   "home": "JUÁREZ",
+   "away": "ATLAS",
+   "goals": [
+    {
+     "side": "away",
+     "at": 0.06
+    },
+    {
+     "side": "home",
+     "at": 0.14
+    },
+    {
+     "side": "home",
+     "at": 0.22
+    },
+    {
+     "side": "away",
+     "at": 0.3
+    },
+    {
+     "side": "away",
+     "at": 0.38
+    },
+    {
+     "side": "home",
+     "at": 0.48
+    }
+   ],
+   "note": "ESTADIO",
+   "noteHL": "OLÍMPICO BENITO JUÁREZ"
+  },
+  {
+   "type": "headline",
+   "bg": "76'",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Atlas pegó primero, Estupiñán lo empató, y al setenta y seis… Martínez Dupuy le dio la vuelta, de cabeza.",
+   "captions": [
+    "Atlas pegó <em>primero</em>,",
+    "<em>Estupiñán</em> lo empató,",
+    "y al <em>76</em>…",
+    "<em>Martínez Dupuy</em>",
+    "le dio la vuelta,",
+    "de cabeza."
+   ],
+   "tag": "LA REMONTADA",
+   "title": "JUÁREZ 2\nATLAS 1",
+   "sub": "Goles de Estupiñán y Martínez Dupuy"
+  },
+  {
+   "type": "headline",
+   "bg": "94'",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Pero se cayó todo: Sánchez Purata empató al ochenta y cuatro… y Elías Montiel puso el tres a dos en el agregado.",
+   "captions": [
+    "Pero se <em>cayó todo</em>:",
+    "Sánchez Purata",
+    "empató al <em>84</em>…",
+    "y <em>Elías Montiel</em>",
+    "puso el <em>3-2</em>",
+    "en el agregado."
+   ],
+   "tag": "ATLAS LA VOLTEA",
+   "title": "JUÁREZ 2\nATLAS 3",
+   "sub": "Minutos 84 y 90+4"
+  },
+  {
+   "type": "play",
+   "bg": "90+9'",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Y en la última jugada, mano en el área. El Puma Rodríguez, desde el manchón penal… ¡tres a tres!",
+   "captions": [
+    "Y en la <em>última jugada</em>,",
+    "<em>mano</em> en el área.",
+    "El <em>Puma Rodríguez</em>,",
+    "desde el manchón penal…",
+    "¡<em>3-3</em>!"
+   ],
+   "minute": "90+9'",
+   "vs": "vs ATLAS",
+   "sub": "J17",
+   "play": "penalty",
+   "passer": "",
+   "scorer": "PUMA RODRÍGUEZ",
+   "result": "3-3 · ÚLTIMA JUGADA"
+  },
+  {
+   "type": "stats",
+   "bg": "ÚLTIMO",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Pero el cierre duele: doce puntos, apenas tres victorias… y último lugar de la tabla.",
+   "captions": [
+    "Pero el cierre <em>duele</em>:",
+    "<em>12</em> puntos,",
+    "apenas <em>3</em> victorias…",
+    "y <em>último lugar</em>",
+    "de la tabla."
+   ],
+   "items": [
+    {
+     "n": "12",
+     "label": "PUNTOS",
+     "color": "ink"
+    },
+    {
+     "n": "3",
+     "label": "VICTORIAS",
+     "color": "ink"
+    },
+    {
+     "n": "18°",
+     "label": "LUGAR",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "37",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Treinta y siete goles en contra, la peor defensa del torneo… y solo dieciséis a favor.",
+   "captions": [
+    "<em>37</em> goles en contra,",
+    "la <em>peor defensa</em>",
+    "del torneo…",
+    "y solo <em>16</em>",
+    "a favor."
+   ],
+   "items": [
+    {
+     "n": "37",
+     "label": "EN CONTRA",
+     "color": "red"
+    },
+    {
+     "n": "16",
+     "label": "A FAVOR",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "speed": 1.12,
+   "say": "Tú dime: ¿despedida digna… o un torneo para el olvido? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿despedida <em>digna</em>…",
+    "o un torneo",
+    "para el <em>olvido</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "BRAVO, SÉ HONESTO:",
+   "q": "¿DESPEDIDA DIGNA\nO PARA OLVIDAR?",
+   "opts": [
+    "DIGNA",
+    "PARA OLVIDAR"
+   ]
+  }
+ ],
+ "post": "Juárez 3-3 Atlas: seis goles, dos en el agregado y un penal en la última jugada. Pero Bravos cierra el Apertura 2026 en el último lugar con 12 puntos y la peor defensa (37 goles en contra). ¿Despedida digna o un torneo para el olvido? 👇",
+ "hashtags": [
+  "#FCJuárez",
+  "#Bravos",
+  "#LigaMX",
+  "#Apertura2026",
+  "#CiudadJuárez"
+ ],
+ "sources": [
+  "https://www.excelsior.com.mx/deportes/dos-goles-tiempo-agregado-sellan-empate-entre-juarez-y-atlas",
+  "https://www.sdpnoticias.com/deportes/fc-juarez-evita-la-victoria-de-atlas-en-el-ultimo-minuto/",
+  "https://www.informador.mx/deportes/liga-mx-atlas-deja-escapar-el-triunfo-en-la-recta-final-y-empata-con-juarez-20261120-0173.html",
+  "https://www.razon.com.mx/deportes/2026/11/20/juarez-empata-de-manera-agonica-con-atlas-xolos-derrota-al-atlante/"
+ ],
+ "redes_textos": {
+  "facebook": "Seis goles, dos en el agregado y un penal en la última jugada. ⚽🔥\n\nJuárez 3-3 Atlas en el Olímpico Benito Juárez: Ríos adelantó a Atlas, Estupiñán empató, Martínez Dupuy la volteó al 76'. Sánchez Purata (84') y Elías Montiel (90+4') la voltearon otra vez… y el Puma Rodríguez lo empató de penal en la última jugada.\n\nPero el cierre duele: Bravos termina último con 12 puntos, 3 victorias, 16 goles a favor y 37 en contra (la peor defensa del torneo).\n\n¿Despedida digna o un torneo para el olvido? 👇\n\n#FCJuárez #Bravos #LigaMX #Apertura2026 #CiudadJuárez",
+  "instagram": "Juárez 3-3 Atlas: dos goles en el agregado y penal en la última jugada. 😱\n\nPero Bravos cierra último con 12 puntos y la peor defensa del torneo.\n\n¿Despedida digna o para olvidar? Comenta 👇 y compártelo con tu compa bravo.\n\n#FCJuárez #Bravos #LigaMX #Apertura2026",
+  "youtube": {
+   "titulo": "Juárez 3-3 Atlas: penal en la última jugada… y aun así termina último #Shorts",
+   "descripcion": "Seis goles, dos en el agregado y el Puma Rodríguez empatando de penal en la última jugada. Bravos cierra el Apertura 2026 con 12 puntos. ¿Despedida digna o torneo para el olvido?\n\n#FCJuárez #Bravos #LigaMX"
+  },
+  "tiktok": "Juárez 3-3 Atlas: penal en la última jugada 😱 ¿despedida digna o para olvidar? #FCJuárez #Bravos #LigaMX"
+ }
+}
