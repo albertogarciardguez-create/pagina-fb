@@ -1,0 +1,653 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-21-agradecer-antes-reel",
+ "titulo": "Agradecer antes de recibir (reel)",
+ "scenes": [
+  {
+   "say": "El que da gracias por poco, no vive con miedo a perderlo todo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "luz": true,
+    "props": [
+     {
+      "k": "pan",
+      "x": 760,
+      "y": 780,
+      "s_": 0.9,
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "figs": [
+     {
+      "x": 450,
+      "h": 360,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "GRACIAS POR POCO",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "SIN MIEDO",
+      "y": 320,
+      "col": "marino",
+      "s": 0,
+      "f": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "say": "Casi todos rezamos al revés. Primero pedimos, y si llega, damos gracias.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1. PIDO",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.05
+     },
+     {
+      "t": "2. SI LLEGA, GRACIAS",
+      "y": 320,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "say": "Jesús lo hizo al revés. Tenía cinco panes y dos peces, para cinco mil hombres. Y antes de repartirlos, dio gracias.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "gente",
+      "x": 60,
+      "y": 700,
+      "n": 11,
+      "dx": 88,
+      "h": 150,
+      "pose": "stand"
+     },
+     {
+      "k": "canasta",
+      "x": 720,
+      "y": 840,
+      "s_": 1.3,
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "k": "pan",
+      "x": 650,
+      "y": 735,
+      "s_": 0.5,
+      "s": 1,
+      "f": 0.15
+     },
+     {
+      "k": "pan",
+      "x": 720,
+      "y": 720,
+      "s_": 0.5,
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "k": "pan",
+      "x": 790,
+      "y": 735,
+      "s_": 0.5,
+      "s": 1,
+      "f": 0.25
+     },
+     {
+      "k": "pez",
+      "x": 670,
+      "y": 690,
+      "s_": 0.5,
+      "s": 1,
+      "f": 0.35
+     },
+     {
+      "k": "pez",
+      "x": 760,
+      "y": 680,
+      "s_": 0.5,
+      "s": 1,
+      "f": 0.4
+     }
+    ],
+    "figs": [
+     {
+      "x": 360,
+      "h": 340,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#C9A06A",
+       "largo": true,
+       "pelo": "#5A3A22",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "5 PANES · 2 PECES",
+      "y": 150,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "t": "5,000 HOMBRES",
+      "y": 280,
+      "col": "marino",
+      "s": 1,
+      "f": 0.7
+     },
+     {
+      "t": "GRACIAS PRIMERO",
+      "y": 410,
+      "col": "or",
+      "s": 2,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y frente a la tumba de Lázaro, antes del milagro, dijo: Padre, gracias te doy por haberme oído.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "piedra",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "roca",
+      "x": 700,
+      "y": 840,
+      "s_": 2.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 300,
+      "h": 340,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#C9A06A",
+       "largo": true,
+       "pelo": "#5A3A22",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ANTES DEL MILAGRO",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "GRACIAS TE DOY",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "say": "Uno. Agradecer antes es confiar: todavía no lo veo, pero sé que viene.",
+   "vis": "arma",
+   "tag": "1",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 200,
+      "h": 320,
+      "camina": [
+       200,
+       560
+      ],
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "AÚN NO LO VEO",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.45,
+      "x": 430
+     },
+     {
+      "t": "PERO CONFÍO",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.75,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Dos. Te quita el miedo: dejas de mirar lo que falta, y ves lo que ya tienes.",
+   "vis": "arma",
+   "tag": "2",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "corazon",
+      "x": 740,
+      "y": 640,
+      "s_": 1.3,
+      "s": 1,
+      "f": 0.7
+     }
+    ],
+    "figs": [
+     {
+      "x": 380,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LO QUE FALTA",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.3,
+      "tacha": {
+       "s": 1,
+       "f": 0.6
+      }
+     },
+     {
+      "t": "LO QUE YA TIENES",
+      "y": 320,
+      "col": "verde",
+      "s": 1,
+      "f": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "say": "Tres. Esta noche, antes de dormir, escribe tres cosas por las que das gracias. Aunque sean pequeñas.",
+   "vis": "arma",
+   "tag": "3",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "lista",
+      "x": 460,
+      "y": 420,
+      "titulo": "HOY DOY GRACIAS POR",
+      "items": [
+       "MI FAMILIA",
+       "UN DÍA MÁS",
+       "LO QUE VIENE"
+      ]
+     }
+    ],
+    "figs": [
+     {
+      "x": 870,
+      "h": 240,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "AUNQUE SEAN PEQUEÑAS",
+      "y": 760,
+      "col": "or",
+      "s": 2,
+      "f": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "say": "Porque la gratitud no cambia lo que tienes. Cambia cómo lo vives.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "nivel": 1.15,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "luz": true,
+    "figs": [
+     {
+      "x": 500,
+      "h": 380,
+      "salta": true,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LO QUE TIENES",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.5,
+      "x": 430
+     },
+     {
+      "t": "CÓMO LO VIVES",
+      "y": 320,
+      "col": "or",
+      "size": 62,
+      "s": 1,
+      "f": 0.3,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Envíaselo a alguien por quien hoy das gracias.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "corazon",
+      "x": 500,
+      "y": 520,
+      "s_": 1.1,
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 700,
+      "h": 310,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26",
+       "mira": -1,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ENVÍASELO",
+      "y": 150,
+      "col": "or",
+      "size": 60,
+      "s": 0,
+      "f": 0.0,
+      "x": 430
+     },
+     {
+      "t": "GRACIAS POR ESTAR",
+      "y": 290,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Por qué das gracias hoy, aunque todavía no llegue? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Por qué das gracias hoy?",
+    "aunque todavía no llegue"
+   ]
+  }
+ ],
+ "thumb": [
+  "AGRADECE",
+  "ANTES"
+ ],
+ "post": "El que da gracias por poco, no vive con miedo a perderlo todo. 🙏 Jesús dio gracias antes de repartir cinco panes y antes de llamar a Lázaro. Envíaselo a alguien por quien hoy das gracias. ¿Por qué das gracias hoy, aunque todavía no llegue? 👇",
+ "hashtags": [
+  "#Fe",
+  "#Gratitud",
+  "#Dios",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://bible.com/bible/149/JHN.6.11-12",
+  "https://bibliaparalela.com/john/6-11.htm",
+  "https://www.bibliaon.com/es/ejemplos_de_gratitud_en_la_biblia/"
+ ],
+ "redes_textos": {
+  "facebook": "El que da gracias por poco, no vive con miedo a perderlo todo. 🙏\n\nCasi todos rezamos al revés: primero pedimos y, si llega, damos gracias. Jesús lo hizo al revés: con cinco panes y dos peces dio gracias ANTES de repartir (Juan 6:11), y frente a la tumba de Lázaro dijo “Padre, gracias te doy por haberme oído” antes del milagro (Juan 11:41).\n\n1️⃣ Agradecer antes es confiar.\n2️⃣ Te quita el miedo: ves lo que ya tienes.\n3️⃣ Hoy, antes de dormir, escribe 3 cosas por las que das gracias.\n\nLa gratitud no cambia lo que tienes. Cambia cómo lo vives.\n\n¿Por qué das gracias hoy, aunque todavía no llegue? 👇\n\n#Fe #Gratitud #Dios #ImpulsoReal",
+  "instagram": "El que da gracias por poco, no vive con miedo a perderlo todo. 🙏\n\nAgradece antes de recibir: confía, suelta el miedo y escribe 3 gracias antes de dormir.\n\n📌 Guárdalo para esta noche y compártelo con alguien por quien das gracias. ¿Por qué das gracias hoy? 👇\n\n#Fe #Gratitud #Dios #Agradecimiento #ImpulsoReal",
+  "youtube": {
+   "titulo": "Da gracias ANTES de recibir (lo que hizo Jesús) #Shorts",
+   "descripcion": "Cinco panes, dos peces y un “gracias” antes del milagro. Tres formas de vivir agradecido desde hoy. ¿Por qué das gracias hoy?\n\n#Fe #Gratitud #Dios"
+  },
+  "tiktok": "El que da gracias por poco no vive con miedo 🙏 ¿Por qué das gracias hoy? #fe #gratitud #dios #ImpulsoReal"
+ }
+}

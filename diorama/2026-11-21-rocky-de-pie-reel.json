@@ -1,0 +1,651 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-21-rocky-de-pie-reel",
+ "titulo": "Rocky: no se trataba de ganar (reel)",
+ "scenes": [
+  {
+   "say": "No quería ganar la pelea. Solo quería seguir de pie al final.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ring",
+    "props": [
+     {
+      "k": "cuerdas"
+     }
+    ],
+    "figs": [
+     {
+      "x": 500,
+      "h": 360,
+      "guantes": true,
+      "o": {
+       "cam": "#E2B48C",
+       "pan": "#7A2A2A"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "GANAR",
+      "y": 160,
+      "col": "blanco",
+      "size": 60,
+      "s": 0,
+      "f": 0.3,
+      "tacha": {
+       "s": 0,
+       "f": 0.8
+      }
+     },
+     {
+      "t": "SEGUIR DE PIE",
+      "y": 310,
+      "col": "or",
+      "size": 62,
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Rocky Balboa era un boxeador de barrio en Filadelfia. Peleaba por unos cuantos dólares, y nadie creía en él.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 150,
+      "h": 320,
+      "camina": [
+       150,
+       480
+      ],
+      "o": {
+       "cam": "#3A3A3A",
+       "pan": "#5A5048",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "FILADELFIA",
+      "y": 140,
+      "col": "marino",
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "t": "NADIE CREE EN ÉL",
+      "y": 280,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Un día, el campeón Apollo Creed lo escoge como rival. Casi como un show.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ring",
+    "props": [
+     {
+      "k": "cinturon",
+      "x": 700,
+      "y": 392,
+      "s_": 0.55,
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 380,
+      "guantes": true,
+      "o": {
+       "cam": "#8A5A3A",
+       "piel": "#8A5A3A",
+       "pan": "#F2F2EE",
+       "pose": "arms",
+       "mira": -1
+      }
+     },
+     {
+      "x": 280,
+      "h": 280,
+      "o": {
+       "cam": "#3A3A3A",
+       "pan": "#5A5048"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL CAMPEÓN",
+      "x": 400,
+      "y": 150,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "VS. UN DESCONOCIDO",
+      "x": 400,
+      "y": 290,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "say": "La noche antes, le confiesa a Adrian: no puedo ganarle. Pero si sigo de pie al final, voy a saber que no soy uno más del barrio.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 380,
+      "h": 330,
+      "o": {
+       "cam": "#3A3A3A",
+       "pan": "#5A5048",
+       "triste": true
+      }
+     },
+     {
+      "x": 640,
+      "h": 300,
+      "o": {
+       "cam": "#C8423A",
+       "pan": "#5A4A3A",
+       "largo": true,
+       "pelo": "#3A2A20",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO PUEDO GANARLE",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6,
+      "x": 420
+     },
+     {
+      "t": "SOLO AGUANTAR",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.4,
+      "x": 420
+     }
+    ]
+   }
+  },
+  {
+   "say": "Entrena antes del amanecer. Corre por la ciudad, y sube las escaleras del museo de arte.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.95,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "escalera",
+      "x": 150,
+      "y": 860,
+      "n": 6
+     }
+    ],
+    "figs": [
+     {
+      "x": 190,
+      "y": 860,
+      "h": 220,
+      "sube": {
+       "s": 1,
+       "f": 0.1,
+       "n": 6
+      },
+      "o": {
+       "cam": "#8C8C88",
+       "pan": "#8C8C88"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ANTES DEL AMANECER",
+      "x": 320,
+      "y": 140,
+      "col": "blanco",
+      "size": 44,
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "CADA DÍA",
+      "x": 320,
+      "y": 270,
+      "col": "or",
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "say": "Llega la pelea. Lo tiran a la lona. Se levanta. Una y otra vez, durante quince rounds.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.7
+    },
+    {
+     "k": "tambor",
+     "s": 3,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 3,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ring",
+    "props": [
+     {
+      "k": "cuerdas"
+     }
+    ],
+    "figs": [
+     {
+      "x": 360,
+      "h": 340,
+      "guantes": true,
+      "cae": {
+       "s": 1,
+       "f": 0.1,
+       "dur": 1.6
+      },
+      "o": {
+       "cam": "#E2B48C",
+       "pan": "#7A2A2A"
+      }
+     },
+     {
+      "x": 660,
+      "h": 350,
+      "guantes": true,
+      "o": {
+       "cam": "#8A5A3A",
+       "piel": "#8A5A3A",
+       "pan": "#F2F2EE",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SE LEVANTA",
+      "y": 290,
+      "col": "verde",
+      "s": 2,
+      "f": 0.1
+     }
+    ],
+    "contador": {
+     "de": 1,
+     "a": 15,
+     "pre": "ROUND ",
+     "y": 150,
+     "s": 3,
+     "f": 0.0,
+     "dur": 2.0
+    }
+   }
+  },
+  {
+   "say": "Al final, pierde por decisión dividida. Y no le importa. Solo busca a Adrian entre la gente.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ring",
+    "props": [
+     {
+      "k": "cuerdas"
+     }
+    ],
+    "figs": [
+     {
+      "x": 400,
+      "h": 360,
+      "guantes": true,
+      "o": {
+       "cam": "#E2B48C",
+       "pan": "#7A2A2A",
+       "pose": "arms"
+      }
+     },
+     {
+      "x": 900,
+      "h": 300,
+      "camina": [
+       900,
+       640
+      ],
+      "s": 2,
+      "f": 0.0,
+      "o": {
+       "cam": "#C8423A",
+       "pan": "#5A4A3A",
+       "largo": true,
+       "pelo": "#3A2A20",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DECISIÓN DIVIDIDA",
+      "y": 150,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "t": "PERO SIGUE DE PIE",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Porque hay batallas que no se ganan en el marcador. Se ganan cuando todos esperan que caigas, y no caes.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "nivel": 1.15,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "luz": true,
+    "figs": [
+     {
+      "x": 500,
+      "h": 380,
+      "o": {
+       "cam": "#8C8C88",
+       "pan": "#8C8C88",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL MARCADOR",
+      "x": 430,
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6,
+      "tacha": {
+       "s": 1,
+       "f": 0.1
+      }
+     },
+     {
+      "t": "NO CAES",
+      "x": 430,
+      "y": 320,
+      "col": "or",
+      "size": 70,
+      "s": 1,
+      "f": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "say": "Mándaselo a alguien que hoy está peleando su propio round.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.25,
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 700,
+      "h": 320,
+      "o": {
+       "cam": "#E3A72F",
+       "pan": "#26344D",
+       "mira": -1,
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MÁNDASELO",
+      "y": 150,
+      "col": "or",
+      "size": 60,
+      "s": 0,
+      "f": 0.0
+     },
+     {
+      "t": "TÚ SIGUES DE PIE",
+      "y": 290,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Qué pelea estás aguantando de pie hoy? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué pelea estás",
+    "aguantando de pie hoy?"
+   ]
+  }
+ ],
+ "thumb": [
+  "NO ERA",
+  "GANAR"
+ ],
+ "post": "No quería ganar la pelea. Solo quería seguir de pie al final. 🥊 Rocky (1976) perdió por decisión dividida… y aun así ganó. Mándaselo a alguien que hoy está peleando su propio round. ¿Qué pelea estás aguantando de pie hoy? 👇",
+ "hashtags": [
+  "#Rocky",
+  "#Resiliencia",
+  "#Motivación",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://en.wikipedia.com/wiki/Rocky",
+  "https://filmsite.org/rock.html",
+  "https://www.smithsonianmag.com/arts-culture/rocky-story-underdog-created-underdog-spawned-box-office-champions-half-century-180989274/"
+ ],
+ "redes_textos": {
+  "facebook": "No quería ganar la pelea. Solo quería seguir de pie al final. 🥊\n\nRocky Balboa era un boxeador de barrio en Filadelfia al que nadie tomaba en serio. Cuando el campeón Apollo Creed lo eligió como rival, la noche antes le confesó a Adrian que no podía ganarle… pero que si seguía de pie al final, sabría que no era uno más del barrio.\n\nAguantó quince rounds. Perdió por decisión dividida. Y no le importó.\n\nHay batallas que no se ganan en el marcador: se ganan cuando todos esperan que caigas, y no caes.\n\nMándaselo a alguien que hoy está peleando su propio round. ¿Qué pelea estás aguantando de pie hoy? 👇\n\n#Rocky #Resiliencia #Motivación #ImpulsoReal",
+  "instagram": "No quería ganar. Solo quería seguir de pie al final. 🥊\n\nRocky perdió por decisión dividida… y aun así ganó.\n\n📌 Guárdalo para el día que quieras tirar la toalla y compártelo con alguien que está peleando su propio round. ¿Qué pelea estás aguantando hoy? 👇\n\n#Rocky #Resiliencia #Motivación #NoTeRindas #ImpulsoReal",
+  "youtube": {
+   "titulo": "Rocky no quería ganar. Solo seguir de pie #Shorts",
+   "descripcion": "Quince rounds, una decisión dividida y la lección que todos olvidamos de Rocky (1976). ¿Qué pelea estás aguantando de pie hoy?\n\n#Rocky #Resiliencia #Motivación"
+  },
+  "tiktok": "No quería ganar. Solo seguir de pie 🥊 ¿Qué pelea aguantas hoy? #rocky #motivacion #resiliencia #ImpulsoReal"
+ }
+}
