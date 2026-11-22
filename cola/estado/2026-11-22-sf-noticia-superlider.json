@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1918015212533059",
+   "url": "https://www.facebook.com/reel/1918015212533059",
+   "programado": true,
+   "fecha": "2026-11-22 08:53"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-22-sf-noticia-superlider.mp4",
+ "actualizado": "2026-11-22 08:53"
+}
