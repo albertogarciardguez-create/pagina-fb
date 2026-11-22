@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1460960528809170",
+   "url": "https://www.facebook.com/reel/1460960528809170",
+   "programado": true,
+   "fecha": "2026-11-22 05:29"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, IR_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-22-ir-manana-seneca-imaginacion.mp4",
+ "actualizado": "2026-11-22 05:29"
+}
