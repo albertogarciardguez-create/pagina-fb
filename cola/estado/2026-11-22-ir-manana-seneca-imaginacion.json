@@ -12,8 +12,12 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, IR_TIKTOK_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-22-ir-manana-seneca-imaginacion.mp4",
- "actualizado": "2026-11-22 07:01"
+ "actualizado": "2026-11-22 07:26",
+ "estado": "completo"
 }
