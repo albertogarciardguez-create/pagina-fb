@@ -12,8 +12,12 @@
   },
   "instagram": {
    "omitido": "faltan secretos: SF_IG_ID"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, SF_TIKTOK_REFRESH"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-21-sf-noticia-juarez-atlas-3-3.mp4",
- "actualizado": "2026-11-21 12:26"
+ "actualizado": "2026-11-21 18:31",
+ "estado": "completo"
 }
