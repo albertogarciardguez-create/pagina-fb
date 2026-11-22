@@ -1,0 +1,711 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-22-hijo-prodigo-reel",
+ "titulo": "El hijo pródigo (reel)",
+ "scenes": [
+  {
+   "say": "Pidió su herencia en vida… y volvió sin nada.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 360,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "triste": true,
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PIDIÓ SU HERENCIA",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.05
+     },
+     {
+      "t": "VOLVIÓ SIN NADA",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Estaba en un campo ajeno, cuidando cerdos. Y tenía tanta hambre, que quería comer lo mismo que ellos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 380,
+      "h": 330,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "triste": true,
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CUIDANDO CERDOS",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "HAMBRE",
+      "y": 300,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.4,
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "say": "Jesús contó esta historia. Un hombre tenía dos hijos. El menor le dijo: Padre, dame la parte que me toca.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 320,
+      "h": 350,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "pose": "offer",
+       "largo": true,
+       "canas": true
+      }
+     },
+     {
+      "x": 700,
+      "h": 330,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "mira": -1,
+       "pose": "ask",
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DOS HIJOS",
+      "y": 150,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "DAME MI PARTE",
+      "y": 290,
+      "col": "or",
+      "s": 2,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Se fue a un país lejano, y lo gastó todo viviendo sin control. Luego llegó una gran hambruna.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 200,
+      "h": 320,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "camina": [
+        200,
+        620
+       ],
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "UN PAÍS LEJANO",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "x": 520
+     },
+     {
+      "t": "LO GASTÓ TODO",
+      "y": 280,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.6,
+      "x": 520,
+      "tacha": {
+       "s": 1,
+       "f": 0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero ahí, en el lodo, volvió en sí. En casa de mi padre, hasta los trabajadores tienen pan de sobra.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "pose": "ask",
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "VOLVIÓ EN SÍ",
+      "y": 150,
+      "col": "or",
+      "s": 0,
+      "f": 0.2,
+      "size": 62,
+      "x": 430
+     },
+     {
+      "t": "PAN DE SOBRA",
+      "y": 290,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.5
+     }
+    ],
+    "props": [
+     {
+      "k": "pan",
+      "x": 800,
+      "y": 760,
+      "s_": 0.8,
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "say": "Regresó ensayando su disculpa: ya no soy digno de ser tu hijo. Hazme uno de tus trabajadores.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 150,
+      "h": 320,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "camina": [
+        150,
+        520
+       ],
+       "triste": true,
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "YA NO SOY DIGNO",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3,
+      "x": 520
+     },
+     {
+      "t": "HAZME TRABAJADOR",
+      "y": 290,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.3,
+      "x": 520
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y aquí viene el giro. Todavía estaba lejos… y su padre lo vio. Corrió hacia él, lo abrazó y lo besó.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 780,
+      "h": 350,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "mira": -1,
+       "camina": [
+        820,
+        600
+       ],
+       "largo": true,
+       "canas": true
+      }
+     },
+     {
+      "x": 330,
+      "h": 320,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "triste": true,
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LO VIO DE LEJOS",
+      "y": 150,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.3
+     },
+     {
+      "t": "CORRIÓ",
+      "y": 290,
+      "col": "or",
+      "s": 2,
+      "f": 0.1,
+      "size": 70
+     }
+    ],
+    "props": [
+     {
+      "k": "corazon",
+      "x": 470,
+      "y": 560,
+      "s_": 0.9,
+      "s": 2,
+      "f": 0.5
+     }
+    ]
+   },
+   "nivel": 1.1
+  },
+  {
+   "say": "Ni siquiera lo dejó terminar su disculpa. Pidió el mejor vestido, un anillo, sandalias… y una fiesta.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 330,
+      "h": 350,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "pose": "arms",
+       "largo": true,
+       "canas": true
+      }
+     },
+     {
+      "x": 640,
+      "h": 330,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#C9A06A",
+       "mira": -1,
+       "pelo": "#3A2818",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL MEJOR VESTIDO",
+      "y": 150,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "FIESTA",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.8,
+      "size": 70
+     }
+    ],
+    "props": [
+     {
+      "k": "gente",
+      "x": 60,
+      "y": 860,
+      "n": 11,
+      "dx": 88,
+      "h": 130
+     }
+    ],
+    "luz": true
+   },
+   "nivel": 1.2
+  },
+  {
+   "say": "Este hijo mío estaba muerto, y ha vuelto a vivir. Se había perdido, y lo encontramos.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 420,
+      "h": 350,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "pose": "offer",
+       "largo": true,
+       "canas": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ESTABA PERDIDO",
+      "y": 150,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.1,
+      "tacha": {
+       "s": 1,
+       "f": 0.6
+      }
+     },
+     {
+      "t": "LO ENCONTRAMOS",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.5,
+      "size": 62
+     }
+    ],
+    "luz": true
+   },
+   "nivel": 1.2
+  },
+  {
+   "say": "La lección: no importa qué tan lejos te fuiste. El camino de regreso siempre está abierto.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 250,
+      "h": 320,
+      "o": {
+       "cam": "#C98A4B",
+       "pan": "#5A4632",
+       "camina": [
+        250,
+        520
+       ],
+       "pelo": "#3A2818"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "QUÉ TAN LEJOS",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2,
+      "x": 430
+     },
+     {
+      "t": "PUEDES VOLVER",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.3,
+      "size": 64,
+      "x": 430
+     }
+    ]
+   },
+   "nivel": 1.25
+  },
+  {
+   "say": "Sígueme: cada noche, una historia que te cambia el día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÍGUEME",
+      "y": 150,
+      "col": "or",
+      "s": 0,
+      "f": 0.0,
+      "size": 62
+     },
+     {
+      "t": "UNA HISTORIA CADA NOCHE",
+      "y": 290,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   },
+   "nivel": 1.25
+  },
+  {
+   "say": "¿Tú qué habrías hecho: correr a abrazarlo, o esperar su disculpa? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Correr a abrazarlo",
+    "o esperar su disculpa?"
+   ]
+  }
+ ],
+ "thumb": [
+  "VOLVIÓ",
+  "SIN NADA"
+ ],
+ "post": "Pidió su herencia en vida… y volvió sin nada. 🙏 La parábola del hijo pródigo (Lucas 15). ¿Tú qué habrías hecho: correr a abrazarlo o esperar su disculpa? 👇",
+ "hashtags": [
+  "#Fe",
+  "#HijoProdigo",
+  "#Biblia",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.biblegateway.com/passage/?search=Lucas%2015%3A11-32&version=RVR1960"
+ ],
+ "redes_textos": {
+  "facebook": "Pidió su herencia en vida… y volvió sin nada. 🙏\n\nJesús contó esta historia (Lucas 15:11-32): el hijo menor pidió su parte, se fue a un país lejano y lo gastó todo. Terminó cuidando cerdos, con tanta hambre que quería comer lo que ellos comían. Volvió en sí y regresó a casa con su disculpa ensayada.\n\nPero su padre lo vio de lejos, corrió, lo abrazó y lo besó. Vestido, anillo, sandalias y fiesta: “Este mi hijo estaba muerto y ha revivido; se había perdido y es hallado.”\n\nNo importa qué tan lejos te fuiste: el camino de regreso siempre está abierto.\n\n¿Tú qué habrías hecho: correr a abrazarlo o esperar su disculpa? 👇\n\n#Fe #HijoProdigo #Biblia #ImpulsoReal",
+  "instagram": "Pidió su herencia en vida… y volvió sin nada. 🙏\n\nSu padre no esperó la disculpa: corrió a abrazarlo. No importa qué tan lejos te fuiste, puedes volver.\n\n📌 Compártelo con alguien que necesite volver a casa. ¿Correr a abrazarlo o esperar su disculpa? 👇\n\n#Fe #HijoProdigo #Biblia #Perdon #ImpulsoReal",
+  "youtube": {
+   "titulo": "El hijo pródigo: pidió su herencia y volvió sin nada #Shorts",
+   "descripcion": "La parábola del hijo pródigo (Lucas 15) en 70 segundos. No importa qué tan lejos te fuiste: puedes volver. ¿Tú qué habrías hecho?\n\n#Fe #Biblia #Shorts"
+  },
+  "tiktok": "Pidió su herencia… y volvió sin nada 🙏 ¿Correr a abrazarlo o esperar su disculpa? #fe #biblia #hijoprodigo #ImpulsoReal"
+ }
+}

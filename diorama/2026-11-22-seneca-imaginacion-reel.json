@@ -1,0 +1,593 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-22-seneca-imaginacion-reel",
+ "titulo": "Séneca: sufrimos más en la imaginación (reel)",
+ "scenes": [
+  {
+   "say": "La mayoría de lo que te preocupa… nunca va a pasar.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 360,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LO QUE TEMES",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "x": 430
+     },
+     {
+      "t": "NUNCA PASA",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 64,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Hace casi dos mil años, Séneca le escribió a su amigo Lucilio: sufrimos más en la imaginación que en la realidad.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 380,
+      "h": 340,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#C9A06A",
+       "largo": true,
+       "canas": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÉNECA",
+      "y": 150,
+      "col": "marino",
+      "s": 0,
+      "f": 0.05
+     },
+     {
+      "t": "CARTA 13 A LUCILIO",
+      "y": 280,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "MÁS EN LA IMAGINACIÓN",
+      "y": 410,
+      "col": "or",
+      "s": 0,
+      "f": 0.75
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 760,
+      "y": 620,
+      "titulo": "QUERIDO LUCILIO",
+      "items": [
+       "MÁS ASUSTA",
+       "QUE APLASTA"
+      ],
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Piénsalo. Esa llamada que no contestan. Ese mensaje en visto. Y tu mente ya escribió la peor película.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "triste": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MENSAJE EN VISTO",
+      "y": 170,
+      "col": "blanco",
+      "s": 2,
+      "f": 0.05,
+      "x": 560
+     },
+     {
+      "t": "LA PEOR PELÍCULA",
+      "y": 320,
+      "col": "mostaza",
+      "s": 3,
+      "f": 0.2,
+      "x": 560
+     }
+    ]
+   }
+  },
+  {
+   "say": "Séneca decía que algo nos atormenta más de lo que debe, antes de lo que debe, o sin que deba atormentarnos.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.5
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.5
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.85,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MÁS DE LO QUE DEBE",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.15
+     },
+     {
+      "t": "ANTES DE TIEMPO",
+      "y": 280,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.45
+     },
+     {
+      "t": "SIN RAZÓN",
+      "y": 410,
+      "col": "or",
+      "s": 0,
+      "f": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "say": "Uno. Pregúntate: ¿esto ya pasó, o solo lo estoy imaginando?",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 380,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿YA PASÓ?",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "¿O LO IMAGINO?",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.7
+     }
+    ]
+   },
+   "tag": "1"
+  },
+  {
+   "say": "Dos. Si ya pasó, actúa. Si no ha pasado, no lo vivas dos veces.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 200,
+      "h": 320,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "camina": [
+        200,
+        560
+       ]
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SI PASÓ: ACTÚA",
+      "y": 170,
+      "col": "verde",
+      "s": 1,
+      "f": 0.2,
+      "x": 430
+     },
+     {
+      "t": "NO LO VIVAS DOS VECES",
+      "y": 320,
+      "col": "or",
+      "s": 2,
+      "f": 0.2,
+      "x": 430
+     }
+    ]
+   },
+   "tag": "2"
+  },
+  {
+   "say": "Tres. Esta noche, escribe tu preocupación. Y en una semana, vuelve a leerla.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 870,
+      "h": 240,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿PASÓ O NO?",
+      "y": 760,
+      "col": "or",
+      "s": 2,
+      "f": 0.3
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 460,
+      "y": 420,
+      "titulo": "HOY ME PREOCUPA",
+      "items": [
+       "EL TRABAJO",
+       "EL DINERO",
+       "LO QUE DIRÁN"
+      ]
+     }
+    ]
+   },
+   "tag": "3"
+  },
+  {
+   "say": "Vas a descubrir que casi nada de eso llegó. Y que perdiste paz… por nada.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 500,
+      "h": 380,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "salta": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CASI NADA LLEGÓ",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3,
+      "tacha": {
+       "s": 1,
+       "f": 0.5
+      }
+     },
+     {
+      "t": "RECUPERA TU PAZ",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.4,
+      "size": 62
+     }
+    ],
+    "luz": true
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Envíaselo a alguien que se preocupa de más. Y sígueme: cada mañana, una idea que te ordena el día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 700,
+      "h": 310,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26",
+       "mira": -1,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ENVÍASELO",
+      "y": 150,
+      "col": "or",
+      "s": 0,
+      "f": 0.0,
+      "size": 60,
+      "x": 430
+     },
+     {
+      "t": "SÍGUEME",
+      "y": 290,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2,
+      "x": 430
+     }
+    ],
+    "props": [
+     {
+      "k": "corazon",
+      "x": 500,
+      "y": 520,
+      "s_": 1.1,
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   },
+   "nivel": 1.25
+  },
+  {
+   "say": "¿Qué te preocupa hoy que todavía no ha pasado? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué te preocupa hoy",
+    "que todavía no ha pasado?"
+   ]
+  }
+ ],
+ "thumb": [
+  "NO LO VIVAS",
+  "DOS VECES"
+ ],
+ "post": "La mayoría de lo que te preocupa nunca va a pasar. 🧠 Séneca: “Sufrimos más en la imaginación que en la realidad.” ¿Qué te preocupa hoy que todavía no ha pasado? 👇",
+ "hashtags": [
+  "#Estoicismo",
+  "#Seneca",
+  "#Ansiedad",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_13"
+ ],
+ "redes_textos": {
+  "facebook": "La mayoría de lo que te preocupa nunca va a pasar. 🧠\n\nHace casi dos mil años, Séneca le escribió a Lucilio (Carta 13): “Hay más cosas que nos asustan que las que nos aplastan; sufrimos más en la imaginación que en la realidad.”\n\n1️⃣ Pregúntate: ¿ya pasó o solo lo imagino?\n2️⃣ Si pasó, actúa. Si no, no lo vivas dos veces.\n3️⃣ Escribe hoy tu preocupación y reléela en una semana.\n\nEnvíaselo a alguien que se preocupa de más.\n\n¿Qué te preocupa hoy que todavía no ha pasado? 👇\n\n#Estoicismo #Seneca #Ansiedad #ImpulsoReal",
+  "instagram": "La mayoría de lo que te preocupa nunca va a pasar. 🧠\n\nSéneca: sufrimos más en la imaginación que en la realidad. Si no ha pasado, no lo vivas dos veces.\n\n📌 Guárdalo para cuando tu mente escriba la peor película y compártelo con quien se preocupa de más. ¿Qué te preocupa hoy? 👇\n\n#Estoicismo #Seneca #Ansiedad #Mentalidad #ImpulsoReal",
+  "youtube": {
+   "titulo": "Séneca: sufres más en tu cabeza que en la realidad #Shorts",
+   "descripcion": "La carta 13 de Séneca a Lucilio y 3 pasos para dejar de vivir dos veces lo que no ha pasado. ¿Qué te preocupa hoy?\n\n#Estoicismo #Seneca #Shorts"
+  },
+  "tiktok": "Lo que te preocupa casi nunca pasa 🧠 Séneca lo sabía. ¿Qué te preocupa hoy? #estoicismo #seneca #ansiedad #ImpulsoReal"
+ }
+}
