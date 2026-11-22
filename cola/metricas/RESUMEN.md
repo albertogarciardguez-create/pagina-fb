@@ -1,4 +1,4 @@
-# Indicadores — actualizado 2026-11-21 07:01
+# Indicadores — actualizado 2026-11-22 07:01
 Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×comentarios + guardados + 0.5×reacciones (FB+IG+YT).
 
 ## Señor Fútbol
@@ -7,22 +7,24 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| SF · Noticia | 0.0 | 2 |
+| SF · Noticia | 0.0 | 3 |
 | SF · Pizarra F7 | 0.0 | 1 |
+| SF · Debate/Top | 0.0 | 1 |
 
 ### Por hora
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| 13:15 | 0.0 | 2 |
-| 20:30 | 0.0 | 1 |
+| 13:15 | 0.0 | 3 |
+| 20:30 | 0.0 | 2 |
 
 ### Por día
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
 | Thu | 0.0 | 2 |
-| Fri | 0.0 | 1 |
+| Fri | 0.0 | 2 |
+| Sat | 0.0 | 1 |
 
 ### Top 5 publicaciones
 | Publicación | Puntaje | FB | IG | YT |
@@ -30,6 +32,8 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 | 2026-11-19-sf-noticia-juarez-atlas | 0.0 | – | – | – |
 | 2026-11-20-sf-noticia-liderato-j17 | 0.0 | – | – | – |
 | 2026-11-19-sf-pizarra-pared | 0.0 | – | – | – |
+| 2026-11-20-sf-top5-candidatos | 0.0 | – | – | – |
+| 2026-11-21-sf-noticia-juarez-atlas-3-3 | 0.0 | – | – | – |
 
 ## Impulso Real
 
@@ -37,23 +41,24 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| IR · Reflexión | 0.0 | 2 |
-| IR · Historia | 0.0 | 1 |
+| IR · Reflexión | 0.0 | 3 |
+| IR · Historia | 0.0 | 2 |
 
 ### Por hora
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
 | 11:30 | 0.0 | 1 |
-| 07:30 | 0.0 | 1 |
-| 21:00 | 0.0 | 1 |
+| 07:30 | 0.0 | 2 |
+| 21:00 | 0.0 | 2 |
 
 ### Por día
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
 | Thu | 0.0 | 2 |
-| Fri | 0.0 | 1 |
+| Fri | 0.0 | 2 |
+| Sat | 0.0 | 1 |
 
 ### Top 5 publicaciones
 | Publicación | Puntaje | FB | IG | YT |
@@ -61,6 +66,8 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 | 2026-11-19-ir-manana-regla-2-minutos | 0.0 | – | – | – |
 | 2026-11-20-ir-manana-pagate-primero | 0.0 | – | – | – |
 | 2026-11-19-ir-noche-jose-hermanos | 0.0 | – | – | – |
+| 2026-11-21-ir-manana-agradecer-antes | 0.0 | – | – | – |
+| 2026-11-20-ir-noche-diogenes-alejandro | 0.0 | – | – | – |
 
 ## Candidatas a promoción (apagado: $0, solo sugerencia)
 | Página | Publicación | Puntaje | Por qué |
@@ -90,3 +97,4 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 | 2026-11-19 | 1633 | – | 39 | – |
 | 2026-11-20 | 1628 | – | 40 | – |
 | 2026-11-21 | 1626 | – | 40 | – |
+| 2026-11-22 | 1626 | – | 40 | – |

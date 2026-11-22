@@ -11,7 +11,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-21 07:01"
+  "medido": "2026-11-22 07:01"
  },
  "2026-11-19-ir-manana-regla-2-minutos": {
   "pagina": "impulsoreal",
@@ -25,7 +25,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-21 07:01"
+  "medido": "2026-11-22 07:01"
  },
  "2026-11-20-ir-manana-pagate-primero": {
   "pagina": "impulsoreal",
@@ -39,7 +39,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-21 07:01"
+  "medido": "2026-11-22 07:01"
  },
  "2026-11-19-ir-noche-jose-hermanos": {
   "pagina": "impulsoreal",
@@ -53,7 +53,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-21 07:01"
+  "medido": "2026-11-22 07:01"
  },
  "2026-11-20-sf-noticia-liderato-j17": {
   "pagina": "senorfutbol",
@@ -67,7 +67,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-21 07:01"
+  "medido": "2026-11-22 07:01"
  },
  "2026-11-19-sf-pizarra-pared": {
   "pagina": "senorfutbol",
@@ -81,6 +81,62 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-21 07:01"
+  "medido": "2026-11-22 07:01"
+ },
+ "2026-11-20-sf-top5-candidatos": {
+  "pagina": "senorfutbol",
+  "hora": "2026-11-20 20:30",
+  "dia": "Fri",
+  "formato": "SF · Debate/Top",
+  "tema": "Top 5 candidatos al título",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-22 07:01"
+ },
+ "2026-11-21-ir-manana-agradecer-antes": {
+  "pagina": "impulsoreal",
+  "hora": "2026-11-21 07:30",
+  "dia": "Sat",
+  "formato": "IR · Reflexión",
+  "tema": "Fe: agradecer antes de recibir",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-22 07:01"
+ },
+ "2026-11-20-ir-noche-diogenes-alejandro": {
+  "pagina": "impulsoreal",
+  "hora": "2026-11-20 21:00",
+  "dia": "Fri",
+  "formato": "IR · Historia",
+  "tema": "Diógenes y Alejandro Magno",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-22 07:01"
+ },
+ "2026-11-21-sf-noticia-juarez-atlas-3-3": {
+  "pagina": "senorfutbol",
+  "hora": "2026-11-21 13:15",
+  "dia": "Sat",
+  "formato": "SF · Noticia",
+  "tema": "Juárez 3-3 Atlas y cierre de torneo",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-22 07:01"
  }
 }
