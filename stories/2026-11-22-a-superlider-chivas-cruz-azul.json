@@ -1,0 +1,182 @@
+{
+ "id": "2026-11-22-a-superlider-chivas-cruz-azul",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "1°",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Hoy, en el Akron, se decide quién termina como superlíder del Apertura.",
+   "captions": [
+    "Hoy, en el <em>Akron</em>,",
+    "se decide",
+    "quién termina",
+    "como <em>superlíder</em>",
+    "del Apertura."
+   ],
+   "items": [
+    {
+     "n": "32",
+     "label": "CRUZ AZUL",
+     "color": "green"
+    },
+    {
+     "n": "30",
+     "label": "CHIVAS",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "scoreboard",
+   "bg": "92'",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "América tenía el liderato en la mano… y al noventa y dos, Brunetta, de tiro libre, se lo quitó.",
+   "captions": [
+    "<em>América</em> tenía",
+    "el liderato",
+    "en la mano…",
+    "y al <em>92</em>,",
+    "<em>Brunetta</em>,",
+    "de tiro libre,",
+    "se lo quitó."
+   ],
+   "tag": "J17 · AYER",
+   "home": "TIGRES",
+   "away": "AMÉRICA",
+   "goals": [
+    {
+     "side": "home",
+     "at": 0.62
+    }
+   ],
+   "note": "ESTADIO",
+   "noteHL": "UNIVERSITARIO"
+  },
+  {
+   "type": "headline",
+   "bg": "0",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Por primera vez en todo el torneo, América se quedó sin anotar… y se queda con treinta puntos.",
+   "captions": [
+    "Por <em>primera vez</em>",
+    "en todo el torneo,",
+    "América se quedó",
+    "<em>sin anotar</em>…",
+    "y se queda",
+    "con <em>30</em> puntos."
+   ],
+   "tag": "AMÉRICA",
+   "title": "SIN GOL Y\nSIN LIDERATO",
+   "sub": "Tigres 1-0 América"
+  },
+  {
+   "type": "headline",
+   "bg": "74'",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Y en CU, Monterrey le ganó a Pumas, con gol de Luca Orellano al setenta y cuatro, y se metió a la Liguilla. Pumas, eliminado.",
+   "captions": [
+    "Y en <em>CU</em>,",
+    "<em>Monterrey</em>",
+    "le ganó a Pumas,",
+    "con gol de <em>Orellano</em>",
+    "al <em>74</em>,",
+    "y se metió",
+    "a la <em>Liguilla</em>.",
+    "Pumas, <em>eliminado</em>."
+   ],
+   "tag": "RAYADOS",
+   "title": "MONTERREY\nA LA LIGUILLA",
+   "sub": "Pumas se queda fuera"
+  },
+  {
+   "type": "compare",
+   "bg": "VS",
+   "speed": 1.12,
+   "gap": 0.15,
+   "say": "Hoy, a Cruz Azul le basta el empate para ser superlíder. Chivas está obligado a ganar… y si gana, el primer lugar es rojiblanco.",
+   "captions": [
+    "Hoy, a <em>Cruz Azul</em>",
+    "le basta",
+    "el <em>empate</em>",
+    "para ser superlíder.",
+    "<em>Chivas</em> está obligado",
+    "a <em>ganar</em>…",
+    "y si gana,",
+    "el primer lugar",
+    "es <em>rojiblanco</em>."
+   ],
+   "title": "HOY 4:07 PM (JUÁREZ) · AKRON",
+   "left": "CRUZ AZUL",
+   "right": "CHIVAS",
+   "rows": [
+    {
+     "label": "PUNTOS",
+     "l": "32",
+     "r": "30"
+    },
+    {
+     "label": "SI EMPATAN",
+     "l": "33",
+     "r": "31"
+    },
+    {
+     "label": "SI GANA",
+     "l": "35",
+     "r": "33"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "speed": 1.12,
+   "say": "Tú dime: ¿quién termina como superlíder, Cruz Azul o Chivas? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿quién termina",
+    "como <em>superlíder</em>,",
+    "<em>Cruz Azul</em>",
+    "o <em>Chivas</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "SIN MIEDO:",
+   "q": "¿QUIÉN TERMINA\nDE SUPERLÍDER?",
+   "opts": [
+    "CRUZ AZUL",
+    "CHIVAS"
+   ]
+  }
+ ],
+ "post": "Hoy se decide quién termina como superlíder del Apertura 2026. 🔥 América cayó 1-0 con Tigres (tiro libre de Brunetta al 92') y se quedó con 30 puntos. Monterrey le ganó a Pumas y se metió a la Liguilla. Hoy en el Akron: a Cruz Azul (32) le basta el empate; Chivas (30) tiene que ganar. ¿Quién termina primero? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Apertura2026",
+  "#Chivas",
+  "#CruzAzul",
+  "#América"
+ ],
+ "sources": [
+  "https://www.clarosports.com/futbol/liga-mx/america-se-queda-sin-gol-y-sin-liderato-brunetta-rescata-el-orgullo-de-tigres/",
+  "https://www.xeudeportes.mx/liga-mx/1441154/monterrey-esta-en-la-liguilla-rayados-vence-a-pumas-y-consigue-el-ultimo-boleto",
+  "https://www.informador.mx/deportes/chivas-vs-cruz-azul-en-vivo-donde-ver-el-partido-horario-canales-apertura-2026-jornada-17-liga-mx-20261117-0106.html"
+ ],
+ "redes_textos": {
+  "facebook": "Hoy se decide quién termina como superlíder del Apertura 2026. 🔥\n\nAmérica tenía el liderato en la mano y lo dejó ir: Tigres le ganó 1-0 con tiro libre de Juan Brunetta al 92'. Por primera vez en el torneo, América se quedó sin anotar y se queda con 30 puntos.\n\nEn CU, Monterrey le ganó a Pumas (gol de Luca Orellano al 74') y se metió a la Liguilla. Pumas, eliminado.\n\nHoy en el Akron, 4:07 pm hora de Juárez: a Cruz Azul (32) le basta el empate; Chivas (30) está obligado a ganar.\n\n¿Quién termina de superlíder, Cruz Azul o Chivas? 👇\n\n#LigaMX #Apertura2026 #Chivas #CruzAzul #América",
+  "instagram": "Hoy se decide el superlíder. 🔥 A Cruz Azul le basta el empate; Chivas tiene que ganar en el Akron.\n\n¿Cruz Azul o Chivas? Comenta 👇 y mándaselo a tu compa que le va al otro.\n\n#LigaMX #Apertura2026 #Chivas #CruzAzul",
+  "youtube": {
+   "titulo": "Chivas vs Cruz Azul: hoy se decide el superlíder del Apertura 2026 #Shorts",
+   "descripcion": "América cayó 1-0 con Tigres y dejó ir el liderato. Monterrey se metió a la Liguilla. Hoy en el Akron: a Cruz Azul le basta el empate, Chivas tiene que ganar.\n\n#LigaMX #Chivas #CruzAzul"
+  },
+  "tiktok": "Hoy se decide el superlíder 🔥 ¿Cruz Azul o Chivas? #LigaMX #Chivas #CruzAzul #Apertura2026"
+ }
+}

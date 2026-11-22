@@ -1,0 +1,12 @@
+{
+ "id": "2026-11-22-sf-noticia-superlider",
+ "pagina": "senorfutbol",
+ "motor": "reel",
+ "historia": "stories/2026-11-22-a-superlider-chivas-cruz-azul.json",
+ "hora": "2026-11-22 13:15",
+ "redes": ["facebook", "instagram", "youtube", "tiktok"],
+ "horas": {"instagram": "2026-11-22 12:30", "tiktok": "2026-11-22 19:00"},
+ "formato": "SF · Noticia",
+ "tema": "Chivas vs Cruz Azul: se decide el superlíder",
+ "titulo": "Chivas vs Cruz Azul: hoy se decide el superlíder del Apertura 2026 #Shorts"
+}
