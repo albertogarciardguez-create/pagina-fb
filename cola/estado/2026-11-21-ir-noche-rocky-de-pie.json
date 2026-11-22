@@ -9,8 +9,11 @@
   },
   "youtube": {
    "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, IR_YT_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-21-ir-noche-rocky-de-pie.mp4",
- "actualizado": "2026-11-21 05:36"
+ "actualizado": "2026-11-21 20:26"
 }
