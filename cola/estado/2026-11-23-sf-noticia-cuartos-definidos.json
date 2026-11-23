@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "2110736256295681",
+   "url": "https://www.facebook.com/reel/2110736256295681",
+   "programado": true,
+   "fecha": "2026-11-23 08:59"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-23-sf-noticia-cuartos-definidos.mp4",
+ "actualizado": "2026-11-23 08:59"
+}

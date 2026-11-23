@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1187631570494142",
+   "url": "https://www.facebook.com/reel/1187631570494142",
+   "programado": true,
+   "fecha": "2026-11-23 09:02"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-23-sf-pizarra-contragolpe-3-pases.mp4",
+ "actualizado": "2026-11-23 09:02"
+}
