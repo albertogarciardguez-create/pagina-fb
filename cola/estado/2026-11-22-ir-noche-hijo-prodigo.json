@@ -9,8 +9,11 @@
   },
   "youtube": {
    "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, IR_YT_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-22-ir-noche-hijo-prodigo.mp4",
- "actualizado": "2026-11-22 05:34"
+ "actualizado": "2026-11-22 20:26"
 }
