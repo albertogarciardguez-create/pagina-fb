@@ -3,7 +3,7 @@
 
 Cada archivo cola/<id>.json es una publicación autorizada:
   {"id": "2026-11-19-sf-a-bravos", "pagina": "senorfutbol" | "impulsoreal",
-   "motor": "reel" | "diorama" | "anime" | "largo", "historia": "stories/....json",
+   "motor": "reel" | "diorama" | "anime" | "largo" | "post", "historia": "stories/....json" (post: "posts/....json"),
    "hora": "2026-11-19 13:15",                       # hora de Ciudad Juárez
    "redes": ["facebook", "instagram", "youtube", "tiktok"],
    "titulo": "Título para YouTube (opcional)", "texto": "texto del post (opcional; si no, sale de post.txt)"}
@@ -26,7 +26,8 @@ sys.path.insert(0, os.path.join(ROOT, "engine"))
 import redes  # noqa: E402
 
 TZ = ZoneInfo("America/Ciudad_Juarez")
-MOTORES = {"reel": "engine/build.py", "diorama": "engine/build_diorama.py", "anime": "engine/build_anime.py", "largo": "engine/build_largo.py"}
+MOTORES = {"reel": "engine/build.py", "diorama": "engine/build_diorama.py", "anime": "engine/build_anime.py", "largo": "engine/build_largo.py",
+           "post": "engine/build_post.py"}  # post = foto de Facebook (no reel), solo red "facebook"
 PREF = {"senorfutbol": "SF", "impulsoreal": "IR"}
 ESPERAN_HORA = {"instagram": 5 * 60, "tiktok": 30 * 60}  # se mandan hasta (hora - margen); FB y YouTube se programan desde ya
 MAX_INTENTOS = 3
@@ -127,15 +128,16 @@ def asegurar_video(item, est):
     historia = json.load(open(os.path.join(ROOT, item["historia"]), encoding="utf-8"))
     sid = historia["id"]
     carpeta = os.path.join(ROOT, "salida", sid)
-    mp4 = os.path.join(carpeta, f"{sid}.mp4")
+    ext = ".jpg" if item.get("motor") == "post" else ".mp4"
+    mp4 = os.path.join(carpeta, f"{sid}{ext}")
     if not os.path.exists(mp4) and est.get("video") and not SIMULAR:
         os.makedirs(carpeta, exist_ok=True)
-        r = gh("release", "download", "cola", "-p", f"{item['id']}.mp4", "-O", mp4, "--clobber", check=False)
+        r = gh("release", "download", "cola", "-p", f"{item['id']}{ext}", "-O", mp4, "--clobber", check=False)
         if r.returncode:
             log("no pude bajar el video del release; lo genero de nuevo:", r.stderr.strip()[:200])
     if not os.path.exists(mp4):
         if SIMULAR:
-            return "(simulado).mp4", item.get("texto") or historia.get("post", "")
+            return "(simulado)" + ext, item.get("texto") or historia.get("post", "")
         log("generando", item["historia"], "con", MOTORES[item.get("motor", "reel")])
         r = subprocess.run([sys.executable, MOTORES[item.get("motor", "reel")], item["historia"]], cwd=ROOT,
                            capture_output=True, text=True)
@@ -147,13 +149,13 @@ def asegurar_video(item, est):
         gh("release", "view", "cola", check=False).returncode and gh(
             "release", "create", "cola", "--title", "Cola de publicación", "--notes",
             "Videos generados por el publicador automático (agentes/AGENTES.md).", check=False)
-        tmp = os.path.join(carpeta, f"{item['id']}.mp4")
+        tmp = os.path.join(carpeta, f"{item['id']}{ext}")
         if tmp != mp4:
             subprocess.run(["cp", mp4, tmp], check=True)
         r = gh("release", "upload", "cola", tmp, "--clobber", check=False)
         if r.returncode == 0:
             repo = env("GITHUB_REPOSITORY")
-            est["video"] = f"https://github.com/{repo}/releases/download/cola/{item['id']}.mp4" if repo else True
+            est["video"] = f"https://github.com/{repo}/releases/download/cola/{item['id']}{ext}" if repo else True
         else:
             log("AVISO: no pude guardar el video en el release:", r.stderr.strip()[:200])
     post = os.path.join(carpeta, "post.txt")
@@ -179,6 +181,10 @@ def publicar(red, item, mp4, texto, cred, ahora):
     futuro = ts > ahora + 15 * 60
     if SIMULAR:
         return {"id": "simulado", "url": None, "programado": futuro and red in ("facebook", "youtube")}
+    if red == "facebook" and item.get("motor") == "post":
+        return redes.facebook_foto(cred[0], cred[1], mp4, texto, ts if futuro else None)
+    if item.get("motor") == "post":
+        raise ValueError(f"las publicaciones de foto solo van a Facebook, no a {red}")
     if red == "facebook":
         return redes.facebook_reel(cred[0], cred[1], mp4, texto, ts if futuro else None)
     if red == "instagram":

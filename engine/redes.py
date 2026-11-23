@@ -59,6 +59,24 @@ def facebook_reel(page_id, token, mp4, texto, ts=None):
     return {"id": vid, "url": f"https://www.facebook.com/reel/{vid}", "programado": bool(ts)}
 
 
+def facebook_foto(page_id, token, jpg, texto, ts=None):
+    """Publicación de foto en la página (no reel). ts = epoch para programar (>10 min); None = ya."""
+    import uuid
+    campos = {"access_token": token, "caption": texto, "published": "false" if ts else "true"}
+    if ts:
+        campos.update({"scheduled_publish_time": str(int(ts)), "unpublished_content_type": "SCHEDULED"})
+    b = uuid.uuid4().hex
+    partes = [f"--{b}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode() for k, v in campos.items()]
+    partes.append(f"--{b}\r\nContent-Disposition: form-data; name=\"source\"; filename=\"post.jpg\"\r\n"
+                  f"Content-Type: image/jpeg\r\n\r\n".encode() + _bytes(jpg) + f"\r\n--{b}--\r\n".encode())
+    r = http("POST", f"{GRAPH}/{page_id}/photos", headers={"Content-Type": f"multipart/form-data; boundary={b}"},
+             raw=b"".join(partes))
+    pid = r.get("post_id") or r.get("id")
+    if not pid:
+        raise ErrorRed(f"Facebook no aceptó la foto: {r}")
+    return {"id": pid, "url": f"https://www.facebook.com/{pid}", "programado": bool(ts)}
+
+
 # ---------------- Instagram (Reels, subida reanudable) ----------------
 def instagram_reel(ig_id, token, mp4, texto):
     data = _bytes(mp4)
