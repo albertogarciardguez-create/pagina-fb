@@ -1,0 +1,583 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-23-zenon-naufragio-reel",
+ "titulo": "Zenón: el naufragio que fundó el estoicismo (reel)",
+ "scenes": [
+  {
+   "say": "Lo perdió todo en un naufragio… y de ahí nació una filosofía.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 360,
+      "o": {
+       "cam": "#7A3B6E",
+       "pan": "#5A4632",
+       "pelo": "#3A2818",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LO PERDIÓ TODO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "NACIÓ UNA FILOSOFÍA",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Hace más de dos mil años, Zenón era un comerciante. Viajaba de Fenicia a Atenas con un cargamento de púrpura, el tinte más caro del mundo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 380,
+      "h": 340,
+      "o": {
+       "cam": "#7A3B6E",
+       "pan": "#5A4632",
+       "pelo": "#3A2818",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ZENÓN",
+      "y": 150,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "COMERCIANTE",
+      "y": 280,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "CARGA: PÚRPURA",
+      "y": 410,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero el barco se hundió. Y con él, toda su fortuna.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "cae": {
+       "s": 0,
+       "f": 0.5,
+       "dur": 0.6
+      },
+      "o": {
+       "cam": "#7A3B6E",
+       "pan": "#5A4632",
+       "pelo": "#3A2818",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL BARCO SE HUNDIÓ",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "ADIÓS FORTUNA",
+      "y": 320,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.3,
+      "tacha": {
+       "s": 1,
+       "f": 0.7
+      }
+     }
+    ]
+   }
+  },
+  {
+   "say": "Llegó a Atenas sin nada. Entró a una librería y empezó a leer sobre Sócrates.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 380,
+      "h": 330,
+      "o": {
+       "cam": "#7A3B6E",
+       "pan": "#5A4632",
+       "pelo": "#3A2818",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ATENAS",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "SIN NADA",
+      "y": 280,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.5
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 760,
+      "y": 640,
+      "titulo": "JENOFONTE",
+      "items": [
+       "SOBRE",
+       "SÓCRATES"
+      ],
+      "s_": 0.7,
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Le preguntó al librero: ¿dónde encuentro hombres así? Justo pasaba el filósofo Crates. Y el librero le dijo: síguelo.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 250,
+      "h": 320,
+      "o": {
+       "cam": "#7A3B6E",
+       "pan": "#5A4632",
+       "pelo": "#3A2818",
+       "pose": "ask"
+      }
+     },
+     {
+      "x": 760,
+      "h": 340,
+      "camina": [
+       880,
+       640
+      ],
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "largo": true,
+       "pelo": "#3A2818",
+       "canas": true,
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿DÓNDE HAY HOMBRES ASÍ?",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "SÍGUELO",
+      "y": 300,
+      "col": "or",
+      "s": 2,
+      "f": 0.4,
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "say": "Zenón lo siguió. Años después, enseñaba en un pórtico pintado de Atenas, la Stoa. Por eso a sus alumnos les llamaron estoicos.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 350,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "largo": true,
+       "pelo": "#3A2818",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 200,
+      "h": 280,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     },
+     {
+      "x": 820,
+      "h": 280,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA STOA",
+      "y": 150,
+      "col": "marino",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "NACEN LOS ESTOICOS",
+      "y": 290,
+      "col": "or",
+      "s": 2,
+      "f": 0.3,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y mira lo que dijo sobre aquel día: hice un buen viaje… cuando naufragué.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 360,
+      "o": {
+       "cam": "#F2EEE6",
+       "pan": "#8A6A4A",
+       "largo": true,
+       "pelo": "#3A2818",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "HICE UN BUEN VIAJE",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "t": "CUANDO NAUFRAGUÉ",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.6,
+      "size": 60
+     }
+    ],
+    "luz": true
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "La lección: lo que hoy parece tu naufragio… puede ser el puerto que no sabías que buscabas.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 200,
+      "h": 320,
+      "camina": [
+       200,
+       560
+      ],
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TU NAUFRAGIO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3,
+      "tacha": {
+       "s": 1,
+       "f": 0.2
+      }
+     },
+     {
+      "t": "TU NUEVO PUERTO",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.4,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Sígueme: cada noche, una historia que te cambia el día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÍGUEME",
+      "y": 150,
+      "col": "or",
+      "s": 0,
+      "f": 0.0,
+      "size": 62
+     },
+     {
+      "t": "UNA HISTORIA CADA NOCHE",
+      "y": 290,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   },
+   "nivel": 1.2
+  },
+  {
+   "say": "¿Qué naufragio de tu vida terminó siendo lo mejor que te pasó? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Cuál naufragio",
+    "terminó siendo lo mejor?"
+   ]
+  }
+ ],
+ "thumb": [
+  "LO PERDIÓ",
+  "TODO"
+ ],
+ "post": "Lo perdió todo en un naufragio… y de ahí nació el estoicismo. ⚓ Zenón de Citio: “Hice un buen viaje cuando naufragué.” ¿Qué naufragio de tu vida terminó siendo lo mejor que te pasó? 👇",
+ "hashtags": [
+  "#Estoicismo",
+  "#Zenon",
+  "#Resiliencia",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diogenes_Laertius/Lives_of_the_Eminent_Philosophers/7/Zeno*.html",
+  "https://www.worldhistory.org/Zeno_of_Citium/"
+ ],
+ "redes_textos": {
+  "facebook": "Lo perdió todo en un naufragio… y de ahí nació el estoicismo. ⚓\n\nZenón era un comerciante que llevaba púrpura de Fenicia a Atenas. El barco naufragó. Ya en Atenas, entró a una librería, leyó sobre Sócrates y preguntó dónde encontrar hombres así. Pasaba el filósofo Crates y el librero le dijo: “Síguelo”.\n\nAños después enseñaba en la Stoa, el pórtico pintado de Atenas: por eso a sus alumnos les llamaron estoicos. Él mismo decía: “Hice un buen viaje cuando naufragué” (Diógenes Laercio, libro VII).\n\nLo que hoy parece tu naufragio puede ser el puerto que no sabías que buscabas.\n\n¿Qué naufragio de tu vida terminó siendo lo mejor que te pasó? 👇\n\n#Estoicismo #Zenon #Resiliencia #ImpulsoReal",
+  "instagram": "Lo perdió todo en un naufragio… y de ahí nació el estoicismo. ⚓\n\nZenón: “Hice un buen viaje cuando naufragué.”\n\n📌 Guárdalo para el día que sientas que todo se hundió y compártelo con quien lo está viviendo. ¿Qué naufragio tuyo terminó siendo lo mejor? 👇\n\n#Estoicismo #Zenon #Resiliencia #Mentalidad #ImpulsoReal",
+  "youtube": {
+   "titulo": "Zenón: el naufragio que fundó el estoicismo #Shorts",
+   "descripcion": "Cómo un comerciante que lo perdió todo en el mar terminó creando el estoicismo. ¿Qué naufragio tuyo terminó siendo lo mejor?\n\n#Estoicismo #Zenon #Shorts"
+  },
+  "tiktok": "Perdió todo en un naufragio y fundó el estoicismo ⚓ ¿Cuál fue tu naufragio? #estoicismo #zenon #resiliencia #ImpulsoReal"
+ }
+}

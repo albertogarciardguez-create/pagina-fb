@@ -1,0 +1,682 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-23-lider-come-ultimo-reel",
+ "titulo": "El líder come al último (reel)",
+ "scenes": [
+  {
+   "say": "Un jefe manda. Un líder… se queda con la peor silla.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 300,
+      "h": 350,
+      "o": {
+       "cam": "#8A2E2E",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     },
+     {
+      "x": 700,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "UN JEFE MANDA",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "UN LÍDER SIRVE",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "En los Marines de Estados Unidos hay una costumbre: en la fila de la comida, primero comen los más jóvenes. Los oficiales, al último.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 200,
+      "h": 290,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     },
+     {
+      "x": 390,
+      "h": 300,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     },
+     {
+      "x": 580,
+      "h": 310,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     },
+     {
+      "x": 820,
+      "h": 340,
+      "o": {
+       "cam": "#5A6B3A",
+       "pan": "#3A4228",
+       "mira": -1,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PRIMERO LOS JÓVENES",
+      "y": 150,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "EL OFICIAL, AL ÚLTIMO",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "say": "Nadie lo ordena por escrito. Es una forma de decir: tu bienestar va antes que el mío.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 500,
+      "h": 350,
+      "o": {
+       "cam": "#5A6B3A",
+       "pan": "#3A4228",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TU BIENESTAR",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "ANTES QUE EL MÍO",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Simon Sinek escuchó esa historia de un general de los Marines… y la volvió título de su libro: Los líderes comen al último.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 330,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LOS LÍDERES",
+      "y": 150,
+      "col": "marino",
+      "s": 1,
+      "f": 0.3,
+      "x": 430
+     },
+     {
+      "t": "COMEN AL ÚLTIMO",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.7,
+      "x": 430
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 760,
+      "y": 640,
+      "titulo": "SIMON SINEK",
+      "items": [
+       "LIDERAR",
+       "ES CUIDAR"
+      ],
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Su idea es sencilla: cuando el equipo se siente protegido, deja de cuidarse del jefe… y empieza a cuidar el trabajo.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 250,
+      "h": 320,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     },
+     {
+      "x": 500,
+      "h": 350,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     },
+     {
+      "x": 750,
+      "h": 320,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EQUIPO PROTEGIDO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "EQUIPO QUE RINDE",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Uno. Antes de pedir, pregunta: ¿qué necesitas de mí?",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 380,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿QUÉ NECESITAS",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "t": "DE MÍ?",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.5,
+      "size": 64
+     }
+    ]
+   },
+   "tag": "1"
+  },
+  {
+   "say": "Dos. Si sale bien, el mérito es del equipo. Si sale mal, la culpa es tuya.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 350,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL MÉRITO: DEL EQUIPO",
+      "y": 170,
+      "col": "verde",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "LA CULPA: TUYA",
+      "y": 320,
+      "col": "or",
+      "s": 2,
+      "f": 0.2
+     }
+    ]
+   },
+   "tag": "2"
+  },
+  {
+   "say": "Tres. Hoy, deja que otro elija primero. La mejor silla, el mejor turno, el último pedazo.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 820,
+      "h": 300,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "mira": -1,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DEJA QUE ELIJAN",
+      "y": 760,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 440,
+      "y": 420,
+      "titulo": "HOY CEDO",
+      "items": [
+       "LA MEJOR SILLA",
+       "EL MEJOR TURNO",
+       "EL ÚLTIMO PEDAZO"
+      ]
+     }
+    ]
+   },
+   "tag": "3"
+  },
+  {
+   "say": "Nadie sigue al que se sirve primero. Siguen al que se queda al último… para que alcance para todos.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 200,
+      "h": 300,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     },
+     {
+      "x": 400,
+      "h": 310,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26"
+      }
+     },
+     {
+      "x": 760,
+      "h": 350,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SE SIRVE PRIMERO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3,
+      "tacha": {
+       "s": 0,
+       "f": 0.7
+      }
+     },
+     {
+      "t": "SE QUEDA AL ÚLTIMO",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.3,
+      "size": 60
+     }
+    ],
+    "luz": true
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Envíaselo a ese líder que sí come al último. Y sígueme: cada mañana, una idea que te ordena el día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 700,
+      "h": 310,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26",
+       "mira": -1,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ENVÍASELO",
+      "y": 150,
+      "col": "or",
+      "s": 0,
+      "f": 0.0,
+      "size": 60,
+      "x": 430
+     },
+     {
+      "t": "SÍGUEME",
+      "y": 290,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2,
+      "x": 430
+     }
+    ],
+    "props": [
+     {
+      "k": "corazon",
+      "x": 500,
+      "y": 520,
+      "s_": 1.1,
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   },
+   "nivel": 1.25
+  },
+  {
+   "say": "¿Tu jefe come primero, o al último? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Tu jefe come",
+    "primero o al último?"
+   ]
+  }
+ ],
+ "thumb": [
+  "EL LÍDER",
+  "COME AL ÚLTIMO"
+ ],
+ "post": "Un jefe manda. Un líder se queda con la peor silla. 🍽️ En los Marines, los oficiales comen al último. ¿Tu jefe come primero o al último? 👇",
+ "hashtags": [
+  "#Liderazgo",
+  "#LideresComenAlUltimo",
+  "#SimonSinek",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://fisher.osu.edu/blogs/leadreadtoday/blog/why-leaders-should-eat-last-a-look-into-simon-sineks-book",
+  "https://www.penguinrandomhouse.com/books/311389/leaders-eat-last-by-simon-sinek/"
+ ],
+ "redes_textos": {
+  "facebook": "Un jefe manda. Un líder se queda con la peor silla. 🍽️\n\nEn los Marines de Estados Unidos, en la fila de la comida primero comen los más jóvenes y los oficiales al último. Simon Sinek escuchó esa costumbre de un general de los Marines y la volvió el título de su libro: “Los líderes comen al último”.\n\n1️⃣ Antes de pedir, pregunta: ¿qué necesitas de mí?\n2️⃣ Si sale bien, el mérito es del equipo. Si sale mal, la culpa es tuya.\n3️⃣ Hoy, deja que otro elija primero.\n\nEnvíaselo a ese líder que sí come al último.\n\n¿Tu jefe come primero o al último? 👇\n\n#Liderazgo #SimonSinek #Equipo #ImpulsoReal",
+  "instagram": "Un jefe manda. Un líder se queda con la peor silla. 🍽️\n\nEn los Marines, los oficiales comen al último. Nadie sigue al que se sirve primero.\n\n📌 Guárdalo para tu próxima junta y compártelo con el líder que sí lo hace. ¿Tu jefe come primero o al último? 👇\n\n#Liderazgo #SimonSinek #Equipo #Mentalidad #ImpulsoReal",
+  "youtube": {
+   "titulo": "El líder come al último: la regla de los Marines #Shorts",
+   "descripcion": "Por qué en los Marines los oficiales comen al final, y 3 formas de liderar así desde hoy. ¿Tu jefe come primero o al último?\n\n#Liderazgo #SimonSinek #Shorts"
+  },
+  "tiktok": "Un jefe manda. Un líder come al último 🍽️ ¿Y tu jefe? #liderazgo #simonsinek #equipo #ImpulsoReal"
+ }
+}
