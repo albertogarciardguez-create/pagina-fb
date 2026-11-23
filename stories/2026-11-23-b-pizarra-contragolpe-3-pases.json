@@ -1,0 +1,719 @@
+{
+ "id": "2026-11-23-b-pizarra-contragolpe-3-pases",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "3",
+   "say": "Recuperas el balón… y lo pierdes en dos segundos. Así se sale al contragolpe en tres pases.",
+   "captions": [
+    "Recuperas",
+    "el balón…",
+    "y lo <em>pierdes</em>",
+    "en <em>2 segundos</em>.",
+    "Así se sale",
+    "al <em>contragolpe</em>",
+    "en <em>3 pases</em>."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "CONTRAGOLPE\nEN 3 PASES",
+   "sub": "Fútbol 7 · Con ejercicio"
+  },
+  {
+   "type": "board",
+   "bg": "✗",
+   "title": "EL ERROR: CONDUCIR AL MONTÓN",
+   "say": "El error: robas en medio… y te pones a conducir hacia donde están todos. Te cierran dos, y el balón se va otra vez.",
+   "captions": [
+    "El <em>error</em>:",
+    "robas en medio…",
+    "y te pones",
+    "a <em>conducir</em>",
+    "hacia donde",
+    "están todos.",
+    "Te cierran <em>dos</em>,",
+    "y el balón",
+    "se va <em>otra vez</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 32,
+     "y": 82
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 68,
+     "y": 82
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 72
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 60
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 54
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 52,
+     "y": 40
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 34,
+     "y": 30
+    },
+    {
+     "id": "R3",
+     "x": 68,
+     "y": 30
+    },
+    {
+     "id": "R4",
+     "x": 50,
+     "y": 63
+    },
+    {
+     "id": "R5",
+     "x": 36,
+     "y": 56
+    },
+    {
+     "id": "R6",
+     "x": 70,
+     "y": 64
+    },
+    {
+     "id": "R7",
+     "x": 26,
+     "y": 70
+    }
+   ],
+   "ball": "R4",
+   "steps": [
+    {
+     "at": 0.12,
+     "pos": {
+      "MC": [
+       50,
+       66
+      ],
+      "R4": [
+       42,
+       60
+      ]
+     },
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        50,
+        66
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.4,
+     "pos": {
+      "MC": [
+       50,
+       58
+      ],
+      "R5": [
+       37,
+       57
+      ],
+      "R4": [
+       63,
+       57
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        50,
+        58
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "R5",
+       "to": [
+        37,
+        57
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R4",
+       "to": [
+        63,
+        57
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.78,
+     "ball": "R5",
+     "zone": {
+      "x": 30,
+      "y": 46,
+      "w": 40,
+      "h": 20,
+      "label": "LA PIERDES",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "1",
+   "title": "1 · PRIMER PASE: AFUERA",
+   "say": "Primer pase: sácala de la zona donde robaste. Rápido, hacia afuera y hacia adelante… donde no hay nadie.",
+   "captions": [
+    "<em>Primer pase</em>:",
+    "sácala de la zona",
+    "donde robaste.",
+    "<em>Rápido</em>,",
+    "hacia <em>afuera</em>",
+    "y hacia adelante…",
+    "donde <em>no hay nadie</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 32,
+     "y": 82
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 68,
+     "y": 82
+    },
+    {
+     "id": "MC",
+     "x": 50,
+     "y": 66
+    },
+    {
+     "id": "MI",
+     "x": 14,
+     "y": 60
+    },
+    {
+     "id": "MD",
+     "x": 86,
+     "y": 54
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 52,
+     "y": 40
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 5
+    },
+    {
+     "id": "R2",
+     "x": 34,
+     "y": 30
+    },
+    {
+     "id": "R3",
+     "x": 68,
+     "y": 30
+    },
+    {
+     "id": "R4",
+     "x": 38,
+     "y": 58
+    },
+    {
+     "id": "R5",
+     "x": 62,
+     "y": 58
+    },
+    {
+     "id": "R6",
+     "x": 68,
+     "y": 70
+    },
+    {
+     "id": "R7",
+     "x": 26,
+     "y": 70
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.15,
+     "zone": {
+      "x": 30,
+      "y": 50,
+      "w": 40,
+      "h": 22,
+      "label": "PRESIÓN",
+      "color": "red"
+     }
+    },
+    {
+     "at": 0.45,
+     "ball": "MD",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MD",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "zone": {
+      "x": 72,
+      "y": 42,
+      "w": 26,
+      "h": 22,
+      "label": "LIBRE",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "2",
+   "title": "2 · SEGUNDO PASE: AL 9",
+   "inherit": true,
+   "say": "Segundo pase: al nueve, que se acerca a recibir de frente. Y mientras viaja la pelota, tu extremo del otro lado ya está corriendo.",
+   "captions": [
+    "<em>Segundo pase</em>:",
+    "al <em>9</em>,",
+    "que se acerca",
+    "a recibir <em>de frente</em>.",
+    "Y mientras viaja",
+    "la pelota,",
+    "tu <em>extremo</em>",
+    "del otro lado",
+    "ya está <em>corriendo</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "DC": [
+       66,
+       46
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        66,
+        46
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.4,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MD",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.62,
+     "pos": {
+      "MI": [
+       24,
+       30
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        24,
+        30
+       ],
+       "kind": "run",
+       "curve": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3",
+   "title": "3 · TERCER PASE: AL ESPACIO",
+   "inherit": true,
+   "say": "Y tercer pase: al espacio, a la espalda de la defensa. Tu extremo llega solo… y define.",
+   "captions": [
+    "Y <em>tercer pase</em>:",
+    "al <em>espacio</em>,",
+    "a la espalda",
+    "de la defensa.",
+    "Tu extremo",
+    "llega <em>solo</em>…",
+    "y <em>define</em>."
+   ],
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "MI": [
+       30,
+       18
+      ]
+     },
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        30,
+        18
+       ],
+       "kind": "pass",
+       "curve": -0.15
+      },
+      {
+       "from": "MI",
+       "to": [
+        30,
+        18
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.65,
+     "ball": [
+      46,
+      3
+     ],
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        46,
+        3
+       ],
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 34,
+      "y": 0,
+      "w": 32,
+      "h": 9,
+      "label": "GOL",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "3",
+   "say": "Tres pases: afuera, de frente… y al espacio. Si das más, el rival ya regresó.",
+   "captions": [
+    "<em>3 pases</em>:",
+    "<em>afuera</em>,",
+    "<em>de frente</em>…",
+    "y al <em>espacio</em>.",
+    "Si das más,",
+    "el rival",
+    "ya <em>regresó</em>."
+   ],
+   "items": [
+    {
+     "n": "1",
+     "label": "AFUERA"
+    },
+    {
+     "n": "2",
+     "label": "DE FRENTE",
+     "color": "green"
+    },
+    {
+     "n": "3",
+     "label": "AL ESPACIO"
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "6",
+   "title": "ENTRÉNALO: 6 SEGUNDOS",
+   "note": "EJERCICIO",
+   "say": "Entrénalo así: cuatro contra cuatro, con porteros. El que recupera tiene seis segundos, y máximo tres pases, para tirar a gol.",
+   "captions": [
+    "Entrénalo así:",
+    "<em>4 contra 4</em>,",
+    "con porteros.",
+    "El que recupera",
+    "tiene <em>6 segundos</em>,",
+    "y máximo",
+    "<em>3 pases</em>,",
+    "para tirar a gol."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "A",
+     "x": 26,
+     "y": 62
+    },
+    {
+     "id": "B",
+     "x": 50,
+     "y": 66
+    },
+    {
+     "id": "C",
+     "x": 74,
+     "y": 62
+    },
+    {
+     "id": "D",
+     "x": 52,
+     "y": 42
+    }
+   ],
+   "rival": [
+    {
+     "id": "RP",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "E",
+     "x": 34,
+     "y": 54
+    },
+    {
+     "id": "F",
+     "x": 66,
+     "y": 54
+    },
+    {
+     "id": "G",
+     "x": 36,
+     "y": 34
+    },
+    {
+     "id": "H",
+     "x": 66,
+     "y": 34
+    }
+   ],
+   "ball": "E",
+   "timer": {
+    "from": 6,
+    "label": "SEG",
+    "at": 0.45,
+    "end": 0.95
+   },
+   "steps": [
+    {
+     "at": 0.2,
+     "pos": {
+      "B": [
+       50,
+       58
+      ]
+     },
+     "ball": "B",
+     "arrows": [
+      {
+       "from": "B",
+       "to": [
+        50,
+        58
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "ball": "C",
+     "arrows": [
+      {
+       "from": "B",
+       "to": "C",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.65,
+     "ball": "D",
+     "arrows": [
+      {
+       "from": "C",
+       "to": "D",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.8,
+     "pos": {
+      "A": [
+       34,
+       20
+      ]
+     },
+     "ball": "A",
+     "arrows": [
+      {
+       "from": "A",
+       "to": [
+        34,
+        20
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "D",
+       "to": [
+        34,
+        20
+       ],
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "PDF",
+   "say": "Esta y más jugadas vienen en el Libro de Jugadas de Fútbol siete de Señor Fútbol. Muy pronto.",
+   "captions": [
+    "Esta y más jugadas",
+    "vienen en el",
+    "<em>Libro de Jugadas</em>",
+    "de Fútbol 7",
+    "de Señor Fútbol.",
+    "Muy pronto."
+   ],
+   "tag": "LIBRO DE JUGADAS",
+   "title": "SISTEMAS,\nPRESIÓN Y\nEJERCICIOS",
+   "sub": "Fútbol 7 · Muy pronto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Guarda este video para tu próximo entrenamiento, y mándaselo a tu equipo. Y dime: cuando recuperan, ¿tu equipo sale rápido… o la vuelve a perder? ¡Te leo en los comentarios!",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "entrenamiento,",
+    "y mándaselo",
+    "a tu <em>equipo</em>.",
+    "Y dime:",
+    "cuando recuperan,",
+    "¿tu equipo",
+    "sale <em>rápido</em>…",
+    "o la vuelve",
+    "a <em>perder</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "SÉ HONESTO:",
+   "q": "¿TU EQUIPO SALE\nO LA PIERDE?",
+   "opts": [
+    "SALE RÁPIDO",
+    "LA PIERDE"
+   ]
+  }
+ ],
+ "post": "Recuperas el balón… y lo pierdes en 2 segundos. Así se sale al contragolpe en fútbol 7: 3 pases (afuera, de frente y al espacio). Con ejercicio. 💾 Guárdalo para tu próximo entrenamiento. ¿Tu equipo sale rápido o la vuelve a perder? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#FútbolAmateur",
+  "#SeñorFútbol"
+ ],
+ "sources": [],
+ "redes_textos": {
+  "facebook": "Recuperas el balón… y lo pierdes en 2 segundos. ⚽\n\nAsí se sale al contragolpe en fútbol 7, en 3 pases:\n1️⃣ Afuera: sácala de la zona donde robaste\n2️⃣ De frente: al 9 que se acerca a recibir\n3️⃣ Al espacio: a la espalda de la defensa, donde llega tu extremo\n\n🏋️ Ejercicio: 4 vs 4 con porteros; el que recupera tiene 6 segundos y máximo 3 pases para tirar.\n\n💾 Guárdalo para tu próximo entrenamiento y mándaselo a tu equipo.\n\nCuando recuperan, ¿tu equipo sale rápido o la vuelve a perder? 👇\n\n#Fútbol7 #PizarraTáctica #Entrenador #FútbolAmateur #SeñorFútbol",
+  "instagram": "Contragolpe en 3 pases (fútbol 7) ⚡\n\nAfuera → de frente → al espacio. + ejercicio de 6 segundos.\n\n💾 Guárdalo y mándaselo a tu equipo. ¿Salen rápido o la pierden? 👇\n\n#Fútbol7 #PizarraTáctica #Entrenador #FútbolAmateur",
+  "youtube": {
+   "titulo": "Contragolpe en 3 pases: fútbol 7 (con ejercicio) #Shorts",
+   "descripcion": "Recuperas y la pierdes en 2 segundos? Sal en 3 pases: afuera, de frente y al espacio. Con ejercicio para tu equipo.\n\n#Fútbol7 #PizarraTáctica #Entrenador"
+  },
+  "tiktok": "Recuperas y la pierdes en 2 seg? Sal en 3 pases ⚡ #Fútbol7 #PizarraTáctica #FútbolAmateur #Entrenador"
+ }
+}

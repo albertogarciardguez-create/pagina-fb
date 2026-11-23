@@ -1,0 +1,217 @@
+{
+ "id": "2026-11-23-a-cuartos-definidos",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "8",
+   "gap": 0.15,
+   "say": "Ya están los ocho de la Liguilla… y hay un cruce que se decide por un solo punto.",
+   "captions": [
+    "Ya están",
+    "los <em>8</em>",
+    "de la <em>Liguilla</em>…",
+    "y hay un cruce",
+    "que se decide",
+    "por <em>un solo punto</em>."
+   ],
+   "items": [
+    {
+     "n": "8",
+     "label": "EQUIPOS VIVOS",
+     "color": "green"
+    },
+    {
+     "n": "4",
+     "label": "SERIES",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "scoreboard",
+   "bg": "1°",
+   "gap": 0.15,
+   "say": "Pero primero, el Akron: Chivas le ganó uno a cero a Cruz Azul, con gol de Efraín Álvarez… y se quedó con el superliderato.",
+   "captions": [
+    "Pero primero,",
+    "el <em>Akron</em>:",
+    "<em>Chivas</em> le ganó",
+    "<em>1-0</em> a Cruz Azul,",
+    "con gol de",
+    "<em>Efraín Álvarez</em>…",
+    "y se quedó",
+    "con el <em>superliderato</em>."
+   ],
+   "tag": "J17 · AYER",
+   "home": "CHIVAS",
+   "away": "CRUZ AZUL",
+   "goals": [
+    {
+     "side": "home",
+     "at": 0.5
+    }
+   ],
+   "note": "ESTADIO",
+   "noteHL": "AKRON"
+  },
+  {
+   "type": "headline",
+   "bg": "15",
+   "gap": 0.15,
+   "say": "Cruz Azul tuvo el empate… pero Rotondi, con la portería sola, la mandó por arriba. Chivas no llegaba como líder a una Liguilla desde hace quince años.",
+   "captions": [
+    "Cruz Azul",
+    "tuvo el <em>empate</em>…",
+    "pero <em>Rotondi</em>,",
+    "con la portería sola,",
+    "la mandó <em>por arriba</em>.",
+    "Chivas no llegaba",
+    "como <em>líder</em>",
+    "a una Liguilla",
+    "desde hace <em>15 años</em>."
+   ],
+   "tag": "CHIVAS",
+   "title": "LÍDER\n15 AÑOS DESPUÉS",
+   "sub": "33 puntos · Cruz Azul 32"
+  },
+  {
+   "type": "table",
+   "bg": "VS",
+   "gap": 0.15,
+   "say": "Así quedaron los cuartos: Chivas contra Pachuca. Cruz Azul contra León. América contra Monterrey. Y Atlas contra Toluca.",
+   "captions": [
+    "Así quedaron",
+    "los <em>cuartos</em>:",
+    "<em>Chivas</em>",
+    "contra Pachuca.",
+    "<em>Cruz Azul</em>",
+    "contra León.",
+    "<em>América</em>",
+    "contra Monterrey.",
+    "Y <em>Atlas</em>",
+    "contra Toluca."
+   ],
+   "title": "CUARTOS",
+   "sub": "IDA MIÉ Y JUE",
+   "rows": [
+    {
+     "pos": "1°",
+     "team": "CHIVAS vs PACHUCA",
+     "pts": "8°"
+    },
+    {
+     "pos": "2°",
+     "team": "CRUZ AZUL vs LEÓN",
+     "pts": "7°"
+    },
+    {
+     "pos": "3°",
+     "team": "AMÉRICA vs MONTERREY",
+     "pts": "6°"
+    },
+    {
+     "pos": "4°",
+     "team": "ATLAS vs TOLUCA",
+     "pts": "5°",
+     "hl": true
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "bg": "1",
+   "gap": 0.15,
+   "say": "Y ese es el cruce más parejo: Atlas terminó con veintiocho puntos… Toluca, con veintisiete. Uno solo de diferencia.",
+   "captions": [
+    "Y ese es",
+    "el cruce",
+    "<em>más parejo</em>:",
+    "<em>Atlas</em> terminó",
+    "con <em>28</em> puntos…",
+    "<em>Toluca</em>,",
+    "con <em>27</em>.",
+    "<em>Uno solo</em>",
+    "de diferencia."
+   ],
+   "title": "EL MÁS PAREJO",
+   "left": "ATLAS",
+   "right": "TOLUCA",
+   "rows": [
+    {
+     "label": "PUNTOS",
+     "l": "28",
+     "r": "27"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "30",
+   "gap": 0.15,
+   "say": "América peleó el liderato hasta el final… cayó con Tigres, terminó tercero, y le toca un Monterrey que se metió en el último partido.",
+   "captions": [
+    "<em>América</em> peleó",
+    "el liderato",
+    "hasta el final…",
+    "cayó con <em>Tigres</em>,",
+    "terminó <em>tercero</em>,",
+    "y le toca",
+    "un <em>Monterrey</em>",
+    "que se metió",
+    "en el <em>último partido</em>."
+   ],
+   "tag": "3 VS 6",
+   "title": "AMÉRICA VS\nMONTERREY",
+   "sub": "30 puntos contra 27"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Tú dime: ¿Chivas aguanta el peso de ser líder… o Pachuca le da la sorpresa? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿<em>Chivas</em> aguanta",
+    "el peso",
+    "de ser <em>líder</em>…",
+    "o <em>Pachuca</em>",
+    "le da la <em>sorpresa</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "SIN MIEDO:",
+   "q": "¿CHIVAS PASA\nO SE CAE?",
+   "opts": [
+    "PASA CHIVAS",
+    "SORPRESA TUZA"
+   ]
+  }
+ ],
+ "post": "¡Liguilla lista! 🔥 Chivas le ganó 1-0 a Cruz Azul (gol de Efraín Álvarez) y es superlíder con 33 puntos. Cuartos: Chivas vs Pachuca, Cruz Azul vs León, América vs Monterrey y Atlas vs Toluca, el más parejo: 28 contra 27. ¿Chivas pasa o Pachuca da la sorpresa? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Liguilla",
+  "#Apertura2026",
+  "#Chivas",
+  "#CruzAzul"
+ ],
+ "sources": [
+  "https://www.record.com.mx/historia/liguilla-lista-asi-quedaron-los-cruces-de-los-cuartos-de-final-del-apertura-2026-2026112301165324286",
+  "https://www.record.com.mx/historia/asi-quedo-la-tabla-general-del-apertura-2026-de-la-liga-mx-rumbo-a-la-liguilla-2026112304491427046",
+  "https://www.clarosports.com/futbol/liga-mx/chivas-apunta-alto-el-guadalajara-vence-a-cruz-azul-y-le-arrebata-el-liderato-del-apertura-2026/",
+  "https://www.elfinanciero.com.mx/deportes/2026/11/22/cruz-azul-vs-chivas-en-vivo-resultado-j-17-liga-mx-apertura-2026/"
+ ],
+ "redes_textos": {
+  "facebook": "¡Ya están los 8 de la Liguilla… y hay un cruce que se decide por un punto! 🔥\n\nChivas le ganó 1-0 a Cruz Azul en el Akron con gol de Efraín Álvarez y terminó como superlíder (33 pts). Rotondi tuvo el empate con la portería sola y la mandó por arriba.\n\nCuartos de final:\n1️⃣ Chivas vs Pachuca\n2️⃣ Cruz Azul vs León\n3️⃣ América vs Monterrey\n4️⃣ Atlas vs Toluca (28 vs 27, el más parejo)\n\nIda miércoles y jueves, vuelta sábado y domingo (horarios por confirmar).\n\n¿Chivas aguanta el peso de ser líder o Pachuca le da la sorpresa? 👇\n\n#LigaMX #Liguilla #Apertura2026 #Chivas #CruzAzul",
+  "instagram": "¡Liguilla lista! 🔥 Chivas superlíder y estos son los cuartos: Chivas-Pachuca, Cruz Azul-León, América-Monterrey, Atlas-Toluca.\n\n¿Quién pasa? Comenta 👇 y compártelo con tu compa que le va al rival.\n\n#LigaMX #Liguilla #Chivas #Apertura2026",
+  "youtube": {
+   "titulo": "Liguilla Apertura 2026: así quedaron los cuartos de final (Chivas superlíder) #Shorts",
+   "descripcion": "Chivas le ganó 1-0 a Cruz Azul y es superlíder. Cuartos: Chivas-Pachuca, Cruz Azul-León, América-Monterrey y Atlas-Toluca. ¿Quién pasa?\n\n#LigaMX #Liguilla #Chivas"
+  },
+  "tiktok": "Liguilla lista 🔥 ¿Chivas pasa o Pachuca da la sorpresa? #LigaMX #Liguilla #Chivas #Apertura2026"
+ }
+}
