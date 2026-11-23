@@ -8,7 +8,7 @@ Los valores se sacan con `python3 agentes/tokens.py <red>` en tu Mac (desde la c
 
 1. Cada cuenta de Instagram debe ser **profesional** (Creador o Empresa) y estar **vinculada a su página** (Meta Business Suite → Configuración → Cuentas de Instagram).
 2. En [developers.facebook.com](https://developers.facebook.com/apps) → Crear app → caso de uso **“Administrar todo en tu página”** y agrega **“Instagram: administrar mensajes y contenido”**. Puede quedarse en modo desarrollo: tú eres administrador de la app y de las páginas.
-3. En [Graph API Explorer](https://developers.facebook.com/tools/explorer) elige tu app → “Obtener token de usuario” con: `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, `business_management`, `instagram_basic`, `instagram_content_publish`. Marca las dos páginas y las dos cuentas de Instagram.
+3. En [Graph API Explorer](https://developers.facebook.com/tools/explorer) elige tu app → “Obtener token de usuario” con: `pages_show_list`, `pages_read_engagement`, `read_insights`, `pages_manage_posts`, `business_management`, `instagram_basic`, `instagram_content_publish`. Marca las dos páginas y las dos cuentas de Instagram.
 4. `python3 agentes/tokens.py facebook` → pega App ID, App Secret y el token. Te imprime, por página:
 
 | Secreto | Señor Fútbol | Impulso Real |
