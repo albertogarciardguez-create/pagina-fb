@@ -11,7 +11,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-19-ir-manana-regla-2-minutos": {
   "pagina": "impulsoreal",
@@ -25,7 +25,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-20-ir-manana-pagate-primero": {
   "pagina": "impulsoreal",
@@ -39,7 +39,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-19-ir-noche-jose-hermanos": {
   "pagina": "impulsoreal",
@@ -53,7 +53,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-20-sf-noticia-liderato-j17": {
   "pagina": "senorfutbol",
@@ -67,7 +67,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-19-sf-pizarra-pared": {
   "pagina": "senorfutbol",
@@ -81,7 +81,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-20-sf-top5-candidatos": {
   "pagina": "senorfutbol",
@@ -95,7 +95,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-21-ir-manana-agradecer-antes": {
   "pagina": "impulsoreal",
@@ -109,7 +109,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-20-ir-noche-diogenes-alejandro": {
   "pagina": "impulsoreal",
@@ -123,7 +123,7 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
  },
  "2026-11-21-sf-noticia-juarez-atlas-3-3": {
   "pagina": "senorfutbol",
@@ -137,6 +137,62 @@
    }
   },
   "puntaje": 0.0,
-  "medido": "2026-11-22 07:01"
+  "medido": "2026-11-23 07:01"
+ },
+ "2026-11-22-ir-manana-seneca-imaginacion": {
+  "pagina": "impulsoreal",
+  "hora": "2026-11-22 07:30",
+  "dia": "Sun",
+  "formato": "IR · Reflexión",
+  "tema": "Séneca: sufrimos más en la imaginación",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-23 07:01"
+ },
+ "2026-11-21-ir-noche-rocky-de-pie": {
+  "pagina": "impulsoreal",
+  "hora": "2026-11-21 21:00",
+  "dia": "Sat",
+  "formato": "IR · Historia",
+  "tema": "Rocky (1976): no se trataba de ganar",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-23 07:01"
+ },
+ "2026-11-21-sf-pizarra-defender-2v1": {
+  "pagina": "senorfutbol",
+  "hora": "2026-11-21 20:30",
+  "dia": "Sat",
+  "formato": "SF · Pizarra F7",
+  "tema": "Cómo defender un 2 contra 1",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-23 07:01"
+ },
+ "2026-11-22-sf-noticia-superlider": {
+  "pagina": "senorfutbol",
+  "hora": "2026-11-22 13:15",
+  "dia": "Sun",
+  "formato": "SF · Noticia",
+  "tema": "Chivas vs Cruz Azul: se decide el superlíder",
+  "redes": {
+   "facebook": {
+    "puntaje": 0.0
+   }
+  },
+  "puntaje": 0.0,
+  "medido": "2026-11-23 07:01"
  }
 }

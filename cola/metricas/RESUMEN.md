@@ -1,4 +1,4 @@
-# Indicadores — actualizado 2026-11-22 07:01
+# Indicadores — actualizado 2026-11-23 07:01
 Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×comentarios + guardados + 0.5×reacciones (FB+IG+YT).
 
 ## Señor Fútbol
@@ -7,16 +7,16 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| SF · Noticia | 0.0 | 3 |
-| SF · Pizarra F7 | 0.0 | 1 |
+| SF · Noticia | 0.0 | 4 |
+| SF · Pizarra F7 | 0.0 | 2 |
 | SF · Debate/Top | 0.0 | 1 |
 
 ### Por hora
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| 13:15 | 0.0 | 3 |
-| 20:30 | 0.0 | 2 |
+| 13:15 | 0.0 | 4 |
+| 20:30 | 0.0 | 3 |
 
 ### Por día
 
@@ -24,7 +24,8 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 |---|---|---|
 | Thu | 0.0 | 2 |
 | Fri | 0.0 | 2 |
-| Sat | 0.0 | 1 |
+| Sat | 0.0 | 2 |
+| Sun | 0.0 | 1 |
 
 ### Top 5 publicaciones
 | Publicación | Puntaje | FB | IG | YT |
@@ -41,16 +42,16 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
-| IR · Reflexión | 0.0 | 3 |
-| IR · Historia | 0.0 | 2 |
+| IR · Reflexión | 0.0 | 4 |
+| IR · Historia | 0.0 | 3 |
 
 ### Por hora
 
 | | Puntaje promedio | Publicaciones |
 |---|---|---|
 | 11:30 | 0.0 | 1 |
-| 07:30 | 0.0 | 2 |
-| 21:00 | 0.0 | 2 |
+| 07:30 | 0.0 | 3 |
+| 21:00 | 0.0 | 3 |
 
 ### Por día
 
@@ -58,7 +59,8 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 |---|---|---|
 | Thu | 0.0 | 2 |
 | Fri | 0.0 | 2 |
-| Sat | 0.0 | 1 |
+| Sat | 0.0 | 2 |
+| Sun | 0.0 | 1 |
 
 ### Top 5 publicaciones
 | Publicación | Puntaje | FB | IG | YT |
@@ -80,7 +82,7 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 ## Camino a monetizar
 | Página | Meta | Actual | Avance |
 |---|---|---|---|
-| SF | Facebook: 2,500 seguidores (hito) | 1,626 | 65 % |
+| SF | Facebook: 2,500 seguidores (hito) | 1,625 | 65 % |
 | SF | YouTube Fan funding / Shopping: 500 subs + 3,000,000 vistas Shorts/90 d | 0 subs · 0 vistas | 0 % subs · 0 % vistas |
 | SF | YouTube Anuncios (YPP): 1,000 subs + 10,000,000 vistas Shorts/90 d | 0 subs · 0 vistas | 0 % subs · 0 % vistas |
 | SF | TikTok Creator Rewards (México): 10,000 seguidores + 100,000 vistas/30 d (videos ≥1 min) | (TikTok no da datos por API: revisa TikTok Studio) | – |
@@ -98,3 +100,4 @@ Puntaje = 10×seguidores nuevos + reproducciones/25 + 2×compartidos + 2×coment
 | 2026-11-20 | 1628 | – | 40 | – |
 | 2026-11-21 | 1626 | – | 40 | – |
 | 2026-11-22 | 1626 | – | 40 | – |
+| 2026-11-23 | 1625 | – | 40 | – |
