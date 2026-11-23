@@ -39,7 +39,7 @@ Palancas que deben usar siempre:
 - **Series con continuación** (“Parte 1 de 3”, “mañana te cuento cómo terminó”): la razón número 1 para seguir una cuenta es querer ver lo que sigue.
 - **Llamado a seguir en el último segundo**, con un motivo concreto (“Sígueme: cada noche una historia que te cambia el día”), no un “sígueme” genérico.
 - Gancho en el segundo 0–2 y **retención** (re-gancho a la mitad, final en bucle). Las vistas que cuentan para cobrar son las que pasan de los primeros segundos.
-- Mismo video en las 4 redes el mismo día. Constancia: 4 videos diarios, sin días vacíos.
+- Mismo video en las 4 redes el mismo día. Constancia: 5 videos diarios (2 SF + 3 IR), sin días vacíos.
 - Temas con alto volumen de búsqueda (Liga MX en jornada y Liguilla; historias bíblicas y estoicas conocidas) y títulos que se buscan (“¿Por qué…?”, “La historia de…”).
 
 ## Indicadores (lo que deben mover los agentes)
@@ -62,6 +62,7 @@ Seguidores y reproducciones pesan más porque son los requisitos para monetizar.
 | SF · Noticia | 13:15 | 12:30 | 19:00 |
 | SF · Pizarra / Debate | 20:30 | 20:30 | 20:30 |
 | IR · Reflexión mañana | 07:30 | 07:30 | 07:30 |
+| IR · Lección / Tecnología mediodía | 12:00 | 12:00 | 12:00 |
 | IR · Historia noche | 21:00 | 20:30 | 21:00 |
 
 Se basan en los picos generales de mediodía (Instagram) y tarde-noche (Facebook y TikTok) y en la rutina del público (camino al trabajo, comida, noche). Cuando una red lleva otra hora que la de Facebook, va en `"horas"` del item de la cola.
@@ -76,6 +77,8 @@ Reglas para todos: **gancho en el segundo 0–2** (dato, pregunta o afirmación 
 | SF · Pizarra F7 | 61–70 s | 1 problema del amateur (“¿te pasa que…?”) · 2–4 solución en 3 pasos en la pizarra · 5 error común · 6 ejercicio · 7 “guárdalo y mándaselo a tu equipo” · 8 pregunta | Guardados, compartidos |
 | SF · Debate/Top | 61–70 s | Top 5 en cuenta regresiva, el #1 polémico · “¿quién falta?” | Comentarios |
 | IR · Reflexión | 35–45 s | 1 frase contraintuitiva · 2 metáfora visual en papel · 3 tres aplicaciones a la vida diaria · 4 giro · 5 “Envíaselo a quien lo necesite” + pregunta | Compartidos, seguidores |
+| IR · Lección | 50–65 s | 1 dato o frase de un autor/emprendedor (“Brian Tracy decía…”) · 2 el método en 3 pasos con objetos (hoja, frasco, calendario) · 3 dato que lo respalda · 4 re-gancho · 5 “Envíaselo a ese amigo que…” + pregunta. Serie “Parte N” por autor. | Guardados, seguidores |
+| IR · Tecnología | 45–60 s | 1 la noticia en una frase de impacto · 2 qué pasó exactamente (datos verificados) · 3 por qué importa · 4 cómo te afecta a ti / qué hacer · 5 pregunta A/B (“¿te da miedo o te emociona?”) | Comentarios, compartidos |
 | IR · Historia | 61–75 s | 1 empieza en el momento más tenso · 2 contexto · 3 conflicto · 4 giro · 5 la lección en una frase · 6 pregunta personal (“¿Tú qué habrías hecho?”) | Seguidores, retención |
 
 En el texto del post: primera línea = el gancho (no el título), una pregunta para comentar y 3–5 hashtags.
@@ -84,13 +87,14 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 
 1. Lee esta guía y **`cola/metricas/RESUMEN.md`** (si existe): “Camino a monetizar”, formatos, horas y días con mejor y peor puntaje, Top 5 y tendencia de seguidores. Planea para cerrar la brecha más grande de ese avance (p. ej., si YouTube va lento en suscriptores, más series con “parte 2”). Revisa `git log --oneline -40` y los nombres de `stories/` y `diorama/` de los últimos 14 días para no repetir temas.
 2. Busca en la web el calendario de Liga MX (o Liguilla) y de FC Juárez para la semana siguiente (lunes a domingo).
-3. Escribe en la hoja (añade filas debajo de las existentes, H vacío) **4 publicaciones por día** con las franjas de la tabla de horarios (o las que los datos indiquen) y aplicando la regla 60/30/10:
+3. Escribe en la hoja (añade filas debajo de las existentes, H vacío) **5 publicaciones por día** con las franjas de la tabla de horarios (o las que los datos indiquen) y aplicando la regla 60/30/10:
 
 | Página | Franja | Formato (motor) | Contenido |
 |---|---|---|---|
 | Señor Fútbol | Noticia | Noticia (reel) | Lo más fuerte de Liga MX del día; prioridad Bravos. El tema exacto se decide esa mañana: en E pon el partido/tema probable y en F el ángulo. |
 | Señor Fútbol | Noche | Pizarra F7 o Debate/Top (reel) | Pizarra: un concepto táctico de fútbol 7 que no se haya hecho, con ejercicio. Debate: ranking o cara a cara con pregunta polémica. Reparte según el puntaje de cada uno. |
 | Impulso Real | Mañana | Reflexión (diorama, plantilla papel) | Estoicismo, liderazgo, fe, hábitos, finanzas personales. Público 30–44 años. |
+| Impulso Real | Mediodía (12:00) | Lección o Tecnología (diorama, plantilla papel; fondos `noche`/`interior` para el look oscuro) | Alterna: **Lección** de un autor o emprendedor (Brian Tracy, Jim Rohn, Darren Hardy, etc.: metas, hábitos, dinero, productividad), en serie “Parte N”; y **Tecnología**: la noticia más importante de IA, SpaceX, Tesla, robots o tecnología de las últimas 24–48 h, contada con el ángulo de qué significa para tu vida o tu trabajo. En Tecnología, E = “Noticia de tecnología del día” y el tema exacto se decide esa mañana con fuentes (Reuters, AP, The Verge, sitio oficial…), nunca inventado. |
 | Impulso Real | Noche | Historia (diorama, papel o infografía) | Historia bíblica, de un estoico o una lección de vida/película, con giro final. |
 
    - En B pon la hora de Facebook; si IG o TikTok van a otra hora, escríbelo en F (“IG 12:30 · TikTok 19:00”).
@@ -105,6 +109,7 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 3. Para cada fila autorizada:
    - **Señor Fútbol (motor `reel`)**: sigue el “Flujo diario” de CLAUDE.md (verificación con fuentes, historia en `stories/AAAA-MM-DD-a-…json` o `-b-…json`, `--preview` y revisar `revision.png` con Read). Voz: pon en la historia `"tts": "edge", "edge_voz": "es-MX-JorgeNeural"` (voz gratis más fluida que kokoro; Alberto la pidió así). En la nube el preview puede salir con kokoro; el video final en GitHub sale con Jorge. Escribe `say` con puntuación natural (comas, puntos suspensivos) para que fluya, sin exclamaciones en cada frase.
    - Si ya existe una historia de esa fecha y tema en `stories/` o `diorama/` (p. ej. una prueba previa), reúsala y ajústala en vez de escribirla de cero.
+   - **IR · Tecnología**: verifica cada dato en la nota completa (WebFetch) y anota las URL en `sources`; si no hay una noticia confirmable de las últimas 48 h, haz una Lección.
    - **Impulso Real (motor `diorama`)**: historia en `diorama/AAAA-MM-DD-<tema>-reel.json` con `"plantilla": "papel"` (o `"infografia"`), `"tts": "edge"`, `"edge_voz": "es-MX-DaliaNeural"`, sin campo `audio`. Reutiliza escenas `vis` existentes siempre que se pueda; si hace falta una nueva, agrégala en la plantilla y revisa que se vea bien. Gancho en el segundo 0–2, cierre `"tipo": "cierre"` con pregunta. Preview con `python3 engine/build_diorama.py <json> --preview` y revisa la hoja con Read.
    - Antes de escribir, lee el Top 5 de tu página en `cola/metricas/RESUMEN.md` y usa la **estructura** de la tabla de estructuras de video; copia el tipo de gancho que mejor funciona.
    - No hace falta generar el MP4 final aquí: lo genera el publicador en GitHub.
