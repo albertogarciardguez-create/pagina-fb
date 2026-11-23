@@ -1,0 +1,498 @@
+{
+ "id": "2026-11-23-sf-explica-medidas-cancha",
+ "plantilla": "iso",
+ "marca": "senorfutbol",
+ "kind": "explica",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "speed": 1.05,
+ "scenes": [
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "nivel": 0.8,
+   "say": "Ninguna cancha de fútbol mide lo mismo. Y no es trampa… el reglamento lo permite.",
+   "cam": {
+    "rot": -40,
+    "e": 36,
+    "zoom": 7.2,
+    "t": [
+     0,
+     0
+    ],
+    "cy": 0.64
+   },
+   "cam2": {
+    "rot": -18,
+    "e": 46,
+    "zoom": 9.4
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "base": true
+    },
+    {
+     "k": "estadio",
+     "forma": "rect",
+     "ancho": 68,
+     "largo": 105,
+     "filas": 7,
+     "margen": 5,
+     "gente": 0.85,
+     "s": 0,
+     "at": 0.0,
+     "dur": 1.6
+    },
+    {
+     "k": "cota",
+     "de": [
+      40,
+      -52.5
+     ],
+     "a": [
+      40,
+      52.5
+     ],
+     "t": "¿?",
+     "s": 1,
+     "at": 0.1,
+     "dur": 1.0
+    }
+   ],
+   "titulo": "¿CUÁNTO MIDE?",
+   "tituloAt": {
+    "s": 1,
+    "at": 0
+   }
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "say": "El reglamento solo pone límites. De largo, mínimo noventa metros… y máximo ciento veinte.",
+   "cam": {
+    "rot": -15,
+    "e": 50,
+    "zoom": 10.4,
+    "t": [
+     0,
+     0
+    ],
+    "cy": 0.63
+   },
+   "cam2": {
+    "rot": -8,
+    "zoom": 11
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "base": true
+    },
+    {
+     "k": "cota",
+     "de": [
+      37,
+      -52.5
+     ],
+     "a": [
+      37,
+      52.5
+     ],
+     "t": "90 – 120 M",
+     "s": 1,
+     "at": 0.2,
+     "dur": 1.2
+    }
+   ],
+   "cnt": [
+    {
+     "n": 120,
+     "desde": 90,
+     "suf": " M",
+     "l": "DE LARGO",
+     "s": 1,
+     "at": 0.55,
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "say": "De ancho, entre cuarenta y cinco y noventa. Eso sí: siempre tiene que ser más larga que ancha.",
+   "cam": {
+    "rot": -8,
+    "e": 50,
+    "zoom": 11,
+    "t": [
+     0,
+     0
+    ],
+    "cy": 0.63
+   },
+   "cam2": {
+    "rot": 8,
+    "zoom": 11.2
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "base": true
+    },
+    {
+     "k": "cota",
+     "de": [
+      37,
+      -52.5
+     ],
+     "a": [
+      37,
+      52.5
+     ],
+     "t": "90 – 120 M"
+    },
+    {
+     "k": "cota",
+     "de": [
+      -34,
+      -57
+     ],
+     "a": [
+      34,
+      -57
+     ],
+     "t": "45 – 90 M",
+     "color": "#B6E62E",
+     "s": 0,
+     "at": 0.15,
+     "dur": 1.0
+    }
+   ],
+   "cnt": [
+    {
+     "n": 90,
+     "desde": 45,
+     "suf": " M",
+     "l": "DE ANCHO",
+     "s": 0,
+     "at": 0.4,
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "say": "Pero en partidos internacionales, el margen se cierra… de cien a ciento diez de largo, y de sesenta y cuatro a setenta y cinco de ancho.",
+   "cam": {
+    "rot": 8,
+    "e": 46,
+    "zoom": 10.6,
+    "t": [
+     0,
+     0
+    ],
+    "cy": 0.63
+   },
+   "cam2": {
+    "rot": -18,
+    "e": 52,
+    "zoom": 11
+   },
+   "titulo": "INTERNACIONAL",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.1
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "base": true
+    },
+    {
+     "k": "cota",
+     "de": [
+      37,
+      -52.5
+     ],
+     "a": [
+      37,
+      52.5
+     ],
+     "t": "100 – 110 M",
+     "s": 0,
+     "at": 0.45,
+     "dur": 1.0
+    },
+    {
+     "k": "cota",
+     "de": [
+      -34,
+      -57
+     ],
+     "a": [
+      34,
+      -57
+     ],
+     "t": "64 – 75 M",
+     "color": "#B6E62E",
+     "s": 0,
+     "at": 0.75,
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "say": "Y eso cambia el partido. En una cancha angosta todos quedan cerca… menos espacio, más choques. En una ancha, los extremos tienen toda la banda para correr.",
+   "cam": {
+    "rot": -12,
+    "e": 55,
+    "zoom": 12.5,
+    "t": [
+     -32,
+     0
+    ],
+    "cy": 0.62
+   },
+   "cam2": {
+    "rot": -12,
+    "zoom": 7.0
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "ancho": 50,
+     "x": -32,
+     "base": true
+    },
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "ancho": 80,
+     "x": 42,
+     "base": true
+    },
+    {
+     "k": "etiqueta",
+     "x": -32,
+     "y": -58,
+     "t": "ANGOSTA",
+     "bg": "red",
+     "size": 40
+    },
+    {
+     "k": "etiqueta",
+     "x": 42,
+     "y": -58,
+     "t": "ANCHA",
+     "bg": "lime",
+     "size": 40,
+     "s": 1,
+     "at": 0.1
+    },
+    {
+     "k": "fila",
+     "n": 5,
+     "x": -48,
+     "y": -6,
+     "sep": 9,
+     "esc": 8,
+     "ropa": [
+      "#F2762E"
+     ],
+     "s": 0,
+     "at": 0.2
+    },
+    {
+     "k": "fila",
+     "n": 5,
+     "x": -46,
+     "y": 4,
+     "sep": 9,
+     "esc": 8,
+     "ropa": [
+      "#5BB8D9"
+     ],
+     "s": 0,
+     "at": 0.35
+    },
+    {
+     "k": "persona",
+     "x": 76,
+     "y": 30,
+     "esc": 8,
+     "eq": "a",
+     "s": 1,
+     "at": 0.3
+    },
+    {
+     "k": "flecha",
+     "de": [
+      76,
+      28
+     ],
+     "a": [
+      76,
+      -38
+     ],
+     "tipo": "carrera",
+     "s": 1,
+     "at": 0.5,
+     "dur": 0.9
+    },
+    {
+     "k": "persona",
+     "x": 20,
+     "y": 5,
+     "esc": 8,
+     "eq": "b",
+     "s": 1,
+     "at": 0.3
+    }
+   ],
+   "camSteps": [
+    {
+     "s": 1,
+     "at": 0.0,
+     "dur": 1.4,
+     "cam": {
+      "rot": -12,
+      "e": 52,
+      "zoom": 11,
+      "t": [
+       42,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "say": "Lo que nunca cambia es la portería: siete metros treinta y dos de ancho, dos cuarenta y cuatro de alto… y el penal, siempre a once metros.",
+   "cam": {
+    "rot": -30,
+    "e": 20,
+    "zoom": 70,
+    "t": [
+     0,
+     -49
+    ],
+    "cy": 0.56
+   },
+   "cam2": {
+    "rot": -14,
+    "e": 28,
+    "zoom": 58,
+    "t": [
+     0,
+     -47
+    ]
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11"
+    },
+    {
+     "k": "persona",
+     "x": 0,
+     "y": -51.6,
+     "eq": "po",
+     "esc": 1.1
+    },
+    {
+     "k": "cota",
+     "de": [
+      -3.66,
+      -52.5
+     ],
+     "a": [
+      3.66,
+      -52.5
+     ],
+     "z": 2.9,
+     "t": "7.32 M",
+     "s": 0,
+     "at": 0.25,
+     "dur": 0.8
+    },
+    {
+     "k": "etiqueta",
+     "x": 6.4,
+     "y": -52.5,
+     "z": 1.3,
+     "t": "2.44 M",
+     "bg": "lime",
+     "size": 38,
+     "s": 0,
+     "at": 0.6
+    },
+    {
+     "k": "cota",
+     "de": [
+      0,
+      -52.2
+     ],
+     "a": [
+      0,
+      -41.5
+     ],
+     "t": "11 M",
+     "color": "#B6E62E",
+     "s": 1,
+     "at": 0.3,
+     "dur": 0.8
+    },
+    {
+     "k": "balon",
+     "x": 0,
+     "y": -41.5,
+     "s": 1,
+     "at": 0.7
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "mus": "mayor",
+   "say": "Tú qué prefieres para tu equipo: ¿cancha angosta o cancha ancha? Te leo en los comentarios… y sígueme, que cada semana te explico el fútbol como nadie.",
+   "q": [
+    "¿ANGOSTA O ANCHA?",
+    "¿Cuál le va a tu equipo?"
+   ],
+   "opts": [
+    "ANGOSTA",
+    "ANCHA"
+   ]
+  }
+ ],
+ "post": "Ninguna cancha mide lo mismo… y es legal. 📏 El reglamento (Regla 1 de la IFAB) permite de 90 a 120 m de largo y de 45 a 90 m de ancho; en partidos internacionales, de 100 a 110 y de 64 a 75. Lo único fijo: la portería (7.32 × 2.44 m) y el penal a 11 m. ¿Angosta o ancha para tu equipo? 👇",
+ "hashtags": [
+  "#Futbol",
+  "#ReglasDelFutbol",
+  "#LigaMX",
+  "#SabíasQue"
+ ],
+ "sources": [
+  "https://www.thefa.com/football-rules-governance/lawsandrules/laws/football-11-11/law-1---the-field-of-play"
+ ],
+ "redes_textos": {
+  "facebook": "Ninguna cancha de fútbol mide lo mismo… y es completamente legal. 📏\n\nLa Regla 1 de la IFAB solo pone límites:\n• Largo: de 90 a 120 metros\n• Ancho: de 45 a 90 metros (siempre más larga que ancha)\n• Partidos internacionales: de 100 a 110 de largo y de 64 a 75 de ancho\n\nLo que nunca cambia: la portería (7.32 m × 2.44 m) y el penal, a 11 metros.\n\n¿Tú qué prefieres para tu equipo: cancha angosta o ancha? 👇\n\n#Futbol #ReglasDelFutbol #LigaMX #SabíasQue",
+  "instagram": "Ninguna cancha mide lo mismo… y es legal. 📏 De 90 a 120 m de largo y de 45 a 90 de ancho.\n\n¿Angosta o ancha? Comenta 👇 y guárdalo para ganar la próxima discusión.\n\n#Futbol #ReglasDelFutbol #LigaMX #SabíasQue",
+  "youtube": {
+   "titulo": "¿Por qué ninguna cancha de fútbol mide lo mismo? #Shorts",
+   "descripcion": "La Regla 1 permite de 90 a 120 m de largo y de 45 a 90 m de ancho. Lo único fijo: la portería y el penal a 11 m.\n\n#Futbol #ReglasDelFutbol #Shorts"
+  },
+  "tiktok": "Ninguna cancha mide lo mismo… y es legal 📏 ¿angosta o ancha? #futbol #reglasdelfutbol #sabiasque"
+ }
+}

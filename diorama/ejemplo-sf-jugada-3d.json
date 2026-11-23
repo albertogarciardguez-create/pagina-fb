@@ -1,0 +1,278 @@
+{
+ "id": "ejemplo-sf-jugada-3d",
+ "plantilla": "iso",
+ "marca": "senorfutbol",
+ "kind": "jugada",
+ "cancha": "f7",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "vis": "jugada",
+   "mus": "mayor",
+   "say": "En fútbol siete, tu nueve pica al espacio… y el último defensa se lo come.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 26,
+    "t": [
+     0,
+     -12
+    ],
+    "cy": 0.56
+   },
+   "team": [
+    {
+     "id": "PO",
+     "eq": "po",
+     "x": 50,
+     "y": 95
+    },
+    {
+     "id": "2",
+     "x": 30,
+     "y": 70
+    },
+    {
+     "id": "3",
+     "x": 70,
+     "y": 70
+    },
+    {
+     "id": "MC",
+     "label": "TÚ",
+     "x": 50,
+     "y": 55
+    },
+    {
+     "id": "7",
+     "x": 18,
+     "y": 40
+    },
+    {
+     "id": "11",
+     "x": 82,
+     "y": 40
+    },
+    {
+     "id": "9",
+     "x": 50,
+     "y": 30
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "eq": "po",
+     "x": 50,
+     "y": 4
+    },
+    {
+     "id": "R2",
+     "x": 35,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 62,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 30,
+     "y": 42
+    },
+    {
+     "id": "R5",
+     "x": 68,
+     "y": 42
+    },
+    {
+     "id": "R6",
+     "x": 50,
+     "y": 45
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.3,
+     "pos": {
+      "9": [
+       52,
+       12
+      ],
+      "R3": [
+       54,
+       13
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        52,
+        12
+       ],
+       "kind": "run"
+      }
+     ],
+     "tags": {
+      "R3": "ÚLTIMO"
+     },
+     "marca": [
+      "R3"
+     ]
+    },
+    {
+     "s": 0,
+     "at": 0.8,
+     "ball": "R3",
+     "pausa": true
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "inherit": true,
+   "mus": "mayor",
+   "say": "La solución: tu nueve baja a pedirla… el último lo sigue, y se abre el hueco para el siete.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 26,
+    "t": [
+     0,
+     -12
+    ],
+    "cy": 0.56
+   },
+   "steps": [
+    {
+     "at": 0.0,
+     "pos": {
+      "9": [
+       50,
+       30
+      ],
+      "R3": [
+       62,
+       18
+      ],
+      "MC": [
+       50,
+       55
+      ]
+     },
+     "ball": "MC",
+     "dur": 0.4
+    },
+    {
+     "at": 0.25,
+     "pos": {
+      "9": [
+       50,
+       40
+      ],
+      "R3": [
+       52,
+       32
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        50,
+        40
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "R3",
+       "to": [
+        52,
+        32
+       ],
+       "kind": "press"
+      }
+     ],
+     "tags": {
+      "R3": "ÚLTIMO"
+     }
+    },
+    {
+     "at": 0.55,
+     "ball": "9",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "9",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 36,
+      "y": 8,
+      "w": 30,
+      "h": 20,
+      "label": "HUECO",
+      "color": "green"
+     }
+    },
+    {
+     "at": 0.75,
+     "pos": {
+      "7": [
+       42,
+       14
+      ]
+     },
+     "ball": "7",
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        42,
+        14
+       ],
+       "kind": "pass",
+       "curve": 0.2
+      },
+      {
+       "from": "7",
+       "to": [
+        42,
+        14
+       ],
+       "kind": "run",
+       "curve": -0.2
+      }
+     ],
+     "cam": {
+      "zoom": 28,
+      "t": [
+       -2,
+       -16
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "say": "¿Lo has intentado en tu liga? Te leo… y sígueme para más jugadas.",
+   "q": [
+    "¿LO HAS PROBADO?",
+    "Cuéntame en comentarios"
+   ],
+   "opts": [
+    "SÍ",
+    "TODAVÍA NO"
+   ]
+  }
+ ],
+ "post": "Ejemplo de jugada 3D (no se publica).",
+ "hashtags": []
+}

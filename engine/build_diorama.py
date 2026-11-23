@@ -340,7 +340,7 @@ def abrir(pw, story, timing, imgs, cl=None):
     pg = br.new_page(viewport={"width": 1920 if hz else 1080, "height": 1080 if hz else 1920})
     errors = []
     pg.on("pageerror", lambda e: errors.append(str(e)))
-    logo = data_url(os.path.join(ENGINE, "assets", "impulso_logo.png"))
+    logo = data_url(os.path.join(ENGINE, "assets", "senorfutbol_logo.png" if story.get("marca") == "senorfutbol" else "impulso_logo.png"))
     pg.add_init_script(f"window.STORY={json.dumps(story, ensure_ascii=False)};window.TIMING={json.dumps(timing)};"
                        f"window.IMGS={json.dumps(imgs)};window.LOGO={json.dumps(logo)};window.CLIPS={json.dumps(cl or {})};")
     pg.goto(f"file://{ENGINE}/{story.get('plantilla', 'diorama')}.html")  # "infografia" = animación vectorial sin imágenes
@@ -367,7 +367,7 @@ def revision(pg, story, timing, out):
     d = ImageDraw.Draw(hoja)
     for i, sc in enumerate(story["scenes"]):
         fin = cuts[i + 1] if i + 1 < len(cuts) else total
-        t = total - 0.4 if sc.get("tipo") == "cierre" else (cuts[i] + 0.85 * (fin - cuts[i])) if sc.get("tipo") == "recorte" else min(fin - 0.35, max([cuts[i] + 0.8] + [x + 0.7 for x in ev[i]["titles"]] + ([ev[i]["dial"] + 2.3] if "dial" in ev[i] else [])))
+        t = total - 0.4 if sc.get("tipo") == "cierre" else (cuts[i] + 0.85 * (fin - cuts[i])) if sc.get("tipo") == "recorte" or story.get("plantilla") == "iso" else min(fin - 0.35, max([cuts[i] + 0.8] + [x + 0.7 for x in ev[i]["titles"]] + ([ev[i]["dial"] + 2.3] if "dial" in ev[i] else [])))
         im = Image.open(io.BytesIO(cuadro(pg, t))).resize((tw, th))
         dd = ImageDraw.Draw(im)  # zona segura: 250 px abajo y 150 px a la derecha (botones de TikTok/Reels)
         if not hz:

@@ -39,7 +39,7 @@ Palancas que deben usar siempre:
 - **Series con continuación** (“Parte 1 de 3”, “mañana te cuento cómo terminó”): la razón número 1 para seguir una cuenta es querer ver lo que sigue.
 - **Llamado a seguir en el último segundo**, con un motivo concreto (“Sígueme: cada noche una historia que te cambia el día”), no un “sígueme” genérico.
 - Gancho en el segundo 0–2 y **retención** (re-gancho a la mitad, final en bucle). Las vistas que cuentan para cobrar son las que pasan de los primeros segundos.
-- Mismo video en las 4 redes el mismo día. Constancia: 5 videos diarios (2 SF + 3 IR), sin días vacíos.
+- Mismo video en las 4 redes el mismo día. Constancia: 6 videos diarios (3 de Señor Fútbol + 3 de Impulso Real), sin días vacíos.
 - Temas con alto volumen de búsqueda (Liga MX en jornada y Liguilla; historias bíblicas y estoicas conocidas) y títulos que se buscan (“¿Por qué…?”, “La historia de…”).
 
 ## Indicadores (lo que deben mover los agentes)
@@ -60,6 +60,7 @@ Seguidores y reproducciones pesan más porque son los requisitos para monetizar.
 | Franja | Facebook / YouTube | Instagram | TikTok (bandeja) |
 |---|---|---|---|
 | SF · Noticia | 13:15 | 12:30 | 19:00 |
+| SF · Explica / Jugada 3D | 18:00 | 18:00 | 18:00 |
 | SF · Pizarra / Debate | 20:30 | 20:30 | 20:30 |
 | IR · Reflexión mañana | 07:30 | 07:30 | 07:30 |
 | IR · Lección / Tecnología mediodía | 12:00 | 12:00 | 12:00 |
@@ -75,6 +76,8 @@ Reglas para todos: **gancho en el segundo 0–2** (dato, pregunta o afirmación 
 |---|---|---|---|
 | SF · Noticia | 25–35 s | 1 dato o polémica · 2 contexto (marcador/tabla) · 3–4 lo que nadie está diciendo · 5 qué sigue (Liguilla, próximo rival) · 6 pregunta A/B | Comentarios, compartidos |
 | SF · Pizarra F7 | 61–70 s | 1 problema del amateur (“¿te pasa que…?”) · 2–4 solución en 3 pasos en la pizarra · 5 error común · 6 ejercicio · 7 “guárdalo y mándaselo a tu equipo” · 8 pregunta | Guardados, compartidos |
+| SF · Explica 3D | 61–70 s | 1 pregunta-gancho con dato (“¿Por qué…?”, “Ninguna cancha mide igual”) · 2–4 el concepto se arma paso a paso en el mundo 3D (aparecen gradas, cotas, contadores) · 5 re-gancho (“pero lo que nunca cambia…”) · 6 cierre con pregunta A/B + “sígueme, cada semana te explico el fútbol como nadie” | Compartidos, seguidores |
+| SF · Jugada 3D | 61–70 s | 1 el error en la cancha 3D (“tu nueve pica… y se lo comen”) · 2 EN PAUSA: se marca al rival clave · 3–4 la solución con flechas y zona · 5 la repetición con otra cámara · 6 “compártelo con tu equipo” + pregunta | Guardados, compartidos |
 | SF · Debate/Top | 61–70 s | Top 5 en cuenta regresiva, el #1 polémico · “¿quién falta?” | Comentarios |
 | IR · Reflexión | 35–45 s | 1 frase contraintuitiva · 2 metáfora visual en papel · 3 tres aplicaciones a la vida diaria · 4 giro · 5 “Envíaselo a quien lo necesite” + pregunta | Compartidos, seguidores |
 | IR · Lección | 50–65 s | 1 dato o frase de un autor/emprendedor (“Brian Tracy decía…”) · 2 el método en 3 pasos con objetos (hoja, frasco, calendario) · 3 dato que lo respalda · 4 re-gancho · 5 “Envíaselo a ese amigo que…” + pregunta. Serie “Parte N” por autor. | Guardados, seguidores |
@@ -87,11 +90,12 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 
 1. Lee esta guía y **`cola/metricas/RESUMEN.md`** (si existe): “Camino a monetizar”, formatos, horas y días con mejor y peor puntaje, Top 5 y tendencia de seguidores. Planea para cerrar la brecha más grande de ese avance (p. ej., si YouTube va lento en suscriptores, más series con “parte 2”). Revisa `git log --oneline -40` y los nombres de `stories/` y `diorama/` de los últimos 14 días para no repetir temas.
 2. Busca en la web el calendario de Liga MX (o Liguilla) y de FC Juárez para la semana siguiente (lunes a domingo).
-3. Escribe en la hoja (añade filas debajo de las existentes, H vacío) **5 publicaciones por día** con las franjas de la tabla de horarios (o las que los datos indiquen) y aplicando la regla 60/30/10:
+3. Escribe en la hoja (añade filas debajo de las existentes, H vacío) **6 publicaciones por día** (3 de Señor Fútbol y 3 de Impulso Real) con las franjas de la tabla de horarios (o las que los datos indiquen) y aplicando la regla 60/30/10:
 
 | Página | Franja | Formato (motor) | Contenido |
 |---|---|---|---|
 | Señor Fútbol | Noticia | Noticia (reel) | Lo más fuerte de Liga MX del día; prioridad Bravos. El tema exacto se decide esa mañana: en E pon el partido/tema probable y en F el ángulo. |
+| Señor Fútbol | Tarde 18:00 | Explica 3D o Jugada 3D (diorama, plantilla iso) — se alternan día por día | Explica: un “¿por qué…?” del fútbol (reglas, medidas, estadios, balón, VAR) con datos verificados en la fuente oficial (IFAB/FIFA). Jugada: una idea táctica de F7 en la cancha 3D, distinta a la pizarra de esa semana. Estilo de los videos que pasó Alberto (mundo isométrico con gente, cancha 3D con jugadores marcados). |
 | Señor Fútbol | Noche | Pizarra F7 o Debate/Top (reel) | Pizarra: un concepto táctico de fútbol 7 que no se haya hecho, con ejercicio. Debate: ranking o cara a cara con pregunta polémica. Reparte según el puntaje de cada uno. |
 | Impulso Real | Mañana | Reflexión (diorama, plantilla papel) | Estoicismo, liderazgo, fe, hábitos, finanzas personales. Público 30–44 años. |
 | Impulso Real | Mediodía (12:00) | Lección o Tecnología (diorama, plantilla papel; fondos `noche`/`interior` para el look oscuro) | Alterna: **Lección** de un autor o emprendedor (Brian Tracy, Jim Rohn, Darren Hardy, etc.: metas, hábitos, dinero, productividad), en serie “Parte N”; y **Tecnología**: la noticia más importante de IA, SpaceX, Tesla, robots o tecnología de las últimas 24–48 h, contada con el ángulo de qué significa para tu vida o tu trabajo. En Tecnología, E = “Noticia de tecnología del día” y el tema exacto se decide esa mañana con fuentes (Reuters, AP, The Verge, sitio oficial…), nunca inventado. |
@@ -108,6 +112,7 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 2. Antes de producir, revisa `cola/estado/` de ayer: escribe en J de esas filas `Publicado: FB ✅ IG ✅ YT ✅ TikTok ✅` (o el error en pocas palabras).
 3. Para cada fila autorizada:
    - **Señor Fútbol (motor `reel`)**: sigue el “Flujo diario” de CLAUDE.md (verificación con fuentes, historia en `stories/AAAA-MM-DD-a-…json` o `-b-…json`, `--preview` y revisar `revision.png` con Read). Voz: pon en la historia `"tts": "edge", "edge_voz": "es-MX-JorgeNeural"` (voz gratis más fluida que kokoro; Alberto la pidió así). En la nube el preview puede salir con kokoro; el video final en GitHub sale con Jorge. Escribe `say` con puntuación natural (comas, puntos suspensivos) para que fluya, sin exclamaciones en cada frase.
+   - **Señor Fútbol · Explica 3D / Jugada 3D (motor `diorama`)**: historia en `diorama/AAAA-MM-DD-sf-explica-<tema>.json` o `-sf-jugada-<tema>.json` con `"plantilla": "iso"`, `"marca": "senorfutbol"`, `"tts": "edge"`, `"edge_voz": "es-MX-JorgeNeural"` (esquema en CLAUDE.md, “Plantilla iso”). Ejemplos: `diorama/2026-11-23-sf-explica-medidas-cancha.json` y `diorama/ejemplo-sf-jugada-3d.json`. Preview con `build_diorama.py --preview` y revisa que las figuras se vean grandes y nada quede en la zona roja. En la cola: `"motor": "diorama"`, `"pagina": "senorfutbol"`, `"formato": "SF · Explica 3D"` o `"SF · Jugada 3D"`.
    - Si ya existe una historia de esa fecha y tema en `stories/` o `diorama/` (p. ej. una prueba previa), reúsala y ajústala en vez de escribirla de cero.
    - **IR · Tecnología**: verifica cada dato en la nota completa (WebFetch) y anota las URL en `sources`; si no hay una noticia confirmable de las últimas 48 h, haz una Lección.
    - **Impulso Real (motor `diorama`)**: historia en `diorama/AAAA-MM-DD-<tema>-reel.json` con `"plantilla": "papel"` (o `"infografia"`), `"tts": "edge"`, `"edge_voz": "es-MX-DaliaNeural"`, sin campo `audio`. Reutiliza escenas `vis` existentes siempre que se pueda; si hace falta una nueva, agrégala en la plantilla y revisa que se vea bien. Gancho en el segundo 0–2, cierre `"tipo": "cierre"` con pregunta. Preview con `python3 engine/build_diorama.py <json> --preview` y revisa la hoja con Read.

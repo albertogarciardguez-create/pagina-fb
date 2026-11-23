@@ -1,0 +1,432 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:MB;src:url(fonts/Montserrat-ExtraBold.ttf)}
+@font-face{font-family:MS;src:url(fonts/Montserrat-SemiBold.ttf)}
+@font-face{font-family:MR;src:url(fonts/Montserrat-Regular.ttf)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style></head><body><canvas id="c"></canvas>
+<script>
+// Plantilla "iso" (Señor Fútbol): mundo 3D isométrico dibujado en código, sin imágenes.
+//  · vis "explica": escenas armadas con objetos (cancha, gradas, estadio, personas, cajas, cotas, flechas…)
+//  · vis "jugada": jugada táctica en cancha 3D con jugadores, balón, flechas, zonas, etiquetas y "EN PAUSA".
+// Mundo en metros: x a lo ancho, y a lo largo, z hacia arriba. Cámara: rot (°, giro), e (°, elevación: 90 = desde arriba),
+// zoom (px por metro), t [x, y] (punto al centro), cy (altura del centro en pantalla, 0–1).
+const S = window.STORY, T = window.TIMING, HZ = S.formato === 'horizontal';
+const W = HZ ? 1920 : 1080, H = HZ ? 1080 : 1920;
+const cv = document.getElementById('c'); cv.width = W; cv.height = H; const g = cv.getContext('2d');
+const LIME = '#B6E62E', INK = '#141414', CIELO = '#7EC3EE', PASTO = '#86C766';
+const EQ = { a: ['#F2762E', '#1E1E1E', '#F2762E'], b: ['#5BB8D9', '#F4F4F4', '#5BB8D9'], po: ['#F2D23A', '#2A2A2A', '#F2D23A'], c: ['#E8473C', '#F4F4F4', '#E8473C'], n: ['#2E5BBA', '#F4F4F4', '#2E5BBA'] };
+const PIEL = ['#F1C9A5', '#D9A27A', '#B97A52', '#8A5634', '#E6B48C'];
+const GENTE = ['#2E5BBA', '#3E6FD0', '#F2C230', '#E9E9E9', '#2A3F7A', '#F5D35B', '#6E8FD8'];
+let logo = null;
+const rnd = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const cl = (x, a, b) => Math.max(a, Math.min(b, x));
+const ease = p => { p = cl(p, 0, 1); return 0.5 - 0.5 * Math.cos(Math.PI * p); };
+const back = p => { p = cl(p, 0, 1); const c = 1.7; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
+const lerp = (a, b, p) => a + (b - a) * p;
+const rad = d => d * Math.PI / 180;
+function shade(hex, f) { const n = parseInt(hex.slice(1), 16); let r = n >> 16, gg = (n >> 8) & 255, b = n & 255;
+  if (f >= 1) { r += (255 - r) * (f - 1); gg += (255 - gg) * (f - 1); b += (255 - b) * (f - 1); } else { r *= f; gg *= f; b *= f; }
+  return `rgb(${r | 0},${gg | 0},${b | 0})`; }
+
+async function load() {
+  const L = src => new Promise(r => { if (!src) return r(null); const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+  logo = await L(window.LOGO);
+  await document.fonts.load('80px MB'); await document.fonts.load('40px MS'); await document.fonts.load('40px MR');
+  window.READY = true;
+}
+const sceneAt = t => { let i = 0; while (i + 1 < T.cuts.length && t >= T.cuts[i + 1]) i++; return i; };
+const winEnd = i => i + 1 < T.cuts.length ? T.cuts[i + 1] : T.total;
+// momento de un evento: {s, at} = oración s, fracción at dentro de ella; sin s, at = fracción de toda la línea de voz.
+function tAt(i, o) { const ss = T.scenes[i].sents; if (!o) return ss[0].start;
+  if (o.s === undefined) { const a = ss[0].start, b = ss[ss.length - 1].end; return a + (o.at || 0) * (b - a); }
+  const se = ss[Math.min(o.s, ss.length - 1)]; return se.start + (o.at || 0) * (se.end - se.start); }
+
+// ---------- cámara y proyección ----------
+let C = null;
+const CAM0 = { rot: -30, e: 45, zoom: 14, t: [0, 0], cy: 0.55 };
+function setCam(c) { C = Object.assign({}, CAM0, c); C.cr = Math.cos(rad(C.rot)); C.sr = Math.sin(rad(C.rot)); C.ce = Math.cos(rad(C.e)); C.se = Math.sin(rad(C.e)); }
+function mixCam(a, b, p) { a = Object.assign({}, CAM0, a); b = Object.assign({}, a, b || {});
+  return { rot: lerp(a.rot, b.rot, p), e: lerp(a.e, b.e, p), zoom: a.zoom * Math.pow(b.zoom / a.zoom, p), t: [lerp(a.t[0], b.t[0], p), lerp(a.t[1], b.t[1], p)], cy: lerp(a.cy, b.cy, p) }; }
+function P(x, y, z) { const dx = x - C.t[0], dy = y - C.t[1], u = dx * C.cr - dy * C.sr, v = dx * C.sr + dy * C.cr; z = z || 0;
+  return { x: W / 2 + u * C.zoom, y: H * C.cy + (v * C.se - z * C.ce) * C.zoom, d: v * C.ce + z * C.se, u, v }; }
+const pxM = () => C.zoom * Math.max(C.ce, 0.4);  // tamaño en pantalla de 1 m de altura (las figuras nunca se aplastan)
+
+// ---------- lista de dibujo ordenada por profundidad ----------
+let Q = [];
+const add = (d, f) => Q.push({ d, f });
+function flush() { Q.sort((a, b) => a.d - b.d); Q.forEach(q => q.f()); Q = []; }
+
+function poly(pts, fill, stroke, lw) { g.beginPath(); pts.forEach((p, k) => k ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y)); g.closePath();
+  if (fill) { g.fillStyle = fill; g.fill(); } if (stroke) { g.strokeStyle = stroke; g.lineWidth = lw || 2; g.stroke(); } }
+// caja: centro de la base (x, y, z), medidas w (x local) · dd (y local) · h, giro rot (°)
+function caja(o, a) {
+  const { x, y } = o, z = o.z || 0, w = o.w || 1, dd = o.d || 1, h = (o.h || 1) * (a === undefined ? 1 : a), col = o.color || '#D9D2C3';
+  if (h <= 0.001) return;
+  const r = rad(o.rot || 0), c = Math.cos(r), s = Math.sin(r);
+  const L = (lx, ly, lz) => P(x + lx * c - ly * s, y + lx * s + ly * c, z + lz);
+  const cx = [[-w / 2, -dd / 2], [w / 2, -dd / 2], [w / 2, dd / 2], [-w / 2, dd / 2]];
+  const ctr = P(x, y, z + h / 2);
+  add(ctr.d + (o.dz || 0), () => {
+    // caras laterales visibles (normal hacia la cámara)
+    for (let k = 0; k < 4; k++) { const p0 = cx[k], p1 = cx[(k + 1) % 4];
+      const mx = (p0[0] + p1[0]) / 2, my = (p0[1] + p1[1]) / 2; const wx = mx * c - my * s, wy = mx * s + my * c;
+      const nv = wx * C.sr + wy * C.cr, nu = wx * C.cr - wy * C.sr; if (nv * C.ce <= 0.0001) continue;
+      const f = 0.72 + 0.18 * (nu / Math.hypot(nu, nv || 1e-6));
+      poly([L(p0[0], p0[1], 0), L(p1[0], p1[1], 0), L(p1[0], p1[1], h), L(p0[0], p0[1], h)], shade(col, f), o.linea ? 'rgba(0,0,0,.12)' : null, 1.5);
+    }
+    poly(cx.map(p => L(p[0], p[1], h)), shade(col, o.techo ? 1.0 : 1.08), o.linea ? 'rgba(0,0,0,.12)' : null, 1.5);
+  });
+}
+// figura humana (siempre de frente a la cámara): equipo [camisa, short, medias], escala, fase de carrera
+function persona(x, y, z, o) {
+  const p = P(x, y, z || 0), h = 1.8 * (o.esc || 1) * pxM(); if (h < 3) return;
+  add(p.d + 0.01, () => {
+    const col = o.ropa || EQ[o.eq || 'a'] || EQ.a, skin = o.piel || PIEL[(o.seed || 0) % PIEL.length], ph = o.fase || 0, run = o.corre || 0;
+    if (o.simple) {  // gente de tribuna: cuerpo + cabeza
+      const bob = o.salta ? Math.max(0, Math.sin(ph)) * h * 0.08 : 0;
+      g.fillStyle = shade(col[0], 0.85); g.beginPath(); g.roundRect(p.x - h * 0.17, p.y - h * 0.62 - bob, h * 0.34, h * 0.62, h * 0.12); g.fill();
+      g.fillStyle = skin; g.beginPath(); g.arc(p.x, p.y - h * 0.78 - bob, h * 0.15, 0, 6.283); g.fill(); return; }
+    g.fillStyle = 'rgba(0,0,0,.22)'; g.beginPath(); g.ellipse(p.x, p.y, h * 0.3, h * 0.1, 0, 0, 6.283); g.fill();
+    if (o.anillo) { g.strokeStyle = o.anillo; g.lineWidth = Math.max(3, h * 0.05); g.beginPath(); g.ellipse(p.x, p.y, h * 0.48, h * 0.17, 0, 0, 6.283); g.stroke(); }
+    const sw = Math.sin(ph) * run;
+    g.fillStyle = col[2]; [-1, 1].forEach(k => { g.beginPath(); g.roundRect(p.x + k * h * 0.07 - h * 0.05 + k * sw * h * 0.06, p.y - h * 0.42 + Math.abs(sw) * (k > 0 ? 1 : 0) * h * 0.03, h * 0.1, h * 0.42, h * 0.04); g.fill(); });
+    g.fillStyle = col[1]; g.beginPath(); g.roundRect(p.x - h * 0.15, p.y - h * 0.52, h * 0.3, h * 0.16, h * 0.05); g.fill();
+    const gr = g.createLinearGradient(p.x - h * 0.18, 0, p.x + h * 0.18, 0); gr.addColorStop(0, shade(col[0], 1.15)); gr.addColorStop(1, shade(col[0], 0.78));
+    g.fillStyle = gr; g.beginPath(); g.roundRect(p.x - h * 0.18, p.y - h * 0.84, h * 0.36, h * 0.36, h * 0.1); g.fill();
+    g.fillStyle = shade(col[0], 0.9); [-1, 1].forEach(k => { g.beginPath(); g.roundRect(p.x + k * h * 0.2 - h * 0.05 - k * sw * h * 0.05, p.y - h * 0.82, h * 0.1, h * 0.3, h * 0.05); g.fill(); });
+    g.fillStyle = skin; g.beginPath(); g.arc(p.x, p.y - h * 0.93, h * 0.12, 0, 6.283); g.fill();
+    g.fillStyle = 'rgba(40,25,15,.85)'; g.beginPath(); g.arc(p.x, p.y - h * 0.95, h * 0.12, Math.PI * 1.05, Math.PI * 1.95); g.fill();
+    if (o.num) { g.font = `800 ${Math.max(10, h * 0.16)}px MB`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = 'rgba(255,255,255,.9)'; g.fillText(o.num, p.x, p.y - h * 0.66); }
+  });
+  return { x: p.x, y: p.y - h * 1.12, h };
+}
+function balon(x, y, z) { const p = P(x, y, z || 0), q = P(x, y, 0), r = Math.max(5, 0.36 * pxM());
+  add(p.d + 0.02, () => { g.fillStyle = 'rgba(0,0,0,.25)'; g.beginPath(); g.ellipse(q.x, q.y, r, r * 0.4, 0, 0, 6.283); g.fill();
+    g.fillStyle = '#fff'; g.strokeStyle = '#222'; g.lineWidth = Math.max(1.5, r * 0.18); g.beginPath(); g.arc(p.x, p.y - r, r, 0, 6.283); g.fill(); g.stroke();
+    g.fillStyle = '#222'; g.beginPath(); g.arc(p.x, p.y - r, r * 0.35, 0, 6.283); g.fill(); }); }
+function chip(x, y, txt, bg, fg, sz, a) { if (a !== undefined && a <= 0) return; g.save(); if (a !== undefined) g.globalAlpha = cl(a, 0, 1);
+  g.font = `800 ${sz || 30}px MB`; g.textAlign = 'center'; g.textBaseline = 'middle'; const w = g.measureText(txt).width + (sz || 30) * 0.9, hh = (sz || 30) * 1.5;
+  g.fillStyle = bg || 'rgba(20,20,20,.85)'; g.beginPath(); g.roundRect(x - w / 2, y - hh / 2, w, hh, hh * 0.3); g.fill(); g.fillStyle = fg || '#fff'; g.fillText(txt, x, y + 1); g.restore(); }
+
+// ---------- suelo: líneas y polígonos proyectados ----------
+function linea(pts, col, lw, dash) { g.beginPath(); pts.forEach((q, k) => { const p = P(q[0], q[1], q[2] || 0); k ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y); });
+  g.strokeStyle = col; g.lineWidth = lw; g.setLineDash(dash || []); g.stroke(); g.setLineDash([]); }
+const MED = { f11: [68, 105], f7: [40, 60], f5: [22, 40] };
+function cancha(o, a) {  // o: tipo, x, y, rot (0 = largo en y), ancho, largo
+  const [A0, L0] = MED[o.tipo || 'f7'] || MED.f7, A = o.ancho || A0, Lg = o.largo || L0, X = o.x || 0, Y = o.y || 0, r = rad(o.rot || 0), c = Math.cos(r), s = Math.sin(r);
+  const w = (lx, ly) => [X + lx * c - ly * s, Y + lx * s + ly * c];
+  a = a === undefined ? 1 : a;
+  if (o.base) {  // losa de tierra debajo (look de maqueta)
+    const m2 = 3, bz = -(o.base === true ? 2 : o.base), cs = [w(-A / 2 - m2, -Lg / 2 - m2), w(A / 2 + m2, -Lg / 2 - m2), w(A / 2 + m2, Lg / 2 + m2), w(-A / 2 - m2, Lg / 2 + m2)];
+    for (let k = 0; k < 4; k++) { const p0 = cs[k], p1 = cs[(k + 1) % 4], mx = (p0[0] + p1[0]) / 2 - X, my = (p0[1] + p1[1]) / 2 - Y;
+      if ((mx * C.sr + my * C.cr) <= 0) continue; poly([P(p0[0], p0[1], 0), P(p1[0], p1[1], 0), P(p1[0], p1[1], bz), P(p0[0], p0[1], bz)], k % 2 ? '#8B6A45' : '#7A5B3A'); } }
+  // bandas de pasto
+  const n = o.tipo === 'f11' ? 12 : 10;
+  for (let k = 0; k < n; k++) { const y0 = -Lg / 2 + k * Lg / n, y1 = y0 + Lg / n;
+    g.globalAlpha = a; poly([w(-A / 2 - 3, y0), w(A / 2 + 3, y0), w(A / 2 + 3, y1), w(-A / 2 - 3, y1)].map(q => P(q[0], q[1], 0)), k % 2 ? '#5FA84A' : '#6CB654'); }
+  poly([w(-A / 2 - 3, -Lg / 2 - 3), w(A / 2 + 3, -Lg / 2 - 3), w(A / 2 + 3, -Lg / 2), w(-A / 2 - 3, -Lg / 2)].map(q => P(q[0], q[1], 0)), '#6CB654');
+  poly([w(-A / 2 - 3, Lg / 2), w(A / 2 + 3, Lg / 2), w(A / 2 + 3, Lg / 2 + 3), w(-A / 2 - 3, Lg / 2 + 3)].map(q => P(q[0], q[1], 0)), '#5FA84A');
+  const lw = Math.max(2, 0.14 * C.zoom), wc = 'rgba(255,255,255,.92)';
+  linea([w(-A / 2, -Lg / 2), w(A / 2, -Lg / 2), w(A / 2, Lg / 2), w(-A / 2, Lg / 2), w(-A / 2, -Lg / 2)], wc, lw);
+  linea([w(-A / 2, 0), w(A / 2, 0)], wc, lw);
+  const rc = o.tipo === 'f11' ? 9.15 : o.tipo === 'f5' ? 3 : 6;
+  linea(Array.from({ length: 49 }, (_, k) => w(rc * Math.cos(k / 48 * 6.283), rc * Math.sin(k / 48 * 6.283))), wc, lw);
+  const [aa, al] = o.tipo === 'f11' ? [40.32, 16.5] : o.tipo === 'f5' ? [12, 6] : [22, 9];
+  const [ca, cL] = o.tipo === 'f11' ? [18.32, 5.5] : o.tipo === 'f5' ? [0, 0] : [10, 3];
+  [-1, 1].forEach(sg => { const y0 = sg * Lg / 2, y1 = sg * (Lg / 2 - al);
+    linea([w(-aa / 2, y0), w(-aa / 2, y1), w(aa / 2, y1), w(aa / 2, y0)], wc, lw);
+    if (ca) { const y2 = sg * (Lg / 2 - cL); linea([w(-ca / 2, y0), w(-ca / 2, y2), w(ca / 2, y2), w(ca / 2, y0)], wc, lw); }
+    const pm = P(...w(0, sg * (Lg / 2 - (o.tipo === 'f11' ? 11 : o.tipo === 'f5' ? 6 : 9))), 0); g.fillStyle = wc; g.beginPath(); g.ellipse(pm.x, pm.y, lw * 1.3, lw * 0.8, 0, 0, 6.283); g.fill();
+    porteria({ x: w(0, sg * Lg / 2)[0], y: w(0, sg * Lg / 2)[1], rot: (o.rot || 0) + (sg > 0 ? 180 : 0), ancho: o.tipo === 'f11' ? 7.32 : o.tipo === 'f5' ? 3 : 6, alto: o.tipo === 'f11' ? 2.44 : 2 });
+  });
+  g.globalAlpha = 1;
+  return { A, L: Lg, w };
+}
+function porteria(o) {  // boca hacia +y local
+  const r = rad(o.rot || 0), c = Math.cos(r), s = Math.sin(r), A = o.ancho || 6, h = o.alto || 2, f = 1.2;
+  const w = (lx, ly, lz) => P(o.x + lx * c - ly * s, o.y + lx * s + ly * c, lz);
+  const mid = w(0, -f / 2, h / 2);
+  add(mid.d - 0.5, () => {
+    g.strokeStyle = 'rgba(255,255,255,.35)'; g.lineWidth = 1;
+    for (let k = 0; k <= 8; k++) { const lx = -A / 2 + k * A / 8; const a = w(lx, 0, h), b = w(lx, -f, h * 0.6), c2 = w(lx, -f, 0); g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.lineTo(c2.x, c2.y); g.stroke(); }
+    for (let k = 0; k <= 4; k++) { const z = k * h / 4; const a = w(-A / 2, -f, z * 0.6), b = w(A / 2, -f, z * 0.6); g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke(); }
+    g.strokeStyle = '#fff'; g.lineWidth = Math.max(3, 0.12 * C.zoom); g.lineJoin = 'round';
+    const p = [w(-A / 2, 0, 0), w(-A / 2, 0, h), w(A / 2, 0, h), w(A / 2, 0, 0)]; g.beginPath(); p.forEach((q, k) => k ? g.lineTo(q.x, q.y) : g.moveTo(q.x, q.y)); g.stroke();
+  });
+}
+function flecha(a, b, tipo, prog, curva) {  // a, b en metros [x, y]
+  if (prog <= 0) return; const col = tipo === 'presion' || tipo === 'press' ? '#E8473C' : tipo === 'carrera' || tipo === 'run' ? LIME : '#FFFFFF';
+  const dash = tipo === 'pase' || tipo === 'pass' ? [14, 12] : [];
+  const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2, dx = b[0] - a[0], dy = b[1] - a[1], k = curva || 0;
+  const cpt = [mx - dy * k, my + dx * k], N = 24, pts = [];
+  for (let j = 0; j <= N * prog; j++) { const u = j / N; pts.push([(1 - u) * (1 - u) * a[0] + 2 * u * (1 - u) * cpt[0] + u * u * b[0], (1 - u) * (1 - u) * a[1] + 2 * u * (1 - u) * cpt[1] + u * u * b[1], 0.05]); }
+  if (pts.length < 2) return;
+  const lw = Math.max(5, 0.22 * C.zoom);
+  g.lineCap = 'round'; linea(pts, 'rgba(0,0,0,.25)', lw + 4, dash); linea(pts, col, lw, dash); g.lineCap = 'butt';
+  if (prog >= 0.98) { const p1 = P(...pts[pts.length - 1]), p0 = P(...pts[pts.length - 3]), an = Math.atan2(p1.y - p0.y, p1.x - p0.x), s = lw * 2.6;
+    g.fillStyle = col; g.beginPath(); g.moveTo(p1.x + Math.cos(an) * s * 0.5, p1.y + Math.sin(an) * s * 0.5); g.lineTo(p1.x + Math.cos(an + 2.5) * s, p1.y + Math.sin(an + 2.5) * s); g.lineTo(p1.x + Math.cos(an - 2.5) * s, p1.y + Math.sin(an - 2.5) * s); g.closePath(); g.fill(); }
+}
+function zona(o, a) {  // en metros: x, y (centro), w, d; color red|green; label
+  if (a <= 0) return; const col = o.color === 'red' ? [232, 71, 60] : o.color === 'blue' ? [91, 184, 217] : [182, 230, 46];
+  const pts = [[o.x - o.w / 2, o.y - o.d / 2], [o.x + o.w / 2, o.y - o.d / 2], [o.x + o.w / 2, o.y + o.d / 2], [o.x - o.w / 2, o.y + o.d / 2]].map(q => P(q[0], q[1], 0.02));
+  g.save(); g.globalAlpha = a; poly(pts, `rgba(${col},.28)`, `rgba(${col},.95)`, 4); g.restore();
+  if (o.label) { const c = P(o.x, o.y - o.d / 2, 0); chip(c.x, c.y - 30, o.label, `rgba(${col},.95)`, INK, 30, a); }
+}
+function cota(o, a) {  // línea de medida con etiqueta
+  if (a <= 0) return; const z = o.z || 0.1, pr = ease(a);
+  const b = [lerp(o.de[0], o.a[0], pr), lerp(o.de[1], o.a[1], pr)];
+  g.save(); g.lineCap = 'round'; linea([[...o.de, z], [...b, z]], 'rgba(20,20,20,.35)', 12); linea([[...o.de, z], [...b, z]], o.color || '#FFE14D', 6); g.restore();
+  if (a > 0.6 && o.t) { const c = P((o.de[0] + o.a[0]) / 2, (o.de[1] + o.a[1]) / 2, z); chip(c.x, c.y - 4, o.t, INK, o.color || '#FFE14D', o.size || 40, (a - 0.6) / 0.4); }
+}
+
+// ---------- fondos ----------
+function fondo(tipo, t) {
+  if (tipo === 'lluvia' || tipo === 'noche') {
+    const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, tipo === 'noche' ? '#0E1A2E' : '#8E98A4'); gr.addColorStop(0.45, tipo === 'noche' ? '#1C2E44' : '#B4BCC4'); gr.addColorStop(0.46, tipo === 'noche' ? '#24452E' : '#7FA36A'); gr.addColorStop(1, tipo === 'noche' ? '#1A3322' : '#6E9459');
+    g.fillStyle = gr; g.fillRect(0, 0, W, H); return; }
+  if (tipo === 'pasto') { g.fillStyle = '#4F8E3E'; g.fillRect(0, 0, W, H); return; }
+  const gr = g.createLinearGradient(0, 0, 0, H * 0.42); gr.addColorStop(0, '#5DAEE6'); gr.addColorStop(1, '#A8D8F2'); g.fillStyle = gr; g.fillRect(0, 0, W, H);
+  g.fillStyle = '#FFE36B'; g.shadowColor = 'rgba(255,230,120,.8)'; g.shadowBlur = 50; g.beginPath(); g.arc(W * 0.8, H * 0.1, W * 0.06, 0, 6.283); g.fill(); g.shadowBlur = 0;
+  for (let k = 0; k < 5; k++) { const x = ((rnd(k) * W * 1.4 + t * (8 + k * 3)) % (W * 1.4)) - W * 0.2, y = H * (0.05 + rnd(k + 3) * 0.14), s = W * (0.05 + rnd(k + 5) * 0.04);
+    g.fillStyle = 'rgba(255,255,255,.95)'; g.beginPath(); g.arc(x, y, s, 0, 6.283); g.arc(x + s * 0.9, y + s * 0.15, s * 0.8, 0, 6.283); g.arc(x - s * 0.9, y + s * 0.2, s * 0.7, 0, 6.283); g.fill(); }
+  g.fillStyle = '#7CC25E'; g.beginPath(); g.moveTo(0, H * 0.3); for (let x = 0; x <= W; x += 20) g.lineTo(x, H * 0.3 - Math.sin(x / W * 5 + 1) * H * 0.025 - Math.sin(x / W * 11) * H * 0.01); g.lineTo(W, H); g.lineTo(0, H); g.fill();
+  g.fillStyle = PASTO; g.fillRect(0, H * 0.34, W, H);
+}
+function lluvia(t) { g.strokeStyle = 'rgba(230,240,255,.55)'; g.lineWidth = 2.5; g.beginPath();
+  for (let k = 0; k < 160; k++) { const x = (rnd(k) * W + t * 120) % W, y = (rnd(k + 9) * H + t * (900 + rnd(k) * 300)) % H; g.moveTo(x, y); g.lineTo(x - 8, y + 34); } g.stroke(); }
+function arboles(o) {  // fila de árboles alrededor (decoración)
+  (o || []).forEach((q, k) => { const p = P(q[0], q[1], 0), s = (q[2] || 4) * pxM();
+    add(p.d - 0.2, () => { g.fillStyle = 'rgba(0,0,0,.18)'; g.beginPath(); g.ellipse(p.x, p.y, s * 0.45, s * 0.15, 0, 0, 6.283); g.fill();
+      g.fillStyle = '#6B4A2E'; g.fillRect(p.x - s * 0.05, p.y - s * 0.45, s * 0.1, s * 0.45);
+      g.fillStyle = k % 2 ? '#3F7F3A' : '#4C9142'; g.beginPath(); g.arc(p.x, p.y - s * 0.7, s * 0.36, 0, 6.283); g.fill();
+      g.fillStyle = 'rgba(255,255,255,.12)'; g.beginPath(); g.arc(p.x - s * 0.1, p.y - s * 0.8, s * 0.16, 0, 6.283); g.fill(); }); });
+}
+
+// ---------- tribunas y estadios ----------
+// gradas rectas: centro (x, y), largo, filas; suben hacia atrás (+y local) y miran hacia -y local. rot gira todo.
+function gradas(o, a, t) {
+  const r = rad(o.rot || 0), c = Math.cos(r), s = Math.sin(r), L = o.largo || 30, nf = o.filas || 6, fh = o.alto || 0.55, fd = o.fondo || 0.9, base = o.z || 0;
+  const w = (lx, ly) => [o.x + lx * c - ly * s, o.y + lx * s + ly * c];
+  const dens = o.gente === undefined ? 1 : o.gente, sep = o.sep || 0.75, sube = ease(a);
+  for (let f = 0; f < nf; f++) {
+    const ly = (f - (nf - 1) / 2) * fd, z = base + f * fh * sube, q = w(0, ly);
+    caja({ x: q[0], y: q[1], z: 0, w: L, d: fd, h: z + fh, rot: o.rot || 0, color: o.color || '#D8D2C4', dz: -0.3 }, 1);
+    if (dens > 0 && sube > 0.6) { const n = Math.floor(L / sep);
+      for (let k = 0; k < n; k++) { if (rnd(k * 31 + f * 7 + (o.seed || 0)) > dens) continue; const lx = -L / 2 + (k + 0.5) * sep, pp = w(lx, ly);
+        persona(pp[0], pp[1], z + fh, { simple: true, esc: o.esc || 0.9, ropa: [GENTE[(k * 3 + f * 5 + (o.seed || 0)) % GENTE.length]], seed: k + f, salta: o.salta, fase: t * 9 + k * 1.7 + f }); } }
+  }
+  if (o.techo === 'voladizo' || o.techo === 'postes') {  // techo de repisa (sin postes) o techo con postes al frente
+    const hz = base + nf * fh + 3.2, ly0 = -(nf - 1) / 2 * fd - fd / 2 - (o.vuelo || 2), ly1 = (nf - 1) / 2 * fd + fd / 2, q = w(0, (ly0 + ly1) / 2);
+    const ta = o.techoA === undefined ? 1 : o.techoA;
+    if (ta > 0) {
+      caja({ x: q[0], y: q[1], z: hz, w: L + 0.6, d: (ly1 - ly0) * ta, h: 0.35, rot: o.rot || 0, color: o.techoColor || '#CFCAC0', techo: true, dz: 2 });
+      const atras = w(0, ly1 + 0.2); caja({ x: atras[0], y: atras[1], z: 0, w: L, d: 0.4, h: hz, rot: o.rot || 0, color: '#BDB6A8', dz: -1 });
+      if (o.techo === 'postes') for (let k = 0; k <= 4; k++) { const pp = w(-L / 2 + k * L / 4, ly0 + 0.4); caja({ x: pp[0], y: pp[1], z: 0, w: 0.35, d: 0.35, h: hz, color: o.posteColor || '#9A948A', dz: 1 }); }
+    }
+  }
+}
+// estadio: tribunas alrededor de una cancha. forma rect | esquinas | oval. techo: no | voladizo | anillo
+function estadio(o, a, t) {
+  const A = o.ancho || 68, L = o.largo || 105, m = o.margen || 6, nf = o.filas || 8, fd = o.fondo || 1.8, forma = o.forma || 'rect';
+  o = Object.assign({ alto: 1.0, sep: 1.2, esc: 1.5 }, o);
+  const prof = nf * fd;
+  if (forma === 'oval') {
+    const n = o.segmentos || 28, ra = A / 2 + m + prof / 2, rb = L / 2 + m + prof / 2;
+    for (let k = 0; k < n; k++) { const an = k / n * 6.283, x = (o.x || 0) + ra * Math.cos(an), y = (o.y || 0) + rb * Math.sin(an);
+      const nx = Math.cos(an) / ra, ny = Math.sin(an) / rb, rot = Math.atan2(ny, nx) * 180 / Math.PI - 90;
+      const per = 6.283 * Math.sqrt((ra * ra + rb * rb) / 2) / n;
+      gradas({ x, y, rot, largo: per * 1.04, filas: nf, fondo: fd, alto: o.alto, gente: o.gente, seed: k * 13, salta: o.salta, sep: o.sep, esc: o.esc }, a, t); }
+    if (o.techo === 'anillo') { const ta = o.techoA === undefined ? 1 : o.techoA, hz = nf * (o.alto || 0.55) + 4;
+      if (ta > 0) { const N = 64, ring = (k2, R) => [(o.x || 0) + (A / 2 + m + R) * Math.cos(k2 / N * 6.283), (o.y || 0) + (L / 2 + m + R) * Math.sin(k2 / N * 6.283), hz];
+        add(999, () => { g.save(); g.globalAlpha = ta;
+          g.fillStyle = 'rgba(235,232,224,.85)'; g.beginPath(); for (let k = 0; k <= N; k++) { const p = P(...ring(k, prof + 1)); k ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y); }
+          for (let k = N; k >= 0; k--) { const p = P(...ring(k, prof * 0.15)); g.lineTo(p.x, p.y); } g.fill();
+          if (o.cables) { g.strokeStyle = 'rgba(80,80,80,.6)'; g.lineWidth = 1.5; for (let k = 0; k < N; k += 2) { const p = P(...ring(k, prof + 1)), q = P(...ring(k, prof * 0.15)); g.beginPath(); g.moveTo(p.x, p.y); g.lineTo(q.x, q.y); g.stroke(); } }
+          g.strokeStyle = o.anilloColor || '#FFE14D'; g.lineWidth = 6; g.beginPath(); for (let k = 0; k <= N; k++) { const p = P(...ring(k, prof * 0.15)); k ? g.lineTo(p.x, p.y) : g.moveTo(p.x, p.y); } g.stroke(); g.restore(); }); } }
+    return;
+  }
+  const X = o.x || 0, Y = o.y || 0, off = prof / 2 + m;
+  const lados = [{ x: X, y: Y - L / 2 - off, rot: 180, largo: A + 2 * m }, { x: X, y: Y + L / 2 + off, rot: 0, largo: A + 2 * m },
+    { x: X - A / 2 - off, y: Y, rot: 90, largo: L + 2 * m }, { x: X + A / 2 + off, y: Y, rot: -90, largo: L + 2 * m }];
+  lados.forEach((l, k) => gradas(Object.assign({}, o, l, { x: l.x, y: l.y, filas: nf, fondo: fd, seed: k * 101 }), lerp(0, 1, cl(a * 4 - k * 0.8, 0, 1)), t));
+  if (forma === 'esquinas') [[-1, -1], [1, -1], [1, 1], [-1, 1]].forEach(([sx, sy], k) => {
+    const cx = X + sx * (A / 2 + off), cy = Y + sy * (L / 2 + off), ea = o.esquinasA === undefined ? 1 : o.esquinasA;
+    if (ea > 0) caja({ x: cx, y: cy, w: prof, d: prof, h: nf * (o.alto || 0.55) * ea, color: o.esquinaColor || '#E8833A', dz: -0.3 }); });
+}
+
+// ---------- estado de una escena "jugada" (coordenadas de pizarra 0–100) ----------
+const JUG = {};
+function prepJugada(i) {
+  if (JUG[i]) return JUG[i];
+  const sc = S.scenes[i]; let prev = null;
+  if (sc.inherit) for (let j = i - 1; j >= 0; j--) if (S.scenes[j].vis === 'jugada') { prev = prepJugada(j); break; }
+  const tipo = sc.cancha || (prev && prev.tipo) || S.cancha || 'f7', [A, L] = MED[tipo] || MED.f7;
+  const m = (x, y) => [(x / 100 - 0.5) * A, (y / 100 - 0.5) * L];
+  const J = { tipo, A, L, m, pl: {}, ball: [], steps: [] };
+  const t0 = T.cuts[i];
+  if (prev) { for (const id in prev.pl) { const q = prev.pl[id]; const f = q.kf[q.kf.length - 1]; J.pl[id] = Object.assign({}, q, { kf: [{ t: -1, p: f.p.slice(), d: 0.01 }], tagT: null }); } J.ball = [{ t: -1, to: prev.ball.length ? prev.ball[prev.ball.length - 1].to : null, d: 0.01 }]; }
+  (sc.team || []).forEach(p => J.pl[p.id] = { id: p.id, eq: p.eq || 'a', label: p.label, num: p.num, kf: [{ t: -1, p: m(p.x, p.y), d: 0.01 }] });
+  (sc.rival || []).forEach(p => J.pl[p.id] = { id: p.id, eq: p.eq || 'b', label: p.label, num: p.num, kf: [{ t: -1, p: m(p.x, p.y), d: 0.01 }] });
+  const toB = b => Array.isArray(b) ? m(b[0], b[1]) : b;
+  if (sc.ball !== undefined) J.ball = [{ t: -1, to: toB(sc.ball), d: 0.01 }];
+  const st = (sc.steps || []).map(s => Object.assign({}, s, { T: tAt(i, s) })).sort((a, b) => a.T - b.T);
+  st.forEach((s, k) => { const nx = k + 1 < st.length ? st[k + 1].T : winEnd(i); s.fin = nx; s.d = s.dur || Math.min(1.1, Math.max(0.35, nx - s.T - 0.05));
+    for (const id in (s.pos || {})) if (J.pl[id]) J.pl[id].kf.push({ t: s.T, p: m(...s.pos[id]), d: s.d });
+    if (s.ball !== undefined) J.ball.push({ t: s.T, to: toB(s.ball), d: s.passDur || Math.min(0.7, s.d) }); });
+  J.steps = st; J.cam0 = sc.cam; JUG[i] = J; return J;
+}
+function posAt(q, t) { let p = q.kf[0].p, mv = 0;
+  for (let k = 1; k < q.kf.length; k++) { const f = q.kf[k]; if (t < f.t) break; const pr = cl((t - f.t) / f.d, 0, 1);
+    if (pr < 1) { p = [lerp(p[0], f.p[0], ease(pr)), lerp(p[1], f.p[1], ease(pr))]; mv = 1; } else { p = f.p; mv = 0; } }
+  return { p, mv }; }
+function ballAt(J, t) {
+  const where = to => typeof to === 'string' ? (J.pl[to] ? posAt(J.pl[to], t).p : [0, 0]) : (to || [0, 0]);
+  let k = 0; for (let j = 0; j < J.ball.length; j++) if (t >= J.ball[j].t) k = j;
+  const b = J.ball[k]; if (!b || b.to === null) return null;
+  const end = where(b.to), lift = typeof b.to === 'string' ? 0.6 : 0;
+  if (k > 0 && t < b.t + b.d) { const a = J.ball[k - 1]; const sp = typeof a.to === 'string' ? (J.pl[a.to] ? posAt(J.pl[a.to], b.t).p : end) : (a.to || end);
+    const u = cl((t - b.t) / b.d, 0, 1); return [lerp(sp[0] + 0.6, end[0] + lift, u), lerp(sp[1], end[1], u), Math.sin(u * Math.PI) * (b.alto || 1.2)]; }
+  return [end[0] + lift, end[1], 0];
+}
+function jugada(i, t) {
+  const sc = S.scenes[i], J = prepJugada(i), r = t - T.cuts[i];
+  // cámara: la de la escena, con cambios por paso; "sigue" la acerca al balón
+  let cam = Object.assign({}, CAM0, { rot: -28, e: 52, zoom: 26, t: [0, -8], cy: 0.56 }, sc.cam || {});
+  J.steps.forEach(s => { if (s.cam && t >= s.T) cam = mixCam(cam, s.cam, ease((t - s.T) / (s.camDur || 1.2))); });
+  if (sc.sigue) { const b = ballAt(J, t) || ballAt(J, t - 0.3); if (b) { cam.t = [lerp(cam.t[0], b[0], 0.5), lerp(cam.t[1], b[1], 0.5)]; } }
+  setCam(cam);
+  fondo('pasto', t);
+  const pit = cancha({ tipo: J.tipo }, 1);
+  // decoración: tribuna en una banda y árboles alrededor
+  if (sc.decor !== false && S.decor !== false) {
+    gradas({ x: J.A / 2 + 8, y: 0, rot: -90, largo: J.L * 0.8, filas: 5, gente: 0.7, seed: 7, esc: 0.9 }, 1, t);
+    const ar = []; for (let k = 0; k < 18; k++) ar.push([-J.A / 2 - 9 - rnd(k) * 6, -J.L / 2 + k * J.L / 17, 4 + rnd(k + 2) * 2]);
+    for (let k = 0; k < 8; k++) ar.push([-J.A / 2 + k * J.A / 7, -J.L / 2 - 10 - rnd(k + 5) * 5, 4.5]);
+    arboles(ar);
+  }
+  // zonas y flechas del paso vigente
+  const act = J.steps.filter(s => t >= s.T && (t < s.fin + 0.05 || s.zoneHold || s.hold));
+  act.forEach(s => { if (s.zone) { const z = s.zone, c = J.m(z.x + z.w / 2, z.y + z.h / 2), wm = z.w / 100 * J.A, dm = z.h / 100 * J.L;
+      zona({ x: c[0], y: c[1], w: wm, d: dm, color: z.color, label: z.label }, ease((t - s.T) / 0.35) * (s.zoneHold || t < s.fin ? 1 : 0)); } });
+  act.forEach(s => (s.arrows || []).forEach((ar, k) => { if (!(t < s.fin + 0.05 || s.hold)) return;
+    const res = (v, end) => typeof v === 'string' ? (J.pl[v] ? posAt(J.pl[v], end ? s.T + s.d : s.T).p : [0, 0]) : J.m(...v);
+    flecha(res(ar.from), res(ar.to, true), ar.kind, ease((t - s.T - k * 0.12) / 0.45), ar.curve); }));
+  // jugadores
+  const tags = {}, rings = {};
+  J.steps.forEach(s => { if (t >= s.T) { Object.assign(tags, s.tags || {}); (s.marca || []).forEach(id => rings[id] = s.T); if (s.quitaTags) s.quitaTags.forEach(id => delete tags[id]); } });
+  const heads = [];
+  for (const id in J.pl) { const q = J.pl[id], { p, mv } = posAt(q, t);
+    const hd = persona(p[0], p[1], 0, { eq: q.eq, num: q.num || (/^\d+$/.test(id) ? id : ''), esc: sc.esc || S.esc || 3.4, corre: mv, fase: t * 14 + id.length, seed: id.charCodeAt(0),
+      anillo: rings[id] !== undefined ? `rgba(91,184,217,${0.6 + 0.4 * Math.sin((t - rings[id]) * 6)})` : null });
+    if (hd) heads.push([id, q, hd]); }
+  const b = ballAt(J, t); if (b) balon(b[0], b[1], b[2]);
+  flush();
+  heads.forEach(([id, q, hd]) => { const tx = tags[id] || q.label; if (tx) chip(hd.x, hd.y - 6, tx, tags[id] ? '#5BB8D9' : 'rgba(20,20,20,.85)', tags[id] ? INK : '#fff', tags[id] ? 30 : 24); });
+  // chip de la cancha y "EN PAUSA"
+  const pz = J.steps.find(s => s.pausa && t >= s.T && t < s.fin + 0.05);
+  chip(118, HZ ? 60 : 150, sc.chip || S.chip || ({ f11: 'FÚTBOL 11', f7: 'FÚTBOL 7', f5: 'FÚTBOL 5' }[J.tipo]), 'rgba(20,20,20,.85)', '#fff', 32);
+  if (pz) { const a = ease((t - pz.T) / 0.25); g.save(); g.globalAlpha = 0.18 * a; g.fillStyle = '#000'; g.fillRect(0, 0, W, H); g.restore(); chip(150, (HZ ? 60 : 150) + 62, '❚❚ EN PAUSA', 'rgba(20,20,20,.9)', LIME, 30, a); }
+}
+
+// ---------- escena "explica": objetos del mundo que aparecen con su {s, at} ----------
+function explica(i, t) {
+  const sc = S.scenes[i], r = t - T.cuts[i], dur = Math.max(1, winEnd(i) - T.cuts[i]);
+  let cam = Object.assign({}, CAM0, sc.cam || {});
+  if (sc.cam2) cam = mixCam(cam, sc.cam2, ease((t - tAt(i, sc.cam2At || { at: 0 })) / ((sc.cam2Dur) || (winEnd(i) - tAt(i, sc.cam2At || { at: 0 })))));
+  (sc.camSteps || []).forEach(s => { if (t >= tAt(i, s)) cam = mixCam(cam, s.cam, ease((t - tAt(i, s)) / (s.dur || 1.2))); });
+  setCam(cam);
+  fondo(sc.fondo || 'cielo', t);
+  const objs = sc.obj || [];
+  const vis = o => { const a0 = o.s !== undefined || o.at !== undefined ? tAt(i, o) : T.cuts[i] - 1, a = (t - a0) / (o.dur || 0.6);
+    const fuera = o.hasta ? ease((t - tAt(i, o.hasta)) / 0.4) : 0; return cl(a, 0, 1) * (1 - fuera); };
+  // primero el suelo (canchas, zonas), luego volúmenes ordenados por profundidad
+  objs.filter(o => o.k === 'cancha').forEach(o => { const a = vis(o); if (a > 0) { g.save(); g.globalAlpha = a; cancha(o, a); g.restore(); } });
+  objs.filter(o => o.k === 'zona').forEach(o => zona(o, vis(o)));
+  objs.forEach(o => { const a = vis(o); if (a <= 0) return;
+    const ext = {}; ['techoA', 'esquinasA'].forEach(kk => { if (o[kk + 'S']) ext[kk] = ease((t - tAt(i, o[kk + 'S'])) / 0.8); });
+    const oo = Object.assign({}, o, ext);
+    if (o.k === 'gradas') gradas(oo, a, t);
+    else if (o.k === 'estadio') estadio(oo, a, t);
+    else if (o.k === 'caja') caja(oo, ease(a));
+    else if (o.k === 'persona') persona(o.x, o.y, o.z || 0, Object.assign({ esc: o.esc || 1.6, fase: t * 8, corre: o.corre || 0 }, o));
+    else if (o.k === 'fila') { for (let k = 0; k < (o.n || 5); k++) { const rr = rad(o.rot || 0), sep = o.sep || 1.2; persona(o.x + Math.cos(rr) * k * sep, o.y + Math.sin(rr) * k * sep, (o.z || 0) + k * (o.subeZ || 0), { esc: o.esc || 1.6, eq: o.eq, ropa: o.ropa ? [o.ropa[k % o.ropa.length], '#333', '#333'] : [GENTE[k % GENTE.length], '#2A2A2A', '#2A2A2A'], seed: k, piel: o.piel }); } }
+    else if (o.k === 'balon') balon(o.x, o.y, o.z || 0);
+    else if (o.k === 'porteria') porteria(o);
+    else if (o.k === 'arboles') arboles(o.pts);
+  });
+  flush();
+  objs.filter(o => o.k === 'flecha').forEach(o => { const a = vis(o); if (a > 0) flecha(o.de, o.a, o.tipo || 'run', ease(a), o.curva); });
+  objs.filter(o => o.k === 'cota').forEach(o => cota(o, vis(o)));
+  objs.filter(o => o.k === 'etiqueta').forEach(o => { const a = vis(o); if (a <= 0) return; const p = P(o.x, o.y, o.z || 0); chip(p.x, p.y, o.t, o.bg === 'lime' ? LIME : o.bg === 'red' ? '#E8473C' : 'rgba(20,20,20,.85)', o.bg === 'lime' ? INK : '#fff', o.size || 34, a); });
+  if (sc.fondo === 'lluvia') lluvia(t);
+}
+
+// ---------- textos encima ----------
+function palabras(i) { const out = [];
+  for (const se of T.scenes[i].sents) { const ws = se.text.split(/\s+/).filter(Boolean), tot = ws.reduce((a, w) => a + w.length + 2, 0); let acc = 0;
+    for (const w of ws) { const a = se.start + (acc / tot) * (se.end - se.start); acc += w.length + 2; out.push({ w, a, b: se.start + (acc / tot) * (se.end - se.start) }); } }
+  return out; }
+const PAL = {};
+function subtitulos(i, t) {
+  const ws = PAL[i] || (PAL[i] = palabras(i)); if (!ws.length || t < ws[0].a - 0.05) return;
+  let k = ws.findIndex(w => t < w.b); if (k < 0) k = ws.length - 1;
+  const fs = HZ ? 58 : 62; g.font = `800 ${fs}px MB`; g.textBaseline = 'middle';
+  if (!ws.grp) { ws.grp = []; let cur = 0, n = 0;
+    ws.forEach((w, j) => { const wd = g.measureText(w.w).width + 16; if (n >= 3 || (n && cur + wd > W * 0.82)) { cur = 0; n = 0; } if (!n) ws.grp.push(j); cur += wd; n++; ws[j].g = ws.grp.length - 1; }); }
+  const gi = ws[k].g, g0 = ws.grp[gi], grp = ws.slice(g0, gi + 1 < ws.grp.length ? ws.grp[gi + 1] : ws.length), y = S.subY || (HZ ? H - 130 : 330);
+  const sp = 16, wd = grp.map(w => g.measureText(w.w).width), tw = wd.reduce((a, b) => a + b, 0) + sp * (grp.length - 1);
+  let x = W / 2 - tw / 2;
+  grp.forEach((w, j) => { const on = g0 + j === k, dim = g0 + j > k, p = on ? back((t - w.a) / 0.16) : 1;
+    g.save(); g.translate(x + wd[j] / 2, y); g.scale(on ? 0.9 + 0.1 * p : 1, on ? 0.9 + 0.1 * p : 1);
+    g.lineJoin = 'round'; g.lineWidth = 12; g.strokeStyle = INK; g.textAlign = 'center'; g.strokeText(w.w, 0, 2);
+    g.fillStyle = on ? LIME : dim ? 'rgba(255,255,255,.55)' : '#fff'; g.fillText(w.w, 0, 2); g.restore(); x += wd[j] + sp; });
+}
+function titulo(sc, i, t) {  // cartel grande arriba (p. ej. "LAS GRADAS")
+  if (!sc.titulo) return; const t0 = tAt(i, sc.tituloAt || { at: 0 }), a = back((t - t0) / 0.35); if (t < t0) return;
+  g.save(); g.translate(W / 2, S.tituloY || (HZ ? 150 : 470)); g.scale(a, a); g.font = `800 ${HZ ? 70 : 84}px MB`; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const w = g.measureText(sc.titulo).width + 60; g.fillStyle = INK; g.beginPath(); g.roundRect(-w / 2, -58, w, 116, 18); g.fill();
+  g.fillStyle = LIME; g.fillText(sc.titulo, 0, 4); g.restore(); }
+function contador(c, t, i) {
+  const t0 = tAt(i, c), r = t - t0; if (r < 0) return;
+  const p = c.dur === 0 ? 1 : ease(r / (c.dur || 1.2)), v = (c.desde || 0) + (c.n - (c.desde || 0)) * p, txt = (c.pre || '') + (c.dec ? v.toFixed(c.dec) : Math.round(v).toLocaleString('es-MX')) + (c.suf || ''), a = back(r / 0.3);
+  g.save(); g.translate(c.x || W / 2, c.y || (HZ ? 860 : 1480)); g.scale(a, a); g.font = `800 ${c.big || 110}px MB`; const w1 = g.measureText(txt).width; g.font = '700 40px MS'; const w2 = c.l ? g.measureText(c.l).width + 22 : 0, w = w1 + w2 + 70;
+  g.fillStyle = 'rgba(20,20,20,.88)'; g.beginPath(); g.roundRect(-w / 2, -76, w, 152, 26); g.fill();
+  g.textBaseline = 'middle'; g.textAlign = 'left'; g.font = `800 ${c.big || 110}px MB`; g.fillStyle = c.color === 'red' ? '#FF6A5A' : LIME; g.fillText(txt, -w / 2 + 35, 6);
+  if (c.l) { g.font = '700 40px MS'; g.fillStyle = '#fff'; g.fillText(c.l, -w / 2 + 35 + w1 + 22, 10); } g.restore(); }
+
+function cierre(i, t) {
+  const sc = S.scenes[i], r = t - T.cuts[i];
+  g.fillStyle = '#EDEAE3'; g.fillRect(0, 0, W, H);
+  g.fillStyle = LIME; g.fillRect(0, 0, W, 22); g.fillStyle = INK; g.fillRect(0, 22, W, 8);
+  const q = sc.q || ['', ''], a = ease((r - 0.15) / 0.45), cy = HZ ? 120 : 360;
+  if (a > 0) { g.save(); g.globalAlpha = a; g.textAlign = 'center'; g.fillStyle = INK; g.font = `800 ${HZ ? 66 : 70}px MB`; g.fillText(q[0], W / 2, cy); g.font = `600 ${HZ ? 54 : 58}px MS`; g.fillText(q[1] || '', W / 2, cy + 86); g.restore(); }
+  (sc.opts || []).forEach((o, k) => { const p = back((r - 0.5 - k * 0.15) / 0.35); if (p <= 0) return; const y = (HZ ? 380 : 640) + k * 150;
+    g.save(); g.translate(W / 2, y); g.scale(p, p); g.fillStyle = '#fff'; g.strokeStyle = INK; g.lineWidth = 5; g.beginPath(); g.roundRect(-380, -55, 760, 110, 18); g.fill(); g.stroke();
+    g.fillStyle = k ? '#E8473C' : LIME; g.beginPath(); g.arc(-320, 0, 22, 0, 6.283); g.fill(); g.fillStyle = INK; g.font = '800 54px MB'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillText(o, -270, 4); g.restore(); });
+  const lp = ease((r - 1.0) / 0.6), ly = HZ ? 760 : 1180, sz = HZ ? 220 : 300;
+  if (logo && lp > 0) { g.save(); g.globalAlpha = lp; g.translate(W / 2, ly); g.scale(0.85 + 0.15 * lp, 0.85 + 0.15 * lp); g.beginPath(); g.arc(0, 0, sz / 2, 0, 6.283); g.clip(); g.drawImage(logo, -sz / 2, -sz / 2, sz, sz); g.restore(); }
+  const n1 = ease((r - 1.4) / 0.5);
+  if (n1 > 0) { g.save(); g.globalAlpha = n1; g.textAlign = 'center'; g.fillStyle = INK; g.font = '800 70px MB'; g.letterSpacing = '8px'; g.fillText('SEÑOR FÚTBOL', W / 2, ly + sz / 2 + 100); g.restore(); }
+  const n2 = ease((r - 1.8) / 0.5);
+  if (n2 > 0) { const s = 1 + 0.04 * Math.sin((r - 1.8) * 4) * n2, w = 380, h = 90; g.save(); g.globalAlpha = n2; g.translate(W / 2, ly + sz / 2 + 200); g.scale(s, s);
+    g.fillStyle = INK; g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, h / 2); g.fill(); g.fillStyle = LIME; g.font = '800 40px MB'; g.letterSpacing = '4px'; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.fillText(sc.boton || 'SÍGUENOS +', 4, 3); g.restore(); }
+}
+
+window.render = function (t) {
+  const i = sceneAt(t), sc = S.scenes[i], r = t - T.cuts[i];
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#000'; g.fillRect(0, 0, W, H); Q = [];
+  if (sc.tipo === 'cierre') { cierre(i, t); return; }
+  if (sc.vis === 'jugada') jugada(i, t); else explica(i, t);
+  const v = g.createRadialGradient(W / 2, H / 2, H * 0.4, W / 2, H / 2, H * 0.8); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.25)'); g.fillStyle = v; g.fillRect(0, 0, W, H);
+  titulo(sc, i, t);
+  (sc.cnt || []).forEach(c => contador(c, t, i));
+  if (sc.tag) chip(W / 2, HZ ? 230 : 560, sc.tag, LIME, INK, 34, ease(r / 0.4));
+  subtitulos(i, t);
+  if (r < 0.15 && i > 0) { g.fillStyle = `rgba(255,255,255,${0.3 * (1 - r / 0.15)})`; g.fillRect(0, 0, W, H); }
+};
+window.frame = t => { window.render(t); return cv.toDataURL('image/jpeg', 0.9).split(',')[1]; };
+load();
+</script></body></html>
