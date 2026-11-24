@@ -12,8 +12,12 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, IR_TIKTOK_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-24-ir-manana-uno-por-ciento.mp4",
- "actualizado": "2026-11-24 08:31"
+ "actualizado": "2026-11-24 08:59",
+ "estado": "completo"
 }
