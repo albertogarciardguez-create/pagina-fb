@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1620212172658130",
+   "url": "https://www.facebook.com/reel/1620212172658130",
+   "programado": true,
+   "fecha": "2026-11-24 08:55"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-24-sf-noticia-radiografia-bravos.mp4",
+ "actualizado": "2026-11-24 08:55"
+}
