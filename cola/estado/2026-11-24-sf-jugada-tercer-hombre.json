@@ -9,8 +9,11 @@
   },
   "youtube": {
    "omitido": "faltan secretos: YT_CLIENT_ID, YT_CLIENT_SECRET, SF_YT_REFRESH"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: SF_TIKTOK_REFRESH"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-24-sf-jugada-tercer-hombre.mp4",
- "actualizado": "2026-11-24 09:08"
+ "actualizado": "2026-11-24 16:31"
 }
