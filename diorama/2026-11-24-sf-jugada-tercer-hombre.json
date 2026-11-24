@@ -1,0 +1,554 @@
+{
+ "id": "2026-11-24-sf-jugada-tercer-hombre",
+ "plantilla": "iso",
+ "marca": "senorfutbol",
+ "kind": "jugada",
+ "cancha": "f7",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "vis": "jugada",
+   "mus": "mayor",
+   "say": "Tu nueve nunca recibe… porque lo están esperando. Si se la pasas, el último defensa se la come.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 26,
+    "t": [
+     0,
+     -12
+    ],
+    "cy": 0.56
+   },
+   "team": [
+    {
+     "id": "PO",
+     "eq": "po",
+     "x": 50,
+     "y": 95
+    },
+    {
+     "id": "2",
+     "x": 30,
+     "y": 70
+    },
+    {
+     "id": "3",
+     "x": 70,
+     "y": 70
+    },
+    {
+     "id": "MC",
+     "label": "TÚ",
+     "x": 50,
+     "y": 55
+    },
+    {
+     "id": "7",
+     "x": 18,
+     "y": 40
+    },
+    {
+     "id": "11",
+     "x": 82,
+     "y": 40
+    },
+    {
+     "id": "9",
+     "x": 50,
+     "y": 30
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "eq": "po",
+     "x": 50,
+     "y": 4
+    },
+    {
+     "id": "R2",
+     "x": 35,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 62,
+     "y": 18
+    },
+    {
+     "id": "R4",
+     "x": 30,
+     "y": 42
+    },
+    {
+     "id": "R5",
+     "x": 68,
+     "y": 42
+    },
+    {
+     "id": "R6",
+     "x": 50,
+     "y": 45
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.25,
+     "pos": {
+      "9": [
+       52,
+       14
+      ],
+      "R3": [
+       54,
+       15
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        52,
+        14
+       ],
+       "kind": "run"
+      }
+     ],
+     "tags": {
+      "R3": "ÚLTIMO"
+     },
+     "marca": [
+      "R3"
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.5,
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "9",
+       "kind": "pass"
+      }
+     ],
+     "ball": "R3",
+     "pausa": true
+    }
+   ],
+   "titulo": "EL TERCER HOMBRE",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.0
+   }
+  },
+  {
+   "vis": "jugada",
+   "inherit": true,
+   "mus": "mayor",
+   "say": "La solución: no le pases al que quieres… pásale al que te la puede dar. Tu nueve baja, el último lo sigue, la toca de primera… y entra el siete.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 26,
+    "t": [
+     0,
+     -12
+    ],
+    "cy": 0.56
+   },
+   "steps": [
+    {
+     "at": 0.0,
+     "pos": {
+      "9": [
+       50,
+       30
+      ],
+      "R3": [
+       62,
+       18
+      ],
+      "MC": [
+       50,
+       55
+      ]
+     },
+     "ball": "MC",
+     "dur": 0.4
+    },
+    {
+     "at": 0.25,
+     "pos": {
+      "9": [
+       50,
+       40
+      ],
+      "R3": [
+       52,
+       32
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        50,
+        40
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "R3",
+       "to": [
+        52,
+        32
+       ],
+       "kind": "press"
+      }
+     ],
+     "tags": {
+      "R3": "ÚLTIMO"
+     }
+    },
+    {
+     "at": 0.55,
+     "ball": "9",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "9",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 36,
+      "y": 8,
+      "w": 30,
+      "h": 20,
+      "label": "HUECO",
+      "color": "green"
+     }
+    },
+    {
+     "at": 0.75,
+     "pos": {
+      "7": [
+       42,
+       14
+      ]
+     },
+     "ball": "7",
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        42,
+        14
+       ],
+       "kind": "pass",
+       "curve": 0.2
+      },
+      {
+       "from": "7",
+       "to": [
+        42,
+        14
+       ],
+       "kind": "run",
+       "curve": -0.2
+      }
+     ],
+     "cam": {
+      "zoom": 28,
+      "t": [
+       -2,
+       -16
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "inherit": true,
+   "mus": "mayor",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 26,
+    "t": [
+     0,
+     -12
+    ],
+    "cy": 0.56
+   },
+   "say": "Fíjate en las letras. A le pasa a B. B, de espaldas, la toca de primera para C. Y C ya venía corriendo antes del pase.",
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.0,
+     "pos": {
+      "9": [
+       50,
+       30
+      ],
+      "R3": [
+       62,
+       18
+      ],
+      "MC": [
+       50,
+       55
+      ],
+      "7": [
+       18,
+       40
+      ]
+     },
+     "ball": "MC",
+     "dur": 0.4,
+     "tags": {
+      "MC": "A",
+      "9": "B",
+      "7": "C"
+     }
+    },
+    {
+     "s": 0,
+     "at": 0.5,
+     "pos": {
+      "9": [
+       50,
+       40
+      ],
+      "R3": [
+       52,
+       32
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "9",
+       "kind": "pass"
+      }
+     ],
+     "ball": "9",
+     "tags": {
+      "MC": "A",
+      "9": "B",
+      "7": "C"
+     },
+     "marca": [
+      "9"
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.5,
+     "ball": "7",
+     "pos": {
+      "7": [
+       42,
+       14
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        42,
+        14
+       ],
+       "kind": "pass",
+       "curve": 0.2
+      },
+      {
+       "from": "7",
+       "to": [
+        42,
+        14
+       ],
+       "kind": "run",
+       "curve": -0.2
+      }
+     ],
+     "tags": {
+      "MC": "A",
+      "9": "B",
+      "7": "C"
+     },
+     "marca": [
+      "7"
+     ]
+    },
+    {
+     "s": 2,
+     "at": 0.3,
+     "zone": {
+      "x": 14,
+      "y": 4,
+      "w": 34,
+      "h": 20,
+      "label": "TERCER HOMBRE",
+      "color": "green"
+     },
+     "cam": {
+      "zoom": 28,
+      "t": [
+       -2,
+       -16
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "mus": "mayor",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 30,
+    "t": [
+     0,
+     -4
+    ],
+    "cy": 0.56
+   },
+   "titulo": "EJERCICIO",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.0
+   },
+   "say": "Ejercicio: tres jugadores y un defensa. A le pasa a B, B de primera a C, que llega corriendo. Rotan posiciones… y diez por cada lado.",
+   "team": [
+    {
+     "id": "A",
+     "label": "A",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "id": "B",
+     "label": "B",
+     "x": 50,
+     "y": 38
+    },
+    {
+     "id": "C",
+     "label": "C",
+     "x": 22,
+     "y": 46
+    }
+   ],
+   "rival": [
+    {
+     "id": "D",
+     "x": 50,
+     "y": 30
+    }
+   ],
+   "ball": "A",
+   "steps": [
+    {
+     "s": 1,
+     "at": 0.3,
+     "ball": "B",
+     "arrows": [
+      {
+       "from": "A",
+       "to": "B",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.7,
+     "pos": {
+      "C": [
+       38,
+       22
+      ]
+     },
+     "ball": "C",
+     "arrows": [
+      {
+       "from": "B",
+       "to": [
+        38,
+        22
+       ],
+       "kind": "pass",
+       "curve": 0.2
+      },
+      {
+       "from": "C",
+       "to": [
+        38,
+        22
+       ],
+       "kind": "run",
+       "curve": -0.2
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "at": 0.4,
+     "pos": {
+      "A": [
+       50,
+       38
+      ],
+      "B": [
+       22,
+       46
+      ],
+      "C": [
+       50,
+       62
+      ]
+     },
+     "ball": "C",
+     "cam": {
+      "zoom": 30
+     }
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "say": "Guarda este video para tu próximo entrenamiento. Y dime: ¿en tu equipo el nueve baja a pedirla… o se queda esperando? Te leo.",
+   "q": [
+    "¿TU NUEVE BAJA",
+    "O SE QUEDA ARRIBA?"
+   ],
+   "opts": [
+    "BAJA A PEDIRLA",
+    "SE QUEDA ARRIBA"
+   ]
+  }
+ ],
+ "post": "Tu nueve nunca recibe… porque lo están esperando. 🔺 El tercer hombre: A le pasa a B, B de primera a C, que ya venía corriendo. Así rompes una línea en fútbol 7 sin que te coman al nueve. ¿Tu nueve baja a pedirla o se queda arriba? 👇",
+ "hashtags": [
+  "#Futbol7",
+  "#TacticaFutbol",
+  "#EntrenadorDeFutbol",
+  "#FutbolAmateur"
+ ],
+ "redes_textos": {
+  "facebook": "Tu nueve nunca recibe… porque lo están esperando. 🔺\n\nEl tercer hombre en fútbol 7: no le pases al que quieres, pásale al que te la puede dar.\nA le pasa a B ➜ B (de espaldas) la toca de primera ➜ C llega corriendo desde antes del pase.\n\nEjercicio: 3 jugadores + 1 defensa, rotan y 10 repeticiones por lado.\n\nGuárdalo para tu próximo entrenamiento. ¿Tu nueve baja a pedirla o se queda arriba? 👇\n\n#Futbol7 #TacticaFutbol #EntrenadorDeFutbol #FutbolAmateur",
+  "instagram": "El tercer hombre en fútbol 7 🔺 A ➜ B de primera ➜ C que ya venía corriendo.\n\nGuárdalo para tu entrenamiento y mándaselo a tu nueve 👇\n\n#Futbol7 #TacticaFutbol #EntrenadorDeFutbol",
+  "youtube": {
+   "titulo": "El tercer hombre en fútbol 7: rompe la línea sin que te coman al nueve #Shorts",
+   "descripcion": "A le pasa a B, B de primera a C que ya venía corriendo. Con ejercicio para entrenarlo.\n\n#Futbol7 #TacticaFutbol #Shorts"
+  },
+  "tiktok": "Tu nueve nunca recibe… así entra el tercer hombre 🔺 #Futbol7 #TacticaFutbol #FutbolAmateur"
+ }
+}
