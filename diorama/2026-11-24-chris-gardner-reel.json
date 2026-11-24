@@ -1,0 +1,592 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-24-chris-gardner-reel",
+ "titulo": "En busca de la felicidad: Chris Gardner (reel)",
+ "scenes": [
+  {
+   "say": "Durmió con su hijo en el baño de una estación… y no se rindió.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 430,
+      "h": 350,
+      "o": {
+       "triste": true,
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     },
+     {
+      "x": 600,
+      "h": 180,
+      "o": {
+       "mira": -1,
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DURMIÓ EN UN BAÑO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "Y NO SE RINDIÓ",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Se llamaba Chris Gardner. A principios de los ochenta, en San Francisco, se quedó solo con su hijo… que apenas era un niño pequeño.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 400,
+      "h": 350,
+      "o": {
+       "pose": "walk",
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     },
+     {
+      "x": 570,
+      "h": 180,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CHRIS GARDNER",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "SOLO CON SU HIJO",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.6,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "De día se entrenaba para ser corredor de bolsa en Dean Witter. De noche buscaba dónde estar a salvo… hasta en un baño con llave de una estación del tren.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 300,
+      "h": 350,
+      "o": {
+       "pose": "ask",
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DE DÍA: LA BOLSA",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "DE NOCHE: SIN CASA",
+      "y": 290,
+      "col": "or",
+      "s": 1,
+      "f": 0.3,
+      "size": 60
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 690,
+      "y": 640,
+      "titulo": "DEAN WITTER",
+      "items": [
+       "APRENDER",
+       "LLAMAR",
+       "NO FALLAR"
+      ],
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Casi un año así. Cargando a su hijo, sus cosas… y un examen que tenía que pasar.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 200,
+      "h": 340,
+      "o": {
+       "camina": [
+        200,
+        560
+       ],
+       "triste": true,
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     },
+     {
+      "x": 330,
+      "h": 180,
+      "o": {
+       "camina": [
+        330,
+        690
+       ],
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CASI UN AÑO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "SIN RENDIRSE",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.5,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero en mil novecientos ochenta y dos… pasó su examen de corredor de bolsa al primer intento.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.65,
+     "g": 0.8
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 500,
+      "h": 360,
+      "o": {
+       "pose": "arms",
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1982",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 70
+     },
+     {
+      "t": "APROBÓ A LA PRIMERA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.65,
+      "size": 58
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Cinco años después fundó su propia firma en Chicago: Gardner Rich.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 500,
+      "h": 350,
+      "o": {
+       "pose": "offer",
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1987 · CHICAGO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "SU PROPIA FIRMA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 62
+     }
+    ]
+   }
+  },
+  {
+   "say": "Su historia se volvió libro y película: En busca de la felicidad.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 420,
+      "h": 350,
+      "o": {
+       "pose": "arms",
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     },
+     {
+      "x": 600,
+      "h": 190,
+      "o": {
+       "mira": -1,
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EN BUSCA DE",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4
+     },
+     {
+      "t": "LA FELICIDAD",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "say": "La lección: tu situación de hoy no es tu destino. Es solo el lugar donde empiezas.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 200,
+      "h": 330,
+      "o": {
+       "camina": [
+        200,
+        560
+       ],
+       "cam": "#26344D",
+       "pan": "#3A3A3A",
+       "piel": "#8D5A3B",
+       "pelo": "#1E1410"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TU SITUACIÓN",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3,
+      "tacha": {
+       "s": 1,
+       "f": 0.2
+      }
+     },
+     {
+      "t": "NO ES TU DESTINO",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.7,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Sígueme: cada noche, una historia que te cambia el día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "pose": "arms",
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÍGUEME",
+      "y": 150,
+      "col": "or",
+      "s": 0,
+      "f": 0.0,
+      "size": 62
+     },
+     {
+      "t": "UNA HISTORIA CADA NOCHE",
+      "y": 290,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   },
+   "nivel": 1.2
+  },
+  {
+   "say": "¿Tú hasta dónde llegarías por tus hijos? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Hasta dónde llegarías",
+    "por tus hijos?"
+   ]
+  }
+ ],
+ "thumb": [
+  "DURMIÓ EN",
+  "UN BAÑO"
+ ],
+ "post": "Durmió con su hijo en el baño de una estación… y no se rindió. 🚉 Años después tenía su propia firma en Chicago. ¿Tú hasta dónde llegarías por tus hijos? 👇",
+ "hashtags": [
+  "#ChrisGardner",
+  "#EnBuscaDeLaFelicidad",
+  "#Resiliencia",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Chris_Gardner"
+ ],
+ "redes_textos": {
+  "facebook": "Durmió con su hijo en el baño de una estación… y no se rindió. 🚉\n\nA principios de los ochenta, Chris Gardner se quedó solo con su hijo, que apenas era un niño pequeño. De día se entrenaba para ser corredor de bolsa en Dean Witter; de noche buscaba dónde estar a salvo, hasta en un baño con llave de una estación del tren de San Francisco. Casi un año así.\n\nEn 1982 pasó su examen de corredor de bolsa al primer intento. En 1987 fundó su propia firma en Chicago, Gardner Rich. Su historia se volvió libro y película: En busca de la felicidad.\n\nTu situación de hoy no es tu destino. Es solo el lugar donde empiezas.\n\n¿Tú hasta dónde llegarías por tus hijos? 👇\n\n#ChrisGardner #EnBuscaDeLaFelicidad #Resiliencia #ImpulsoReal",
+  "instagram": "Durmió con su hijo en el baño de una estación… y no se rindió. 🚉\n\nTu situación de hoy no es tu destino.\n\n📌 Guárdalo y compártelo con ese papá o esa mamá que está luchando. ¿Hasta dónde llegarías por tus hijos? 👇\n\n#ChrisGardner #EnBuscaDeLaFelicidad #Resiliencia #Padres #ImpulsoReal",
+  "youtube": {
+   "titulo": "Chris Gardner: durmió en un baño con su hijo y no se rindió #Shorts",
+   "descripcion": "La historia real detrás de En busca de la felicidad. ¿Hasta dónde llegarías por tus hijos?\n\n#ChrisGardner #Resiliencia #Shorts"
+  },
+  "tiktok": "Durmió con su hijo en el baño de una estación y no se rindió 🚉 #chrisgardner #enbuscadelafelicidad #resiliencia #ImpulsoReal"
+ }
+}

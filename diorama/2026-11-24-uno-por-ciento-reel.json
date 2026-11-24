@@ -1,0 +1,513 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-24-uno-por-ciento-reel",
+ "titulo": "1% mejor cada día (reel)",
+ "scenes": [
+  {
+   "say": "Mejorar uno por ciento cada día… te hace casi treinta y ocho veces mejor en un año.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 260,
+      "h": 330,
+      "o": {
+       "pose": "walk",
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1% DIARIO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.0,
+      "size": 66
+     }
+    ],
+    "props": [
+     {
+      "k": "escalera",
+      "x": 630,
+      "y": 760,
+      "s_": 1.0,
+      "s": 0,
+      "f": 0.2
+     }
+    ],
+    "contador": {
+     "de": 1,
+     "a": 38,
+     "suf": " VECES",
+     "y": 330,
+     "s": 0,
+     "f": 0.45,
+     "dur": 1.6
+    }
+   }
+  },
+  {
+   "say": "James Clear lo explica en Hábitos atómicos: uno punto cero uno, multiplicado trescientas sesenta y cinco veces… da treinta y siete punto setenta y ocho.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 260,
+      "h": 330,
+      "o": {
+       "pose": "ask",
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO ES MAGIA",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "1.01 ^ 365 = 37.78",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.75,
+      "size": 60
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 690,
+      "y": 640,
+      "titulo": "JAMES CLEAR",
+      "items": [
+       "1% HOY",
+       "1% MAÑANA"
+      ],
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero ojo: al revés también funciona. Empeorar uno por ciento diario… te deja casi en cero.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.7,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "triste": true,
+       "cam": "#8A2E2E",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "0.99 ^ 365",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "CASI CERO",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.7,
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "say": "Diez páginas al día… son tres mil seiscientas cincuenta en un año.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 300,
+      "h": 320,
+      "o": {
+       "pose": "offer",
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "largo": true,
+       "pelo": "#6B3E26"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "10 PÁGINAS AL DÍA",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "3,650 AL AÑO",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 64
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 690,
+      "y": 640,
+      "titulo": "LEER",
+      "items": [
+       "10 PÁGINAS",
+       "CADA DÍA"
+      ],
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "say": "Cien pesos guardados cada día… son treinta y seis mil quinientos al año.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "pose": "arms",
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "$100 DIARIOS",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "props": [
+     {
+      "k": "canasta",
+      "x": 740,
+      "y": 700,
+      "s_": 0.9,
+      "s": 0,
+      "f": 0.2
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 36500,
+     "pre": "$",
+     "y": 300,
+     "s": 0,
+     "f": 0.5,
+     "dur": 1.4
+    }
+   }
+  },
+  {
+   "say": "Diez minutos de caminar al día… son más de sesenta horas en un año.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 200,
+      "h": 320,
+      "o": {
+       "camina": [
+        200,
+        640
+       ],
+       "cam": "#5A6B3A",
+       "pan": "#3A4228"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "10 MIN DIARIOS",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "+60 HORAS AL AÑO",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "El problema es que el uno por ciento no se nota hoy. Por eso casi todos se rinden… justo antes de que empiece a notarse.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "triste": true,
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO SE NOTA HOY",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2,
+      "tacha": {
+       "s": 1,
+       "f": 0.6
+      }
+     },
+     {
+      "t": "SE NOTA EN UN AÑO",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.7,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Envíaselo a quien siempre dice que va a cambiar todo… el lunes.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "pose": "arms",
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO TODO EL LUNES",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "1% HOY",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 70
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "¿Qué uno por ciento vas a mejorar hoy? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué 1% vas a",
+    "mejorar hoy?"
+   ]
+  }
+ ],
+ "thumb": [
+  "1% DIARIO",
+  "= 38 VECES"
+ ],
+ "post": "Mejorar 1% cada día te hace casi 38 veces mejor en un año. 📈 No es magia: es matemática (1.01³⁶⁵ = 37.78). ¿Qué 1% vas a mejorar hoy? 👇",
+ "hashtags": [
+  "#Habitos",
+  "#HabitosAtomicos",
+  "#Disciplina",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://jamesclear.com/continuous-improvement",
+  "https://businesswales.gov.wales/sites/maingel2/files/documents/Atomic%20Habits%20-%20James%20Clear%202018_0.pdf"
+ ],
+ "redes_textos": {
+  "facebook": "Mejorar 1% cada día te hace casi 38 veces mejor en un año. 📈\n\nNo es magia: es matemática. James Clear lo explica en Hábitos atómicos: 1.01 multiplicado 365 veces da 37.78. Y al revés también: empeorar 1% diario (0.99³⁶⁵) te deja casi en cero.\n\n• 10 páginas al día = 3,650 al año\n• $100 guardados al día = $36,500 al año\n• 10 minutos de caminar al día = más de 60 horas al año\n\nEl 1% no se nota hoy. Por eso casi todos se rinden justo antes de que empiece a notarse.\n\n¿Qué 1% vas a mejorar hoy? 👇\n\n#Habitos #HabitosAtomicos #Disciplina #ImpulsoReal",
+  "instagram": "Mejorar 1% cada día = casi 38 veces mejor en un año. 📈\n\n📌 Guárdalo y mándaselo a quien siempre dice que va a cambiar todo… el lunes. ¿Qué 1% vas a mejorar hoy? 👇\n\n#Habitos #HabitosAtomicos #Disciplina #Mentalidad #ImpulsoReal",
+  "youtube": {
+   "titulo": "Mejora 1% diario y serás 38 veces mejor en un año #Shorts",
+   "descripcion": "La matemática de los hábitos: 1.01 elevado a 365 = 37.78. ¿Qué 1% vas a mejorar hoy?\n\n#Habitos #HabitosAtomicos #Shorts"
+  },
+  "tiktok": "1% diario = casi 38 veces mejor en un año 📈 ¿Qué vas a mejorar hoy? #habitos #disciplina #habitosatomicos #ImpulsoReal"
+ }
+}
