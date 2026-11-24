@@ -92,6 +92,9 @@ def pendientes(item, est, ahora):
     for red in item.get("redes", []):
         ts = hora_red(item, red)
         r = est["redes"].get(red, {})
+        if r.get("omitido", "").startswith("faltan secretos") and credenciales(red, item["pagina"])[0] and ahora < ts + CADUCA:
+            est["redes"].pop(red)  # ya se configuraron los secretos: se vuelve a intentar
+            r = {}
         if r.get("ok") or r.get("omitido") or r.get("intentos", 0) >= MAX_INTENTOS:
             continue
         if ahora < ts - ESPERAN_HORA.get(red, 10 ** 9):
