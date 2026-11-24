@@ -1,0 +1,59 @@
+{
+ "id": "2026-11-24-a-radiografia-bravos",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {"type": "stats", "bg": "18°", "speed": 1.12, "gap": 0.15,
+   "say": "Doce puntos y último lugar. Así terminó Juárez el Apertura… pero el problema no es el que crees.",
+   "captions": ["<em>12</em> puntos", "y <em>último lugar</em>.", "Así terminó <em>Juárez</em>", "el Apertura…", "pero el problema", "no es el que <em>crees</em>."],
+   "items": [{"n": "12", "label": "PUNTOS", "color": "ink"}, {"n": "18°", "label": "LUGAR", "color": "red"}]},
+  {"type": "results", "bg": "0", "speed": 1.12, "gap": 0.15,
+   "say": "El torneo se perdió en el arranque: ocho derrotas seguidas, desde la jornada uno hasta la ocho.",
+   "captions": ["El torneo se perdió", "en el <em>arranque</em>:", "<em>8 derrotas</em>", "seguidas,", "de la jornada <em>1</em>", "a la <em>8</em>."],
+   "title": "BRAVOS · ARRANQUE", "seq": ["L","L","L","L","L","L","L","L","W"],
+   "counter": {"value": 8, "label": "DERROTAS\nSEGUIDAS", "color": "red"}},
+  {"type": "stats", "bg": "23", "speed": 1.12, "gap": 0.15,
+   "say": "En esos ocho partidos: cero puntos, cuatro goles a favor… y veintitrés en contra.",
+   "captions": ["En esos <em>8</em> partidos:", "<em>0</em> puntos,", "<em>4</em> goles a favor…", "y <em>23</em>", "en contra."],
+   "items": [{"n": "0", "label": "PUNTOS", "color": "red"}, {"n": "4", "label": "A FAVOR", "color": "ink"}, {"n": "23", "label": "EN CONTRA", "color": "red"}]},
+  {"type": "headline", "bg": "8", "speed": 1.12, "gap": 0.15,
+   "say": "Fue el peor arranque en la historia de los torneos cortos. La marca anterior era de siete derrotas.",
+   "captions": ["Fue el <em>peor arranque</em>", "en la historia", "de los <em>torneos cortos</em>.", "La marca anterior", "era de <em>7</em> derrotas."],
+   "tag": "RÉCORD NEGATIVO", "title": "PEOR ARRANQUE\nDE LA HISTORIA", "sub": "Torneos cortos · 8 derrotas al hilo"},
+  {"type": "headline", "bg": "3", "speed": 1.12, "gap": 0.15,
+   "say": "Y en el banquillo, tres nombres: Caixinha se fue tras tres jornadas, Salvador Valero fue interino… y a finales de agosto llegó Gustavo Lema.",
+   "captions": ["Y en el banquillo,", "<em>3</em> nombres:", "<em>Caixinha</em> se fue", "tras <em>3</em> jornadas,", "<em>Valero</em> fue interino…", "y a finales de agosto", "llegó <em>Gustavo Lema</em>."],
+   "tag": "EL BANQUILLO", "title": "3 TÉCNICOS\nEN UN TORNEO", "sub": "Caixinha · Valero (interino) · Lema"},
+  {"type": "compare", "bg": "12", "speed": 1.12, "gap": 0.15,
+   "say": "Ahora mira las últimas nueve: doce puntos, tres victorias y doce goles a favor. Todo lo que sumó Juárez… llegó después del desastre.",
+   "captions": ["Ahora mira", "las <em>últimas 9</em>:", "<em>12</em> puntos,", "<em>3</em> victorias", "y <em>12</em> goles a favor.", "Todo lo que sumó Juárez…", "llegó <em>después</em>", "del desastre."],
+   "title": "EL TORNEO EN DOS", "left": "J1–J8", "right": "J9–J17",
+   "rows": [{"label": "PUNTOS", "l": "0", "r": "12"}, {"label": "VICTORIAS", "l": "0", "r": "3"}, {"label": "GOLES A FAVOR", "l": "4", "r": "12"}, {"label": "GOLES EN CONTRA", "l": "23", "r": "14"}]},
+  {"type": "question", "bg": "¿?", "speed": 1.12,
+   "say": "Tú dime, bravo: ¿el problema fue el técnico… o el plantel? ¡Te leo en los comentarios!",
+   "captions": ["Tú dime, <em>bravo</em>:", "¿el problema", "fue el <em>técnico</em>…", "o el <em>plantel</em>?", "¡Te leo en los <em>comentarios</em>!"],
+   "pre": "BRAVO, SÉ HONESTO:", "q": "¿QUÉ FALLÓ\nEN JUÁREZ?", "opts": ["EL TÉCNICO", "EL PLANTEL"]}
+ ],
+ "post": "Así terminó Juárez el Apertura 2026: último con 12 puntos. Pero el torneo se perdió en el arranque: 8 derrotas seguidas (J1–J8), 0 puntos, 4 goles a favor y 23 en contra, el peor arranque en la historia de los torneos cortos. En las últimas 9 jornadas sumó sus 12 puntos. ¿El problema fue el técnico o el plantel? 👇",
+ "hashtags": ["#FCJuárez", "#Bravos", "#LigaMX", "#Apertura2026", "#CiudadJuárez"],
+ "sources": [
+  "https://www.record.com.mx/historia/fc-juarez-se-convierte-en-el-club-con-el-peor-arranque-en-la-historia-de-la-liga-mx-2026091413345737178",
+  "https://www.record.com.mx/historia/exentrenador-de-pumas-es-nuevo-director-tecnico-de-bravos-de-juarez-2026090104295819644",
+  "https://vanguardia.com.mx/deportes/pedro-caixinha-es-destituido-de-bravos-de-juarez-segundo-tecnico-fuera-del-apertura-2026-BN22583064",
+  "https://www.tusbuenasnoticias.com/noticias/deportes/2026/11/23/67360-liga-mx-apertura-2026-asi-quedo-la-tabla-general-tras-j17",
+  "https://www.excelsior.com.mx/deportes/dos-goles-tiempo-agregado-sellan-empate-entre-juarez-y-atlas"
+ ],
+ "redes_textos": {
+  "facebook": "Así terminó Juárez el Apertura 2026… y el problema no es el que crees. 🔎\n\nBravos cerró último con 12 puntos, pero el torneo se perdió en el arranque: 8 derrotas seguidas de la J1 a la J8, con 0 puntos, 4 goles a favor y 23 en contra. Fue el peor arranque en la historia de los torneos cortos (la marca anterior era de 7).\n\nEn el banquillo pasaron Caixinha (fuera tras 3 jornadas), Salvador Valero (interino) y Gustavo Lema (desde finales de agosto). Y los 12 puntos llegaron todos en las últimas 9 jornadas.\n\n¿El problema fue el técnico o el plantel? 👇\n\n#FCJuárez #Bravos #LigaMX #Apertura2026 #CiudadJuárez",
+  "instagram": "Juárez terminó último con 12 puntos… pero los 12 llegaron en las últimas 9 jornadas. 😳\n\nEl torneo se perdió en el arranque: 8 derrotas seguidas, 23 goles en contra.\n\n¿Técnico o plantel? Comenta 👇 y guárdalo.\n\n#FCJuárez #Bravos #LigaMX #Apertura2026",
+  "youtube": {
+   "titulo": "Radiografía de Juárez: el torneo se perdió en 8 partidos #Shorts",
+   "descripcion": "Bravos terminó último con 12 puntos, pero todos llegaron en las últimas 9 jornadas. 8 derrotas seguidas al inicio: el peor arranque de los torneos cortos. ¿Técnico o plantel?\n\n#FCJuárez #Bravos #LigaMX"
+  },
+  "tiktok": "Juárez: 8 derrotas seguidas y aun así sumó 12 en las últimas 9 😳 ¿técnico o plantel? #FCJuárez #Bravos #LigaMX"
+ }
+}

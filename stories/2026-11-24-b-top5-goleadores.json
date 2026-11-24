@@ -1,0 +1,275 @@
+{
+ "id": "2026-11-24-b-top5-goleadores",
+ "header": "LIGA MX · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "TOP 5",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Los cinco mejores goleadores del Apertura… y el número cinco juega en el último lugar.",
+   "captions": [
+    "Los <em>5</em> mejores",
+    "<em>goleadores</em>",
+    "del Apertura…",
+    "y el número <em>5</em>",
+    "juega en el",
+    "<em>último lugar</em>."
+   ],
+   "tag": "FASE REGULAR",
+   "title": "TOP 5\nGOLEADORES",
+   "sub": "Apertura 2026 · tabla final"
+  },
+  {
+   "type": "stats",
+   "bg": "5",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el cinco, Óscar Estupiñán, de Juárez. Nueve goles… más de la mitad de todos los goles de su equipo.",
+   "captions": [
+    "En el <em>5</em>,",
+    "<em>Óscar Estupiñán</em>,",
+    "de Juárez.",
+    "<em>9</em> goles…",
+    "más de la <em>mitad</em>",
+    "de los goles",
+    "de su equipo."
+   ],
+   "items": [
+    {
+     "n": "#5",
+     "label": "ESTUPIÑÁN",
+     "color": "ink"
+    },
+    {
+     "n": "9",
+     "label": "GOLES · JUÁREZ",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "4",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el cuatro, empatado con él, Juninho, de Pumas. También con nueve.",
+   "captions": [
+    "En el <em>4</em>,",
+    "empatado con él,",
+    "<em>Juninho</em>,",
+    "de Pumas.",
+    "También con <em>9</em>."
+   ],
+   "items": [
+    {
+     "n": "#4",
+     "label": "JUNINHO",
+     "color": "ink"
+    },
+    {
+     "n": "9",
+     "label": "GOLES · PUMAS",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "3",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el tres, Juan Brunetta, de Tigres. Diez goles.",
+   "captions": [
+    "En el <em>3</em>,",
+    "<em>Juan Brunetta</em>,",
+    "de Tigres.",
+    "<em>10</em> goles."
+   ],
+   "items": [
+    {
+     "n": "#3",
+     "label": "BRUNETTA",
+     "color": "ink"
+    },
+    {
+     "n": "10",
+     "label": "GOLES · TIGRES",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "2",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "En el dos, Henry Martín, del América. Once goles… y aun así, quedó muy lejos del primero.",
+   "captions": [
+    "En el <em>2</em>,",
+    "<em>Henry Martín</em>,",
+    "del América.",
+    "<em>11</em> goles…",
+    "y aun así,",
+    "quedó muy <em>lejos</em>",
+    "del primero."
+   ],
+   "items": [
+    {
+     "n": "#2",
+     "label": "HENRY MARTÍN",
+     "color": "ink"
+    },
+    {
+     "n": "11",
+     "label": "GOLES · AMÉRICA",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "1",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Y en el uno… Salomón Rondón, de Pachuca. Diecisiete goles. Seis más que el segundo lugar.",
+   "captions": [
+    "Y en el <em>1</em>…",
+    "<em>Salomón Rondón</em>,",
+    "de Pachuca.",
+    "<em>17</em> goles.",
+    "<em>6</em> más",
+    "que el segundo."
+   ],
+   "items": [
+    {
+     "n": "#1",
+     "label": "RONDÓN",
+     "color": "green"
+    },
+    {
+     "n": "17",
+     "label": "GOLES",
+     "color": "green"
+    },
+    {
+     "n": "+6",
+     "label": "SOBRE EL 2°",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "2009",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Nadie metía diecisiete desde Tito Villa en el Apertura dos mil nueve. Anotó en doce de diecisiete partidos… con cinco dobletes.",
+   "captions": [
+    "Nadie metía <em>17</em>",
+    "desde <em>Tito Villa</em>",
+    "en el Apertura <em>2009</em>.",
+    "Anotó en <em>12</em>",
+    "de 17 partidos…",
+    "con <em>5 dobletes</em>."
+   ],
+   "tag": "POR QUÉ ES EL #1",
+   "title": "LA MEJOR CIFRA\nDESDE 2009",
+   "sub": "12 de 17 partidos con gol · 5 dobletes"
+  },
+  {
+   "type": "ranking",
+   "bg": "TOP",
+   "speed": 1.15,
+   "gap": 0.15,
+   "say": "Así queda el top: Rondón, Henry, Brunetta, Juninho y Estupiñán. ¿Quién te faltó?",
+   "captions": [
+    "Así queda el top:",
+    "<em>Rondón</em>,",
+    "Henry,",
+    "Brunetta,",
+    "Juninho",
+    "y Estupiñán.",
+    "¿Quién te <em>faltó</em>?"
+   ],
+   "title": "GOLEO",
+   "sub": "APERTURA 2026",
+   "rows": [
+    {
+     "name": "RONDÓN",
+     "team": "PACHUCA",
+     "val": 17,
+     "hl": true
+    },
+    {
+     "name": "H. MARTÍN",
+     "team": "AMÉRICA",
+     "val": 11
+    },
+    {
+     "name": "BRUNETTA",
+     "team": "TIGRES",
+     "val": 10
+    },
+    {
+     "name": "JUNINHO",
+     "team": "PUMAS",
+     "val": 9
+    },
+    {
+     "name": "ESTUPIÑÁN",
+     "team": "JUÁREZ",
+     "val": 9
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "speed": 1.15,
+   "say": "Ahora le toca Chivas en cuartos. ¿Rondón le hace gol al superlíder… o lo apagan? ¡Te leo en los comentarios!",
+   "captions": [
+    "Ahora le toca <em>Chivas</em>",
+    "en cuartos.",
+    "¿<em>Rondón</em> le hace gol",
+    "al superlíder…",
+    "o lo <em>apagan</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "CUARTOS: CHIVAS VS PACHUCA",
+   "q": "¿RONDÓN LE\nANOTA A CHIVAS?",
+   "opts": [
+    "SÍ LE ANOTA",
+    "LO APAGAN"
+   ]
+  }
+ ],
+ "post": "Top 5 goleadores del Apertura 2026: Rondón (Pachuca) 17, Henry Martín (América) 11, Brunetta (Tigres) 10, Juninho (Pumas) 9 y Estupiñán (Juárez) 9. Rondón es la mejor cifra desde Tito Villa en 2009. En cuartos le toca Chivas: ¿le anota o lo apagan? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Apertura2026",
+  "#Rondón",
+  "#Pachuca",
+  "#Liguilla"
+ ],
+ "sources": [
+  "https://espndeportes.espn.com/futbol/mexico/nota/_/id/17178675/liga-mx-tabla-de-goleo-torneo-apertura-2026-como-va-la-clasificacion",
+  "https://www.excelsior.com.mx/deportes/rey-goleo-salomon-rondon-fue-maximo-anotador-apertura-2026",
+  "https://juanfutbol.com/liga-mx/quien-fue-el-goleador-del-apertura-2026-asi-quedo-la-tabla-de-goleo-en-la-liga-mx",
+  "https://www.record.com.mx/historia/liguilla-lista-asi-quedaron-los-cruces-de-los-cuartos-de-final-del-apertura-2026-2026112301165324286"
+ ],
+ "redes_textos": {
+  "facebook": "Los 5 mejores goleadores del Apertura 2026… y el #5 juega en el último lugar. ⚽\n\n1. Salomón Rondón (Pachuca) – 17\n2. Henry Martín (América) – 11\n3. Juan Brunetta (Tigres) – 10\n4. Juninho (Pumas) – 9\n5. Óscar Estupiñán (Juárez) – 9\n\nRondón anotó en 12 de 17 partidos, con 5 dobletes: nadie metía 17 desde Tito Villa en el Apertura 2009. Estupiñán hizo 9 de los 16 goles de Bravos.\n\nEn cuartos, Pachuca contra Chivas: ¿Rondón le anota al superlíder o lo apagan? 👇\n\n#LigaMX #Apertura2026 #Rondón #Pachuca #Liguilla",
+  "instagram": "Top 5 goleadores del Apertura 2026 ⚽ Rondón 17, Henry 11, Brunetta 10, Juninho 9 y Estupiñán 9.\n\n¿Rondón le anota a Chivas en cuartos? Comenta 👇 y compártelo con tu compa.\n\n#LigaMX #Apertura2026 #Rondón #Liguilla",
+  "youtube": {
+   "titulo": "Top 5 goleadores del Apertura 2026: Rondón y sus 17 goles #Shorts",
+   "descripcion": "Rondón 17, Henry Martín 11, Brunetta 10, Juninho 9 y Estupiñán 9. La mejor cifra desde 2009. ¿Le anota a Chivas en cuartos?\n\n#LigaMX #Apertura2026 #Rondón"
+  },
+  "tiktok": "Top 5 goleadores del Apertura ⚽ el #5 juega en el último lugar 😳 ¿Rondón le anota a Chivas? #LigaMX #Rondón #Liguilla"
+ }
+}
