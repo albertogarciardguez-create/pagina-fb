@@ -12,8 +12,12 @@
   },
   "instagram": {
    "omitido": "faltan secretos: IR_IG_ID"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: IR_TIKTOK_REFRESH"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-24-ir-noche-chris-gardner.mp4",
- "actualizado": "2026-11-24 19:26"
+ "actualizado": "2026-11-24 19:31",
+ "estado": "completo"
 }
