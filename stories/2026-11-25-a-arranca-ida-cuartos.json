@@ -1,0 +1,199 @@
+{
+ "id": "2026-11-25-a-arranca-ida-cuartos",
+ "header": "LIGUILLA · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "HOY",
+   "gap": 0.15,
+   "say": "Hoy arranca la Liguilla… y hay cuatro equipos a los que el empate les alcanza.",
+   "captions": [
+    "Hoy arranca",
+    "la <em>Liguilla</em>…",
+    "y hay <em>4 equipos</em>",
+    "a los que",
+    "el <em>empate</em>",
+    "les alcanza."
+   ],
+   "items": [
+    {
+     "n": "4",
+     "label": "CON VENTAJA",
+     "color": "green"
+    },
+    {
+     "n": "1-1",
+     "label": "LES SIRVE",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "=",
+   "gap": 0.15,
+   "say": "La regla: si la serie queda empatada en el global, pasa el mejor ubicado de la tabla… el que cierra en casa.",
+   "captions": [
+    "La <em>regla</em>:",
+    "si la serie",
+    "queda <em>empatada</em>",
+    "en el global,",
+    "pasa el <em>mejor ubicado</em>",
+    "de la tabla…",
+    "el que cierra",
+    "<em>en casa</em>."
+   ],
+   "tag": "LA REGLA",
+   "title": "EMPATE GLOBAL =\nPASA EL DE ARRIBA",
+   "sub": "El mejor ubicado cierra en casa"
+  },
+  {
+   "type": "table",
+   "bg": "VS",
+   "gap": 0.15,
+   "say": "Y esos cuatro hoy juegan de visita: Atlas, América, Chivas y Cruz Azul.",
+   "captions": [
+    "Y esos <em>4</em>",
+    "hoy juegan",
+    "<em>de visita</em>:",
+    "<em>Atlas</em>,",
+    "<em>América</em>,",
+    "<em>Chivas</em>",
+    "y <em>Cruz Azul</em>."
+   ],
+   "title": "IDA · CUARTOS",
+   "sub": "HORA CENTRO",
+   "rows": [
+    {
+     "pos": "MIÉ",
+     "team": "TOLUCA vs ATLAS",
+     "pts": "19:00",
+     "hl": true
+    },
+    {
+     "pos": "MIÉ",
+     "team": "RAYADOS vs AMÉRICA",
+     "pts": "21:10",
+     "hl": true
+    },
+    {
+     "pos": "JUE",
+     "team": "PACHUCA vs CHIVAS",
+     "pts": "19:00"
+    },
+    {
+     "pos": "JUE",
+     "team": "LEÓN vs CRUZ AZUL",
+     "pts": "21:10"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "bg": "1",
+   "gap": 0.15,
+   "say": "A las siete abre Toluca contra Atlas, el cruce más parejo: veintisiete puntos contra veintiocho.",
+   "captions": [
+    "A las <em>7</em> abre",
+    "<em>Toluca</em>",
+    "contra <em>Atlas</em>,",
+    "el cruce",
+    "<em>más parejo</em>:",
+    "<em>27</em> puntos",
+    "contra <em>28</em>."
+   ],
+   "title": "HOY · 19:00",
+   "left": "TOLUCA",
+   "right": "ATLAS",
+   "rows": [
+    {
+     "label": "PUNTOS",
+     "l": "27",
+     "r": "28"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "3",
+   "gap": 0.15,
+   "say": "Pero el plato fuerte es a las nueve y diez: Rayados recibe al América en el BBVA… tercero contra sexto.",
+   "captions": [
+    "Pero el <em>plato fuerte</em>",
+    "es a las <em>9:10</em>:",
+    "<em>Rayados</em> recibe",
+    "al <em>América</em>",
+    "en el <em>BBVA</em>…",
+    "<em>tercero</em>",
+    "contra <em>sexto</em>."
+   ],
+   "tag": "HOY · 21:10",
+   "title": "RAYADOS VS\nAMÉRICA",
+   "sub": "30 puntos contra 27"
+  },
+  {
+   "type": "headline",
+   "bg": "1°",
+   "gap": 0.15,
+   "say": "Y mañana, el superlíder Chivas visita Pachuca… y Cruz Azul va a León.",
+   "captions": [
+    "Y <em>mañana</em>,",
+    "el <em>superlíder</em>",
+    "<em>Chivas</em>",
+    "visita <em>Pachuca</em>…",
+    "y <em>Cruz Azul</em>",
+    "va a <em>León</em>."
+   ],
+   "tag": "JUEVES",
+   "title": "CHIVAS Y\nCRUZ AZUL",
+   "sub": "Visitan a Pachuca y León"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Tú dime: ¿Rayados le pega primero al América… o América se trae el resultado? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿<em>Rayados</em> le pega",
+    "primero",
+    "al <em>América</em>…",
+    "o América",
+    "se trae el <em>resultado</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "HOY SE DEFINE:",
+   "q": "¿QUIÉN GANA\nLA IDA?",
+   "opts": [
+    "RAYADOS",
+    "AMÉRICA"
+   ]
+  }
+ ],
+ "post": "Hoy arranca la Liguilla… y a cuatro equipos el empate les alcanza. ⚽\n\nSi la serie queda empatada en el global, pasa el que juega la vuelta en casa: el mejor ubicado de la tabla. Atlas, América, Chivas y Cruz Azul juegan la ida de visita con esa ventaja.\n\nHoy (hora de Juárez): Toluca vs Atlas 6:00 pm · Rayados vs América 8:10 pm.\nMañana: Pachuca vs Chivas 6:00 pm · León vs Cruz Azul 8:10 pm.\n\n¿Quién gana la ida: Rayados o América? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Liguilla",
+  "#Apertura2026",
+  "#Rayados",
+  "#América"
+ ],
+ "sources": [
+  "https://www.record.com.mx/historia/donde-ver-cuartos-de-final-ida-apertura-2026-fechas-horarios-canales-transmision-2026112421242072610",
+  "https://www.excelsior.com.mx/deportes/liga-mx-apertura-2026-cuartos-final-dias-horarios-canales",
+  "https://www.record.com.mx/historia/asi-quedo-la-tabla-general-del-apertura-2026-de-la-liga-mx-rumbo-a-la-liguilla-2026112304491427046"
+ ],
+ "redes_textos": {
+  "facebook": "Hoy arranca la Liguilla… y a cuatro equipos el empate les alcanza. ⚽\n\nSi la serie queda empatada en el global, pasa el que juega la vuelta en casa: el mejor ubicado de la tabla. Atlas, América, Chivas y Cruz Azul juegan la ida de visita con esa ventaja.\n\nHoy (hora de Juárez): Toluca vs Atlas 6:00 pm · Rayados vs América 8:10 pm.\nMañana: Pachuca vs Chivas 6:00 pm · León vs Cruz Azul 8:10 pm.\n\n¿Quién gana la ida: Rayados o América? 👇\n\n#LigaMX #Liguilla #Apertura2026 #Rayados #América",
+  "instagram": "Hoy arranca la Liguilla y a 4 equipos el empate les alcanza 👀\n\nAtlas, América, Chivas y Cruz Azul juegan la ida de visita… y con el global empatado, pasan.\n\n¿Rayados o América? Comenta 👇 y compártelo.\n\n#LigaMX #Liguilla #Apertura2026 #Rayados",
+  "youtube": {
+   "titulo": "Arranca la Liguilla: a 4 equipos el empate les alcanza #Shorts",
+   "descripcion": "Ida de cuartos del Apertura 2026: Toluca vs Atlas y Rayados vs América hoy; Pachuca vs Chivas y León vs Cruz Azul mañana. Con empate global pasa el mejor ubicado.\n\n#LigaMX #Liguilla #Apertura2026"
+  },
+  "tiktok": "A 4 equipos el empate les alcanza 👀 ¿Rayados o América en la ida? #LigaMX #Liguilla #Apertura2026"
+ }
+}
