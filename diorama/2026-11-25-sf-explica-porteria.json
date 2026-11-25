@@ -1,0 +1,543 @@
+{
+ "id": "2026-11-25-sf-explica-porteria",
+ "plantilla": "iso",
+ "marca": "senorfutbol",
+ "kind": "explica",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "speed": 1.05,
+ "scenes": [
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "¿Siete metros con treinta y dos? Nadie escoge un número así… a menos que venga de otro lado.",
+   "cam": {
+    "rot": -24,
+    "e": 18,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ],
+    "cy": 0.6
+   },
+   "obj": [
+    {
+     "k": "porteria",
+     "x": 0,
+     "y": 0,
+     "ancho": 7.32,
+     "alto": 2.44
+    },
+    {
+     "k": "persona",
+     "x": 1.2,
+     "y": 0.9,
+     "eq": "po",
+     "esc": 1.0
+    },
+    {
+     "k": "cota",
+     "de": [
+      -3.66,
+      0.6
+     ],
+     "a": [
+      3.66,
+      0.6
+     ],
+     "z": 0.1,
+     "t": "7.32 M",
+     "s": 0,
+     "at": 0.15,
+     "dur": 0.9
+    },
+    {
+     "k": "etiqueta",
+     "x": 0,
+     "y": 0,
+     "z": 3.3,
+     "t": "2.44 M",
+     "bg": "lime",
+     "size": 40,
+     "s": 0,
+     "at": 0.45
+    }
+   ],
+   "cam2": {
+    "rot": -12,
+    "e": 22,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ]
+   },
+   "titulo": "¿POR QUÉ 7.32?",
+   "tituloAt": {
+    "s": 0,
+    "at": 0
+   }
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "Viene de Inglaterra: ocho yardas de ancho… y ocho pies de alto. Pásalo a metros, y salen esos decimales raros.",
+   "cam": {
+    "rot": -12,
+    "e": 22,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ],
+    "cy": 0.6
+   },
+   "obj": [
+    {
+     "k": "porteria",
+     "x": 0,
+     "y": 0,
+     "ancho": 7.32,
+     "alto": 2.44
+    },
+    {
+     "k": "cota",
+     "de": [
+      -3.66,
+      0.6
+     ],
+     "a": [
+      3.66,
+      0.6
+     ],
+     "z": 0.1,
+     "t": "8 YARDAS",
+     "s": 0,
+     "at": 0.3,
+     "dur": 0.9
+    },
+    {
+     "k": "etiqueta",
+     "x": 0,
+     "y": 0,
+     "z": 3.3,
+     "t": "8 PIES",
+     "bg": "lime",
+     "size": 40,
+     "s": 1,
+     "at": 0.0
+    }
+   ],
+   "cam2": {
+    "rot": 8,
+    "e": 24,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ]
+   },
+   "cnt": [
+    {
+     "n": 7.32,
+     "desde": 0,
+     "dec": 2,
+     "suf": " M",
+     "l": "8 YARDAS",
+     "s": 2,
+     "at": 0.0,
+     "dur": 1.0
+    }
+   ]
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "En mil ochocientos sesenta y tres, la Asociación Inglesa de Fútbol escribió sus primeras reglas: dos postes, a ocho yardas… y nada arriba.",
+   "cam": {
+    "rot": -30,
+    "e": 24,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ],
+    "cy": 0.6
+   },
+   "obj": [
+    {
+     "k": "caja",
+     "x": -3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF",
+     "s": 1,
+     "at": 0.2
+    },
+    {
+     "k": "caja",
+     "x": 3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF",
+     "s": 1,
+     "at": 0.35
+    },
+    {
+     "k": "cota",
+     "de": [
+      -3.66,
+      0.6
+     ],
+     "a": [
+      3.66,
+      0.6
+     ],
+     "z": 0.1,
+     "t": "8 YARDAS",
+     "s": 1,
+     "at": 0.6,
+     "dur": 0.8
+    }
+   ],
+   "cam2": {
+    "rot": -14,
+    "e": 22,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ]
+   },
+   "titulo": "1863",
+   "tituloAt": {
+    "s": 0,
+    "at": 0
+   }
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "¿Y la altura? No había límite. El gol valía a cualquier altura… mientras el balón pasara entre los dos postes.",
+   "cam": {
+    "rot": -20,
+    "e": 14,
+    "zoom": 66,
+    "t": [
+     0,
+     0
+    ],
+    "cy": 0.74
+   },
+   "obj": [
+    {
+     "k": "caja",
+     "x": -3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF"
+    },
+    {
+     "k": "caja",
+     "x": 3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF"
+    },
+    {
+     "k": "balon",
+     "x": 0.5,
+     "y": -2,
+     "z": 5.5,
+     "s": 1,
+     "at": 0.2
+    },
+    {
+     "k": "etiqueta",
+     "x": 0,
+     "y": 0,
+     "z": 4.3,
+     "t": "¿GOL? SÍ",
+     "bg": "red",
+     "size": 44,
+     "s": 1,
+     "at": 0.5
+    }
+   ],
+   "cam2": {
+    "rot": -10,
+    "e": 16,
+    "zoom": 62
+   },
+   "titulo": "SIN LÍMITE",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.3
+   }
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "Las peleas eran tantas que en mil ochocientos sesenta y seis pusieron una cinta entre los postes… a ocho pies del suelo.",
+   "cam": {
+    "rot": -24,
+    "e": 18,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ],
+    "cy": 0.6
+   },
+   "obj": [
+    {
+     "k": "caja",
+     "x": -3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF"
+    },
+    {
+     "k": "caja",
+     "x": 3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF"
+    },
+    {
+     "k": "cota",
+     "de": [
+      -3.66,
+      0
+     ],
+     "a": [
+      3.66,
+      0
+     ],
+     "z": 2.44,
+     "t": "CINTA · 8 PIES",
+     "s": 0,
+     "at": 0.55,
+     "dur": 1.0
+    },
+    {
+     "k": "persona",
+     "x": 1.2,
+     "y": 0.9,
+     "eq": "po",
+     "esc": 1.0
+    }
+   ],
+   "cam2": {
+    "rot": -6,
+    "e": 20,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ]
+   },
+   "titulo": "1866",
+   "tituloAt": {
+    "s": 0,
+    "at": 0
+   }
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "Pero lo mejor viene ahora… hacia mil ochocientos setenta y cinco, el travesaño de madera empezó a reemplazar la cinta. Y la medida, nunca cambió.",
+   "cam": {
+    "rot": -6,
+    "e": 20,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ],
+    "cy": 0.6
+   },
+   "obj": [
+    {
+     "k": "caja",
+     "x": -3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF"
+    },
+    {
+     "k": "caja",
+     "x": 3.66,
+     "y": 0,
+     "z": 0,
+     "w": 0.14,
+     "d": 0.14,
+     "h": 2.44,
+     "color": "#FFFFFF"
+    },
+    {
+     "k": "caja",
+     "x": 0,
+     "y": 0,
+     "z": 2.36,
+     "w": 7.46,
+     "d": 0.14,
+     "h": 0.12,
+     "color": "#FFFFFF",
+     "s": 0,
+     "at": 0.5,
+     "dur": 0.8
+    },
+    {
+     "k": "persona",
+     "x": 1.2,
+     "y": 0.9,
+     "eq": "po",
+     "esc": 1.0
+    },
+    {
+     "k": "etiqueta",
+     "x": 0,
+     "y": 0,
+     "z": 3.3,
+     "t": "TRAVESAÑO",
+     "bg": "lime",
+     "size": 40,
+     "s": 0,
+     "at": 0.7
+    }
+   ],
+   "cam2": {
+    "rot": 14,
+    "e": 22,
+    "zoom": 100,
+    "t": [
+     0.6,
+     1.5
+    ]
+   },
+   "titulo": "1875",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.4
+   }
+  },
+  {
+   "vis": "explica",
+   "mus": "mayor",
+   "fondo": "pasto",
+   "say": "Hoy, de la Liga MX al Mundial, es la misma portería… ciento sesenta y tres años después.",
+   "cam": {
+    "rot": -30,
+    "e": 30,
+    "zoom": 30,
+    "t": [
+     0,
+     -46
+    ],
+    "cy": 0.6
+   },
+   "obj": [
+    {
+     "k": "cancha",
+     "tipo": "f11",
+     "base": true
+    },
+    {
+     "k": "estadio",
+     "forma": "rect",
+     "ancho": 68,
+     "largo": 105,
+     "filas": 7,
+     "margen": 5,
+     "gente": 0.85,
+     "s": 0,
+     "at": 0.0,
+     "dur": 1.4
+    }
+   ],
+   "cam2": {
+    "rot": -36,
+    "e": 36,
+    "zoom": 7.4,
+    "t": [
+     0,
+     0
+    ]
+   },
+   "cnt": [
+    {
+     "n": 163,
+     "desde": 0,
+     "suf": " AÑOS",
+     "l": "LA MISMA MEDIDA",
+     "s": 0,
+     "at": 0.5,
+     "dur": 1.2
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "mus": "mayor",
+   "say": "Tú qué harías: ¿la portería más grande para que haya más goles… o la dejas igual? Te leo en los comentarios… y sígueme, que cada semana te explico el fútbol como nadie.",
+   "q": [
+    "¿MÁS GRANDE O IGUAL?",
+    "¿Tú qué harías?"
+   ],
+   "opts": [
+    "MÁS GRANDE",
+    "IGUAL"
+   ]
+  }
+ ],
+ "post": "¿Por qué la portería mide 7.32 × 2.44? No es un número al azar. 📏 Son 8 yardas de ancho y 8 pies de alto, medidas inglesas. En 1863 la FA puso los postes a 8 yardas y sin nada arriba; en 1866 llegó una cinta a 8 pies y hacia 1875 el travesaño de madera. ¿Más grande o igual? 👇",
+ "hashtags": [
+  "#Futbol",
+  "#ReglasDelFutbol",
+  "#SabíasQue",
+  "#LigaMX"
+ ],
+ "sources": [
+  "https://leicestershirefootballarchive.com/2025/11/goal-posts/",
+  "https://sheffieldhomeoffootball.org/museum/a-brief-history-of-the-goal-mouth-shape",
+  "https://www.thefa.com/football-rules-governance/lawsandrules/laws/football-11-11/law-1---the-field-of-play"
+ ],
+ "redes_textos": {
+  "facebook": "¿Siete treinta y dos? No es un número al azar. 📏\n\nLa portería mide 8 yardas de ancho y 8 pies de alto: medidas inglesas que en metros dan 7.32 × 2.44.\n• 1863: la Asociación Inglesa pone los postes a 8 yardas… y nada arriba (el gol valía a cualquier altura).\n• 1866: llega una cinta a 8 pies del suelo.\n• Hacia 1875: el travesaño de madera empieza a reemplazar la cinta.\nY la medida nunca cambió.\n\n¿Tú la harías más grande o la dejas igual? 👇\n\n#Futbol #ReglasDelFutbol #SabíasQue #LigaMX",
+  "instagram": "7.32 × 2.44 no es al azar: son 8 yardas por 8 pies 📏 Y en 1863 ¡no había travesaño!\n\n¿Más grande o igual? Comenta 👇 y guárdalo para ganar la próxima discusión.\n\n#Futbol #ReglasDelFutbol #SabíasQue #LigaMX",
+  "youtube": {
+   "titulo": "¿Por qué la portería mide 7.32 × 2.44? #Shorts",
+   "descripcion": "Son 8 yardas por 8 pies. En 1863 no había travesaño; en 1866 llegó una cinta y hacia 1875 el travesaño de madera.\n\n#Futbol #ReglasDelFutbol #Shorts"
+  },
+  "tiktok": "7.32 × 2.44 = 8 yardas × 8 pies 📏 y en 1863 no había travesaño 😳 #futbol #reglasdelfutbol #sabiasque"
+ }
+}
