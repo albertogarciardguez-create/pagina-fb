@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "29453410694325225",
+   "url": "https://www.facebook.com/reel/29453410694325225",
+   "programado": true,
+   "fecha": "2026-11-25 08:53"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-25-sf-noticia-arranca-ida.mp4",
+ "actualizado": "2026-11-25 08:53"
+}
