@@ -47,6 +47,13 @@ def voz(story, path, out):
     try:
         return _tts(st, out, voces.crear(st))
     except voces.MotorNoDisponible as e:
+        resp = story.get("tts_respaldo")  # p. ej. "edge": si ElevenLabs falla, mejor la voz de Microsoft que kokoro
+        if resp and resp != motor:
+            try:
+                log(f"AVISO: el motor '{motor}' falló ({e}); uso '{resp}'.")
+                return _tts(st, out, voces.crear(st, resp), aviso=str(e))
+            except voces.MotorNoDisponible as e2:
+                e = e2
         log(f"AVISO: el motor '{motor}' falló ({e}); uso kokoro.")
         return _tts(st, out, voces.crear(st, "kokoro"), aviso=str(e))
 

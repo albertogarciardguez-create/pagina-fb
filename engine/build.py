@@ -63,6 +63,13 @@ def tts(story, outdir):
     except voces.MotorNoDisponible as e:
         if motor == "kokoro":
             raise
+        resp = story.get("tts_respaldo")
+        if resp and resp != motor:
+            try:
+                log(f"AVISO: no se pudo usar la voz '{motor}' ({e}). Uso '{resp}'.")
+                return _tts_lines(story, outdir, voces.crear(story, resp), aviso=str(e))
+            except voces.MotorNoDisponible as e2:
+                e = e2
         log(f"AVISO: no se pudo usar la voz '{motor}' ({e}). Uso kokoro para todo el video.")
         return _tts_lines(story, outdir, voces.crear(story, "kokoro"), aviso=str(e))
 
