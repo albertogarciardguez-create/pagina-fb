@@ -1,0 +1,871 @@
+{
+ "id": "2026-11-25-b-pizarra-saque-banda",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "tts": "elevenlabs",
+ "tts_respaldo": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "headline",
+   "bg": "✗",
+   "say": "Tu saque de banda le regala el balón al rival. Lo sacas… y en dos segundos ya te están atacando. Hazlo así.",
+   "captions": [
+    "Tu <em>saque de banda</em>",
+    "le <em>regala</em>",
+    "el balón",
+    "al rival.",
+    "Lo sacas…",
+    "y en <em>2 segundos</em>",
+    "ya te están",
+    "<em>atacando</em>.",
+    "Hazlo así."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "SAQUE DE BANDA\nQUE SÍ HACE DAÑO",
+   "sub": "Fútbol 7 · Con ejercicio"
+  },
+  {
+   "type": "board",
+   "bg": "✗",
+   "title": "EL ERROR: TODOS PARADOS",
+   "say": "El error: todos se quedan parados y marcados. Y el que saca, la avienta larga al nueve… que tiene a uno encima.",
+   "captions": [
+    "El <em>error</em>:",
+    "todos se quedan",
+    "<em>parados</em>",
+    "y marcados.",
+    "Y el que saca,",
+    "la avienta <em>larga</em>",
+    "al <em>9</em>…",
+    "que tiene",
+    "a uno <em>encima</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 32,
+     "y": 80
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 68,
+     "y": 80
+    },
+    {
+     "id": "MC",
+     "x": 40,
+     "y": 56
+    },
+    {
+     "id": "MI",
+     "label": "TÚ",
+     "x": 1,
+     "y": 50
+    },
+    {
+     "id": "MD",
+     "x": 80,
+     "y": 46
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 34,
+     "y": 32
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 42,
+     "y": 52
+    },
+    {
+     "id": "R3",
+     "x": 32,
+     "y": 28
+    },
+    {
+     "id": "R4",
+     "x": 16,
+     "y": 46
+    },
+    {
+     "id": "R5",
+     "x": 62,
+     "y": 40
+    },
+    {
+     "id": "R6",
+     "x": 74,
+     "y": 58
+    },
+    {
+     "id": "R7",
+     "x": 50,
+     "y": 26
+    }
+   ],
+   "ball": "MI",
+   "steps": [
+    {
+     "at": 0.45,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.75,
+     "pos": {
+      "R3": [
+       33,
+       30
+      ]
+     },
+     "ball": "R3",
+     "arrows": [
+      {
+       "from": "R3",
+       "to": [
+        33,
+        30
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 20,
+      "y": 20,
+      "w": 28,
+      "h": 20,
+      "label": "SE LA COMEN",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "1",
+   "title": "1 · ARMA UN TRIÁNGULO",
+   "say": "Paso uno: arma un triángulo. Uno se acerca corto, otro se va largo por la banda… y un defensa se queda atrás, de seguro.",
+   "captions": [
+    "Paso <em>1</em>:",
+    "arma un <em>triángulo</em>.",
+    "Uno se acerca",
+    "<em>corto</em>,",
+    "otro se va <em>largo</em>",
+    "por la banda…",
+    "y un defensa",
+    "se queda <em>atrás</em>,",
+    "de seguro."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 30,
+     "y": 80
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 66,
+     "y": 80
+    },
+    {
+     "id": "MC",
+     "x": 34,
+     "y": 58
+    },
+    {
+     "id": "MI",
+     "label": "TÚ",
+     "x": 1,
+     "y": 50
+    },
+    {
+     "id": "MD",
+     "x": 78,
+     "y": 46
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 30,
+     "y": 30
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 40,
+     "y": 52
+    },
+    {
+     "id": "R3",
+     "x": 26,
+     "y": 30
+    },
+    {
+     "id": "R4",
+     "x": 18,
+     "y": 48
+    },
+    {
+     "id": "R5",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "id": "R6",
+     "x": 72,
+     "y": 60
+    },
+    {
+     "id": "R7",
+     "x": 48,
+     "y": 24
+    }
+   ],
+   "ball": "MI",
+   "steps": [
+    {
+     "at": 0.2,
+     "pos": {
+      "MC": [
+       13,
+       58
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        13,
+        58
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.42,
+     "pos": {
+      "DC": [
+       10,
+       34
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        10,
+        34
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.65,
+     "pos": {
+      "DI": [
+       16,
+       70
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DI",
+       "to": [
+        16,
+        70
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.82,
+     "zone": {
+      "x": 3,
+      "y": 30,
+      "w": 20,
+      "h": 44,
+      "color": "green"
+     },
+     "zoneHold": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "2",
+   "title": "2 · AMAGA Y SAL",
+   "inherit": true,
+   "say": "Paso dos: el que viene corto amaga hacia arriba… y regresa. Ese medio segundo es todo lo que necesitas para recibir.",
+   "captions": [
+    "Paso <em>2</em>:",
+    "el que viene corto",
+    "<em>amaga</em>",
+    "hacia arriba…",
+    "y <em>regresa</em>.",
+    "Ese <em>medio segundo</em>",
+    "es todo",
+    "lo que necesitas",
+    "para <em>recibir</em>."
+   ],
+   "ball": "MI",
+   "steps": [
+    {
+     "at": 0.18,
+     "pos": {
+      "MC": [
+       14,
+       48
+      ],
+      "R4": [
+       18,
+       46
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        14,
+        48
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "R4",
+       "to": [
+        18,
+        46
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.45,
+     "pos": {
+      "MC": [
+       9,
+       60
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        9,
+        60
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 2,
+      "y": 54,
+      "w": 16,
+      "h": 14,
+      "label": "LIBRE",
+      "color": "green"
+     },
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3",
+   "title": "3 · DEVUÉLVELA AL QUE SACÓ",
+   "inherit": true,
+   "say": "Paso tres: devuélvela al que sacó. Nadie lo marca… entra a la cancha libre, de frente, y mete el pase al nueve, que ya va al espacio.",
+   "captions": [
+    "Paso <em>3</em>:",
+    "<em>devuélvela</em>",
+    "al que sacó.",
+    "<em>Nadie</em> lo marca…",
+    "entra a la cancha",
+    "<em>libre</em>,",
+    "de frente,",
+    "y mete el pase",
+    "al <em>9</em>,",
+    "que ya va",
+    "al <em>espacio</em>."
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "MI": [
+       8,
+       49
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        8,
+        49
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.35,
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "MI",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.62,
+     "pos": {
+      "DC": [
+       14,
+       20
+      ]
+     },
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        14,
+        20
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.8,
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": "DC",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 4,
+      "y": 10,
+      "w": 24,
+      "h": 18,
+      "label": "ESPACIO",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3",
+   "title": "ERROR COMÚN: TARDAR",
+   "say": "Y el error más común: tardarse. Cada segundo que lo piensas, ellos se acomodan… y ya no hay a quién dársela. Sácala rápido.",
+   "captions": [
+    "Y el error",
+    "más común:",
+    "<em>tardarse</em>.",
+    "Cada segundo",
+    "que lo piensas,",
+    "ellos se <em>acomodan</em>…",
+    "y ya no hay",
+    "a quién dársela.",
+    "Sácala <em>rápido</em>."
+   ],
+   "team": [
+    {
+     "id": "PO",
+     "x": 50,
+     "y": 94
+    },
+    {
+     "id": "DI",
+     "label": "DF",
+     "x": 30,
+     "y": 80
+    },
+    {
+     "id": "DD",
+     "label": "DF",
+     "x": 66,
+     "y": 80
+    },
+    {
+     "id": "MC",
+     "x": 34,
+     "y": 58
+    },
+    {
+     "id": "MI",
+     "label": "TÚ",
+     "x": 1,
+     "y": 50
+    },
+    {
+     "id": "MD",
+     "x": 78,
+     "y": 46
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 30,
+     "y": 30
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 50,
+     "y": 6
+    },
+    {
+     "id": "R2",
+     "x": 40,
+     "y": 52
+    },
+    {
+     "id": "R3",
+     "x": 26,
+     "y": 30
+    },
+    {
+     "id": "R4",
+     "x": 18,
+     "y": 48
+    },
+    {
+     "id": "R5",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "id": "R6",
+     "x": 72,
+     "y": 60
+    },
+    {
+     "id": "R7",
+     "x": 48,
+     "y": 24
+    }
+   ],
+   "ball": "MI",
+   "timer": {
+    "from": 3,
+    "label": "SEG",
+    "at": 0.1,
+    "end": 0.8
+   },
+   "steps": [
+    {
+     "at": 0.35,
+     "pos": {
+      "R2": [
+       25,
+       63
+      ],
+      "R4": [
+       16,
+       51
+      ],
+      "R3": [
+       21,
+       39
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R2",
+       "to": [
+        25,
+        63
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R3",
+       "to": [
+        21,
+        39
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 2,
+      "y": 28,
+      "w": 36,
+      "h": 40,
+      "label": "MARCADOS",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "⏱",
+   "title": "EJERCICIO: 3 CONTRA 2",
+   "note": "EJERCICIO",
+   "say": "Ejercicio: tres contra dos, pegados a la banda. Uno saca, dos reciben, dos defienden. Diez saques… y es punto si salen jugando hasta la línea.",
+   "captions": [
+    "<em>Ejercicio</em>:",
+    "<em>3 contra 2</em>,",
+    "pegados a la banda.",
+    "Uno <em>saca</em>,",
+    "dos <em>reciben</em>,",
+    "dos <em>defienden</em>.",
+    "<em>10 saques</em>…",
+    "y es <em>punto</em>",
+    "si salen jugando",
+    "hasta la <em>línea</em>."
+   ],
+   "team": [
+    {
+     "id": "MI",
+     "label": "TÚ",
+     "x": 1,
+     "y": 76
+    },
+    {
+     "id": "MC",
+     "x": 14,
+     "y": 80
+    },
+    {
+     "id": "DC",
+     "label": "9",
+     "x": 14,
+     "y": 64
+    }
+   ],
+   "rival": [
+    {
+     "id": "R4",
+     "x": 18,
+     "y": 76
+    },
+    {
+     "id": "R3",
+     "x": 25,
+     "y": 62
+    }
+   ],
+   "ball": "MI",
+   "steps": [
+    {
+     "at": 0.2,
+     "zone": {
+      "x": 2,
+      "y": 44,
+      "w": 46,
+      "h": 8,
+      "label": "PUNTO",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.4,
+     "pos": {
+      "MC": [
+       9,
+       84
+      ]
+     },
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": [
+        9,
+        84
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MI",
+       "to": [
+        9,
+        84
+       ],
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.6,
+     "pos": {
+      "MI": [
+       7,
+       74
+      ]
+     },
+     "ball": "MI",
+     "arrows": [
+      {
+       "from": "MI",
+       "to": [
+        7,
+        74
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MC",
+       "to": [
+        7,
+        74
+       ],
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.82,
+     "pos": {
+      "DC": [
+       32,
+       48
+      ]
+     },
+     "ball": "DC",
+     "arrows": [
+      {
+       "from": "DC",
+       "to": [
+        32,
+        48
+       ],
+       "kind": "run"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "7",
+   "say": "Guarda este video para tu próximo entrenamiento… y mándaselo a tu equipo. ¿Quieres más jugadas así? El Libro de Jugadas de Fútbol siete está en el link.",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "<em>entrenamiento</em>…",
+    "y mándaselo",
+    "a tu <em>equipo</em>.",
+    "¿Quieres más",
+    "jugadas así?",
+    "El <em>Libro de Jugadas</em>",
+    "de <em>Fútbol 7</em>",
+    "está en el link."
+   ],
+   "tag": "GUÁRDALO",
+   "title": "LIBRO DE JUGADAS\nFÚTBOL 7",
+   "sub": "Link en el post"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Y tú dime: ¿tu equipo saca de banda rápido… o se queda pensando? ¡Te leo en los comentarios!",
+   "captions": [
+    "Y tú dime:",
+    "¿tu equipo saca",
+    "de banda <em>rápido</em>…",
+    "o se queda",
+    "<em>pensando</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "SIN MENTIR:",
+   "q": "¿TU EQUIPO SACA\nRÁPIDO?",
+   "opts": [
+    "RÁPIDO",
+    "SE QUEDA PENSANDO"
+   ]
+  }
+ ],
+ "post": "Tu saque de banda le regala el balón al rival… hazlo así. 💾\n\nEn fútbol 7: 1) arma un triángulo (uno corto, uno largo, un defensa de seguro), 2) el corto amaga y regresa, 3) devuélvela al que sacó: nadie lo marca y entra libre de frente. Y sácalo rápido.\n\nEjercicio: 3 contra 2 en la banda, 10 saques, punto si salen jugando hasta la línea.\n\nGuárdalo y mándaselo a tu equipo. ¿Tu equipo saca rápido o se queda pensando? 👇",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador",
+  "#FútbolAmateur",
+  "#SeñorFútbol"
+ ],
+ "sources": [],
+ "redes_textos": {
+  "facebook": "Tu saque de banda le regala el balón al rival… hazlo así. 💾\n\nEn fútbol 7:\n1️⃣ Arma un triángulo: uno corto, uno largo por la banda y un defensa de seguro.\n2️⃣ El corto amaga hacia arriba y regresa.\n3️⃣ Devuélvela al que sacó: nadie lo marca, entra libre y de frente.\n⚠️ Error común: tardarse. Sácalo rápido.\n\nEjercicio: 3 contra 2 pegados a la banda, 10 saques, punto si salen jugando hasta la línea.\n\nGuárdalo para tu próximo entrenamiento y mándaselo a tu equipo. ¿Tu equipo saca rápido o se queda pensando? 👇\n\n#Fútbol7 #PizarraTáctica #Entrenador #FútbolAmateur #SeñorFútbol",
+  "instagram": "Tu saque de banda regala el balón 😬 Triángulo, amague y devuélvela al que sacó.\n\nGuárdalo 💾 y mándaselo a tu equipo. ¿Sacan rápido o se quedan pensando? 👇\n\n#Fútbol7 #PizarraTáctica #Entrenador #FútbolAmateur",
+  "youtube": {
+   "titulo": "Saque de banda en fútbol 7 que sí genera peligro (con ejercicio) #Shorts",
+   "descripcion": "Triángulo, amague y devuélvela al que sacó: nadie lo marca. Ejercicio 3 contra 2 incluido.\n\n#Fútbol7 #PizarraTáctica #Shorts"
+  },
+  "tiktok": "Tu saque de banda regala el balón 😬 hazlo así 👇 #futbol7 #pizarratactica #entrenador #futbolamateur"
+ }
+}
