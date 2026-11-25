@@ -9,7 +9,11 @@
   },
   "youtube": {
    "omitido": "faltan secretos: SF_YT_REFRESH"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: SF_TIKTOK_REFRESH"
   }
  },
- "actualizado": "2026-11-25 09:01"
+ "actualizado": "2026-11-25 16:32",
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-25-sf-explica-porteria.mp4"
 }
