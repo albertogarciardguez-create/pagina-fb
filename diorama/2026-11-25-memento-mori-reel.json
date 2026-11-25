@@ -1,0 +1,550 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-25-memento-mori-reel",
+ "titulo": "Memento mori (reel)",
+ "scenes": [
+  {
+   "say": "Vas a morir. Y eso… es la mejor noticia para tu agenda.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "VAS A MORIR",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 70
+     },
+     {
+      "t": "Y ES BUENA NOTICIA",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "say": "Los estoicos tenían una frase para no olvidarlo: memento mori. Recuerda que vas a morir.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MEMENTO MORI",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 70
+     },
+     {
+      "t": "RECUERDA QUE MORIRÁS",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 52
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 700,
+      "y": 650,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2,
+      "titulo": "LOS ESTOICOS",
+      "items": [
+       "SÉNECA",
+       "EPICTETO",
+       "MARCO AURELIO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "Marco Aurelio, emperador de Roma, se escribió a sí mismo: podrías dejar la vida ahora mismo… que eso decida lo que haces, dices y piensas.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 320,
+      "h": 330,
+      "o": {
+       "pose": "offer",
+       "cam": "#7A2E3A",
+       "pan": "#3A2A2A",
+       "canas": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MARCO AURELIO",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "PODRÍAS IRTE HOY",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "No es morbo. Es un filtro.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.55,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO ES MORBO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 66
+     },
+     {
+      "t": "ES UN FILTRO",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.5,
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "say": "Steve Jobs se preguntaba cada mañana frente al espejo: si hoy fuera el último día de mi vida… ¿haría lo que estoy a punto de hacer hoy?",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CADA MAÑANA",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¿HARÍAS ESTO HOY?",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 60
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 700,
+      "y": 650,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2,
+      "titulo": "STEVE JOBS",
+      "items": [
+       "FRENTE AL",
+       "ESPEJO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y cuando la respuesta era no… demasiados días seguidos, sabía que tenía que cambiar algo.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SI ES «NO»",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "CAMBIA ALGO",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "say": "Esa llamada que pospones. Ese perdón que no das. Ese proyecto de «algún día».",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "«ALGÚN DÍA»",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 66
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 690,
+      "y": 640,
+      "s_": 0.75,
+      "s": 0,
+      "f": 0.1,
+      "titulo": "PENDIENTES",
+      "items": [
+       "LLAMAR",
+       "PEDIR PERDÓN",
+       "EMPEZAR"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "«Algún día» no está en el calendario. Hoy sí.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ALGÚN DÍA NO EXISTE",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "HOY SÍ",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 80
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Mándaselo a alguien que lleva años diciendo: el próximo año.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "walk"
+      },
+      "camina": [
+       300,
+       700
+      ]
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ENVÍASELO",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "A QUIEN SIEMPRE DICE «LUEGO»",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.5,
+      "size": 44
+     }
+    ]
+   }
+  },
+  {
+   "say": "Si hoy fuera tu último día… ¿qué harías distinto? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué harías",
+    "distinto hoy?"
+   ]
+  }
+ ],
+ "thumb": [
+  "VAS A MORIR",
+  "Y ES BUENA NOTICIA"
+ ],
+ "post": "Vas a morir. Y eso es la mejor noticia para tu agenda. ⏳ Memento mori: no es morbo, es un filtro. Si hoy fuera tu último día, ¿qué harías distinto? 👇",
+ "hashtags": [
+  "#MementoMori",
+  "#Estoicismo",
+  "#MarcoAurelio",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.lexundria.com/m_aur_med/2.11/lg",
+  "https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says",
+  "https://jamesclear.com/great-speeches/2005-stanford-commencement-address-by-steve-jobs"
+ ],
+ "redes_textos": {
+  "facebook": "Vas a morir. Y eso es la mejor noticia para tu agenda. ⏳\n\nLos estoicos lo llamaban memento mori: recuerda que vas a morir. Marco Aurelio se escribió: «Podrías dejar la vida ahora mismo; que eso decida lo que haces, dices y piensas».\n\nSteve Jobs se preguntaba cada mañana frente al espejo: «Si hoy fuera el último día de mi vida, ¿haría lo que estoy a punto de hacer hoy?». Y si la respuesta era «no» demasiados días seguidos, cambiaba algo.\n\nNo es morbo. Es un filtro. «Algún día» no está en el calendario. Hoy sí.\n\nSi hoy fuera tu último día, ¿qué harías distinto? 👇\n\n#MementoMori #Estoicismo #MarcoAurelio #ImpulsoReal",
+  "instagram": "Vas a morir. Y eso es la mejor noticia para tu agenda. ⏳\nMemento mori: no es morbo, es un filtro. «Algún día» no está en el calendario; hoy sí.\nGuárdalo y compártelo con quien siempre dice «el próximo año».\n¿Qué harías distinto hoy? 👇\n#MementoMori #Estoicismo #MarcoAurelio #Motivacion #ImpulsoReal",
+  "youtube": {
+   "titulo": "Memento mori: vas a morir… y es buena noticia #Shorts",
+   "descripcion": "Marco Aurelio y Steve Jobs usaban la misma pregunta para decidir su día. No es morbo: es un filtro.\n#MementoMori #Estoicismo #Shorts"
+  },
+  "tiktok": "Vas a morir… y es la mejor noticia para tu agenda ⏳ ¿Qué harías distinto hoy? #MementoMori #Estoicismo #MarcoAurelio #ImpulsoReal"
+ }
+}

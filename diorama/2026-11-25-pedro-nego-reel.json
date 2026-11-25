@@ -1,0 +1,810 @@
+{
+ "plantilla": "papel",
+ "tts": "elevenlabs",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-25-pedro-nego-reel",
+ "titulo": "Pedro: lo negó tres veces (reel)",
+ "tts_respaldo": "edge",
+ "scenes": [
+  {
+   "say": "Lo negó tres veces… y aun así lo eligieron para guiar.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LO NEGÓ 3 VECES",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 66
+     },
+     {
+      "t": "Y LO ELIGIERON",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "say": "Se llamaba Simón. Era pescador en el mar de Galilea… hasta que Jesús le dijo: sígueme.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 260,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "pull"
+      }
+     },
+     {
+      "x": 720,
+      "h": 330,
+      "o": {
+       "cam": "#E8DFC8",
+       "pan": "#CFC3A6",
+       "pelo": "#4A3020",
+       "largo": true,
+       "pose": "offer"
+      },
+      "f": 0.4
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SIMÓN, PESCADOR",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "«SÍGUEME»",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 70
+     }
+    ],
+    "props": [
+     {
+      "k": "pez",
+      "x": 470,
+      "y": 760,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "say": "Le cambió el nombre: Pedro. Piedra. «Sobre esta roca», le dijo, «edificaré mi iglesia».",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E"
+      }
+     },
+     {
+      "x": 720,
+      "h": 330,
+      "o": {
+       "cam": "#E8DFC8",
+       "pan": "#CFC3A6",
+       "pelo": "#4A3020",
+       "largo": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PEDRO = PIEDRA",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 64
+     },
+     {
+      "t": "«SOBRE ESTA ROCA»",
+      "y": 290,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 56
+     }
+    ],
+    "props": [
+     {
+      "k": "roca",
+      "x": 500,
+      "y": 760,
+      "s_": 0.9,
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "La última noche, Pedro juró: «Aunque todos te abandonen… yo nunca».",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "arms"
+      }
+     },
+     {
+      "x": 720,
+      "h": 330,
+      "o": {
+       "cam": "#E8DFC8",
+       "pan": "#CFC3A6",
+       "pelo": "#4A3020",
+       "largo": true,
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "«YO NUNCA»",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "say": "Jesús le respondió: «Antes de que cante el gallo… me negarás tres veces».",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E"
+      }
+     },
+     {
+      "x": 720,
+      "h": 330,
+      "o": {
+       "cam": "#E8DFC8",
+       "pan": "#CFC3A6",
+       "pelo": "#4A3020",
+       "largo": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ANTES DEL GALLO",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "3 VECES",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "say": "Esa misma noche, junto a un fuego, le preguntaron: ¿tú no eras de los suyos? «No lo conozco». Una. Dos. Tres veces.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.9,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "«NO LO CONOZCO»",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 60
+     }
+    ],
+    "props": [
+     {
+      "k": "gente",
+      "x": 530,
+      "y": 760,
+      "s_": 0.8,
+      "s": 0,
+      "f": 0.1,
+      "n": 5,
+      "dx": 90,
+      "h": 200
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 3,
+     "suf": " VECES",
+     "y": 300,
+     "s": 0,
+     "f": 0.65,
+     "dur": 1.4
+    }
+   }
+  },
+  {
+   "say": "Cantó el gallo. Jesús se volvió y lo miró. Y Pedro salió… y lloró amargamente.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.05,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "triste": true,
+       "pose": "sit"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CANTÓ EL GALLO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "LLORÓ AMARGAMENTE",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 56
+     }
+    ]
+   },
+   "nivel": 0.8
+  },
+  {
+   "say": "Cualquiera lo habría dado por perdido. Pero después de resucitar, Jesús lo buscó… junto al mismo mar.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "triste": true
+      }
+     },
+     {
+      "x": 720,
+      "h": 330,
+      "o": {
+       "cam": "#E8DFC8",
+       "pan": "#CFC3A6",
+       "pelo": "#4A3020",
+       "largo": true,
+       "pose": "offer"
+      },
+      "f": 0.4
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO LO DIO POR PERDIDO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 52
+     }
+    ],
+    "props": [
+     {
+      "k": "pez",
+      "x": 480,
+      "y": 770,
+      "s_": 0.6,
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "k": "pan",
+      "x": 560,
+      "y": 780,
+      "s_": 0.5,
+      "s": 0,
+      "f": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "say": "Tres veces le preguntó: ¿me amas? Tres veces Pedro dijo que sí. Y tres veces escuchó: apacienta mis ovejas.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 300,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "ask"
+      }
+     },
+     {
+      "x": 720,
+      "h": 330,
+      "o": {
+       "cam": "#E8DFC8",
+       "pan": "#CFC3A6",
+       "pelo": "#4A3020",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "«¿ME AMAS?»",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 66
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 3,
+     "suf": " VECES",
+     "y": 300,
+     "s": 0,
+     "f": 0.3,
+     "dur": 1.6
+    }
+   }
+  },
+  {
+   "say": "Una pregunta por cada negación. No lo humilló… lo restauró.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO LO HUMILLÓ",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "LO RESTAURÓ",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 72
+     }
+    ],
+    "props": [
+     {
+      "k": "corazon",
+      "x": 800,
+      "y": 700,
+      "s_": 0.6,
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   },
+   "nivel": 1.1
+  },
+  {
+   "say": "Semanas después, ese mismo Pedro habló frente a la multitud en Jerusalén… y unas tres mil personas se sumaron ese día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL MISMO PEDRO",
+      "y": 150,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "props": [
+     {
+      "k": "gente",
+      "x": 480,
+      "y": 760,
+      "s_": 1.0,
+      "s": 0,
+      "f": 0.3,
+      "n": 6,
+      "dx": 85,
+      "h": 210
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 3000,
+     "pre": "+",
+     "y": 300,
+     "s": 0,
+     "f": 0.6,
+     "dur": 1.4
+    }
+   }
+  },
+  {
+   "say": "Tu peor noche… no es tu última palabra.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "walk"
+      },
+      "camina": [
+       300,
+       700
+      ]
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TU PEOR NOCHE",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "NO ES EL FINAL",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 70
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "¿Alguna vez te dieron una segunda oportunidad que no merecías? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Te dieron una",
+    "segunda oportunidad?"
+   ]
+  }
+ ],
+ "thumb": [
+  "LO NEGÓ 3 VECES",
+  "Y LO ELIGIERON"
+ ],
+ "post": "Lo negó tres veces… y aun así lo eligieron para guiar. 🙏 Tu peor noche no es tu última palabra. ¿Alguna vez te dieron una segunda oportunidad que no merecías? 👇",
+ "hashtags": [
+  "#Fe",
+  "#SegundaOportunidad",
+  "#Pedro",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.biblegateway.com/passage/?search=Mateo+4%3A18-20%3BMateo+16%3A18%3BMateo+26%3A33-35&version=RVR1960",
+  "https://www.biblegateway.com/passage/?search=Lucas+22%3A54-62&version=RVR1960",
+  "https://www.biblegateway.com/passage/?search=Juan+21%3A1-17&version=RVR1960",
+  "https://www.biblegateway.com/passage/?search=Hechos+2%3A14%2C41&version=RVR1960"
+ ],
+ "redes_textos": {
+  "facebook": "Lo negó tres veces… y aun así lo eligieron para guiar. 🙏\n\nSimón era pescador en Galilea. Jesús le cambió el nombre: Pedro, piedra. La última noche juró «yo nunca te abandonaré»… y junto a un fuego dijo tres veces «no lo conozco». Cantó el gallo y lloró amargamente (Lucas 22).\n\nPero Jesús lo buscó junto al mismo mar y le preguntó tres veces: «¿Me amas?». Una pregunta por cada negación. No lo humilló: lo restauró (Juan 21). Semanas después, ese mismo Pedro habló en Jerusalén y unas tres mil personas se sumaron ese día (Hechos 2).\n\nTu peor noche no es tu última palabra.\n\n¿Alguna vez te dieron una segunda oportunidad que no merecías? 👇\n\n#Fe #SegundaOportunidad #Pedro #ImpulsoReal",
+  "instagram": "Lo negó tres veces… y aun así lo eligieron para guiar. 🙏\nTu peor noche no es tu última palabra. Compártelo con alguien que necesita una segunda oportunidad.\n¿Te dieron una que no merecías? 👇\n#Fe #SegundaOportunidad #Pedro #Biblia #ImpulsoReal",
+  "youtube": {
+   "titulo": "Pedro lo negó 3 veces… y aun así lo eligieron #Shorts",
+   "descripcion": "La historia de Pedro: tres negaciones, tres preguntas y una segunda oportunidad (Lucas 22, Juan 21, Hechos 2).\n#Fe #SegundaOportunidad #Shorts"
+  },
+  "tiktok": "Lo negó 3 veces… y aun así lo eligieron 🙏 ¿Te dieron una segunda oportunidad? #Fe #Pedro #SegundaOportunidad #ImpulsoReal"
+ }
+}
