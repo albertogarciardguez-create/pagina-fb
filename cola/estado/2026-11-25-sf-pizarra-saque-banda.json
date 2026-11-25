@@ -1,0 +1,17 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1679675693740596",
+   "url": "https://www.facebook.com/reel/1679675693740596",
+   "programado": true,
+   "fecha": "2026-11-25 09:06"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: SF_YT_REFRESH"
+  }
+ },
+ "aviso": "[reel] AVISO: no se pudo usar la voz 'elevenlabs' (falta la llave de ElevenLabs (ELEVENLABS_API_KEY o ~/.config/senorfutbol/elevenlabs.key)). Uso 'edge'.",
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-25-sf-pizarra-saque-banda.mp4",
+ "actualizado": "2026-11-25 09:06"
+}
