@@ -31,7 +31,7 @@ def post(url, data):
 
 def facebook():
     print("1) En developers.facebook.com/tools/explorer elige tu app y genera un token de USUARIO con:\n"
-          "   pages_show_list, pages_read_engagement, pages_manage_posts, business_management,\n"
+          "   pages_show_list, pages_read_engagement, read_insights, pages_manage_posts, business_management,\n"
           "   instagram_basic, instagram_content_publish\n")
     app, sec = pedir("App ID"), pedir("App Secret", True)
     corto = pedir("Token de usuario (corto)", True)
