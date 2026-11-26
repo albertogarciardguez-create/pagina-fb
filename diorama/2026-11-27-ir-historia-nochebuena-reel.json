@@ -2,7 +2,7 @@
  "id": "2026-11-27-ir-historia-nochebuena-reel",
  "titulo": "La historia detrás de la Nochebuena (reel)",
  "plantilla": "papel",
- "tts": "edge",
+ "tts": "elevenlabs",
  "edge_voz": "es-MX-DaliaNeural",
  "voice": "em_alex",
  "speed": 1.13,
@@ -511,5 +511,6 @@
    "descripcion": "Cuetlaxóchitl: de los altares de los guerreros mexicas a la Navidad del mundo. ¿Tú cómo le dices?\n\n#Historias #Nochebuena #Navidad"
   },
   "tiktok": "La pones cada diciembre y casi nadie sabe que es mexicana 🌺 ¿Nochebuena o flor de Pascua? #historias #nochebuena #navidad"
- }
+ },
+ "tts_respaldo": "edge"
 }
