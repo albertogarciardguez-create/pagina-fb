@@ -1,0 +1,17 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1843504940199118",
+   "url": "https://www.facebook.com/reel/1843504940199118",
+   "programado": true,
+   "fecha": "2026-11-26 05:33"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: IR_YT_REFRESH"
+  }
+ },
+ "aviso": "[diorama] AVISO: el video salió con la voz de prueba (kokoro), no con la de ElevenLabs.",
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-26-ir-noche-diez-leprosos.mp4",
+ "actualizado": "2026-11-26 05:33"
+}
