@@ -149,6 +149,29 @@ function subtitulos(i, t) {
     g.font = '800 60px MB'; g.textAlign = 'left'; g.fillStyle = dim ? 'rgba(30,30,30,.32)' : '#1E1E1E'; g.fillText(w.w, x, y + 3); x += wd[j] + sp; });
 }
 
+
+// ---------- subtítulos grandes estilo TikTok (vertical): palabras que entran una por una, la actual en naranja ----------
+function subsGrandes(i, t) {
+  const ws = PAL[i] || (PAL[i] = palabras(i)); if (!ws.length || t < ws[0].a - 0.05) return;
+  let k = ws.findIndex(w => t < w.b); if (k < 0) k = ws.length - 1;
+  const FS = S.subTam || 92; g.font = `800 ${FS}px MB`; g.textBaseline = 'middle'; g.textAlign = 'left';
+  if (!ws.gg) { ws.gg = []; let cur = 0, n = 0;
+    ws.forEach((w, j) => { const wd = g.measureText(w.w).width + 24; const fin = j && /[.,:;?!…]$/.test(ws[j - 1].w);
+      if (n >= 3 || (n && cur + wd > 920) || (n && fin)) { cur = 0; n = 0; } if (!n) ws.gg.push(j); cur += wd; n++; ws[j].h = ws.gg.length - 1; }); }
+  const gi = ws[k].h, g0 = ws.gg[gi], grp = ws.slice(g0, gi + 1 < ws.gg.length ? ws.gg[gi + 1] : ws.length), y = S.subY || ((T.scenes && S.scenes[i].titulo) || S.scenes[i].tag ? 390 : 520), sp = 24;
+  const wd = grp.map(w => g.measureText(w.w).width), tw = wd.reduce((a, b) => a + b, 0) + sp * (grp.length - 1);
+  let x = W / 2 - tw / 2;
+  grp.forEach((w, j) => { const idx = g0 + j; if (idx > k) return; const on = idx === k, p = Math.min(1, Math.max(0, (t - w.a) / 0.12)), sc = 0.55 + 0.45 * back(p);
+    g.save(); g.translate(x + wd[j] / 2, y); g.scale(sc, sc); g.rotate(on ? -0.02 : 0);
+    g.font = `800 ${FS}px MB`; g.textAlign = 'center'; g.lineJoin = 'round'; g.lineWidth = 16; g.strokeStyle = '#1A1410';
+    g.shadowColor = 'rgba(0,0,0,.35)'; g.shadowOffsetY = 8; g.shadowBlur = 10; g.strokeText(w.w, 0, 4); g.shadowColor = 'transparent';
+    g.fillStyle = on ? OR : '#FFF8EC'; g.fillText(w.w, 0, 4); g.restore(); x += wd[j] + sp; });
+}
+// confeti de papel flotando: algo se mueve siempre
+function confeti(t) { const cols = [OR, C.mostaza, C.teal, '#FFF8EC'];
+  for (let k = 0; k < 9; k++) { const sp = 18 + rnd(k * 7.1) * 26, x = (rnd(k * 3.3) * W + t * (k % 2 ? 12 : -10)) % W, y = ((rnd(k * 5.7) * H) - t * sp) % H;
+    g.save(); g.globalAlpha = 0.55; g.translate(x < 0 ? x + W : x, y < 0 ? y + H : y); g.rotate(t * (0.6 + rnd(k) * 1.2) + k); g.fillStyle = cols[k % 4]; g.fillRect(-9, -5, 18, 10); g.restore(); } }
+
 // ---------- escenas ----------
 const V = {};
 const D = i => winEnd(i) - T.cuts[i];
@@ -1065,14 +1088,18 @@ window.render = function (t) {
   NOW = t; const i = sceneAt(t), sc = S.scenes[i], r = t - T.cuts[i];
   g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
   if (sc.tipo === 'cierre') { cierre(i, t); return; }
-  const z = 1 + 0.03 * ease(r / Math.max(1, D(i)));
-  g.save(); g.translate(W / 2, H * 0.6); g.scale(z, z); g.translate(-W / 2, -H * 0.6);
+  // cámara: empujón suave por frase (punch-in) + deriva lenta; en horizontal, la de siempre
+  const ss = T.scenes[i].sents || []; let kf = 0; while (kf + 1 < ss.length && t >= ss[kf + 1].start) kf++;
+  const pf = ss.length ? Math.min(1, Math.max(0, (t - ss[kf].start) / 0.35)) : 1, MOV = !HZ && S.camara !== 'fija';
+  const z = MOV ? 1 + 0.025 * kf + 0.03 * ease(r / Math.max(1, D(i))) + (kf || i ? 0.06 * (1 - ease(pf)) : 0) : 1 + 0.03 * ease(r / Math.max(1, D(i)));
+  const px = MOV ? (kf % 2 ? 1 : -1) * 14 * ease(pf) : 0;
+  g.save(); g.translate(W / 2 + px, H * 0.6); g.scale(z, z); g.translate(-W / 2, -H * 0.6);
   if (V2[sc.vis]) { g.translate(ST.x, ST.y); g.scale(ST.s, ST.s); V2[sc.vis](i, r, t); } else (V[sc.vis] || V.venda)(i, r, t);
   g.restore();
   if (sc.tag) { const p = back((r - 0.15) / 0.35); if (p > 0) { g.save(); g.translate(HZ ? 120 : 150, HZ ? 110 : 520); g.scale(p, p); g.rotate(-0.08); papel(circP(0, 0, 70), OR, 300 + i, { amt: 3 }); texto(sc.tag, 0, 4, 76, '#FFF8EC'); g.restore(); } }
   if (sc.titulo) { const p = back((r - 0.1) / 0.35), ty = HZ ? 80 : 520; if (p > 0) { g.save(); g.translate(W / 2, ty); g.scale(p, p); g.translate(-W / 2, -ty); cartel(sc.titulo, W / 2, ty, C.marino, 48, 310 + i, '#FFF8EC'); g.restore(); } }
   if (window.THUMB && S.thumb) { g.fillStyle = 'rgba(20,14,8,.35)'; g.fillRect(0, 0, W, H); S.thumb.forEach((l, k) => cartel(l, W / 2, (HZ ? 700 : 1180) + k * (HZ ? 175 : 200), k ? OR : C.blanco, HZ ? 104 : 92, 500 + k, k ? '#FFF8EC' : '#1E1E1E')); return; }
-  subtitulos(i, t);
+  if (!HZ && S.subs !== 'tira') { confeti(t); subsGrandes(i, t); } else subtitulos(i, t);
   if (r < 0.2 && i > 0) { g.fillStyle = `rgba(244,236,216,${0.6 * (1 - r / 0.2)})`; g.fillRect(0, 0, W, H); }
 };
 window.frame = t => { window.render(t); return cv.toDataURL('image/jpeg', 0.9).split(',')[1]; };
