@@ -119,6 +119,8 @@ function burbuja(x, y, r, txt, col, seed, cola) {
   papel(circP(x, y, r), col || C.blanco, seed, { amt: 3 }); if (cola) papel([[x - r * 0.3, y + r * 0.8], [x + cola * r * 0.9, y + r * 1.35], [x + r * 0.15, y + r * 0.85]], col || C.blanco, seed + 1, { amt: 2, sb: 4 });
   if (txt) texto(txt, x, y + 4, r * 0.75, '#222');
 }
+function petalo(x, y, a, L, Wd, col, sd) { const p = []; for (let k = 0; k < 18; k++) { const u = k / 18 * 6.2832, px = Math.cos(u) * L / 2 + L / 2, py = Math.sin(u) * Wd / 2 * (1 - 0.55 * Math.cos(u)); p.push([x + px * Math.cos(a) - py * Math.sin(a), y + px * Math.sin(a) + py * Math.cos(a)]); } papel(p, col, sd, { amt: 2 }); }
+function nochebuena(x, y, s, col, sd, t) { const n = 8, r = (t || 0) * 0.15; for (let k = 0; k < n; k++) petalo(x, y, k / n * 6.2832 + 0.2 + r * 0, 120 * s, 46 * s, '#2F6B3A', sd + k); for (let k = 0; k < n; k++) petalo(x, y, k / n * 6.2832 + 0.6, 95 * s, 40 * s, col || '#C8202E', sd + 10 + k); for (let k = 0; k < 6; k++) papel(circP(x + 13 * s * Math.cos(k), y + 13 * s * Math.sin(k), 7 * s), '#F2C14E', sd + 20 + k, { amt: 1, sb: 2 }); }
 function corazon(x, y, s, col, seed) { const p = []; for (let k = 0; k < 40; k++) { const a = k / 40 * 6.2832; p.push([x + s * 16 * Math.pow(Math.sin(a), 3) / 16, y - s * (13 * Math.cos(a) - 5 * Math.cos(2 * a) - 2 * Math.cos(3 * a) - Math.cos(4 * a)) / 16]); } papel(p, col || C.coral, seed || 55, { amt: 2.5 }); }
 function nube(x, y, s, col, seed) { [[0, 0, 1], [-0.9, 0.25, 0.7], [0.9, 0.25, 0.75], [0.35, -0.45, 0.7]].forEach(([dx, dy, r], k) => papel(circP(x + dx * s, y + dy * s, r * s), col || C.gris, (seed || 60) + k, { amt: 3 })); }
 function cuerda(x1, y1, x2, y2, seed) { const n = 14; g.save(); g.strokeStyle = '#8A5A2B'; g.lineWidth = 12; g.lineCap = 'round'; g.shadowColor = 'rgba(40,25,10,.35)'; g.shadowOffsetY = 6; g.shadowBlur = 6; g.beginPath();
@@ -994,7 +996,7 @@ V2.libre = (i, r, t) => { dia(t); const gl = g.createRadialGradient(500, 500, 20
 
 // ---- V2.arma: escena armada con datos (sc.arma) para no escribir una función por tema ----
 // arma: {fondo: dia|noche|atardecer|amanecer|interior|ciudad|ring|campo, luz, figs:[{x, y, h, o:{fig}, guantes, s, f, camina:[x0,x1], cae:{s,f,dur}, sube:{s,f}}],
-//  props:[{k: pan|pez|roca|corazon|lista|escalera|cinturon|gente|cuerdas|campana|luna|sol|canasta, x, y, s, items, n, s_, f}],
+//  props:[{k: pan|pez|roca|corazon|flor (nochebuena, color)|maceta|lista|escalera|cinturon|gente|cuerdas|campana|luna|sol|canasta, x, y, s, items, n, s_, f}],
 //  carteles:[{t, x, y, col: or|blanco|rojo|marino|mostaza|verde|gris, size, s, f, tacha:{s,f}}], contador:{de, a, x, y, pre, suf, s, f, dur, col}}
 const ACOL = { or: OR, blanco: C.blanco, rojo: C.rojo, marino: C.marino, mostaza: C.mostaza, verde: C.verde, gris: C.gris, teal: C.teal };
 const ATC = c => (c === 'blanco' || c === 'mostaza' || !c) ? '#222' : '#FFF8EC';
@@ -1020,6 +1022,8 @@ V2.arma = (i, r, t) => {
   (A.props || []).forEach((p, k) => { const t0 = aAt(i, p, k), s = p.s_ || 1, sd = 2700 + k * 10; if (t < t0) return;
     pop(t0, p.x, p.y, () => {
       if (p.k === 'pan') panP(p.x, p.y, s, sd); else if (p.k === 'pez') pezP(p.x, p.y, s, sd); else if (p.k === 'roca') roca(p.x, p.y, s, sd);
+      else if (p.k === 'flor') nochebuena(p.x, p.y, s, p.color, sd, t);
+      else if (p.k === 'maceta') { papel([[p.x - 70 * s, p.y - 90 * s], [p.x + 70 * s, p.y - 90 * s], [p.x + 52 * s, p.y], [p.x - 52 * s, p.y]], '#B5562F', sd, { amt: 2 }); papel(rectP(p.x - 80 * s, p.y - 110 * s, 160 * s, 26 * s), '#C8683D', sd + 1, { amt: 1.5 }); nochebuena(p.x, p.y - 150 * s, 0.8 * s, p.color, sd + 2, t); }
       else if (p.k === 'corazon') corazon(p.x, p.y, 60 * s, C.coral, sd); else if (p.k === 'luna') papel(circP(p.x, p.y, 60 * s), '#F2EBCF', sd, { amt: 2, sb: 20 }); else if (p.k === 'sol') solP(p.x, p.y, 70 * s, t);
       else if (p.k === 'canasta') { papel([[p.x - 90 * s, p.y - 70 * s], [p.x + 90 * s, p.y - 70 * s], [p.x + 70 * s, p.y], [p.x - 70 * s, p.y]], '#A8783A', sd, { amt: 2 }); for (let j = 0; j < 4; j++) papel(rectP(p.x - 80 * s, p.y - 60 * s + j * 16 * s, 160 * s, 4 * s), '#7A5232', sd + 1 + j, { amt: 1, sb: 0 }); }
       else if (p.k === 'cinturon') { papel(rectP(p.x - 150 * s, p.y - 30 * s, 300 * s, 60 * s), '#8A2A2A', sd, { amt: 2 }); papel(ellP(p.x, p.y, 70 * s, 50 * s, 24), C.mostaza, sd + 1, { amt: 2 }); papel(circP(p.x, p.y, 26 * s), '#F2C14E', sd + 2, { amt: 1, sb: 2 }); }
