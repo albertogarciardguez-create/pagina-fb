@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1473656538165194",
+   "url": "https://www.facebook.com/reel/1473656538165194",
+   "programado": true,
+   "fecha": "2026-11-26 09:05"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-26-sf-jugada-cambio-orientacion.mp4",
+ "actualizado": "2026-11-26 09:05"
+}
