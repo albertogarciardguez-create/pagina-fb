@@ -1,0 +1,151 @@
+{
+ "id": "ejemplo-sf-liguilla-que-necesita",
+ "header": "LIGUILLA · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "?",
+   "gap": 0.12,
+   "say": "Al América le basta un empate… pero el Atlas necesita un milagro.",
+   "captions": [
+    "Al <em>América</em>",
+    "le basta",
+    "un <em>empate</em>…",
+    "pero el <em>Atlas</em>",
+    "necesita",
+    "un <em>milagro</em>."
+   ],
+   "items": [
+    {
+     "n": "0-0",
+     "label": "AMÉRICA",
+     "color": "ink"
+    },
+    {
+     "n": "0-2",
+     "label": "ATLAS",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "type": "count",
+   "bg": "+2",
+   "gap": 0.12,
+   "say": "Atlas perdió dos a cero en Toluca. Para pasar, tiene que ganar por dos goles o más en el Jalisco.",
+   "captions": [
+    "Atlas perdió",
+    "<em>2-0</em> en Toluca.",
+    "Para pasar,",
+    "tiene que ganar",
+    "por <em>2 goles</em>",
+    "o más",
+    "en el <em>Jalisco</em>."
+   ],
+   "big": "+2",
+   "dots": 0,
+   "sub": "GOLES DE DIFERENCIA",
+   "subLabel": "LO QUE NECESITA ATLAS",
+   "subColor": "red"
+  },
+  {
+   "type": "headline",
+   "bg": "4º",
+   "gap": 0.12,
+   "say": "¿Y por qué le alcanza con dos? Porque terminó cuarto, arriba del Toluca… y si el global queda empatado, pasa el mejor de la tabla.",
+   "captions": [
+    "¿Y por qué",
+    "le alcanza",
+    "con <em>dos</em>?",
+    "Porque terminó",
+    "<em>cuarto</em>,",
+    "arriba del Toluca…",
+    "y con el global",
+    "<em>empatado</em>,",
+    "pasa el mejor",
+    "de la <em>tabla</em>."
+   ],
+   "tag": "EL DETALLE",
+   "title": "EMPATE GLOBAL\n= ATLAS",
+   "sub": "Por su lugar en la tabla general"
+  },
+  {
+   "type": "headline",
+   "bg": "2-0",
+   "gap": 0.12,
+   "say": "Al Toluca le sirve ganar, empatar… y hasta perder por un gol.",
+   "captions": [
+    "Al <em>Toluca</em>",
+    "le sirve",
+    "<em>ganar</em>,",
+    "<em>empatar</em>…",
+    "y hasta",
+    "<em>perder por 1</em>."
+   ],
+   "tag": "TOLUCA · VUELTA EL SÁBADO",
+   "title": "LE SIRVEN\n3 RESULTADOS",
+   "sub": "Ganar, empatar o perder por un gol"
+  },
+  {
+   "type": "scoreboard",
+   "bg": "0-0",
+   "gap": 0.12,
+   "say": "En el otro cruce, cero a cero en Monterrey. El sábado, en el Banorte, al América le sirve ganar o empatar. Rayados solo puede ganar.",
+   "captions": [
+    "En el otro cruce,",
+    "<em>0-0</em>",
+    "en Monterrey.",
+    "El sábado,",
+    "en el <em>Banorte</em>,",
+    "al América",
+    "le sirve",
+    "<em>ganar o empatar</em>.",
+    "Rayados",
+    "solo puede",
+    "<em>ganar</em>."
+   ],
+   "tag": "IDA · ESTADIO BBVA",
+   "home": "RAYADOS",
+   "away": "AMÉRICA",
+   "goals": [],
+   "note": "VUELTA: SÁBADO EN EL BANORTE",
+   "noteHL": "AL AMÉRICA LE SIRVE EMPATAR"
+  },
+  {
+   "type": "question",
+   "gap": 0.3,
+   "say": "Entonces dime… ¿quién se cae el sábado: Atlas o Rayados? ¡Te leo en los comentarios!",
+   "captions": [
+    "¿Quién se cae",
+    "el <em>sábado</em>?",
+    "¿<em>Atlas</em>",
+    "o <em>Rayados</em>?",
+    "¡Te leo",
+    "en los comentarios!"
+   ],
+   "pre": "EL SÁBADO SE CAE…",
+   "q": "¿ATLAS\nO RAYADOS?",
+   "opts": [
+    "ATLAS",
+    "RAYADOS"
+   ]
+  }
+ ],
+ "post": "Al América le basta un empate… pero el Atlas necesita un milagro. ¿Quién se cae el sábado: Atlas o Rayados? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Liguilla",
+  "#Atlas"
+ ],
+ "sources": [
+  "https://www.clarosports.com/futbol/liga-mx/toluca-vs-atlas-liguilla-del-apertura-2026-horario-alineaciones-y-donde-ver-los-cuartos-de-final-de-la-liga-mx/",
+  "https://quierotv.mx/2026/11/26/liguilla-que-tiene-que-hacer-atlas-para-pasar-a-semifinales-del-apertura-2026",
+  "https://juanfutbol.com/liga-mx/que-necesita-america-para-pasar-a-semifinales-ante-rayados-de-monterrey-en-el-apertura-2026",
+  "https://grupoanimal.mx/deportes/liga-mx-apertura-2026-resultados-cuartos-de-final-liguilla"
+ ]
+}

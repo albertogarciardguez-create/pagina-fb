@@ -1,0 +1,722 @@
+{
+ "id": "2026-11-29-cinco-historias-que-parecen-mentira",
+ "canal": "Impulso Real",
+ "plantilla": "plano",
+ "musica": "pulso",
+ "bpm": 84,
+ "voice": "em_alex",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "speed": 1.06,
+ "pausaFrase": 0.22,
+ "pausaEscena": 0.6,
+ "scenes": [
+  {
+   "type": "ink",
+   "icon": "parachute",
+   "bg": "3,000 m",
+   "plano": "PLANO 01 · HISTORIAS REALES",
+   "kicker": "HISTORIAS REALES",
+   "say": "Una muchacha de diecisiete años cayó de un avión desde tres mil metros de altura. Y sobrevivió. Un soldado siguió peleando una guerra que había terminado veintinueve años antes. Y un hombre, con una sola decisión, evitó que empezara una guerra nuclear.",
+   "lines": [
+    {
+     "t": "Cayó desde <em>3,000 metros</em>",
+     "style": "big",
+     "s": 0
+    },
+    {
+     "t": "Y SOBREVIVIÓ",
+     "style": "label",
+     "s": 1
+    },
+    {
+     "t": "29 años en una guerra que ya había terminado",
+     "style": "mid",
+     "s": 2
+    },
+    {
+     "t": "Una decisión que evitó una <em>guerra nuclear</em>",
+     "style": "mid",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "5 HISTORIAS QUE PARECEN MENTIRA",
+   "bg": "5",
+   "say": "Hoy te cuento cinco historias reales que parecen inventadas. Todas están documentadas. Y cada una deja una lección que te puedes llevar hoy mismo. Quédate hasta la número uno, porque es la que más me impresiona de todas. Y al final te dejo las cinco lecciones juntas, para que te las lleves.",
+   "points": [
+    {
+     "y": "#5",
+     "t": "NO SE HUNDÍA",
+     "s": 0
+    },
+    {
+     "y": "#4",
+     "t": "DOS BOMBAS",
+     "s": 1
+    },
+    {
+     "y": "#3",
+     "t": "LA GUERRA ETERNA",
+     "s": 1
+    },
+    {
+     "y": "#2",
+     "t": "CAYÓ DEL CIELO",
+     "s": 2
+    },
+    {
+     "y": "#1",
+     "t": "SALVÓ AL MUNDO",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 5,
+   "title": "La mujer que no se hundía",
+   "say": "Número cinco. La mujer que no se hundía."
+  },
+  {
+   "type": "ink",
+   "icon": "ship",
+   "bg": "1887",
+   "kicker": "VIOLET JESSOP",
+   "say": "Violet Jessop nació en Argentina, en mil ochocientos ochenta y siete. De niña se enfermó de tuberculosis, y los doctores creyeron que no iba a sobrevivir. Sobrevivió. Ya de adulta, consiguió trabajo como camarera en los barcos más lujosos del mundo.",
+   "lines": [
+    {
+     "t": "ARGENTINA · 1887",
+     "style": "label",
+     "s": 0
+    },
+    {
+     "t": "Los doctores decían que <em>no viviría</em>",
+     "style": "mid",
+     "s": 1
+    },
+    {
+     "t": "Sobrevivió.",
+     "style": "big",
+     "s": 2
+    },
+    {
+     "t": "Camarera en los barcos más lujosos del mundo",
+     "style": "small",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "TRES BARCOS · UNA MUJER",
+   "bg": "TITANIC",
+   "say": "En mil novecientos once trabajaba en el Olympic, cuando chocó contra un buque de guerra británico. El barco no se hundió, y ella salió ilesa. Un año después, la mandaron a su barco gemelo, el más famoso de la historia: el Titanic. Esa noche ayudó a subir pasajeros a los botes, y se salvó en el bote dieciséis. Y en mil novecientos dieciséis, en plena guerra, iba en el Britannic, el tercer hermano, convertido en barco hospital, cuando chocó con una mina alemana en el mar Egeo. También se hundió. Y Violet, otra vez, sobrevivió. Por eso le pusieron un apodo: la señorita insumergible.",
+   "points": [
+    {
+     "y": "1911",
+     "t": "OLYMPIC · CHOQUE",
+     "s": 0
+    },
+    {
+     "y": "1912",
+     "t": "TITANIC · SE HUNDE",
+     "s": 2
+    },
+    {
+     "y": "1916",
+     "t": "BRITANNIC · MINA",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "n": "5",
+   "title": "Vuelve a subir al barco",
+   "say": "¿Y sabes qué es lo más impresionante? Que después de todo eso, siguió trabajando en el mar hasta mil novecientos cincuenta. La lección es esta: no controlas la tormenta. Pero sí decides si vuelves a subir al barco.",
+   "items": [
+    {
+     "t": "Siguió en el mar hasta 1950",
+     "s": 1
+    },
+    {
+     "t": "No controlas la tormenta",
+     "s": 2
+    },
+    {
+     "t": "Sí decides si vuelves a subir",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 4,
+   "title": "Dos bombas, un hombre",
+   "say": "Número cuatro. Dos bombas, un hombre."
+  },
+  {
+   "type": "ink",
+   "icon": "flame",
+   "bg": "1945",
+   "kicker": "TSUTOMU YAMAGUCHI",
+   "say": "Tsutomu Yamaguchi era ingeniero naval en Mitsubishi, y su casa estaba en Nagasaki. En mil novecientos cuarenta y cinco, la empresa lo mandó a trabajar a otra ciudad. Esa ciudad era Hiroshima.",
+   "lines": [
+    {
+     "t": "INGENIERO · NAGASAKI",
+     "style": "label",
+     "s": 0
+    },
+    {
+     "t": "Un viaje de trabajo…",
+     "style": "mid",
+     "s": 1
+    },
+    {
+     "t": "a <em>Hiroshima</em>",
+     "style": "big",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "3 DÍAS · 2 BOMBAS",
+   "bg": "3 KM",
+   "say": "La mañana del seis de agosto iba camino a la estación, para regresar a casa. Pero se dio cuenta de que había olvidado su sello personal en la oficina, y se regresó por él. En ese momento estalló la primera bomba atómica, a unos tres kilómetros de él. La explosión lo lanzó por los aires y le quemó la cara y los brazos. Al día siguiente, herido, regresó a su casa, en Nagasaki. El nueve de agosto, con el cuerpo vendado, se presentó en la oficina. Y mientras les contaba a sus jefes lo que había visto en Hiroshima… el cielo se iluminó otra vez.",
+   "points": [
+    {
+     "y": "6 ago",
+     "t": "HIROSHIMA · A 3 KM",
+     "s": 2
+    },
+    {
+     "y": "7 ago",
+     "t": "REGRESA A NAGASAKI",
+     "s": 4
+    },
+    {
+     "y": "9 ago",
+     "t": "NAGASAKI · OTRA VEZ",
+     "s": 6
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "2",
+   "say": "Sobrevivió a las dos. Durante décadas casi no habló de eso. Pero en dos mil nueve, Japón lo reconoció oficialmente como sobreviviente de las dos bombas. Murió en dos mil diez, a los noventa y tres años.",
+   "items": [
+    {
+     "n": "2",
+     "label": "BOMBAS",
+     "s": 0
+    },
+    {
+     "n": "2009",
+     "label": "RECONOCIDO",
+     "s": 2
+    },
+    {
+     "n": "93",
+     "label": "AÑOS",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "n": "4",
+   "title": "Haz algo con tu dolor",
+   "say": "En sus últimos años se dedicó a hablar en contra de las armas nucleares. La lección: lo que te pasó, no lo elegiste. Pero sí eliges qué haces con eso. Hay dolores que, cuando los cuentas, protegen a otros.",
+   "items": [
+    {
+     "t": "Habló contra las armas nucleares",
+     "s": 0
+    },
+    {
+     "t": "Lo que te pasó no lo elegiste",
+     "s": 1
+    },
+    {
+     "t": "Sí eliges qué haces con eso",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 3,
+   "title": "La guerra que no terminó",
+   "say": "Número tres. La guerra que no terminó."
+  },
+  {
+   "type": "ink",
+   "icon": "compass",
+   "bg": "LUBANG",
+   "kicker": "HIROO ONODA",
+   "say": "En diciembre de mil novecientos cuarenta y cuatro, el teniente japonés Hiroo Onoda fue enviado a la isla de Lubang, en Filipinas. Sus órdenes eran seguir peleando y no rendirse nunca. Y su comandante le hizo una promesa.",
+   "lines": [
+    {
+     "t": "FILIPINAS · 1944",
+     "style": "label",
+     "s": 0
+    },
+    {
+     "t": "Órdenes: <em>no rendirse nunca</em>",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "Y una promesa…",
+     "style": "mid",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "pre": "LA PROMESA",
+   "bg": "PROMESA",
+   "say": "Le dijo: pase lo que pase, volveremos por ti.",
+   "q": "Pase lo que pase, <em>volveremos</em> por ti.",
+   "qs": 0,
+   "qe": 0,
+   "author": "MAYOR YOSHIMI TANIGUCHI"
+  },
+  {
+   "type": "stats",
+   "bg": "29",
+   "say": "La guerra terminó en mil novecientos cuarenta y cinco. Desde aviones cayeron volantes avisando que todo había acabado. Onoda pensó que eran un engaño del enemigo, y siguió escondido en la selva. Su comandante le había advertido que tal vez tendría que vivir de cocos. Y así vivió, de cocos y de lo que encontraba. Un año. Diez años. Veinte años. Sus compañeros fueron cayendo o se rindieron. En esos años hubo enfrentamientos, y también víctimas en la isla. Y él seguía ahí.",
+   "items": [
+    {
+     "n": "1945",
+     "label": "TERMINA LA GUERRA",
+     "s": 0
+    },
+    {
+     "n": "29",
+     "label": "AÑOS EN LA SELVA",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "timeline",
+   "title": "EL REGRESO",
+   "bg": "1974",
+   "say": "En mil novecientos setenta y cuatro, un joven aventurero japonés, Norio Suzuki, lo encontró. Onoda le dijo que solo se rendiría si se lo ordenaba su comandante. Así que Suzuki volvió… con el mayor Taniguchi. El nueve de marzo de mil novecientos setenta y cuatro, su comandante cumplió la promesa: volvió por él, y le ordenó dejar las armas. Habían pasado casi veintinueve años. Después se fue a Brasil a criar ganado. Y ya de grande, abrió campamentos en la naturaleza para niños en Japón.",
+   "points": [
+    {
+     "y": "Feb 1974",
+     "t": "LO ENCUENTRA SUZUKI",
+     "s": 0
+    },
+    {
+     "y": "9 mar 1974",
+     "t": "VUELVE SU COMANDANTE",
+     "s": 3
+    },
+    {
+     "y": "29",
+     "t": "AÑOS DESPUÉS",
+     "s": 4
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "bg": "BATALLAS",
+   "say": "La lección de Onoda es incómoda. Fue leal, disciplinado y valiente… con algo que ya no existía. ¿Cuántas veces nosotros seguimos peleando batallas viejas? Un rencor, una costumbre, una idea de quiénes somos que ya no es verdad.",
+   "left": {
+    "title": "SUS VIRTUDES",
+    "s": 1,
+    "items": [
+     {
+      "t": "Leal",
+      "s": 1
+     },
+     {
+      "t": "Disciplinado",
+      "s": 1,
+      "d": 0.8
+     },
+     {
+      "t": "Valiente",
+      "s": 1,
+      "d": 1.4
+     }
+    ]
+   },
+   "right": {
+    "title": "TUS BATALLAS VIEJAS",
+    "s": 3,
+    "items": [
+     {
+      "t": "Un rencor",
+      "s": 3
+     },
+     {
+      "t": "Una costumbre",
+      "s": 3,
+      "d": 0.8
+     },
+     {
+      "t": "Una idea vieja de ti",
+      "s": 3,
+      "d": 1.6
+     }
+    ]
+   },
+   "foot": "Revisa si tu guerra sigue",
+   "footS": 3
+  },
+  {
+   "type": "chapter",
+   "n": 2,
+   "title": "La niña que cayó del cielo",
+   "say": "Número dos. Y si las anteriores te parecieron increíbles, espera a escuchar esta. La niña que cayó del cielo."
+  },
+  {
+   "type": "ink",
+   "icon": "parachute",
+   "bg": "1971",
+   "kicker": "JULIANE KOEPCKE",
+   "say": "Veinticuatro de diciembre de mil novecientos setenta y uno. Juliane Koepcke tenía diecisiete años, y volaba con su mamá de Lima hacia la selva de Perú. Iban a reunirse con su papá, en una estación de investigación en plena selva. Entonces llegó una tormenta, un rayo… y el avión se partió en el aire.",
+   "lines": [
+    {
+     "t": "PERÚ · 24 DIC 1971",
+     "style": "label",
+     "s": 0
+    },
+    {
+     "t": "17 años, con su mamá",
+     "style": "mid",
+     "s": 1
+    },
+    {
+     "t": "Una tormenta. Un rayo.",
+     "style": "mid",
+     "s": 3
+    },
+    {
+     "t": "El avión <em>se partió</em>",
+     "style": "big",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "bg": "3,000",
+   "say": "Juliane cayó desde unos tres mil metros, todavía amarrada a su asiento. De las noventa y dos personas a bordo, fue la única que sobrevivió.",
+   "items": [
+    {
+     "n": "3,000",
+     "label": "METROS DE CAÍDA",
+     "s": 0
+    },
+    {
+     "n": "92",
+     "label": "A BORDO",
+     "s": 1
+    },
+    {
+     "n": "1",
+     "label": "SOBREVIVIENTE",
+     "s": 1
+    }
+   ]
+  },
+  {
+   "type": "route",
+   "title": "11 DÍAS EN LA SELVA",
+   "bg": "SELVA",
+   "say": "Despertó en el suelo de la selva, con la clavícula rota y cortadas profundas en las piernas. Buscó a su mamá, y no la encontró. Entonces usó lo que había aprendido de niña con sus papás, que eran científicos: en la selva, sigue el agua. El agua te lleva a donde vive la gente. Caminó por arroyos, y después por un río. Once días, sola, herida, casi sin comer. Hasta que llegó a un campamento de leñadores. Ahí la encontraron, y la llevaron a salvo. Días después, en el hospital, por fin volvió a ver a su papá.",
+   "points": [
+    {
+     "x": 8,
+     "y": 22,
+     "label": "Cae el avión",
+     "sub": "24 DIC 1971",
+     "s": 0,
+     "up": false
+    },
+    {
+     "x": 34,
+     "y": 40,
+     "label": "Busca a su mamá",
+     "s": 1,
+     "up": true
+    },
+    {
+     "x": 58,
+     "y": 60,
+     "label": "Sigue el agua",
+     "s": 2,
+     "up": true
+    },
+    {
+     "x": 84,
+     "y": 80,
+     "label": "Campamento de leñadores",
+     "sub": "DÍA 11",
+     "s": 6,
+     "up": true
+    }
+   ],
+   "counter": {
+    "value": 11,
+    "suffix": " DÍAS",
+    "label": "SOLA EN LA SELVA",
+    "s": 5,
+    "dur": 2.0
+   }
+  },
+  {
+   "type": "step",
+   "n": "2",
+   "title": "Prepárate en la calma",
+   "say": "La lección de Juliane: lo que aprendes en tiempos de calma es lo que te salva en la tormenta. Nadie se prepara el día de la crisis. Te preparas antes. Lo que hoy estudias, practicas o lees en silencio… algún día puede ser tu río.",
+   "items": [
+    {
+     "t": "Lo aprendido en calma te salva",
+     "s": 0
+    },
+    {
+     "t": "Nadie se prepara el día de la crisis",
+     "s": 1
+    },
+    {
+     "t": "Lo de hoy puede ser tu río",
+     "s": 3
+    }
+   ]
+  },
+  {
+   "type": "chapter",
+   "n": 1,
+   "title": "El hombre que salvó al mundo",
+   "say": "Y llegamos a la número uno. La historia de un hombre del que casi nadie habla… y al que tal vez todos le debemos algo. El hombre que salvó al mundo."
+  },
+  {
+   "type": "ink",
+   "icon": "mind",
+   "bg": "1983",
+   "kicker": "STANISLAV PETROV",
+   "say": "Veintiséis de septiembre de mil novecientos ochenta y tres. Plena Guerra Fría. Las dos potencias vivían bajo una regla: si uno atacaba, el otro respondía con todo. Le llamaban destrucción mutua asegurada. El teniente coronel soviético Stanislav Petrov está de turno, a cargo del sistema que vigila si Estados Unidos lanza misiles nucleares. De pronto, suena la alarma. El sistema informa que Estados Unidos acaba de lanzar misiles contra la Unión Soviética.",
+   "lines": [
+    {
+     "t": "GUERRA FRÍA · 1983",
+     "style": "label",
+     "s": 0
+    },
+    {
+     "t": "Stanislav Petrov, de turno",
+     "style": "mid",
+     "s": 4
+    },
+    {
+     "t": "<em>Alarma</em>: misiles en camino",
+     "style": "big",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "bg": "ALARMA",
+   "say": "Su deber era reportar el ataque a sus superiores. Y la respuesta podía ser disparar de regreso. Pero algo no le cuadró. Si Estados Unidos atacaba primero, no lanzaría unos cuantos misiles: lanzaría cientos, todos al mismo tiempo. Así que decidió que era una falsa alarma, y no lo reportó como ataque.",
+   "left": {
+    "title": "LO QUE DECÍA LA MÁQUINA",
+    "s": 0,
+    "items": [
+     {
+      "t": "Lanzamiento",
+      "s": 0
+     },
+     {
+      "t": "Ataque en camino",
+      "s": 0,
+      "d": 0.8
+     },
+     {
+      "t": "Reporta ya",
+      "s": 1
+     }
+    ]
+   },
+   "right": {
+    "title": "LO QUE PENSÓ PETROV",
+    "s": 2,
+    "items": [
+     {
+      "t": "Un ataque real sería masivo",
+      "s": 3
+     },
+     {
+      "t": "Esto no cuadra",
+      "s": 2
+     },
+     {
+      "t": "Falsa alarma",
+      "s": 4
+     }
+    ]
+   },
+   "foot": "Una sola decisión",
+   "footS": 4
+  },
+  {
+   "type": "ink",
+   "icon": "sunrise",
+   "bg": "FALSA",
+   "kicker": "TENÍA RAZÓN",
+   "say": "Y tenía razón. Era una falsa alarma. Una sola decisión, de un solo hombre, evitó que una falla del sistema terminara en una guerra nuclear.",
+   "lines": [
+    {
+     "t": "Era una <em>falsa alarma</em>",
+     "style": "big",
+     "s": 1
+    },
+    {
+     "t": "UNA DECISIÓN · UN HOMBRE",
+     "style": "label",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "n": "1",
+   "title": "Piensa antes de obedecer a la alarma",
+   "say": "La lección de Petrov es la más difícil de todas. A veces la valentía no es hacer lo que todos esperan. Es detenerte un segundo, pensar, y atreverte a decir: esto no está bien. Aunque la máquina, el jefe o la multitud digan lo contrario.",
+   "items": [
+    {
+     "t": "La valentía no es obedecer siempre",
+     "s": 1
+    },
+    {
+     "t": "Detente, piensa",
+     "s": 2
+    },
+    {
+     "t": "Atrévete a decir: esto no está bien",
+     "s": 2
+    }
+   ]
+  },
+  {
+   "type": "step",
+   "n": "5",
+   "title": "5 lecciones para hoy",
+   "say": "Repasemos. Vuelve a subir al barco. Haz algo con tu dolor. Revisa tus batallas viejas. Prepárate en la calma. Y piensa antes de obedecer a la alarma.",
+   "items": [
+    {
+     "t": "Vuelve a subir al barco",
+     "s": 1
+    },
+    {
+     "t": "Haz algo con tu dolor",
+     "s": 2
+    },
+    {
+     "t": "Revisa tus batallas viejas",
+     "s": 3
+    },
+    {
+     "t": "Prepárate en la calma",
+     "s": 4
+    },
+    {
+     "t": "Piensa antes de obedecer",
+     "s": 5
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "say": "Ahora cuéntame tú: ¿cuál de las cinco historias te impresionó más? Te leo en los comentarios. Y si quieres más historias reales como estas, suscríbete a Impulso Real. Cada semana te traigo una nueva.",
+   "q": "¿Cuál historia te <em>impresionó</em> más?",
+   "subS": 2,
+   "foot": "Suscríbete para más historias reales",
+   "footS": 2
+  }
+ ],
+ "thumb": {
+  "icon": "parachute",
+  "accIdx": 1,
+  "kicker": "5 HISTORIAS REALES",
+  "title": "Parecen <em>mentira</em>",
+  "sub": "LA #1 EVITÓ UNA GUERRA NUCLEAR"
+ },
+ "cc": {
+  "mil ochocientos ochenta y siete": "1887",
+  "mil novecientos once": "1911",
+  "mil novecientos dieciséis": "1916",
+  "mil novecientos cincuenta": "1950",
+  "mil novecientos cuarenta y cinco": "1945",
+  "mil novecientos cuarenta y cuatro": "1944",
+  "mil novecientos setenta y cuatro": "1974",
+  "mil novecientos setenta y uno": "1971",
+  "mil novecientos ochenta y tres": "1983",
+  "dos mil nueve": "2009",
+  "dos mil diez": "2010",
+  "noventa y tres": "93",
+  "noventa y dos": "92",
+  "veintinueve": "29",
+  "diecisiete": "17",
+  "dieciséis": "16",
+  "tres mil": "3,000",
+  "veinticuatro": "24",
+  "veintiséis": "26",
+  "seis": "6",
+  "nueve": "9",
+  "once": "11",
+  "tres": "3",
+  "cinco": "5"
+ },
+ "youtube": {
+  "titulo": "5 Historias REALES que parecen MENTIRA (la #1 evitó una guerra nuclear)",
+  "intro": "5 historias que parecen mentira",
+  "cierre": "Tu turno",
+  "descripcion": "Una muchacha cayó de un avión desde 3,000 metros y sobrevivió 11 días sola en la selva. Un soldado siguió peleando 29 años una guerra que ya había terminado. Una mujer sobrevivió al Titanic… y a otros dos barcos. Un hombre sobrevivió a Hiroshima y a Nagasaki. Y otro, con una sola decisión, evitó una guerra nuclear.\n\n5 historias reales, documentadas, y la lección que cada una te deja para tu vida.\n\n¿Cuál te impresionó más? Te leo en los comentarios.",
+  "hashtags": [
+   "#HistoriasReales",
+   "#ImpulsoReal",
+   "#Historia"
+  ],
+  "etiquetas": [
+   "historias reales",
+   "historias que parecen mentira",
+   "Juliane Koepcke",
+   "Stanislav Petrov",
+   "Hiroo Onoda",
+   "Violet Jessop",
+   "Tsutomu Yamaguchi",
+   "historias de superación",
+   "historias increíbles"
+  ]
+ },
+ "sources": [
+  "https://boingboing.net/?p=1114320",
+  "https://www.watchmojo.com/articles/20-amazing-survivor-stories-in-history",
+  "https://www.historysnob.com/historical-figures/10-people-who-survived-the-unsurvivable-10-who-walked-straight-into-disaster",
+  "https://en.wikipedia.org/wiki/Tsutomu_Yamaguchi",
+  "https://guinnessworldrecords.com/world-records/first-confirmed-person-to-survive-two-nuclear-attacks",
+  "https://www.xataka.com.br/diversos/ele-sobreviveu-as-bombas-hiroshima-e-nagasaki-em-um-intervalo-3-dias-a-3-km-da-explosao-e-viveu-ate-os-93-anos-a-historia-do-japones-tsutomu-yamaguchi-defensor-do-desarmamento-nuclear",
+  "https://www.todayifoundout.com/?p=19989",
+  "https://en.wikipedia.org/wiki/Hiroo_Onoda",
+  "https://rarehistoricalphotos.com/hiroo-onoda-1974/",
+  "https://watch.plex.tv/it/person/hiro-onoda",
+  "https://es.euronews.com/2025/06/14/eran-los-unicos-supervivientes-de-los-accidentes-aereos-siete-historias-de-supervivientes-",
+  "https://www.hola.com/al-dia/20260525903427/juliane-koepcke-superviviente-avion-amazonas/",
+  "https://www.lanacion.com.ar/el-mundo/juliane-koepcke-cayo-desde-3000-metros-en-el-amazonas-la-otra-increible-historia-de-supervivencia-nid24012024/",
+  "https://www.aol.com/news/13-people-survived-things-sound-021509583.html",
+  "https://aviacionline.com/el-hombre-que-salvo-al-mundo-stanislav-petrov-y-el-incidente-del-equinoccio-de-otono",
+  "https://www.dailygood.org/story/1078/15-humans-that-saved-millions-of-other-humans-kindness-blog/?lang=ca"
+ ]
+}
