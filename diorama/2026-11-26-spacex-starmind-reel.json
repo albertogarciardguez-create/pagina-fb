@@ -1,0 +1,474 @@
+{
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-26-spacex-starmind-reel",
+ "titulo": "SpaceX Starmind (reel)",
+ "scenes": [
+  {
+   "say": "Un millón de satélites… para llevar la inteligencia artificial al espacio.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "astro": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1 MILLÓN DE SATÉLITES",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "PARA LA IA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "say": "Este miércoles, la FCC, el regulador de telecomunicaciones de Estados Unidos, le dio a SpaceX una aprobación condicional.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA FCC DIJO SÍ",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "CON CONDICIONES",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "say": "El proyecto se llama Starmind: hasta un millón de satélites, entre quinientos y mil dos kilómetros de altura, que se comunican con láser.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "STARMIND",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 700,
+      "y": 650,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2,
+      "titulo": "EL PLAN",
+      "items": [
+       "HASTA 1 MILLÓN",
+       "500 A 1,002 KM",
+       "SE HABLAN CON LÁSER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Por qué importa? Porque la meta es sacar de la Tierra los centros de datos de la inteligencia artificial… y ponerlos en órbita.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿POR QUÉ IMPORTA?",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "CENTROS DE DATOS EN ÓRBITA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 50
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero ojo: no va a pasar mañana. Tiene siete años para lanzar el primer satélite operativo… y catorce para completar la constelación.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO ES MAÑANA",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 700,
+      "y": 650,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2,
+      "titulo": "PLAZOS",
+      "items": [
+       "7 AÑOS: EL PRIMERO",
+       "14 AÑOS: TODOS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y no todos aplauden: Amazon, Viasat y astrónomos se opusieron por la basura espacial y las interferencias.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 280,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO TODOS APLAUDEN",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "props": [
+     {
+      "k": "lista",
+      "x": 700,
+      "y": 650,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.2,
+      "titulo": "LES PREOCUPA",
+      "items": [
+       "BASURA ESPACIAL",
+       "INTERFERENCIAS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Y a ti? Cada vez que le preguntas algo a una inteligencia artificial, una computadora enorme trabaja en algún lugar. La pelea ahora es dónde ponerla.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿Y A TI?",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "LA IA NECESITA UN LUGAR",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 52
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Sígueme: cada mediodía te explico la tecnología que viene.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "walk"
+      },
+      "camina": [
+       300,
+       700
+      ]
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÍGUEME",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "TECNOLOGÍA CADA MEDIODÍA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "say": "Centros de datos en el espacio… ¿te da miedo o te emociona? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Te da miedo",
+    "o te emociona?"
+   ]
+  }
+ ],
+ "thumb": [
+  "1 MILLÓN DE SATÉLITES",
+  "PARA LA IA"
+ ],
+ "post": "Un millón de satélites para llevar la inteligencia artificial al espacio. 🛰️ La FCC le dio a SpaceX aprobación condicional para Starmind. ¿Te da miedo o te emociona? 👇",
+ "hashtags": [
+  "#SpaceX",
+  "#InteligenciaArtificial",
+  "#Tecnologia",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space"
+ ],
+ "redes_textos": {
+  "facebook": "Un millón de satélites… para llevar la inteligencia artificial al espacio. 🛰️\n\nEste miércoles la FCC (el regulador de telecomunicaciones de EE. UU.) le dio a SpaceX aprobación condicional para Starmind: hasta un millón de satélites entre 500 y 1,002 km de altura, que se comunican con láser. La meta: centros de datos de IA en órbita.\n\nPero no es para mañana: tiene 7 años para lanzar el primero y 14 para completar la constelación. Amazon, Viasat y astrónomos se opusieron por la basura espacial y las interferencias.\n\n¿Te da miedo o te emociona? 👇\n\n#SpaceX #InteligenciaArtificial #Tecnologia #ImpulsoReal",
+  "instagram": "Un millón de satélites para llevar la IA al espacio. 🛰️\nLa FCC aprobó (con condiciones) Starmind de SpaceX: centros de datos en órbita… en un plazo de hasta 14 años.\nCompártelo con tu amigo que ama la tecnología.\n¿Te da miedo o te emociona? 👇\n#SpaceX #InteligenciaArtificial #Tecnologia #IA #ImpulsoReal",
+  "youtube": {
+   "titulo": "SpaceX quiere 1 millón de satélites para la IA #Shorts",
+   "descripcion": "La FCC aprobó con condiciones Starmind: centros de datos de inteligencia artificial en órbita. ¿Te da miedo o te emociona?\n#SpaceX #IA #Shorts"
+  },
+  "tiktok": "1 millón de satélites para llevar la IA al espacio 🛰️ ¿Miedo o emoción? #SpaceX #IA #Tecnologia #ImpulsoReal"
+ }
+}

@@ -1,0 +1,652 @@
+{
+ "plantilla": "papel",
+ "tts": "elevenlabs",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.3,
+ "cola": 4.2,
+ "id": "2026-11-26-diez-leprosos-reel",
+ "titulo": "Los diez leprosos (reel)",
+ "tts_respaldo": "edge",
+ "scenes": [
+  {
+   "say": "Sanaron diez hombres. Solo uno regresó… y Jesús preguntó: ¿y los nueve, dónde están?",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SANARON DIEZ",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "SOLO UNO REGRESÓ",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "say": "Eran leprosos. La ley los obligaba a vivir apartados de todos… y a gritar «¡inmundo!» si alguien se acercaba.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 200,
+      "h": 250,
+      "o": {
+       "cam": "#6B6B5A",
+       "pan": "#3A3A2A",
+       "triste": true
+      }
+     },
+     {
+      "x": 350,
+      "h": 250,
+      "o": {
+       "cam": "#7A6A4A",
+       "pan": "#3A3A2A",
+       "triste": true
+      }
+     },
+     {
+      "x": 500,
+      "h": 250,
+      "o": {
+       "cam": "#5A6A6B",
+       "pan": "#3A3A2A",
+       "triste": true
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LEPROSOS",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "APARTADOS DE TODOS",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Un día vieron pasar a Jesús, camino a Jerusalén. Se quedaron de lejos y le gritaron: ¡Jesús, Maestro, ten misericordia de nosotros!",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 200,
+      "h": 250,
+      "o": {
+       "cam": "#6B6B5A",
+       "pan": "#3A3A2A",
+       "triste": true,
+       "pose": "ask"
+      }
+     },
+     {
+      "x": 350,
+      "h": 250,
+      "o": {
+       "cam": "#7A6A4A",
+       "pan": "#3A3A2A",
+       "triste": true,
+       "pose": "ask"
+      }
+     },
+     {
+      "x": 500,
+      "h": 250,
+      "o": {
+       "cam": "#5A6A6B",
+       "pan": "#3A3A2A",
+       "triste": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DE LEJOS",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡TEN MISERICORDIA!",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "Él no los tocó. Solo les dijo: vayan a mostrarse a los sacerdotes.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SOLO UNA ORDEN",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "VAYAN",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y mientras iban caminando… quedaron limpios. Los diez.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 250,
+      "h": 250,
+      "o": {
+       "cam": "#6B6B5A",
+       "pan": "#3A3A2A",
+       "pose": "walk"
+      }
+     },
+     {
+      "x": 450,
+      "h": 250,
+      "o": {
+       "cam": "#7A6A4A",
+       "pan": "#3A3A2A",
+       "pose": "walk"
+      }
+     },
+     {
+      "x": 650,
+      "h": 250,
+      "o": {
+       "cam": "#5A6A6B",
+       "pan": "#3A3A2A",
+       "pose": "walk"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EN EL CAMINO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "LOS DIEZ SANARON",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero aquí viene lo que casi nadie nota.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#5A6A6B",
+       "pan": "#3A3A2A",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PERO…",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "CASI NADIE LO NOTA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 56
+     }
+    ]
+   }
+  },
+  {
+   "say": "Uno de ellos, al verse sano, se regresó. Glorificaba a Dios a gritos, se echó a sus pies y le dio las gracias. Y era samaritano: un extranjero.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#5A6A6B",
+       "pan": "#3A3A2A",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "UNO REGRESÓ",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "ERA EXTRANJERO",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Jesús preguntó: ¿No son diez los que fueron limpios? ¿Y los nueve dónde están?",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿Y LOS NUEVE?",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y le dijo: levántate, vete; tu fe te ha salvado.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#8A5A2B",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TU FE",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "TE HA SALVADO",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 70
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Los diez recibieron el milagro. Solo uno regresó a agradecer. Hoy, Día de Acción de Gracias… sé el que regresa.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "campo",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#5A6A6B",
+       "pan": "#3A3A2A",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÉ EL QUE",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "REGRESA",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 80
+     }
+    ]
+   },
+   "nivel": 1.15
+  },
+  {
+   "say": "Sígueme: cada noche, una historia que te cambia el día.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "figs": [
+     {
+      "x": 500,
+      "h": 330,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pose": "walk"
+      },
+      "camina": [
+       300,
+       700
+      ]
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SÍGUEME",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "UNA HISTORIA CADA NOCHE",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿A quién te falta regresar a darle las gracias? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿A quién te falta",
+    "darle las gracias?"
+   ]
+  }
+ ],
+ "thumb": [
+  "SANARON DIEZ",
+  "SOLO UNO REGRESÓ"
+ ],
+ "post": "Sanaron diez. Solo uno regresó a dar gracias. 🙏 Hoy, Día de Acción de Gracias, sé el que regresa. ¿A quién te falta darle las gracias? 👇",
+ "hashtags": [
+  "#Fe",
+  "#Gratitud",
+  "#AccionDeGracias",
+  "#Biblia",
+  "#ImpulsoReal"
+ ],
+ "sources": [
+  "https://www.biblegateway.com/passage/?search=Lucas+17%3A11-19&version=RVR1960",
+  "https://www.biblegateway.com/passage/?search=Lev%C3%ADtico+13%3A45-46&version=RVR1960"
+ ],
+ "redes_textos": {
+  "facebook": "Sanaron diez. Solo uno regresó. 🙏\n\nEran leprosos, obligados a vivir apartados de todos. Le gritaron a Jesús de lejos: «¡Ten misericordia de nosotros!». Él solo les dijo: «Vayan a mostrarse a los sacerdotes». Y en el camino, los diez quedaron limpios.\n\nPero solo uno regresó a dar gracias… y era extranjero. Jesús preguntó: «¿No son diez los que fueron limpios? ¿Y los nueve dónde están?» (Lucas 17:11-19).\n\nHoy, Día de Acción de Gracias: sé el que regresa.\n\n¿A quién te falta darle las gracias? 👇\n\n#Fe #Gratitud #AccionDeGracias #Biblia #ImpulsoReal",
+  "instagram": "Sanaron diez. Solo uno regresó. 🙏\nLos diez recibieron el milagro; solo uno volvió a agradecer. Hoy, sé el que regresa.\nCompártelo con alguien a quien le debes un «gracias».\n¿A quién te falta darle las gracias? 👇\n#Fe #Gratitud #AccionDeGracias #Biblia #ImpulsoReal",
+  "youtube": {
+   "titulo": "Sanaron diez… y solo uno regresó a dar gracias #Shorts",
+   "descripcion": "La historia de los diez leprosos (Lucas 17). Hoy, Día de Acción de Gracias: sé el que regresa.\n#Fe #Gratitud #Shorts"
+  },
+  "tiktok": "Sanaron diez… solo uno regresó 🙏 ¿A quién te falta darle las gracias? #Fe #Gratitud #AccionDeGracias #Biblia"
+ }
+}
