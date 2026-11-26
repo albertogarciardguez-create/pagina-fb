@@ -295,8 +295,29 @@ def data_url(path, max_lado=2400, franja=0.0, comp=None):
     return "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
 
 
+def bajar_drive(story, carpeta):
+    """Imágenes que Alberto subió a una carpeta de Drive compartida con enlace: {"img_drive": {"p01": "<fileId>"}}.
+    Se bajan solo si faltan (en GitHub hay internet; en la nube de Claude no)."""
+    import urllib.request
+    for n, fid in (story.get("img_drive") or {}).items():
+        if any(os.path.exists(os.path.join(carpeta, n + e)) for e in EXT):
+            continue
+        os.makedirs(carpeta, exist_ok=True)
+        for url in (f"https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t",
+                    f"https://drive.google.com/uc?export=download&id={fid}"):
+            try:
+                data = urllib.request.urlopen(url, timeout=60).read()
+                if data[:4] in (b"\x89PNG", b"RIFF") or data[:3] == b"\xff\xd8\xff":
+                    ext = ".png" if data[:4] == b"\x89PNG" else ".webp" if data[:4] == b"RIFF" else ".jpg"
+                    open(os.path.join(carpeta, n + ext), "wb").write(data)
+                    break
+            except Exception as e:  # noqa: BLE001
+                print(f"[diorama] AVISO: no se pudo bajar {n} de Drive ({e})")
+
+
 def imagenes(story):
     carpeta = os.path.join(ROOT, story.get("imagenes", f"diorama/img/{story['id']}"))
+    bajar_drive(story, carpeta)
     out, faltan = {}, []
     fr = dict(story.get("franjas", {}))
     if os.path.exists(os.path.join(carpeta, "franjas.json")):  # franjas lisas que dejó el generador de imágenes

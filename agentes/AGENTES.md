@@ -99,6 +99,25 @@ Cada publicación se mide en FB, IG y YouTube (TikTok no da datos sin auditoría
 | SF · Estrella (El día que / Polémica / Trivia / Pizarra viernes) | 19:00 | 19:00 | 19:00 |
 | IR · Historia estrella | 20:00 | 19:30 | 20:00 |
 
+### Prueba A/B del video estrella de Impulso Real (30 nov – 13 dic 2026)
+
+Pregunta: ¿el estilo con imágenes (diorama de plastilina) retiene y trae más seguidores que el papel mejorado (subtítulos grandes, empujón de cámara)? Se decide con datos, no con gustos.
+
+| Días de la estrella IR (20:00) | Versión | `"formato"` en la cola |
+|---|---|---|
+| Martes, jueves y domingo | **Imágenes**: motor `diorama` sin plantilla (imágenes fijas animadas: cámara, boil, polvo, títulos), voz Edgardo | `IR · Historia estrella (imágenes)` |
+| Lunes, miércoles, viernes y sábado | **Papel mejorado** (plantilla `papel`), voz Edgardo | `IR · Historia estrella (papel)` |
+
+Mismo tipo de tema en las dos (historia real, bíblica o parábola con giro), misma duración (61–75 s) y misma hora, para que lo único que cambie sea el estilo.
+
+**Cómo llegan las imágenes (sin gastar créditos):**
+1. El **planeador** (sábado), por cada fila de imágenes de la semana, escribe `diorama/guiones/<id>-imagenes.md` con **8 prompts** (p01…p08), uno por escena, en este estilo fijo: *“Diorama de plastilina en stop-motion, figuras de plastilina hechas a mano, escenario en miniatura de papel recortado, luz cálida cinematográfica, formato vertical 9:16, sin texto, sin logotipos, [escena]”*, con los mismos personajes descritos igual en cada prompt (ropa, colores, edad) para que se parezcan. Personajes genéricos: nunca el parecido de una persona real ni de un actor. En el mensaje final le pega a Alberto los prompts de cada video.
+2. **Alberto** los genera en Gemini y los sube a la carpeta de Drive **“Impulso Real · Imágenes video estrella”** (ID `1hZm8TxBIEH7EFkfiPe8wQUpO8gD8fVT-`, compartida con enlace), en una subcarpeta con el `id` del video, con los nombres `p01`, `p02`… (jpg o png). Fecha límite: la noche anterior.
+3. El **agente IR**, el día del video, busca la subcarpeta en Drive (`search_files` por nombre; **no descargues las imágenes**, gastan muchos tokens): si están las 8, escribe la historia `diorama/<id>.json` con `"img_drive": {"p01": "<fileId>", …}` y escenas con `img`, `move`, `titles` (ejemplo de estructura: `diorama/2026-10-30-daniel-foso.json`), `"tts": "elevenlabs"`, `"tts_respaldo": "edge"`. El publicador de GitHub baja las imágenes y genera el video. En la nube el preview sale con marcadores café: es normal, revisa solo textos y tiempos.
+4. Si faltan imágenes, **no se pierde el día**: hace la versión papel con el mismo guion, `"formato": "IR · Historia estrella (papel)"`, y lo dice en J (“sin imágenes”).
+
+**Cómo se decide (sábado 13 dic, el planeador):** con al menos 4 videos de cada versión, compara en `RESUMEN.md` y en lo que Alberto reporte de TikTok la mediana de vistas, los segundos vistos y los seguidores nuevos. Gana la versión que saque **≥20 % más de segundos vistos o de seguidores**; si la diferencia es menor, se queda papel (es gratis y no depende de nadie). Si ganan las imágenes, se propone a Alberto pasarlas a todas las estrellas o generarlas con el conector de ElevenLabs (~406 créditos por imagen, unos 3,250 por video).
+
 **Zona horaria:** las horas son de Ciudad Juárez, pero el público está casi todo en hora del centro (CDMX, UTC−6). En invierno Juárez va **1 h atrás** de CDMX (09:00 Juárez = 10:00 CDMX). Desde el 14 mar 2027 Juárez cambia al horario de verano y queda igual que CDMX: ese día el planeador suma 1 h a todas las franjas para seguir cayendo en la misma hora del público.
 Los estudios de 2026 (Sprout Social: ~2,000 millones de interacciones, hora local del público) marcan para Facebook la ventana **12–20 h** (mejor martes y miércoles; lunes 12–13 h; jueves 12–14 h y 20 h; fines de semana lo más flojo); Metricool marca 10–12 h. Por eso nada sale antes de las 10:00 ni después de las 21:00 hora CDMX. Cuando haya ≥5 publicaciones por franja con métricas reales, mandan los datos propios.
 Se basan en los picos generales de mediodía (Instagram) y tarde-noche (Facebook y TikTok) y en la rutina del público (camino al trabajo, comida, noche). Cuando una red lleva otra hora que la de Facebook, va en `"horas"` del item de la cola.
@@ -133,7 +152,7 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 | Página | Franja | Formato | Reparto en la semana |
 |---|---|---|---|
 | Impulso Real | 12:00 | IR · Historia detrás / IR · Fe que consuela (diorama papel) | 4 Historia detrás + 3 Fe que consuela (más Historia detrás en diciembre: villancicos, Nochebuena, Posadas, Guadalupe). |
-| Impulso Real | 20:00 | IR · Historia estrella (diorama papel o infografía, Edgardo) | Historias reales, bíblicas o parábolas con giro; series de 2 partes cuando algo funcione. |
+| Impulso Real | 20:00 | IR · Historia estrella — mar/jue/dom **(imágenes)**, lun/mié/vie/sáb **(papel)**, Edgardo (ver “Prueba A/B”) | Historias reales, bíblicas o parábolas con giro; series de 2 partes cuando algo funcione. En las 3 de imágenes escribe también los 8 prompts. |
 | Impulso Real | 15:00 | Post foto (solo FB) | Frase, versículo o “completa la frase”. |
 | Señor Fútbol | 13:15 | SF · Liguilla (reel) | Diario mientras haya Liguilla; después, la noticia más fuerte de Liga MX (prioridad Bravos). El tema exacto se decide esa mañana. |
 | Señor Fútbol | 19:00 | SF · El día que… (L-M-V, Edgardo) · SF · Polémica / Trivia (mar, jue, sáb, dom) · **SF · Pizarra F7 solo viernes** | Si el viernes cae una final, la Pizarra se pasa al sábado. |
