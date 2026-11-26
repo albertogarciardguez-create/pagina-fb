@@ -12,8 +12,12 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: SF_TIKTOK_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: SF_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-26-sf-jugada-cambio-orientacion.mp4",
- "actualizado": "2026-11-26 16:31"
+ "actualizado": "2026-11-26 16:56",
+ "estado": "completo"
 }
