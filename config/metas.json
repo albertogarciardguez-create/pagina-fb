@@ -1,13 +1,46 @@
 {
-  "_nota": "Metas de monetización (verificadas nov 2026). Las usan metricas.py (sección 'Camino a monetizar' del RESUMEN) y los agentes al planear. Revisar requisitos cada trimestre.",
-  "youtube": {
-    "nivel1": {"nombre": "Fan funding / Shopping", "suscriptores": 500, "vistas_shorts_90d": 3000000, "subidas_90d": 3},
-    "nivel2": {"nombre": "Anuncios (YPP)", "suscriptores": 1000, "vistas_shorts_90d": 10000000,
-               "aviso": "Desde el 1 feb 2027 los canales nuevos necesitarán 20M vistas de Shorts en 90 días: conviene entrar antes."}
+ "_nota": "Metas de monetización (verificadas nov 2026). Las usan metricas.py (sección 'Camino a monetizar' del RESUMEN) y los agentes al planear. Revisar requisitos cada trimestre.",
+ "youtube": {
+  "nivel1": {
+   "nombre": "Fan funding / Shopping",
+   "suscriptores": 500,
+   "vistas_shorts_90d": 3000000,
+   "subidas_90d": 3
   },
-  "tiktok": {"nombre": "Creator Rewards (México)", "seguidores": 10000, "vistas_30d": 100000, "duracion_min_seg": 61,
-             "aviso": "Solo pagan videos de 1 minuto o más; cuenta personal, mayor de edad y RFC/SAT en regla."},
-  "facebook": {"nombre": "Monetización de contenido", "seguidores_hito": [2500, 5000, 10000],
-               "aviso": "Es por invitación: registra tu interés en Panel profesional > Monetización > Monetización de contenido. Paga por rendimiento de contenido original."},
-  "instagram": {"seguidores_hito": [1000, 5000, 10000]}
+  "nivel2": {
+   "nombre": "Anuncios (YPP)",
+   "suscriptores": 1000,
+   "vistas_shorts_90d": 10000000,
+   "aviso": "Desde el 1 feb 2027 los canales nuevos necesitarán 20M vistas de Shorts en 90 días: conviene entrar antes."
+  }
+ },
+ "tiktok": {
+  "nombre": "Creator Rewards (México)",
+  "seguidores": 10000,
+  "vistas_30d": 100000,
+  "duracion_min_seg": 61,
+  "aviso": "Solo pagan videos de 1 minuto o más; cuenta personal, mayor de edad y RFC/SAT en regla."
+ },
+ "facebook": {
+  "nombre": "Monetización de contenido",
+  "seguidores_hito": [
+   2500,
+   5000,
+   10000
+  ],
+  "aviso": "Es por invitación: registra tu interés en Panel profesional > Monetización > Monetización de contenido. Paga por rendimiento de contenido original.",
+  "stars": {
+   "nombre": "Estrellas (Stars)",
+   "seguidores": 500,
+   "dias_seguidos": 30,
+   "aviso": "Se activa sola desde Meta Business Suite > Monetización cuando la página tiene 500 seguidores 30 días seguidos (SF ya cumple). Cada estrella = 1 centavo de dólar."
+  }
+ },
+ "instagram": {
+  "seguidores_hito": [
+   1000,
+   5000,
+   10000
+  ]
+ }
 }

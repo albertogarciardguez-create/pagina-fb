@@ -22,7 +22,8 @@ TZ = ZoneInfo("America/Ciudad_Juarez")
 DIR = os.path.join(ROOT, "cola", "metricas")
 PESOS = {"seguidores": 10, "compartidos": 2, "comentarios": 2, "guardados": 1, "reacciones": 0.5}
 VISTAS_POR_PUNTO = 25  # cada 25 reproducciones = 1 punto (vistas y seguidores son lo que lleva a monetizar)
-FB_MET = {"blue_reels_play_count": "reproducciones", "post_impressions_unique": "alcance",
+# Meta retiró post_impressions_unique (v25, jun 2026); "views" (post_media_view) es la métrica que muestra el panel.
+FB_MET = {"blue_reels_play_count": "reproducciones", "fb_reels_total_plays": "reproducciones_total",
           "post_video_followers": "seguidores", "post_video_avg_time_watched": "seg_promedio_vistos",
           "post_video_social_actions": "_social", "post_video_likes_by_reaction_type": "_reacciones"}
 IG_MET = {"views": "reproducciones", "reach": "alcance", "likes": "reacciones", "comments": "comentarios",
@@ -55,11 +56,21 @@ def _insights(url_base, metricas, token):
     return out
 
 
+FB_POST_MET = {"post_media_view": "vistas", "post_total_media_view_unique": "alcance"}
+
+
 def facebook(vid, token):
     raw = _insights(f"{GRAPH}/{vid}/video_insights", list(FB_MET), token)
+    try:  # vistas y alcance nuevos viven en el post del reel, no en el video
+        pid = http("GET", f"{GRAPH}/{vid}?fields=post_id&access_token={_q(token)}").get("post_id")
+        if pid:
+            for k, v in _insights(f"{GRAPH}/{pid}/insights", list(FB_POST_MET), token).items():
+                raw["post:" + k] = v
+    except ErrorRed:
+        pass
     m = {}
     for k, v in raw.items():
-        n = FB_MET.get(k)
+        n = FB_MET.get(k) or FB_POST_MET.get(k.replace("post:", "", 1))
         if n == "_reacciones" and isinstance(v, dict):
             m["reacciones"] = sum(v.values())
         elif n == "_social" and isinstance(v, dict):
@@ -67,6 +78,10 @@ def facebook(vid, token):
             m["compartidos"] = v.get("SHARE", v.get("share", 0))
         elif n and not n.startswith("_") and isinstance(v, (int, float)):
             m[n] = v
+    if "seg_promedio_vistos" in m:  # Meta lo da en milisegundos
+        m["seg_promedio_vistos"] = round(m["seg_promedio_vistos"] / 1000, 1)
+    # Para el puntaje manda el número más alto que dé Meta (el panel cuenta "vistas")
+    m["reproducciones"] = max(m.get("reproducciones", 0), m.get("reproducciones_total", 0), m.get("vistas", 0))
     return m
 
 
