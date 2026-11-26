@@ -12,9 +12,13 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: SF_TIKTOK_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: SF_IG_ID"
   }
  },
  "aviso": "[reel] AVISO: no se pudo usar la voz 'elevenlabs' (falta la llave de ElevenLabs (ELEVENLABS_API_KEY o ~/.config/senorfutbol/elevenlabs.key)). Uso 'edge'.",
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-25-sf-pizarra-saque-banda.mp4",
- "actualizado": "2026-11-25 18:31"
+ "actualizado": "2026-11-25 18:56",
+ "estado": "completo"
 }
