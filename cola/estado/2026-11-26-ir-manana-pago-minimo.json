@@ -12,8 +12,12 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: IR_TIKTOK_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-26-ir-manana-pago-minimo.mp4",
- "actualizado": "2026-11-26 08:31"
+ "actualizado": "2026-11-26 08:56",
+ "estado": "completo"
 }
