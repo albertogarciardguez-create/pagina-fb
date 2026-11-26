@@ -1,0 +1,76 @@
+{
+ "id": "2026-11-26-b-portero-gol-final-2013",
+ "header": "EL DÍA QUE… · FINAL CLAUSURA 2013",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats", "bg": "90+", "gap": 0.2,
+   "say": "Tiempo de compensación de una final. Tu equipo pierde dos a cero en el global… y el portero sube a rematar.",
+   "captions": ["Tiempo de <em>compensación</em>", "de una <em>final</em>.", "Tu equipo pierde", "<em>2-0</em> en el global…", "y el <em>portero</em>", "sube a <em>rematar</em>."],
+   "items": [{"n": "0-2", "label": "GLOBAL", "color": "red"}, {"n": "90+", "label": "MINUTO", "color": "ink"}]
+  },
+  {
+   "type": "headline", "bg": "2013", "gap": 0.15,
+   "say": "Final del Clausura dos mil trece: América contra Cruz Azul. La Máquina había ganado la ida por la mínima.",
+   "captions": ["Final del", "<em>Clausura 2013</em>:", "<em>América</em>", "contra <em>Cruz Azul</em>.", "La Máquina", "había ganado la ida", "por la <em>mínima</em>."],
+   "tag": "LA FINAL", "title": "AMÉRICA VS\nCRUZ AZUL", "sub": "Cruz Azul ganó la ida 1-0"
+  },
+  {
+   "type": "scoreboard", "bg": "0-2", "gap": 0.15,
+   "say": "En la vuelta, Teófilo Gutiérrez amplió la ventaja… y el América, además, se quedó con diez por la expulsión de Jesús Molina.",
+   "captions": ["En la <em>vuelta</em>,", "<em>Teófilo Gutiérrez</em>", "amplió la ventaja…", "y el América,", "además,", "se quedó con <em>10</em>", "por la expulsión", "de <em>Jesús Molina</em>."],
+   "tag": "VUELTA · GLOBAL 0-2", "home": "AMÉRICA", "away": "CRUZ AZUL",
+   "goals": [{"side": "away", "at": 0.22}],
+   "note": "CON 10 POR LA ROJA A", "noteHL": "MOLINA"
+  },
+  {
+   "type": "scoreboard", "bg": "87'", "gap": 0.15,
+   "say": "Minuto ochenta y siete: Aquivaldo Mosquera descuenta. Pero faltaba otro gol… y ya casi no quedaba tiempo.",
+   "captions": ["Minuto <em>87</em>:", "<em>Aquivaldo Mosquera</em>", "descuenta.", "Pero faltaba", "<em>otro gol</em>…", "y ya casi", "no quedaba <em>tiempo</em>."],
+   "tag": "MINUTO 87 · GLOBAL 1-2", "home": "AMÉRICA", "away": "CRUZ AZUL",
+   "goals": [{"side": "away", "at": 0.0}, {"side": "home", "at": 0.3}],
+   "note": "DESCUENTA", "noteHL": "MOSQUERA"
+  },
+  {
+   "type": "headline", "bg": "1", "gap": 0.15,
+   "say": "Entonces, en la compensación, llega un último tiro de esquina… y el portero Moisés Muñoz deja su arco y se va al área.",
+   "captions": ["Entonces,", "en la <em>compensación</em>,", "llega un último", "<em>tiro de esquina</em>…", "y el portero", "<em>Moisés Muñoz</em>", "deja su arco", "y se va al <em>área</em>."],
+   "tag": "EL ÚLTIMO CÓRNER", "title": "EL PORTERO\nSUBE", "sub": "Moisés Muñoz deja su arco"
+  },
+  {
+   "type": "play", "bg": "GOL", "speed": 1.12, "gap": 0.35,
+   "say": "Centro… cabezazo de Muñoz… el balón pega en Alejandro Castro… ¡y entra! Dos a dos en el global.",
+   "captions": ["Centro…", "cabezazo", "de <em>Muñoz</em>…", "el balón pega", "en <em>Alejandro Castro</em>…", "¡y <em>entra</em>!", "<em>2-2</em> en el global."],
+   "minute": "90+'", "vs": "vs CRUZ AZUL", "sub": "FINAL · VUELTA", "play": "corner_right",
+   "passer": "CÓRNER", "scorer": "MUÑOZ", "result": "2-2 · GLOBAL"
+  },
+  {
+   "type": "headline", "bg": "11", "gap": 0.2,
+   "say": "Hubo tiempo extra… y en penales, el América fue campeón. Su título número once, gracias a un portero que no se rindió.",
+   "captions": ["Hubo <em>tiempo extra</em>…", "y en <em>penales</em>,", "el América", "fue <em>campeón</em>.", "Su título", "número <em>11</em>,", "gracias a un portero", "que <em>no se rindió</em>."],
+   "tag": "PENALES", "title": "AMÉRICA\nCAMPEÓN", "sub": "Su título número 11"
+  },
+  {
+   "type": "question", "bg": "¿?",
+   "say": "Tú dime: ¿es el gol de portero más grande de la Liga MX… o hay otro que lo supera? Sígueme, cada semana te cuento una final que nadie olvida. ¡Te leo en los comentarios!",
+   "captions": ["Tú dime:", "¿es el <em>gol de portero</em>", "más grande", "de la <em>Liga MX</em>…", "o hay otro", "que lo <em>supera</em>?", "<em>Sígueme</em>,", "cada semana", "una <em>final</em>", "que nadie olvida.", "¡Te leo en los <em>comentarios</em>!"],
+   "pre": "TÚ DIME:", "q": "¿EL GOL DE PORTERO\nMÁS GRANDE?", "opts": ["EL DE MUÑOZ", "HAY OTRO"]
+  }
+ ],
+ "post": "Tiempo de compensación de una final, 0-2 en el global… y el portero sube a rematar. 🧤⚽\n\nFinal del Clausura 2013, América vs Cruz Azul: La Máquina ganó la ida por la mínima y Teófilo Gutiérrez amplió en la vuelta. América, con 10 por la expulsión de Jesús Molina, descontó con Aquivaldo Mosquera al 87'. En la compensación, Moisés Muñoz subió al último córner, su cabezazo pegó en Alejandro Castro y entró: 2-2 en el global. Tiempo extra, penales… y el América fue campeón por undécima vez.\n\n¿Es el gol de portero más grande de la Liga MX o hay otro que lo supera? 👇",
+ "hashtags": ["#LigaMX", "#América", "#CruzAzul", "#Futbol", "#ElDíaQue"],
+ "sources": [
+  "https://www.tudn.com/futbol/liga-mx/cruz-azul-vs-america-la-final-del-clausura-2013-el-peor-recuerdo-para-la-maquina",
+  "https://www.record.com.mx/futbol-liga-mx-america/america-vs-cruz-azul-de-2013-una-final-con-cierre-de-pelicula"
+ ],
+ "redes_textos": {
+  "facebook": "Tiempo de compensación de una final, 0-2 en el global… y el portero sube a rematar. 🧤⚽\n\nFinal del Clausura 2013, América vs Cruz Azul: La Máquina ganó la ida por la mínima y Teófilo Gutiérrez amplió en la vuelta. América, con 10 por la expulsión de Jesús Molina, descontó con Aquivaldo Mosquera al 87'. En la compensación, Moisés Muñoz subió al último córner, su cabezazo pegó en Alejandro Castro y entró: 2-2 en el global. Tiempo extra, penales… y el América fue campeón por undécima vez.\n\n¿Es el gol de portero más grande de la Liga MX o hay otro que lo supera? 👇\n\n#LigaMX #América #CruzAzul #Futbol #ElDíaQue",
+  "instagram": "0-2 en el global, compensación… y el portero sube a rematar 🧤 La final de 2013 que nadie olvida.\n\n¿El gol de portero más grande de la Liga MX? Comenta 👇 y compártelo con tu compa de Cruz Azul.\n\n#LigaMX #América #CruzAzul #ElDíaQue",
+  "youtube": {"titulo": "El día que un portero empató una final en la compensación #Shorts", "descripcion": "Final del Clausura 2013: Moisés Muñoz subió al último córner y empató el global ante Cruz Azul. América fue campeón en penales.\n#LigaMX #América #CruzAzul #Shorts"},
+  "tiktok": "0-2 en el global… y el portero sube a rematar 🧤 #LigaMX #América #CruzAzul #ElDíaQue"
+ }
+}

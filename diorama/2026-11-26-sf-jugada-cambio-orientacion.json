@@ -1,0 +1,731 @@
+{
+ "id": "2026-11-26-sf-jugada-cambio-orientacion",
+ "plantilla": "iso",
+ "marca": "senorfutbol",
+ "kind": "jugada",
+ "cancha": "f7",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "vis": "jugada",
+   "mus": "mayor",
+   "say": "Todos van al balón… y el gol está del otro lado. Tu equipo se amontona por la izquierda, el rival también… y nadie ve al once, que está completamente solo.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 23,
+    "t": [
+     0,
+     -10
+    ],
+    "cy": 0.56
+   },
+   "titulo": "CAMBIA DE LADO",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.0
+   },
+   "team": [
+    {
+     "id": "PO",
+     "eq": "po",
+     "x": 50,
+     "y": 95
+    },
+    {
+     "id": "2",
+     "x": 30,
+     "y": 72
+    },
+    {
+     "id": "3",
+     "x": 70,
+     "y": 72
+    },
+    {
+     "id": "MC",
+     "x": 46,
+     "y": 56
+    },
+    {
+     "id": "7",
+     "x": 16,
+     "y": 42
+    },
+    {
+     "id": "11",
+     "x": 86,
+     "y": 40
+    },
+    {
+     "id": "9",
+     "x": 50,
+     "y": 28
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "eq": "po",
+     "x": 50,
+     "y": 4
+    },
+    {
+     "id": "R2",
+     "x": 30,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 58,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 26,
+     "y": 40
+    },
+    {
+     "id": "R5",
+     "x": 44,
+     "y": 44
+    },
+    {
+     "id": "R6",
+     "x": 60,
+     "y": 36
+    }
+   ],
+   "ball": "7",
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.45,
+     "pos": {
+      "9": [
+       30,
+       32
+      ],
+      "MC": [
+       30,
+       52
+      ],
+      "R4": [
+       20,
+       42
+      ],
+      "R5": [
+       28,
+       48
+      ],
+      "R6": [
+       36,
+       36
+      ],
+      "R3": [
+       44,
+       24
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        30,
+        32
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "MC",
+       "to": [
+        30,
+        52
+       ],
+       "kind": "run"
+      },
+      {
+       "from": "R4",
+       "to": [
+        20,
+        42
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.5,
+     "tags": {
+      "11": "SOLO"
+     },
+     "marca": [
+      "11"
+     ],
+     "pausa": true,
+     "zone": {
+      "x": 64,
+      "y": 20,
+      "w": 34,
+      "h": 34,
+      "label": "NADIE",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "inherit": true,
+   "mus": "mayor",
+   "say": "La solución tiene nombre: cambio de orientación. Primero atraes por un lado. Dos o tres pases cortos en la izquierda… para que el rival se cierre ahí.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 23,
+    "t": [
+     -4,
+     -10
+    ],
+    "cy": 0.56
+   },
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.0,
+     "pos": {
+      "9": [
+       50,
+       28
+      ],
+      "MC": [
+       40,
+       54
+      ],
+      "R4": [
+       26,
+       40
+      ],
+      "R5": [
+       40,
+       46
+      ],
+      "R6": [
+       56,
+       36
+      ],
+      "R3": [
+       54,
+       22
+      ]
+     },
+     "ball": "7",
+     "dur": 0.4
+    },
+    {
+     "s": 2,
+     "at": 0.15,
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "7",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "at": 0.45,
+     "ball": "7",
+     "pos": {
+      "R4": [
+       18,
+       42
+      ],
+      "R5": [
+       26,
+       46
+      ],
+      "R6": [
+       38,
+       40
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "7",
+       "kind": "pass"
+      },
+      {
+       "from": "R5",
+       "to": [
+        26,
+        46
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R6",
+       "to": [
+        38,
+        40
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 6,
+      "y": 30,
+      "w": 40,
+      "h": 28,
+      "label": "ATRAE",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "inherit": true,
+   "mus": "mayor",
+   "say": "Cuando ya se cerraron, la sueltas al medio… y de un solo pase largo, cambias el juego al once, que te espera libre del otro lado.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 23,
+    "t": [
+     4,
+     -10
+    ],
+    "cy": 0.56
+   },
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.4,
+     "ball": "MC",
+     "arrows": [
+      {
+       "from": "7",
+       "to": "MC",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "s": 0,
+     "at": 0.85,
+     "ball": "11",
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "11",
+       "kind": "pass",
+       "curve": -0.25
+      }
+     ],
+     "marca": [
+      "11"
+     ],
+     "zone": {
+      "x": 64,
+      "y": 20,
+      "w": 34,
+      "h": 34,
+      "label": "LADO DÉBIL",
+      "color": "green"
+     }
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "inherit": true,
+   "mus": "mayor",
+   "say": "Y aquí viene lo bueno… el rival tiene que cruzar toda la cancha. Tu once conduce de frente, tu nueve ataca el primer palo… y queda solo para empujarla.",
+   "cam": {
+    "rot": 25,
+    "e": 48,
+    "zoom": 28,
+    "t": [
+     8,
+     -16
+    ],
+    "cy": 0.56
+   },
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.5,
+     "pos": {
+      "R6": [
+       54,
+       30
+      ],
+      "R3": [
+       62,
+       20
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R6",
+       "to": [
+        54,
+        30
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.05,
+     "pos": {
+      "11": [
+       80,
+       18
+      ]
+     },
+     "ball": "11",
+     "arrows": [
+      {
+       "from": "11",
+       "to": [
+        80,
+        18
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.35,
+     "pos": {
+      "9": [
+       56,
+       10
+      ]
+     },
+     "arrows": [
+      {
+       "from": "9",
+       "to": [
+        56,
+        10
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.75,
+     "ball": "9",
+     "arrows": [
+      {
+       "from": "11",
+       "to": "9",
+       "kind": "pass"
+      }
+     ],
+     "marca": [
+      "9"
+     ]
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "mus": "menor",
+   "say": "El error común: cambiar de lado sin atraer primero. Si el rival no se cerró… el pase largo solo le da tiempo de acomodarse.",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 23,
+    "t": [
+     0,
+     -10
+    ],
+    "cy": 0.56
+   },
+   "team": [
+    {
+     "id": "PO",
+     "eq": "po",
+     "x": 50,
+     "y": 95
+    },
+    {
+     "id": "2",
+     "x": 30,
+     "y": 72
+    },
+    {
+     "id": "3",
+     "x": 70,
+     "y": 72
+    },
+    {
+     "id": "MC",
+     "x": 46,
+     "y": 56
+    },
+    {
+     "id": "7",
+     "x": 16,
+     "y": 42
+    },
+    {
+     "id": "11",
+     "x": 86,
+     "y": 40
+    },
+    {
+     "id": "9",
+     "x": 50,
+     "y": 28
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "eq": "po",
+     "x": 50,
+     "y": 4
+    },
+    {
+     "id": "R2",
+     "x": 32,
+     "y": 20
+    },
+    {
+     "id": "R3",
+     "x": 66,
+     "y": 20
+    },
+    {
+     "id": "R4",
+     "x": 24,
+     "y": 40
+    },
+    {
+     "id": "R5",
+     "x": 50,
+     "y": 44
+    },
+    {
+     "id": "R6",
+     "x": 74,
+     "y": 38
+    }
+   ],
+   "ball": "MC",
+   "steps": [
+    {
+     "s": 1,
+     "at": 0.2,
+     "ball": "11",
+     "pos": {
+      "R6": [
+       82,
+       38
+      ]
+     },
+     "arrows": [
+      {
+       "from": "MC",
+       "to": "11",
+       "kind": "pass",
+       "curve": -0.25
+      },
+      {
+       "from": "R6",
+       "to": [
+        82,
+        38
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.7,
+     "marca": [
+      "R6"
+     ],
+     "tags": {
+      "R6": "LLEGÓ"
+     },
+     "pausa": true
+    }
+   ]
+  },
+  {
+   "vis": "jugada",
+   "mus": "mayor",
+   "cam": {
+    "rot": -30,
+    "e": 50,
+    "zoom": 30,
+    "t": [
+     0,
+     -4
+    ],
+    "cy": 0.56
+   },
+   "titulo": "EJERCICIO",
+   "tituloAt": {
+    "s": 0,
+    "at": 0.0
+   },
+   "say": "Ejercicio: cuatro contra tres en un lado, y un compañero solo en el otro. Mínimo tres pases para atraer… y el gol solo vale si entras por el lado contrario.",
+   "team": [
+    {
+     "id": "A",
+     "label": "A",
+     "x": 22,
+     "y": 56
+    },
+    {
+     "id": "B",
+     "label": "B",
+     "x": 40,
+     "y": 48
+    },
+    {
+     "id": "C",
+     "label": "C",
+     "x": 18,
+     "y": 34
+    },
+    {
+     "id": "D",
+     "label": "D",
+     "x": 42,
+     "y": 30
+    },
+    {
+     "id": "E",
+     "label": "E",
+     "x": 82,
+     "y": 40
+    }
+   ],
+   "rival": [
+    {
+     "id": "X1",
+     "x": 28,
+     "y": 44
+    },
+    {
+     "id": "X2",
+     "x": 34,
+     "y": 36
+    },
+    {
+     "id": "X3",
+     "x": 24,
+     "y": 28
+    }
+   ],
+   "ball": "A",
+   "steps": [
+    {
+     "s": 0,
+     "at": 0.45,
+     "ball": "B",
+     "arrows": [
+      {
+       "from": "A",
+       "to": "B",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "s": 0,
+     "at": 0.7,
+     "ball": "C",
+     "arrows": [
+      {
+       "from": "B",
+       "to": "C",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.1,
+     "ball": "D",
+     "arrows": [
+      {
+       "from": "C",
+       "to": "D",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "s": 1,
+     "at": 0.6,
+     "ball": "E",
+     "arrows": [
+      {
+       "from": "D",
+       "to": "E",
+       "kind": "pass",
+       "curve": -0.2
+      }
+     ],
+     "marca": [
+      "E"
+     ],
+     "zone": {
+      "x": 66,
+      "y": 24,
+      "w": 30,
+      "h": 32,
+      "label": "AQUÍ VALE",
+      "color": "green"
+     }
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "say": "Guarda este video y mándaselo a tu equipo. Y dime: ¿tu equipo cambia de lado… o se amontona en el balón? Te leo.",
+   "q": [
+    "¿CAMBIAS DE LADO",
+    "O TE AMONTONAS?"
+   ],
+   "opts": [
+    "CAMBIO DE LADO",
+    "AL BALÓN"
+   ]
+  }
+ ],
+ "post": "Todos van al balón… y el gol está del otro lado. 🔄\n\nCambio de orientación en fútbol 7: atrae al rival con 2 o 3 pases cortos por un lado, suéltala al medio y cambia el juego con un pase largo al compañero que quedó solo.\n\nError común: cambiar sin atraer primero.\n\n¿Tu equipo cambia de lado o se amontona en el balón? 👇",
+ "hashtags": [
+  "#Futbol7",
+  "#TacticaFutbol",
+  "#EntrenadorDeFutbol",
+  "#FutbolAmateur"
+ ],
+ "redes_textos": {
+  "facebook": "Todos van al balón… y el gol está del otro lado. 🔄\n\nCambio de orientación en fútbol 7: atrae al rival con 2 o 3 pases cortos por un lado, suéltala al medio y cambia el juego con un pase largo al compañero que quedó solo.\n\nError común: cambiar sin atraer primero.\nEjercicio: 4 contra 3 en un lado y un compañero solo en el otro; el gol solo vale si entras por el lado contrario.\n\n¿Tu equipo cambia de lado o se amontona en el balón? 👇\n\n#Futbol7 #TacticaFutbol #EntrenadorDeFutbol #FutbolAmateur",
+  "instagram": "Todos van al balón… y el gol está del otro lado 🔄 Atrae, suelta y cambia.\n\nGuárdalo para tu próximo entrenamiento y mándaselo a tu equipo 👇\n\n#Futbol7 #TacticaFutbol #FutbolAmateur #Entrenador",
+  "youtube": {
+   "titulo": "Cambio de orientación en fútbol 7: atrae por un lado y ataca por el otro #Shorts",
+   "descripcion": "Cómo atraer al rival con pases cortos y cambiar el juego al lado débil, el error común y un ejercicio para entrenarlo.\n#Futbol7 #TacticaFutbol #Shorts"
+  },
+  "tiktok": "Todos van al balón… y el gol está del otro lado 🔄 #Futbol7 #TacticaFutbol #FutbolAmateur"
+ }
+}

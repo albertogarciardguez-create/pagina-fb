@@ -1,0 +1,212 @@
+{
+ "id": "2026-11-26-a-ida-cuartos-resultados",
+ "header": "LIGUILLA · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "10",
+   "gap": 0.15,
+   "say": "Rayados jugó con diez desde el minuto doce… y el América no le pudo meter ni uno.",
+   "captions": [
+    "<em>Rayados</em> jugó",
+    "con <em>10</em>",
+    "desde el minuto <em>12</em>…",
+    "y el <em>América</em>",
+    "no le pudo meter",
+    "<em>ni uno</em>."
+   ],
+   "items": [
+    {
+     "n": "10",
+     "label": "DESDE EL 12'",
+     "color": "red"
+    },
+    {
+     "n": "0-0",
+     "label": "FINAL",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "bg": "0-0",
+   "gap": 0.15,
+   "say": "Expulsado Ricardo Chávez, el América tuvo el balón casi todo el partido: sesenta y nueve por ciento, y ocho tiros a puerta contra uno.",
+   "captions": [
+    "Expulsado",
+    "<em>Ricardo Chávez</em>,",
+    "el América",
+    "tuvo el balón",
+    "casi <em>todo</em> el partido:",
+    "<em>69%</em>,",
+    "y <em>8 tiros</em> a puerta",
+    "contra <em>1</em>."
+   ],
+   "title": "IDA · CUARTOS",
+   "left": "RAYADOS",
+   "right": "AMÉRICA",
+   "rows": [
+    {
+     "label": "POSESIÓN %",
+     "l": "31",
+     "r": "69"
+    },
+    {
+     "label": "TIROS A PUERTA",
+     "l": "1",
+     "r": "8"
+    },
+    {
+     "label": "CÓRNERS",
+     "l": "3",
+     "r": "12"
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "1",
+   "gap": 0.15,
+   "say": "Y ahí apareció el Mochis Cárdenas… todo lo que llegó, se topó con él.",
+   "captions": [
+    "Y ahí apareció",
+    "el <em>Mochis</em>",
+    "<em>Cárdenas</em>…",
+    "todo lo que llegó,",
+    "se topó",
+    "<em>con él</em>."
+   ],
+   "tag": "EL HÉROE",
+   "title": "EL MOCHIS\nCÁRDENAS",
+   "sub": "Portero de Rayados"
+  },
+  {
+   "type": "scoreboard",
+   "bg": "2-0",
+   "gap": 0.15,
+   "say": "En Toluca no hubo misterio: dos a cero al Atlas, con doblete de Helinho… uno de zurdazo y otro de penal.",
+   "captions": [
+    "En <em>Toluca</em>",
+    "no hubo misterio:",
+    "<em>2-0</em> al Atlas,",
+    "con doblete",
+    "de <em>Helinho</em>…",
+    "uno de <em>zurdazo</em>",
+    "y otro de <em>penal</em>."
+   ],
+   "tag": "IDA · NEMESIO DIEZ",
+   "home": "TOLUCA",
+   "away": "ATLAS",
+   "goals": [
+    {
+     "side": "home",
+     "at": 0.3
+    },
+    {
+     "side": "home",
+     "at": 0.36
+    }
+   ],
+   "note": "DOBLETE DE",
+   "noteHL": "HELINHO"
+  },
+  {
+   "type": "headline",
+   "bg": "SÁB",
+   "gap": 0.15,
+   "say": "Pero ojo… el sábado, al América le basta empatar en casa. Y el Atlas necesita ganar por dos goles.",
+   "captions": [
+    "Pero <em>ojo</em>…",
+    "el <em>sábado</em>,",
+    "al América",
+    "le basta <em>empatar</em>",
+    "en casa.",
+    "Y el <em>Atlas</em>",
+    "necesita ganar",
+    "por <em>2 goles</em>."
+   ],
+   "tag": "VUELTA · SÁBADO 28",
+   "title": "AMÉRICA: LE SIRVE\nEL EMPATE",
+   "sub": "Atlas debe ganar por 2"
+  },
+  {
+   "type": "table",
+   "bg": "HOY",
+   "gap": 0.15,
+   "say": "Y hoy sigue la ida: Pachuca contra Chivas a las seis… y León contra Cruz Azul a las ocho y diez, hora de Juárez.",
+   "captions": [
+    "Y <em>hoy</em> sigue la ida:",
+    "<em>Pachuca</em>",
+    "contra <em>Chivas</em>",
+    "a las <em>6</em>…",
+    "y <em>León</em>",
+    "contra <em>Cruz Azul</em>",
+    "a las <em>8:10</em>,",
+    "hora de Juárez."
+   ],
+   "title": "HOY · JUEVES",
+   "sub": "HORA JUÁREZ",
+   "rows": [
+    {
+     "pos": "JUE",
+     "team": "PACHUCA vs CHIVAS",
+     "pts": "18:00",
+     "hl": true
+    },
+    {
+     "pos": "JUE",
+     "team": "LEÓN vs CRUZ AZUL",
+     "pts": "20:10",
+     "hl": true
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Tú dime: ¿el América lo remata en casa… o Rayados da la sorpresa? ¡Te leo en los comentarios!",
+   "captions": [
+    "Tú dime:",
+    "¿el <em>América</em>",
+    "lo remata en casa…",
+    "o <em>Rayados</em>",
+    "da la <em>sorpresa</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "LA VUELTA:",
+   "q": "¿QUIÉN PASA\nA SEMIS?",
+   "opts": [
+    "AMÉRICA",
+    "RAYADOS"
+   ]
+  }
+ ],
+ "post": "Rayados jugó con 10 desde el minuto 12… y el América no le pudo meter ni uno. 🧤\n\nIda de cuartos:\n⚽ Rayados 0-0 América · 69% de posesión y 8 tiros a puerta del América contra 1; apareció el Mochis Cárdenas.\n⚽ Toluca 2-0 Atlas · doblete de Helinho.\n\nEl sábado, al América le basta empatar en casa; el Atlas necesita ganar por 2.\n\nHoy (hora de Juárez): Pachuca vs Chivas 6:00 pm · León vs Cruz Azul 8:10 pm.\n\n¿El América lo remata en casa o Rayados da la sorpresa? 👇",
+ "hashtags": [
+  "#LigaMX",
+  "#Liguilla",
+  "#Apertura2026",
+  "#Rayados",
+  "#América"
+ ],
+ "sources": [
+  "https://www.enjuegodeportes.com/liga-mx/monterrey-america-0-0-ida-cuartos-de-final-liguilla-apertura-2026-expulsion-chavez/",
+  "https://www.elfinanciero.com.mx/deportes/2026/11/25/toluca-vs-atlas-en-vivo-resultado-de-los-cuartos-de-final-ida-apertura-2026-de-liga-mx/",
+  "https://www.record.com.mx/historia/donde-ver-cuartos-de-final-ida-apertura-2026-fechas-horarios-canales-transmision-2026112421242072610"
+ ],
+ "redes_textos": {
+  "facebook": "Rayados jugó con 10 desde el minuto 12… y el América no le pudo meter ni uno. 🧤\n\nIda de cuartos:\n⚽ Rayados 0-0 América · 69% de posesión y 8 tiros a puerta del América contra 1; apareció el Mochis Cárdenas.\n⚽ Toluca 2-0 Atlas · doblete de Helinho.\n\nEl sábado, al América le basta empatar en casa; el Atlas necesita ganar por 2.\n\nHoy (hora de Juárez): Pachuca vs Chivas 6:00 pm · León vs Cruz Azul 8:10 pm.\n\n¿El América lo remata en casa o Rayados da la sorpresa? 👇\n\n#LigaMX #Liguilla #Apertura2026 #Rayados #América",
+  "instagram": "Con 10 desde el minuto 12… y el América no pudo 🧤 Rayados 0-0 América y Toluca 2-0 Atlas en la ida.\n\n¿América o Rayados a semis? Comenta 👇 y compártelo con tu compa del otro equipo.\n\n#LigaMX #Liguilla #Apertura2026 #Rayados",
+  "youtube": {
+   "titulo": "Rayados con 10 aguantó al América: así quedó la ida de cuartos #Shorts",
+   "descripcion": "Rayados 0-0 América con 10 desde el minuto 12 y Toluca 2-0 Atlas con doblete de Helinho. Hoy: Pachuca vs Chivas y León vs Cruz Azul.\n#LigaMX #Liguilla #Apertura2026 #Shorts"
+  },
+  "tiktok": "Con 10 desde el 12' y el América no pudo 🧤 ¿Quién pasa a semis? #LigaMX #Liguilla #Rayados #América"
+ }
+}
