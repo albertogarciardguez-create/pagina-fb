@@ -1,0 +1,16 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1591246096382701",
+   "url": "https://www.facebook.com/reel/1591246096382701",
+   "programado": true,
+   "fecha": "2026-11-27 08:59"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: SF_YT_REFRESH"
+  }
+ },
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-27-sf-liguilla-que-necesitan.mp4",
+ "actualizado": "2026-11-27 08:59"
+}
