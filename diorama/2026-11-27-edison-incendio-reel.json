@@ -1,0 +1,784 @@
+{
+ "plantilla": "papel",
+ "tts": "elevenlabs",
+ "tts_respaldo": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.05,
+ "pausaFrase": 0.3,
+ "pausaEscena": 0.5,
+ "inicio": 0.1,
+ "cola": 4.2,
+ "id": "2026-11-27-edison-incendio-reel",
+ "titulo": "Edison y el incendio de su fábrica (reel)",
+ "scenes": [
+  {
+   "say": "A los sesenta y siete años, vio arder su fábrica. Y mandó llamar a su esposa… para que viera el fuego. Al final vas a entender por qué.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "fabrica",
+      "x": 500,
+      "y": 840,
+      "s_": 1.4,
+      "s": 0,
+      "f": 0,
+      "apagada": true
+     },
+     {
+      "k": "fuego",
+      "x": 500,
+      "y": 800,
+      "s_": 1.3,
+      "w": 420,
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "figs": [
+     {
+      "x": 180,
+      "h": 300,
+      "s": 1,
+      "f": 0.1,
+      "o": {
+       "cam": "#3A3A44",
+       "pan": "#2A2A30",
+       "pelo": "#D9D6CC",
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "Vio arder su fábrica",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0,
+      "x": 430
+     },
+     {
+      "t": "…y llamó a su esposa",
+      "y": 300,
+      "col": "or",
+      "s": 1,
+      "f": 0.3,
+      "x": 430
+     },
+     {
+      "t": "¿Por qué?",
+      "y": 440,
+      "col": "rojo",
+      "s": 2,
+      "f": 0.2,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Nueva Jersey, nueve de diciembre de mil novecientos catorce. Al caer la tarde, se desató un incendio en la fábrica de Thomas Edison.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "fabrica",
+      "x": 330,
+      "y": 840,
+      "s_": 1.0,
+      "s": 0,
+      "f": 0
+     },
+     {
+      "k": "fabrica",
+      "x": 700,
+      "y": 840,
+      "s_": 0.9,
+      "s": 0,
+      "f": 0.2,
+      "color": "#6E5E50"
+     },
+     {
+      "k": "fuego",
+      "x": 330,
+      "y": 800,
+      "s_": 0.9,
+      "w": 300,
+      "s": 1,
+      "f": 0.5
+     }
+    ],
+    "carteles": [
+     {
+      "t": "9 DIC 1914",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0.1,
+      "size": 72
+     },
+     {
+      "t": "LA FÁBRICA DE EDISON",
+      "y": 300,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Las llamas brincaron de un edificio a otro. Años de trabajo… ardiendo.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "piedra",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "fabrica",
+      "x": 220,
+      "y": 840,
+      "s_": 0.8,
+      "s": 0,
+      "f": 0,
+      "apagada": true
+     },
+     {
+      "k": "fabrica",
+      "x": 560,
+      "y": 840,
+      "s_": 0.8,
+      "s": 0,
+      "f": 0,
+      "color": "#6E5E50",
+      "apagada": true
+     },
+     {
+      "k": "fabrica",
+      "x": 880,
+      "y": 840,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0,
+      "apagada": true
+     },
+     {
+      "k": "fuego",
+      "x": 220,
+      "y": 820,
+      "s_": 0.8,
+      "w": 260,
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "k": "fuego",
+      "x": 560,
+      "y": 820,
+      "s_": 0.8,
+      "w": 260,
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "k": "fuego",
+      "x": 880,
+      "y": 820,
+      "s_": 0.7,
+      "w": 240,
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DE EDIFICIO EN EDIFICIO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "x": 430
+     },
+     {
+      "t": "AÑOS DE TRABAJO",
+      "y": 300,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.2,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Su hijo Charles, de veinticuatro años, corrió a buscarlo. Lo encontró… mirando el fuego.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "fuego",
+      "x": 820,
+      "y": 820,
+      "s_": 1.0,
+      "w": 320,
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "figs": [
+     {
+      "x": 520,
+      "h": 320,
+      "o": {
+       "cam": "#3A3A44",
+       "pan": "#2A2A30",
+       "pelo": "#D9D6CC",
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 80,
+      "h": 300,
+      "camina": [
+       80,
+       330
+      ],
+      "o": {
+       "cam": "#26344D",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SU HIJO CHARLES",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "x": 430
+     },
+     {
+      "t": "LO ENCONTRÓ MIRANDO",
+      "y": 300,
+      "col": "or",
+      "s": 1,
+      "f": 0.2,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y Edison le dijo: ve por tu mamá y sus amigas. Nunca van a volver a ver un incendio así.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "fuego",
+      "x": 840,
+      "y": 820,
+      "s_": 0.9,
+      "w": 280,
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "figs": [
+     {
+      "x": 480,
+      "h": 320,
+      "o": {
+       "cam": "#3A3A44",
+       "pan": "#2A2A30",
+       "pelo": "#D9D6CC",
+       "pose": "ask",
+       "mira": -1
+      }
+     },
+     {
+      "x": 240,
+      "h": 300,
+      "o": {
+       "cam": "#26344D",
+       "pan": "#3A3A2A",
+       "pelo": "#3A2A1E"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "«VE POR TU MAMÁ»",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0.1,
+      "x": 430
+     },
+     {
+      "t": "NUNCA VERÁN ALGO ASÍ",
+      "y": 300,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.3,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Se había vuelto loco? Pero lo que casi nadie sabe… es lo que dijo después.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "corte": true,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "fuego",
+      "x": 500,
+      "y": 820,
+      "s_": 0.7,
+      "w": 300,
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿SE VOLVIÓ LOCO?",
+      "y": 200,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "size": 64,
+      "x": 430
+     },
+     {
+      "t": "PERO…",
+      "y": 360,
+      "col": "or",
+      "s": 1,
+      "f": 0.1,
+      "size": 80,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "El seguro no cubría ni la mitad de lo perdido.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "fabrica",
+      "x": 500,
+      "y": 840,
+      "s_": 1.3,
+      "s": 0,
+      "f": 0,
+      "color": "#4A403A",
+      "apagada": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL SEGURO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "x": 430
+     },
+     {
+      "t": "NI LA MITAD",
+      "y": 300,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.6,
+      "size": 66,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y aun así dijo: tengo más de sesenta y siete años… pero mañana empiezo de nuevo.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "fabrica",
+      "x": 760,
+      "y": 840,
+      "s_": 1.0,
+      "s": 0,
+      "f": 0,
+      "color": "#4A403A",
+      "apagada": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 340,
+      "h": 340,
+      "o": {
+       "cam": "#3A3A44",
+       "pan": "#2A2A30",
+       "pelo": "#D9D6CC",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MÁS DE 67 AÑOS",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3,
+      "x": 430
+     },
+     {
+      "t": "MAÑANA EMPIEZO",
+      "y": 300,
+      "col": "or",
+      "s": 1,
+      "f": 0.5,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Cuentan que también dijo: en el desastre hay mucho valor. Todos nuestros errores se quemaron.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "luz": true,
+    "props": [
+     {
+      "k": "lista",
+      "x": 500,
+      "y": 620,
+      "titulo": "Errores",
+      "items": [
+       "Malas ideas",
+       "Planes viejos",
+       "Lo que no servía"
+      ],
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CUENTAN QUE DIJO",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "LOS ERRORES SE QUEMARON",
+      "y": 300,
+      "col": "or",
+      "s": 1,
+      "f": 0.4,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "say": "Tres semanas después, parte de la fábrica ya estaba trabajando otra vez.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "fabrica",
+      "x": 300,
+      "y": 840,
+      "s_": 1.0,
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "k": "fabrica",
+      "x": 720,
+      "y": 840,
+      "s_": 1.0,
+      "s": 0,
+      "f": 0.7,
+      "color": "#6E5E50"
+     },
+     {
+      "k": "gente",
+      "x": 140,
+      "y": 900,
+      "n": 8,
+      "dx": 100,
+      "h": 150,
+      "s": 0,
+      "f": 0.8
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 3,
+     "suf": " SEMANAS",
+     "y": 160,
+     "s": 0,
+     "f": 0.1,
+     "dur": 1.5,
+     "x": 420
+    },
+    "carteles": [
+     {
+      "t": "OTRA VEZ DE PIE",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Tal vez por eso quiso que ella viera el fuego. No se acababa algo… empezaba otra cosa.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "nivel": 1.2,
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "fuego",
+      "x": 780,
+      "y": 820,
+      "s_": 0.6,
+      "w": 220,
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "figs": [
+     {
+      "x": 300,
+      "h": 320,
+      "o": {
+       "cam": "#3A3A44",
+       "pan": "#2A2A30",
+       "pelo": "#D9D6CC",
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 480,
+      "h": 290,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#6A4A8A",
+       "largo": true,
+       "pelo": "#5A3A26",
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO ERA EL FINAL",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4
+     },
+     {
+      "t": "ERA EL COMIENZO",
+      "y": 300,
+      "col": "or",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Sígueme: cada noche, una historia real que no te contaron.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "Cada noche",
+    "una historia que no te contaron"
+   ]
+  }
+ ],
+ "thumb": [
+  "VIO ARDER",
+  "SU FÁBRICA"
+ ],
+ "post": "A los 67 años vio arder su fábrica… y mandó llamar a su esposa para que viera el fuego. 🔥 Al día siguiente dijo: «mañana empiezo de nuevo». ¿Tú empezarías de cero? 👇",
+ "hashtags": [
+  "#Historias",
+  "#Edison",
+  "#Resiliencia"
+ ],
+ "sources": [
+  "https://www.nps.gov/edis/learn/kidsyouth/timeline-of-edison-and-his-inventions.htm",
+  "https://www.firehouse.com/operations-training/article/12011344/fires-from-100-years-ago",
+  "https://www.businessinsider.in/thomas-edisons-reaction-to-his-factory-burning-down-shows-why-he-was-so-successful/articleshow/34893119.cms",
+  "https://cybersalt.org/illustrations/great-value-in-disaster"
+ ],
+ "redes_textos": {
+  "facebook": "A los 67 años vio arder su fábrica… y mandó llamar a su esposa para que viera el fuego.\n\nWest Orange, Nueva Jersey, 9 de diciembre de 1914. El incendio brincó de un edificio a otro en la fábrica de Thomas Edison. Su hijo Charles lo encontró mirando las llamas, y Edison le pidió: «Ve por tu mamá y sus amigas. Nunca van a volver a ver un incendio así».\n\nEl seguro no cubría ni la mitad. Y aun así dijo: «Tengo más de 67 años… pero mañana empiezo de nuevo». Tres semanas después, parte de la fábrica ya trabajaba otra vez.\n\nSi mañana se quemara todo, ¿tú empezarías de cero? Sí o no 👇\n\n#Historias #Edison #Resiliencia",
+  "instagram": "A los 67 años vio arder su fábrica… y llamó a su esposa para que viera el fuego.\nAl día siguiente: «mañana empiezo de nuevo».\nGuárdalo para el día que sientas que perdiste todo.\n¿Tú empezarías de cero? 👇\n#Historias #Edison #Resiliencia",
+  "youtube": {
+   "titulo": "Vio arder su fábrica a los 67… y llamó a su esposa a verlo #Shorts",
+   "descripcion": "La historia real del incendio de la fábrica de Thomas Edison (9 de diciembre de 1914) y lo que dijo al día siguiente.\n#Historias #Edison #Shorts"
+  },
+  "tiktok": "A los 67 vio arder su fábrica… y llamó a su esposa a ver el fuego. ¿Tú empezarías de cero? #historias #edison #resiliencia #historiasreales"
+ }
+}

@@ -67,7 +67,7 @@ def ajustar(d, toks, ancho, alto, maxs=112, mins=54):
     for s in range(maxs, mins - 1, -4):
         f = font("xb", s)
         lineas, sp = envolver(d, toks, f, ancho)
-        if len(lineas) * s * 1.18 <= alto:
+        if len(lineas) * s * 1.18 <= alto and max(d.textlength(w, font=f) for w, _ in toks) <= ancho:
             return f, s, lineas, sp
     f = font("xb", mins)
     return (f, mins, *envolver(d, toks, f, ancho))
