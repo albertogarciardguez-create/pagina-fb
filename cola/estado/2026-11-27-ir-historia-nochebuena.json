@@ -12,9 +12,13 @@
   },
   "tiktok": {
    "omitido": "faltan secretos: IR_TIKTOK_REFRESH"
+  },
+  "instagram": {
+   "omitido": "faltan secretos: IR_IG_ID"
   }
  },
  "aviso": "[diorama] AVISO: el video salió con la voz de prueba (kokoro), no con la de ElevenLabs.",
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-27-ir-historia-nochebuena.mp4",
- "actualizado": "2026-11-27 11:31"
+ "actualizado": "2026-11-27 11:56",
+ "estado": "completo"
 }
