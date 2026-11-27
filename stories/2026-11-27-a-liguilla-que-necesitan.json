@@ -1,0 +1,193 @@
+{
+ "id": "2026-11-27-a-liguilla-que-necesitan",
+ "header": "LIGUILLA · APERTURA 2026",
+ "voice": "em_alex",
+ "kind": "noticia",
+ "captionMode": "words",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "stats",
+   "bg": "4-0",
+   "gap": 0.12,
+   "say": "Cuatro series, cuatro historias… y una ya parece sentenciada.",
+   "captions": [
+    "<em>4</em> series,",
+    "<em>4</em> historias…",
+    "y una ya parece",
+    "<em>sentenciada</em>."
+   ],
+   "items": [
+    {
+     "n": "4-0",
+     "label": "EN LEÓN",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "type": "scoreboard",
+   "bg": "5",
+   "gap": 0.12,
+   "say": "Cruz Azul le metió cuatro al León en su casa, con doblete de Paradela. León necesita ganar por cinco.",
+   "captions": [
+    "<em>Cruz Azul</em>",
+    "le metió <em>4</em>",
+    "al León",
+    "en su casa,",
+    "con doblete",
+    "de <em>Paradela</em>.",
+    "León necesita",
+    "ganar por <em>5</em>."
+   ],
+   "tag": "IDA · NOU CAMP",
+   "home": "LEÓN",
+   "away": "CRUZ AZUL",
+   "goals": [
+    {
+     "side": "away",
+     "at": 0.12
+    },
+    {
+     "side": "away",
+     "at": 0.2
+    },
+    {
+     "side": "away",
+     "at": 0.28
+    },
+    {
+     "side": "away",
+     "at": 0.36
+    }
+   ],
+   "note": "LEÓN NECESITA",
+   "noteHL": "GANAR POR 5"
+  },
+  {
+   "type": "scoreboard",
+   "bg": "8º",
+   "gap": 0.12,
+   "say": "Pero el superlíder se cayó… Pachuca, octavo, le dio la vuelta a Chivas con dos golazos de Idrissi, el último al noventa y dos.",
+   "captions": [
+    "Pero el <em>superlíder</em>",
+    "se cayó…",
+    "<em>Pachuca</em>, octavo,",
+    "le dio la vuelta",
+    "a <em>Chivas</em>",
+    "con 2 golazos",
+    "de <em>Idrissi</em>,",
+    "el último",
+    "al <em>92</em>."
+   ],
+   "tag": "IDA · ESTADIO HIDALGO",
+   "home": "PACHUCA",
+   "away": "CHIVAS",
+   "goals": [
+    {
+     "side": "away",
+     "at": 0.12
+    },
+    {
+     "side": "home",
+     "at": 0.6
+    },
+    {
+     "side": "home",
+     "at": 0.88
+    }
+   ],
+   "note": "1º VS 8º",
+   "noteHL": "DOBLETE DE IDRISSI"
+  },
+  {
+   "type": "headline",
+   "bg": "1-0",
+   "gap": 0.12,
+   "say": "Pero ojo… a Chivas le basta ganar uno a cero el domingo en el Akron. ¿Por qué? Porque terminó primero de la tabla.",
+   "captions": [
+    "Pero <em>ojo</em>…",
+    "a Chivas le basta",
+    "ganar <em>1-0</em>",
+    "el <em>domingo</em>",
+    "en el Akron.",
+    "¿Por qué?",
+    "Porque terminó",
+    "<em>primero</em>",
+    "de la tabla."
+   ],
+   "tag": "EL DETALLE · DOMINGO",
+   "title": "A CHIVAS LE BASTA\nGANAR 1-0",
+   "sub": "Global empatado = pasa el mejor de la tabla"
+  },
+  {
+   "type": "stats",
+   "bg": "SÁB",
+   "gap": 0.12,
+   "say": "Y el sábado, al América le basta empatar con Rayados… y el Atlas tiene que ganarle por dos al Toluca.",
+   "captions": [
+    "Y el <em>sábado</em>,",
+    "al <em>América</em>",
+    "le basta <em>empatar</em>",
+    "con Rayados…",
+    "y el <em>Atlas</em>",
+    "tiene que ganarle",
+    "por <em>2</em>",
+    "al Toluca."
+   ],
+   "items": [
+    {
+     "n": "0-0",
+     "label": "AMÉRICA",
+     "color": "ink"
+    },
+    {
+     "n": "+2",
+     "label": "ATLAS",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "type": "question",
+   "gap": 0.3,
+   "say": "Entonces dime… ¿Chivas remonta, o Pachuca tumba al superlíder? ¡Te leo en los comentarios!",
+   "captions": [
+    "Entonces dime…",
+    "¿<em>Chivas</em> remonta,",
+    "o <em>Pachuca</em>",
+    "tumba al superlíder?",
+    "¡Te leo",
+    "en los comentarios!"
+   ],
+   "pre": "EL DOMINGO…",
+   "q": "¿CHIVAS REMONTA\nO SE CAE?",
+   "opts": [
+    "CHIVAS",
+    "PACHUCA"
+   ]
+  }
+ ],
+ "post": "Cuatro series, cuatro historias… y una ya parece sentenciada.\n\nIda de cuartos: León 0-4 Cruz Azul y Pachuca 2-1 Chivas. A Chivas le basta ganar 1-0 el domingo por ser primero de la tabla.\n\n¿Chivas remonta o Pachuca tumba al superlíder?",
+ "hashtags": [
+  "#LigaMX",
+  "#Liguilla",
+  "#Chivas"
+ ],
+ "sources": [
+  "https://www.clarosports.com/futbol/liga-mx/idrissi-sentencia-a-chivas-pachuca-remonta-con-un-golazo-al-92-y-toma-ventaja-en-la-ida-de-cuartos-de-final/",
+  "https://www.elimparcial.com/deporte/2026/11/26/cruz-azul-golea-4-0-al-leon-bajo-la-lluvia-y-pone-un-pie-en-las-semifinales-del-apertura-2026-de-la-liga-mx/",
+  "https://news.jointly.mx/leon-cruz-azul-pachuca-chivas-resultado-ida-cuartos-apertura-2026/",
+  "https://news.jointly.mx/liguilla-apertura-2026-clasificados-cruces-favoritos/"
+ ],
+ "redes_textos": {
+  "facebook": "Cuatro series, cuatro historias… y una ya parece sentenciada.\n\nAsí quedó la ida de cuartos:\nLeón 0-4 Cruz Azul (doblete de Paradela): León necesita ganar por 5.\nPachuca 2-1 Chivas (doblete de Idrissi, el último al 92): a Chivas le basta ganar 1-0 el domingo en el Akron por ser primero de la tabla.\nRayados 0-0 América: al América le basta empatar el sábado.\nToluca 2-0 Atlas: Atlas tiene que ganar por 2.\n\n¿Chivas remonta o Pachuca tumba al superlíder?\n\n#LigaMX #Liguilla #Chivas",
+  "instagram": "Una serie ya parece sentenciada… y el superlíder está contra las cuerdas. León 0-4 Cruz Azul y Pachuca 2-1 Chivas.\n\n¿Chivas remonta o se cae? Compártelo con tu compa chiva.\n\n#LigaMX #Liguilla #Chivas",
+  "youtube": {
+   "titulo": "¿Qué necesita cada equipo para pasar a semifinales? Liguilla Apertura 2026 #Shorts",
+   "descripcion": "León 0-4 Cruz Azul y Pachuca 2-1 Chivas en la ida de cuartos. A Chivas le basta ganar 1-0 por ser primero de la tabla.\n#LigaMX #Liguilla #Chivas #Shorts"
+  },
+  "tiktok": "Una serie ya está sentenciada… ¿Chivas remonta o se cae? #LigaMX #Liguilla #Chivas #CruzAzul"
+ }
+}

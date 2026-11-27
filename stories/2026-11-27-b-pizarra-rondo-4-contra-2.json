@@ -1,0 +1,790 @@
+{
+ "id": "2026-11-27-b-pizarra-rondo-4-contra-2",
+ "header": "PIZARRA · FÚTBOL 7",
+ "voice": "em_alex",
+ "kind": "pizarra",
+ "captionMode": "words",
+ "tts": "elevenlabs",
+ "tts_respaldo": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "scenes": [
+  {
+   "type": "board",
+   "bg": "4v2",
+   "title": "ASÍ CALIENTAN LOS GRANDES",
+   "view": "top",
+   "say": "Los equipos grandes calientan así… y el tuyo sigue corriendo vueltas a la cancha. Quédate, que al final te digo el error que lo arruina.",
+   "captions": [
+    "Los equipos <em>grandes</em>",
+    "calientan <em>así</em>…",
+    "y el tuyo",
+    "sigue corriendo",
+    "<em>vueltas</em>",
+    "a la cancha.",
+    "Quédate,",
+    "al final te digo",
+    "el <em>error</em>",
+    "que lo <em>arruina</em>."
+   ],
+   "team": [
+    {
+     "id": "N",
+     "label": "1",
+     "x": 50,
+     "y": 12
+    },
+    {
+     "id": "E",
+     "label": "2",
+     "x": 74,
+     "y": 26
+    },
+    {
+     "id": "S",
+     "label": "3",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "W",
+     "label": "4",
+     "x": 26,
+     "y": 26
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 45,
+     "y": 23
+    },
+    {
+     "id": "R2",
+     "x": 56,
+     "y": 29
+    }
+   ],
+   "ball": "W",
+   "steps": [
+    {
+     "at": 0.05,
+     "ball": "N",
+     "arrows": [
+      {
+       "from": "W",
+       "to": "N",
+       "kind": "pass"
+      }
+     ],
+     "pos": {
+      "R1": [
+       47,
+       18
+      ]
+     }
+    },
+    {
+     "at": 0.3,
+     "ball": "E",
+     "arrows": [
+      {
+       "from": "N",
+       "to": "E",
+       "kind": "pass"
+      }
+     ],
+     "pos": {
+      "R2": [
+       62,
+       31
+      ]
+     }
+    },
+    {
+     "at": 0.55,
+     "ball": "S",
+     "arrows": [
+      {
+       "from": "E",
+       "to": "S",
+       "kind": "pass"
+      }
+     ],
+     "pos": {
+      "R1": [
+       45,
+       34
+      ]
+     }
+    },
+    {
+     "at": 0.8,
+     "ball": "W",
+     "arrows": [
+      {
+       "from": "S",
+       "to": "W",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 22,
+      "y": 8,
+      "w": 56,
+      "h": 36,
+      "label": "RONDO 4 VS 2",
+      "color": "green"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "10'",
+   "say": "¿Te pasa que tu equipo llega frío, y en los primeros diez minutos no conecta dos pases? Se arregla con un rondo: cuatro contra dos.",
+   "captions": [
+    "¿Te pasa",
+    "que tu equipo",
+    "llega <em>frío</em>,",
+    "y en los primeros",
+    "<em>10 minutos</em>",
+    "no conecta",
+    "<em>2 pases</em>?",
+    "Se arregla",
+    "con un <em>rondo</em>:",
+    "<em>4 contra 2</em>."
+   ],
+   "tag": "PIZARRA SEÑOR FÚTBOL",
+   "title": "RONDO\n4 CONTRA 2",
+   "sub": "Fútbol 7 · El calentamiento con balón"
+  },
+  {
+   "type": "board",
+   "bg": "1",
+   "title": "1 · ARMA EL CUADRO",
+   "view": "top",
+   "say": "Paso uno: marca un cuadro de unos diez por diez metros. Cuatro por fuera, uno en cada lado… y dos en medio, a robar.",
+   "captions": [
+    "Paso <em>1</em>:",
+    "marca un <em>cuadro</em>",
+    "de unos",
+    "<em>10 × 10</em> metros.",
+    "<em>4</em> por fuera,",
+    "uno en cada lado…",
+    "y <em>2</em> en medio,",
+    "a <em>robar</em>."
+   ],
+   "team": [
+    {
+     "id": "N",
+     "label": "1",
+     "x": 50,
+     "y": 12
+    },
+    {
+     "id": "E",
+     "label": "2",
+     "x": 74,
+     "y": 26
+    },
+    {
+     "id": "S",
+     "label": "3",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "W",
+     "label": "4",
+     "x": 26,
+     "y": 26
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 45,
+     "y": 23
+    },
+    {
+     "id": "R2",
+     "x": 56,
+     "y": 29
+    }
+   ],
+   "ball": "S",
+   "steps": [
+    {
+     "at": 0.25,
+     "zone": {
+      "x": 22,
+      "y": 8,
+      "w": 56,
+      "h": 36,
+      "label": "10 × 10 M",
+      "color": "green"
+     },
+     "zoneHold": true
+    },
+    {
+     "at": 0.7,
+     "pos": {
+      "R1": [
+       44,
+       30
+      ],
+      "R2": [
+       57,
+       33
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R1",
+       "to": [
+        44,
+        30
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R2",
+       "to": [
+        57,
+        33
+       ],
+       "kind": "press"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "2",
+   "title": "2 · MÁXIMO DOS TOQUES",
+   "view": "top",
+   "say": "Paso dos: máximo dos toques. Recibe con el pie de afuera, perfilado… para ver a tus dos compañeros.",
+   "captions": [
+    "Paso <em>2</em>:",
+    "máximo <em>2 toques</em>.",
+    "Recibe",
+    "con el pie",
+    "de <em>afuera</em>,",
+    "<em>perfilado</em>…",
+    "para ver",
+    "a tus <em>2</em> compañeros."
+   ],
+   "team": [
+    {
+     "id": "N",
+     "label": "1",
+     "x": 50,
+     "y": 12
+    },
+    {
+     "id": "E",
+     "label": "2",
+     "x": 74,
+     "y": 26
+    },
+    {
+     "id": "S",
+     "label": "3",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "W",
+     "label": "4",
+     "x": 26,
+     "y": 26
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 44,
+     "y": 30
+    },
+    {
+     "id": "R2",
+     "x": 57,
+     "y": 33
+    }
+   ],
+   "ball": "S",
+   "steps": [
+    {
+     "at": 0.2,
+     "ball": "E",
+     "arrows": [
+      {
+       "from": "S",
+       "to": "E",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.5,
+     "zone": {
+      "x": 64,
+      "y": 17,
+      "w": 22,
+      "h": 18,
+      "label": "PERFILADO",
+      "color": "green"
+     }
+    },
+    {
+     "at": 0.8,
+     "ball": "N",
+     "arrows": [
+      {
+       "from": "E",
+       "to": "N",
+       "kind": "pass"
+      }
+     ],
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "3",
+   "title": "3 · ABRE LA LÍNEA DE PASE",
+   "view": "top",
+   "say": "Paso tres: si un rival te tapa la línea de pase, no te quedes ahí. Muévete un paso… y abre el ángulo.",
+   "captions": [
+    "Paso <em>3</em>:",
+    "si un rival",
+    "te <em>tapa</em>",
+    "la línea de pase,",
+    "no te quedes ahí.",
+    "<em>Muévete</em> un paso…",
+    "y abre",
+    "el <em>ángulo</em>."
+   ],
+   "team": [
+    {
+     "id": "N",
+     "label": "1",
+     "x": 50,
+     "y": 12
+    },
+    {
+     "id": "E",
+     "label": "2",
+     "x": 74,
+     "y": 26
+    },
+    {
+     "id": "S",
+     "label": "3",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "W",
+     "label": "4",
+     "x": 26,
+     "y": 26
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 46,
+     "y": 22
+    },
+    {
+     "id": "R2",
+     "x": 52,
+     "y": 30
+    }
+   ],
+   "ball": "N",
+   "steps": [
+    {
+     "at": 0.15,
+     "pos": {
+      "R1": [
+       62,
+       19
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R1",
+       "to": [
+        62,
+        19
+       ],
+       "kind": "press"
+      }
+     ],
+     "zone": {
+      "x": 54,
+      "y": 12,
+      "w": 18,
+      "h": 14,
+      "label": "TAPADO",
+      "color": "red"
+     }
+    },
+    {
+     "at": 0.55,
+     "pos": {
+      "E": [
+       74,
+       36
+      ]
+     },
+     "arrows": [
+      {
+       "from": "E",
+       "to": [
+        74,
+        36
+       ],
+       "kind": "run"
+      }
+     ]
+    },
+    {
+     "at": 0.8,
+     "ball": "E",
+     "arrows": [
+      {
+       "from": "N",
+       "to": "E",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 64,
+      "y": 28,
+      "w": 20,
+      "h": 14,
+      "label": "LIBRE",
+      "color": "green"
+     },
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "✗",
+   "title": "ERROR COMÚN: QUEDARTE PARADO",
+   "view": "top",
+   "say": "Pero lo que nadie te dice… es que el rondo se arruina cuando te quedas parado. Tu compañero está presionado, y si nadie se mueve, ya no hay pase. Siempre dale dos opciones.",
+   "captions": [
+    "Pero lo que",
+    "<em>nadie</em> te dice…",
+    "es que el rondo",
+    "se arruina",
+    "cuando te quedas",
+    "<em>parado</em>.",
+    "Tu compañero",
+    "está <em>presionado</em>,",
+    "y si nadie se mueve,",
+    "ya <em>no hay pase</em>.",
+    "Siempre dale",
+    "<em>2 opciones</em>."
+   ],
+   "team": [
+    {
+     "id": "N",
+     "label": "1",
+     "x": 50,
+     "y": 12
+    },
+    {
+     "id": "E",
+     "label": "2",
+     "x": 74,
+     "y": 26
+    },
+    {
+     "id": "S",
+     "label": "3",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "W",
+     "label": "4",
+     "x": 26,
+     "y": 26
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 46,
+     "y": 23
+    },
+    {
+     "id": "R2",
+     "x": 54,
+     "y": 30
+    }
+   ],
+   "ball": "W",
+   "steps": [
+    {
+     "at": 0.3,
+     "pos": {
+      "R1": [
+       34,
+       20
+      ],
+      "R2": [
+       34,
+       32
+      ]
+     },
+     "arrows": [
+      {
+       "from": "R1",
+       "to": [
+        34,
+        20
+       ],
+       "kind": "press"
+      },
+      {
+       "from": "R2",
+       "to": [
+        34,
+        32
+       ],
+       "kind": "press"
+      }
+     ]
+    },
+    {
+     "at": 0.7,
+     "zone": {
+      "x": 20,
+      "y": 14,
+      "w": 22,
+      "h": 24,
+      "label": "SIN SALIDA",
+      "color": "red"
+     },
+     "zoneHold": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "type": "board",
+   "bg": "10",
+   "title": "EJERCICIO: 3 RONDAS DE 2 MIN",
+   "note": "EJERCICIO",
+   "view": "top",
+   "say": "Ejercicio: tres rondas de dos minutos. Diez pases seguidos es punto… y si los de en medio roban, el que la perdió entra al centro. Hazlo antes de cada partido… y vas a llegar caliente desde el primer minuto.",
+   "captions": [
+    "<em>Ejercicio</em>:",
+    "<em>3 rondas</em>",
+    "de <em>2 minutos</em>.",
+    "<em>10 pases</em> seguidos",
+    "es <em>punto</em>…",
+    "y si los de en medio",
+    "<em>roban</em>,",
+    "el que la perdió",
+    "entra al <em>centro</em>.",
+    "Hazlo antes",
+    "de cada <em>partido</em>…",
+    "y vas a llegar",
+    "<em>caliente</em>",
+    "desde el",
+    "primer minuto."
+   ],
+   "team": [
+    {
+     "id": "N",
+     "label": "1",
+     "x": 50,
+     "y": 12
+    },
+    {
+     "id": "E",
+     "label": "2",
+     "x": 74,
+     "y": 26
+    },
+    {
+     "id": "S",
+     "label": "3",
+     "x": 50,
+     "y": 40
+    },
+    {
+     "id": "W",
+     "label": "4",
+     "x": 26,
+     "y": 26
+    }
+   ],
+   "rival": [
+    {
+     "id": "R1",
+     "x": 45,
+     "y": 23
+    },
+    {
+     "id": "R2",
+     "x": 56,
+     "y": 29
+    }
+   ],
+   "ball": "S",
+   "steps": [
+    {
+     "at": 0.12,
+     "ball": "W",
+     "arrows": [
+      {
+       "from": "S",
+       "to": "W",
+       "kind": "pass"
+      }
+     ]
+    },
+    {
+     "at": 0.27,
+     "ball": "N",
+     "arrows": [
+      {
+       "from": "W",
+       "to": "N",
+       "kind": "pass"
+      }
+     ],
+     "zone": {
+      "x": 22,
+      "y": 8,
+      "w": 56,
+      "h": 36,
+      "label": "10 PASES = PUNTO",
+      "color": "green"
+     }
+    },
+    {
+     "at": 0.62,
+     "pos": {
+      "R2": [
+       62,
+       18
+      ]
+     },
+     "ball": "R2",
+     "arrows": [
+      {
+       "from": "N",
+       "to": [
+        62,
+        18
+       ],
+       "kind": "pass"
+      },
+      {
+       "from": "R2",
+       "to": [
+        62,
+        18
+       ],
+       "kind": "press"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "at": 0.85,
+     "pos": {
+      "N": [
+       58,
+       30
+      ]
+     },
+     "arrows": [
+      {
+       "from": "N",
+       "to": [
+        58,
+        30
+       ],
+       "kind": "run"
+      }
+     ],
+     "zone": {
+      "x": 50,
+      "y": 23,
+      "w": 18,
+      "h": 14,
+      "label": "AL CENTRO",
+      "color": "red"
+     }
+    }
+   ]
+  },
+  {
+   "type": "headline",
+   "bg": "7",
+   "say": "Guarda este video para tu próximo entrenamiento… y mándaselo a tu equipo.",
+   "captions": [
+    "<em>Guarda</em> este video",
+    "para tu próximo",
+    "<em>entrenamiento</em>…",
+    "y mándaselo",
+    "a tu <em>equipo</em>."
+   ],
+   "tag": "GUÁRDALO",
+   "title": "RONDO 4 VS 2\nANTES DEL PARTIDO",
+   "sub": "3 rondas · 2 toques · 10 pases = punto"
+  },
+  {
+   "type": "question",
+   "bg": "¿?",
+   "say": "Y tú dime: ¿tu equipo calienta con balón… o corriendo vueltas? ¡Te leo en los comentarios!",
+   "captions": [
+    "Y tú dime:",
+    "¿tu equipo calienta",
+    "con <em>balón</em>…",
+    "o corriendo",
+    "<em>vueltas</em>?",
+    "¡Te leo en los <em>comentarios</em>!"
+   ],
+   "pre": "SIN MENTIR:",
+   "q": "¿CÓMO CALIENTA\nTU EQUIPO?",
+   "opts": [
+    "CON BALÓN",
+    "VUELTAS"
+   ]
+  }
+ ],
+ "post": "Los equipos grandes calientan así… y el tuyo sigue corriendo vueltas.\n\nRondo 4 contra 2 en fútbol 7: 1) cuadro de unos 10 × 10 metros, 4 por fuera y 2 en medio; 2) máximo 2 toques, recibe perfilado; 3) si te tapan la línea de pase, muévete un paso. Error común: quedarte parado.\n\nEjercicio: 3 rondas de 2 minutos, 10 pases seguidos = punto, y el que la pierde entra al centro.\n\n¿Tu equipo calienta con balón o corriendo vueltas?",
+ "hashtags": [
+  "#Fútbol7",
+  "#PizarraTáctica",
+  "#Entrenador"
+ ],
+ "sources": [],
+ "redes_textos": {
+  "facebook": "Los equipos grandes calientan así… y el tuyo sigue corriendo vueltas.\n\nRondo 4 contra 2 para fútbol 7:\n1. Cuadro de unos 10 × 10 metros: 4 por fuera, 2 en medio.\n2. Máximo 2 toques: recibe perfilado, con el pie de afuera.\n3. Si te tapan la línea de pase, muévete un paso y abre el ángulo.\nError común: quedarte parado.\n\nEjercicio: 3 rondas de 2 minutos. 10 pases seguidos = punto; el que la pierde entra al centro.\n\nGuárdalo para tu próximo entrenamiento. ¿Tu equipo calienta con balón o corriendo vueltas?\n\n#Fútbol7 #PizarraTáctica #Entrenador",
+  "instagram": "Los grandes calientan así… y tu equipo corre vueltas. Rondo 4 contra 2: 2 toques, perfilado y muévete para abrir el pase.\n\nGuárdalo para tu próximo entrenamiento. ¿Con balón o vueltas?\n\n#Fútbol7 #PizarraTáctica #Entrenador",
+  "youtube": {
+   "titulo": "Rondo 4 contra 2: el calentamiento con balón para fútbol 7 #Shorts",
+   "descripcion": "Cómo armar un rondo 4 contra 2 para calentar antes del partido de fútbol 7: 2 toques, perfilado y líneas de pase. Con ejercicio.\n#Fútbol7 #PizarraTáctica #Entrenador #Shorts"
+  },
+  "tiktok": "Los grandes calientan así… ¿tu equipo con balón o corriendo vueltas? #Fútbol7 #Rondo #Entrenador"
+ }
+}
