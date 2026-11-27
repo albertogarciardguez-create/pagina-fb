@@ -1,0 +1,17 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "1687546739390309",
+   "url": "https://www.facebook.com/reel/1687546739390309",
+   "programado": true,
+   "fecha": "2026-11-27 05:31"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: IR_YT_REFRESH"
+  }
+ },
+ "aviso": "[diorama] AVISO: el video salió con la voz de prueba (kokoro), no con la de ElevenLabs.",
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-27-ir-noche-edison-incendio.mp4",
+ "actualizado": "2026-11-27 05:31"
+}
