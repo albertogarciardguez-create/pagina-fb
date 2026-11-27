@@ -12,9 +12,13 @@
   },
   "instagram": {
    "omitido": "faltan secretos: IR_IG_ID"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: IR_TIKTOK_REFRESH"
   }
  },
  "aviso": "[diorama] AVISO: el video salió con la voz de prueba (kokoro), no con la de ElevenLabs.",
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-26-ir-noche-diez-leprosos.mp4",
- "actualizado": "2026-11-26 19:26"
+ "actualizado": "2026-11-26 19:31",
+ "estado": "completo"
 }
