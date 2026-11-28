@@ -34,7 +34,7 @@ Columnas: A Fecha (AAAA-MM-DD) · B Hora (HH:MM, Ciudad Juárez) · C Página (`
 - En los nichos (vidIQ, nov 2026) lo que explota en cuentas chicas en español es: “la historia detrás de [canción]” (0.5–1.3 M vistas), historias de fe con un dolor con el que te identificas, series numeradas; en Liga MX: “¿qué necesita X para pasar?”, polémicas, humor de rivalidad y trivia.
 
 **Decisiones (mandan sobre cualquier otra parte de esta guía):**
-1. **Menos y mejor: 6 piezas al día** (por página: 2 reels + 1 post de foto). Lo que se ahorra va a mejor guion, mejor gancho y voz de Edgardo en los videos estrella.
+1. **Menos y mejor: 6 piezas al día** (por página: 2 reels + 1 post de foto). Desde el 28 nov, además, **2 noticias del día en foto en Impulso Real** (pedido de Alberto; ver “IR · Noticia del día”). Lo que se ahorra va a mejor guion, mejor gancho y voz de Edgardo en los videos estrella.
 2. **Cambian los pilares** (tabla de formatos abajo). Se dejan de producir: IR Tecnología, IR Lección de autores, IR Finanzas, IR Reflexión de la mañana, SF Posiciones 3D, SF Explica 3D y SF Jugada 3D diarios. La Pizarra F7 queda **una vez por semana (viernes)**.
 3. **Duración:** reels de crecimiento **30–45 s**; el video estrella de la noche **61–75 s** (cuenta para TikTok Creator Rewards y para minutos vistos en Facebook).
 4. **Cada video pasa la lista de retención** (abajo) antes de hacer commit. Si no la pasa, se reescribe el inicio.
@@ -59,6 +59,7 @@ Columnas: A Fecha (AAAA-MM-DD) · B Hora (HH:MM, Ciudad Juárez) · C Página (`
 | SF | **SF · El día que…** (19:00, Edgardo L-M-V) | 61–75 s | Una historia épica real de Liga MX o del fútbol mexicano contada como película (verificada; sin escudos ni fotos). | “Minuto noventa y tres. El portero sube… y nadie lo marca.” |
 | SF | **SF · Trivia** (19:00, alterna) | 30–40 s | 5 preguntas con cuenta regresiva (“¿cuántas aciertas?”); la respuesta en los comentarios de la última. | “Solo el 1 % de los aficionados contesta las cinco.” |
 | SF | **SF · Pizarra F7** (viernes 19:00) | 61–70 s | Una idea táctica de fútbol 7 con ejercicio, para el fin de semana de liga. | “¿Tu equipo no pasa de media cancha? Le falta un solo pase.” |
+| IR | **IR · Noticia del día** (10:00 y 17:30, solo FB, post foto) | – | Lo más importante de las últimas 24 h en tecnología, innovación, deportes (no Liga MX: eso es de SF), México y el mundo, estilo “última hora”. Tarjeta de texto con la marca de IR: sin fotos de personas, logos, banderas ni capturas de tuits. Pedido por Alberto el 27 nov para atraer público. | Primera línea = el hecho en una frase (“Un tribunal de Ámsterdam podría frenar la venta de…”). |
 | Ambas | **Post foto** (SF 10:30 · IR 15:00, solo FB) | – | Encuesta A/B, “completa la frase”, dato del día o frase. | Pregunta de respuesta en una palabra. |
 
 Fechas que se aprovechan (el planeador las pone sí o sí): Liguilla (semifinales y final de diciembre), **12 dic Virgen de Guadalupe**, **16–24 dic Posadas**, **24–25 dic Navidad**, **31 dic Año Nuevo (uvas, maletas)**, Reyes 6 ene.
@@ -88,14 +89,16 @@ Cada publicación se mide en FB, IG y YouTube (TikTok no da datos sin auditoría
 - Un formato con mediana por debajo de la de su página **dos semanas seguidas** (≥4 publicaciones) se deja de planear. Un video que pase de 3× la mediana se convierte en **serie** (parte 2, mismo tipo de tema) en la semana siguiente.
 - Los agentes diarios copian la **estructura y el tipo de gancho** del Top 5 (no el tema).
 
-## Horarios (Ciudad Juárez) — 6 piezas al día
+## Horarios (Ciudad Juárez) — 6 piezas al día + 2 noticias de IR
 
 | Franja | Facebook / YouTube | Instagram | TikTok |
 |---|---|---|---|
+| IR · Noticia del día #1 (solo FB) | 10:00 | – | – |
 | SF · Post foto (solo FB) | 10:30 | – | – |
 | IR · Historia detrás / Fe que consuela | 12:00 | 12:00 | 12:00 |
 | SF · Liguilla / noticia | 13:15 | 12:30 | 14:00 |
 | IR · Post foto (solo FB) | 15:00 | – | – |
+| IR · Noticia del día #2 (solo FB) | 17:30 | – | – |
 | SF · Estrella (El día que / Polémica / Trivia / Pizarra viernes) | 19:00 | 19:00 | 19:00 |
 | IR · Historia estrella | 20:00 | 19:30 | 20:00 |
 
@@ -154,6 +157,7 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
 | Impulso Real | 12:00 | IR · Historia detrás / IR · Fe que consuela (diorama papel) | 4 Historia detrás + 3 Fe que consuela (más Historia detrás en diciembre: villancicos, Nochebuena, Posadas, Guadalupe). |
 | Impulso Real | 20:00 | IR · Historia estrella — mar/jue/dom **(imágenes)**, lun/mié/vie/sáb **(papel)**, Edgardo (ver “Prueba A/B”) | Historias reales, bíblicas o parábolas con giro; series de 2 partes cuando algo funcione. En las 3 de imágenes escribe también los 8 prompts. |
 | Impulso Real | 15:00 | Post foto (solo FB) | Frase, versículo o “completa la frase”. |
+| Impulso Real | 10:00 y 17:30 | IR · Noticia del día (post foto, solo FB) | Diario. E = “Noticia del día (se decide esa mañana)”, F vacío, **H = `Autorizado`** (autorización permanente de Alberto del 27 nov) y I = “Autorización permanente (27 nov)”. |
 | Señor Fútbol | 13:15 | SF · Liguilla (reel) | Diario mientras haya Liguilla; después, la noticia más fuerte de Liga MX (prioridad Bravos). El tema exacto se decide esa mañana. |
 | Señor Fútbol | 19:00 | SF · El día que… (L-M-V, Edgardo) · SF · Polémica / Trivia (mar, jue, sáb, dom) · **SF · Pizarra F7 solo viernes** | Si el viernes cae una final, la Pizarra se pasa al sábado. |
 | Señor Fútbol | 10:30 | Post foto (solo FB) | Encuesta A/B del partido del día o “completa la frase”. |
@@ -176,6 +180,12 @@ En el texto del post: primera línea = el gancho (no el título), una pregunta p
    - **Pasa la “Lista de retención”** antes del commit (revisa los primeros 3 cuadros de `revision.png`: gancho visible, sin mayúsculas largas, algo moviéndose).
    - Si ya existe una historia de esa fecha y tema en `stories/` o `diorama/` (p. ej. una prueba previa), reúsala y ajústala en vez de escribirla de cero.
    - **Voz ElevenLabs (Edgardo) en los videos estrella** — créditos limitados (plan Starter: tope **45 videos al mes**). Solo en **IR · Historia (20:00) todos los días** y en **SF · Estrella (19:00) lunes, miércoles y viernes**. En esas historias pon `"tts": "elevenlabs", "tts_respaldo": "edge"` y deja `edge_voz` (si ElevenLabs falla o se acaban los créditos, sale con la voz de Microsoft, no con kokoro). Antes de usarla cuenta con `grep -l '"tts": "elevenlabs"' diorama/AAAA-MM-* stories/AAAA-MM-* | wc -l` las de este mes: si ya hay 45, usa edge. Escribe `say` con puntuación natural (comas, puntos suspensivos): Edgardo actúa lo que lee. En la nube el preview sale con otra voz (sin acceso a ElevenLabs); el video final lo genera GitHub con Edgardo (`voice_id` en `config/voz.json`, llave en el secreto `ELEVENLABS_API_KEY`). Si el estado trae `aviso` de ElevenLabs, dilo en el mensaje final.
+   - **IR · Noticia del día (motor `post`, 2 al día)**: busca (WebSearch) lo más importante de las **últimas 24 h** en tecnología/IA, innovación y ciencia, deportes fuera de la Liga MX (Checo, Canelo, NFL, Mundial 2026, selección), México y el mundo. Elige 2 de **categorías distintas**, que no repitan tema de los últimos 3 días (`ls posts/ | grep noticia`), con preferencia por lo que le toca al público mexicano. Reglas:
+     - Lee la nota completa (WebFetch o el agente web-fetch) y confirma el hecho con **2 medios confiables** (Reuters, AP, AFP, EFE, BBC, El Universal, Milenio, El Financiero, Expansión, The Verge, ESPN…). Si solo hay una fuente o es rumor, no va. Nunca “según redes”. Las dos URL van en `sources`.
+     - Di quién lo informa (“según Reuters…”) y lo que es pedido, demanda o acusación se escribe así, no como hecho consumado. Si es lo que “escribió” una cuenta o una persona, debe estar citado por un medio.
+     - Tono neutral: sin opinión política, sin burla, sin alarmismo, sin “URGENTE” en mayúsculas. Nada de tragedias con víctimas como gancho ni de apuestas.
+     - Archivo `posts/AAAA-MM-DD-ir-noticia-<1|2>-<tema>.json`: `"kicker": "ÚLTIMA HORA · TECNOLOGÍA"` (o INNOVACIÓN, DEPORTES, MÉXICO, MUNDO), `texto` = el hecho en 15–30 palabras con `<em>` en la palabra clave, `"autor": "Fuente: <medio>"`, `pregunta` de respuesta en una palabra (“¿Te comprarías unas?”), `post` = el hecho en 2–3 líneas + contexto en una línea + la pregunta, 3 hashtags (`#Noticias` + 2 del tema). Revisa el JPG con Read (nada cortado).
+     - Cola: `"formato": "IR · Noticia del día"`, `"redes": ["facebook"]`, hora 10:00 o 17:30. Si se publica tarde, la nota sigue siendo de las últimas 24 h.
    - **Post foto (motor `post`, solo Facebook)**: escribe `posts/AAAA-MM-DD-<ir|sf>-post-<tema>.json` (esquema en `engine/build_post.py`: `kicker`, `texto` con `<em>` para la palabra clave, `autor` o `dato`, `pregunta` sin emojis, `post`, `hashtags`, `sources` si hay datos), corre `python3 engine/build_post.py <json>` y revisa `salida/<id>/<id>.jpg` con Read. Cola: `{"id": "...", "pagina": "...", "motor": "post", "historia": "posts/....json", "hora": "...", "redes": ["facebook"], "formato": "IR · Post foto" | "SF · Post foto", "tema": "..."}`. El texto del post: primera línea = gancho, una pregunta y 2–4 hashtags; no metas ligas (Facebook les baja el alcance).
    - *(Retirado; solo si Alberto lo pide)* **IR · Tecnología**: verifica cada dato en la nota completa (WebFetch) y anota las URL en `sources`; si no hay una noticia confirmable de las últimas 48 h, haz una Lección.
    - **Impulso Real (motor `diorama`)**: historia en `diorama/AAAA-MM-DD-<tema>-reel.json` con `"plantilla": "papel"` (o `"infografia"`), `"tts": "edge"`, `"edge_voz": "es-MX-DaliaNeural"`, sin campo `audio`. Reutiliza escenas `vis` existentes siempre que se pueda; si hace falta una nueva, agrégala en la plantilla y revisa que se vea bien. Gancho en el segundo 0–2, cierre `"tipo": "cierre"` con pregunta. Preview con `python3 engine/build_diorama.py <json> --preview` y revisa la hoja con Read.
