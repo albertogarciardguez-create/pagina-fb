@@ -347,6 +347,27 @@ def el_reloj(p, T, s, bg, o):
     p.pieza(T(circ(50, 52, 4)), CARB, sombra=False)
 
 
+def el_copo(p, T, s, bg, o):  # copo de nieve
+    for k in range(3):
+        a = k * math.pi / 3
+        p.pieza(T(barra((50 - 38 * math.cos(a), 50 - 38 * math.sin(a)), (50 + 38 * math.cos(a), 50 + 38 * math.sin(a)), 7)), o.get("color", "#6F9CC0"))
+        for sg in (1, -1):
+            cx, cy = 50 + sg * 24 * math.cos(a), 50 + sg * 24 * math.sin(a)
+            for d in (0.6, -0.6):
+                b = a + (math.pi if sg < 0 else 0) + d
+                p.pieza(T(barra((cx, cy), (cx + 13 * math.cos(b), cy + 13 * math.sin(b)), 5)), o.get("color", "#6F9CC0"), sombra=False)
+    p.pieza(T(circ(50, 50, 8)), BLANCO, sombra=False)
+
+
+def el_termometro(p, T, s, bg, o):  # termómetro con la columna baja (frío)
+    p.pieza(T(rrect(40, 6, 20, 70, 10)), BLANCO)
+    p.pieza(T(circ(50, 80, 15)), BLANCO)
+    p.pieza(T(circ(50, 80, 10)), "#5E7F9A", sombra=False)
+    p.pieza(T(rect(46, 56, 8, 22)), "#5E7F9A", sombra=False)
+    for k in range(4):
+        p.pieza(T(rect(62, 14 + k * 12, 8, 3)), GRIS, sombra=False)
+
+
 def el_documento(p, T, s, bg, o):
     p.pieza(T([(22, 6), (66, 6), (80, 20), (80, 94), (22, 94)]), CREMA)
     p.pieza(T([(66, 6), (80, 20), (66, 20)]), "#D8D3C8", sombra=False)

@@ -1130,6 +1130,42 @@ function trofeoP(x, y, s, sd) { papel(rectP(x - 50 * s, y - 40 * s, 100 * s, 40 
 function despertadorP(x, y, s, sd, t, p) { const sh = Math.sin(t * 40) * 3 * s; papel(circP(x + sh, y - 110 * s, 100 * s), '#C8423A', sd, { amt: 2 }); papel(circP(x + sh, y - 110 * s, 82 * s), '#FFF8EC', sd + 1, { amt: 1.5, sb: 0 });
   papel(circP(x - 70 * s + sh, y - 205 * s, 28 * s), C.mostaza, sd + 2, { amt: 1 }); papel(circP(x + 70 * s + sh, y - 205 * s, 28 * s), C.mostaza, sd + 3, { amt: 1 }); const hh = (p.h || 4) % 12, mm = p.m || 0;
   g.strokeStyle = '#222'; g.lineCap = 'round'; g.lineWidth = 9 * s; const a1 = (hh + mm / 60) / 12 * 6.283 - 1.5708, a2 = mm / 60 * 6.283 - 1.5708; g.beginPath(); g.moveTo(x + sh, y - 110 * s); g.lineTo(x + sh + Math.cos(a1) * 45 * s, y - 110 * s + Math.sin(a1) * 45 * s); g.stroke(); g.lineWidth = 6 * s; g.beginPath(); g.moveTo(x + sh, y - 110 * s); g.lineTo(x + sh + Math.cos(a2) * 66 * s, y - 110 * s + Math.sin(a2) * 66 * s); g.stroke(); }
+// props extra (nov 28): muro (filas, w, roto, crece), guitarra, iglesia (luz), alambre (w), sacos (n), vela, notas (n, color), copa, espada, zorra (mira)
+function muroP(x, y, s, sd, t, p, i, t0) { const w = (p.w || 700) * s, filas = p.filas || 5, bh = 56 * s, bw = 110 * s;
+  let q = 1; if (p.crece) q = cl((t - t0) / Math.max(1, winEnd(i) - t0 - 0.4), 0, 1); const nf = p.roto ? filas : Math.max(1, Math.ceil(q * filas));
+  for (let f = 0; f < nf; f++) { const off = (f % 2) * bw / 2, nc = Math.ceil(w / bw) + 2;
+    for (let c = 0; c < nc; c++) { const bx = x - w / 2 - off + c * bw; const x0 = Math.max(bx, x - w / 2), x1 = Math.min(bx + bw - 6 * s, x + w / 2); if (x1 - x0 < 12 * s) continue;
+      if (p.roto && rnd(sd + f * 13 + c * 7) < 0.15 + f * 0.17) continue;
+      papel(rectP(x0, y - (f + 1) * bh, x1 - x0, bh - 6 * s), ['#B9A27E', '#A8916C', '#C4AE88'][(f + c) % 3], sd + f * 20 + c, { amt: 2, sb: f ? 2 : 6 }); } } }
+function guitarraP(x, y, s, sd) { papel(rectP(x - 14 * s, y - 430 * s, 28 * s, 270 * s), '#6B4A2E', sd + 3, { amt: 1.5 }); papel(rectP(x - 24 * s, y - 480 * s, 48 * s, 60 * s), '#4A3220', sd + 4, { amt: 1 });
+  papel(ellP(x, y - 80 * s, 86 * s, 76 * s, 30), '#B5713A', sd, { amt: 2 }); papel(ellP(x, y - 185 * s, 66 * s, 58 * s, 30), '#B5713A', sd + 1, { amt: 2, sb: 0 }); papel(circP(x, y - 150 * s, 24 * s), '#3A2618', sd + 2, { amt: 1, sb: 0 });
+  g.strokeStyle = 'rgba(255,248,236,.85)'; g.lineWidth = 2.5 * s; for (let j = -2; j <= 2; j++) { g.beginPath(); g.moveTo(x + j * 4 * s, y - 460 * s); g.lineTo(x + j * 6 * s, y - 60 * s); g.stroke(); } }
+function iglesiaP(x, y, s, sd, p) { const cc = p.color || '#E9E1D0', lz = p.luz === false ? '#3A3430' : '#F2D27A';
+  papel(rectP(x - 50 * s, y - 520 * s, 100 * s, 220 * s), cc, sd + 2, { amt: 2 }); papel([[x - 66 * s, y - 515 * s], [x, y - 640 * s], [x + 66 * s, y - 515 * s]], '#8A3A2E', sd + 3, { amt: 1.5 });
+  papel(rectP(x - 6 * s, y - 700 * s, 12 * s, 70 * s), C.mostaza, sd + 4, { amt: 0.5, sb: 0 }); papel(rectP(x - 24 * s, y - 682 * s, 48 * s, 12 * s), C.mostaza, sd + 5, { amt: 0.5, sb: 0 });
+  papel(rectP(x - 170 * s, y - 240 * s, 340 * s, 240 * s), cc, sd, { amt: 3 }); papel([[x - 195 * s, y - 235 * s], [x, y - 360 * s], [x + 195 * s, y - 235 * s]], '#8A3A2E', sd + 1, { amt: 2 });
+  papel(rectP(x - 40 * s, y - 120 * s, 80 * s, 120 * s), '#5A3A26', sd + 6, { amt: 1, sb: 0 }); [-125, 85].forEach((wx, j) => papel(rectP(x + wx * s, y - 190 * s, 40 * s, 60 * s), lz, sd + 7 + j, { amt: 1, sb: 0 }));
+  papel(circP(x, y - 430 * s, 26 * s), lz, sd + 9, { amt: 1, sb: 0 }); }
+function alambreP(x, y, s, sd, p) { const w = (p.w || 900) * s; for (let j = 0; j < 5; j++) papel(rectP(x - w / 2 + j * w / 4 - 6 * s, y - 120 * s, 12 * s, 120 * s), '#5E524A', sd + j, { amt: 1, sb: 2 });
+  g.strokeStyle = '#2A2622'; g.lineWidth = 4 * s; [40, 85].forEach(hh => { g.beginPath(); for (let k = 0; k <= 40; k++) { const xx = x - w / 2 + k * w / 40, yy = y - hh * s + ((k % 2) ? -8 : 8) * s; k ? g.lineTo(xx, yy) : g.moveTo(xx, yy); } g.stroke(); }); }
+function sacosP(x, y, s, sd, p) { const n = p.n || 7; for (let f = 0; f < 2; f++) for (let j = 0; j < n - f; j++) papel(ellP(x - (n - 1) * 55 * s + j * 110 * s + f * 55 * s, y - 30 * s - f * 50 * s, 58 * s, 28 * s, 20), ['#A8925A', '#9A8450', '#B8A060'][(j + f) % 3], sd + f * 10 + j, { amt: 2, sb: 4 }); }
+function velaP(x, y, s, sd, t) { const gl = g.createRadialGradient(x, y - 150 * s, 2, x, y - 150 * s, 110 * s); gl.addColorStop(0, 'rgba(255,220,140,.55)'); gl.addColorStop(1, 'rgba(255,220,140,0)'); g.fillStyle = gl; g.fillRect(x - 120 * s, y - 270 * s, 240 * s, 240 * s);
+  papel(rectP(x - 18 * s, y - 120 * s, 36 * s, 120 * s), '#F4ECD8', sd, { amt: 1 }); const fl = 6 * Math.sin(t * 9) * s; papel([[x - 12 * s, y - 125 * s], [x + fl, y - 180 * s], [x + 12 * s, y - 125 * s]], '#F7D25A', sd + 1, { amt: 0.5, sb: 0 }); }
+function notasP(x, y, s, sd, t, p) { const n = p.n || 4, col = p.color || '#FFF8EC'; for (let j = 0; j < n; j++) { const ph = (t * 0.45 + j / n) % 1, xx = x + (j - (n - 1) / 2) * 90 * s + Math.sin(ph * 6 + j) * 30 * s, yy = y - ph * 320 * s;
+  g.save(); g.globalAlpha = Math.sin(ph * 3.1416); papel(ellP(xx, yy, 24 * s, 17 * s, 16), col, sd + j, { amt: 0.5, sb: 0 }); papel(rectP(xx + 17 * s, yy - 86 * s, 8 * s, 86 * s), col, sd + j + 10, { amt: 0.3, sb: 0 }); g.restore(); } }
+function copaP(x, y, s, sd) { papel(rectP(x - 10 * s, y - 180 * s, 20 * s, 150 * s), C.mostaza, sd + 1, { amt: 1 }); papel(ellP(x, y - 25 * s, 62 * s, 22 * s, 24), C.mostaza, sd + 2, { amt: 1.5 });
+  papel([[x - 64 * s, y - 280 * s], [x + 64 * s, y - 280 * s], [x + 42 * s, y - 175 * s], [x - 42 * s, y - 175 * s]], C.mostaza, sd, { amt: 1.5 }); papel([[x - 56 * s, y - 268 * s], [x + 56 * s, y - 268 * s], [x + 46 * s, y - 230 * s], [x - 46 * s, y - 230 * s]], '#7A1E2A', sd + 3, { amt: 1, sb: 0 }); }
+function espadaP(x, y, s, sd) { papel([[x - 13 * s, y - 115 * s], [x + 13 * s, y - 115 * s], [x + 13 * s, y - 400 * s], [x, y - 445 * s], [x - 13 * s, y - 400 * s]], '#D9D6CC', sd, { amt: 1 });
+  papel(rectP(x - 58 * s, y - 125 * s, 116 * s, 22 * s), C.mostaza, sd + 1, { amt: 1 }); papel(rectP(x - 11 * s, y - 104 * s, 22 * s, 82 * s), '#6B4A2E', sd + 2, { amt: 1 }); papel(circP(x, y - 16 * s, 17 * s), C.mostaza, sd + 3, { amt: 1, sb: 2 }); }
+function zorraP(x, y, s, sd, t, p) { g.save(); g.translate(x, y); g.scale(p.mira || 1, 1); const O = '#D9732E', O2 = '#B85A22';
+  papel(ellP(-130 * s, -95 * s, 95 * s, 34 * s, 24), O, sd, { amt: 2 }); papel(circP(-215 * s, -105 * s, 24 * s), '#FFF8EC', sd + 1, { amt: 1, sb: 0 });
+  [-60, -25, 30, 62].forEach((lx, j) => papel(rectP(lx * s, -62 * s, 16 * s, 62 * s), '#3A2618', sd + 3 + j, { amt: 1, sb: 2 })); papel(ellP(0, -95 * s, 98 * s, 50 * s, 28), O, sd + 2, { amt: 2 });
+  papel([[70 * s, -160 * s], [165 * s, -115 * s], [80 * s, -80 * s]], O, sd + 10, { amt: 1.5 }); papel([[74 * s, -158 * s], [84 * s, -210 * s], [106 * s, -148 * s]], O2, sd + 11, { amt: 1 });
+  papel([[100 * s, -146 * s], [122 * s, -196 * s], [132 * s, -134 * s]], O2, sd + 12, { amt: 1 }); papel(circP(163 * s, -115 * s, 9 * s), '#222', sd + 13, { amt: 0.5, sb: 0 }); papel(circP(108 * s, -128 * s, 7 * s), '#222', sd + 14, { amt: 0.5, sb: 0 }); g.restore(); }
+function extraP(p, s, sd, t, i, t0) { const x = p.x, y = p.y;
+  if (p.k === 'muro') muroP(x, y, s, sd, t, p, i, t0); else if (p.k === 'guitarra') guitarraP(x, y, s, sd); else if (p.k === 'iglesia') iglesiaP(x, y, s, sd, p); else if (p.k === 'alambre') alambreP(x, y, s, sd, p);
+  else if (p.k === 'sacos') sacosP(x, y, s, sd, p); else if (p.k === 'vela') velaP(x, y, s, sd, t); else if (p.k === 'notas') notasP(x, y, s, sd, t, p); else if (p.k === 'copa') copaP(x, y, s, sd);
+  else if (p.k === 'espada') espadaP(x, y, s, sd); else if (p.k === 'zorra') zorraP(x, y, s, sd, t, p); else return false; return true; }
 V2.arma = (i, r, t) => {
   const A = S.scenes[i].arma || {}, fd = A.fondo || 'dia';
   if (fd === 'gimnasio') { cielo('#3A3440', '#2A2530'); for (let k = 0; k < 5; k++) { const gl = g.createRadialGradient(100 + k * 200, 60, 5, 100 + k * 200, 60, 260); gl.addColorStop(0, 'rgba(255,240,200,.35)'); gl.addColorStop(1, 'rgba(255,240,200,0)'); g.fillStyle = gl; g.fillRect(-500, -500, 2000, 2000); }
@@ -1150,6 +1186,7 @@ V2.arma = (i, r, t) => {
   if (A.luz) { const gl = g.createRadialGradient(500, 520, 20, 500, 520, 520); gl.addColorStop(0, 'rgba(255,225,140,.55)'); gl.addColorStop(1, 'rgba(255,225,140,0)'); g.fillStyle = gl; g.fillRect(-500, -500, 2000, 2000); }
   (A.props || []).forEach((p, k) => { const t0 = aAt(i, p, k), s = p.s_ || 1, sd = 2700 + k * 10; if (t < t0) return;
     pop(t0, p.x, p.y, () => {
+      if (extraP(p, s, sd, t, i, t0)) return;
       if (p.k === 'pan') panP(p.x, p.y, s, sd); else if (p.k === 'pez') pezP(p.x, p.y, s, sd); else if (p.k === 'roca') roca(p.x, p.y, s, sd);
       else if (p.k === 'flor') nochebuena(p.x, p.y, s, p.color, sd, t);
       else if (p.k === 'aro') aroP(p.x, p.y, s, sd, t, p); else if (p.k === 'balonb') balonBP(p.x, p.y, s, sd, t, p); else if (p.k === 'trofeo') trofeoP(p.x, p.y, s, sd); else if (p.k === 'despertador') despertadorP(p.x, p.y, s, sd, t, p);

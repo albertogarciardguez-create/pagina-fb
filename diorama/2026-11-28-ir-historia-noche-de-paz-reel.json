@@ -1,0 +1,668 @@
+{
+ "id": "2026-11-28-ir-historia-noche-de-paz-reel",
+ "titulo": "La historia detrás de Noche de paz (reel)",
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 1.18,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.3,
+ "inicio": 0.1,
+ "cola": 3.0,
+ "scenes": [
+  {
+   "say": "En plena guerra, los soldados dejaron las armas… por una canción.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0,
+     "g": 0.7
+    },
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "sacos",
+      "x": 500,
+      "y": 900,
+      "n": 8
+     },
+     {
+      "k": "alambre",
+      "x": 500,
+      "y": 800,
+      "w": 900
+     },
+     {
+      "k": "notas",
+      "x": 500,
+      "y": 620,
+      "n": 4
+     }
+    ],
+    "figs": [
+     {
+      "x": 300,
+      "h": 300,
+      "o": {
+       "cam": "#5E6A5A",
+       "pan": "#4A4A3A",
+       "pelo": "#3A2A1E",
+       "pose": "arms"
+      }
+     },
+     {
+      "x": 700,
+      "h": 300,
+      "o": {
+       "cam": "#8A7A50",
+       "pan": "#6E6040",
+       "pelo": "#6B3E26",
+       "pose": "arms",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "Dejaron las armas",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0,
+      "size": 60,
+      "x": 430
+     },
+     {
+      "t": "…por una canción",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.55,
+      "size": 60,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Austria, mil ochocientos dieciséis. Un joven sacerdote, Joseph Mohr, escribe un poema.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "vela",
+      "x": 700,
+      "y": 840,
+      "s_": 1.3
+     },
+     {
+      "k": "carta",
+      "x": 560,
+      "y": 700,
+      "s_": 0.9,
+      "s": 1,
+      "f": 0.4
+     }
+    ],
+    "figs": [
+     {
+      "x": 360,
+      "h": 330,
+      "o": {
+       "cam": "#2A2A30",
+       "pan": "#2A2A30",
+       "largo": true,
+       "pelo": "#5A3A26",
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1816 · AUSTRIA",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 66
+     },
+     {
+      "t": "Un poema sencillo",
+      "y": 300,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.3
+     }
+    ],
+    "luz": true
+   }
+  },
+  {
+   "say": "Dos años después, su amigo Franz Gruber le pone música.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "guitarra",
+      "x": 760,
+      "y": 860,
+      "s_": 0.8
+     },
+     {
+      "k": "notas",
+      "x": 500,
+      "y": 560,
+      "n": 3,
+      "color": "#E3A72F",
+      "s": 0,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 300,
+      "h": 320,
+      "o": {
+       "cam": "#2A2A30",
+       "pan": "#2A2A30",
+       "largo": true,
+       "pelo": "#5A3A26"
+      }
+     },
+     {
+      "x": 520,
+      "h": 320,
+      "o": {
+       "cam": "#6B4A2E",
+       "pan": "#3A2A1E",
+       "pelo": "#3A2A1E",
+       "pose": "offer",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1818",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 80
+     },
+     {
+      "t": "Le pone música",
+      "y": 300,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "luz": true
+   }
+  },
+  {
+   "say": "Nochebuena de mil ochocientos dieciocho. Se canta por primera vez en Oberndorf… con una guitarra.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "iglesia",
+      "x": 330,
+      "y": 840,
+      "s_": 0.85
+     },
+     {
+      "k": "guitarra",
+      "x": 760,
+      "y": 880,
+      "s_": 0.75,
+      "s": 1,
+      "f": 0.6
+     },
+     {
+      "k": "notas",
+      "x": 330,
+      "y": 420,
+      "n": 3
+     }
+    ],
+    "figs": [],
+    "carteles": [
+     {
+      "t": "24 DIC 1818",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 70,
+      "x": 430
+     },
+     {
+      "t": "Con una guitarra",
+      "y": 300,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.5,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero lo mejor pasó casi cien años después.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "iglesia",
+      "x": 500,
+      "y": 840,
+      "s_": 0.8,
+      "luz": false
+     }
+    ],
+    "figs": [],
+    "carteles": [
+     {
+      "t": "PERO…",
+      "y": 180,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 84,
+      "x": 430
+     },
+     {
+      "t": "Casi 100 años después",
+      "y": 330,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.45,
+      "x": 430
+     }
+    ]
+   },
+   "corte": true
+  },
+  {
+   "say": "Navidad de mil novecientos catorce, Primera Guerra Mundial. En las trincheras, los alemanes cantan Noche de paz.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ],
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "sacos",
+      "x": 500,
+      "y": 900,
+      "n": 8
+     },
+     {
+      "k": "arbolnav",
+      "x": 250,
+      "y": 820,
+      "s_": 0.7,
+      "s": 1,
+      "f": 0.3
+     },
+     {
+      "k": "notas",
+      "x": 500,
+      "y": 620,
+      "n": 5,
+      "s": 1,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 420,
+      "h": 260,
+      "o": {
+       "cam": "#5E6A5A",
+       "pan": "#4A4A3A",
+       "pelo": "#3A2A1E"
+      }
+     },
+     {
+      "x": 600,
+      "h": 260,
+      "o": {
+       "cam": "#5E6A5A",
+       "pan": "#4A4A3A",
+       "pelo": "#3A2A1E",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NAVIDAD 1914",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 70,
+      "x": 430
+     },
+     {
+      "t": "Cantan «Noche de paz»",
+      "y": 300,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.6,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Los ingleses responden con sus villancicos… y salen a darse la mano en tierra de nadie.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "alambre",
+      "x": 500,
+      "y": 880,
+      "w": 900
+     },
+     {
+      "k": "notas",
+      "x": 780,
+      "y": 600,
+      "n": 3,
+      "color": "#E3A72F"
+     }
+    ],
+    "figs": [
+     {
+      "x": 80,
+      "h": 300,
+      "camina": [
+       80,
+       410
+      ],
+      "o": {
+       "cam": "#5E6A5A",
+       "pan": "#4A4A3A",
+       "pelo": "#3A2A1E"
+      }
+     },
+     {
+      "x": 920,
+      "h": 300,
+      "camina": [
+       920,
+       590
+      ],
+      "o": {
+       "cam": "#8A7A50",
+       "pan": "#6E6040",
+       "pelo": "#6B3E26",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "Les responden",
+      "y": 160,
+      "col": "blanco",
+      "s": 0,
+      "f": 0,
+      "x": 430
+     },
+     {
+      "t": "Se dan la mano",
+      "y": 300,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Los generales lo prohibieron: nunca se repitió a esa escala.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "foso",
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.7
+    }
+   ],
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "sacos",
+      "x": 500,
+      "y": 900,
+      "n": 8
+     },
+     {
+      "k": "alambre",
+      "x": 500,
+      "y": 800,
+      "w": 900
+     }
+    ],
+    "figs": [],
+    "carteles": [
+     {
+      "t": "Lo prohibieron",
+      "y": 160,
+      "col": "rojo",
+      "s": 0,
+      "f": 0,
+      "size": 62,
+      "x": 430
+     },
+     {
+      "t": "Nunca a esa escala",
+      "y": 300,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.5,
+      "x": 430
+     }
+    ]
+   }
+  },
+  {
+   "say": "Hoy se canta en unos trescientos idiomas. Y nos recuerda que, en plena guerra…",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ],
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "arbolnav",
+      "x": 720,
+      "y": 860,
+      "s_": 1.0
+     },
+     {
+      "k": "vela",
+      "x": 300,
+      "y": 860,
+      "s_": 1.2
+     },
+     {
+      "k": "notas",
+      "x": 500,
+      "y": 620,
+      "n": 5,
+      "color": "#E3A72F"
+     }
+    ],
+    "figs": [],
+    "carteles": [
+     {
+      "t": "≈ 300 IDIOMAS",
+      "y": 160,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 70
+     },
+     {
+      "t": "…en plena guerra",
+      "y": 300,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "luz": true
+   },
+   "nivel": 1.2
+  },
+  {
+   "say": "¿A quién te recuerda Noche de paz? Te leo en los comentarios.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿A quién te recuerda",
+    "Noche de paz?"
+   ]
+  }
+ ],
+ "thumb": [
+  "DEJARON LAS ARMAS",
+  "POR UNA CANCIÓN"
+ ],
+ "post": "En plena guerra, los soldados dejaron las armas… por una canción. «Noche de paz» nació en 1818 en un pueblito de Austria, y en la Navidad de 1914 se escuchó en las trincheras. ¿A quién te recuerda esta canción? 👇",
+ "hashtags": [
+  "#Historias",
+  "#NochedePaz",
+  "#Navidad"
+ ],
+ "sources": [
+  "https://www.stillenacht.at/en/history-of-the-song",
+  "https://www.unesco.at/en/culture/intangible-cultural-heritage/national-inventory/news-1/article/silent-night-the-christmas-carol",
+  "https://www.britannica.com/story/the-humble-origins-of-silentnight",
+  "https://www.britannica.com/event/The-Christmas-Truce",
+  "https://www.iwm.org.uk/history/the-real-story-of-the-christmas-truce"
+ ],
+ "redes_textos": {
+  "facebook": "En plena guerra, los soldados dejaron las armas… por una canción.\n\nEn 1816 un joven sacerdote austriaco, Joseph Mohr, escribió un poema. Dos años después, su amigo Franz Gruber, maestro de escuela, le puso música, y la noche del 24 de diciembre de 1818 se cantó por primera vez en Oberndorf… con una guitarra.\n\nCasi cien años después, en la Navidad de 1914, los soldados alemanes la cantaron en las trincheras. Los ingleses respondieron con sus villancicos y salieron a darse la mano en tierra de nadie.\n\n¿A quién te recuerda «Noche de paz»? 👇\n\n#Historias #NochedePaz #Navidad",
+  "instagram": "En plena guerra, los soldados dejaron las armas… por una canción.\nLa historia de «Noche de paz», de 1818 a las trincheras de 1914.\nMándaselo a quien la canta cada Navidad. ¿A quién te recuerda? 👇\n#Historias #NochedePaz #Navidad",
+  "youtube": {
+   "titulo": "La historia detrás de Noche de paz: la canción que paró una guerra #Shorts",
+   "descripcion": "De un poema de 1816 a la tregua de Navidad de 1914. ¿A quién te recuerda esta canción?\n#Historias #NochedePaz #Navidad"
+  },
+  "tiktok": "En plena guerra dejaron las armas… por una canción. ¿A quién te recuerda Noche de paz? #historias #nochedepaz #navidad"
+ }
+}
