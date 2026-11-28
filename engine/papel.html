@@ -1019,7 +1019,7 @@ V2.libre = (i, r, t) => { dia(t); const gl = g.createRadialGradient(500, 500, 20
 
 // ---- V2.arma: escena armada con datos (sc.arma) para no escribir una función por tema ----
 // arma: {fondo: dia|noche|atardecer|amanecer|interior|ciudad|ring|campo, luz, figs:[{x, y, h, o:{fig}, guantes, s, f, camina:[x0,x1], cae:{s,f,dur}, sube:{s,f}}],
-//  props:[{k: pan|pez|roca|corazon|flor (nochebuena, color)|maceta|lista|escalera|cinturon|gente|cuerdas|campana|luna|sol|canasta, x, y, s, items, n, s_, f}],
+//  props:[{k: pan|pez|roca|corazon|flor (nochebuena, color)|maceta|volcan {corte, nieve, color, erup:{s,f,dur}}|botella {t, color, nivel}|caja {t, banda}|burbujas {n,w,h,color}|milpa {n,dx}|planeta {r,color}|capas|bandeja|gotero|lista|escalera|cinturon|gente|cuerdas|campana|luna|sol|canasta, x, y, s, items, n, s_, f}],
 //  carteles:[{t, x, y, col: or|blanco|rojo|marino|mostaza|verde|gris, size, s, f, tacha:{s,f}}], contador:{de, a, x, y, pre, suf, s, f, dur, col}}
 const ACOL = { or: OR, blanco: C.blanco, rojo: C.rojo, marino: C.marino, mostaza: C.mostaza, verde: C.verde, gris: C.gris, teal: C.teal };
 const ATC = c => (c === 'blanco' || c === 'mostaza' || !c) ? '#222' : '#FFF8EC';
@@ -1028,6 +1028,45 @@ function panP(x, y, s, sd) { papel(ellP(x, y, 70 * s, 38 * s, 22), '#C98A4A', sd
 function pezP(x, y, s, sd) { papel(ellP(x, y, 70 * s, 30 * s, 22), '#7FA6B8', sd, { amt: 2, sb: 4 }); papel([[x + 60 * s, y], [x + 105 * s, y - 32 * s], [x + 105 * s, y + 32 * s]], '#6A92A6', sd + 1, { amt: 1.5, sb: 3 }); g.fillStyle = '#222'; g.beginPath(); g.arc(x - 40 * s, y - 6 * s, 5 * s, 0, 7); g.fill(); }
 function guantesP(x, y, h, o, sd) { const u = h / 10, top = (o.pose === 'sit' ? -3.2 : -4.5) * u - 3.7 * u, P = { stand: [0.18, -0.18], arms: [2.6, -2.6], ask: [0.2, -2.2], offer: [0.2, -1.2] }[o.pose || 'stand'] || [0.18, -0.18];
   const L = 3.4 * u, m = o.mira < 0 ? -1 : 1; [[-1.45 * u, P[0]], [1.45 * u, P[1]]].forEach(([px, a], k) => { const hx = px - L * Math.sin(a), hy = top + 0.4 * u + L * Math.cos(a); g.save(); g.translate(x, y); g.rotate(o.lean || 0); papel(circP(m * hx, hy, 0.62 * u), '#C8423A', sd + k, { amt: 1.5, sb: 4 }); g.restore(); }); }
+
+// ---- props para videos infantiles (volcán, experimento, milpa, planeta) ----
+function volcanP(x, y, s, sd, t, p, i) {
+  const w = 620 * s, h = 400 * s, cw = 70 * s, col = p.color || '#8A6A4E', top = y - h;
+  if (p.corte) { // volcán por dentro: cámara magmática, chimenea, cráter
+    papel([[x - w / 2, y], [x - cw, top], [x + cw, top], [x + w / 2, y]], col, sd, { amt: 3 });
+    papel([[x - w / 2 + 40 * s, y], [x - cw + 10 * s, top + 40 * s], [x + cw - 10 * s, top + 40 * s], [x + w / 2 - 40 * s, y]], '#A3825F', sd + 1, { amt: 2, sb: 0 });
+    papel(rectP(x - 22 * s, top + 6 * s, 44 * s, h + 30 * s), '#E0522E', sd + 2, { amt: 1.5, sb: 0 });
+    papel(ellP(x, y + 70 * s, 200 * s, 70 * s, 26), '#E0522E', sd + 3, { amt: 2, sb: 0 });
+    const gl = 0.5 + 0.5 * Math.sin(t * 3); papel(ellP(x, y + 70 * s, 140 * s, 42 * s, 22), gl > 0.5 ? '#F7A63A' : '#F08A3C', sd + 4, { amt: 1.5, sb: 0 });
+    papel(rectP(x - 10 * s, top + 10 * s, 20 * s, h + 40 * s), '#F7A63A', sd + 5, { amt: 1, sb: 0 });
+  } else {
+    papel([[x - w / 2, y], [x - cw, top], [x + cw, top], [x + w / 2, y]], col, sd, { amt: 3 });
+    papel([[x - cw * 0.9, top + 14 * s], [x + cw * 0.9, top + 14 * s], [x + cw * 0.7, top + 34 * s], [x - cw * 0.7, top + 34 * s]], '#5A4232', sd + 1, { amt: 1, sb: 0 });
+    if (p.nieve) papel([[x - cw * 1.9, top + 70 * s], [x - cw, top], [x + cw, top], [x + cw * 1.9, top + 70 * s], [x + cw, top + 50 * s], [x, top + 80 * s], [x - cw, top + 50 * s]], '#F4F1EA', sd + 2, { amt: 1.5, sb: 2 });
+  }
+  const e = p.erup; if (!e) return; const t0 = sentAt(i, e.s || 0, e.f || 0); if (t < t0) return; const q = t - t0, fin = e.dur ? Math.max(0, 1 - (q - e.dur) / 1.2) : 1; if (fin <= 0) return;
+  // ríos de lava que bajan
+  const L = Math.min(1, q / 2.2); [[-1, 0.62], [1, 0.48], [-1, 0.3]].forEach(([d, o], k) => { const x0 = x + d * cw * 0.6, x1 = x + d * (cw + (w / 2 - cw) * o), y1 = top + h * Math.min(1, L * (0.9 + k * 0.1)) * (0.7 + o * 0.4);
+    papel([[x0 - 14 * s, top + 8 * s], [x0 + 14 * s, top + 8 * s], [lerp(x0, x1, L) + 16 * s, Math.min(y, y1)], [lerp(x0, x1, L) - 16 * s, Math.min(y, y1)]], k % 2 ? '#F08A3C' : '#E0522E', sd + 10 + k, { amt: 1.5, sb: 0 }); });
+  // humo
+  for (let k = 0; k < 6; k++) { const a = ((q * 0.35 + k / 6) % 1), r = (40 + a * 120) * s; g.save(); g.globalAlpha = fin * (1 - a) * 0.8; papel(circP(x + Math.sin(k * 2.1 + q) * 60 * s * a, top - 60 * s - a * 420 * s, r), '#9A928A', sd + 20 + k, { amt: 3, sb: 0 }); g.restore(); }
+  // chispas de lava
+  for (let k = 0; k < 14; k++) { const ph = (q * 0.9 + rnd(k * 3.7)) % 1, vx = (rnd(k * 1.3) - 0.5) * 520 * s, vy = (520 + rnd(k * 2.9) * 380) * s, tt = ph * 1.3;
+    const px = x + vx * tt, py = top - vy * tt + 0.5 * 900 * s * tt * tt; if (py > y) continue; g.save(); g.globalAlpha = fin; papel(circP(px, py, (12 + rnd(k) * 12) * s), k % 3 ? '#F08A3C' : '#F7D25A', sd + 30 + k, { amt: 1, sb: 0 }); g.restore(); }
+}
+function botellaP(x, y, s, sd, p) { const w = 110 * s, h = 260 * s; papel([[x - w / 2, y], [x - w / 2, y - h * 0.7], [x - 20 * s, y - h * 0.85], [x - 20 * s, y - h], [x + 20 * s, y - h], [x + 20 * s, y - h * 0.85], [x + w / 2, y - h * 0.7], [x + w / 2, y]], p.vidrio || '#DCE8E4', sd, { amt: 2 });
+  papel(rectP(x - w / 2 + 8 * s, y - h * (p.nivel || 0.55), w - 16 * s, h * (p.nivel || 0.55) - 8 * s), p.color || '#EED9A0', sd + 1, { amt: 1, sb: 0 }); papel(rectP(x - 24 * s, y - h - 26 * s, 48 * s, 30 * s), p.tapa || C.rojo, sd + 2, { amt: 1, sb: 2 });
+  if (p.t) { papel(rectP(x - w / 2 + 6 * s, y - h * 0.45, w - 12 * s, 70 * s), C.blanco, sd + 3, { amt: 1, sb: 0 }); texto(p.t, x, y - h * 0.45 + 36 * s, Math.min(30 * s, 900 * s / Math.max(6, p.t.length * 3.2)), '#333'); } }
+function cajaP(x, y, s, sd, p) { const w = 170 * s, h = 210 * s; papel(rectP(x - w / 2, y - h, w, h), p.color || '#F2F2EE', sd, { amt: 2 }); papel(rectP(x - w / 2, y - h, w, 50 * s), p.banda || C.teal, sd + 1, { amt: 1, sb: 0 });
+  if (p.t) texto(p.t, x, y - h * 0.5, Math.min(30 * s, 1100 * s / Math.max(6, p.t.length * 3.4)), '#333'); }
+function burbujasP(x, y, s, sd, t, p) { const n = p.n || 16, w = (p.w || 200) * s, hh = (p.h || 260) * s; for (let k = 0; k < n; k++) { const ph = (t * (0.5 + rnd(k) * 0.6) + rnd(k * 5.1)) % 1;
+  g.save(); g.globalAlpha = 1 - ph; g.strokeStyle = p.color || '#FFFFFF'; g.lineWidth = 4 * s; g.beginPath(); g.arc(x + (rnd(k * 2.3) - 0.5) * w + Math.sin(t * 3 + k) * 8 * s, y - ph * hh, (8 + rnd(k * 7.7) * 14) * s, 0, 7); g.stroke(); g.restore(); } }
+function milpaP(x, y, s, sd, t, p) { const n = p.n || 9, dx = (p.dx || 110) * s; for (let k = 0; k < n; k++) { const cx = x + k * dx, h = (150 + rnd(k * 4.4) * 60) * s, sw = Math.sin(t * 2 + k) * 6 * s;
+  papel([[cx - 6 * s, y], [cx + sw - 3 * s, y - h], [cx + sw + 3 * s, y - h], [cx + 6 * s, y]], '#5E8C3A', sd + k, { amt: 1, sb: 0 });
+  papel([[cx, y - h * 0.5], [cx - 60 * s, y - h * 0.75], [cx - 10 * s, y - h * 0.55]], '#6FA046', sd + 20 + k, { amt: 1, sb: 0 }); papel([[cx, y - h * 0.62], [cx + 60 * s, y - h * 0.88], [cx + 10 * s, y - h * 0.66]], '#6FA046', sd + 40 + k, { amt: 1, sb: 0 });
+  papel(ellP(cx + 12 * s + sw, y - h * 0.7, 10 * s, 24 * s, 14), '#F2C14E', sd + 60 + k, { amt: 1, sb: 0 }); } }
+function planetaP(x, y, s, sd, p) { const r = (p.r || 150) * s; papel(circP(x, y, r), p.color || '#C8603A', sd, { amt: 3 }); for (let k = 0; k < 5; k++) papel(circP(x + (rnd(k * 3.1) - 0.5) * r * 1.2, y + (rnd(k * 5.3) - 0.5) * r * 1.2, r * (0.08 + rnd(k) * 0.1)), 'rgba(0,0,0,.12)', sd + 1 + k, { amt: 1, sb: 0 }); }
+function capasP(x, y, s, sd) { const R = 230 * s; papel(circP(x, y, R), '#5E8C3A', sd, { amt: 3 }); papel(circP(x, y, R * 0.9), '#C98A4A', sd + 1, { amt: 2, sb: 0 }); papel(circP(x, y, R * 0.62), '#E0522E', sd + 2, { amt: 2, sb: 0 }); papel(circP(x, y, R * 0.3), '#F7D25A', sd + 3, { amt: 2, sb: 0 }); }
 V2.arma = (i, r, t) => {
   const A = S.scenes[i].arma || {}, fd = A.fondo || 'dia';
   if (fd === 'dia') dia(t); else if (fd === 'noche') { noche(t); tierra(840, '#2A3048'); }
@@ -1046,6 +1085,10 @@ V2.arma = (i, r, t) => {
     pop(t0, p.x, p.y, () => {
       if (p.k === 'pan') panP(p.x, p.y, s, sd); else if (p.k === 'pez') pezP(p.x, p.y, s, sd); else if (p.k === 'roca') roca(p.x, p.y, s, sd);
       else if (p.k === 'flor') nochebuena(p.x, p.y, s, p.color, sd, t);
+      else if (p.k === 'volcan') volcanP(p.x, p.y, s, sd, t, p, i); else if (p.k === 'botella') botellaP(p.x, p.y, s, sd, p); else if (p.k === 'caja') cajaP(p.x, p.y, s, sd, p);
+      else if (p.k === 'burbujas') burbujasP(p.x, p.y, s, sd, t, p); else if (p.k === 'milpa') milpaP(p.x, p.y, s, sd, t, p); else if (p.k === 'planeta') planetaP(p.x, p.y, s, sd, p); else if (p.k === 'capas') capasP(p.x, p.y, s, sd);
+      else if (p.k === 'bandeja') papel(ellP(p.x, p.y, 300 * s, 46 * s, 30), p.color || '#B9BEC4', sd, { amt: 2 });
+      else if (p.k === 'gotero') { papel(rectP(p.x - 26 * s, p.y - 90 * s, 52 * s, 90 * s), p.color || C.rojo, sd, { amt: 1.5 }); papel(rectP(p.x - 10 * s, p.y - 130 * s, 20 * s, 40 * s), '#F2F2EE', sd + 1, { amt: 1, sb: 2 }); }
       else if (p.k === 'maceta') { papel([[p.x - 70 * s, p.y - 90 * s], [p.x + 70 * s, p.y - 90 * s], [p.x + 52 * s, p.y], [p.x - 52 * s, p.y]], '#B5562F', sd, { amt: 2 }); papel(rectP(p.x - 80 * s, p.y - 110 * s, 160 * s, 26 * s), '#C8683D', sd + 1, { amt: 1.5 }); nochebuena(p.x, p.y - 150 * s, 0.8 * s, p.color, sd + 2, t); }
       else if (p.k === 'corazon') corazon(p.x, p.y, 60 * s, C.coral, sd); else if (p.k === 'luna') papel(circP(p.x, p.y, 60 * s), '#F2EBCF', sd, { amt: 2, sb: 20 }); else if (p.k === 'sol') solP(p.x, p.y, 70 * s, t);
       else if (p.k === 'canasta') { papel([[p.x - 90 * s, p.y - 70 * s], [p.x + 90 * s, p.y - 70 * s], [p.x + 70 * s, p.y], [p.x - 70 * s, p.y]], '#A8783A', sd, { amt: 2 }); for (let j = 0; j < 4; j++) papel(rectP(p.x - 80 * s, p.y - 60 * s + j * 16 * s, 160 * s, 4 * s), '#7A5232', sd + 1 + j, { amt: 1, sb: 0 }); }
@@ -1069,24 +1112,26 @@ V2.arma = (i, r, t) => {
     if (f.sube) { const s0 = sentAt(i, f.sube.s || 0, f.sube.f || 0), n = f.sube.n || 6, p = cl((t - s0) / Math.max(1, winEnd(i) - s0 - 0.5), 0, 1), st = Math.min(n - 1, Math.floor(p * n)); x = f.x + st * 90 * (f.sube.s_ || 1); y = (f.y || 840) - (st + 1) * 60 * (f.sube.s_ || 1); o.pose = p >= 0.97 ? 'arms' : 'walk'; o.fase = t * 6; }
     if (f.salta) o.pose = (Math.floor(t * 3) % 2) ? 'arms' : 'stand';
     fig(x, y, f.h || 300, o, 2800 + k); if (f.guantes) guantesP(x, y, f.h || 300, o, 2850 + k * 3); });
-  (A.carteles || []).forEach((c, k) => { const t0 = aAt(i, c, k); if (t < t0) return; pop(t0, c.x || 500, c.y, () => cartel(c.t, c.x || 500, c.y, ACOL[c.col] || C.blanco, c.size || 52, 2900 + i * 20 + k, ATC(c.col)), 0.3);
+  (A.carteles || []).forEach((c, k) => { const t0 = aAt(i, c, k); if (t < t0 || (window.THUMB && HZ)) return; pop(t0, c.x || 500, c.y, () => cartel(c.t, c.x || 500, c.y, ACOL[c.col] || C.blanco, c.size || 52, 2900 + i * 20 + k, ATC(c.col)), 0.3);
     if (c.tacha) { const t1 = sentAt(i, c.tacha.s || 0, c.tacha.f || 0); if (t > t1) { const p = ease((t - t1) / 0.4); g.save(); g.font = `800 ${c.size || 52}px MB`; const w = g.measureText(c.t).width / 2 + 30; g.restore(); g.save(); g.strokeStyle = C.rojo; g.lineWidth = 12; g.beginPath(); g.moveTo((c.x || 500) - w, c.y + 4); g.lineTo(lerp((c.x || 500) - w, (c.x || 500) + w, p), c.y - 6); g.stroke(); g.restore(); } } });
   const n = A.contador; if (n) { const t0 = aAt(i, n, 0); if (t > t0) { const v = Math.round(lerp(n.de || 0, n.a, ease((t - t0) / (n.dur || 2)))); cartel(`${n.pre || ''}${v}${n.suf || ''}`, n.x || 500, n.y || 200, ACOL[n.col] || OR, n.size || 64, 2990 + i, ATC(n.col || 'or')); } }
 };
 
 function cierre(i, t) {
   const sc = S.scenes[i], r = t - T.cuts[i], L = HZ ? { cx: 960, cy: 560, sz: 780, tx: 964, y1: 950, y2: 1025, q1: 90, q2: 160 } : { cx: 540, cy: 900, sz: 1080, tx: 546, y1: 1530, y2: 1610, q1: 300, q2: 380 };
-  g.fillStyle = logoBg; g.fillRect(0, 0, W, H);
-  if (logo) { const wp = ease((r - 0.2) / 1.1); if (wp > 0) { g.save(); g.beginPath(); g.moveTo(L.cx, L.cy); g.arc(L.cx, L.cy, L.sz * 0.76, -1.5708, -1.5708 + 6.2832 * wp); g.closePath(); g.clip();
+  const MK = S.marca || null;
+  g.fillStyle = MK ? (MK.fondo || '#2F6F73') : logoBg; g.fillRect(0, 0, W, H);
+  if (MK) { const wp = back((r - 0.2) / 0.6); if (wp > 0) { g.save(); g.translate(L.cx, L.cy - (HZ ? 60 : 0)); g.scale(wp, wp); papel(circP(0, 0, HZ ? 230 : 300), MK.color || OR, 3000, { amt: 4 }); papel(circP(0, 0, HZ ? 190 : 250), '#FFF8EC', 3001, { amt: 3, sb: 0 }); volcanP(0, HZ ? 110 : 140, HZ ? 0.42 : 0.55, 3002, r, { erup: null }, i); g.restore(); } }
+  else if (logo) { const wp = ease((r - 0.2) / 1.1); if (wp > 0) { g.save(); g.beginPath(); g.moveTo(L.cx, L.cy); g.arc(L.cx, L.cy, L.sz * 0.76, -1.5708, -1.5708 + 6.2832 * wp); g.closePath(); g.clip();
     g.globalAlpha = Math.min(1, wp * 1.5); g.drawImage(logo, L.cx - L.sz / 2, L.cy - L.sz / 2, L.sz, L.sz); g.restore(); } }
   const q = sc.q || ['', ''], a = ease((r - 0.3) / 0.5);
   if (a > 0) { g.save(); g.globalAlpha = a; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.fillText(q[0], W / 2, L.q1); g.font = '400 58px MR'; g.fillText(q[1] || '', W / 2, L.q2); g.restore(); }
   const n1 = ease((r - 1.4) / 0.5);
-  if (n1 > 0) { g.save(); g.globalAlpha = n1; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.letterSpacing = '12px'; g.fillText('IMPULSO REAL', L.tx, L.y1 + (1 - n1) * 14); g.restore(); }
+  if (n1 > 0) { g.save(); g.globalAlpha = n1; g.textAlign = 'center'; g.fillStyle = '#fff'; g.font = '800 72px MB'; g.letterSpacing = '12px'; g.fillText(MK ? MK.nombre : 'IMPULSO REAL', L.tx, L.y1 + (1 - n1) * 14); g.restore(); }
   const n2 = ease((r - 1.8) / 0.5);
-  if (n2 > 0) { const s = 1 + 0.035 * Math.sin((r - 1.8) * 4) * n2, w = 330, h = 84; g.save(); g.globalAlpha = n2; g.translate(L.tx - 6, L.y2); g.scale(s, s);
+  if (n2 > 0) { const s = 1 + 0.035 * Math.sin((r - 1.8) * 4) * n2, w = MK ? 420 : 330, h = 84; g.save(); g.globalAlpha = n2; g.translate(L.tx - 6, L.y2); g.scale(s, s);
     g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, h / 2); g.fillStyle = 'rgba(255,107,61,.14)'; g.fill(); g.lineWidth = 4; g.strokeStyle = OR; g.stroke();
-    g.fillStyle = OR; g.font = '600 38px MS'; g.letterSpacing = '4px'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('SEGUIR +', 4, 2); g.restore(); }
+    g.fillStyle = OR; g.font = '600 38px MS'; g.letterSpacing = '4px'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(MK ? (MK.boton || 'SUSCRÍBETE +') : 'SEGUIR +', 4, 2); g.restore(); }
 }
 
 window.render = function (t) {
@@ -1095,7 +1140,7 @@ window.render = function (t) {
   if (sc.tipo === 'cierre') { cierre(i, t); return; }
   // cámara: empujón suave por frase (punch-in) + deriva lenta; en horizontal, la de siempre
   const ss = T.scenes[i].sents || []; let kf = 0; while (kf + 1 < ss.length && t >= ss[kf + 1].start) kf++;
-  const pf = ss.length ? Math.min(1, Math.max(0, (t - ss[kf].start) / 0.35)) : 1, MOV = !HZ && S.camara !== 'fija';
+  const pf = ss.length ? Math.min(1, Math.max(0, (t - ss[kf].start) / 0.35)) : 1, MOV = (!HZ && S.camara !== 'fija') || S.camara === 'viva';
   const z = MOV ? 1 + 0.025 * kf + 0.03 * ease(r / Math.max(1, D(i))) + (kf || i ? 0.06 * (1 - ease(pf)) : 0) : 1 + 0.03 * ease(r / Math.max(1, D(i)));
   const px = MOV ? (kf % 2 ? 1 : -1) * 14 * ease(pf) : 0;
   g.save(); g.translate(W / 2 + px, H * 0.6); g.scale(z, z); g.translate(-W / 2, -H * 0.6);
@@ -1103,7 +1148,7 @@ window.render = function (t) {
   g.restore();
   if (sc.tag) { const p = back((r - 0.15) / 0.35); if (p > 0) { g.save(); g.translate(HZ ? 120 : 150, HZ ? 110 : 520); g.scale(p, p); g.rotate(-0.08); papel(circP(0, 0, 70), OR, 300 + i, { amt: 3 }); texto(sc.tag, 0, 4, 76, '#FFF8EC'); g.restore(); } }
   if (sc.titulo) { const p = back((r - 0.1) / 0.35), ty = HZ ? 80 : 520; if (p > 0) { g.save(); g.translate(W / 2, ty); g.scale(p, p); g.translate(-W / 2, -ty); cartel(sc.titulo, W / 2, ty, C.marino, 48, 310 + i, '#FFF8EC'); g.restore(); } }
-  if (window.THUMB && S.thumb) { g.fillStyle = 'rgba(20,14,8,.35)'; g.fillRect(0, 0, W, H); S.thumb.forEach((l, k) => cartel(l, W / 2, (HZ ? 700 : 1180) + k * (HZ ? 175 : 200), k ? OR : C.blanco, HZ ? 104 : 92, 500 + k, k ? '#FFF8EC' : '#1E1E1E')); return; }
+  if (window.THUMB && S.thumb) { g.fillStyle = HZ ? 'rgba(20,14,8,.08)' : 'rgba(20,14,8,.35)'; g.fillRect(0, 0, W, H); S.thumb.forEach((l, k) => cartel(l, W / 2, (HZ ? 862 : 1180) + k * (HZ ? 135 : 200), k ? OR : C.blanco, HZ ? 92 : 92, 500 + k, k ? '#FFF8EC' : '#1E1E1E')); return; }
   if (!HZ && S.subs !== 'tira') { confeti(t); subsGrandes(i, t); } else subtitulos(i, t);
   if (r < 0.2 && i > 0) { g.fillStyle = `rgba(244,236,216,${0.6 * (1 - r / 0.2)})`; g.fillRect(0, 0, W, H); }
 };

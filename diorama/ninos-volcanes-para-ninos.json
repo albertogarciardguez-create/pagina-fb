@@ -1,0 +1,2265 @@
+{
+ "id": "ninos-volcanes-para-ninos",
+ "titulo": "Volcanes para niños (YouTube)",
+ "plantilla": "papel",
+ "formato": "horizontal",
+ "camara": "viva",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.95,
+ "pausaFrase": 0.34,
+ "pausaEscena": 0.7,
+ "inicio": 0.3,
+ "cola": 5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SUSCRÍBETE +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "miniatura": 17,
+ "thumb": [
+  "¡NACIÓ UN VOLCÁN",
+  "EN UNA MILPA!"
+ ],
+ "scenes": [
+  {
+   "say": "¿Te imaginas que un día, mientras tu familia siembra maíz, la tierra empieza a temblar… y de pronto, en medio de la milpa, nace un volcán? ¡Esto pasó de verdad, aquí en México!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "milpa",
+      "x": 60,
+      "y": 840,
+      "n": 4
+     },
+     {
+      "k": "milpa",
+      "x": 700,
+      "y": 840,
+      "n": 3
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 840,
+      "s_": 0.55,
+      "erup": {
+       "s": 0,
+       "f": 0.6
+      },
+      "s": 0,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 160,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡NACIÓ UN VOLCÁN!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "¡Hola, amigos curiosos! Hoy vamos a descubrir qué es un volcán, qué tiene por dentro y por qué hace erupción. Y al final, te cuento la historia completa del volcán que nació en una milpa. ¿Listos? ¡Vamos! Prepárate, porque va a estar increíble.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 720,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 860,
+      "h": 215,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "AMIGOS CURIOSOS",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¿LISTOS?",
+      "y": 230,
+      "col": "or",
+      "s": 3,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 3,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Primero, una pregunta: ¿tú qué crees que es un volcán? Piénsalo un segundito…",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.7,
+      "nieve": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿QUÉ ES UN VOLCÁN?",
+      "y": 110,
+      "col": "marino",
+      "size": 60
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "¿Qué es un volcán?"
+  },
+  {
+   "say": "Un volcán es una abertura en la tierra por donde salen roca derretida, gases y ceniza, que vienen de muy, muy adentro de nuestro planeta. Con el tiempo, todo eso que sale se va amontonando… y forma una montaña.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 840,
+      "s_": 0.9,
+      "erup": {
+       "s": 0,
+       "f": 0.4
+      },
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ROCA DERRETIDA · GASES · CENIZA",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.5,
+      "size": 44
+     },
+     {
+      "t": "¡FORMA UNA MONTAÑA!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Por eso muchos volcanes tienen forma de cono, como un sombrero de bruja… o como un cono de helado puesto al revés.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.75,
+      "nieve": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 215,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "FORMA DE CONO",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Y sabes de dónde viene su nombre? Viene de Vulcano, el dios romano del fuego.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "fuego",
+      "x": 500,
+      "y": 820,
+      "s_": 0.9,
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 820,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿POR QUÉ SE LLAMA ASÍ?",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0
+     },
+     {
+      "t": "VULCANO · DIOS DEL FUEGO",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ahora vamos a hacer algo increíble: vamos a partir un volcán por la mitad, para ver qué tiene por dentro.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 760,
+      "s_": 1.0,
+      "corte": true,
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡VAMOS A VERLO POR DENTRO!",
+      "y": 110,
+      "col": "or",
+      "size": 56
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "¿Qué tiene por dentro?"
+  },
+  {
+   "say": "Hasta abajo está la cámara magmática. Es como una gran bodega, llena de roca derretida y calientísima. A esa roca derretida le llamamos magma.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 760,
+      "s_": 1.0,
+      "corte": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CÁMARA MAGMÁTICA",
+      "y": 900,
+      "col": "marino",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "MAGMA",
+      "y": 110,
+      "col": "or",
+      "s": 2,
+      "f": 0.5,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Desde ahí sube un tubo largo, como un popote gigante. Se llama chimenea.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 760,
+      "s_": 1.0,
+      "corte": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CHIMENEA",
+      "y": 520,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.3,
+      "size": 56,
+      "x": 780
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y hasta arriba, en la punta, está el cráter: la boca del volcán, por donde sale todo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 760,
+      "s_": 1.0,
+      "corte": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CRÁTER",
+      "y": 250,
+      "col": "or",
+      "s": 0,
+      "f": 0.5,
+      "size": 60,
+      "x": 500
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ahora, atención, porque aquí viene un truco. Mientras la roca derretida está adentro de la tierra, se llama magma. Pero cuando sale por el cráter… ¡cambia de nombre! Se llama lava.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 840,
+      "s_": 0.9,
+      "erup": {
+       "s": 3,
+       "f": 0.2
+      },
+      "s": 0,
+      "f": 0
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 200,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MAGMA",
+      "y": 110,
+      "col": "marino",
+      "s": 1,
+      "f": 0.4,
+      "size": 64,
+      "tacha": {
+       "s": 3,
+       "f": 0
+      }
+     },
+     {
+      "t": "¡LAVA!",
+      "y": 230,
+      "col": "rojo",
+      "s": 3,
+      "f": 0.3,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 3,
+     "at": 0.2,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "A ver, repasemos. Adentro de la tierra se llama… ¡magma! Y afuera se llama… ¡lava! ¡Muy bien!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.7
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ADENTRO: MAGMA",
+      "y": 110,
+      "col": "marino",
+      "s": 1,
+      "f": 0.6
+     },
+     {
+      "t": "AFUERA: LAVA",
+      "y": 230,
+      "col": "rojo",
+      "s": 2,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 3,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ahora repasemos las tres partes del volcán, de abajo hacia arriba. Abajo, la cámara magmática. En medio, la chimenea. Y arriba, el cráter. ¡Cámara, chimenea y cráter!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 760,
+      "s_": 1.0,
+      "corte": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CÁMARA MAGMÁTICA",
+      "y": 900,
+      "col": "marino",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "CHIMENEA",
+      "x": 780,
+      "y": 520,
+      "col": "mostaza",
+      "s": 2,
+      "f": 0.2
+     },
+     {
+      "t": "CRÁTER",
+      "x": 500,
+      "y": 250,
+      "col": "or",
+      "s": 3,
+      "f": 0.2
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.5
+    },
+    {
+     "k": "sello",
+     "s": 2,
+     "at": 0.2,
+     "g": 0.5
+    },
+    {
+     "k": "sello",
+     "s": 3,
+     "at": 0.2,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "¿Quieres hacer una actividad? Pausa el video, toma una hoja y unos colores, y dibuja un volcán partido por la mitad, con sus tres partes. Pinta el magma de rojo y anaranjado. ¿Ya? ¡Seguimos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 500,
+      "y": 520,
+      "titulo": "MI VOLCÁN",
+      "items": [
+       "Cámara magmática",
+       "Chimenea",
+       "Cráter"
+      ],
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 220,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡PAUSA Y DIBUJA!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 3,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "La lava está calientísima: puede llegar a unos mil grados. ¡Es mucho, mucho más caliente que el horno de la cocina! Por eso nunca, nunca hay que acercarse a la lava.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 840,
+      "s_": 0.85,
+      "erup": {
+       "s": 0,
+       "f": 0
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡MUCHO MÁS QUE UN HORNO!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 1000,
+     "y": 110,
+     "suf": " °C",
+     "s": 0,
+     "f": 0.3,
+     "dur": 2.2,
+     "col": "rojo"
+    }
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "¿Y por qué un volcán hace erupción? Vamos a entenderlo con una botella de refresco.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "botella",
+      "x": 500,
+      "y": 820,
+      "s_": 1.4,
+      "t": "REFRESCO",
+      "color": "#7A3E1E",
+      "nivel": 0.7
+     }
+    ],
+    "figs": [
+     {
+      "x": 800,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿POR QUÉ HACE ERUPCIÓN?",
+      "y": 110,
+      "col": "marino",
+      "size": 56
+     }
+    ]
+   },
+   "cap_titulo": "¿Por qué hace erupción?"
+  },
+  {
+   "say": "El magma tiene gases atrapados, como las burbujas de un refresco. Y como el magma es más ligero que las rocas que lo rodean, poco a poco va subiendo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "botella",
+      "x": 500,
+      "y": 820,
+      "s_": 1.4,
+      "t": "REFRESCO",
+      "color": "#7A3E1E",
+      "nivel": 0.7
+     },
+     {
+      "k": "burbujas",
+      "x": 500,
+      "y": 720,
+      "w": 120,
+      "h": 300,
+      "n": 18
+     }
+    ],
+    "carteles": [
+     {
+      "t": "GASES = BURBUJAS",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "EL MAGMA SUBE",
+      "y": 230,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Cuando sube, los gases empujan, y empujan, y empujan… hasta que encuentran una salida. ¡Y entonces el volcán hace erupción!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 840,
+      "s_": 0.95,
+      "erup": {
+       "s": 1,
+       "f": 0.3
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EMPUJAN… EMPUJAN…",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "¡ERUPCIÓN!",
+      "y": 230,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.3,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "¡Vamos a jugar a ser volcanes! Ponte de pie. Agáchate muy, muy abajo, como el magma escondido. Ahora sube despacito, despacito… y cuando cuente tres, ¡salta como una erupción! Uno, dos, tres… ¡Erupción!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 250,
+      "y": 840,
+      "s_": 0.55,
+      "erup": {
+       "s": 4,
+       "f": 0.1
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 640,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "stand"
+      },
+      "salta": true
+     },
+     {
+      "x": 800,
+      "h": 215,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "stand"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡JUGUEMOS A SER VOLCANES!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.1,
+      "size": 50
+     },
+     {
+      "t": "¡ERUPCIÓN!",
+      "y": 230,
+      "col": "rojo",
+      "s": 4,
+      "f": 0.1,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 3,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "rugido",
+     "s": 4,
+     "at": 0.1,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Algunos volcanes explotan con mucha fuerza y avientan ceniza muy alto. Otros dejan salir la lava despacito, como un río caliente que baja por la montaña.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 260,
+      "y": 840,
+      "s_": 0.55,
+      "erup": {
+       "s": 0,
+       "f": 0.2
+      }
+     },
+     {
+      "k": "volcan",
+      "x": 760,
+      "y": 840,
+      "s_": 0.55,
+      "color": "#6E5A4A",
+      "erup": {
+       "s": 1,
+       "f": 0.3
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EXPLOSIVOS",
+      "y": 200,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.1,
+      "x": 260
+     },
+     {
+      "t": "TRANQUILOS",
+      "y": 200,
+      "col": "teal",
+      "s": 1,
+      "f": 0.1,
+      "x": 760
+     }
+    ]
+   }
+  },
+  {
+   "say": "La mayoría de los volcanes activos del mundo están alrededor del océano Pacífico, en una zona que se llama el Cinturón de Fuego. Ahí están más o menos tres de cada cuatro. En ese cinturón están países como Japón, Chile, Indonesia… y también México.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "planeta",
+      "x": 500,
+      "y": 520,
+      "r": 230,
+      "color": "#3E7CA8",
+      "s": 0,
+      "f": 0
+     },
+     {
+      "k": "fuego",
+      "x": 500,
+      "y": 760,
+      "s_": 0.5,
+      "n": 7,
+      "w": 700,
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CINTURÓN DE FUEGO",
+      "y": 110,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     },
+     {
+      "t": "3 DE CADA 4",
+      "y": 230,
+      "col": "blanco",
+      "s": 2,
+      "f": 0.4
+     }
+    ]
+   },
+   "cap_titulo": "Volcanes del mundo y de otros planetas"
+  },
+  {
+   "say": "México es parte del Cinturón de Fuego. Por eso aquí tenemos muchos volcanes, como el Popocatépetl.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 860,
+      "s_": 1.0,
+      "nieve": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 200,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MÉXICO",
+      "y": 110,
+      "col": "verde",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "POPOCATÉPETL",
+      "y": 230,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Sabías que Popocatépetl es una palabra en náhuatl? Quiere decir “cerro que humea”. Y a su lado está el Iztaccíhuatl, que quiere decir “mujer blanca”, porque su cima con nieve parece una mujer dormida.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 300,
+      "y": 860,
+      "s_": 0.8,
+      "nieve": true
+     },
+     {
+      "k": "volcan",
+      "x": 720,
+      "y": 860,
+      "s_": 0.65,
+      "nieve": true,
+      "color": "#7A6A5A",
+      "s": 2,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "CERRO QUE HUMEA",
+      "x": 300,
+      "y": 110,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.2,
+      "size": 44
+     },
+     {
+      "t": "MUJER BLANCA",
+      "x": 720,
+      "y": 230,
+      "col": "blanco",
+      "s": 2,
+      "f": 0.5,
+      "size": 44
+     }
+    ]
+   }
+  },
+  {
+   "say": "En Hawái está el Mauna Loa, el volcán más grande de la Tierra que todavía puede hacer erupción.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 860,
+      "s_": 1.4,
+      "color": "#5E4E44"
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MAUNA LOA · HAWÁI",
+      "y": 110,
+      "col": "teal",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero el volcán más grande de todos no está en la Tierra… ¡está en Marte! Se llama Monte Olimpo, y es casi tres veces más alto que el Everest, la montaña más alta de nuestro planeta.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "planeta",
+      "x": 500,
+      "y": 480,
+      "r": 250,
+      "color": "#C8603A",
+      "s": 0,
+      "f": 0
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 620,
+      "s_": 0.5,
+      "color": "#A04A2A",
+      "s": 1,
+      "f": 0.3
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡EN MARTE!",
+      "y": 110,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.6,
+      "size": 64
+     },
+     {
+      "t": "3 VECES EL EVEREST",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Vas muy bien! Hasta ahora ya sabes qué es un volcán, cuáles son sus partes, por qué hace erupción y dónde hay volcanes en el mundo… y hasta en Marte.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "lista",
+      "x": 420,
+      "y": 520,
+      "titulo": "YA SABES…",
+      "items": [
+       "Qué es un volcán",
+       "Sus 3 partes",
+       "Por qué hace erupción",
+       "Dónde hay volcanes"
+      ],
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y ahora sí, la historia que te prometí: el volcán que nació en una milpa.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "milpa",
+      "x": 80,
+      "y": 840,
+      "n": 8
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL VOLCÁN QUE NACIÓ",
+      "y": 110,
+      "col": "mostaza",
+      "size": 58
+     },
+     {
+      "t": "EN UNA MILPA",
+      "y": 230,
+      "col": "verde",
+      "size": 58
+     }
+    ]
+   },
+   "cap_titulo": "El volcán que nació en una milpa"
+  },
+  {
+   "say": "Fue en mil novecientos cuarenta y tres, en Michoacán. Un campesino llamado Dionisio Pulido trabajaba en su milpa, cerca de un pueblo llamado Parícutin.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "milpa",
+      "x": 60,
+      "y": 840,
+      "n": 5
+     }
+    ],
+    "figs": [
+     {
+      "x": 720,
+      "h": 290,
+      "o": {
+       "cam": "#F2F2EE",
+       "pan": "#F2F2EE",
+       "pelo": "#2A1A10",
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MICHOACÁN · 1943",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Desde hacía días, la tierra temblaba. Y la tarde del veinte de febrero, a las cuatro y media, Dionisio y su esposa, Paula, vieron cómo el suelo de su terreno se levantaba… y se abría una grieta. De ahí empezó a salir humo, ceniza y piedras.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "milpa",
+      "x": 60,
+      "y": 840,
+      "n": 3
+     },
+     {
+      "k": "volcan",
+      "x": 560,
+      "y": 840,
+      "s_": 0.25,
+      "erup": {
+       "s": 1,
+       "f": 0.5
+      },
+      "s": 1,
+      "f": 0.4
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 290,
+      "o": {
+       "cam": "#F2F2EE",
+       "pan": "#F2F2EE",
+       "pelo": "#2A1A10",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "20 DE FEBRERO · 4:30 PM",
+      "y": 110,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    },
+    {
+     "k": "rugido",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "¡Era un volcán naciendo! En su primer día creció como treinta metros: más o menos lo alto de un edificio de diez pisos. Y tres días después, ya medía el doble.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 420,
+      "y": 840,
+      "s_": 0.45,
+      "erup": {
+       "s": 0,
+       "f": 0
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 290,
+      "o": {
+       "cam": "#F2F2EE",
+       "pan": "#F2F2EE",
+       "pelo": "#2A1A10",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡UN VOLCÁN NACIENDO!",
+      "y": 230,
+      "col": "or",
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 30,
+     "y": 110,
+     "suf": " METROS",
+     "s": 1,
+     "f": 0.3,
+     "dur": 2.0
+    }
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "En un año, ya medía más de trescientos metros. Lo llamaron Paricutín, como el pueblo que estaba cerca.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 840,
+      "s_": 0.9,
+      "erup": {
+       "s": 0,
+       "f": 0
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PARICUTÍN",
+      "y": 230,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.4,
+      "size": 64
+     }
+    ],
+    "contador": {
+     "de": 30,
+     "a": 300,
+     "y": 110,
+     "pre": "+",
+     "suf": " METROS",
+     "s": 0,
+     "f": 0.2,
+     "dur": 2.0
+    }
+   }
+  },
+  {
+   "say": "La noticia le dio la vuelta al mundo. Llegaron científicos de muchos países para estudiarlo. Y hasta un pintor mexicano muy famoso, el Doctor Atl, lo pintó haciendo erupción.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.75,
+      "erup": {
+       "s": 0,
+       "f": 0
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 260,
+      "o": {
+       "cam": "#F2F2EE",
+       "pan": "#26344D",
+       "pelo": "#555",
+       "pose": "offer"
+      },
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "x": 860,
+      "h": 260,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#4A3A2A",
+       "pelo": "#DDD",
+       "pose": "ask"
+      },
+      "s": 2,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡NOTICIA MUNDIAL!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "CIENTÍFICOS · PINTORES",
+      "y": 230,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "La lava y la ceniza cubrieron dos pueblos, y las familias tuvieron que mudarse a otro lugar.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 300,
+      "y": 840,
+      "s_": 0.7,
+      "erup": {
+       "s": 0,
+       "f": 0
+      }
+     },
+     {
+      "k": "gente",
+      "x": 620,
+      "y": 840,
+      "n": 4,
+      "dx": 95,
+      "h": 200,
+      "pose": "walk"
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DOS PUEBLOS CUBIERTOS",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "El Paricutín estuvo haciendo erupción nueve años, hasta mil novecientos cincuenta y dos. Y fue el primer volcán que los científicos pudieron estudiar desde que nació… hasta que se apagó.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 420,
+      "y": 840,
+      "s_": 0.85,
+      "erup": {
+       "s": 0,
+       "f": 0,
+       "dur": 2.5
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 260,
+      "o": {
+       "cam": "#F2F2EE",
+       "pan": "#26344D",
+       "pelo": "#555",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1943 → 1952",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "¡LO ESTUDIARON TODA SU VIDA!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.4,
+      "size": 46
+     }
+    ]
+   }
+  },
+  {
+   "say": "Hoy mide cuatrocientos veinticuatro metros, y la gente lo visita y camina sobre la lava ya fría. ¡Y todo empezó en una milpa!",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "amanecer",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 420,
+      "y": 840,
+      "s_": 0.9
+     },
+     {
+      "k": "gente",
+      "x": 700,
+      "y": 840,
+      "n": 3,
+      "dx": 90,
+      "h": 190,
+      "pose": "walk"
+     }
+    ],
+    "carteles": [
+     {
+      "t": "424 METROS",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3,
+      "size": 64
+     },
+     {
+      "t": "¡TODO EMPEZÓ EN UNA MILPA!",
+      "y": 230,
+      "col": "verde",
+      "s": 1,
+      "f": 0.2,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "say": "¡Hora del reto! Te voy a hacer cinco preguntas. Pregunta uno: ¿cómo se llama la roca derretida cuando está adentro de la tierra? Uno, dos, tres… ¡Magma!",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.7,
+      "corte": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 780,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡RETO DE VOLCANES!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0,
+      "size": 58
+     },
+     {
+      "t": "PREGUNTA 1",
+      "y": 230,
+      "col": "marino",
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "t": "¡MAGMA!",
+      "y": 330,
+      "col": "rojo",
+      "s": 4,
+      "f": 0,
+      "size": 64,
+      "x": 330
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 3,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 4,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "¡Reto de volcanes!"
+  },
+  {
+   "say": "Pregunta dos: ¿cómo se llama la boca del volcán, por donde sale la lava? Uno, dos, tres… ¡El cráter!",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.7,
+      "erup": {
+       "s": 2,
+       "f": 0.6
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 780,
+      "h": 215,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PREGUNTA 2",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡EL CRÁTER!",
+      "y": 230,
+      "col": "or",
+      "s": 2,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Pregunta tres: ¿en qué planeta está el volcán más grande de todos? Uno, dos, tres… ¡En Marte!",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "planeta",
+      "x": 500,
+      "y": 500,
+      "r": 220,
+      "color": "#C8603A",
+      "s": 2,
+      "f": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PREGUNTA 3",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡EN MARTE!",
+      "y": 230,
+      "col": "rojo",
+      "s": 2,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Pregunta cuatro: ¿cómo se llama la zona alrededor del océano Pacífico donde hay muchísimos volcanes? Uno, dos, tres… ¡El Cinturón de Fuego!",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "planeta",
+      "x": 500,
+      "y": 500,
+      "r": 200,
+      "color": "#3E7CA8"
+     },
+     {
+      "k": "fuego",
+      "x": 500,
+      "y": 760,
+      "s_": 0.5,
+      "n": 7,
+      "w": 700,
+      "s": 2,
+      "f": 0.5
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PREGUNTA 4",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡CINTURÓN DE FUEGO!",
+      "y": 230,
+      "col": "or",
+      "s": 2,
+      "f": 0.5,
+      "size": 58
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y la última, pregunta cinco: ¿cómo se llama el volcán que nació en una milpa de Michoacán? Uno, dos, tres… ¡El Paricutín!",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "milpa",
+      "x": 60,
+      "y": 840,
+      "n": 3
+     },
+     {
+      "k": "volcan",
+      "x": 560,
+      "y": 840,
+      "s_": 0.6,
+      "erup": {
+       "s": 2,
+       "f": 0.5
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PREGUNTA 5",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡EL PARICUTÍN!",
+      "y": 230,
+      "col": "mostaza",
+      "s": 2,
+      "f": 0.5,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Cuántas te salieron bien? ¡Cuéntale a alguien de tu familia todo lo que aprendiste hoy sobre los volcanes!",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 300,
+      "y": 840,
+      "s_": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 680,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 820,
+      "h": 215,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿CUÁNTAS ACERTASTE?",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Recuerda: los volcanes son parte de la naturaleza de nuestro planeta. Y hay científicos que los vigilan todos los días, para cuidar a las personas que viven cerca.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 330,
+      "y": 840,
+      "s_": 0.75,
+      "nieve": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 260,
+      "o": {
+       "cam": "#F2F2EE",
+       "pan": "#26344D",
+       "pelo": "#555",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LOS CIENTÍFICOS LOS VIGILAN",
+      "y": 110,
+      "col": "teal",
+      "s": 1,
+      "f": 0.2,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y si quieres hacer tu propio volcán que hace erupción, para la escuela o para jugar, tenemos un video donde te enseñamos paso a paso. Eso sí: siempre con ayuda de un adulto.",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 820,
+      "s_": 0.8
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 810,
+      "s_": 0.45,
+      "erup": {
+       "s": 0,
+       "f": 0.6
+      }
+     },
+     {
+      "k": "botella",
+      "x": 200,
+      "y": 820,
+      "s_": 0.8,
+      "t": "VINAGRE",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "k": "caja",
+      "x": 800,
+      "y": 820,
+      "s_": 0.8,
+      "t": "BICARBONATO",
+      "s": 0,
+      "f": 0.4
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡HAZ TU PROPIO VOLCÁN!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "CON AYUDA DE UN ADULTO",
+      "y": 230,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "say": "¡Nos vemos en la próxima aventura, amigos curiosos! Y nunca dejes de preguntar todo lo que te dé curiosidad. ¡Adiós!",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué quieres aprender después?",
+    "dinosaurios, planetas o animales"
+   ]
+  }
+ ],
+ "post": "¿Qué es un volcán? ¿Qué tiene por dentro? Y la historia del volcán que nació en una milpa 🌋",
+ "hashtags": [
+  "#Volcanes",
+  "#ParaNiños",
+  "#Ciencia"
+ ],
+ "youtube": {
+  "titulo": "¿Qué es un VOLCÁN? 🌋 El volcán que nació en una milpa | Ciencia para niños",
+  "intro": "Un volcán en la milpa",
+  "descripcion": "¿Qué es un volcán? ¿Qué tiene por dentro? ¿Por qué hace erupción? En este video aprendemos las partes del volcán (cámara magmática, chimenea y cráter), la diferencia entre magma y lava, el Cinturón de Fuego, el volcán más grande del sistema solar… y la historia real del Paricutín, el volcán que nació en una milpa de Michoacán en 1943.\n\nAl final hay un reto de 5 preguntas. ¡A ver cuántas aciertas!\n\nVideo educativo para niños de primaria. Siguiente video: cómo hacer tu propio volcán para la escuela (con ayuda de un adulto).",
+  "hashtags": [
+   "#Volcanes",
+   "#CienciaParaNiños",
+   "#Paricutín"
+  ],
+  "etiquetas": [
+   "volcanes para niños",
+   "qué es un volcán",
+   "partes del volcán",
+   "magma y lava",
+   "Paricutín",
+   "volcán para niños",
+   "ciencia para niños",
+   "cinturón de fuego",
+   "volcanes de México"
+  ]
+ },
+ "sources": [
+  "https://www.gaceta.unam.mx/paricutin-primer-volcan-cuya-vida-fue-estudiada-desde-su-nacimiento-hasta-que-se-apago-para-siempre/",
+  "https://unamglobal.unam.mx/global_tv/el-dia-que-el-cielo-cayo-la-historia-del-nacimiento-del-volcan-paricutin/",
+  "https://www.britannica.com/place/paricutin",
+  "https://www.elfinanciero.com.mx/ciencia/volcan-paricutin-festeja-75-anos-con-todo-y-acta-de-nacimiento/",
+  "https://ninos.kiddle.co/Volcán",
+  "https://ninos.kiddle.co/Cinturón_de_fuego_del_Pacífico",
+  "https://marsed.mars.asu.edu/mep/volcanoes",
+  "https://www.vistazo.com/discover/este-volcan-tiene-22-kilometros-de-altura-y-ocupa-un-area-tan-grande-que-su-base-supera-el-tamano-de-muchos-paises/",
+  "https://estudyando.com/?p=100282",
+  "https://www.vanguardia.com/kids/top-10-datos-curiosos-de-los-volcanes-un-gigantesco-mundo-por-explorar-DD6467261"
+ ],
+ "miniatura_t": 0.95
+}

@@ -1,0 +1,1301 @@
+{
+ "id": "ninos-volcan-proyecto-escolar",
+ "titulo": "Volcán para proyecto escolar (YouTube)",
+ "plantilla": "papel",
+ "formato": "horizontal",
+ "camara": "viva",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.95,
+ "pausaFrase": 0.34,
+ "pausaEscena": 0.7,
+ "inicio": 0.3,
+ "cola": 5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SUSCRÍBETE +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "miniatura": 12,
+ "thumb": [
+  "¡VOLCÁN QUE HACE ERUPCIÓN!",
+  "PROYECTO ESCOLAR"
+ ],
+ "scenes": [
+  {
+   "say": "¿Te dejaron llevar un volcán a la escuela… y no sabes ni por dónde empezar? ¡Tranquilo! Hoy te enseño, paso a paso, a hacer un volcán que de verdad hace erupción.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.6,
+      "erup": {
+       "s": 2,
+       "f": 0.3
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 840,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡UN VOLCÁN QUE SÍ HACE ERUPCIÓN!",
+      "y": 110,
+      "col": "or",
+      "s": 2,
+      "f": 0.3,
+      "size": 50
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "¡Hola, amigos curiosos! Este proyecto es fácil, barato y queda increíble. Pero antes, una regla muy importante: este experimento siempre se hace con ayuda de un adulto.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 860,
+      "h": 300,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#4A3A2A",
+       "pelo": "#3A2618",
+       "largo": true,
+       "pose": "offer"
+      },
+      "s": 2,
+      "f": 0.3
+     }
+    ],
+    "carteles": [
+     {
+      "t": "FÁCIL · BARATO · INCREÍBLE",
+      "y": 110,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.2,
+      "size": 46
+     },
+     {
+      "t": "CON AYUDA DE UN ADULTO",
+      "y": 230,
+      "col": "teal",
+      "s": 2,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Primero, junta tus materiales. Vas a necesitar: una botella de plástico chiquita, plastilina o arcilla, un cartón o una charola para la base, bicarbonato de sodio, vinagre, colorante vegetal rojo, un chorrito de jabón para trastes y una cuchara.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 320,
+      "y": 500,
+      "titulo": "MATERIALES",
+      "items": [
+       "Botella chica",
+       "Plastilina",
+       "Cartón o charola",
+       "Bicarbonato",
+       "Vinagre",
+       "Colorante rojo",
+       "Jabón y cuchara"
+      ],
+      "s": 0,
+      "f": 0.02
+     }
+    ],
+    "figs": [
+     {
+      "x": 820,
+      "h": 220,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "Materiales"
+  },
+  {
+   "say": "¡Todo esto lo encuentras en tu cocina o en la tiendita!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "caja",
+      "x": 260,
+      "y": 820,
+      "s_": 0.8,
+      "t": "BICARBONATO"
+     },
+     {
+      "k": "botella",
+      "x": 420,
+      "y": 820,
+      "s_": 0.85,
+      "t": "VINAGRE",
+      "color": "#EFE6C8"
+     },
+     {
+      "k": "gotero",
+      "x": 560,
+      "y": 820,
+      "s_": 0.9
+     },
+     {
+      "k": "botella",
+      "x": 680,
+      "y": 820,
+      "s_": 0.6,
+      "t": "JABÓN",
+      "color": "#7FC8A9",
+      "tapa": "#2F6F73"
+     },
+     {
+      "k": "botella",
+      "x": 820,
+      "y": 820,
+      "s_": 1.0,
+      "t": "",
+      "color": "#DCE8E4",
+      "nivel": 0.05,
+      "tapa": "#DCE8E4"
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡EN TU COCINA!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "say": "Paso uno: prepara tu lugar de trabajo. Pon periódico sobre la mesa, porque esto se va a ensuciar… ¡y eso es parte de la diversión!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 1.1
+     }
+    ],
+    "figs": [
+     {
+      "x": 820,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 1",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     },
+     {
+      "t": "PREPARA TU MESA",
+      "y": 230,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "Paso a paso"
+  },
+  {
+   "say": "Paso dos: pon la botella vacía en el centro del cartón y pégala con cinta, para que no se mueva. Esta botella va a ser el corazón de tu volcán.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "botella",
+      "x": 500,
+      "y": 820,
+      "s_": 1.0,
+      "t": "",
+      "color": "#DCE8E4",
+      "nivel": 0.05,
+      "tapa": "#DCE8E4",
+      "s": 0,
+      "f": 0.05
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 2",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     },
+     {
+      "t": "LA BOTELLA AL CENTRO",
+      "y": 230,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Paso tres: cubre la botella con plastilina, de arriba hacia abajo, hasta formar una montaña. Lo más importante: deja la boca de la botella destapada, porque por ahí va a salir la lava.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 3",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     },
+     {
+      "t": "¡FORMA LA MONTAÑA!",
+      "y": 230,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6
+     },
+     {
+      "t": "LA BOCA, DESTAPADA",
+      "y": 330,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.7,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Paso cuatro: ¡decóralo! Puedes ponerle plastilina verde abajo, como si fueran árboles, piedritas alrededor, y un poco de rojo y anaranjado en la punta, como si ya estuviera hirviendo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.6
+     },
+     {
+      "k": "milpa",
+      "x": 220,
+      "y": 830,
+      "n": 2,
+      "dx": 80
+     },
+     {
+      "k": "milpa",
+      "x": 700,
+      "y": 830,
+      "n": 2,
+      "dx": 80
+     },
+     {
+      "k": "roca",
+      "x": 380,
+      "y": 830,
+      "s_": 0.4
+     },
+     {
+      "k": "roca",
+      "x": 640,
+      "y": 830,
+      "s_": 0.35
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 4",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     },
+     {
+      "t": "¡DECÓRALO!",
+      "y": 230,
+      "col": "or",
+      "s": 0,
+      "f": 0.4,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Paso cinco: ahora vamos a preparar la lava. Dentro de la botella echa dos cucharadas de bicarbonato de sodio.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 420,
+      "y": 820,
+      "s_": 0.6
+     },
+     {
+      "k": "caja",
+      "x": 780,
+      "y": 820,
+      "s_": 0.8,
+      "t": "BICARBONATO",
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 5",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     },
+     {
+      "t": "2 CUCHARADAS DE BICARBONATO",
+      "y": 230,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.3,
+      "size": 46
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "La erupción"
+  },
+  {
+   "say": "Luego agrega unas cinco gotas de colorante rojo, para que tu lava se vea de verdad. Y por último, un chorrito de jabón para trastes. Este es el truco secreto: el jabón hace que salga mucha más espuma.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 420,
+      "y": 820,
+      "s_": 0.6
+     },
+     {
+      "k": "gotero",
+      "x": 700,
+      "y": 820,
+      "s_": 0.9,
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "k": "botella",
+      "x": 840,
+      "y": 820,
+      "s_": 0.6,
+      "t": "JABÓN",
+      "color": "#7FC8A9",
+      "tapa": "#2F6F73",
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "5 GOTAS DE COLORANTE",
+      "y": 110,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "TRUCO: UN CHORRITO DE JABÓN",
+      "y": 230,
+      "col": "or",
+      "s": 2,
+      "f": 0.2,
+      "size": 46
+     }
+    ]
+   }
+  },
+  {
+   "say": "Paso seis, el más emocionante. Pídele a un adulto que te ayude a servir medio vaso de vinagre. ¿Listo? Échalo dentro del volcán… ¡y aléjate un pasito!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 420,
+      "y": 820,
+      "s_": 0.6
+     },
+     {
+      "k": "botella",
+      "x": 760,
+      "y": 820,
+      "s_": 0.85,
+      "t": "VINAGRE",
+      "color": "#EFE6C8",
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 900,
+      "h": 300,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#4A3A2A",
+       "pelo": "#3A2618",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 6",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     },
+     {
+      "t": "MEDIO VASO DE VINAGRE",
+      "y": 230,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Tres, dos, uno… ¡Erupción!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "foso",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.75,
+      "erup": {
+       "s": 0,
+       "f": 0.75
+      }
+     },
+     {
+      "k": "burbujas",
+      "x": 500,
+      "y": 560,
+      "w": 160,
+      "h": 200,
+      "n": 18,
+      "color": "#F7A63A"
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡ERUPCIÓN!",
+      "y": 110,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.75,
+      "size": 80
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.35,
+     "g": 0.6
+    },
+    {
+     "k": "rugido",
+     "s": 0,
+     "at": 0.75,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Mira cómo sale la espuma y baja por la montaña, igualito que la lava de un volcán de verdad!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.75,
+      "erup": {
+       "s": 0,
+       "f": 0
+      }
+     },
+     {
+      "k": "burbujas",
+      "x": 500,
+      "y": 560,
+      "w": 200,
+      "h": 220,
+      "n": 22,
+      "color": "#F7A63A"
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 220,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡COMO LAVA DE VERDAD!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Pero por qué pasa esto? Aquí viene la parte que le vas a explicar a tu maestra o a tu maestro.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "caja",
+      "x": 330,
+      "y": 820,
+      "s_": 1.0,
+      "t": "BICARBONATO"
+     },
+     {
+      "k": "botella",
+      "x": 670,
+      "y": 820,
+      "s_": 1.1,
+      "t": "VINAGRE",
+      "color": "#EFE6C8"
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿POR QUÉ PASA ESTO?",
+      "y": 110,
+      "col": "marino",
+      "size": 58
+     }
+    ]
+   },
+   "cap_titulo": "¿Por qué pasa?"
+  },
+  {
+   "say": "El vinagre es un ácido, y el bicarbonato es una base. Cuando se juntan, hacen una reacción química, y se forma un gas que se llama dióxido de carbono.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "caja",
+      "x": 300,
+      "y": 820,
+      "s_": 1.0,
+      "t": "BICARBONATO"
+     },
+     {
+      "k": "botella",
+      "x": 700,
+      "y": 820,
+      "s_": 1.1,
+      "t": "VINAGRE",
+      "color": "#EFE6C8"
+     },
+     {
+      "k": "burbujas",
+      "x": 500,
+      "y": 760,
+      "w": 200,
+      "h": 320,
+      "n": 20,
+      "s": 2,
+      "f": 0.3
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ÁCIDO + BASE",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "= REACCIÓN QUÍMICA",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     },
+     {
+      "t": "DIÓXIDO DE CARBONO",
+      "y": 330,
+      "col": "teal",
+      "s": 1,
+      "f": 0.8,
+      "size": 46
+     }
+    ]
+   }
+  },
+  {
+   "say": "Ese gas forma muchísimas burbujas que necesitan salir… y como el jabón las atrapa, se hace una espuma que sube y se desborda por el cráter. Además de ese gas, la reacción también deja agua y una sal que se llama acetato de sodio.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.7,
+      "erup": {
+       "s": 0,
+       "f": 0.3
+      }
+     },
+     {
+      "k": "burbujas",
+      "x": 500,
+      "y": 580,
+      "w": 180,
+      "h": 220,
+      "n": 20
+     }
+    ],
+    "carteles": [
+     {
+      "t": "GAS + JABÓN = ESPUMA",
+      "y": 110,
+      "col": "or",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "+ AGUA + ACETATO DE SODIO",
+      "y": 230,
+      "col": "blanco",
+      "s": 2,
+      "f": 0.5,
+      "size": 44
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y aquí va un tip para que te pongan diez: explica que tu volcán tiene las mismas partes que uno real. El fondo de la botella es la cámara magmática, la botella es la chimenea, y la boca de la botella es el cráter.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 760,
+      "s_": 1.0,
+      "corte": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TIP PARA SACAR 10",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.2,
+      "size": 56
+     },
+     {
+      "t": "CÁMARA MAGMÁTICA",
+      "y": 900,
+      "col": "marino",
+      "s": 2,
+      "f": 0.4
+     },
+     {
+      "t": "CHIMENEA",
+      "y": 520,
+      "col": "mostaza",
+      "s": 2,
+      "f": 0.6,
+      "x": 790
+     },
+     {
+      "t": "CRÁTER",
+      "y": 250,
+      "col": "or",
+      "s": 2,
+      "f": 0.85
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "Tips para sacar 10"
+  },
+  {
+   "say": "¿Quieres más erupciones? Limpia un poquito el cráter, vuelve a echar bicarbonato y vinagre… ¡y listo, otra vez! Prepara ingredientes de sobra, porque nadie se va a conformar con una sola.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "bandeja",
+      "x": 500,
+      "y": 830,
+      "s_": 0.9
+     },
+     {
+      "k": "volcan",
+      "x": 500,
+      "y": 820,
+      "s_": 0.6,
+      "erup": {
+       "s": 1,
+       "f": 0.4
+      }
+     },
+     {
+      "k": "caja",
+      "x": 180,
+      "y": 820,
+      "s_": 0.8,
+      "t": "BICARBONATO"
+     },
+     {
+      "k": "botella",
+      "x": 840,
+      "y": 820,
+      "s_": 0.85,
+      "t": "VINAGRE",
+      "color": "#EFE6C8"
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 215,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡OTRA VEZ!",
+      "y": 110,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.4,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "rugido",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Otro tip: practícalo un día antes en tu casa, y el día de la exposición lleva el vinagre aparte, en un frasco bien cerrado.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "botella",
+      "x": 380,
+      "y": 820,
+      "s_": 0.85,
+      "t": "VINAGRE",
+      "color": "#EFE6C8"
+     },
+     {
+      "k": "lista",
+      "x": 640,
+      "y": 480,
+      "titulo": "ANTES DE LA EXPO",
+      "items": [
+       "Practica en casa",
+       "Vinagre aparte",
+       "Bien cerrado"
+      ],
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y recuerda las reglas de seguridad: siempre con un adulto, nunca te tomes la mezcla, no te talles los ojos, y al terminar, lávate las manos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 420,
+      "y": 500,
+      "titulo": "SEGURIDAD",
+      "items": [
+       "Con un adulto",
+       "No se toma",
+       "No a los ojos",
+       "Lávate las manos"
+      ],
+      "s": 0,
+      "f": 0.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 300,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#4A3A2A",
+       "pelo": "#3A2618",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "Seguridad"
+  },
+  {
+   "say": "¡Y listo! Ya tienes un volcán que hace erupción, y además sabes explicar por qué. ¿Quieres saber cómo funciona un volcán de verdad? Tenemos un video donde te contamos la historia del volcán que nació en una milpa.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "campo",
+    "props": [
+     {
+      "k": "milpa",
+      "x": 60,
+      "y": 840,
+      "n": 3
+     },
+     {
+      "k": "volcan",
+      "x": 560,
+      "y": 840,
+      "s_": 0.6,
+      "erup": {
+       "s": 2,
+       "f": 0.4
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡MISIÓN CUMPLIDA!",
+      "y": 110,
+      "col": "verde",
+      "s": 0,
+      "f": 0.1,
+      "size": 58
+     }
+    ]
+   }
+  },
+  {
+   "say": "¡Nos vemos en la próxima aventura, amigos curiosos! ¡Adiós!",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué experimento hacemos después?",
+    "pídele a un adulto que te ayude"
+   ]
+  }
+ ],
+ "post": "Cómo hacer un volcán que hace erupción para tu proyecto escolar 🌋",
+ "hashtags": [
+  "#ProyectoEscolar",
+  "#Volcán",
+  "#Experimentos"
+ ],
+ "youtube": {
+  "titulo": "Cómo hacer un VOLCÁN que hace ERUPCIÓN 🌋 | Proyecto escolar fácil",
+  "intro": "Un volcán de verdad",
+  "descripcion": "Aprende a hacer un volcán casero que hace erupción, paso a paso, con materiales que tienes en casa: botella, plastilina, bicarbonato, vinagre, colorante y jabón.\n\nAl final te explicamos por qué pasa (la reacción química entre el vinagre y el bicarbonato) y te damos tips para presentarlo en la escuela y sacar 10.\n\n⚠️ Este experimento siempre se hace con ayuda de un adulto.\n\nMateriales:\n- Botella de plástico chica\n- Plastilina o arcilla\n- Cartón o charola\n- 2 cucharadas de bicarbonato de sodio\n- 5 gotas de colorante vegetal rojo\n- Un chorrito de jabón para trastes\n- Medio vaso de vinagre",
+  "hashtags": [
+   "#Volcán",
+   "#ProyectoEscolar",
+   "#ExperimentosParaNiños"
+  ],
+  "etiquetas": [
+   "como hacer un volcan",
+   "volcán casero",
+   "volcán que hace erupción",
+   "proyecto escolar",
+   "maqueta de volcán",
+   "experimento bicarbonato y vinagre",
+   "experimentos para niños",
+   "volcán para la escuela",
+   "como hacer una maqueta"
+  ]
+ },
+ "sources": [
+  "https://nuevaescuelamexicana.sep.gob.mx/contenido/recurso/el-gran-volcan-vesubio/",
+  "https://nuevaescuelamexicana.sep.gob.mx/contenido/recurso/42015/",
+  "https://nuevaescuelamexicana.sep.gob.mx/contenido/recurso/42245/",
+  "https://www.ull.es/portal/cienciaull/?p=9656",
+  "https://iciq.org/es/experiment/erupcion-volcanica",
+  "https://www.guiainfantil.com/articulos/ocio/manualidades/volcan-en-erupcion-experimento-cientifico-para-ninos/",
+  "https://es.scribd.com/doc/292697447/Experimento-Del-Volcan-de-Vinagre-y-Bicarbonato",
+  "https://garfield.extension.colostate.edu/wp-content/uploads/sites/43/2025/12/Sand-Volcano-Experiment.pdf"
+ ],
+ "miniatura_t": 0.6
+}

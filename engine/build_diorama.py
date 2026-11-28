@@ -413,7 +413,7 @@ def youtube(story, timing, out):
     yt = story["youtube"]
     mmss = lambda x: f"{int(x // 60)}:{int(x % 60):02d}"
     caps = ["0:00 " + yt.get("intro", "Introducción")]
-    caps += [f"{mmss(timing['cuts'][i])} {sc['cap_titulo'].replace(chr(10), ' ')}" for i, sc in enumerate(story["scenes"]) if sc.get("tipo") == "capitulo"]
+    caps += [f"{mmss(timing['cuts'][i])} {sc['cap_titulo'].replace(chr(10), ' ')}" for i, sc in enumerate(story["scenes"]) if sc.get("tipo") == "capitulo" or (sc.get("cap_titulo") and story.get("plantilla") == "papel")]
     txt = [yt["titulo"], "", yt["descripcion"], "", "Capítulos:", *caps, "", " ".join(yt.get("hashtags", [])), "", "Etiquetas: " + ", ".join(yt.get("etiquetas", []))]
     open(os.path.join(out, "youtube.txt"), "w", encoding="utf-8").write("\n".join(txt) + "\n")
     log("youtube.txt y subtitulos.srt listos")
@@ -425,11 +425,18 @@ def miniatura(pg, story, timing, out):
         return
     from PIL import Image
     t = max([timing["cuts"][m] + 0.9] + [x + 0.9 for x in timing["ev"][m]["titles"]])
-    Image.open(io.BytesIO(cuadro(pg, t))).convert("RGB").resize((1280, 720)).save(os.path.join(out, "miniatura.jpg"), quality=92)
+    papel = story.get("plantilla") == "papel" and story.get("thumb")
+    if papel:  # en papel la miniatura lleva los carteles de "thumb" encima, a media escena (con todo ya armado)
+        fin = timing["cuts"][m + 1] if m + 1 < len(timing["cuts"]) else timing["total"]
+        t = timing["cuts"][m] + story.get("miniatura_t", 0.7) * (fin - timing["cuts"][m]); pg.evaluate("window.THUMB = true")
+    img = cuadro(pg, t)
+    if papel:
+        pg.evaluate("window.THUMB = false")
+    Image.open(io.BytesIO(img)).convert("RGB").resize((1280, 720)).save(os.path.join(out, "miniatura.jpg"), quality=92)
 
 
 def main():
-    path = os.path.abspath(sys.argv[1]); preview = "--preview" in sys.argv
+    path = os.path.abspath(sys.argv[1]); preview = "--preview" in sys.argv; solo_mini = "--miniatura" in sys.argv
     story = json.load(open(path, encoding="utf-8"))
     out = os.path.join(ROOT, "salida", story["id"]); os.makedirs(out, exist_ok=True)
     raw, timing = voz(story, path, out)
@@ -440,10 +447,11 @@ def main():
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
         br, pg = abrir(pw, story, timing, imgs, clips(story, out))
-        revision(pg, story, timing, out)
-        if story.get("formato") == "horizontal":
+        if not solo_mini:
+            revision(pg, story, timing, out)
+        if story.get("formato") == "horizontal" or solo_mini:
             miniatura(pg, story, timing, out)
-        if preview:
+        if preview or solo_mini:
             br.close(); return
         audio = mezcla(story, out, raw, timing)
         mp4 = os.path.join(out, f"{story['id']}.mp4")
