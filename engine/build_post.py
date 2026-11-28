@@ -11,6 +11,8 @@ Esquema (posts/<id>.json):
    "autor": "— Brian Tracy",                     # opcional, en itálica bajo la frase
    "dato": "84",                                  # opcional (SF): número gigante sobre el texto
    "pregunta": "¿Las escribes o solo las piensas?",  # va en la banda de abajo
+   "dibujo": [{"k": "gafas"}, {"k": "mazo"}, {"k": "prohibido"}],  # opcional: escena de papel recortado
+        # arriba (engine/dibujos.py; elementos y marcas en su docstring; muestra: python3 engine/dibujos.py)
    "post": "texto del post con pregunta 👇", "hashtags": ["#..."], "sources": ["https://..."]}
 Formato 1080×1350 (4:5, el que más ocupa en el feed). Sin fotos, escudos ni logos de terceros.
 """
@@ -94,6 +96,8 @@ def construir(path):
 
     x0, ancho = 96, W - 192
     y = 120
+    dib = h.get("dibujo")
+    bh = 220 if dib else 300  # alto de la banda inferior
     if h.get("kicker"):
         fk = font("sb", 34)
         k = h["kicker"].upper()
@@ -101,13 +105,23 @@ def construir(path):
         d.rounded_rectangle([x0 - 4, y - 8, x0 + tw + 36, y + 50], 26, outline=m["acc"], width=3)
         d.text((x0 + 16, y + 21), k, font=fk, fill=m["acc"], anchor="lm")
         y += 100
+    if dib:
+        import dibujos
+        pw, ph = W - 120, 470
+        panel = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+        esc = dibujos.dibujar(dib, pw, ph, h.get("dibujo_fondo", "#E9E1D0"), seed=len(h["id"]))
+        mask = Image.new("L", (pw, ph), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, pw - 1, ph - 1], 36, fill=255)
+        im.paste(esc, (60, y - 10), mask)
+        d = ImageDraw.Draw(im)
+        y += ph + 30
     if h.get("dato"):
         fd = font("xb", 260)
         d.text((x0 - 8, y - 20), str(h["dato"]), font=fd, fill=m["acc"], anchor="la")
         y += 270
-    banda_y = H - 300
-    alto = banda_y - y - (110 if h.get("autor") else 50)
-    f, s, lineas, sp = ajustar(d, tokens(h["texto"]), ancho, alto, 112 if not h.get("dato") else 84)
+    banda_y = H - bh
+    alto = banda_y - y - ((90 if dib else 110) if h.get("autor") else 50)
+    f, s, lineas, sp = ajustar(d, tokens(h["texto"]), ancho, alto, 84 if (h.get("dato") or dib) else 112, 44 if dib else 54)
     lh = s * 1.18
     ty = y + max(0, (alto - len(lineas) * lh) / 2) if not h.get("dato") else y
     for ln in lineas:
@@ -117,7 +131,7 @@ def construir(path):
             x += lw + sp
         ty += lh
     if h.get("autor"):
-        d.text((x0, ty + 24), h["autor"], font=font("lora", 44), fill=m["dim"])
+        d.text((x0, ty + (12 if dib else 24)), h["autor"], font=font("lora", 38 if dib else 44), fill=m["dim"])
 
     # banda inferior: pregunta + marca
     d.rectangle([0, banda_y, W, H], fill=m["banda"])
@@ -126,13 +140,14 @@ def construir(path):
     q = re.sub(r"[^\u0000-\u2FFF]", "", h.get("pregunta", "")).strip()  # sin emojis (la fuente no los tiene)
     qtoks = [(w, False) for w in q.split()]
     ql, qsp = envolver(d, qtoks, fq, W - 330)
-    qy = banda_y + 150 - len(ql) * 29
+    qy = banda_y + bh // 2 - len(ql) * 29
     for ln in ql:
         d.text((x0, qy), " ".join(w for w, _, _ in ln), font=fq, fill="#F2EFE8")
         qy += 58
-    logo = Image.open(os.path.join(ROOT, "engine", "assets", m["logo"])).convert("RGBA").resize((170, 170))
-    im.paste(logo, (W - 96 - 170, banda_y + 40), logo)
-    d.text((W - 96 - 85, banda_y + 232), m["nombre"], font=font("sb", 22), fill="#F2EFE8", anchor="mm")
+    ls = 120 if dib else 170
+    logo = Image.open(os.path.join(ROOT, "engine", "assets", m["logo"])).convert("RGBA").resize((ls, ls))
+    im.paste(logo, (W - 96 - ls, banda_y + (30 if dib else 40)), logo)
+    d.text((W - 96 - ls // 2, banda_y + (30 if dib else 40) + ls + 22), m["nombre"], font=font("sb", 22), fill="#F2EFE8", anchor="mm")
 
     out = os.path.join(ROOT, "salida", h["id"])
     os.makedirs(out, exist_ok=True)
