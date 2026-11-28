@@ -1,0 +1,17 @@
+{
+ "redes": {
+  "facebook": {
+   "ok": true,
+   "id": "998858446142735",
+   "url": "https://www.facebook.com/reel/998858446142735",
+   "programado": true,
+   "fecha": "2026-11-28 05:45"
+  },
+  "youtube": {
+   "omitido": "faltan secretos: IR_YT_REFRESH"
+  }
+ },
+ "aviso": "[diorama] AVISO: el video salió con la voz de prueba (kokoro), no con la de ElevenLabs.",
+ "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-28-ir-noche-nehemias-muro.mp4",
+ "actualizado": "2026-11-28 05:45"
+}
