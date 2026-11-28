@@ -8,7 +8,8 @@ lista = [{"k": "gafas"}, {"k": "mazo"}, {"k": "prohibido"}]  (máx. 3 + marcas)
   - Marcas que van ENCIMA del elemento anterior: prohibido, alerta, roto (grietas), check.
 Elementos: gafas, mazo, nube, candado, telefono, dinero, grafica, robot, chip, cohete, balon, trofeo,
   guante, auto, globo, edificio, avion, servidor, rayo, matraz, persona, gente, microfono, casa,
-  satelite, bandera (genérica, sin país), reloj, documento.
+  satelite, bandera (genérica, sin país), reloj, documento, camiseta (color, franja), porteria,
+  tarjeta (color: roja|amarilla, n: 1|2).
 Prueba: python3 engine/dibujos.py  -> salida/dibujos-muestra.png con todos.
 """
 import math, random
@@ -208,6 +209,33 @@ def el_guante(p, T, s, bg, o):
     p.pieza(T(rrect(22, 16, 56, 58, 24)), ROJO)
     p.pieza(T(rrect(12, 36, 22, 28, 11)), "#B0342E")
     p.pieza(T(rect(30, 70, 36, 5)), "#B0342E", sombra=False)
+
+
+def el_camiseta(p, T, s, bg, o):  # playera genérica (sin escudo): "color" y "franja" opcionales
+    col, fr = o.get("color", VERDE), o.get("franja", BLANCO)
+    p.pieza(T([(30, 12), (42, 8), (50, 16), (58, 8), (70, 12), (94, 30), (82, 46), (72, 40), (72, 92), (28, 92), (28, 40), (18, 46), (6, 30)]), col)
+    p.pieza(T([(42, 8), (50, 16), (58, 8), (55, 6), (50, 11), (45, 6)]), fr, sombra=False)
+    p.pieza(T(rect(28, 56, 44, 8)), fr, sombra=False)
+
+
+def el_porteria(p, T, s, bg, o):
+    for j in range(7):
+        p.pieza(T(rect(12 + j * 12.5, 30, 1.6, 56)), "#B9B3A6", sombra=False)
+    for j in range(5):
+        p.pieza(T(rect(10, 34 + j * 12, 80, 1.6)), "#B9B3A6", sombra=False)
+    p.pieza(T(rect(6, 24, 88, 7)), BLANCO)
+    p.pieza(T(rect(6, 24, 7, 64)), BLANCO)
+    p.pieza(T(rect(87, 24, 7, 64)), BLANCO)
+
+
+def el_tarjeta(p, T, s, bg, o):  # tarjeta de árbitro: "color" roja (def.) o amarilla; "n" = 1 o 2
+    col = MOST if o.get("color") == "amarilla" else ROJO
+    if o.get("n", 1) >= 2:
+        p.pieza(T(rot(rrect(16, 16, 40, 58, 4), 36, 45, -0.3)), col)
+        p.pieza(T(rot(rrect(44, 22, 40, 58, 4), 64, 51, 0.25)), col)
+    else:
+        p.pieza(T(rot(rrect(28, 14, 44, 64, 4), 50, 46, 0.12)), col)
+    p.pieza(T(rrect(26, 74, 22, 22, 9)), "#E7C9A6")
 
 
 def el_auto(p, T, s, bg, o):
