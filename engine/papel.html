@@ -1105,6 +1105,21 @@ function banderaUyP(x, y, s, sd, t) { const w = 300 * s, h = 200 * s, wv = Math.
   for (let k = 0; k < 9; k++) papel(rectP(x - w / 2, y - h - 160 * s + k * h / 9 + (k % 2) * wv * 0.2, w, h / 9 + 1), k % 2 ? '#4A7CC8' : '#F4F1EA', sd + 1 + k, { amt: 0.6, sb: 0 });
   papel(rectP(x - w / 2, y - h - 160 * s, w * 0.38, h * 5 / 9), '#F4F1EA', sd + 12, { amt: 0.6, sb: 0 }); solP(x - w / 2 + w * 0.19, y - h - 160 * s + h * 2.5 / 9, 26 * s, t); }
 function nieveOverlay(t) { for (let k = 0; k < 40; k++) { const x = (rnd(k * 3.3) * 1200 - 100 + Math.sin(t + k) * 20), y = ((rnd(k * 5.1) * 1100 + t * (40 + rnd(k) * 40)) % 1100) - 80; g.save(); g.globalAlpha = 0.85; g.fillStyle = '#FFFFFF'; g.beginPath(); g.arc(x, y, 4 + rnd(k * 7.7) * 5, 0, 7); g.fill(); g.restore(); } }
+
+// ---- props de cuento infantil (travesuras y carta) ----
+function garabatosP(x, y, s, sd, t, p) { const n = p.n || 6, cols = [C.rojo, '#6FB7E0', C.mostaza, '#2F8A4A', '#6A4A8A', OR]; const prog = p.s !== undefined ? 1 : 1;
+  for (let k = 0; k < n; k++) { g.save(); g.strokeStyle = cols[k % 6]; g.lineWidth = 9 * s; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath(); const x0 = x - 220 * s + k * 80 * s, y0 = y - 260 * s + rnd(k * 3.3) * 120 * s;
+    g.moveTo(x0, y0); for (let j = 1; j < 7; j++) g.lineTo(x0 + j * 22 * s, y0 + (j % 2 ? -1 : 1) * (30 + rnd(k * 7 + j) * 30) * s); g.stroke(); g.restore(); }
+  papel(circP(x + 160 * s, y - 330 * s, 40 * s), C.mostaza, sd, { amt: 1, sb: 0 }); }
+function zapatosP(x, y, s, sd) { [[-40, '#C8423A'], [40, '#C8423A']].forEach(([dx, c], k) => papel([[x + dx * s - 45 * s, y], [x + dx * s - 45 * s, y - 40 * s], [x + dx * s - 5 * s, y - 45 * s], [x + dx * s + 10 * s, y - 25 * s], [x + dx * s + 45 * s, y - 20 * s], [x + dx * s + 45 * s, y]], c, sd + k, { amt: 1.5 })); }
+function gatoP(x, y, s, sd, t, p) { const col = p.color || '#E8A04A', tl = Math.sin(t * 3) * 0.3; papel(ellP(x, y - 50 * s, 80 * s, 48 * s, 22), col, sd, { amt: 2 }); papel(circP(x + 70 * s, y - 100 * s, 40 * s), col, sd + 1, { amt: 2 });
+  papel([[x + 45 * s, y - 125 * s], [x + 52 * s, y - 165 * s], [x + 72 * s, y - 135 * s]], col, sd + 2, { amt: 1, sb: 2 }); papel([[x + 78 * s, y - 135 * s], [x + 98 * s, y - 165 * s], [x + 102 * s, y - 125 * s]], col, sd + 3, { amt: 1, sb: 2 });
+  g.fillStyle = '#222'; g.beginPath(); g.arc(x + 60 * s, y - 104 * s, 5 * s, 0, 7); g.arc(x + 86 * s, y - 104 * s, 5 * s, 0, 7); g.fill();
+  g.save(); g.translate(x - 75 * s, y - 60 * s); g.rotate(-0.8 + tl); papel(rectP(-8 * s, -90 * s, 16 * s, 90 * s), col, sd + 4, { amt: 1, sb: 2 }); g.restore(); }
+function globoP(x, y, s, sd, t, p) { const sub = p.sube ? Math.max(0, t - sentAt(p._i, p.sube.s || 0, p.sube.f || 0)) * 120 * s : 0, yy = y - sub, sw = Math.sin(t * 2) * 10 * s;
+  g.strokeStyle = '#555'; g.lineWidth = 3 * s; g.beginPath(); g.moveTo(x + sw, yy - 230 * s); g.quadraticCurveTo(x - 20 * s, yy - 120 * s, x, yy - 40 * s); g.stroke();
+  papel(ellP(x + sw, yy - 300 * s, 70 * s, 85 * s, 24), p.color || C.rojo, sd, { amt: 2 }); if (p.carta !== false) cartaP(x, yy - 20 * s, 0.45 * s, sd + 5, t); }
+function lapizP(x, y, s, sd, t) { g.save(); g.translate(x, y); g.rotate(-0.6 + 0.15 * Math.sin(t * 6)); papel(rectP(-12 * s, -150 * s, 24 * s, 130 * s), C.mostaza, sd, { amt: 1 }); papel([[-12 * s, -20 * s], [12 * s, -20 * s], [0, 15 * s]], '#E8C8A0', sd + 1, { amt: 1, sb: 0 }); papel(rectP(-12 * s, -165 * s, 24 * s, 18 * s), '#E88A9A', sd + 2, { amt: 1, sb: 0 }); g.restore(); }
 V2.arma = (i, r, t) => {
   const A = S.scenes[i].arma || {}, fd = A.fondo || 'dia';
   if (fd === 'polo') { cielo('#CFE3EE', '#A9C8DA'); papel(ellP(250, 860, 460, 170, 30), '#F4F8FA', 2604, { amt: 4 }); papel(ellP(820, 870, 420, 150, 30), '#E8F0F4', 2605, { amt: 4 }); tierra(840, '#F4F8FA'); }
@@ -1125,6 +1140,8 @@ V2.arma = (i, r, t) => {
     pop(t0, p.x, p.y, () => {
       if (p.k === 'pan') panP(p.x, p.y, s, sd); else if (p.k === 'pez') pezP(p.x, p.y, s, sd); else if (p.k === 'roca') roca(p.x, p.y, s, sd);
       else if (p.k === 'flor') nochebuena(p.x, p.y, s, p.color, sd, t);
+      else if (p.k === 'garabatos') garabatosP(p.x, p.y, s, sd, t, p); else if (p.k === 'zapatos') zapatosP(p.x, p.y, s, sd); else if (p.k === 'gato') gatoP(p.x, p.y, s, sd, t, p);
+      else if (p.k === 'globo') { p._i = i; globoP(p.x, p.y, s, sd, t, p); } else if (p.k === 'lapiz') lapizP(p.x, p.y, s, sd, t);
       else if (p.k === 'reno') { p_nariz = p.rojo ? '#E03A2E' : '#3A2618'; renoP(p.x, p.y, s, sd, t, p.mira); } else if (p.k === 'trineo') trineoP(p.x, p.y, s, sd); else if (p.k === 'regalo') regaloP(p.x, p.y, s, sd, p.color, p.cinta);
       else if (p.k === 'arbolnav') arbolNavP(p.x, p.y, s, sd, t); else if (p.k === 'casa') casaP(p.x, p.y, s, sd, p); else if (p.k === 'carta') cartaP(p.x, p.y, s, sd, t); else if (p.k === 'calcetin') calcetinP(p.x, p.y, s, sd); else if (p.k === 'bolsa') bolsaP(p.x, p.y, s, sd);
       else if (p.k === 'celular') celularP(p.x, p.y, s, sd, t, p); else if (p.k === 'camara') camaraP(p.x, p.y, s, sd, t); else if (p.k === 'placa') placaP(p.x, p.y, s, sd, p); else if (p.k === 'bandera_uy') banderaUyP(p.x, p.y, s, sd, t);

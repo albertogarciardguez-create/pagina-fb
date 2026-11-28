@@ -1,0 +1,1069 @@
+{
+ "id": "ninos-carta-santa-elsa-youtube",
+ "titulo": "Las travesuras de Elsa y la carta a Santa (YouTube)",
+ "plantilla": "papel",
+ "formato": "horizontal",
+ "camara": "viva",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.95,
+ "pausaFrase": 0.34,
+ "pausaEscena": 0.7,
+ "inicio": 0.3,
+ "cola": 5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SUSCRÍBETE +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "miniatura": 3,
+ "miniatura_t": 0.7,
+ "thumb": [
+  "CÓMO ESCRIBIR",
+  "TU CARTA A SANTA"
+ ],
+ "scenes": [
+  {
+   "say": "Elsa tenía siete años… y este año había hecho muchas, muchas travesuras. Y ahora tenía un problema: ¡tenía que escribirle su carta a Santa!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "garabatos",
+      "x": 330,
+      "y": 840,
+      "s_": 1.0
+     },
+     {
+      "k": "arbolnav",
+      "x": 820,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 560,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LAS TRAVESURAS DE ELSA",
+      "y": 110,
+      "col": "or",
+      "size": 56
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Hola, amigos curiosos! Hoy les cuento la historia de Elsa… y de paso, aprendemos a escribir la carta a Santa paso a paso. ¿Listos? ¡Vamos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "carta",
+      "x": 360,
+      "y": 600,
+      "s_": 1.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 650,
+      "h": 240,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 790,
+      "h": 225,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA CARTA A SANTA",
+      "y": 110,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Travesura número uno: en marzo, Elsa dibujó un arcoíris gigante… ¡en la pared de la sala!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "garabatos",
+      "x": 420,
+      "y": 840,
+      "s_": 1.1,
+      "s": 0,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TRAVESURA 1",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡LA PARED!",
+      "y": 230,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "Las travesuras de Elsa"
+  },
+  {
+   "say": "Travesura número dos: escondió los zapatos de su hermanito Tomás… adentro del refrigerador.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "zapatos",
+      "x": 420,
+      "y": 840,
+      "s_": 1.4
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "ask"
+      }
+     },
+     {
+      "x": 860,
+      "h": 190,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TRAVESURA 2",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡LOS ZAPATOS DE TOMÁS!",
+      "y": 230,
+      "col": "or",
+      "s": 0,
+      "f": 0.6,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y travesura número tres: cada vez que había brócoli en la comida… se lo daba a escondidas al gato Bigotes. ¡Y al gato ni le gusta el brócoli!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "gato",
+      "x": 420,
+      "y": 840,
+      "s_": 1.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TRAVESURA 3",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡EL BRÓCOLI!",
+      "y": 230,
+      "col": "verde",
+      "s": 0,
+      "f": 0.7
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Elsa se sentó frente a una hoja en blanco y pensó: “¿Y si Santa ya sabe todo? ¿Y si estoy en la lista de los que se portaron mal?”",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "carta",
+      "x": 380,
+      "y": 640,
+      "s_": 1.2
+     },
+     {
+      "k": "lapiz",
+      "x": 520,
+      "y": 620,
+      "s_": 1.0
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "ask",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿Y SI SANTA YA SABE?",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Entonces llegó su mamá, se sentó junto a ella y le dijo: “Santa no busca niños perfectos, Elsa. Busca niños que dicen la verdad y que arreglan lo que hicieron mal.”",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "arbolnav",
+      "x": 250,
+      "y": 840,
+      "s_": 0.7
+     }
+    ],
+    "figs": [
+     {
+      "x": 560,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 760,
+      "h": 300,
+      "o": {
+       "cam": "#C8423A",
+       "pan": "#26344D",
+       "pelo": "#2A1A10",
+       "largo": true,
+       "pose": "offer",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DECIR LA VERDAD",
+      "y": 110,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     },
+     {
+      "t": "Y ARREGLARLO",
+      "y": 230,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.8
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Así que, antes de escribir, Elsa arregló sus travesuras. Limpió la pared con ayuda de su mamá, le regresó los zapatos a Tomás… y le pidió perdón al gato Bigotes.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "zapatos",
+      "x": 330,
+      "y": 840,
+      "s_": 1.1
+     },
+     {
+      "k": "gato",
+      "x": 560,
+      "y": 840,
+      "s_": 0.9
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 880,
+      "h": 190,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡A ARREGLARLO!",
+      "y": 110,
+      "col": "verde",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Y ahora sí! Vamos a escribir la carta, igual que Elsa. Paso uno: empieza con un saludo bonito. Por ejemplo: “Querido Santa”.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "carta",
+      "x": 500,
+      "y": 620,
+      "s_": 1.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 1: EL SALUDO",
+      "y": 110,
+      "col": "marino",
+      "s": 1,
+      "f": 0.3
+     },
+     {
+      "t": "“QUERIDO SANTA”",
+      "y": 230,
+      "col": "rojo",
+      "s": 2,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "Cómo escribir tu carta"
+  },
+  {
+   "say": "Paso dos: preséntate. Escribe tu nombre, cuántos años tienes y dónde vives. Elsa escribió: “Me llamo Elsa, tengo siete años y vivo en México”.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "carta",
+      "x": 360,
+      "y": 620,
+      "s_": 1.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 2: PRESÉNTATE",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Paso tres: cuéntale cómo te portaste, con la verdad. Elsa le contó sus travesuras… y también cómo las arregló.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 420,
+      "y": 500,
+      "s_": 1,
+      "titulo": "ESTE AÑO…",
+      "items": [
+       "Pinté la pared",
+       "La limpié",
+       "Pedí perdón"
+      ],
+      "s": 1,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 840,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 3: DI LA VERDAD",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Paso cuatro: pide pocos regalos, dos o tres, los que más ilusión te hagan. ¡Y aquí va un secreto: pide también algo para otra persona! Elsa pidió una bicicleta… y unos zapatos nuevos para Tomás.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "regalo",
+      "x": 320,
+      "y": 840,
+      "s_": 0.9
+     },
+     {
+      "k": "regalo",
+      "x": 470,
+      "y": 840,
+      "s_": 0.7,
+      "color": "#2F6F73"
+     },
+     {
+      "k": "zapatos",
+      "x": 640,
+      "y": 840,
+      "s_": 1.0,
+      "s": 2,
+      "f": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 4: POCOS REGALOS",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "¡Y ALGO PARA OTRO!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Paso cinco: da las gracias y despídete con cariño. Por ejemplo: “Gracias, Santa. Con cariño, Elsa”.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "carta",
+      "x": 500,
+      "y": 620,
+      "s_": 1.5
+     },
+     {
+      "k": "corazon",
+      "x": 620,
+      "y": 500,
+      "s_": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 5: DA LAS GRACIAS",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y el paso seis es el más divertido: ¡decora tu carta! Haz un dibujo, ponle colores, estrellas… lo que tú quieras.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "carta",
+      "x": 380,
+      "y": 620,
+      "s_": 1.3
+     },
+     {
+      "k": "lapiz",
+      "x": 520,
+      "y": 620,
+      "s_": 1.0
+     },
+     {
+      "k": "arbolnav",
+      "x": 780,
+      "y": 840,
+      "s_": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 880,
+      "h": 200,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PASO 6: ¡DECÓRALA!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Ahora tú: pausa el video, pídele a un adulto una hoja y unos colores, y escribe tu carta con los seis pasos. ¿Ya? ¡Seguimos!",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 420,
+      "y": 500,
+      "s_": 1,
+      "titulo": "MI CARTA",
+      "items": [
+       "Saludo",
+       "Preséntate",
+       "Di la verdad",
+       "Pocos regalos",
+       "Gracias",
+       "¡Decórala!"
+      ],
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡PAUSA Y ESCRIBE!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Y cómo le llega la carta a Santa? En muchas casas de México la amarran a un globo… y otras familias la dejan junto al árbol de Navidad. Elsa la amarró a un globo rojo y lo soltó.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "globo",
+      "x": 500,
+      "y": 840,
+      "s_": 1.2,
+      "sube": {
+       "s": 2,
+       "f": 0.5
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      }
+     },
+     {
+      "x": 880,
+      "h": 300,
+      "o": {
+       "cam": "#C8423A",
+       "pan": "#26344D",
+       "pelo": "#2A1A10",
+       "largo": true,
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿CÓMO LE LLEGA?",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "El final"
+  },
+  {
+   "say": "Y la mañana de Navidad, junto al árbol, Elsa encontró un regalo… y una notita que decía: “Gracias por decir la verdad, Elsa. ¡Feliz Navidad!”",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "arbolnav",
+      "x": 330,
+      "y": 840,
+      "s_": 0.9
+     },
+     {
+      "k": "regalo",
+      "x": 520,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "carta",
+      "x": 520,
+      "y": 560,
+      "s_": 0.9,
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 880,
+      "h": 190,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡FELIZ NAVIDAD!",
+      "y": 110,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.8,
+      "size": 64
+     }
+    ],
+    "nieve": true
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.8,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Así que ya lo sabes: Santa no busca niños perfectos. Busca niños que dicen la verdad, que arreglan sus errores… y que también piensan en los demás.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "corazon",
+      "x": 500,
+      "y": 560,
+      "s_": 2.0,
+      "s": 0,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 260,
+      "h": 230,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 760,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "offer"
+      },
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA LECCIÓN DE ELSA",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "¡Feliz Navidad, amigos curiosos! Nos vemos en la próxima aventura.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Ya escribiste tu carta?",
+    "recuerda los 6 pasos"
+   ]
+  }
+ ],
+ "post": "Las travesuras de Elsa… y cómo escribir tu carta a Santa paso a paso ✉️🎅",
+ "hashtags": [
+  "#CartaASanta",
+  "#Navidad",
+  "#CuentosParaNiños"
+ ],
+ "youtube": {
+  "titulo": "Las TRAVESURAS de ELSA ✉️ Cómo escribir tu CARTA A SANTA paso a paso | Cuento para niños",
+  "intro": "Las travesuras de Elsa",
+  "descripcion": "Elsa hizo muchas travesuras este año… ¿podrá escribirle su carta a Santa? Un cuento navideño para niños que, de paso, enseña a escribir la carta a Santa en 6 pasos: saludo, preséntate, di la verdad, pide pocos regalos (y algo para otra persona), da las gracias y decórala.\n\nAl final: ¡pausa el video y escribe tu carta con ayuda de un adulto!",
+  "hashtags": [
+   "#CartaASanta",
+   "#Navidad",
+   "#CuentosParaNiños"
+  ],
+  "etiquetas": [
+   "carta a santa",
+   "cómo escribir una carta a santa",
+   "carta a santa claus",
+   "cuento de navidad",
+   "cuentos para niños",
+   "navidad para niños",
+   "travesuras"
+  ]
+ },
+ "sources": []
+}

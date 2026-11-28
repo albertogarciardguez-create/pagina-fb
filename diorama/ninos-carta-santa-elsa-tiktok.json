@@ -1,0 +1,423 @@
+{
+ "id": "ninos-carta-santa-elsa-tiktok",
+ "titulo": "Las travesuras de Elsa (TikTok)",
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.93,
+ "pausaFrase": 0.24,
+ "pausaEscena": 0.4,
+ "inicio": 0.1,
+ "cola": 5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SEGUIR +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "scenes": [
+  {
+   "say": "Elsa hizo tres travesuras este año… y aun así le escribió a Santa. Mira cómo lo hizo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "garabatos",
+      "x": 340,
+      "y": 840,
+      "s_": 1.0
+     },
+     {
+      "k": "arbolnav",
+      "x": 820,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 580,
+      "h": 250,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "3 TRAVESURAS",
+      "y": 170,
+      "col": "rojo",
+      "size": 64
+     },
+     {
+      "t": "Y UNA CARTA A SANTA",
+      "y": 320,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Pintó un arcoíris en la pared. Escondió los zapatos de su hermano en el refri. Y le daba su brócoli al gato.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "garabatos",
+      "x": 300,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "zapatos",
+      "x": 560,
+      "y": 840,
+      "s_": 1.0,
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "k": "gato",
+      "x": 760,
+      "y": 840,
+      "s_": 0.9,
+      "s": 2,
+      "f": 0.1
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA PARED",
+      "y": 170,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "LOS ZAPATOS",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "t": "EL BRÓCOLI",
+      "y": 470,
+      "col": "verde",
+      "s": 2,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    },
+    {
+     "k": "tick",
+     "s": 2,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Su mamá le dijo: “Santa no busca niños perfectos. Busca niños que dicen la verdad y arreglan lo que hicieron mal”.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "interior",
+    "figs": [
+     {
+      "x": 400,
+      "h": 240,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 680,
+      "h": 320,
+      "o": {
+       "cam": "#C8423A",
+       "pan": "#26344D",
+       "pelo": "#2A1A10",
+       "largo": true,
+       "pose": "offer",
+       "mira": -1
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "DI LA VERDAD",
+      "y": 170,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     },
+     {
+      "t": "Y ARRÉGLALO",
+      "y": 320,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.7
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Limpió la pared, le regresó los zapatos a su hermano… y hasta le pidió perdón al gato.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "zapatos",
+      "x": 300,
+      "y": 840,
+      "s_": 1.1
+     },
+     {
+      "k": "gato",
+      "x": 560,
+      "y": 840,
+      "s_": 0.9,
+      "s": 0,
+      "f": 0.7
+     }
+    ],
+    "figs": [
+     {
+      "x": 780,
+      "h": 240,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡A ARREGLARLO!",
+      "y": 170,
+      "col": "verde",
+      "s": 0,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y escribió su carta en seis pasos: saludo, se presentó, dijo la verdad, pidió pocos regalos… uno para su hermano… dio las gracias y la decoró.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 500,
+      "y": 520,
+      "s_": 1,
+      "titulo": "MI CARTA",
+      "items": [
+       "Saludo",
+       "Preséntate",
+       "Di la verdad",
+       "Pocos regalos",
+       "Gracias",
+       "¡Decórala!"
+      ],
+      "s": 0,
+      "f": 0.05
+     }
+    ],
+    "carteles": [
+     {
+      "t": "6 PASOS",
+      "y": 170,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "La amarró a un globo rojo… y la mañana de Navidad encontró una notita: “Gracias por decir la verdad, Elsa”.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "globo",
+      "x": 480,
+      "y": 840,
+      "s_": 1.2,
+      "sube": {
+       "s": 0,
+       "f": 0.5
+      }
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 240,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A4A8A",
+       "pelo": "#5A3520",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "“GRACIAS POR DECIR",
+      "y": 170,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.4
+     },
+     {
+      "t": "LA VERDAD, ELSA”",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Ya escribiste la tuya? Guarda este video para hacerla con tus hijos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "carta",
+      "x": 400,
+      "y": 640,
+      "s_": 1.3
+     },
+     {
+      "k": "arbolnav",
+      "x": 760,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "carteles": [
+     {
+      "t": "GUÁRDALO",
+      "y": 170,
+      "col": "or",
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "nieve": true
+   }
+  },
+  {
+   "say": "Sígueme para más cuentos de Navidad.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué le pediste a Santa?",
+    "cuéntame en los comentarios"
+   ]
+  }
+ ],
+ "post": "Elsa hizo 3 travesuras… y aun así le escribió a Santa ✉️🎅 Guárdalo para hacer la carta con tus hijos 👇",
+ "hashtags": [
+  "#CartaASanta",
+  "#Navidad",
+  "#Cuentos"
+ ],
+ "sources": []
+}
