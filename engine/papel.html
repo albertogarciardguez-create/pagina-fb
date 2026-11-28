@@ -112,6 +112,12 @@ function fig(x, y, h, o, seed) {
   g.strokeStyle = '#7A3B26'; g.lineWidth = u * 0.12; g.lineCap = 'round'; g.beginPath();
   if (o.triste) g.arc(0, 0.75 * u, 0.32 * u, Math.PI * 1.2, Math.PI * 1.8); else g.arc(0, 0.25 * u, 0.32 * u, 0.25, Math.PI - 0.25); g.stroke();
   g.restore();
+  if (o.barba) papel([[hx - 1.15 * u, hy + 0.15 * u], [hx - 0.5 * u, hy + 0.5 * u], [hx + 0.5 * u, hy + 0.5 * u], [hx + 1.15 * u, hy + 0.15 * u], [hx + 0.9 * u, hy + 1.6 * u], [hx, hy + 2.3 * u], [hx - 0.9 * u, hy + 1.6 * u]], o.barba === true ? '#F4F1EA' : o.barba, s * 10 + 14, { amt: 2, sb: 3 });
+  if (o.cinto) { papel(rectP(-1.45 * u, hip - 0.5 * u, 2.9 * u, 0.6 * u), '#1E1E1E', s * 10 + 15, { amt: 1, sb: 0 }); papel(rectP(-0.3 * u, hip - 0.55 * u, 0.6 * u, 0.7 * u), C.mostaza, s * 10 + 16, { amt: 1, sb: 0 }); }
+  if (o.gorro === 'santa' || o.gorro === 'elfo') { const gc = o.gorro === 'santa' ? '#C8202E' : '#2F8A4A'; papel([[hx - 1.2 * u, hy - 0.55 * u], [hx + 1.2 * u, hy - 0.55 * u], [hx + 1.9 * u, hy - 2.4 * u]], gc, s * 10 + 17, { amt: 1.5, sb: 3 });
+    papel(rectP(hx - 1.3 * u, hy - 0.85 * u, 2.6 * u, 0.5 * u), o.gorro === 'santa' ? '#F4F1EA' : '#C8202E', s * 10 + 18, { amt: 1, sb: 0 }); papel(circP(hx + 1.9 * u, hy - 2.4 * u, 0.35 * u), o.gorro === 'santa' ? '#F4F1EA' : C.mostaza, s * 10 + 19, { amt: 1, sb: 0 }); }
+  if (o.gorro === 'mitra') { papel([[hx - 1.0 * u, hy - 0.7 * u], [hx + 1.0 * u, hy - 0.7 * u], [hx + 0.8 * u, hy - 2.4 * u], [hx, hy - 3.0 * u], [hx - 0.8 * u, hy - 2.4 * u]], '#F4F1EA', s * 10 + 17, { amt: 1.5 }); papel(rectP(hx - 0.15 * u, hy - 2.8 * u, 0.3 * u, 2.1 * u), C.mostaza, s * 10 + 18, { amt: 1, sb: 0 }); }
+  if (o.gorro === 'gorra') { papel([...circP(hx, hy - 0.3 * u, 1.2 * u, 20).filter(p => p[1] < hy - 0.35 * u)], o.gorraCol || C.marino, s * 10 + 17, { amt: 1.5, sb: 2 }); papel(rectP(hx, hy - 0.5 * u, 1.9 * u, 0.32 * u), o.gorraCol || C.marino, s * 10 + 18, { amt: 1, sb: 2 }); }
   if (o.astro) { g.save(); g.globalAlpha = 0.3; g.fillStyle = '#CFE8FF'; g.beginPath(); g.arc(hx, hy, 1.7 * u, 0, 7); g.fill(); g.globalAlpha = 0.9; g.strokeStyle = '#F2F2EE'; g.lineWidth = 0.28 * u; g.stroke(); g.restore(); }
   g.restore();
 }
@@ -1067,9 +1073,43 @@ function milpaP(x, y, s, sd, t, p) { const n = p.n || 9, dx = (p.dx || 110) * s;
   papel(ellP(cx + 12 * s + sw, y - h * 0.7, 10 * s, 24 * s, 14), '#F2C14E', sd + 60 + k, { amt: 1, sb: 0 }); } }
 function planetaP(x, y, s, sd, p) { const r = (p.r || 150) * s; papel(circP(x, y, r), p.color || '#C8603A', sd, { amt: 3 }); for (let k = 0; k < 5; k++) papel(circP(x + (rnd(k * 3.1) - 0.5) * r * 1.2, y + (rnd(k * 5.3) - 0.5) * r * 1.2, r * (0.08 + rnd(k) * 0.1)), 'rgba(0,0,0,.12)', sd + 1 + k, { amt: 1, sb: 0 }); }
 function capasP(x, y, s, sd) { const R = 230 * s; papel(circP(x, y, R), '#5E8C3A', sd, { amt: 3 }); papel(circP(x, y, R * 0.9), '#C98A4A', sd + 1, { amt: 2, sb: 0 }); papel(circP(x, y, R * 0.62), '#E0522E', sd + 2, { amt: 2, sb: 0 }); papel(circP(x, y, R * 0.3), '#F7D25A', sd + 3, { amt: 2, sb: 0 }); }
+
+// ---- props navideños y de creadores (videos infantiles) ----
+function renoP(x, y, s, sd, t, mira) { g.save(); g.translate(x, y); if (mira < 0) g.scale(-1, 1); const b = Math.sin(t * 8) * 6 * s;
+  papel(ellP(0, -110 * s + b, 110 * s, 50 * s, 22), '#9A6A3E', sd, { amt: 2 }); [[-70, 0.25], [-40, -0.25], [50, 0.25], [80, -0.25]].forEach(([lx, a], k) => { g.save(); g.translate(lx * s, -80 * s + b); g.rotate(a * Math.sin(t * 8 + k)); papel(rectP(-9 * s, 0, 18 * s, 85 * s), '#7A4E2A', sd + 1 + k, { amt: 1, sb: 2 }); g.restore(); });
+  papel([[80 * s, -130 * s + b], [130 * s, -200 * s + b], [165 * s, -190 * s + b], [120 * s, -110 * s + b]], '#9A6A3E', sd + 6, { amt: 1.5 }); papel(ellP(160 * s, -205 * s + b, 34 * s, 26 * s, 18), '#9A6A3E', sd + 7, { amt: 1.5 });
+  papel(circP(192 * s, -205 * s + b, 10 * s), p_nariz, sd + 8, { amt: 1, sb: 0 }); g.fillStyle = '#222'; g.beginPath(); g.arc(165 * s, -215 * s + b, 4 * s, 0, 7); g.fill();
+  [[-12, 1], [12, 1]].forEach(([dx], k) => { g.strokeStyle = '#6A3E1E'; g.lineWidth = 6 * s; g.lineCap = 'round'; g.beginPath(); g.moveTo((150 + dx) * s, -228 * s + b); g.lineTo((140 + dx * 2.5) * s, -285 * s + b); g.lineTo((120 + dx * 3) * s, -300 * s + b); g.moveTo((142 + dx * 2) * s, -265 * s + b); g.lineTo((165 + dx * 2) * s, -280 * s + b); g.stroke(); }); g.restore(); }
+let p_nariz = '#3A2618';
+function trineoP(x, y, s, sd) { papel([[x - 170 * s, y - 40 * s], [x + 130 * s, y - 40 * s], [x + 150 * s, y - 150 * s], [x + 60 * s, y - 120 * s], [x - 150 * s, y - 120 * s], [x - 190 * s, y - 170 * s]], '#C8202E', sd, { amt: 2.5 });
+  papel(rectP(x - 160 * s, y - 75 * s, 280 * s, 14 * s), C.mostaza, sd + 1, { amt: 1, sb: 0 }); g.strokeStyle = '#5E4A3A'; g.lineWidth = 9 * s; g.lineCap = 'round'; g.beginPath(); g.moveTo(x - 190 * s, y); g.lineTo(x + 170 * s, y); g.quadraticCurveTo(x + 220 * s, y, x + 210 * s, y - 40 * s); g.stroke(); }
+function regaloP(x, y, s, sd, col, cin) { const w = 120 * s; papel(rectP(x - w / 2, y - w, w, w), col || C.rojo, sd, { amt: 2 }); papel(rectP(x - 10 * s, y - w, 20 * s, w), cin || C.mostaza, sd + 1, { amt: 1, sb: 0 }); papel(rectP(x - w / 2, y - w / 2 - 10 * s, w, 20 * s), cin || C.mostaza, sd + 2, { amt: 1, sb: 0 });
+  papel(ellP(x - 22 * s, y - w - 14 * s, 24 * s, 14 * s, 14), cin || C.mostaza, sd + 3, { amt: 1, sb: 0 }); papel(ellP(x + 22 * s, y - w - 14 * s, 24 * s, 14 * s, 14), cin || C.mostaza, sd + 4, { amt: 1, sb: 0 }); }
+function arbolNavP(x, y, s, sd, t) { papel(rectP(x - 20 * s, y - 60 * s, 40 * s, 60 * s), '#6A4A2A', sd, { amt: 1 }); [[0, 300, 200], [1, 230, 150], [2, 160, 100]].forEach(([k, hh, ww]) => papel([[x - ww * s, y - 50 * s - k * 70 * s], [x + ww * s, y - 50 * s - k * 70 * s], [x, y - 50 * s - k * 70 * s - hh * 0.7 * s]], '#2F6B3A', sd + 1 + k, { amt: 2 }));
+  for (let k = 0; k < 9; k++) { const a = rnd(k * 3.1), yy = y - 80 * s - rnd(k * 1.7) * 230 * s, half = (300 * s - (y - yy)) * 0.55; papel(circP(x + (a - 0.5) * 2 * Math.max(10, half) * 0.8, yy, 11 * s), [C.rojo, C.mostaza, '#6FB7E0'][k % 3], sd + 10 + k, { amt: 1, sb: 0 }); }
+  const st = 1 + 0.12 * Math.sin(t * 4); g.save(); g.translate(x, y - 330 * s); g.scale(st, st); const pts = []; for (let k = 0; k < 10; k++) { const r = (k % 2 ? 14 : 34) * s, a = -Math.PI / 2 + k * Math.PI / 5; pts.push([Math.cos(a) * r, Math.sin(a) * r]); } papel(pts, '#F2C14E', sd + 30, { amt: 1, sb: 0 }); g.restore(); }
+function casaP(x, y, s, sd, p) { const w = 360 * s, h = 230 * s; papel(rectP(x + 70 * s, y - h - 170 * s, 60 * s, 130 * s), '#9A4A3A', sd, { amt: 2 }); papel(rectP(x - w / 2, y - h, w, h), p.color || '#D9B48A', sd + 1, { amt: 2.5 });
+  papel([[x - w / 2 - 30 * s, y - h], [x + w / 2 + 30 * s, y - h], [x, y - h - 150 * s]], '#7A3B2E', sd + 2, { amt: 2 }); if (p.nieve) papel([[x - w / 2 - 30 * s, y - h], [x, y - h - 150 * s], [x + w / 2 + 30 * s, y - h], [x + w / 2, y - h + 14 * s], [x, y - h - 130 * s], [x - w / 2, y - h + 14 * s]], '#F4F1EA', sd + 3, { amt: 1.5, sb: 0 });
+  papel(rectP(x - 40 * s, y - 120 * s, 80 * s, 120 * s), '#6A4A2A', sd + 4, { amt: 1.5 }); papel(rectP(x - 150 * s, y - 170 * s, 70 * s, 60 * s), p.luz === false ? '#3A3430' : '#F2D27A', sd + 5, { amt: 1, sb: 0 }); papel(rectP(x + 80 * s, y - 170 * s, 70 * s, 60 * s), p.luz === false ? '#3A3430' : '#F2D27A', sd + 6, { amt: 1, sb: 0 }); }
+function cartaP(x, y, s, sd, t) { g.save(); g.translate(x, y); g.rotate(0.06 * Math.sin(t * 2)); papel(rectP(-110 * s, -75 * s, 220 * s, 150 * s), '#FFF8EC', sd, { amt: 2 }); papel([[-110 * s, -75 * s], [0, 10 * s], [110 * s, -75 * s]], '#EADFC8', sd + 1, { amt: 1, sb: 0 }); papel(circP(0, 10 * s, 16 * s), C.rojo, sd + 2, { amt: 1, sb: 0 }); g.restore(); }
+function calcetinP(x, y, s, sd) { papel([[x - 30 * s, y - 160 * s], [x + 30 * s, y - 160 * s], [x + 30 * s, y - 40 * s], [x + 90 * s, y - 30 * s], [x + 90 * s, y + 10 * s], [x - 30 * s, y + 10 * s]], C.rojo, sd, { amt: 2 }); papel(rectP(x - 38 * s, y - 175 * s, 76 * s, 34 * s), '#F4F1EA', sd + 1, { amt: 1, sb: 0 }); }
+function bolsaP(x, y, s, sd) { papel([[x - 60 * s, y], [x - 70 * s, y - 70 * s], [x - 25 * s, y - 110 * s], [x + 25 * s, y - 110 * s], [x + 70 * s, y - 70 * s], [x + 60 * s, y]], '#B08A4A', sd, { amt: 2 }); papel(rectP(x - 30 * s, y - 120 * s, 60 * s, 14 * s), '#7A5A2A', sd + 1, { amt: 1, sb: 0 }); for (let k = 0; k < 3; k++) papel(circP(x - 30 * s + k * 30 * s, y - 128 * s, 14 * s), '#F2C14E', sd + 2 + k, { amt: 1, sb: 0 }); }
+function celularP(x, y, s, sd, t, p) { g.save(); g.translate(x, y); g.rotate(p.rot || 0); papel(rectP(-70 * s, -140 * s, 140 * s, 260 * s), '#26282E', sd, { amt: 2 }); papel(rectP(-58 * s, -120 * s, 116 * s, 210 * s), p.pantalla || '#6FB7E0', sd + 1, { amt: 1, sb: 0 });
+  if (p.rec) { const on = Math.floor(t * 2) % 2; if (on) papel(circP(-30 * s, -95 * s, 10 * s), C.rojo, sd + 2, { amt: 1, sb: 0 }); } g.restore(); }
+function camaraP(x, y, s, sd, t) { papel(rectP(x - 120 * s, y - 150 * s, 200 * s, 130 * s), '#26282E', sd, { amt: 2 }); papel([[x + 80 * s, y - 120 * s], [x + 150 * s, y - 150 * s], [x + 150 * s, y - 20 * s], [x + 80 * s, y - 50 * s]], '#3A3C44', sd + 1, { amt: 1.5 });
+  papel(circP(x - 70 * s, y - 175 * s, 32 * s), '#3A3C44', sd + 2, { amt: 1.5 }); papel(circP(x + 10 * s, y - 175 * s, 32 * s), '#3A3C44', sd + 3, { amt: 1.5 }); if (Math.floor(t * 2) % 2) papel(circP(x - 95 * s, y - 130 * s, 9 * s), C.rojo, sd + 4, { amt: 1, sb: 0 }); papel(rectP(x - 15 * s, y - 20 * s, 30 * s, 20 * s), '#3A3C44', sd + 5, { amt: 1 }); }
+function placaP(x, y, s, sd, p) { const col = { plata: '#C9CED6', oro: '#E8B84A', diamante: '#CFE8FF' }[p.tipo] || '#E8B84A'; papel(rectP(x - 90 * s, y - 230 * s, 180 * s, 230 * s), '#2A2A2E', sd, { amt: 2 }); papel(rectP(x - 70 * s, y - 210 * s, 140 * s, 150 * s), col, sd + 1, { amt: 1.5, sb: 0 });
+  if (p.tipo === 'diamante') papel([[x, y - 195 * s], [x + 40 * s, y - 150 * s], [x, y - 80 * s], [x - 40 * s, y - 150 * s]], '#FFFFFF', sd + 2, { amt: 1, sb: 0 }); else papel(circP(x, y - 135 * s, 34 * s), '#FFFFFF', sd + 2, { amt: 1, sb: 0 });
+  if (p.t) texto(p.t, x, y - 32 * s, 24 * s, '#F4F1EA'); }
+function banderaUyP(x, y, s, sd, t) { const w = 300 * s, h = 200 * s, wv = Math.sin(t * 3) * 6 * s; papel(rectP(x - w / 2 - 14 * s, y - h - 160 * s, 12 * s, h + 160 * s), '#6A4A2A', sd, { amt: 1 });
+  for (let k = 0; k < 9; k++) papel(rectP(x - w / 2, y - h - 160 * s + k * h / 9 + (k % 2) * wv * 0.2, w, h / 9 + 1), k % 2 ? '#4A7CC8' : '#F4F1EA', sd + 1 + k, { amt: 0.6, sb: 0 });
+  papel(rectP(x - w / 2, y - h - 160 * s, w * 0.38, h * 5 / 9), '#F4F1EA', sd + 12, { amt: 0.6, sb: 0 }); solP(x - w / 2 + w * 0.19, y - h - 160 * s + h * 2.5 / 9, 26 * s, t); }
+function nieveOverlay(t) { for (let k = 0; k < 40; k++) { const x = (rnd(k * 3.3) * 1200 - 100 + Math.sin(t + k) * 20), y = ((rnd(k * 5.1) * 1100 + t * (40 + rnd(k) * 40)) % 1100) - 80; g.save(); g.globalAlpha = 0.85; g.fillStyle = '#FFFFFF'; g.beginPath(); g.arc(x, y, 4 + rnd(k * 7.7) * 5, 0, 7); g.fill(); g.restore(); } }
 V2.arma = (i, r, t) => {
   const A = S.scenes[i].arma || {}, fd = A.fondo || 'dia';
-  if (fd === 'dia') dia(t); else if (fd === 'noche') { noche(t); tierra(840, '#2A3048'); }
+  if (fd === 'polo') { cielo('#CFE3EE', '#A9C8DA'); papel(ellP(250, 860, 460, 170, 30), '#F4F8FA', 2604, { amt: 4 }); papel(ellP(820, 870, 420, 150, 30), '#E8F0F4', 2605, { amt: 4 }); tierra(840, '#F4F8FA'); }
+  else if (fd === 'polonoche') { noche(t); tierra(840, '#DCE6EE'); }
+  else if (fd === 'dia') dia(t); else if (fd === 'noche') { noche(t); tierra(840, '#2A3048'); }
   else if (fd === 'atardecer') { cielo('#F6B97A', '#C47A4E'); papel(circP(780, 520, 120), '#FFD9A0', 2600, { amt: 2, sb: 0 }); tierra(840, '#8E6A3E'); }
   else if (fd === 'amanecer') { cielo('#F7DCA8', '#E8A86A'); papel(circP(840, 170, 90), '#FFE6A0', 2601, { amt: 2, sb: 0 }); tierra(860, C.kraft); }
   else if (fd === 'interior') { cielo('#E9E1D0', '#D3C4A6'); tierra(840, '#B08A5E'); }
@@ -1085,6 +1125,9 @@ V2.arma = (i, r, t) => {
     pop(t0, p.x, p.y, () => {
       if (p.k === 'pan') panP(p.x, p.y, s, sd); else if (p.k === 'pez') pezP(p.x, p.y, s, sd); else if (p.k === 'roca') roca(p.x, p.y, s, sd);
       else if (p.k === 'flor') nochebuena(p.x, p.y, s, p.color, sd, t);
+      else if (p.k === 'reno') { p_nariz = p.rojo ? '#E03A2E' : '#3A2618'; renoP(p.x, p.y, s, sd, t, p.mira); } else if (p.k === 'trineo') trineoP(p.x, p.y, s, sd); else if (p.k === 'regalo') regaloP(p.x, p.y, s, sd, p.color, p.cinta);
+      else if (p.k === 'arbolnav') arbolNavP(p.x, p.y, s, sd, t); else if (p.k === 'casa') casaP(p.x, p.y, s, sd, p); else if (p.k === 'carta') cartaP(p.x, p.y, s, sd, t); else if (p.k === 'calcetin') calcetinP(p.x, p.y, s, sd); else if (p.k === 'bolsa') bolsaP(p.x, p.y, s, sd);
+      else if (p.k === 'celular') celularP(p.x, p.y, s, sd, t, p); else if (p.k === 'camara') camaraP(p.x, p.y, s, sd, t); else if (p.k === 'placa') placaP(p.x, p.y, s, sd, p); else if (p.k === 'bandera_uy') banderaUyP(p.x, p.y, s, sd, t);
       else if (p.k === 'volcan') volcanP(p.x, p.y, s, sd, t, p, i); else if (p.k === 'botella') botellaP(p.x, p.y, s, sd, p); else if (p.k === 'caja') cajaP(p.x, p.y, s, sd, p);
       else if (p.k === 'burbujas') burbujasP(p.x, p.y, s, sd, t, p); else if (p.k === 'milpa') milpaP(p.x, p.y, s, sd, t, p); else if (p.k === 'planeta') planetaP(p.x, p.y, s, sd, p); else if (p.k === 'capas') capasP(p.x, p.y, s, sd);
       else if (p.k === 'bandeja') papel(ellP(p.x, p.y, 300 * s, 46 * s, 30), p.color || '#B9BEC4', sd, { amt: 2 });
@@ -1114,6 +1157,7 @@ V2.arma = (i, r, t) => {
     fig(x, y, f.h || 300, o, 2800 + k); if (f.guantes) guantesP(x, y, f.h || 300, o, 2850 + k * 3); });
   (A.carteles || []).forEach((c, k) => { const t0 = aAt(i, c, k); if (t < t0 || (window.THUMB && HZ)) return; pop(t0, c.x || 500, c.y, () => cartel(c.t, c.x || 500, c.y, ACOL[c.col] || C.blanco, c.size || 52, 2900 + i * 20 + k, ATC(c.col)), 0.3);
     if (c.tacha) { const t1 = sentAt(i, c.tacha.s || 0, c.tacha.f || 0); if (t > t1) { const p = ease((t - t1) / 0.4); g.save(); g.font = `800 ${c.size || 52}px MB`; const w = g.measureText(c.t).width / 2 + 30; g.restore(); g.save(); g.strokeStyle = C.rojo; g.lineWidth = 12; g.beginPath(); g.moveTo((c.x || 500) - w, c.y + 4); g.lineTo(lerp((c.x || 500) - w, (c.x || 500) + w, p), c.y - 6); g.stroke(); g.restore(); } } });
+  if (A.nieve || fd === 'polo' || fd === 'polonoche') nieveOverlay(t);
   const n = A.contador; if (n) { const t0 = aAt(i, n, 0); if (t > t0) { const v = Math.round(lerp(n.de || 0, n.a, ease((t - t0) / (n.dur || 2)))); cartel(`${n.pre || ''}${v}${n.suf || ''}`, n.x || 500, n.y || 200, ACOL[n.col] || OR, n.size || 64, 2990 + i, ATC(n.col || 'or')); } }
 };
 

@@ -1,0 +1,394 @@
+{
+ "id": "ninos-historia-fede-vigevani-tiktok",
+ "titulo": "Historia de Fede Vigevani (TikTok)",
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.97,
+ "pausaFrase": 0.22,
+ "pausaEscena": 0.35,
+ "inicio": 0.1,
+ "cola": 4.5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SEGUIR +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "scenes": [
+  {
+   "say": "Subió su primer video a los quince años… grabado con un celular.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "celular",
+      "x": 420,
+      "y": 640,
+      "s_": 1.3,
+      "rec": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 270,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "15 AÑOS",
+      "y": 170,
+      "col": "mostaza",
+      "size": 64
+     },
+     {
+      "t": "SOLO UN CELULAR",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Hoy tiene más de setenta y seis millones de suscriptores. Es Fede Vigevani.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "placa",
+      "x": 500,
+      "y": 840,
+      "s_": 1.1,
+      "tipo": "diamante"
+     }
+    ],
+    "carteles": [
+     {
+      "t": "+76 MILLONES",
+      "y": 170,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.3,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Nació en Montevideo, Uruguay, en mil novecientos noventa y cuatro. Y en dos mil nueve subió una broma grabada con su celular. No tenía cámara, ni luces, ni estudio.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "bandera_uy",
+      "x": 300,
+      "y": 840,
+      "s_": 0.9
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 250,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "URUGUAY · 1994",
+      "y": 170,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "2009",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.2,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pasaron cinco años de seguir grabando antes de que mucha gente lo conociera, con el canal Dosogas, junto a dos amigos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "props": [
+     {
+      "k": "camara",
+      "x": 500,
+      "y": 520,
+      "s_": 0.9
+     }
+    ],
+    "figs": [
+     {
+      "x": 320,
+      "h": 250,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#26344D",
+       "pelo": "#2A1A10",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 500,
+      "h": 250,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 680,
+      "h": 250,
+      "o": {
+       "cam": "#C9A36A",
+       "pan": "#4A3A2A",
+       "pelo": "#8A5A2B",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "5 AÑOS DESPUÉS",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "DOSOGAS",
+      "y": 320,
+      "col": "or",
+      "s": 0,
+      "f": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "say": "Luego siguió solo, hizo música… y en dos mil veinticuatro se convirtió en el youtuber en español con más suscriptores del mundo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "placa",
+      "x": 320,
+      "y": 840,
+      "s_": 0.8,
+      "tipo": "oro"
+     },
+     {
+      "k": "placa",
+      "x": 680,
+      "y": 840,
+      "s_": 0.8,
+      "tipo": "diamante"
+     }
+    ],
+    "figs": [
+     {
+      "x": 500,
+      "h": 300,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "2024",
+      "y": 170,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "¡EL #1 EN ESPAÑOL!",
+      "y": 320,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y algo que no todos saben: también hace música, con canciones como “Más que un fan”.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 500,
+      "h": 300,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡TAMBIÉN CANTA!",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "La lección: no necesitas empezar con lo mejor. Empieza con lo que tengas, aprende algo nuevo en cada intento… y no te rindas.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "celular",
+      "x": 380,
+      "y": 660,
+      "s_": 1.1
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 290,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EMPIEZA",
+      "y": 170,
+      "col": "or",
+      "s": 1,
+      "f": 0.6
+     },
+     {
+      "t": "Y NO TE RINDAS",
+      "y": 320,
+      "col": "blanco",
+      "s": 1,
+      "f": 0.85
+     }
+    ]
+   }
+  },
+  {
+   "say": "Sígueme para más historias que no te contaron.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Desde cuándo lo sigues?",
+    "cuéntame en los comentarios"
+   ]
+  }
+ ],
+ "post": "Empezó con un celular a los 15 años… hoy tiene más de 76 millones de suscriptores 📱 ¿Desde cuándo lo sigues? 👇",
+ "hashtags": [
+  "#FedeVigevani",
+  "#Historias",
+  "#YouTubers"
+ ],
+ "sources": [
+  "https://www.infobae.com/mexico/2026/07/19/fede-vigevani-quien-es-el-youtuber-de-retos-extremos-e-historias-de-payasos-que-va-a-la-casa-de-los-famosos-mexico/",
+  "https://www.wikiwand.com/es/Fede_Vigevani",
+  "https://en.wikipedia.org/wiki/Fede_Vigevani",
+  "https://www.esdiario.com/chismografo/tendencias/250428/157982/fede-vigevani.html",
+  "https://es.famousbirthdays.com/people/federico-vigevani.html",
+  "https://colorfans.cl/perfil/fede-vigevani/",
+  "https://culturacolectiva.com/cine-series/quien-es-fede-vigevani/"
+ ]
+}

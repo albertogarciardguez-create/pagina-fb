@@ -1,0 +1,842 @@
+{
+ "id": "ninos-historia-fede-vigevani-youtube",
+ "titulo": "Historia de Fede Vigevani (YouTube)",
+ "plantilla": "papel",
+ "formato": "horizontal",
+ "camara": "viva",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.97,
+ "pausaFrase": 0.32,
+ "pausaEscena": 0.65,
+ "inicio": 0.3,
+ "cola": 5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SUSCRÍBETE +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "miniatura": 3,
+ "miniatura_t": 0.5,
+ "thumb": [
+  "DE UN CELULAR…",
+  "A 76 MILLONES"
+ ],
+ "scenes": [
+  {
+   "say": "Subió su primer video a los quince años, grabado con un celular… y hoy es el youtuber en español con más suscriptores del mundo. Esta es la historia de Fede Vigevani.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "celular",
+      "x": 430,
+      "y": 640,
+      "s_": 1.1,
+      "rec": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 720,
+      "h": 260,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA HISTORIA DE FEDE",
+      "y": 110,
+      "col": "or",
+      "s": 2,
+      "f": 0.2,
+      "size": 56
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 2,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Hola, amigos curiosos! Hoy te cuento cómo un chavo de Uruguay llegó a tener más de setenta y seis millones de suscriptores. ¿Listos? ¡Vamos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 650,
+      "h": 240,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 790,
+      "h": 225,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "+76 MILLONES",
+      "y": 110,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.6,
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "say": "Federico Augusto Vigevani de Arce nació el primero de octubre de mil novecientos noventa y cuatro, en Montevideo, la capital de Uruguay. Creció con su hermana Agustina y su hermano Fabrizio.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "bandera_uy",
+      "x": 320,
+      "y": 840,
+      "s_": 1.0
+     }
+    ],
+    "figs": [
+     {
+      "x": 620,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 760,
+      "h": 260,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#26344D",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "stand"
+      }
+     },
+     {
+      "x": 880,
+      "h": 270,
+      "o": {
+       "cam": "#2F8A4A",
+       "pan": "#4A3A2A",
+       "pelo": "#4A2E1E",
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MONTEVIDEO · 1994",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "cap_titulo": "Sus inicios"
+  },
+  {
+   "say": "En junio de dos mil nueve, cuando tenía quince años, subió su primer video a YouTube: una broma grabada con un celular. No tenía cámaras profesionales, ni luces, ni un estudio. Solo un celular y muchas ganas.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "celular",
+      "x": 440,
+      "y": 640,
+      "s_": 1.2,
+      "rec": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 240,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "2009 · 15 AÑOS",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.4
+     },
+     {
+      "t": "SOLO UN CELULAR",
+      "y": 230,
+      "col": "or",
+      "s": 2,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y aquí viene lo importante: no se hizo famoso de un día para otro. Siguió grabando, aprendiendo y subiendo videos durante años.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "lista",
+      "x": 380,
+      "y": 520,
+      "s_": 1,
+      "titulo": "AÑO TRAS AÑO",
+      "items": [
+       "Grabar",
+       "Aprender",
+       "Subir",
+       "Repetir"
+      ],
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "figs": [
+     {
+      "x": 820,
+      "h": 260,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "walk"
+      },
+      "camina": [
+       760,
+       860
+      ]
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO FUE DE UN DÍA PARA OTRO",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.4,
+      "size": 44
+     }
+    ]
+   }
+  },
+  {
+   "say": "En dos mil catorce creó un canal con dos amigos, Mathías y Juan Pablo. Se llamaba Dosogas, y ahí mucha gente empezó a conocerlo por sus bromas y retos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "props": [
+     {
+      "k": "camara",
+      "x": 500,
+      "y": 520,
+      "s_": 1.0
+     }
+    ],
+    "figs": [
+     {
+      "x": 330,
+      "h": 260,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#26344D",
+       "pelo": "#2A1A10",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 500,
+      "h": 260,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 670,
+      "h": 260,
+      "o": {
+       "cam": "#C9A36A",
+       "pan": "#4A3A2A",
+       "pelo": "#8A5A2B",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "2014 · DOSOGAS",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "cap_titulo": "El éxito"
+  },
+  {
+   "say": "¿Y qué tipo de videos hace? Bromas, retos, vlogs con sus amigos… y en dos mil veinte se unió a un grupo de creadores al que llamaron La Vecibanda.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "props": [
+     {
+      "k": "lista",
+      "x": 330,
+      "y": 500,
+      "titulo": "SUS VIDEOS",
+      "items": [
+       "Bromas",
+       "Retos",
+       "Vlogs",
+       "Música"
+      ],
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 260,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 860,
+      "h": 240,
+      "o": {
+       "cam": "#C8423A",
+       "pan": "#26344D",
+       "pelo": "#2A1A10",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "2020 · LA VECIBANDA",
+      "y": 110,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Después siguió con su propio canal, y no solo hizo videos: también se animó a hacer música, con canciones como “Más que un fan” y “Hermanos de verdad”.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 500,
+      "h": 300,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 200,
+      "h": 200,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 820,
+      "h": 200,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡TAMBIÉN HACE MÚSICA!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "say": "Con los años, ganó los premios que da YouTube cuando un canal crece muchísimo: el de plata, el de oro… ¡y el de diamante!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "placa",
+      "x": 280,
+      "y": 840,
+      "s_": 0.9,
+      "tipo": "plata",
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "k": "placa",
+      "x": 500,
+      "y": 840,
+      "s_": 0.9,
+      "tipo": "oro",
+      "s": 0,
+      "f": 0.7
+     },
+     {
+      "k": "placa",
+      "x": 720,
+      "y": 840,
+      "s_": 0.9,
+      "tipo": "diamante",
+      "s": 0,
+      "f": 0.9
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PLATA · ORO · DIAMANTE",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.5,
+      "size": 48
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.9,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y en dos mil veinticuatro pasó algo histórico: se convirtió en el youtuber de habla hispana con más suscriptores del mundo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "planeta",
+      "x": 500,
+      "y": 500,
+      "s_": 0.9,
+      "r": 200,
+      "color": "#3E7CA8"
+     }
+    ],
+    "figs": [
+     {
+      "x": 820,
+      "h": 270,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "2024",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "¡EL #1 EN ESPAÑOL!",
+      "y": 230,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.6,
+      "size": 60
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¿Cuál es la lección de su historia? Que no necesitas empezar con lo mejor. Fede empezó con un celular. Lo que sí necesitas es no rendirte y seguir aprendiendo.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "celular",
+      "x": 400,
+      "y": 640,
+      "s_": 1.0
+     }
+    ],
+    "figs": [
+     {
+      "x": 720,
+      "h": 280,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#26344D",
+       "pelo": "#4A2E1E",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA LECCIÓN",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "NO TE RINDAS",
+      "y": 230,
+      "col": "blanco",
+      "s": 3,
+      "f": 0.3
+     }
+    ]
+   },
+   "cap_titulo": "La lección"
+  },
+  {
+   "say": "Y si un día quieres hacer videos, recuerda dos cosas. Primero: YouTube es para mayores de trece años, así que hazlo siempre con permiso y ayuda de un adulto. Y segundo: muchos retos que ves en internet los hacen adultos con cuidado… así que no los intentes en casa.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "lista",
+      "x": 420,
+      "y": 500,
+      "s_": 1,
+      "titulo": "SI QUIERES HACER VIDEOS",
+      "items": [
+       "Con un adulto",
+       "Desde los 13 años",
+       "No copies retos peligrosos"
+      ],
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 840,
+      "h": 300,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#4A3A2A",
+       "pelo": "#3A2618",
+       "largo": true,
+       "pose": "offer"
+      }
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Hora del reto! Tres preguntas rápidas. Uno: ¿en qué país nació Fede? Uno, dos, tres… ¡En Uruguay!",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "bandera_uy",
+      "x": 500,
+      "y": 840,
+      "s_": 1.0,
+      "s": 3,
+      "f": 0.5
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡RETO!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.1,
+      "size": 64
+     },
+     {
+      "t": "¡URUGUAY!",
+      "y": 230,
+      "col": "marino",
+      "s": 3,
+      "f": 0.5,
+      "size": 60
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 3,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ],
+   "cap_titulo": "¡Reto!"
+  },
+  {
+   "say": "Dos: ¿con qué grabó su primer video? Uno, dos, tres… ¡Con un celular!",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "celular",
+      "x": 500,
+      "y": 660,
+      "s_": 1.2,
+      "s": 1,
+      "f": 0.6,
+      "rec": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PREGUNTA 2",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡UN CELULAR!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.6,
+      "size": 60
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y tres: ¿cómo se llamaba el canal que hizo con sus amigos? Uno, dos, tres… ¡Dosogas!",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "props": [
+     {
+      "k": "camara",
+      "x": 500,
+      "y": 600,
+      "s_": 1.0,
+      "s": 1,
+      "f": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "PREGUNTA 3",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¡DOSOGAS!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.6,
+      "size": 60
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Nos vemos en la próxima aventura, amigos curiosos!",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué historia quieres conocer?",
+    "otro youtuber, un deportista o un inventor"
+   ]
+  }
+ ],
+ "post": "De un celular a 76 millones de suscriptores: la historia de Fede Vigevani 📱",
+ "hashtags": [
+  "#FedeVigevani",
+  "#YouTubers",
+  "#Historias"
+ ],
+ "youtube": {
+  "titulo": "La HISTORIA de FEDE VIGEVANI 📱 De un celular a 76 MILLONES",
+  "intro": "De un celular a 76 millones",
+  "descripcion": "¿Cómo empezó Fede Vigevani? Subió su primer video a los 15 años, grabado con un celular, y años después se convirtió en el youtuber de habla hispana con más suscriptores del mundo. Su historia y la lección que nos deja: no rendirse y seguir aprendiendo.\n\nRecuerda: YouTube es para mayores de 13 años; si quieres hacer videos, hazlo con un adulto.\n\nVideo informativo; no está afiliado ni patrocinado por Fede Vigevani.",
+  "hashtags": [
+   "#FedeVigevani",
+   "#YouTubers",
+   "#Historias"
+  ],
+  "etiquetas": [
+   "fede vigevani",
+   "historia de fede vigevani",
+   "fede vigevani biografía",
+   "dosogas",
+   "youtubers",
+   "youtuber con más suscriptores en español"
+  ]
+ },
+ "sources": [
+  "https://www.infobae.com/mexico/2026/07/19/fede-vigevani-quien-es-el-youtuber-de-retos-extremos-e-historias-de-payasos-que-va-a-la-casa-de-los-famosos-mexico/",
+  "https://www.wikiwand.com/es/Fede_Vigevani",
+  "https://en.wikipedia.org/wiki/Fede_Vigevani",
+  "https://www.esdiario.com/chismografo/tendencias/250428/157982/fede-vigevani.html",
+  "https://es.famousbirthdays.com/people/federico-vigevani.html",
+  "https://colorfans.cl/perfil/fede-vigevani/",
+  "https://culturacolectiva.com/cine-series/quien-es-fede-vigevani/"
+ ]
+}

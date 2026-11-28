@@ -1,0 +1,1225 @@
+{
+ "id": "ninos-historia-santa-claus-youtube",
+ "titulo": "Historia de Santa Claus (YouTube niños)",
+ "plantilla": "papel",
+ "formato": "horizontal",
+ "camara": "viva",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.95,
+ "pausaFrase": 0.34,
+ "pausaEscena": 0.7,
+ "inicio": 0.3,
+ "cola": 5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SUSCRÍBETE +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "miniatura": 0,
+ "miniatura_t": 0.8,
+ "thumb": [
+  "¿QUIÉN ERA",
+  "EL VERDADERO SANTA?"
+ ],
+ "scenes": [
+  {
+   "say": "¿Sabías que la historia de Santa Claus empezó con un hombre de verdad, que vivió hace más de mil seiscientos años? ¡Hoy te la cuento completita!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "casa",
+      "x": 250,
+      "y": 840,
+      "s_": 0.9,
+      "nieve": true
+     },
+     {
+      "k": "arbolnav",
+      "x": 800,
+      "y": 840,
+      "s_": 0.9
+     }
+    ],
+    "figs": [
+     {
+      "x": 560,
+      "h": 330,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "arms"
+      },
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¿DE DÓNDE VIENE SANTA?",
+      "y": 110,
+      "col": "or",
+      "size": 56
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Hola, amigos curiosos! Hoy vamos a descubrir quién era el verdadero San Nicolás, cómo se convirtió en Santa Claus… y qué hace Santa durante todo el año. ¿Listos? ¡Vamos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "regalo",
+      "x": 300,
+      "y": 840,
+      "s_": 0.9,
+      "color": "#2F6F73"
+     },
+     {
+      "k": "regalo",
+      "x": 420,
+      "y": 840,
+      "s_": 0.7
+     }
+    ],
+    "figs": [
+     {
+      "x": 650,
+      "h": 240,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 790,
+      "h": 225,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "AMIGOS CURIOSOS",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.1
+     },
+     {
+      "t": "¿LISTOS?",
+      "y": 230,
+      "col": "or",
+      "s": 2,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Hace mucho, mucho tiempo, en el siglo cuarto, en una ciudad llamada Myra, que hoy está en Turquía, vivía un muchacho llamado Nicolás.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "casa",
+      "x": 300,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 270,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#6A4A2A",
+       "pelo": "#6B4A2A",
+       "barba": null,
+       "gorro": null,
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MYRA · SIGLO IV",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "cap_titulo": "El verdadero San Nicolás"
+  },
+  {
+   "say": "Sus papás murieron cuando él era joven y le dejaron mucho dinero. ¿Y sabes qué hizo? Lo repartió entre las personas que más lo necesitaban.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "bolsa",
+      "x": 420,
+      "y": 840,
+      "s_": 1.0
+     }
+    ],
+    "figs": [
+     {
+      "x": 600,
+      "h": 270,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#6A4A2A",
+       "pelo": "#6B4A2A",
+       "barba": null,
+       "gorro": null,
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 800,
+      "h": 230,
+      "o": {
+       "cam": "#8A7A6A",
+       "pan": "#5A4A3A",
+       "pose": "ask"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡LO REPARTIÓ TODO!",
+      "y": 230,
+      "col": "or",
+      "s": 2,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Nicolás era tan bondadoso, que lo nombraron obispo de Myra. Por eso, en sus dibujos antiguos, lo ves con este sombrero alto y su barba.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "figs": [
+     {
+      "x": 500,
+      "h": 320,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "OBISPO DE MYRA",
+      "y": 110,
+      "col": "marino",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y hay una leyenda muy famosa sobre él. Cuenta la leyenda que un señor muy pobre no tenía dinero para que sus tres hijas pudieran casarse.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "casa",
+      "x": 500,
+      "y": 840,
+      "s_": 1.0,
+      "luz": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LA LEYENDA",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Entonces Nicolás, en secreto y de noche, aventó bolsas con monedas de oro por la ventana… y cayeron dentro de unos calcetines que estaban secándose junto a la chimenea.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "calcetin",
+      "x": 380,
+      "y": 820,
+      "s_": 1.1
+     },
+     {
+      "k": "calcetin",
+      "x": 520,
+      "y": 820,
+      "s_": 1.1
+     },
+     {
+      "k": "calcetin",
+      "x": 660,
+      "y": 820,
+      "s_": 1.1
+     },
+     {
+      "k": "bolsa",
+      "x": 520,
+      "y": 640,
+      "s_": 0.6,
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 860,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "offer"
+      },
+      "s": 0,
+      "f": 0.1
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡EN SECRETO!",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.6,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Por eso, hasta hoy, en muchas casas se cuelgan calcetines en Navidad! Y el día de San Nicolás se celebra cada seis de diciembre.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "calcetin",
+      "x": 300,
+      "y": 820,
+      "s_": 1.0
+     },
+     {
+      "k": "calcetin",
+      "x": 430,
+      "y": 820,
+      "s_": 1.0
+     },
+     {
+      "k": "arbolnav",
+      "x": 760,
+      "y": 840,
+      "s_": 0.9
+     }
+    ],
+    "carteles": [
+     {
+      "t": "6 DE DICIEMBRE",
+      "y": 230,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Pasaron muchos años, y en Holanda le empezaron a decir Sinterklaas. Ahí, Sinterklaas les trae regalos a los niños cada cinco de diciembre.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "regalo",
+      "x": 300,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "regalo",
+      "x": 420,
+      "y": 840,
+      "s_": 0.6,
+      "color": "#2F6F73"
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "HOLANDA: SINTERKLAAS",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "cap_titulo": "De San Nicolás a Santa Claus"
+  },
+  {
+   "say": "Después, muchos holandeses se fueron a vivir a América y fundaron una ciudad llamada Nueva Ámsterdam… que hoy se llama Nueva York. ¡Y se llevaron a Sinterklaas con ellos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 300,
+      "h": 260,
+      "o": {
+       "cam": "#26344D",
+       "pan": "#4A3A2A",
+       "pelo": "#C9A36A",
+       "pose": "walk"
+      },
+      "camina": [
+       200,
+       450
+      ]
+     },
+     {
+      "x": 600,
+      "h": 250,
+      "o": {
+       "cam": "#6A4A8A",
+       "pan": "#4A3A2A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "walk"
+      },
+      "camina": [
+       480,
+       700
+      ]
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NUEVA ÁMSTERDAM",
+      "y": 110,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.1,
+      "tacha": {
+       "s": 1,
+       "f": 0.7
+      }
+     },
+     {
+      "t": "NUEVA YORK",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y como en inglés pronunciaban diferente, Sinterklaas se fue convirtiendo poco a poco en… ¡Santa Claus!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 500,
+      "h": 320,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "arms"
+      },
+      "s": 0,
+      "f": 0.8
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SINTERKLAAS",
+      "y": 110,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1,
+      "tacha": {
+       "s": 0,
+       "f": 0.75
+      }
+     },
+     {
+      "t": "¡SANTA CLAUS!",
+      "y": 230,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.8,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.85,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "En mil ochocientos veintitrés, un poema muy famoso imaginó a San Nicolás volando de noche en un trineo, tirado por ocho renos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "trineo",
+      "x": 380,
+      "y": 600,
+      "s_": 0.8
+     },
+     {
+      "k": "reno",
+      "x": 620,
+      "y": 600,
+      "s_": 0.55
+     },
+     {
+      "k": "reno",
+      "x": 760,
+      "y": 600,
+      "s_": 0.55
+     }
+    ],
+    "figs": [
+     {
+      "x": 360,
+      "h": 170,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "sit"
+      },
+      "y": 555
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1823 · UN POEMA",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "¡8 RENOS!",
+      "y": 230,
+      "col": "or",
+      "s": 0,
+      "f": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y unos años después, un dibujante llamado Thomas Nast lo dibujó muchas veces: gordito, con barba blanca y muy alegre. ¡Así nació el Santa Claus que todos conocemos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "lista",
+      "x": 280,
+      "y": 520,
+      "s_": 1,
+      "titulo": "THOMAS NAST",
+      "items": [
+       "Gordito",
+       "Barba blanca",
+       "Muy alegre"
+      ],
+      "s": 0,
+      "f": 0.05
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 330,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "arms"
+      },
+      "s": 1,
+      "f": 0.2
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1863",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "say": "Ahora sí: ¿qué hace Santa durante todo el año? Cuenta la tradición que vive en el Polo Norte, en un taller lleno de juguetes.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "casa",
+      "x": 350,
+      "y": 840,
+      "s_": 0.9,
+      "nieve": true
+     },
+     {
+      "k": "regalo",
+      "x": 650,
+      "y": 840,
+      "s_": 0.6
+     },
+     {
+      "k": "regalo",
+      "x": 760,
+      "y": 840,
+      "s_": 0.8,
+      "color": "#2F6F73"
+     }
+    ],
+    "figs": [
+     {
+      "x": 880,
+      "h": 290,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "stand"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL TALLER DEL POLO NORTE",
+      "y": 110,
+      "col": "or",
+      "s": 1,
+      "f": 0.4,
+      "size": 50
+     }
+    ]
+   },
+   "cap_titulo": "¿Qué hace Santa?"
+  },
+  {
+   "say": "Ahí trabajan los duendes, que lo ayudan a preparar todos los regalos. ¡Martillan, pintan, envuelven y ponen moños!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "regalo",
+      "x": 420,
+      "y": 840,
+      "s_": 0.7
+     },
+     {
+      "k": "regalo",
+      "x": 560,
+      "y": 840,
+      "s_": 0.9,
+      "color": "#6A4A8A"
+     },
+     {
+      "k": "regalo",
+      "x": 700,
+      "y": 840,
+      "s_": 0.6,
+      "color": "#2F6F73"
+     }
+    ],
+    "figs": [
+     {
+      "x": 260,
+      "h": 200,
+      "o": {
+       "cam": "#2F8A4A",
+       "pan": "#C8202E",
+       "pelo": "#B5562F",
+       "gorro": "elfo",
+       "pose": "arms"
+      },
+      "salta": true
+     },
+     {
+      "x": 860,
+      "h": 190,
+      "o": {
+       "cam": "#2F8A4A",
+       "pan": "#C8202E",
+       "pelo": "#B5562F",
+       "gorro": "elfo",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡LOS DUENDES!",
+      "y": 110,
+      "col": "verde",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 1,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Santa también lee las cartas que le escriben niñas y niños de todo el mundo. Y hace su famosa lista… ¡y la revisa dos veces!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "carta",
+      "x": 300,
+      "y": 560,
+      "s_": 1.0
+     },
+     {
+      "k": "carta",
+      "x": 430,
+      "y": 620,
+      "s_": 0.8
+     },
+     {
+      "k": "lista",
+      "x": 700,
+      "y": 500,
+      "s_": 0.8,
+      "titulo": "LA LISTA",
+      "items": [
+       "Se portó bien",
+       "Ayudó en casa",
+       "Compartió"
+      ],
+      "s": 1,
+      "f": 0.3
+     }
+    ],
+    "carteles": [
+     {
+      "t": "LAS CARTAS",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y en Nochebuena llega su gran día: sube a su trineo con sus renos y, según la tradición, en una sola noche deja regalos en las casas de todo el mundo.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "trineo",
+      "x": 380,
+      "y": 560,
+      "s_": 0.8
+     },
+     {
+      "k": "reno",
+      "x": 620,
+      "y": 560,
+      "s_": 0.55
+     },
+     {
+      "k": "reno",
+      "x": 760,
+      "y": 560,
+      "s_": 0.55,
+      "rojo": true
+     },
+     {
+      "k": "casa",
+      "x": 500,
+      "y": 860,
+      "s_": 0.7,
+      "nieve": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 360,
+      "h": 170,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "sit"
+      },
+      "y": 515
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡NOCHEBUENA!",
+      "y": 110,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.3,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "En muchas casas le dejan galletas y un vaso de leche… ¡y una zanahoria para los renos!",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "interior",
+    "props": [
+     {
+      "k": "arbolnav",
+      "x": 750,
+      "y": 840,
+      "s_": 0.9
+     },
+     {
+      "k": "calcetin",
+      "x": 330,
+      "y": 700,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 500,
+      "h": 230,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "GALLETAS Y LECHE",
+      "y": 110,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     },
+     {
+      "t": "+ ZANAHORIA PARA LOS RENOS",
+      "y": 230,
+      "col": "or",
+      "s": 0,
+      "f": 0.7,
+      "size": 46
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y en cada país le dicen diferente: Papá Noel, Viejito Pascuero en Chile, San Nicolás… Y aquí en México, además, el seis de enero nos visitan los Reyes Magos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "dia",
+    "props": [
+     {
+      "k": "lista",
+      "x": 420,
+      "y": 520,
+      "s_": 1,
+      "titulo": "SUS NOMBRES",
+      "items": [
+       "Santa Claus",
+       "Papá Noel",
+       "Viejito Pascuero",
+       "San Nicolás"
+      ],
+      "s": 0,
+      "f": 0.3
+     }
+    ],
+    "figs": [
+     {
+      "x": 840,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "6 DE ENERO: REYES MAGOS",
+      "y": 110,
+      "col": "marino",
+      "s": 2,
+      "f": 0.4,
+      "size": 46
+     }
+    ]
+   }
+  },
+  {
+   "say": "¿Y sabes cuál es el verdadero secreto de Santa? No son los juguetes. Es lo que hacía San Nicolás: ayudar a los demás, en secreto, sin esperar nada a cambio.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "corazon",
+      "x": 500,
+      "y": 560,
+      "s_": 2.2,
+      "s": 1,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 260,
+      "h": 280,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 760,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL VERDADERO SECRETO",
+      "y": 110,
+      "col": "or",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   },
+   "cap_titulo": "El verdadero secreto"
+  },
+  {
+   "say": "Así que esta Navidad, te dejo un reto: haz algo bonito por alguien, sin que nadie se entere. ¡Como San Nicolás!",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "props": [
+     {
+      "k": "regalo",
+      "x": 420,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 620,
+      "h": 240,
+      "o": {
+       "cam": "#E8603C",
+       "pan": "#26344D",
+       "pelo": "#3A2618",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 800,
+      "h": 225,
+      "o": {
+       "cam": "#2F6F73",
+       "pan": "#6A4A8A",
+       "pelo": "#6B3E26",
+       "largo": true,
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "RETO NAVIDEÑO",
+      "y": 110,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.4
+     },
+     {
+      "t": "¡AYUDA EN SECRETO!",
+      "y": 230,
+      "col": "or",
+      "s": 1,
+      "f": 0.3
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "¡Feliz Navidad, amigos curiosos! Nos vemos en la próxima aventura.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Qué le vas a pedir a Santa?",
+    "¡y qué vas a regalar tú!"
+   ]
+  }
+ ],
+ "post": "¿Quién era el verdadero Santa Claus? 🎅",
+ "hashtags": [
+  "#SantaClaus",
+  "#Navidad",
+  "#ParaNiños"
+ ],
+ "youtube": {
+  "titulo": "La HISTORIA de SANTA CLAUS 🎅 ¿Quién era el verdadero San Nicolás? | Para niños",
+  "intro": "¿De dónde viene Santa?",
+  "descripcion": "¿Quién era el verdadero San Nicolás? ¿Cómo se convirtió en Santa Claus? ¿Por qué colgamos calcetines en Navidad? ¿Y qué hace Santa durante todo el año en el Polo Norte?\n\nUna historia navideña para niños, con un reto al final: hacer algo bonito por alguien, en secreto, como San Nicolás.",
+  "hashtags": [
+   "#SantaClaus",
+   "#Navidad",
+   "#HistoriasParaNiños"
+  ],
+  "etiquetas": [
+   "historia de santa claus",
+   "santa claus para niños",
+   "san nicolás",
+   "quién es santa claus",
+   "navidad para niños",
+   "historia de la navidad",
+   "papá noel",
+   "cuentos de navidad"
+  ]
+ },
+ "sources": [
+  "https://www.ecured.cu/Nicol%C3%A1s_de_Bari_(santo)",
+  "https://www.tvazteca.com/aztecanoticias/historia-papa-noel-santa-claus-pde",
+  "https://www.rionegro.com.ar/?p=558941",
+  "https://vanguardia.com.mx/laverdaderahistoriadelorigendelsantaclaus-2232049.html",
+  "https://www.metro.pr/noticias/2023/12/07/cual-es-el-verdadero-origen-de-santa-claus/",
+  "https://www.tvn-2.com/contenido-exclusivo/edad-media-santa-claus-historia-navidad_1_1040415.html",
+  "https://www.pressreader.com/india/a-to-z-india/20171201/281590946470677",
+  "https://europeana.eu/es/stories/from-st-nicholas-to-santa-claus",
+  "https://www.aciprensa.com/recursos/quien-es-santa-claus-o-papa-noel-1878/"
+ ]
+}

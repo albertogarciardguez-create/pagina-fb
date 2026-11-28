@@ -1,0 +1,463 @@
+{
+ "id": "ninos-historia-santa-claus-tiktok",
+ "titulo": "Historia de Santa Claus (TikTok)",
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-DaliaNeural",
+ "voice": "em_alex",
+ "speed": 0.97,
+ "pausaFrase": 0.22,
+ "pausaEscena": 0.35,
+ "inicio": 0.1,
+ "cola": 4.5,
+ "marca": {
+  "nombre": "LA CHISPA CURIOSA",
+  "boton": "SEGUIR +",
+  "color": "#E8603C",
+  "fondo": "#2F6F73"
+ },
+ "scenes": [
+  {
+   "say": "Santa Claus empezó con un hombre de verdad… que vivió hace más de mil seiscientos años.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "arbolnav",
+      "x": 780,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 420,
+      "h": 330,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "UN HOMBRE REAL",
+      "y": 170,
+      "col": "rojo",
+      "size": 64
+     },
+     {
+      "t": "Y ESTA ES SU HISTORIA",
+      "y": 320,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.1,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Se llamaba Nicolás, vivía en Myra, en la actual Turquía, y repartió todo lo que tenía entre los pobres.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "bolsa",
+      "x": 320,
+      "y": 840,
+      "s_": 1.0
+     }
+    ],
+    "figs": [
+     {
+      "x": 620,
+      "h": 330,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NICOLÁS DE MYRA",
+      "y": 170,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Cuenta la leyenda que, de noche y en secreto, aventó monedas de oro por una ventana… y cayeron en unos calcetines junto a la chimenea.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "noche",
+    "props": [
+     {
+      "k": "calcetin",
+      "x": 320,
+      "y": 820,
+      "s_": 1.2
+     },
+     {
+      "k": "calcetin",
+      "x": 500,
+      "y": 820,
+      "s_": 1.2
+     },
+     {
+      "k": "bolsa",
+      "x": 500,
+      "y": 600,
+      "s_": 0.7,
+      "s": 0,
+      "f": 0.5
+     }
+    ],
+    "figs": [
+     {
+      "x": 780,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "¡EN SECRETO!",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "papel",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Por eso colgamos calcetines en Navidad.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "calcetin",
+      "x": 360,
+      "y": 820,
+      "s_": 1.2
+     },
+     {
+      "k": "calcetin",
+      "x": 560,
+      "y": 820,
+      "s_": 1.2
+     },
+     {
+      "k": "arbolnav",
+      "x": 800,
+      "y": 840,
+      "s_": 0.7
+     }
+    ],
+    "carteles": [
+     {
+      "t": "POR ESO…",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.1
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 0,
+     "at": 0.4,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "En Holanda le dijeron Sinterklaas. Los holandeses lo llevaron a Nueva York… y en inglés se volvió Santa Claus.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "ciudad",
+    "figs": [
+     {
+      "x": 500,
+      "h": 320,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "arms"
+      },
+      "s": 1,
+      "f": 0.6
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SINTERKLAAS",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2,
+      "tacha": {
+       "s": 1,
+       "f": 0.6
+      }
+     },
+     {
+      "t": "SANTA CLAUS",
+      "y": 320,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.65,
+      "size": 64
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "En mil ochocientos veintitrés, un poema le dio trineo y ocho renos.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polonoche",
+    "props": [
+     {
+      "k": "trineo",
+      "x": 400,
+      "y": 640,
+      "s_": 0.75
+     },
+     {
+      "k": "reno",
+      "x": 640,
+      "y": 640,
+      "s_": 0.5
+     },
+     {
+      "k": "reno",
+      "x": 800,
+      "y": 640,
+      "s_": 0.5,
+      "rojo": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 380,
+      "h": 170,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "sit"
+      },
+      "y": 595
+     }
+    ],
+    "carteles": [
+     {
+      "t": "1823 · 8 RENOS",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Y un dibujante lo dibujó gordito, barbón y alegre. Así quedó el Santa que conoces.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "polo",
+    "figs": [
+     {
+      "x": 500,
+      "h": 340,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "arms"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "ASÍ NACIÓ",
+      "y": 170,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.2
+     },
+     {
+      "t": "EL SANTA DE HOY",
+      "y": 320,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "say": "Pero su verdadero secreto no son los juguetes: es ayudar a alguien sin que nadie se entere. ¿Te animas a hacerlo esta Navidad?",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "atardecer",
+    "props": [
+     {
+      "k": "corazon",
+      "x": 500,
+      "y": 560,
+      "s_": 2.0,
+      "s": 0,
+      "f": 0.6
+     }
+    ],
+    "figs": [
+     {
+      "x": 280,
+      "h": 280,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#F4F1EA",
+       "pelo": "#6B4A2A",
+       "barba": "#6B4A2A",
+       "gorro": "mitra",
+       "pose": "offer"
+      }
+     },
+     {
+      "x": 740,
+      "h": 300,
+      "o": {
+       "cam": "#C8202E",
+       "pan": "#C8202E",
+       "pelo": "#F4F1EA",
+       "barba": true,
+       "gorro": "santa",
+       "cinto": true,
+       "pose": "offer"
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "EL VERDADERO SECRETO",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.2
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Sígueme para más historias que no te contaron.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Le dejas galletas?",
+    "cuéntame en los comentarios"
+   ]
+  }
+ ],
+ "post": "Santa Claus empezó con un hombre de verdad… 🎅 ¿Tú le dejas galletas? 👇",
+ "hashtags": [
+  "#SantaClaus",
+  "#Navidad",
+  "#Historias"
+ ],
+ "sources": [
+  "https://www.ecured.cu/Nicol%C3%A1s_de_Bari_(santo)",
+  "https://www.tvazteca.com/aztecanoticias/historia-papa-noel-santa-claus-pde",
+  "https://www.rionegro.com.ar/?p=558941",
+  "https://vanguardia.com.mx/laverdaderahistoriadelorigendelsantaclaus-2232049.html",
+  "https://www.metro.pr/noticias/2023/12/07/cual-es-el-verdadero-origen-de-santa-claus/",
+  "https://www.tvn-2.com/contenido-exclusivo/edad-media-santa-claus-historia-navidad_1_1040415.html",
+  "https://www.pressreader.com/india/a-to-z-india/20171201/281590946470677",
+  "https://europeana.eu/es/stories/from-st-nicholas-to-santa-claus",
+  "https://www.aciprensa.com/recursos/quien-es-santa-claus-o-papa-noel-1878/"
+ ]
+}
