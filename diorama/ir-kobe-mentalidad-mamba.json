@@ -1,0 +1,455 @@
+{
+ "id": "ir-kobe-mentalidad-mamba",
+ "titulo": "Kobe Bryant: la mentalidad Mamba",
+ "plantilla": "papel",
+ "tts": "edge",
+ "edge_voz": "es-MX-JorgeNeural",
+ "voice": "em_alex",
+ "speed": 1.03,
+ "pausaFrase": 0.24,
+ "pausaEscena": 0.4,
+ "inicio": 0.1,
+ "cola": 4.5,
+ "scenes": [
+  {
+   "say": "Un compañero llegó a entrenar a las cinco y veinte de la mañana, diez minutos antes de la hora… y Kobe ya estaba empapado de sudor.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "menor",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "despertador",
+      "x": 300,
+      "y": 840,
+      "s_": 1.0,
+      "h": 5,
+      "m": 20
+     }
+    ],
+    "figs": [
+     {
+      "x": 760,
+      "h": 300,
+      "o": {
+       "cam": "#6A3E9A",
+       "pan": "#6A3E9A",
+       "pelo": "#1E1410",
+       "piel": "#7A4A2E",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "5:20 AM",
+      "y": 170,
+      "col": "mostaza",
+      "s": 0,
+      "f": 0.3,
+      "size": 72
+     },
+     {
+      "t": "Y ÉL YA ESTABA AHÍ",
+      "y": 320,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.8
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tick",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Así era la mentalidad Mamba.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "aro",
+      "x": 500,
+      "y": 840,
+      "s_": 1.0
+     }
+    ],
+    "carteles": [
+     {
+      "t": "MENTALIDAD MAMBA",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.2,
+      "size": 60
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "sello",
+     "s": 0,
+     "at": 0.3,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Pero no siempre fue así de bueno. A los dieciocho años, en un partido de playoffs, tiró cuatro balones que ni siquiera tocaron el aro… y su equipo quedó eliminado.",
+   "vis": "arma",
+   "acto": 1,
+   "mus": "foso",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "aro",
+      "x": 280,
+      "y": 840,
+      "s_": 0.9
+     },
+     {
+      "k": "balonb",
+      "x": 500,
+      "y": 760,
+      "s_": 0.8
+     }
+    ],
+    "figs": [
+     {
+      "x": 740,
+      "h": 290,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A3E9A",
+       "pelo": "#1E1410",
+       "piel": "#8A5A3A",
+       "pose": "stand"
+      },
+      "cae": {
+       "s": 1,
+       "f": 0.6,
+       "dur": 2
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "18 AÑOS",
+      "y": 170,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.1
+     },
+     {
+      "t": "4 TIROS AL AIRE",
+      "y": 320,
+      "col": "rojo",
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "say": "Cualquiera se habría escondido. Él no: se puso a entrenar todavía más.",
+   "vis": "arma",
+   "acto": 2,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "balonb",
+      "x": 420,
+      "y": 840,
+      "s_": 1.0,
+      "bota": true
+     }
+    ],
+    "figs": [
+     {
+      "x": 660,
+      "h": 290,
+      "o": {
+       "cam": "#F2C14E",
+       "pan": "#6A3E9A",
+       "pelo": "#1E1410",
+       "piel": "#8A5A3A",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO SE ESCONDIÓ",
+      "y": 170,
+      "col": "or",
+      "s": 1,
+      "f": 0.2
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 1,
+     "at": 0.2,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Nueve años después, le metió ochenta y un puntos a Toronto: la segunda cifra más alta en la historia de la NBA.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "aro",
+      "x": 300,
+      "y": 840,
+      "s_": 0.9
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 320,
+      "o": {
+       "cam": "#6A3E9A",
+       "pan": "#6A3E9A",
+       "pelo": "#1E1410",
+       "piel": "#7A4A2E",
+       "pose": "arms"
+      },
+      "salta": true
+     }
+    ],
+    "carteles": [
+     {
+      "t": "SEGUNDA MEJOR MARCA DE LA NBA",
+      "y": 320,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.7,
+      "size": 44
+     }
+    ],
+    "contador": {
+     "de": 0,
+     "a": 81,
+     "y": 170,
+     "suf": " PUNTOS",
+     "s": 0,
+     "f": 0.3,
+     "dur": 2.0,
+     "col": "or"
+    }
+   }
+  },
+  {
+   "say": "En dos mil trece se rompió el tendón de Aquiles en pleno partido… y aun así caminó a la línea, y metió sus dos tiros libres.",
+   "vis": "arma",
+   "acto": 3,
+   "mus": "foso",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "aro",
+      "x": 280,
+      "y": 840,
+      "s_": 0.9
+     }
+    ],
+    "figs": [
+     {
+      "x": 700,
+      "h": 310,
+      "o": {
+       "cam": "#6A3E9A",
+       "pan": "#6A3E9A",
+       "pelo": "#1E1410",
+       "piel": "#7A4A2E",
+       "pose": "stand"
+      },
+      "cae": {
+       "s": 0,
+       "f": 0.5,
+       "dur": 1.6
+      }
+     }
+    ],
+    "carteles": [
+     {
+      "t": "TENDÓN ROTO",
+      "y": 170,
+      "col": "rojo",
+      "s": 0,
+      "f": 0.5
+     },
+     {
+      "t": "2 DE 2",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.6,
+      "size": 72
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "tambor",
+     "s": 0,
+     "at": 0.5,
+     "g": 0.6
+    },
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.7,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Y en su último partido, a los treinta y siete años, metió sesenta puntos. Veinte temporadas, un solo equipo, cinco campeonatos.",
+   "vis": "arma",
+   "acto": 4,
+   "mus": "mayor",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "trofeo",
+      "x": 250,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "trofeo",
+      "x": 375,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "trofeo",
+      "x": 500,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "trofeo",
+      "x": 625,
+      "y": 840,
+      "s_": 0.8
+     },
+     {
+      "k": "trofeo",
+      "x": 750,
+      "y": 840,
+      "s_": 0.8
+     }
+    ],
+    "carteles": [
+     {
+      "t": "60 PUNTOS · 37 AÑOS",
+      "y": 170,
+      "col": "or",
+      "s": 0,
+      "f": 0.5,
+      "size": 50
+     },
+     {
+      "t": "5 CAMPEONATOS",
+      "y": 320,
+      "col": "mostaza",
+      "s": 1,
+      "f": 0.5
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "k": "campana",
+     "s": 1,
+     "at": 0.5,
+     "g": 0.6
+    }
+   ]
+  },
+  {
+   "say": "La mentalidad Mamba no es no fallar. Es no dejar que el miedo, el cansancio o el dolor decidan por ti. Y tú… ¿a qué hora empieza hoy tu entrenamiento?",
+   "vis": "arma",
+   "acto": 5,
+   "mus": "menor",
+   "arma": {
+    "fondo": "gimnasio",
+    "props": [
+     {
+      "k": "despertador",
+      "x": 500,
+      "y": 840,
+      "s_": 1.1,
+      "h": 4,
+      "m": 45
+     }
+    ],
+    "carteles": [
+     {
+      "t": "NO ES NO FALLAR",
+      "y": 170,
+      "col": "blanco",
+      "s": 0,
+      "f": 0.2
+     },
+     {
+      "t": "ES NO RENDIRTE",
+      "y": 320,
+      "col": "or",
+      "s": 1,
+      "f": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "say": "Sígueme: cada noche, una historia que no te contaron.",
+   "tipo": "cierre",
+   "mus": "mayor",
+   "q": [
+    "¿Jordan o Kobe?",
+    "te leo en los comentarios"
+   ]
+  }
+ ],
+ "post": "5:20 de la mañana… y Kobe ya estaba empapado de sudor. ¿A qué hora empieza hoy tu entrenamiento? 👇",
+ "hashtags": [
+  "#KobeBryant",
+  "#MambaMentality",
+  "#Mentalidad"
+ ],
+ "sources": [
+  "https://www.espn.com/espn/feature/story/_/id/14609380/how-los-angeles-lakers-kobe-bryant-made-history-81-point-game",
+  "https://www.nba.com/lakers/news/160420_kobeTheCompetitor",
+  "https://www.nba.com/news/kobe-bryant-10-things-to-know",
+  "https://stockx.com/news/en-us/mamba-moments/",
+  "https://www.rappler.com/?p=250586",
+  "https://www.yahoo.com/news/kobe-40-161037990.html"
+ ]
+}
