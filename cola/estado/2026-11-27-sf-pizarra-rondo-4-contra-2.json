@@ -9,9 +9,12 @@
   },
   "youtube": {
    "omitido": "faltan secretos: SF_YT_REFRESH"
+  },
+  "tiktok": {
+   "omitido": "faltan secretos: SF_TIKTOK_REFRESH"
   }
  },
  "aviso": "[reel] AVISO: no se pudo usar la voz 'elevenlabs' (falta la llave de ElevenLabs (ELEVENLABS_API_KEY o ~/.config/senorfutbol/elevenlabs.key)). Uso 'edge'.",
  "video": "https://github.com/albertogarciardguez-create/pagina-fb/releases/download/cola/2026-11-27-sf-pizarra-rondo-4-contra-2.mp4",
- "actualizado": "2026-11-27 09:02"
+ "actualizado": "2026-11-27 18:31"
 }
